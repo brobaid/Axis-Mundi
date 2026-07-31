@@ -17,14 +17,12 @@ import { getPublishable } from '../lib/content';
  */
 
 const dives = await getPublishable('deepDives');
-const firstDive = dives[0]?.data.tradition;
 
 const rooms: { href: string; label: string }[] = [
   { href: '/timeline', label: 'Timeline' },
   { href: '/map', label: 'Map' },
-  ...(firstDive === undefined
-    ? []
-    : [{ href: `/traditions/${firstDive}`, label: 'Deep dives' }]),
+  /* The index lists every dive, so the chip opens as soon as one exists. */
+  ...(dives.length === 0 ? [] : [{ href: '/traditions', label: 'Deep dives' }]),
   { href: '/matrix', label: 'Matrix' },
   { href: '/compare', label: 'Compare' },
 ];

@@ -19,8 +19,6 @@
       "contested": false
     },
     "origin_region": "arabia",
-    "branches_summary": "Sunni · Shia · Ibadi",
-    "calendar": "Lunar (Hijri)",
     "symbol": "crescent-and-star"
   },
   "overview": {
@@ -90,5 +88,5 @@
   "further_reading": [
     "esposito-straight-path"
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

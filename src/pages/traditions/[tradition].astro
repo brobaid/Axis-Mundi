@@ -52,6 +52,19 @@ const founded = taxonomy.find((n) => n.data.id === dive.tradition && n.data.dept
   .founded;
 const primaryText = texts.find((t) => t.data.tradition === dive.tradition && t.data.primary);
 
+/* Branches and calendar are extracted too. The branch list is the taxonomy's own
+   depth-2 children in their declared order; the calendar is the matrix's
+   calendar-system cell, which carries its own source. */
+const branchesSummary = taxonomy
+  .filter((n) => n.data.tradition === dive.tradition && n.data.depth === 2)
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((n) => n.data.name)
+  .join(' · ');
+
+const calendarCell = matrixRows
+  .find((r) => r.data.node === dive.tradition)
+  ?.data.cells.find((c) => c.dimension === 'calendar-system');
+
 const available = new Set(glossary.map((g) => g.data.id));
 const prose = (body: string): string => renderProse(body, { available });
 
@@ -191,18 +204,18 @@ const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.
         )
       }
       {
-        dive.stat_box.branches_summary && (
+        branchesSummary && (
           <>
             <dt>Branches</dt>
-            <dd>{dive.stat_box.branches_summary}</dd>
+            <dd>{branchesSummary}</dd>
           </>
         )
       }
       {
-        dive.stat_box.calendar && (
+        calendarCell && (
           <>
             <dt>Calendar</dt>
-            <dd>{dive.stat_box.calendar}</dd>
+            <dd>{calendarCell.label ?? calendarCell.value}</dd>
           </>
         )
       }

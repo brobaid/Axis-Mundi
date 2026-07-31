@@ -1,0 +1,44 @@
+{
+  "id": "hinduism",
+  "tradition": "hinduism",
+  "name": "Hinduism",
+  "stat_box": {
+    "adherents": {
+      "display": "1.2 bn (Pew, 2020)",
+      "estimate": 1200000000,
+      "source": "pew-grl-2025",
+      "year": 2020,
+      "basis": "Enumerated by Pew. 14.9% of world population.",
+      "contested": false
+    },
+    "symbol": "om"
+  },
+  "belief_dimensions": [
+    "divine-concept",
+    "cosmology",
+    "afterlife",
+    "salvation-path",
+    "scripture-authority",
+    "view-of-others"
+  ],
+  "law_dimensions": [
+    "dietary-law",
+    "dress-modesty",
+    "ethical-frame",
+    "conversion-stance",
+    "clergy-leadership",
+    "worship-form",
+    "calendar-system"
+  ],
+  "festivals": [
+    "diwali"
+  ],
+  "sites": [],
+  "figures": [],
+  "canon": [],
+  "practices": [],
+  "rites": [],
+  "misconceptions": [],
+  "further_reading": [],
+  "sourcing": "sourced"
+}

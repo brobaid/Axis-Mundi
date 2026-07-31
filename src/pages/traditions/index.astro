@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TraditionSymbols from '../../components/TraditionSymbols.astro';
+import TraditionSymbol from '../../components/TraditionSymbol.astro';
+import { getPublishable, getStructural } from '../../lib/content';
+import { TRADITIONS } from '../../lib/traditions';
+
+/**
+ * The deep-dive index.
+ *
+ * Ten dives, one identical structure, in the taxonomy's own order. Each card
+ * shows only what a record carries — the adherent figure, the founding, the
+ * principal text — and says how much of the dive's prose is still awaiting a
+ * source check. A card that promised more than the dive holds would send a
+ * reader to an empty page.
+ */
+
+const [dives, taxonomy, texts] = await Promise.all([
+  getPublishable('deepDives'),
+  getStructural('taxonomy'),
+  getPublishable('texts'),
+]);
+
+const byTradition = new Map(dives.map((d) => [d.data.tradition, d]));
+
+/** The fourteen sections whose content is prose, for the honest readout. */
+const PROSE_KEYS = ['overview', 'origins', 'core_beliefs', 'law_and_ethics'] as const;
+
+const rooms = TRADITIONS.map((meta) => {
+  const dive = byTradition.get(meta.id);
+  const node = taxonomy.find((n) => n.data.id === meta.id && n.data.depth === 1);
+  const primary = texts.find((t) => t.data.tradition === meta.id && t.data.primary);
+
+  const data = dive?.data;
+  const written = data
+    ? PROSE_KEYS.filter((k) => {
+        const block = data[k] as { sourcing?: string } | undefined;
+        return block !== undefined && block.sourcing !== 'todo';
+      }).length
+    : 0;
+
+  return {
+    meta,
+    href: dive === undefined ? undefined : `/traditions/${meta.id}`,
+    adherents: node?.data.adherents,
+    founded: node?.data.founded,
+    text: primary?.data,
+    written,
+    total: PROSE_KEYS.length,
+  };
+});
+
+const openCount = rooms.filter((r) => r.href !== undefined).length;
+---
+
+<BaseLayout
+  title="Deep dives"
+  description="Ten traditions, one identical structure: adherents, founding, principal text, branches and belief dimensions, each extracted from sourced records."
+>
+  <TraditionSymbols />
+
+  <section class="shell head">
+    <p class="eyebrow">Room II · The Reading Rooms</p>
+    <h1>Ten traditions, one structure.</h1>
+    <p class="lede">
+      Every dive carries the same fourteen sections in the same order, because comparability is
+      the point. A section with nothing published keeps its heading and says what it is waiting
+      for.
+    </p>
+    <p class="crumb caption">
+      <b>Deep dives</b> · {openCount} of {TRADITIONS.length} open
+    </p>
+  </section>
+
+  <div class="shell">
+    <ul class="dives" role="list">
+      {
+        rooms.map((room) =>
+          room.href === undefined ? (
+            <li class="dive dive--shut">
+              <span class="dive__mark" style={`color: var(${room.meta.hueToken})`}>
+                <TraditionSymbol tradition={room.meta.id} size={26} />
+              </span>
+              <h2>{room.meta.name}</h2>
+              <p class="dive__waiting caption">No dive record in this build.</p>
+            </li>
+          ) : (
+            <li class="dive">
+              <a href={room.href}>
+                <span class="dive__mark" style={`color: var(${room.meta.hueToken})`}>
+                  <TraditionSymbol tradition={room.meta.id} size={26} />
+                </span>
+                <h2>{room.meta.name}</h2>
+                <dl class="dive__facts">
+                  {room.adherents && (
+                    <>
+                      <dt>Adherents</dt>
+                      <dd>
+                        {room.adherents.display === 'see note' ? (
+                          <span class="dive__nofigure">No single figure</span>
+                        ) : (
+                          <span class="mono">{room.adherents.display}</span>
+                        )}
+                        {room.adherents.contested && <span class="contested-badge">Contested</span>}
+                      </dd>
+                    </>
+                  )}
+                  {room.founded?.display && (
+                    <>
+                      <dt>Founded</dt>
+                      <dd>
+                        {room.founded.display}
+                        {room.founded.contested && <span class="contested-badge">Contested</span>}
+                      </dd>
+                    </>
+                  )}
+                  {room.text && (
+                    <>
+                      <dt>Principal text</dt>
+                      <dd>
+                        {room.text.title}
+                        {room.text.contested && <span class="contested-badge">Contested</span>}
+                      </dd>
+                    </>
+                  )}
+                </dl>
+                <p class="dive__state caption">
+                  {room.written === 0
+                    ? `Structured fields sourced; all ${room.total} prose sections awaiting a source check.`
+                    : `${room.written} of ${room.total} prose sections source-checked.`}
+                </p>
+              </a>
+            </li>
+          ),
+        )
+      }
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .head {
+    padding-block: var(--space-12) var(--space-4);
+    max-width: 46rem;
+  }
+
+  .head h1 {
+    font-size: clamp(2.125rem, 6vw, 2.875rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin-block: var(--space-3) var(--space-3);
+  }
+
+  .lede {
+    color: var(--ink-soft);
+    max-width: 52ch;
+  }
+
+  .crumb {
+    color: var(--ink-soft);
+    margin-top: var(--space-3);
+  }
+
+  .dives {
+    list-style: none;
+    padding: 0;
+    margin-block: var(--space-6) var(--space-16);
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 40rem) {
+    .dives {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .dives {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .dive {
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--hairline);
+  }
+
+  .dive a {
+    display: block;
+    padding: var(--space-4);
+    color: inherit;
+    text-decoration: none;
+    transition: border-color var(--dur-micro) var(--ease-out);
+  }
+
+  .dive:has(a:hover),
+  .dive:has(a:focus-visible) {
+    border-color: var(--brass);
+  }
+
+  .dive--shut {
+    border-style: dashed;
+    padding: var(--space-4);
+  }
+
+  .dive h2 {
+    font-size: var(--size-h3);
+    margin-block: var(--space-2) var(--space-3);
+  }
+
+  .dive__mark {
+    display: block;
+  }
+
+  .dive__facts {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-1) var(--space-3);
+    align-items: baseline;
+    margin: 0 0 var(--space-3);
+  }
+
+  .dive__facts dt {
+    font-family: var(--font-ui);
+    font-size: var(--size-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .dive__facts dd {
+    margin: 0;
+    font-size: var(--size-caption);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  .dive__nofigure {
+    font-family: var(--font-ui);
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  .dive__state,
+  .dive__waiting {
+    padding-top: var(--space-2);
+    border-top: var(--hairline-width) solid var(--hairline);
+    color: var(--brass-ink);
+  }
+</style>

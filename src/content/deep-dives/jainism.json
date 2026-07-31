@@ -1,0 +1,44 @@
+{
+  "id": "jainism",
+  "tradition": "jainism",
+  "name": "Jainism",
+  "stat_box": {
+    "adherents": {
+      "display": "≈4.5 m (census + estimates)",
+      "estimate": 4500000,
+      "source": "india-census-2011",
+      "year": 2011,
+      "basis": "4.45 m in India per the 2011 census, plus a small diaspora. Not enumerated by Pew.",
+      "contested": false
+    },
+    "symbol": "jain-hand-with-wheel"
+  },
+  "belief_dimensions": [
+    "divine-concept",
+    "cosmology",
+    "afterlife",
+    "salvation-path",
+    "scripture-authority",
+    "view-of-others"
+  ],
+  "law_dimensions": [
+    "dietary-law",
+    "dress-modesty",
+    "ethical-frame",
+    "conversion-stance",
+    "clergy-leadership",
+    "worship-form",
+    "calendar-system"
+  ],
+  "festivals": [
+    "mahavir-jayanti"
+  ],
+  "sites": [],
+  "figures": [],
+  "canon": [],
+  "practices": [],
+  "rites": [],
+  "misconceptions": [],
+  "further_reading": [],
+  "sourcing": "sourced"
+}

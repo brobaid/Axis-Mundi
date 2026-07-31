@@ -1,0 +1,44 @@
+{
+  "id": "sikhism",
+  "tradition": "sikhism",
+  "name": "Sikhism",
+  "stat_box": {
+    "adherents": {
+      "display": "≈26 m (census + estimates)",
+      "estimate": 26000000,
+      "source": "india-census-2011",
+      "year": 2011,
+      "basis": "20.8 m in India per the 2011 census, plus diaspora estimates. Not enumerated by Pew.",
+      "contested": false
+    },
+    "symbol": "khanda"
+  },
+  "belief_dimensions": [
+    "divine-concept",
+    "cosmology",
+    "afterlife",
+    "salvation-path",
+    "scripture-authority",
+    "view-of-others"
+  ],
+  "law_dimensions": [
+    "dietary-law",
+    "dress-modesty",
+    "ethical-frame",
+    "conversion-stance",
+    "clergy-leadership",
+    "worship-form",
+    "calendar-system"
+  ],
+  "festivals": [
+    "vaisakhi"
+  ],
+  "sites": [],
+  "figures": [],
+  "canon": [],
+  "practices": [],
+  "rites": [],
+  "misconceptions": [],
+  "further_reading": [],
+  "sourcing": "sourced"
+}

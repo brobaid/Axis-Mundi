@@ -54,7 +54,6 @@ const lastYear = years.length === 0 ? window.to : Math.max(...years);
    behind their own sourcing, so in production that door stays shut and says
    what it is waiting for rather than leading to a 404. */
 const dives = await getPublishable('deepDives');
-const firstDive = dives[0]?.data.tradition;
 
 interface Door {
   eyebrow: string;
@@ -81,7 +80,7 @@ const doors: Door[] = [
     eyebrow: 'Read',
     title: 'Deep dives',
     blurb: 'Ten traditions, one identical structure, fully sourced.',
-    href: firstDive === undefined ? undefined : `/traditions/${firstDive}`,
+    href: dives.length === 0 ? undefined : '/traditions',
     waitingOn: 'Waiting on the first source-checked dive.',
   },
   {

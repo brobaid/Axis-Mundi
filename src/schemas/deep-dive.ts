@@ -71,8 +71,10 @@ export const statBox = z.object({
      in the texts collection, both of which carry their own sources; a second
      authored copy here could only ever drift from them, and did. */
   origin_region: slug.optional(),
-  branches_summary: z.string().optional(),
-  calendar: z.string().optional(),
+  /* Branches and calendar are NOT fields here. Spec §2: the dive is extracted
+     from structured records. The branch list is the taxonomy's own depth-2
+     children and the calendar is the matrix's calendar-system cell, both of
+     which carry their own sources; a second authored copy could only drift. */
   symbol: slug.optional(),
 });
 
@@ -134,7 +136,9 @@ export const deepDiveSchema = z
     name: z.string().min(1),
     original: originalScript.optional(),
     /** One line under the masthead. */
-    subtitle: z.string().min(1),
+    /* Optional: a dive whose one-line subtitle has not been written yet still
+       has a complete structured record, and the page simply omits the line. */
+    subtitle: z.string().min(1).optional(),
 
     /* 1. Overview */
     stat_box: statBox,

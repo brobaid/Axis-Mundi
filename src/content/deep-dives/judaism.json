@@ -1,0 +1,44 @@
+{
+  "id": "judaism",
+  "tradition": "judaism",
+  "name": "Judaism",
+  "stat_box": {
+    "adherents": {
+      "display": "14.8 m (Pew, 2020)",
+      "estimate": 14800000,
+      "source": "pew-grl-2025",
+      "year": 2020,
+      "basis": "Enumerated by Pew. 0.2% of world population; the report carries definitional notes on Israel versus diaspora counting.",
+      "contested": false
+    },
+    "symbol": "star-of-david"
+  },
+  "belief_dimensions": [
+    "divine-concept",
+    "cosmology",
+    "afterlife",
+    "salvation-path",
+    "scripture-authority",
+    "view-of-others"
+  ],
+  "law_dimensions": [
+    "dietary-law",
+    "dress-modesty",
+    "ethical-frame",
+    "conversion-stance",
+    "clergy-leadership",
+    "worship-form",
+    "calendar-system"
+  ],
+  "festivals": [
+    "yom-kippur"
+  ],
+  "sites": [],
+  "figures": [],
+  "canon": [],
+  "practices": [],
+  "rites": [],
+  "misconceptions": [],
+  "further_reading": [],
+  "sourcing": "sourced"
+}
