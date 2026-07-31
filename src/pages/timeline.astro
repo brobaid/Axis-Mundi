@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Timeline from '../components/Timeline.astro';
+import { getPublishable, includesUnsourced, tally } from '../lib/content';
+import { displayDate } from '../lib/display-date';
+import type { TaxonomyNode, TimelineEvent } from '../lib/timeline-model';
+
+const [eventEntries, taxonomyEntries] = await Promise.all([
+  getPublishable('events'),
+  getPublishable('taxonomy'),
+]);
+const eventTally = await tally('events');
+
+/* Flatten collection entries to the shapes the timeline model works in. The
+   model deliberately knows nothing about Astro. */
+const events: TimelineEvent[] = eventEntries.map((entry) => ({
+  id: entry.data.id,
+  title: entry.data.title,
+  year_start: entry.data.year_start,
+  year_end: entry.data.year_end,
+  display_date: displayDate(entry.data),
+  traditions: entry.data.traditions,
+  branch_path: entry.data.branch_path,
+  type: entry.data.type,
+  importance: entry.data.importance,
+  summary: entry.data.summary,
+  contested: entry.data.contested,
+  contested_note: entry.data.contested_note,
+  sources: entry.data.sources,
+  region: entry.data.region,
+}));
+
+const taxonomy: TaxonomyNode[] = taxonomyEntries.map((entry) => ({
+  id: entry.data.id,
+  name: entry.data.name,
+  parent: entry.data.parent,
+  path: entry.data.path,
+  depth: entry.data.depth,
+  tradition: entry.data.tradition,
+  order: entry.data.order,
+  contested: entry.data.contested,
+}));
+
+/* The reference build's World window. Bounds widen to cover whatever is
+   actually seeded, so zooming out never clips real events. */
+const DEFAULT_FROM = 0;
+const DEFAULT_TO = 1200;
+
+const years = events.flatMap((e) => [e.year_start, e.year_end ?? e.year_start]);
+const boundsFrom = Math.min(DEFAULT_FROM, ...years) - 50;
+const boundsTo = Math.max(DEFAULT_TO, ...years) + 50;
+---
+
+<BaseLayout
+  title="Timeline"
+  description="Five thousand years of belief on one line: an event-driven timeline across ten religious traditions, drilled by branch and zoomed by significance."
+>
+  <section class="shell head">
+    <p class="eyebrow">Room II · The Corridor of Time</p>
+    <h1>Five thousand years of belief, on one line.</h1>
+    <p class="lede">
+      Timelines, maps, and deep dives across ten traditions, drawn from academic sources,
+      presented without a thumb on the scale.
+    </p>
+    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+  </section>
+
+  <div class="shell">
+    {
+      events.length === 0 ? (
+        <p class="measure empty">
+          No events have completed a source check yet, so the canvas has nothing to draw.
+          The seed data is in the repository and validated; it is held out of this build
+          until each record carries its citations.
+        </p>
+      ) : (
+        <Timeline
+          events={events}
+          taxonomy={taxonomy}
+          from={DEFAULT_FROM}
+          to={DEFAULT_TO}
+          boundsFrom={boundsFrom}
+          boundsTo={boundsTo}
+        />
+      )
+    }
+
+    <p class="caption build-note">
+      Showing {events.length} of {eventTally.total} seeded events.
+      {
+        includesUnsourced
+          ? ' This build includes records awaiting a source check.'
+          : ' Records awaiting a source check are held out of this build.'
+      }
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .head {
+    text-align: center;
+    padding-block: var(--space-12) var(--space-2);
+  }
+
+  .head h1 {
+    font-size: clamp(2.125rem, 5vw, 3.125rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin: var(--space-3) auto var(--space-3);
+    max-width: 20ch;
+  }
+
+  .lede {
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin: 0 auto;
+  }
+
+  /* The rule-and-diamond ornament from the design export. */
+  .ornament {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 520px;
+    margin: 26px auto 30px;
+  }
+
+  .ornament i {
+    flex: 1;
+    height: 3px;
+    border-top: var(--hairline-width) solid var(--hairline);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .ornament b {
+    width: 5px;
+    height: 5px;
+    rotate: 45deg;
+    background: var(--brass);
+    flex: 0 0 auto;
+  }
+
+  .empty {
+    padding-block: var(--space-8);
+    color: var(--ink-soft);
+  }
+
+  .build-note {
+    padding-top: var(--space-6);
+  }
+</style>

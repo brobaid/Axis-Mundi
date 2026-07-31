@@ -5,6 +5,9 @@ import ModeToggle from './ModeToggle.astro';
  * Global top bar (design language §8): wordmark, search, mode toggle.
  * Universal search lands in M2; the slot is held but not faked.
  */
+
+const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '');
+const isCurrent = (href: string): 'page' | undefined => (path === href ? 'page' : undefined);
 ---
 
 <header class="topbar">
@@ -13,6 +16,9 @@ import ModeToggle from './ModeToggle.astro';
       <span class="wordmark__name">Axis Mundi</span>
       <span class="wordmark__sub eyebrow">The Living Museum</span>
     </a>
+    <nav class="topbar__nav" aria-label="Rooms">
+      <a class="tap" href="/timeline" aria-current={isCurrent('/timeline')}>Timeline</a>
+    </nav>
     <ModeToggle />
   </div>
 </header>
@@ -54,5 +60,30 @@ import ModeToggle from './ModeToggle.astro';
 
   .wordmark__sub {
     color: var(--ink-soft);
+  }
+
+  .topbar__nav {
+    margin-left: auto;
+    margin-right: var(--space-4);
+    display: flex;
+    gap: var(--space-4);
+  }
+
+  .topbar__nav a {
+    font-family: var(--font-ui);
+    font-size: var(--size-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+
+  .topbar__nav a:hover {
+    color: var(--brass-ink);
+  }
+
+  .topbar__nav a[aria-current='page'] {
+    color: var(--brass-ink);
   }
 </style>
