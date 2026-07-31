@@ -1,0 +1,27 @@
+{
+  "id": "lds-organized-1830",
+  "title": "Church of Jesus Christ of Latter-day Saints organized",
+  "year_start": 1830,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/restorationist/latter-day-saints"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "north-america"
+  ],
+  "summary": "Joseph Smith organizes the church following publication of the Book of Mormon; its placement here follows the project's contested-classification rule.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

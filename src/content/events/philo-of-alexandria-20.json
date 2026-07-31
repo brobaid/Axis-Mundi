@@ -1,0 +1,27 @@
+{
+  "id": "philo-of-alexandria-20",
+  "title": "Philo of Alexandria",
+  "year_start": 20,
+  "precision": "decade",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "nile-valley"
+  ],
+  "summary": "The philosopher who reads scripture through Greek philosophy, a synthesis more influential on Christianity than on later Judaism.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

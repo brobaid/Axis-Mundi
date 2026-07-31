@@ -1,0 +1,27 @@
+{
+  "id": "reform-judaism-1818",
+  "title": "Reform Judaism institutionalized",
+  "year_start": 1818,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic/reform"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "german-lands"
+  ],
+  "summary": "The Hamburg Temple's revised liturgy marks Reform's emergence as an organized movement.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "masada-73",
+  "title": "Fall of Masada",
+  "year_start": 73,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "The last fortress of the revolt falls; the event later becomes a modern symbol.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

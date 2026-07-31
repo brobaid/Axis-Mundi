@@ -1,0 +1,27 @@
+{
+  "id": "six-day-war-1967",
+  "title": "Six-Day War and the Western Wall",
+  "year_start": 1967,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "Israel's victory brings the Old City under Jewish control; the Western Wall becomes the state's central religious site.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

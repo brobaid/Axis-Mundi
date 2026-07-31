@@ -1,0 +1,27 @@
+{
+  "id": "jerusalem-talmud-400",
+  "title": "Jerusalem Talmud takes form",
+  "year_start": 400,
+  "precision": "century",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "The Land of Israel's Talmud reaches its surviving form, a century before its longer Babylonian counterpart.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

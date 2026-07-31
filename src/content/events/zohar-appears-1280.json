@@ -1,0 +1,27 @@
+{
+  "id": "zohar-appears-1280",
+  "title": "The Zohar appears",
+  "year_start": 1280,
+  "precision": "decade",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "iberia"
+  ],
+  "summary": "The central text of Kabbalah circulates in Castile, attributed by tradition to antiquity and by scholarship to Moses de Leon's circle.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "reconstructionism-1934",
+  "title": "Reconstructionist Judaism founded",
+  "year_start": 1934,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic/reconstructionist"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "north-america"
+  ],
+  "summary": "Mordecai Kaplan's Judaism as a Civilization launches the fourth American movement.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "council-at-yavneh-80",
+  "title": "Rabbinic reconstruction at Yavneh",
+  "year_start": 80,
+  "precision": "decade",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "levant"
+  ],
+  "summary": "After the temple's destruction, sages at Yavneh reorganize Judaism around Torah study, prayer, and law.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

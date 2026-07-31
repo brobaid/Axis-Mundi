@@ -1,0 +1,27 @@
+{
+  "id": "hasidism-founded-1740",
+  "title": "Hasidism spreads",
+  "year_start": 1740,
+  "precision": "decade",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "eastern-europe"
+  ],
+  "summary": "The Baal Shem Tov's circle turns Lurianic piety into a popular movement, the Hasidic current that reshapes Eastern European Jewry.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

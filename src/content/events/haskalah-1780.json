@@ -1,0 +1,27 @@
+{
+  "id": "haskalah-1780",
+  "title": "Haskalah emerges",
+  "year_start": 1780,
+  "precision": "decade",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "german-lands"
+  ],
+  "summary": "Mendelssohn's circle argues for Jewish entry into European letters and citizenship, opening the modern movements.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

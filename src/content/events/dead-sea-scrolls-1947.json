@@ -1,0 +1,27 @@
+{
+  "id": "dead-sea-scrolls-1947",
+  "title": "Dead Sea Scrolls discovered",
+  "year_start": 1947,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "The Qumran finds recover the largest trove of Second Temple texts, rewriting the period's scholarship.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

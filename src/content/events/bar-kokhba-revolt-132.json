@@ -1,0 +1,28 @@
+{
+  "id": "bar-kokhba-revolt-132",
+  "title": "Bar Kokhba revolt",
+  "year_start": 132,
+  "year_end": 135,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "levant"
+  ],
+  "summary": "The final Judean revolt ends in devastation; Jewish life's center of gravity moves to Galilee and Babylonia.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

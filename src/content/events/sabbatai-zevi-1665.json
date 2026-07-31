@@ -1,0 +1,28 @@
+{
+  "id": "sabbatai-zevi-1665",
+  "title": "Sabbatai Zevi movement",
+  "year_start": 1665,
+  "year_end": 1666,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "anatolia"
+  ],
+  "summary": "The messianic movement sweeps the diaspora until its leader's conversion under Ottoman pressure collapses it.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

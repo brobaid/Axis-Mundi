@@ -1,0 +1,27 @@
+{
+  "id": "spinoza-excommunicated-1656",
+  "title": "Spinoza excommunicated",
+  "year_start": 1656,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "low-countries"
+  ],
+  "summary": "Amsterdam's ban on the philosopher marks the collision of traditional community and early modern thought.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

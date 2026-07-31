@@ -1,0 +1,28 @@
+{
+  "id": "andalus-golden-age-1000",
+  "title": "Hebrew golden age in al-Andalus",
+  "year_start": 1000,
+  "year_end": 1140,
+  "precision": "century",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "iberia"
+  ],
+  "summary": "Poets and philosophers from Ibn Gabirol to Judah Halevi make Muslim Spain the center of Hebrew letters.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

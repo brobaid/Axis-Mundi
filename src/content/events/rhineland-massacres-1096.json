@@ -1,0 +1,27 @@
+{
+  "id": "rhineland-massacres-1096",
+  "title": "Rhineland massacres",
+  "year_start": 1096,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "persecution",
+  "importance": 3,
+  "region": [
+    "german-lands"
+  ],
+  "summary": "Crusader bands destroy the Rhineland communities on the way east, the first of medieval Europe's mass attacks on Jews.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "first-zionist-congress-1897",
+  "title": "First Zionist Congress",
+  "year_start": 1897,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "swiss-confederation"
+  ],
+  "summary": "Herzl's Basel congress founds political Zionism as an organized movement.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

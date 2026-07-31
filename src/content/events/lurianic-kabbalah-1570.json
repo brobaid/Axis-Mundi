@@ -1,0 +1,27 @@
+{
+  "id": "lurianic-kabbalah-1570",
+  "title": "Lurianic Kabbalah at Safed",
+  "year_start": 1570,
+  "precision": "decade",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "Isaac Luria's circle recasts Kabbalah around exile and repair, the system that later powers Hasidism.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "karaite-emergence-760",
+  "title": "Karaite movement emerges",
+  "year_start": 760,
+  "precision": "century",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/karaite"
+  ],
+  "type": "schism",
+  "importance": 3,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "Anan ben David's followers reject rabbinic oral law in favor of scripture alone, founding Judaism's most durable alternative stream.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

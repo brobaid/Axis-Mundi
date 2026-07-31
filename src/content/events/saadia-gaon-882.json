@@ -1,0 +1,28 @@
+{
+  "id": "saadia-gaon-882",
+  "title": "Saadia Gaon",
+  "year_start": 882,
+  "year_end": 942,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "The Babylonian gaon who answers Karaism and casts Jewish theology in the idiom of its age.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

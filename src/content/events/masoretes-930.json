@@ -1,0 +1,27 @@
+{
+  "id": "masoretes-930",
+  "title": "Masoretes fix the biblical text",
+  "year_start": 930,
+  "precision": "century",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "The Tiberian Masoretes complete the vocalized text, exemplified by the Aleppo Codex, that becomes the standard Hebrew Bible.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "state-of-israel-1948",
+  "title": "State of Israel established",
+  "year_start": 1948,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "political",
+  "importance": 5,
+  "region": [
+    "levant"
+  ],
+  "summary": "Jewish statehood returns after nineteen centuries, transforming the demography, politics, and self-understanding of the Jewish world.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}
