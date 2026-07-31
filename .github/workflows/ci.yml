@@ -1,30 +1,51 @@
 name: CI
 
+# CI is the sourcing gate. It runs on every push and must stay green on main.
 on:
-  pull_request:
   push:
-    branches: [main]
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  # The build must not reach the network. Astro's telemetry ping is the only
+  # outbound call in the pipeline; turning it off keeps the runner hermetic and
+  # removes a class of flake that never reproduces locally.
+  ASTRO_TELEMETRY_DISABLED: '1'
+  # Fonts are self-hosted through Fontsource as ordinary dependencies, so no
+  # font is fetched at build time.
+  DO_NOT_TRACK: '1'
+
 jobs:
   check:
-    name: validate · lint · build
+    name: validate, lint, build
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
     steps:
       - uses: actions/checkout@v4
 
+      # Version comes from `packageManager` in package.json, so the runner and a
+      # developer machine can never disagree about which pnpm built the lockfile.
       - uses: pnpm/action-setup@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
           cache: pnpm
+
+      # Printed so any future divergence between a local machine and the runner
+      # is visible in the log rather than inferred.
+      - name: Toolchain
+        run: |
+          echo "node    $(node --version)"
+          echo "pnpm    $(pnpm --version)"
+          echo "declared $(node -p "require('./package.json').packageManager")"
 
       - name: Install
         run: pnpm install --frozen-lockfile

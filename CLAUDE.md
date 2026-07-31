@@ -36,7 +36,9 @@ no CMS, and none should ever be added.
 
 ## Workflow
 
-- Small PRs, one concern each, conventional commit messages.
-- Every PR: `pnpm validate:content` and `pnpm build` green in CI, short summary of what changed and why, and the Vercel preview link. The owner reviews previews from a phone, so mobile (390px) must be checked before requesting review.
-- After M0 lands, never commit directly to `main`.
+- Push directly to `main`. No pull requests, no preview review step.
+- **Local gate before every push, non-negotiable:** `pnpm validate:content`, `pnpm lint` and `pnpm build` must all pass locally. Never push with any of them failing.
+- Conventional commit messages, one concern each.
+- CI runs on every push and is the sourcing gate. It must stay green on `main`.
+- The owner reviews from a phone, so check mobile (390px) before pushing anything visual.
 - When a spec and an implementation convenience conflict, the spec wins; if the spec seems wrong, stop and ask instead of deviating.
