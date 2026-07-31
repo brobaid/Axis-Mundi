@@ -1,0 +1,31 @@
+{
+  "id": "synod-of-dort-1618",
+  "title": "Synod of Dort",
+  "year_start": 1618,
+  "year_end": 1619,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/reformed"
+  ],
+  "type": "council",
+  "importance": 3,
+  "region": [
+    "low-countries"
+  ],
+  "summary": "An international Reformed synod met at Dordrecht and issued the canons defining Reformed teaching against Arminianism.",
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
+  "sourcing": "todo"
+}

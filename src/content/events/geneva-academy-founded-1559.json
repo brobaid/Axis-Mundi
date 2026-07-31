@@ -1,0 +1,30 @@
+{
+  "id": "geneva-academy-founded-1559",
+  "title": "Geneva Academy founded",
+  "year_start": 1559,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/reformed"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "swiss-confederation"
+  ],
+  "summary": "Calvin established the Geneva Academy, which trained Reformed ministers for congregations across Europe.",
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
+  "sourcing": "todo"
+}

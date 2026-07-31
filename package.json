@@ -16,12 +16,16 @@
     "astro": "astro",
     "validate:content": "tsx scripts/validate-content.ts",
     "validate:tokens": "tsx scripts/check-tokens.ts",
-    "validate": "pnpm validate:content && pnpm validate:tokens",
+    "validate:timeline": "tsx scripts/check-timeline.ts",
+    "validate": "pnpm validate:content && pnpm validate:tokens && pnpm validate:timeline",
     "lint": "eslint . && astro check",
     "check": "pnpm validate && pnpm lint && pnpm build"
   },
   "dependencies": {
-    "astro": "^5.14.1"
+    "astro": "^5.14.1",
+    "d3-scale": "^4.0.2",
+    "d3-selection": "^3.0.0",
+    "d3-zoom": "^3.0.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
@@ -36,6 +40,9 @@
     "@fontsource/noto-serif-hebrew": "^5.2.5",
     "@fontsource/noto-serif-jp": "^5.2.5",
     "@fontsource/noto-serif-sc": "^5.2.5",
+    "@types/d3-scale": "^4.0.9",
+    "@types/d3-selection": "^3.0.11",
+    "@types/d3-zoom": "^3.0.8",
     "@types/node": "^22.10.5",
     "@typescript-eslint/eslint-plugin": "^8.20.0",
     "@typescript-eslint/parser": "^8.20.0",

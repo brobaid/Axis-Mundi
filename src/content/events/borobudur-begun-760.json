@@ -1,0 +1,30 @@
+{
+  "id": "borobudur-begun-760",
+  "title": "Borobudur begun",
+  "year_start": 760,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "java"
+  ],
+  "summary": "Construction began on Borobudur in central Java, the largest Buddhist monument of its era.",
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
+  "sourcing": "todo"
+}

@@ -362,16 +362,9 @@ dl.exhibit-label,
   flex: none;
 }
 
-/* Branch lanes are stepped tints of the parent hue, never new hues (§3.2/3). */
-.tint-1 {
-  --tradition-hue: color-mix(in srgb, var(--tradition-base) 86%, var(--surface));
-}
-.tint-2 {
-  --tradition-hue: color-mix(in srgb, var(--tradition-base) 72%, var(--surface));
-}
-.tint-3 {
-  --tradition-hue: color-mix(in srgb, var(--tradition-base) 58%, var(--surface));
-}
+/* Branch lanes are stepped tints of the parent hue, never new hues (§3.2/3).
+   The step is computed per sibling — see `buildLanes` in lib/timeline-model.ts —
+   and set as --tradition-hue on the lane, which everything inside inherits. */
 
 /* =============================================================================
    Reduced motion (design language §7, §10)

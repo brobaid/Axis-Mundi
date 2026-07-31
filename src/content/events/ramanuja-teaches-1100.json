@@ -1,0 +1,30 @@
+{
+  "id": "ramanuja-teaches-1100",
+  "title": "Ramanuja teaches",
+  "year_start": 1100,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "deccan"
+  ],
+  "summary": "Ramanuja taught Vishishtadvaita, the qualified non-dualism that became a foundation of later Vaishnava theology.",
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
+  "sourcing": "todo"
+}

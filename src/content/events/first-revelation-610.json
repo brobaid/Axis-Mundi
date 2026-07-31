@@ -1,0 +1,30 @@
+{
+  "id": "first-revelation-610",
+  "title": "First revelation",
+  "year_start": 610,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "figure",
+  "importance": 4,
+  "region": [
+    "arabia"
+  ],
+  "summary": "According to Islamic tradition, revelation to Muhammad began in a cave outside Mecca and continued for twenty-three years.",
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
+  "sourcing": "todo"
+}

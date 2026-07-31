@@ -1,0 +1,240 @@
+/**
+ * Axis Mundi — timeline layout invariants.
+ *
+ * The canvas has a handful of rules that are easy to break silently and hard to
+ * spot by eye. They are asserted here against the real seeded content, with no
+ * browser and no test framework, so they run in CI alongside the other checks.
+ *
+ * The invariants come straight from the governing docs:
+ *   spec §4        importance rubric, ~8 events per lane per viewport
+ *   kickoff M1     near-coincident events dodge or cluster, never overlap
+ *   design lang §3.2  branch lanes are stepped tints of the parent, never new hues
+ */
+
+import { readdirSync, readFileSync, statSync } from 'node:fs';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import {
+  DENSITY_BUDGET,
+  buildLanes,
+  ghostEvents,
+  layoutTimeline,
+  minimumRank,
+  rulerTicks,
+  type TaxonomyNode,
+  type TimelineEvent,
+  type Viewport,
+} from '../src/lib/timeline-model.js';
+import { displayDate } from '../src/lib/display-date.js';
+
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+
+function readAll(dir: string): any[] {
+  const base = resolve(ROOT, 'src/content', dir);
+  const out: any[] = [];
+  const walk = (d: string): void => {
+    for (const entry of readdirSync(d)) {
+      const full = join(d, entry);
+      if (statSync(full).isDirectory()) walk(full);
+      else if (entry.endsWith('.json')) out.push(JSON.parse(readFileSync(full, 'utf8')));
+    }
+  };
+  walk(base);
+  return out;
+}
+
+const events: TimelineEvent[] = readAll('events').map((e) => ({
+  ...e,
+  display_date: displayDate(e),
+}));
+const taxonomy: TaxonomyNode[] = readAll('taxonomy');
+
+const failures: string[] = [];
+const fail = (msg: string): void => {
+  failures.push(msg);
+};
+let checks = 0;
+const ok = (): void => {
+  checks += 1;
+};
+
+/** Dot diameter by rank, mirroring timeline-render.ts. */
+const dot = (importance: number): number => (importance >= 5 ? 13 : importance === 4 ? 9 : 6);
+
+/* The viewports a reader actually lands on, plus a couple of extremes. */
+const SCENARIOS: { name: string; drill: string; view: Viewport }[] = [
+  { name: 'World 0–1200 desktop', drill: '', view: { from: 0, to: 1200, width: 748 } },
+  { name: 'World 0–1200 mobile', drill: '', view: { from: 0, to: 1200, width: 260 } },
+  { name: 'World -500–2020 wide', drill: '', view: { from: -500, to: 2020, width: 1000 } },
+  { name: 'Christianity 0–1200', drill: 'christianity', view: { from: 0, to: 1200, width: 748 } },
+  {
+    name: 'Protestant 1500–1650',
+    drill: 'christianity/protestant',
+    view: { from: 1500, to: 1650, width: 748 },
+  },
+  { name: 'Close zoom 1510–1550', drill: '', view: { from: 1510, to: 1550, width: 748 } },
+];
+
+for (const { name, drill, view } of SCENARIOS) {
+  const lanes = buildLanes(taxonomy, drill);
+
+  if (lanes.length === 0) fail(`${name}: no lanes built`);
+  else ok();
+
+  /* Branch lanes are tints of the parent, never new hues: every lane in a drill
+     must belong to the tradition being drilled into. */
+  if (drill !== '') {
+    const root = drill.split('/')[0];
+    for (const lane of lanes) {
+      if (lane.tradition !== root) {
+        fail(`${name}: lane "${lane.id}" has tradition ${lane.tradition}, expected ${root}`);
+      }
+    }
+    ok();
+
+    /* Tints must be monotonically decreasing and stay legible. */
+    const tints = lanes.map((l) => l.tintPercent);
+    for (let i = 1; i < tints.length; i += 1) {
+      if ((tints[i] as number) >= (tints[i - 1] as number)) {
+        fail(`${name}: tint did not step down at lane ${i} (${tints.join(', ')})`);
+        break;
+      }
+    }
+    if (tints.some((t) => t < 44 || t > 100)) {
+      fail(`${name}: tint out of the 44–100% range (${tints.join(', ')})`);
+    }
+    ok();
+  }
+
+  const ghosts = drill === '' ? [] : ghostEvents(events, lanes, drill);
+  const layouts = layoutTimeline(lanes, events, ghosts, view);
+
+  for (const layout of layouts) {
+    const label = `${name} / ${layout.lane.id}`;
+
+    /* Density budget: never more than ~8 real events in a lane per viewport. */
+    const realEvents = layout.placed.filter((p) => p.kind === 'event' && !p.ghost);
+    const clustered = layout.placed
+      .filter((p): p is Extract<typeof p, { kind: 'cluster' }> => p.kind === 'cluster')
+      .reduce((sum, c) => sum + c.count, 0);
+    if (realEvents.length + clustered > DENSITY_BUDGET + ghosts.length) {
+      fail(`${label}: ${realEvents.length + clustered} placed, budget is ${DENSITY_BUDGET}`);
+    }
+
+    /* Rank gating: nothing below the floor for this span may be visible. */
+    const floor = minimumRank(view.to - view.from);
+    for (const p of layout.placed) {
+      if (p.kind === 'event' && p.event.importance < floor) {
+        fail(`${label}: ${p.event.id} is rank ${p.event.importance}, below floor ${floor}`);
+      }
+    }
+
+    /* Nothing overlaps. Two nodes may share horizontal space only if they were
+       dodged onto different rows; three or more must have become a cluster. */
+    const nodes = layout.placed.filter(
+      (p): p is Extract<typeof p, { kind: 'event' }> => p.kind === 'event',
+    );
+    for (let i = 0; i < nodes.length; i += 1) {
+      for (let j = i + 1; j < nodes.length; j += 1) {
+        const a = nodes[i] as (typeof nodes)[number];
+        const b = nodes[j] as (typeof nodes)[number];
+        const halfWidths = (dot(a.event.importance) + dot(b.event.importance)) / 2;
+        const dx = Math.abs(a.x - b.x);
+        if (dx >= halfWidths) continue; // clear horizontally
+
+        if (!a.dodged || !b.dodged) {
+          fail(`${label}: ${a.event.id} and ${b.event.id} are ${dx.toFixed(1)}px apart, not dodged`);
+          continue;
+        }
+        if (a.row === b.row) {
+          fail(`${label}: ${a.event.id} and ${b.event.id} dodged onto the same row`);
+          continue;
+        }
+        /* Dodged rows sit at 30% and 70% of a 46px lane = 18.4px apart. */
+        const rowGap = 0.4 * 46;
+        if (rowGap < halfWidths) {
+          fail(`${label}: dodge gap ${rowGap}px cannot clear ${halfWidths}px of dot`);
+        }
+      }
+    }
+
+    /* Labels never collide within a lane. */
+    const labelled = nodes.filter((p) => p.labelled);
+    const width = (t: string): number => t.length * 5.4 + 14;
+    for (let i = 0; i < labelled.length; i += 1) {
+      for (let j = i + 1; j < labelled.length; j += 1) {
+        const a = labelled[i] as (typeof labelled)[number];
+        const b = labelled[j] as (typeof labelled)[number];
+        const aStart = a.x - width(a.event.title) / 2;
+        const aEnd = a.x + width(a.event.title) / 2;
+        const bStart = b.x - width(b.event.title) / 2;
+        const bEnd = b.x + width(b.event.title) / 2;
+        if (aStart < bEnd && bStart < aEnd) {
+          fail(`${label}: labels "${a.event.title}" and "${b.event.title}" overlap`);
+        }
+      }
+    }
+
+    /* Every placed event genuinely belongs to its lane. */
+    for (const p of nodes) {
+      if (p.ghost) continue;
+      const belongs = p.event.branch_path.some(
+        (bp) => bp === layout.lane.path || bp.startsWith(`${layout.lane.path}/`),
+      );
+      if (!belongs) fail(`${label}: ${p.event.id} does not belong to this lane`);
+    }
+  }
+  ok();
+
+  /* Ruler ticks stay inside the viewport and stay ordered. */
+  const ticks = rulerTicks(view);
+  if (ticks.length < 2) fail(`${name}: ruler produced ${ticks.length} ticks`);
+  for (let i = 1; i < ticks.length; i += 1) {
+    if ((ticks[i] as number) <= (ticks[i - 1] as number)) fail(`${name}: ruler ticks out of order`);
+  }
+  if (ticks.some((t) => t < view.from - 1 || t > view.to + 1)) {
+    fail(`${name}: ruler tick outside the viewport`);
+  }
+  ok();
+}
+
+/* Ghosts belong to the drilled tradition but never to a visible lane. */
+{
+  const drill = 'christianity/protestant';
+  const lanes = buildLanes(taxonomy, drill);
+  const ghosts = ghostEvents(events, lanes, drill);
+  if (ghosts.length === 0) fail('Protestant drill produced no ghost events');
+  for (const g of ghosts) {
+    if (!g.branch_path.some((p) => p === 'christianity' || p.startsWith('christianity/'))) {
+      fail(`ghost ${g.id} is not a Christianity event`);
+    }
+    const inLane = lanes.some((l) =>
+      g.branch_path.some((p) => p === l.path || p.startsWith(`${l.path}/`)),
+    );
+    if (inLane) fail(`ghost ${g.id} is actually inside a visible lane`);
+  }
+  ok();
+}
+
+/* The rank floor must be monotone: zooming in never hides what was visible. */
+{
+  let previous = minimumRank(10_000);
+  for (const span of [5000, 3000, 1500, 800, 400, 200, 100, 50, 20]) {
+    const floor = minimumRank(span);
+    if (floor > previous) fail(`rank floor rose from ${previous} to ${floor} at span ${span}`);
+    previous = floor;
+  }
+  ok();
+}
+
+if (failures.length > 0) {
+  console.error('\n  Timeline layout invariants FAILED\n');
+  for (const f of failures) console.error(`      ${f}`);
+  console.error(`\n  ${failures.length} failing.\n`);
+  process.exit(1);
+}
+
+console.log(
+  `  Timeline layout invariants passed — ${checks} groups across ${SCENARIOS.length} viewports.`,
+);

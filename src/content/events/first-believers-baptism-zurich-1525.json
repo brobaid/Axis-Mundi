@@ -1,0 +1,30 @@
+{
+  "id": "first-believers-baptism-zurich-1525",
+  "title": "First believers' baptism, Zurich",
+  "year_start": 1525,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/anabaptist"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "swiss-confederation"
+  ],
+  "summary": "Adult believers were baptised in Zurich, the act conventionally taken as the beginning of the Anabaptist movement.",
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
+  "sourcing": "todo"
+}

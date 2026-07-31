@@ -12,13 +12,16 @@ import { getCollection, type CollectionEntry, type CollectionKey } from 'astro:c
  * progress without it reaching production.
  */
 
-const flag =
-  (import.meta.env['INCLUDE_TODO_SOURCING'] as string | undefined) ??
-  (typeof process !== 'undefined' ? process.env['INCLUDE_TODO_SOURCING'] : undefined);
+/* This module only ever runs at build time (Astro frontmatter, never shipped to
+   the browser), so process.env is the honest source. Reading it through
+   import.meta.env does not work here: Vite statically replaces that object, so
+   an arbitrary key is simply absent. */
+const flag: string | undefined =
+  typeof process === 'undefined' ? undefined : process.env['INCLUDE_TODO_SOURCING'];
 
 /** True when records awaiting a source check are visible in this build. */
 export const includesUnsourced: boolean =
-  flag === undefined ? import.meta.env.DEV === true : flag === 'true';
+  flag === undefined || flag === '' ? import.meta.env.DEV === true : flag === 'true';
 
 type Sourced = { data: { sourcing?: 'sourced' | 'todo' } };
 

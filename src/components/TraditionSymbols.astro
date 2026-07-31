@@ -1,0 +1,39 @@
+---
+/**
+ * The ten tradition symbols, as one inline SVG sprite.
+ *
+ * Extracted verbatim from docs/design/living-museum-timeline.dc.html, which
+ * delivers the symbol set the handoff prompt lists as its one pending asset:
+ * 24px grid, 1.5px stroke, rounded caps, forms following each tradition's own
+ * convention.
+ *
+ * Design language §6 and the handoff prompt both bind their use: identifiers
+ * ONLY — lane headers, chips, deep-dive mastheads. Never decoration, never
+ * texture, never bullets. Rendering one anywhere else is a bug.
+ *
+ * Include this once per page, then reference a symbol with <TraditionSymbol/>.
+ */
+---
+
+<svg style="display:none" aria-hidden="true"><defs>
+  <!-- Star of David -->
+  <symbol id="symbol-judaism" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.6 L18.4 15.7 L5.6 15.7 Z"></path><path d="M12 19.4 L5.6 8.3 L18.4 8.3 Z"></path></g></symbol>
+  <!-- Cross -->
+  <symbol id="symbol-christianity" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 V20"></path><path d="M6.5 9.5 H17.5"></path></g></symbol>
+  <!-- Crescent and star -->
+  <symbol id="symbol-islam" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.89 4.45 A7.8 7.8 0 1 0 18.37 16.57 A7.5 7.5 0 1 1 9.89 4.45 Z"></path><path fill="currentColor" stroke="none" d="M16.34 6.26 L17.02 8.03 L18.91 8.13 L17.43 9.32 L17.93 11.14 L16.34 10.11 L14.75 11.14 L15.25 9.32 L13.77 8.13 L15.66 8.03 Z"></path></g></symbol>
+  <!-- Om -->
+  <symbol id="symbol-hinduism" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.4 8.9 A2.5 2.5 0 1 0 6.6 6.8"></path><path d="M10.4 8.9 C6.9 8.9 5.4 11.3 5.4 13.5 C5.4 16.4 7.6 18.4 10.2 18.4 C12.9 18.4 14.6 16.5 14.6 14.2 C14.6 12.2 13.2 10.9 11.4 10.9 C10 10.9 9 11.9 9 13.1"></path><path d="M14.6 14.2 C15.9 15.4 17.8 15.3 18.9 14"></path><path d="M13.9 5.9 A3 3 0 0 0 19.1 5.9"></path><circle cx="16.5" cy="3.4" r="0.9" fill="currentColor" stroke="none"></circle></g></symbol>
+  <!-- Dharmachakra -->
+  <symbol id="symbol-buddhism" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="2.1"></circle><path d="M15 12 H19.9 M9 12 H4.1 M12 15 V19.9 M12 9 V4.1 M14.1 14.1 L17.6 17.6 M9.9 9.9 L6.4 6.4 M14.1 9.9 L17.6 6.4 M9.9 14.1 L6.4 17.6"></path></g></symbol>
+  <!-- Khanda -->
+  <symbol id="symbol-sikhism" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11.8" r="4.6"></circle><path d="M12 3.4 V17.6"></path><path d="M12 3.4 L10.9 5.9 M12 3.4 L13.1 5.9"></path><path d="M10.6 16 H13.4"></path><path d="M13.6 19.6 C9.6 18.6 6.4 15 5.8 9.8 L5.7 8"></path><path d="M10.4 19.6 C14.4 18.6 17.6 15 18.2 9.8 L18.3 8"></path></g></symbol>
+  <!-- Taijitu -->
+  <symbol id="symbol-chinese" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 4 A4 4 0 0 1 12 12 A4 4 0 0 0 12 20"></path><circle cx="12" cy="8" r="1.2" fill="currentColor" stroke="none"></circle><circle cx="12" cy="16" r="1.2"></circle></g></symbol>
+  <!-- Torii -->
+  <symbol id="symbol-shinto" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.8 Q12 5 20 6.8"></path><path d="M5.8 10.4 H18.2"></path><path d="M7.4 6.4 L6.8 20"></path><path d="M16.6 6.4 L17.2 20"></path><path d="M12 6 V10.4"></path></g></symbol>
+  <!-- Ahimsa hand -->
+  <symbol id="symbol-jainism" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20.5 C6.8 18.8 6.2 16.6 6.2 14.4 L6.2 10 A1.1 1.1 0 0 1 8.4 10 L8.4 12.6 L9.3 12.6 L9.3 6.5 A1.1 1.1 0 0 1 11.5 6.5 L11.5 12 L12.4 12 L12.4 5.6 A1.1 1.1 0 0 1 14.6 5.6 L14.6 12.2 L15.5 12.2 L15.5 8.2 A1.1 1.1 0 0 1 17.7 8.2 L17.7 14.4 C17.7 16.6 17.1 18.8 15.9 20.5 Z"></path><circle cx="11.9" cy="15.9" r="1.9"></circle></g></symbol>
+  <!-- Faravahar -->
+  <symbol id="symbol-zoroastrianism" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9.8" r="2.4"></circle><path d="M9.6 8.9 C7.4 7.8 5.2 7.4 3.2 7.8 M9.5 10.6 C7.3 10.2 5.2 10.4 3.6 11.2 M9.8 12.3 C8.2 12.2 6.8 12.6 5.8 13.5"></path><path d="M14.4 8.9 C16.6 7.8 18.8 7.4 20.8 7.8 M14.5 10.6 C16.7 10.2 18.8 10.4 20.4 11.2 M14.2 12.3 C15.8 12.2 17.2 12.6 18.2 13.5"></path><path d="M11 13.2 L10.2 17.6 M13 13.2 L13.8 17.6 M12 13.6 V17.8"></path></g></symbol>
+</defs></svg>

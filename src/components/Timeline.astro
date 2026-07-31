@@ -1,0 +1,807 @@
+---
+import TraditionSymbols from './TraditionSymbols.astro';
+import {
+  buildLanes,
+  layoutTimeline,
+  zoomLabel,
+  type TaxonomyNode,
+  type TimelineEvent,
+  type Viewport,
+} from '../lib/timeline-model';
+import { renderCanvas } from '../lib/timeline-render';
+
+/**
+ * The timeline canvas (M1).
+ *
+ * Server-renders the default view with the same model and renderer the island
+ * uses, so the first paint is real content rather than a placeholder, and a
+ * reader without JavaScript still gets the canvas plus the full chronological
+ * list alternative that design language §10 requires.
+ */
+
+interface Props {
+  events: TimelineEvent[];
+  taxonomy: TaxonomyNode[];
+  from: number;
+  to: number;
+  boundsFrom: number;
+  boundsTo: number;
+}
+
+const { events, taxonomy, from, to, boundsFrom, boundsTo } = Astro.props;
+
+/* Server render assumes the desktop track width; the island corrects to the
+   real measurement on hydration. */
+const view: Viewport = { from, to, width: 748 };
+const lanes = buildLanes(taxonomy, '');
+const layouts = layoutTimeline(lanes, events, [], view);
+
+const canvasHtml = renderCanvas(layouts, view, {
+  title: 'The World Timeline',
+  subtitle: `${Math.abs(from)} ${from < 0 ? 'BCE' : 'CE'} – ${to} CE`,
+  meridianYear: (from + to) / 2,
+  meridianLabel: `${Math.round((from + to) / 2)} CE`,
+});
+
+/* Filter chips: the event types actually present, in spec §3.1 order. */
+const TYPE_ORDER = [
+  'founding', 'schism', 'text', 'figure', 'council', 'political',
+  'reform', 'expansion', 'persecution', 'construction', 'encounter', 'modern',
+];
+const presentTypes = TYPE_ORDER.filter((t) => events.some((e) => e.type === t));
+
+const chronological = [...events].sort(
+  (a, b) => a.year_start - b.year_start || a.title.localeCompare(b.title),
+);
+
+const bootstrap = {
+  events,
+  taxonomy,
+  bounds: { from: boundsFrom, to: boundsTo },
+  defaultView: { from, to },
+  types: presentTypes,
+};
+---
+
+<TraditionSymbols />
+
+<section class="tl" data-timeline aria-label="Interactive timeline">
+  <!-- controls ------------------------------------------------------- -->
+  <div class="tl-bar">
+    <nav class="tl-crumb" data-crumb aria-label="Drill path">
+      <b>World</b>
+    </nav>
+    <div class="tl-bar__actions">
+      <span class="tl-zoom eyebrow"><span data-zoom-label>{zoomLabel(to - from)}</span> view</span>
+      <button type="button" class="tl-btn" data-up hidden>Back up</button>
+      <button type="button" class="tl-btn" data-ghost-toggle aria-pressed="false" hidden>
+        Ghost mode
+      </button>
+    </div>
+  </div>
+
+  <div class="tl-filters" role="group" aria-label="Filter by event type">
+    <button type="button" class="tl-chip" data-type="" aria-pressed="true">All types</button>
+    {
+      presentTypes.map((t) => (
+        <button type="button" class="tl-chip" data-type={t} aria-pressed="false">
+          {t[0]?.toUpperCase()}{t.slice(1)}
+        </button>
+      ))
+    }
+  </div>
+
+  <!-- canvas --------------------------------------------------------- -->
+  <div class="tl-frame" data-scroll tabindex="0" role="region" aria-label="Timeline canvas, scrollable">
+    <div class="tl-canvas" data-canvas set:html={canvasHtml} />
+  </div>
+
+  <p class="tl-note caption">
+    Dot size encodes importance rank; labels go to the most significant events that fit.
+    Open any event without losing your place. Select a tradition to split it into branch lanes.
+    Zoom with <kbd>ctrl</kbd> or <kbd>⌥</kbd> and scroll, or pinch.
+  </p>
+
+  <!-- accessible alternative ----------------------------------------- -->
+  <details class="tl-list">
+    <summary>Timeline as a list ({chronological.length} events)</summary>
+    <ol>
+      {
+        chronological.map((e) => (
+          <li>
+            <span class="mono tl-list__date">{e.display_date}</span>
+            <span class="tl-list__title">{e.title}</span>
+            <span class="caption">{e.traditions.join(', ')} · rank {e.importance}</span>
+            {e.contested && <span class="contested-badge">Contested</span>}
+            <p class="caption tl-list__summary">{e.summary}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </details>
+
+  <!-- event panel ---------------------------------------------------- -->
+  <div class="tl-scrim" data-scrim hidden></div>
+  <aside
+    class="tl-panel"
+    data-panel
+    hidden
+    role="dialog"
+    aria-modal="false"
+    aria-labelledby="tl-panel-title"
+  >
+  </aside>
+</section>
+
+<script type="application/json" id="timeline-data" set:html={JSON.stringify(bootstrap)} is:inline />
+
+<script>
+  import '../scripts/timeline';
+</script>
+
+<style>
+  .tl {
+    position: relative;
+  }
+
+  /* --- controls --------------------------------------------------------- */
+
+  .tl-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 0 2px var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  .tl-crumb {
+    font-family: var(--font-ui);
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  .tl-crumb :global(b) {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .tl-crumb :global(button) {
+    background: none;
+    border: 0;
+    padding: 0;
+    min-height: 0;
+    font: inherit;
+    color: var(--brass-ink);
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  .tl-crumb :global(.tl-crumb__sep) {
+    color: var(--ink-soft);
+  }
+
+  .tl-bar__actions {
+    display: flex;
+    gap: var(--space-2);
+    margin-left: auto;
+    align-items: center;
+  }
+
+  .tl-zoom {
+    white-space: nowrap;
+  }
+
+  .tl-btn {
+    border: var(--hairline-width) solid var(--hairline-strong);
+    background: var(--surface);
+    border-radius: 6px;
+    padding: 0 12px;
+    min-height: var(--tap-min);
+    white-space: nowrap;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: border-color var(--dur-micro) var(--ease-out);
+  }
+
+  .tl-btn:hover {
+    border-color: var(--brass);
+    color: var(--ink);
+  }
+
+  .tl-btn[aria-pressed='true'] {
+    border-color: var(--brass);
+    color: var(--brass-ink);
+  }
+
+  .tl-filters {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 0 2px var(--space-3);
+    scrollbar-width: thin;
+  }
+
+  .tl-chip {
+    flex: 0 0 auto;
+    border: var(--hairline-width) solid var(--hairline-strong);
+    background: var(--surface);
+    border-radius: var(--radius-pill);
+    padding: 0 12px;
+    min-height: var(--tap-min);
+    white-space: nowrap;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: border-color var(--dur-micro) var(--ease-out);
+  }
+
+  .tl-chip:hover {
+    border-color: var(--brass);
+  }
+
+  .tl-chip[aria-pressed='true'] {
+    border-color: var(--brass);
+    color: var(--brass-ink);
+  }
+
+  /* --- the vitrine ------------------------------------------------------ */
+
+  .tl-frame {
+    position: relative;
+    border: var(--hairline-width) solid var(--ink);
+    box-shadow:
+      0 0 0 3px var(--canvas),
+      0 0 0 4px var(--hairline);
+    background: var(--surface);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    touch-action: pan-y pinch-zoom;
+  }
+
+  .tl-canvas :global(.tl-inner) {
+    position: relative;
+    min-width: 880px;
+    padding: 0 0 6px;
+  }
+
+  /* --- title plate ------------------------------------------------------ */
+
+  .tl-canvas :global(.tl-plate-row) {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .tl-canvas :global(.tl-plate) {
+    position: sticky;
+    left: 12px;
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--ink);
+    box-shadow:
+      0 0 0 3px var(--surface),
+      0 0 0 4px var(--ink);
+    padding: 6px 13px 5px;
+    margin: 4px 0 4px 4px;
+    z-index: 5;
+  }
+
+  .tl-canvas :global(.tl-plate__title) {
+    font-family: var(--font-display);
+    font-size: 12.5px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+  }
+
+  .tl-canvas :global(.tl-plate__sub) {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--brass-ink);
+  }
+
+  /* --- ruler ------------------------------------------------------------ */
+
+  .tl-canvas :global(.tl-ruler) {
+    position: relative;
+    margin-left: 132px;
+    height: 34px;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .tl-canvas :global(.tl-tick) {
+    position: absolute;
+    bottom: 8px;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+
+  /* --- lanes ------------------------------------------------------------ */
+
+  .tl-canvas :global(.tl-lane) {
+    display: flex;
+    align-items: center;
+    height: 46px;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .tl-canvas :global(.tl-lane:last-child) {
+    border-bottom: 0;
+  }
+
+  .tl-canvas :global(.tl-lane:hover) {
+    background: var(--lane-hover);
+  }
+
+  .tl-canvas :global(.tl-lane__head) {
+    flex: 0 0 132px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 500;
+    position: sticky;
+    left: 0;
+    background: var(--surface);
+    z-index: 2;
+    height: 100%;
+    min-height: 0;
+    border-right: var(--hairline-width) solid var(--hairline);
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    color: var(--ink);
+    text-align: left;
+  }
+
+  .tl-canvas :global(button.tl-lane__head) {
+    cursor: pointer;
+  }
+
+  .tl-canvas :global(button.tl-lane__head:hover .tl-lane__name) {
+    color: var(--brass-ink);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  .tl-canvas :global(.tl-lane__name) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* The contested hatch, same drafting convention as the badge and the map. */
+  .tl-canvas :global(.tl-lane__contested) {
+    flex: 0 0 auto;
+    width: 9px;
+    height: 9px;
+    border: var(--hairline-width) solid var(--hairline-strong);
+    background-image: repeating-linear-gradient(
+      var(--hatch-angle),
+      transparent 0,
+      transparent 2px,
+      var(--contested-hatch) 2px,
+      var(--contested-hatch) 3px
+    );
+  }
+
+  .tl-canvas :global(.tl-track) {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    background: repeating-linear-gradient(
+      to right,
+      transparent 0 calc(100% / 12 - 1px),
+      var(--hairline) calc(100% / 12 - 1px) calc(100% / 12)
+    );
+  }
+
+  /* --- event nodes ------------------------------------------------------ */
+
+  .tl-canvas :global(.tl-node) {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: var(--tap-min);
+    height: var(--tap-min);
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .tl-canvas :global(.tl-node--r5) {
+    z-index: 2;
+  }
+
+  .tl-canvas :global(.tl-dot) {
+    display: block;
+    width: var(--dot);
+    height: var(--dot);
+    border-radius: 50%;
+    background: var(--tradition-hue);
+  }
+
+  .tl-canvas :global(.tl-node--r5 .tl-dot) {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--tradition-hue) 20%, transparent);
+  }
+
+  .tl-canvas :global(.tl-node--r3 .tl-dot) {
+    opacity: 0.75;
+  }
+
+  /* Ranged events render as bars behind the dot. */
+  .tl-canvas :global(.tl-span) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 3px;
+    translate: 0 -50%;
+    background: var(--tradition-hue);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  .tl-canvas :global(.tl-node__label) {
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-ui);
+    font-size: 10.5px;
+    white-space: nowrap;
+    color: var(--ink-soft);
+    pointer-events: none;
+  }
+
+  /* Ghosts: dashed, quiet, and never openable — they belong to another branch. */
+  .tl-canvas :global(.tl-node--ghost) {
+    cursor: default;
+  }
+
+  .tl-canvas :global(.tl-node--ghost .tl-dot) {
+    background: transparent;
+    border: 1.5px dashed var(--ink-soft);
+    box-shadow: none;
+    opacity: 0.55;
+  }
+
+  .tl-canvas :global(.tl-node--ghost .tl-node__label) {
+    opacity: 0.7;
+  }
+
+  /* Contested events carry the hatched ring, same convention as everywhere. */
+  .tl-canvas :global(.tl-node--contested .tl-dot) {
+    outline: 1.5px dashed var(--contested-hatch);
+    outline-offset: 2px;
+  }
+
+  .tl-canvas :global(.tl-cluster) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: var(--radius-pill);
+    border: var(--hairline-width) solid var(--hairline-strong);
+    background: var(--surface);
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--ink-soft);
+  }
+
+  .tl-canvas :global(.tl-more),
+  .tl-canvas :global(.tl-empty) {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    translate: 0 -50%;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    color: var(--ink-soft);
+    opacity: 0.6;
+    white-space: nowrap;
+  }
+
+  /* --- the Brass Meridian ----------------------------------------------- */
+
+  .tl-canvas :global(.tl-meridian) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: var(--meridian-weight);
+    background: var(--meridian-color);
+    z-index: 3;
+    pointer-events: none;
+    transition: left var(--meridian-duration) var(--meridian-ease);
+  }
+
+  .tl-canvas :global(.tl-meridian__label) {
+    position: absolute;
+    top: 18px;
+    left: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--brass-ink);
+    background: var(--canvas);
+    border: var(--hairline-width) solid var(--hairline);
+    padding: 1px 6px;
+    white-space: nowrap;
+  }
+
+  /* --- note and list ----------------------------------------------------- */
+
+  .tl-note {
+    padding: var(--space-3) 2px 0;
+    max-width: 64ch;
+  }
+
+  .tl-note kbd {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    border: var(--hairline-width) solid var(--hairline-strong);
+    border-radius: var(--radius-xs);
+    padding: 0 4px;
+  }
+
+  .tl-list {
+    margin-top: var(--space-6);
+    border-top: var(--hairline-width) solid var(--hairline);
+    padding-top: var(--space-3);
+  }
+
+  .tl-list summary {
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    cursor: pointer;
+    min-height: var(--tap-min);
+    display: flex;
+    align-items: center;
+  }
+
+  .tl-list ol {
+    margin: var(--space-4) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tl-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2) var(--space-3);
+    padding-block: var(--space-3);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .tl-list__date {
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
+    min-width: 10ch;
+  }
+
+  .tl-list__title {
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+  }
+
+  .tl-list__summary {
+    flex-basis: 100%;
+    margin: 0;
+    max-width: var(--measure);
+  }
+
+  /* --- event panel -------------------------------------------------------- */
+
+  .tl-scrim {
+    position: fixed;
+    inset: 0;
+    background: var(--scrim);
+    z-index: var(--z-panel);
+    animation: tl-fade var(--dur-panel) var(--ease-standard);
+  }
+
+  .tl-panel {
+    position: fixed;
+    z-index: var(--z-sheet);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: min(430px, 100vw);
+    background: var(--surface);
+    border-left: var(--hairline-width) solid var(--hairline);
+    box-shadow: var(--shadow-panel);
+    overflow-y: auto;
+    padding: var(--space-6) var(--space-6) var(--space-8);
+    animation: tl-slide-in var(--dur-panel) var(--ease-standard);
+  }
+
+  .tl-panel :global(.tl-panel__close) {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: var(--tap-min);
+    height: var(--tap-min);
+    font-size: 20px;
+    color: var(--ink-soft);
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .tl-panel :global(.tl-panel__meta) {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 6px 0 12px;
+  }
+
+  .tl-panel :global(.tl-panel__trad) {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-transform: capitalize;
+  }
+
+  .tl-panel :global(h2) {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 1.15;
+    margin: 0 0 6px;
+  }
+
+  /* The rule-and-diamond ornament from the design export. */
+  .tl-panel :global(.tl-rule) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0 14px;
+  }
+
+  .tl-panel :global(.tl-rule i) {
+    flex: 1;
+    height: 3px;
+    border-top: var(--hairline-width) solid var(--hairline);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .tl-panel :global(.tl-rule b) {
+    width: 4px;
+    height: 4px;
+    rotate: 45deg;
+    background: var(--brass);
+    flex: 0 0 auto;
+  }
+
+  .tl-panel :global(.tl-panel__label) {
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--ink);
+    box-shadow:
+      0 0 0 2px var(--surface),
+      0 0 0 3px var(--hairline);
+    padding: 12px 14px;
+    margin-bottom: 14px;
+  }
+
+  .tl-panel :global(.tl-panel__row) {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 7px 0;
+    border-top: var(--hairline-width) solid var(--hairline);
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+
+  .tl-panel :global(.tl-panel__row:first-of-type) {
+    border-top: 0;
+  }
+
+  .tl-panel :global(.tl-panel__row span:first-child) {
+    font-family: var(--font-ui);
+    color: var(--ink-soft);
+    font-size: 12.5px;
+  }
+
+  .tl-panel :global(.tl-panel__contested) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: flex-start;
+    margin-bottom: var(--space-4);
+    font-size: var(--size-small);
+    color: var(--ink-soft);
+  }
+
+  .tl-panel :global(.tl-panel__summary) {
+    margin: 14px 0;
+  }
+
+  .tl-panel :global(.tl-panel__sources) {
+    border-top: var(--hairline-width) solid var(--hairline);
+    padding-top: 12px;
+    margin-top: 14px;
+  }
+
+  @keyframes tl-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes tl-slide-in {
+    from {
+      transform: translateX(40px);
+      opacity: 0;
+    }
+    to {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  /* Mobile: the panel becomes a bottom sheet (kickoff M1). */
+  @media (max-width: 48rem) {
+    .tl-panel {
+      top: auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-height: 82vh;
+      border-left: 0;
+      border-top: var(--hairline-width) solid var(--hairline);
+      box-shadow: var(--shadow-sheet);
+      animation-name: tl-sheet-up;
+    }
+  }
+
+  @keyframes tl-sheet-up {
+    from {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    to {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  /* Reduced motion: crossfades become cuts, the meridian snaps (§7). */
+  @media (prefers-reduced-motion: reduce) {
+    .tl-scrim,
+    .tl-panel {
+      animation: none;
+    }
+
+    .tl-canvas :global(.tl-meridian) {
+      transition: none;
+    }
+  }
+</style>
