@@ -1,0 +1,27 @@
+{
+  "id": "fasli-calendar-1906",
+  "title": "Fasli calendar reform",
+  "year_start": 1906,
+  "precision": "exact",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "The seasonal calendar movement adds a third observance alongside Kadmi and Shahenshahi.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

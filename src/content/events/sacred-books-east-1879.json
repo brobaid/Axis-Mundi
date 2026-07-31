@@ -1,0 +1,31 @@
+{
+  "id": "sacred-books-east-1879",
+  "title": "Sacred Books of the East published",
+  "year_start": 1879,
+  "year_end": 1910,
+  "precision": "exact",
+  "traditions": [
+    "hinduism",
+    "buddhism"
+  ],
+  "branch_path": [
+    "hinduism",
+    "buddhism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "british-isles"
+  ],
+  "summary": "Max Muller's fifty-volume translation series carries Asian scriptures into Western scholarship and shapes how the traditions meet modern readers.",
+  "sources": [
+    "flood-hinduism-1996",
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-encounters"
+  ],
+  "sourcing": "sourced"
+}

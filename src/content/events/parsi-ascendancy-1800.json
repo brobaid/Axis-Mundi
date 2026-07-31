@@ -1,0 +1,28 @@
+{
+  "id": "parsi-ascendancy-1800",
+  "title": "Parsi mercantile ascendancy",
+  "year_start": 1750,
+  "year_end": 1900,
+  "precision": "era",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "modern",
+  "importance": 4,
+  "region": [
+    "western-india"
+  ],
+  "summary": "Bombay's Parsi merchants and philanthropists become colonial India's most prominent community far beyond their numbers.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

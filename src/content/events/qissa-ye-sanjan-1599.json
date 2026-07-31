@@ -1,0 +1,27 @@
+{
+  "id": "qissa-ye-sanjan-1599",
+  "title": "Qissa-ye Sanjan written",
+  "year_start": 1599,
+  "precision": "exact",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "The verse account of the Parsi migration fixes the community's origin story.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "mazdak-movement-500",
+  "title": "Mazdak's movement",
+  "year_start": 500,
+  "precision": "decade",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "The egalitarian preacher's movement convulses the late Sasanian order before its suppression.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

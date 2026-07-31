@@ -1,0 +1,27 @@
+{
+  "id": "arsacid-collection-100",
+  "title": "Arsacid collection of the Avesta",
+  "year_start": 100,
+  "precision": "era",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "According to the Denkard's account, the Parthian kings begin regathering the scattered scriptures.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

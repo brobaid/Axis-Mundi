@@ -1,0 +1,33 @@
+{
+  "id": "mani-proclaims-242",
+  "title": "Mani proclaims his religion",
+  "year_start": 242,
+  "precision": "exact",
+  "traditions": [
+    "zoroastrianism",
+    "christianity",
+    "buddhism"
+  ],
+  "branch_path": [
+    "zoroastrianism",
+    "christianity",
+    "buddhism"
+  ],
+  "type": "encounter",
+  "importance": 4,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "Mani announces a deliberate synthesis of Zoroastrian, Christian, and Buddhist teaching; Manichaeism spreads from the Atlantic to China before dying out, and is recorded here on the lanes it drew from.",
+  "sources": [
+    "boyce-zoroastrians",
+    "oxford-early-christian-studies-2008",
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-encounters"
+  ],
+  "sourcing": "sourced"
+}

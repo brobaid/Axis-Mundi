@@ -1,0 +1,28 @@
+{
+  "id": "denkard-bundahishn-900",
+  "title": "Denkard and Bundahishn compiled",
+  "year_start": 900,
+  "precision": "century",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "The ninth-century Pahlavi books preserve the theology, cosmology, and lost-Avesta summaries through the Islamic centuries.",
+  "sources": [
+    "boyce-zoroastrians",
+    "wiley-zoroastrianism-2015",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

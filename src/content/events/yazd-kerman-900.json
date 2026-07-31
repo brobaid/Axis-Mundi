@@ -1,0 +1,27 @@
+{
+  "id": "yazd-kerman-900",
+  "title": "Yazd and Kerman communities persist",
+  "year_start": 900,
+  "precision": "century",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "The desert-edge communities become the enduring homeland of Iranian Zoroastrianism.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

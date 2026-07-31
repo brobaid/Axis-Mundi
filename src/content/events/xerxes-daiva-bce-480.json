@@ -1,0 +1,27 @@
+{
+  "id": "xerxes-daiva-bce-480",
+  "title": "Xerxes' daiva inscription",
+  "year_start": -480,
+  "precision": "decade",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "The king records suppressing the worship of daivas, the tradition's rejected gods, in imperial policy.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "amelioration-society-1854",
+  "title": "Amelioration Society sends Maneckji to Iran",
+  "year_start": 1854,
+  "precision": "exact",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "modern",
+  "importance": 3,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "Parsi philanthropy takes up the cause of Iran's pressured Zoroastrians.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

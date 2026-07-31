@@ -1,0 +1,27 @@
+{
+  "id": "jizya-lifted-1882",
+  "title": "Jizya lifted from Iranian Zoroastrians",
+  "year_start": 1882,
+  "precision": "exact",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "The Qajar decree, won by Maneckji's mission, ends the discriminatory tax and opens the community's emancipation.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

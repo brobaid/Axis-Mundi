@@ -1,0 +1,27 @@
+{
+  "id": "rivayats-1478",
+  "title": "The Rivayats correspondence begins",
+  "year_start": 1478,
+  "precision": "exact",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "Priestly letters between India and Iran carry ritual guidance across the divided community for three centuries.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

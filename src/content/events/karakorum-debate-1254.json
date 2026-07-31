@@ -1,0 +1,33 @@
+{
+  "id": "karakorum-debate-1254",
+  "title": "The Karakorum court debate",
+  "year_start": 1254,
+  "precision": "exact",
+  "traditions": [
+    "christianity",
+    "islam",
+    "buddhism"
+  ],
+  "branch_path": [
+    "christianity",
+    "islam",
+    "buddhism"
+  ],
+  "type": "encounter",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Mongke Khan stages a formal debate among Christian, Muslim, and Buddhist representatives, recorded by William of Rubruck, the era's most documented interfaith exchange.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "nchi-2010",
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-encounters"
+  ],
+  "sourcing": "sourced"
+}

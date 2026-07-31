@@ -1,0 +1,27 @@
+{
+  "id": "avesta-written-500",
+  "title": "Avesta committed to writing",
+  "year_start": 500,
+  "precision": "century",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "The Sasanian church fixes the Avesta in its dedicated script, the canon the manuscripts descend from.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

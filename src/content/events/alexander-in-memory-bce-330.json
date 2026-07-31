@@ -1,0 +1,27 @@
+{
+  "id": "alexander-in-memory-bce-330",
+  "title": "Alexander in Zoroastrian memory",
+  "year_start": -330,
+  "precision": "exact",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "persecution",
+  "importance": 3,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "Zoroastrian tradition remembers the Macedonian conquest as the burning of the sacred texts; the memory shapes every later account of the canon.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

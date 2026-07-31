@@ -1,0 +1,31 @@
+{
+  "id": "japan-mission-debates-1551",
+  "title": "Christian mission and Buddhist debate in Japan",
+  "year_start": 1551,
+  "year_end": 1614,
+  "precision": "exact",
+  "traditions": [
+    "christianity",
+    "buddhism"
+  ],
+  "branch_path": [
+    "christianity",
+    "buddhism"
+  ],
+  "type": "encounter",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "From Xavier's disputations to the Tokugawa ban, the Japanese mission is the early modern world's sharpest Christian-Buddhist encounter.",
+  "sources": [
+    "macculloch-reformation-2003",
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-encounters"
+  ],
+  "sourcing": "sourced"
+}

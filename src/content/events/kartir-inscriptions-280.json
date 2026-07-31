@@ -1,0 +1,27 @@
+{
+  "id": "kartir-inscriptions-280",
+  "title": "Kartir's priestly consolidation",
+  "year_start": 280,
+  "precision": "decade",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "The high priest's inscriptions record the ordering of the Sasanian church and measures against rival religions, Manichaeans and others among them.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

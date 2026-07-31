@@ -1,0 +1,27 @@
+{
+  "id": "zurvanite-current-400",
+  "title": "Zurvanite speculation flourishes",
+  "year_start": 400,
+  "precision": "century",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "The theology of Time as first principle runs through the Sasanian centuries before orthodoxy sets it aside.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

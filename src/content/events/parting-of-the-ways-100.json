@@ -1,0 +1,30 @@
+{
+  "id": "parting-of-the-ways-100",
+  "title": "The parting of the ways",
+  "year_start": 100,
+  "precision": "century",
+  "traditions": [
+    "judaism",
+    "christianity"
+  ],
+  "branch_path": [
+    "judaism",
+    "christianity"
+  ],
+  "type": "schism",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "Over the late first and second centuries, the Jesus movement and rabbinic Judaism become distinct religions, a gradual separation rather than a single break.",
+  "sources": [
+    "ej2-2007",
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-encounters"
+  ],
+  "sourcing": "sourced"
+}

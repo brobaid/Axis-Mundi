@@ -1,0 +1,31 @@
+{
+  "id": "nestorian-changan-635",
+  "title": "The Church of the East reaches Chang'an",
+  "year_start": 635,
+  "precision": "exact",
+  "traditions": [
+    "christianity",
+    "chinese"
+  ],
+  "branch_path": [
+    "christianity",
+    "chinese"
+  ],
+  "type": "encounter",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Aluoben's mission wins Tang toleration; the Xi'an stele of 781 commemorates the church's Chinese century.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-encounters"
+  ],
+  "sourcing": "sourced"
+}

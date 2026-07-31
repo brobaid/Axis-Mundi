@@ -1,0 +1,27 @@
+{
+  "id": "fezana-founded-1987",
+  "title": "FEZANA founded",
+  "year_start": 1987,
+  "precision": "exact",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "north-america"
+  ],
+  "summary": "The North American federation organizes the diaspora that now rivals the homelands in size.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

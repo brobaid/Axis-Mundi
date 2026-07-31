@@ -1,0 +1,31 @@
+{
+  "id": "sufi-sant-confluence-1400",
+  "title": "Sufi and sant currents interpenetrate",
+  "year_start": 1400,
+  "year_end": 1520,
+  "precision": "era",
+  "traditions": [
+    "islam",
+    "hinduism"
+  ],
+  "branch_path": [
+    "islam",
+    "hinduism"
+  ],
+  "type": "encounter",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Sufi lodges and sant poets share language, audiences, and devotional forms in North India; Kabir's verse stands where the currents meet.",
+  "sources": [
+    "nchi-2010",
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-encounters"
+  ],
+  "sourcing": "sourced"
+}

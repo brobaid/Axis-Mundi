@@ -1,0 +1,39 @@
+{
+  "id": "nostra-aetate-1965",
+  "title": "Nostra Aetate",
+  "year_start": 1965,
+  "precision": "exact",
+  "traditions": [
+    "christianity",
+    "judaism",
+    "islam",
+    "hinduism",
+    "buddhism"
+  ],
+  "branch_path": [
+    "christianity",
+    "judaism",
+    "islam",
+    "hinduism",
+    "buddhism"
+  ],
+  "type": "council",
+  "importance": 4,
+  "region": [
+    "italian-peninsula"
+  ],
+  "summary": "The Vatican II declaration reframes Catholic relations with Jews, Muslims, Hindus, and Buddhists, the century's most consequential interreligious document.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "ej2-2007",
+    "nchi-2010",
+    "flood-hinduism-1996",
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-encounters"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "kaifeng-jews-1100",
+  "title": "The Jews of Kaifeng",
+  "year_start": 1100,
+  "precision": "century",
+  "traditions": [
+    "judaism",
+    "chinese"
+  ],
+  "branch_path": [
+    "judaism",
+    "chinese"
+  ],
+  "type": "encounter",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "A Jewish community takes root in the Song capital region, persisting in Chinese dress for eight centuries.",
+  "sources": [
+    "ej2-2007",
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-encounters"
+  ],
+  "sourcing": "sourced"
+}

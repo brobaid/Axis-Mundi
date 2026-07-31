@@ -1,0 +1,27 @@
+{
+  "id": "calendar-split-1745",
+  "title": "Kadmi-Shahenshahi calendar split",
+  "year_start": 1745,
+  "precision": "exact",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "schism",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "The dispute over intercalation divides Parsi ritual observance into rival calendars.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

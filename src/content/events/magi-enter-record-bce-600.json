@@ -1,0 +1,27 @@
+{
+  "id": "magi-enter-record-bce-600",
+  "title": "The magi enter the record",
+  "year_start": -600,
+  "precision": "era",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "The Median priestly clan appears in the sources, the hereditary priesthood that will carry the tradition.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

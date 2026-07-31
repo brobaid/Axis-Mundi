@@ -1,0 +1,28 @@
+{
+  "id": "gathas-composed-bce-1000",
+  "title": "Zarathustra and the Gathas",
+  "year_start": -1000,
+  "precision": "era",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "founding",
+  "importance": 5,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "Position 1: linguistic dating places the Gathas and their composer around 1500-1000 BCE. Position 2: a later tradition dates Zarathustra to the 6th century BCE. The hymns' vision of Ahura Mazda and the choice between truth and the lie found the religion either way.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": true,
+  "contested_note": "Position 1: linguistic dating places the Gathas and their composer around 1500-1000 BCE. Position 2: a later tradition dates Zarathustra to the 6th century BCE. The hymns' vision of Ahura Mazda and the choice between truth and the lie found the religion either way.",
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

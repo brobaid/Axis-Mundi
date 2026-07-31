@@ -1,0 +1,27 @@
+{
+  "id": "emigration-1979",
+  "title": "Emigration accelerates after the revolution",
+  "year_start": 1979,
+  "precision": "exact",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "modern",
+  "importance": 3,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "Iranian Zoroastrian emigration to North America and elsewhere reshapes the community's geography.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}

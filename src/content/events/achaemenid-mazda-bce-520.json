@@ -1,0 +1,27 @@
+{
+  "id": "achaemenid-mazda-bce-520",
+  "title": "Achaemenid kings invoke Ahura Mazda",
+  "year_start": -520,
+  "precision": "decade",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "political",
+  "importance": 5,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "Darius' inscriptions place the empire under Ahura Mazda, binding the religion to the first world empire.",
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-zoroastrianism"
+  ],
+  "sourcing": "sourced"
+}
