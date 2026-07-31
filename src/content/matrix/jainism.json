@@ -39,6 +39,93 @@
         "dundas-jains-2002"
       ],
       "contested": false
+    },
+    {
+      "dimension": "clergy-leadership",
+      "value": "mendicant-orders",
+      "nuance": "Monks and nuns under acharyas; the laity is organized around their example and instruction.",
+      "sources": [
+        "dundas-jains-2002"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "conversion-stance",
+      "value": "non-missionary",
+      "label": "Non-missionary",
+      "nuance": "Open in principle, a birth community in practice.",
+      "sources": [
+        "dundas-jains-2002"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "cosmology",
+      "value": "eternal-no-creator",
+      "label": "Eternal, no creator",
+      "nuance": "The universe is uncreated and everlasting, moving through cosmic half-cycles.",
+      "sources": [
+        "dundas-jains-2002"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "dress-modesty",
+      "value": "ascetic-codes",
+      "nuance": "Digambara monks renounce clothing, Svetambara wear white; some orders veil the mouth; lay dress follows custom.",
+      "sources": [
+        "dundas-jains-2002"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "ethical-frame",
+      "value": "ahimsa-supreme",
+      "nuance": "Nonviolence extended to all beings, joined to truthfulness and non-possession.",
+      "sources": [
+        "dundas-jains-2002"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "salvation-path",
+      "value": "ascetic-self-purification",
+      "label": "Ascetic self-purification",
+      "nuance": "Liberation comes by halting and shedding karma through nonviolence, truthfulness, and austerity.",
+      "sources": [
+        "dundas-jains-2002"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "scripture-authority",
+      "value": "agamas-disputed-canon",
+      "label": "Agamas, disputed canon",
+      "nuance": "Position 1: Svetambara tradition holds the surviving Agamas to be the authentic canon. Position 2: Digambara tradition holds the original canon lost and relies on later digests. Both revere the Tattvartha Sutra.",
+      "sources": [
+        "dundas-jains-2002"
+      ],
+      "contested": true,
+      "contested_note": "Position 1: Svetambara tradition holds the surviving Agamas to be the authentic canon. Position 2: Digambara tradition holds the original canon lost and relies on later digests. Both revere the Tattvartha Sutra."
+    },
+    {
+      "dimension": "view-of-others",
+      "value": "many-sidedness",
+      "label": "Many-sidedness",
+      "nuance": "Anekantavada treats rival views as partial perspectives rather than plain falsehoods.",
+      "sources": [
+        "dundas-jains-2002"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "worship-form",
+      "value": "temple-rites-and-fasting",
+      "nuance": "Image worship or aniconic assembly by order, with confession and fasting cycles.",
+      "sources": [
+        "dundas-jains-2002"
+      ],
+      "contested": false
     }
   ],
   "sourcing": "sourced"

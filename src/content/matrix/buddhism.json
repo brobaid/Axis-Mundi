@@ -39,6 +39,89 @@
         "princeton-dict-buddhism-2014"
       ],
       "contested": false
+    },
+    {
+      "dimension": "clergy-leadership",
+      "value": "monastic-sangha",
+      "nuance": "The ordained community is the tradition's core institution; lay teaching roles vary by branch.",
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "conversion-stance",
+      "value": "teaching-not-proselytizing",
+      "label": "Teaching, not proselytizing",
+      "nuance": "The dharma is offered to all and has traveled by mission, without a conversion imperative on individuals.",
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "cosmology",
+      "value": "cyclical-no-creator",
+      "label": "Cyclical, no creator",
+      "nuance": "World systems arise and pass beginninglessly; the Buddha set creation questions aside as not conducive to liberation.",
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "dress-modesty",
+      "value": "monastic-robes",
+      "nuance": "Detailed codes govern monastics; the laity is generally uncoded.",
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "ethical-frame",
+      "value": "precepts-and-compassion",
+      "nuance": "The five precepts and non-harm, with compassion inseparable from wisdom.",
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "salvation-path",
+      "value": "the-eightfold-path",
+      "nuance": "Ethics, meditation, and wisdom uproot craving; nirvana is release from the cycle.",
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "scripture-authority",
+      "value": "canon-and-lineage",
+      "nuance": "Canons differ by branch, and teacher-to-student lineage carries weight, most strongly in Mahayana and Vajrayana.",
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "view-of-others",
+      "value": "judged-by-fruits",
+      "nuance": "Other teachings are weighed pragmatically; the dharma is held complete without requiring others' condemnation.",
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "worship-form",
+      "value": "offerings-and-meditation",
+      "nuance": "Offerings, chanting, and meditation, with uposatha observances; forms differ widely by branch.",
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
+      "contested": false
     }
   ],
   "sourcing": "sourced"

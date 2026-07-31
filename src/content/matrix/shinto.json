@@ -39,6 +39,89 @@
         "hardacre-shinto-2017"
       ],
       "contested": false
+    },
+    {
+      "dimension": "clergy-leadership",
+      "value": "shrine-priesthood",
+      "nuance": "Kannushi maintain shrines and conduct rites, often hereditarily.",
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "conversion-stance",
+      "value": "non-missionary",
+      "label": "Non-missionary",
+      "nuance": "Bound to place and community; conversion is not an operative concept.",
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "cosmology",
+      "value": "generative-myth",
+      "nuance": "The kami generate the islands and the world in the chronicles; there is no doctrine of creation from nothing.",
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "dress-modesty",
+      "value": "none",
+      "nuance": "Ritual vestments are for priests; no lay code.",
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "ethical-frame",
+      "value": "sincerity-and-purity",
+      "nuance": "Makoto and the avoidance of pollution rather than a codified ethic.",
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "salvation-path",
+      "value": "purity-not-salvation",
+      "label": "Purity, not salvation",
+      "nuance": "There is no salvation doctrine; purification and right relation with the kami order this life.",
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "scripture-authority",
+      "value": "no-canonical-scripture",
+      "nuance": "The chronicles and ritual norms guide practice; shrine tradition, not revealed text, carries authority.",
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "view-of-others",
+      "value": "coexistent",
+      "nuance": "A millennium of amalgamation with Buddhism made exclusivity foreign outside the State Shinto era.",
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "worship-form",
+      "value": "shrine-visits-and-matsuri",
+      "nuance": "Purification and offerings at shrines, life-event visits, and festival processions.",
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
+      "contested": false
     }
   ],
   "sourcing": "sourced"

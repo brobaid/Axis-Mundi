@@ -43,6 +43,97 @@
         "yao-confucianism-2000"
       ],
       "contested": false
+    },
+    {
+      "dimension": "clergy-leadership",
+      "value": "varies",
+      "nuance": "Ordained Taoist priests, the historical Confucian literati, and folk temple keepers and spirit-mediums each lead their sphere.",
+      "sources": [
+        "yao-confucianism-2000",
+        "kohn-daoism-2000"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "conversion-stance",
+      "value": "non-missionary",
+      "label": "Non-missionary",
+      "nuance": "Participation follows family, custom, and locality rather than conversion.",
+      "sources": [
+        "yao-confucianism-2000",
+        "kohn-daoism-2000"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "cosmology",
+      "value": "varies",
+      "nuance": "Taoist cosmogony unfolds spontaneously from primordial unity; Confucian thought is largely silent; folk cosmologies are many.",
+      "sources": [
+        "yao-confucianism-2000",
+        "kohn-daoism-2000"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "dress-modesty",
+      "value": "none",
+      "nuance": "No lay dress code; ritual dress belongs to specialists.",
+      "sources": [
+        "yao-confucianism-2000",
+        "kohn-daoism-2000"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "ethical-frame",
+      "value": "relational-virtue",
+      "nuance": "Filiality, reciprocity, and humaneness in the Confucian stream; naturalness and non-contention in the Taoist.",
+      "sources": [
+        "yao-confucianism-2000",
+        "kohn-daoism-2000"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "salvation-path",
+      "value": "varies",
+      "nuance": "Confucian cultivation aims at sagehood in this world; Taoist practice at alignment with the Way or transcendence; folk religion at merit and blessing.",
+      "sources": [
+        "yao-confucianism-2000",
+        "kohn-daoism-2000"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "scripture-authority",
+      "value": "classics-and-canons",
+      "nuance": "The Confucian classics, the Taoist canon, and folk transmission run in parallel; no single scripture governs the cluster.",
+      "sources": [
+        "yao-confucianism-2000",
+        "kohn-daoism-2000"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "view-of-others",
+      "value": "complementary-teachings",
+      "nuance": "The three-teachings frame made coexistence the historical norm.",
+      "sources": [
+        "yao-confucianism-2000",
+        "kohn-daoism-2000"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "worship-form",
+      "value": "festival-and-occasion",
+      "nuance": "Temple offerings, ancestor rites, and the festival cycle rather than weekly congregation.",
+      "sources": [
+        "yao-confucianism-2000",
+        "kohn-daoism-2000"
+      ],
+      "contested": false
     }
   ],
   "sourcing": "sourced"

@@ -30,7 +30,7 @@ const label = valueLabel;
         <dt>{MATRIX_DIMENSION_LABELS[cell.dimension]}</dt>
         <dd>
           <span class="mx__value">
-            {label(cell.value)}
+            {cell.label ?? label(cell.value)}
             {cell.contested && <span class="contested-badge">Contested</span>}
           </span>
           <span class="mx__nuance">{cell.nuance}</span>

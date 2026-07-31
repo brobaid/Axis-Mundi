@@ -39,6 +39,91 @@
         "mcleod-sikhism-1997"
       ],
       "contested": false
+    },
+    {
+      "dimension": "clergy-leadership",
+      "value": "no-clergy",
+      "nuance": "Granthis read and serve; authority rests in the scripture and the community.",
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "conversion-stance",
+      "value": "open-non-proselytizing",
+      "label": "Open, non-proselytizing",
+      "nuance": "Entrants are accepted; organized mission is not central.",
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "cosmology",
+      "value": "created-by-god",
+      "label": "Created by God",
+      "nuance": "Creation unfolds from the One's command (hukam); scripture speaks of measureless ages before it.",
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "dress-modesty",
+      "value": "the-five-ks",
+      "label": "The five Ks",
+      "nuance": "Initiated Sikhs keep the five articles of faith, including uncut hair and the turban.",
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "ethical-frame",
+      "value": "truthful-living",
+      "nuance": "Honest labor, sharing, and service, with caste distinction rejected.",
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "salvation-path",
+      "value": "remembrance-and-grace",
+      "nuance": "Remembrance of the Name, honest work, and service dissolve self-centeredness; the Guru's grace completes it.",
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "scripture-authority",
+      "value": "guru-granth-sahib",
+      "label": "Guru Granth Sahib",
+      "nuance": "The scripture is the living Guru; no human authority stands above it.",
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "view-of-others",
+      "value": "truth-beyond-labels",
+      "nuance": "The One transcends Hindu and Muslim; the scripture itself includes saints of other traditions.",
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "worship-form",
+      "value": "sangat-and-kirtan",
+      "nuance": "Congregational hymn-singing and scripture in the gurdwara, daily nitnem, and langar.",
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
+      "contested": false
     }
   ],
   "sourcing": "sourced"

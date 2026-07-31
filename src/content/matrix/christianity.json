@@ -39,6 +39,90 @@
         "macculloch-christianity-2009"
       ],
       "contested": false
+    },
+    {
+      "dimension": "clergy-leadership",
+      "value": "varies-by-branch",
+      "nuance": "From sacramental priesthood under bishops to congregational ministry, the range is the branch map itself.",
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "conversion-stance",
+      "value": "missionary",
+      "nuance": "Evangelism is mandated in most branches and central to the tradition's history.",
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "cosmology",
+      "value": "created-by-god",
+      "label": "Created by God",
+      "nuance": "Creation from nothing by God; branches divide over literal readings of Genesis.",
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "dress-modesty",
+      "value": "generally-none",
+      "nuance": "Clerical and monastic dress aside, lay codes are rare outside particular communities.",
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "ethical-frame",
+      "value": "the-love-command",
+      "nuance": "Love of God and neighbor as the law's summary, elaborated through virtue and conscience traditions.",
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "salvation-path",
+      "value": "grace-through-christ",
+      "label": "Grace through Christ",
+      "nuance": "Salvation through Christ; the branches' defining disputes concern faith, works, and sacraments.",
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "scripture-authority",
+      "value": "bible-authority-varies",
+      "label": "Bible; authority varies",
+      "nuance": "Scripture read with tradition and magisterium in Catholic and Orthodox Christianity, or as sole authority in Protestant principle.",
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "view-of-others",
+      "value": "varies-by-branch",
+      "nuance": "Positions run from exclusivist to inclusivist; Nostra Aetate reset the Catholic stance in 1965.",
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "worship-form",
+      "value": "weekly-congregational",
+      "nuance": "Sunday worship, eucharistic or preaching-centered by branch, over a liturgical year.",
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
+      "contested": false
     }
   ],
   "sourcing": "sourced"

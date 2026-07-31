@@ -39,6 +39,89 @@
         "flood-hinduism-1996"
       ],
       "contested": false
+    },
+    {
+      "dimension": "clergy-leadership",
+      "value": "priests-and-gurus",
+      "nuance": "Temple priesthood, largely hereditary, runs parallel to renunciant orders and the guru-disciple line.",
+      "sources": [
+        "flood-hinduism-1996"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "conversion-stance",
+      "value": "traditionally-non-missionary",
+      "label": "Traditionally non-missionary",
+      "nuance": "Historically birth-based; several modern movements accept and some actively seek converts.",
+      "sources": [
+        "flood-hinduism-1996"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "cosmology",
+      "value": "cyclical",
+      "nuance": "Endless cycles of manifestation and dissolution across vast kalpas; multiple creation accounts are held together without contradiction.",
+      "sources": [
+        "flood-hinduism-1996"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "dress-modesty",
+      "value": "custom-over-code",
+      "nuance": "Regional custom and ritual-purity dress in temple contexts; ascetics are marked apart.",
+      "sources": [
+        "flood-hinduism-1996"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "ethical-frame",
+      "value": "dharma",
+      "nuance": "Duty relative to station and stage of life, with ahimsa and hospitality broadly held.",
+      "sources": [
+        "flood-hinduism-1996"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "salvation-path",
+      "value": "multiple-paths",
+      "nuance": "Knowledge, devotion, action, and discipline are recognized margas to moksha; schools rank them differently.",
+      "sources": [
+        "flood-hinduism-1996"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "scripture-authority",
+      "value": "shruti-and-smriti",
+      "nuance": "The Vedas are nominally supreme; in practice the epics, Puranas, and teachers' lineages carry living authority.",
+      "sources": [
+        "flood-hinduism-1996"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "view-of-others",
+      "value": "many-paths",
+      "nuance": "Truth is one and the wise call it by many names is a commonly held frame; schools still rank paths internally.",
+      "sources": [
+        "flood-hinduism-1996"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "worship-form",
+      "value": "puja-home-and-temple",
+      "label": "Puja, home and temple",
+      "nuance": "Household puja, temple darshan, and the festival calendar; no fixed congregational day.",
+      "sources": [
+        "flood-hinduism-1996"
+      ],
+      "contested": false
     }
   ],
   "sourcing": "sourced"

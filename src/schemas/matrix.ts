@@ -31,6 +31,15 @@ export const matrixCellSchema = z
   .object({
     dimension: matrixDimension,
     value: enumish,
+    /**
+     * The authoritative rendering, used verbatim, on the same contract as
+     * `adherents.display` and `founded.display`. `value` is the filter key and
+     * stays kebab-case so chips keep working; the label carries the punctuation
+     * and capitalisation the author wrote, which the kebab form cannot — "Cyclical,
+     * no creator" and "Bible; authority varies" do not survive a round trip.
+     * Absent when the mechanical transform already reproduces the authored text.
+     */
+    label: z.string().min(1).optional(),
     nuance: z.string().min(1, 'one to three sentences (spec §7)'),
     /* Spec §9.2.2: every matrix cell cites T1 or labelled T4. The tier check
        lives in validate-content.ts and applies once the row is source-checked;

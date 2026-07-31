@@ -39,6 +39,91 @@
         "boyce-zoroastrians"
       ],
       "contested": false
+    },
+    {
+      "dimension": "clergy-leadership",
+      "value": "hereditary-priesthood",
+      "nuance": "Mobeds from priestly families tend the fires and perform the rites.",
+      "sources": [
+        "boyce-zoroastrians"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "conversion-stance",
+      "value": "contested",
+      "nuance": "Position 1: dominant Parsi tradition does not accept converts, tying the religion to descent. Position 2: Iranian practice and much of the diaspora accept conversion, and the dispute is live within the community.",
+      "sources": [
+        "boyce-zoroastrians"
+      ],
+      "contested": true,
+      "contested_note": "Position 1: dominant Parsi tradition does not accept converts, tying the religion to descent. Position 2: Iranian practice and much of the diaspora accept conversion, and the dispute is live within the community."
+    },
+    {
+      "dimension": "cosmology",
+      "value": "created-contested-by-evil",
+      "label": "Created, contested by evil",
+      "nuance": "Ahura Mazda creates a wholly good world that the hostile spirit assaults; history is the arena of their conflict.",
+      "sources": [
+        "boyce-zoroastrians"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "dress-modesty",
+      "value": "sudreh-and-kusti",
+      "nuance": "The initiated wear the sacred shirt and cord beneath ordinary dress.",
+      "sources": [
+        "boyce-zoroastrians"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "ethical-frame",
+      "value": "truth-against-the-lie",
+      "nuance": "Good thoughts, words, and deeds as active partisanship for truth and the world's betterment.",
+      "sources": [
+        "boyce-zoroastrians"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "salvation-path",
+      "value": "good-thoughts-words-deeds",
+      "label": "Good thoughts, words, deeds",
+      "nuance": "The threefold ethic aligns the soul with truth for the crossing after death and the world's renovation.",
+      "sources": [
+        "boyce-zoroastrians"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "scripture-authority",
+      "value": "avesta",
+      "nuance": "The Avesta, transmitted by the priesthood, with the Pahlavi books as its theological companion.",
+      "sources": [
+        "boyce-zoroastrians"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "view-of-others",
+      "value": "dualist-frame-varied-practice",
+      "label": "Dualist frame, varied practice",
+      "nuance": "The sharp truth-lie cosmology historically coexisted with a range of treatment of other communities.",
+      "sources": [
+        "boyce-zoroastrians"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "worship-form",
+      "value": "fire-and-hearth-prayers",
+      "nuance": "Prayers before fire through the day's five watches; temple rites are priest-led.",
+      "sources": [
+        "boyce-zoroastrians"
+      ],
+      "contested": false
     }
   ],
   "sourcing": "sourced"

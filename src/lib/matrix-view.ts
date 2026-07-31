@@ -45,6 +45,7 @@ export interface MatrixRowView {
 export interface RawCell {
   readonly dimension: string;
   readonly value: string;
+  readonly label?: string | undefined;
   readonly nuance: string;
   readonly sources: readonly string[];
   readonly contested: boolean;
@@ -77,7 +78,9 @@ export function buildRows(
         cells[dimension] = {
           dimension,
           value: cell.value,
-          label: valueLabel(cell.value),
+          /* The authored label wins where the record carries one; the kebab
+             value cannot round-trip punctuation. */
+          label: cell.label ?? valueLabel(cell.value),
           nuance: cell.nuance,
           sources: cell.sources,
           contested: cell.contested,
@@ -128,18 +131,23 @@ export function filterChips(rows: readonly MatrixRowView[]): FilterChip[] {
 
   for (const dimension of MATRIX_DIMENSIONS) {
     const counts = new Map<string, number>();
+    /* A chip shows the value as the author wrote it, not as the kebab form
+       transforms back — "non-missionary" is a word, "non missionary" is a typo. */
+    const labels = new Map<string, string>();
     for (const row of rows) {
       const cell = row.cells[dimension];
       if (cell === undefined) continue;
       counts.set(cell.value, (counts.get(cell.value) ?? 0) + 1);
+      if (!labels.has(cell.value)) labels.set(cell.value, cell.label);
     }
 
     for (const [value, count] of [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))) {
       if (count < 2) continue;
+      const shown = labels.get(value) ?? valueLabel(value);
       chips.push({
         dimension,
         value,
-        label: `${MATRIX_DIMENSION_SHORT[dimension]}: ${valueLabel(value).toLowerCase()}`,
+        label: `${MATRIX_DIMENSION_SHORT[dimension]}: ${shown.toLowerCase()}`,
         count,
       });
     }

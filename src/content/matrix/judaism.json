@@ -40,6 +40,91 @@
         "ej2-2007"
       ],
       "contested": false
+    },
+    {
+      "dimension": "clergy-leadership",
+      "value": "rabbis",
+      "nuance": "Teacher-jurists rather than sacramental priests; ordination certifies learning.",
+      "sources": [
+        "ej2-2007"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "conversion-stance",
+      "value": "accepts-does-not-seek",
+      "label": "Accepts, does not seek",
+      "nuance": "Conversion is possible and honored once made; there is no mission to gain converts.",
+      "sources": [
+        "ej2-2007"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "cosmology",
+      "value": "created-by-god",
+      "label": "Created by God",
+      "nuance": "Genesis frames creation by divine word; rabbinic tradition holds literal and non-literal readings side by side.",
+      "sources": [
+        "ej2-2007"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "dress-modesty",
+      "value": "varies-by-observance",
+      "nuance": "Head covering, tzitzit, and modesty norms strongest in Orthodox streams.",
+      "sources": [
+        "ej2-2007"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "ethical-frame",
+      "value": "covenant-and-mitzvot",
+      "nuance": "The commandments as lived ethics, with justice and lovingkindness at the center.",
+      "sources": [
+        "ej2-2007"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "salvation-path",
+      "value": "covenant-faithfulness",
+      "nuance": "Life according to Torah and the commandments; the tradition's weight falls on sanctifying this life more than on salvation from it.",
+      "sources": [
+        "ej2-2007"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "scripture-authority",
+      "value": "torah-and-oral-law",
+      "nuance": "Written and oral Torah together; rabbinic interpretation is authoritative in the rabbinic streams, while Karaites hold to scripture alone.",
+      "sources": [
+        "ej2-2007"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "view-of-others",
+      "value": "non-exclusive-for-others",
+      "label": "Non-exclusive for others",
+      "nuance": "The righteous of all nations have a share; the Noahide frame asks ethics, not conversion, of others.",
+      "sources": [
+        "ej2-2007"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "worship-form",
+      "value": "daily-prayer-shabbat",
+      "label": "Daily prayer, Shabbat",
+      "nuance": "Thrice-daily prayer, Torah reading, and the Shabbat and festival cycle.",
+      "sources": [
+        "ej2-2007"
+      ],
+      "contested": false
     }
   ],
   "sourcing": "sourced"

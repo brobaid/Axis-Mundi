@@ -39,6 +39,91 @@
         "nchi-2010"
       ],
       "contested": false
+    },
+    {
+      "dimension": "clergy-leadership",
+      "value": "scholars-no-priesthood",
+      "label": "Scholars, no priesthood",
+      "nuance": "The ulama interpret; Twelver Shiism adds a graded clerical hierarchy; no sacraments require a priest.",
+      "sources": [
+        "nchi-2010"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "conversion-stance",
+      "value": "missionary",
+      "nuance": "Dawa, the invitation to Islam, is enjoined; entry is by profession of faith.",
+      "sources": [
+        "nchi-2010"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "cosmology",
+      "value": "created-by-god",
+      "label": "Created by God",
+      "nuance": "The world exists by God's command; the Quran's six days are widely read as ages.",
+      "sources": [
+        "nchi-2010"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "dress-modesty",
+      "value": "modesty-enjoined",
+      "nuance": "Modest dress for all; hijab practice varies by school, region, and conviction.",
+      "sources": [
+        "nchi-2010"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "ethical-frame",
+      "value": "guided-virtue",
+      "nuance": "Divine guidance spanning worship and dealings, with justice and mercy as constant demands.",
+      "sources": [
+        "nchi-2010"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "salvation-path",
+      "value": "faith-and-works",
+      "nuance": "Affirming God's oneness, keeping the pillars, and righteous deeds, weighed at the judgment with God's mercy decisive.",
+      "sources": [
+        "nchi-2010"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "scripture-authority",
+      "value": "quran-and-sunna",
+      "label": "Quran and Sunna",
+      "nuance": "The Quran is supreme, interpreted with the Prophet's practice as carried by the hadith and the law schools.",
+      "sources": [
+        "nchi-2010"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "view-of-others",
+      "value": "people-of-the-book",
+      "label": "People of the Book",
+      "nuance": "Jews and Christians hold recognized standing as recipients of revelation, with Islam as its completion.",
+      "sources": [
+        "nchi-2010"
+      ],
+      "contested": false
+    },
+    {
+      "dimension": "worship-form",
+      "value": "five-daily-prayers",
+      "nuance": "Salat five times daily, Friday congregation, and the Ramadan fast.",
+      "sources": [
+        "nchi-2010"
+      ],
+      "contested": false
     }
   ],
   "sourcing": "sourced"
