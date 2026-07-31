@@ -6,7 +6,7 @@ import TraditionSymbol from '../../components/TraditionSymbol.astro';
 import GlossaryCard from '../../components/GlossaryCard.astro';
 import MatrixCells from '../../components/MatrixCells.astro';
 import { getPublishable, getStructural, includesUnsourced } from '../../lib/content';
-import { renderProse } from '../../lib/prose';
+import { renderProse, termsFor } from '../../lib/prose';
 import { traditionMeta } from '../../lib/traditions';
 import type { MatrixDimension } from '../../schemas/matrix';
 import { displayDate } from '../../lib/display-date';
@@ -66,7 +66,13 @@ const calendarCell = matrixRows
   ?.data.cells.find((c) => c.dimension === 'calendar-system');
 
 const available = new Set(glossary.map((g) => g.data.id));
-const prose = (body: string): string => renderProse(body, { available });
+/* Headwords this tradition holds as technical terms. A dive's prose is about
+   one tradition, so that is the only vocabulary the matcher may offer. */
+const autoTerms = termsFor(
+  [dive.tradition],
+  glossary.map((g) => ({ id: g.data.id, term: g.data.term, traditions: g.data.traditions })),
+);
+const prose = (body: string): string => renderProse(body, { available, autoTerms });
 
 /** A prose block renders only when it has passed a source check. */
 const publishable = <T extends { sourcing: 'sourced' | 'todo' } | undefined>(block: T): T | undefined =>

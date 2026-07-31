@@ -117,7 +117,7 @@ const bootstrap = {
             <span class="tl-list__title">{e.title}</span>
             <span class="caption">{e.traditions.join(', ')} · rank {e.importance}</span>
             {e.contested && <span class="contested-badge">Contested</span>}
-            <p class="caption tl-list__summary">{e.summary}</p>
+            <p class="caption tl-list__summary" set:html={e.summary_html ?? e.summary} />
           </li>
         ))
       }

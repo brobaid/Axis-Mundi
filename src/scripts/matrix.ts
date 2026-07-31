@@ -162,7 +162,9 @@ if (root !== null) {
       `<div class="panel__row"><span>Value</span><span class="mono">${esc(cell.label)}</span></div>` +
       `</div>` +
       contested +
-      `<p class="panel__body">${esc(cell.nuance)}</p>` +
+      /* Already escaped at build time, with glossary headwords wrapped. The
+         tap-card's listener is delegated, so a term works inside the panel. */
+      `<p class="panel__body">${cell.nuanceHtml}</p>` +
       `<div class="panel__sources"><span class="eyebrow">Sources</span>` +
       `<p class="caption">${sources}</p></div>`
     );

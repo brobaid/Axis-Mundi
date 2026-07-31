@@ -4,6 +4,7 @@ import {
   valueLabel,
   type MatrixDimension,
 } from './dimensions';
+import { escapeHtml } from './prose';
 
 /**
  * The belief matrix as a grid, and the filter chips that grid earns.
@@ -23,6 +24,8 @@ export interface MatrixCellView {
   readonly value: string;
   readonly label: string;
   readonly nuance: string;
+  /** The nuance with glossary headwords wrapped; falls back to the plain text. */
+  readonly nuanceHtml: string;
   readonly sources: readonly string[];
   readonly contested: boolean;
   readonly contestedNote: string | undefined;
@@ -47,6 +50,7 @@ export interface RawCell {
   readonly value: string;
   readonly label?: string | undefined;
   readonly nuance: string;
+  readonly nuanceHtml?: string | undefined;
   readonly sources: readonly string[];
   readonly contested: boolean;
   readonly contested_note?: string | undefined;
@@ -82,6 +86,7 @@ export function buildRows(
              value cannot round-trip punctuation. */
           label: cell.label ?? valueLabel(cell.value),
           nuance: cell.nuance,
+          nuanceHtml: cell.nuanceHtml ?? escapeHtml(cell.nuance),
           sources: cell.sources,
           contested: cell.contested,
           contestedNote: cell.contested_note,

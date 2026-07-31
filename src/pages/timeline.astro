@@ -3,15 +3,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Timeline from '../components/Timeline.astro';
 import { getPublishable, getStructural, includesUnsourced, tally } from '../lib/content';
 import { displayDate } from '../lib/display-date';
+import GlossaryCard from '../components/GlossaryCard.astro';
+import { autoLink, escapeHtml, termsFor } from '../lib/prose';
 import type { TaxonomyNode, TimelineEvent } from '../lib/timeline-model';
 
-const [eventEntries, taxonomyEntries] = await Promise.all([
+const [eventEntries, taxonomyEntries, glossary] = await Promise.all([
   getPublishable('events'),
   /* Structure only: lanes are the spec's taxonomy (§2.3). The nodes' authored
      summaries are not rendered here and stay gated on their own. */
   getStructural('taxonomy'),
+  getPublishable('glossary'),
 ]);
 const eventTally = await tally('events');
+
+/* Glossary headwords, matched into each summary at build time and filtered to
+   the record's own traditions. Four hundred summaries arrived without markers,
+   and matching leaves every authored character where the owner put it. */
+const allTerms = glossary.map((g) => ({
+  id: g.data.id,
+  term: g.data.term,
+  traditions: g.data.traditions,
+}));
 
 /* Flatten collection entries to the shapes the timeline model works in. The
    model deliberately knows nothing about Astro. */
@@ -26,6 +38,10 @@ const events: TimelineEvent[] = eventEntries.map((entry) => ({
   type: entry.data.type,
   importance: entry.data.importance,
   summary: entry.data.summary,
+  summary_html: autoLink(
+    escapeHtml(entry.data.summary),
+    termsFor(entry.data.traditions, allTerms),
+  ),
   contested: entry.data.contested,
   contested_note: entry.data.contested_note,
   sources: entry.data.sources,
@@ -95,6 +111,7 @@ const boundsTo = Math.max(DEFAULT_TO, ...years) + 50;
       }
     </p>
   </div>
+  <GlossaryCard />
 </BaseLayout>
 
 <style>

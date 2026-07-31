@@ -27,6 +27,8 @@ export interface TimelineEvent {
   readonly type: string;
   readonly importance: number;
   readonly summary: string;
+  /** The summary with glossary headwords wrapped; absent means none matched. */
+  readonly summary_html?: string | undefined;
   readonly contested: boolean;
   readonly contested_note?: string | undefined;
   readonly sources: readonly string[];

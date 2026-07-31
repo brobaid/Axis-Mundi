@@ -5,6 +5,8 @@ import TraditionSymbols from '../components/TraditionSymbols.astro';
 import { getPublishable, getStructural, includesUnsourced } from '../lib/content';
 import { MATRIX_DIMENSIONS, MATRIX_DIMENSION_SHORT } from '../lib/dimensions';
 import { buildRows, filledDimensions, filterChips, chipKey } from '../lib/matrix-view';
+import GlossaryCard from '../components/GlossaryCard.astro';
+import { autoLink, escapeHtml, termsFor } from '../lib/prose';
 
 /**
  * The belief matrix (spec §7).
@@ -16,24 +18,41 @@ import { buildRows, filledDimensions, filterChips, chipKey } from '../lib/matrix
  * editing this page.
  */
 
-const [rows, taxonomy, sources] = await Promise.all([
+const [rows, taxonomy, sources, glossary] = await Promise.all([
   getPublishable('matrix'),
   /* Structure only: the node's tradition, for its hue. The authored node
      summaries stay gated on their own. */
   getStructural('taxonomy'),
   getPublishable('sources'),
+  getPublishable('glossary'),
 ]);
 
 const traditionOfNode = new Map(taxonomy.map((n) => [n.data.id, n.data.tradition]));
 
+/* Glossary headwords are matched into each nuance at build time, filtered to
+   the row's own tradition: a term is a technical term inside the traditions
+   that hold it as one, and an ordinary word everywhere else. */
+const allTerms = glossary.map((g) => ({
+  id: g.data.id,
+  term: g.data.term,
+  traditions: g.data.traditions,
+}));
+
 const view = buildRows(
-  rows.map((entry) => ({
-    id: entry.data.id,
-    node: entry.data.node,
-    label: entry.data.label,
-    order: entry.data.order,
-    cells: entry.data.cells,
-  })),
+  rows.map((entry) => {
+    const tradition = traditionOfNode.get(entry.data.node) ?? entry.data.node;
+    const terms = termsFor([tradition], allTerms);
+    return {
+      id: entry.data.id,
+      node: entry.data.node,
+      label: entry.data.label,
+      order: entry.data.order,
+      cells: entry.data.cells.map((cell) => ({
+        ...cell,
+        nuanceHtml: autoLink(escapeHtml(cell.nuance), terms),
+      })),
+    };
+  }),
   (node) => traditionOfNode.get(node) ?? node,
 );
 
@@ -175,6 +194,7 @@ const bootstrap = { rows: view, sourceTitles };
   }
 
   <DetailPanel />
+  <GlossaryCard />
 </BaseLayout>
 
 <script type="application/json" id="matrix-data" set:html={JSON.stringify(bootstrap)} is:inline />

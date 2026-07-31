@@ -46,6 +46,102 @@ export interface RenderOptions {
    * as plain text — see the note above about degrading gracefully.
    */
   readonly available: ReadonlySet<string>;
+  /**
+   * Headwords to match automatically, where no author wrapped anything.
+   * Omitted means authored references only.
+   */
+  readonly autoTerms?: readonly AutoTerm[];
+}
+
+/* ── automatic matching ─────────────────────────────────────────────────── */
+
+export interface AutoTerm {
+  readonly id: string;
+  readonly term: string;
+  readonly traditions: readonly string[];
+}
+
+/**
+ * The headwords that may match inside prose belonging to `traditions`.
+ *
+ * Without this guard the matcher offers the wrong card: "theology of grace" in
+ * a Shaiva Siddhanta record matched Grace, whose definition is about the
+ * Reformation, and a Jain cell's "Tattvartha Sutra" matched a headword defined
+ * for Buddhist and Hindu usage. A term is only a technical term inside the
+ * traditions that hold it as one; everywhere else it is an ordinary word.
+ *
+ * Prose with no tradition — a general note — matches nothing rather than
+ * everything, since there is no context to be right about.
+ */
+export function termsFor(
+  traditions: readonly string[],
+  terms: readonly AutoTerm[],
+): AutoTerm[] {
+  if (traditions.length === 0) return [];
+  const held = new Set(traditions);
+  return terms.filter((t) => t.traditions.some((x) => held.has(x)));
+}
+
+/**
+ * A term short enough that a case-insensitive match is a liability.
+ *
+ * "Li" and "Qi" and "Ren" are ordinary syllables in transliterated names, and
+ * "Zen" opens a hundred English adjectives. At this length the capital is the
+ * only signal that the word is being used as the technical term, so it is
+ * required. Longer headwords match either way.
+ */
+const SHORT = 3;
+
+const escapeRe = (s: string): string => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/**
+ * Wrap the first occurrence of each glossary headword in a body of text.
+ *
+ * Spec §8 asks that every technical term in prose be wrapped. Four hundred
+ * event summaries and a hundred and thirty matrix nuances arrived from the
+ * owner without markers, and hand-marking them would mean editing his prose;
+ * matching instead leaves every authored character untouched.
+ *
+ * First occurrence only. A term repeated four times in a paragraph does not
+ * need four dashed underlines — the second one stops being an offer and starts
+ * being noise.
+ *
+ * The input must already be HTML-escaped and must contain no tags: this walks
+ * plain text and would happily match a headword inside an attribute otherwise.
+ */
+export function autoLink(escaped: string, terms: readonly AutoTerm[]): string {
+  /* Every match is found against the untouched input, then spliced in one
+     pass. Wrapping as we go would let a later headword match inside markup an
+     earlier one just inserted — `data-term="…"` is text like any other to a
+     regex. */
+  const hits: { start: number; end: number; id: string }[] = [];
+
+  for (const { id, term } of terms) {
+    /* Not \b: it treats a hyphen as a boundary, so "wei" would match inside
+       "Wu-wei" and "Yin" inside "Yin-yang". */
+    const flags = term.length <= SHORT ? '' : 'i';
+    const re = new RegExp(`(?<![\\w-])${escapeRe(term)}(?![\\w-])`, flags);
+    const match = re.exec(escaped);
+    if (match !== null) hits.push({ start: match.index, end: match.index + match[0].length, id });
+  }
+
+  if (hits.length === 0) return escaped;
+  hits.sort((a, b) => a.start - b.start || b.end - a.end);
+
+  let out = '';
+  let cursor = 0;
+  for (const hit of hits) {
+    /* Longer headwords sort first at a shared start, so a shorter one nested
+       inside a claimed span is simply skipped. */
+    if (hit.start < cursor) continue;
+    out +=
+      escaped.slice(cursor, hit.start) +
+      `<button type="button" class="gloss" data-term="${hit.id}" aria-describedby="glossary-card">` +
+      escaped.slice(hit.start, hit.end) +
+      `</button>`;
+    cursor = hit.end;
+  }
+  return out + escaped.slice(cursor);
 }
 
 /**
@@ -62,14 +158,34 @@ export function renderProse(body: string, options: RenderOptions): string {
       /* Escape first, then substitute. The reference syntax survives escaping
          because it contains no HTML-special characters. */
       const escaped = escapeHtml(paragraph);
-      const withTerms = escaped.replace(REF, (_match, id: string, display?: string) => {
+
+      /* Authored references win, and they are lifted out before matching runs
+         so a headword can never be matched inside one — an author who wrote
+         [[karma|its fruits]] chose that display text, and the matcher has no
+         business reopening the decision. */
+      const authored: string[] = [];
+      const masked = escaped.replace(REF, (_match, id: string, display?: string) => {
         const text = display ?? id;
-        if (!options.available.has(id)) return text;
-        return (
-          `<button type="button" class="gloss" data-term="${id}"` +
-          ` aria-describedby="glossary-card">${text}</button>`
-        );
+        const html = options.available.has(id)
+          ? `<button type="button" class="gloss" data-term="${id}"` +
+            ` aria-describedby="glossary-card">${text}</button>`
+          : text;
+        authored.push(html);
+        /* Angle-bracketed, because escapeHtml has already turned every real
+           "<" into "&lt;" — so this shape cannot occur in the input. A bare
+           index would collide with prose: "the 5 pillars" is full of numerals. */
+        return `<${authored.length - 1}>`;
       });
+
+      const linked =
+        options.autoTerms === undefined ? masked : autoLink(masked, options.autoTerms);
+
+      /* Restores after matching. Nothing autoLink inserts looks like <digits>,
+         so the button markup passes through untouched. */
+      const withTerms = linked.replace(
+        /<(\d+)>/g,
+        (_m, n: string) => authored[Number(n)] ?? '',
+      );
       return `<p>${withTerms}</p>`;
     })
     .join('\n');

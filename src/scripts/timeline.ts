@@ -332,7 +332,9 @@ if (root !== null) {
           .join('') +
         `</div>` +
         contested +
-        `<p class="tl-panel__summary">${esc(e.summary)}</p>` +
+        /* Escaped at build time with glossary headwords wrapped; the
+           tap-card's listener is delegated, so a term works in the panel. */
+        `<p class="tl-panel__summary">${e.summary_html ?? esc(e.summary)}</p>` +
         sources
       );
     }
