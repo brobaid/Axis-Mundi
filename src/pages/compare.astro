@@ -121,6 +121,24 @@ const gridHtml =
   defaultA === undefined || defaultB === undefined ? '' : renderCompare(defaultA, defaultB);
 
 const bootstrap = { columns };
+
+/* Counted from the records the page is actually showing, so the sentence
+   below cannot outlive the fact it states. */
+const NUMBER_WORD: Record<number, string> = {
+  0: 'No',
+  1: 'One',
+  2: 'Two',
+  3: 'Three',
+  4: 'Four',
+  5: 'Five',
+  6: 'Six',
+  7: 'Seven',
+  8: 'Eight',
+  9: 'Nine',
+  10: 'Ten',
+};
+const withoutEstimate = columns.filter((c) => c.adherents?.display === 'see note').length;
+const withoutEstimateWord = NUMBER_WORD[withoutEstimate] ?? String(withoutEstimate);
 ---
 
 <BaseLayout
@@ -183,7 +201,8 @@ const bootstrap = { columns };
         </div>
 
         <p class="shell mx-note measure">
-          Adherent figures are rendered exactly as their sources support them. Two traditions have
+          Adherent figures are rendered exactly as their sources support them. {withoutEstimateWord}
+          {withoutEstimate === 1 ? ' tradition has' : ' traditions have'}
           no honest point estimate and are not coerced into one: Shinto&rsquo;s count is contested
           between shrine registers and self-identification, and the Chinese cluster has no single
           authoritative figure at all. Both say so where a number would otherwise sit.

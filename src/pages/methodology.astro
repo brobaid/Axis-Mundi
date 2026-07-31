@@ -44,6 +44,26 @@ const adherents = TRADITIONS.map((tradition) => ({
   data: taxonomy.find((n) => n.data.id === tradition.id && n.data.depth === 1)?.data.adherents,
 }));
 
+/* Counted, not asserted. The sentence below names how many traditions carry no
+   point estimate, and an authored "two" would quietly go stale the day an
+   adherents record changes. `see note` is the display-authoritative marker for
+   exactly this case. */
+const NUMBER_WORD: Record<number, string> = {
+  0: 'No',
+  1: 'One',
+  2: 'Two',
+  3: 'Three',
+  4: 'Four',
+  5: 'Five',
+  6: 'Six',
+  7: 'Seven',
+  8: 'Eight',
+  9: 'Nine',
+  10: 'Ten',
+};
+const withoutEstimate = adherents.filter((a) => a.data?.display === 'see note').length;
+const withoutEstimateWord = NUMBER_WORD[withoutEstimate] ?? String(withoutEstimate);
+
 const tiers = [
   { tier: 'T1', label: 'Academic', detail: 'Oxford and Cambridge handbooks, Brill’s Encyclopaedia of Islam, Encyclopaedia Judaica, peer-reviewed journals.' },
   { tier: 'T2', label: 'Demographic', detail: 'Pew Research, national censuses. Adherent counts are Pew unless explicitly noted otherwise.' },
@@ -165,7 +185,8 @@ const tiers = [
       <h2 class="measure">Adherent figures</h2>
       <p class="measure">
         Counts follow Pew unless the table says otherwise, and each is rendered exactly as its
-        source supports it &mdash; including the unit and the parenthetical. Two traditions have
+        source supports it &mdash; including the unit and the parenthetical. {withoutEstimateWord}
+        {withoutEstimate === 1 ? ' tradition has' : ' traditions have'}
         no honest point estimate and are not given one. Shinto&rsquo;s count is contested by
         definition, and the Chinese cluster has no single authoritative figure at all; in both
         cases the note stands where a number would otherwise sit.
