@@ -1,0 +1,27 @@
+{
+  "id": "miri-piri-1609",
+  "title": "Akal Takht and miri-piri",
+  "year_start": 1609,
+  "precision": "year",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "punjab"
+  ],
+  "summary": "Guru Hargobind raises the Akal Takht and takes up two swords, temporal and spiritual, arming the community's self-understanding.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

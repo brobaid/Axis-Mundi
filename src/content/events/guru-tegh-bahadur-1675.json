@@ -1,0 +1,27 @@
+{
+  "id": "guru-tegh-bahadur-1675",
+  "title": "Martyrdom of Guru Tegh Bahadur",
+  "year_start": 1675,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "persecution",
+  "importance": 4,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The ninth Guru is executed at Delhi; Sikh memory holds that he died defending the religious freedom of Kashmiri Hindus.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "dasam-granth-1735",
+  "title": "Dasam Granth compiled",
+  "year_start": 1735,
+  "precision": "decade",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "The compositions attributed to the tenth Guru are gathered into a second scriptural collection.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "gacchas-form-1200",
+  "title": "Svetambara gacchas take shape",
+  "year_start": 1200,
+  "precision": "century",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism/svetambara"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "The Kharatara, Tapa, and other monastic lineages organize Svetambara mendicancy into its lasting orders.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "kartarpur-community-1520",
+  "title": "Kartarpur community founded",
+  "year_start": 1520,
+  "precision": "decade",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "Nanak settles at Kartarpur, where the first Sikh community lives his teaching of work, worship, and langar.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "annexation-of-punjab-1849",
+  "title": "British annexation of Punjab",
+  "year_start": 1849,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "The Sikh kingdom falls to the East India Company after two wars, opening the colonial era.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

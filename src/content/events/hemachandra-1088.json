@@ -1,0 +1,28 @@
+{
+  "id": "hemachandra-1088",
+  "title": "Hemachandra",
+  "year_start": 1088,
+  "year_end": 1173,
+  "precision": "exact",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism/svetambara"
+  ],
+  "type": "figure",
+  "importance": 4,
+  "region": [
+    "western-india"
+  ],
+  "summary": "The scholar-monk at the Chaulukya court whose grammar, poetics, and counsel mark Jainism's medieval public height.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

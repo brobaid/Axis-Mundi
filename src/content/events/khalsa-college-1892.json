@@ -1,0 +1,27 @@
+{
+  "id": "khalsa-college-1892",
+  "title": "Khalsa College founded",
+  "year_start": 1892,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "modern",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "The Amritsar college institutionalizes the Singh Sabha's educational program.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

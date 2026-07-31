@@ -1,0 +1,27 @@
+{
+  "id": "nirankari-namdhari-1855",
+  "title": "Nirankari and Namdhari reform movements",
+  "year_start": 1855,
+  "precision": "decade",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "Mid-century movements press for purified worship and living guruship, testing the tradition's boundaries.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

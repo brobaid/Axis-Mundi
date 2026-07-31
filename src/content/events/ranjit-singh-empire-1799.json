@@ -1,0 +1,27 @@
+{
+  "id": "ranjit-singh-empire-1799",
+  "title": "Ranjit Singh takes Lahore",
+  "year_start": 1799,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "punjab"
+  ],
+  "summary": "The Sikh empire under Ranjit Singh rules Punjab for half a century, the tradition's era of sovereignty.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

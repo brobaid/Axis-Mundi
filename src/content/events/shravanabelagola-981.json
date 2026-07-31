@@ -1,0 +1,27 @@
+{
+  "id": "shravanabelagola-981",
+  "title": "Bahubali colossus at Shravanabelagola",
+  "year_start": 981,
+  "precision": "exact",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism/digambara"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "deccan"
+  ],
+  "summary": "The 17-meter monolith of Bahubali becomes Digambara Jainism's greatest pilgrimage image.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

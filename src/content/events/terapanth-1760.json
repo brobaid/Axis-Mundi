@@ -1,0 +1,27 @@
+{
+  "id": "terapanth-1760",
+  "title": "Svetambara Terapanth founded",
+  "year_start": 1760,
+  "precision": "exact",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism/svetambara"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "Acharya Bhikshu's reform order adds the tradition's most centralized monastic body.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

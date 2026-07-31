@@ -1,0 +1,27 @@
+{
+  "id": "sahibzade-sirhind-1705",
+  "title": "Martyrdom of the sahibzade",
+  "year_start": 1705,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "persecution",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "Guru Gobind Singh's two youngest sons are executed at Sirhind; their steadfastness holds a central place in Sikh memory.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

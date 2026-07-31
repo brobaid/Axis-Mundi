@@ -1,0 +1,27 @@
+{
+  "id": "sikh-misls-1748",
+  "title": "The misl confederacies",
+  "year_start": 1748,
+  "precision": "decade",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "Twelve Sikh warbands partition and defend Punjab through the empire's collapse.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "guru-arjan-martyrdom-1606",
+  "title": "Martyrdom of Guru Arjan",
+  "year_start": 1606,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "persecution",
+  "importance": 4,
+  "region": [
+    "punjab"
+  ],
+  "summary": "The fifth Guru dies in Mughal custody, the tradition's first martyrdom and a turning point in its relation to power.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

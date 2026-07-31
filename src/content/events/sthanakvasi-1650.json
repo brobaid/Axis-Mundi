@@ -1,0 +1,27 @@
+{
+  "id": "sthanakvasi-1650",
+  "title": "Sthanakvasi tradition forms",
+  "year_start": 1650,
+  "precision": "century",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism/svetambara"
+  ],
+  "type": "founding",
+  "importance": 4,
+  "region": [
+    "western-india"
+  ],
+  "summary": "The aniconic Sthanakvasi order institutionalizes Lonka's critique, worshipping without images or temples.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

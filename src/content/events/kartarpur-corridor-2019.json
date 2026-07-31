@@ -1,0 +1,27 @@
+{
+  "id": "kartarpur-corridor-2019",
+  "title": "Kartarpur Corridor opens",
+  "year_start": 2019,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "modern",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "India and Pakistan open visa-free pilgrimage to Nanak's Kartarpur for his 550th anniversary.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

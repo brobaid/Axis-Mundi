@@ -1,0 +1,27 @@
+{
+  "id": "akbar-hiravijaya-1582",
+  "title": "Hiravijaya at Akbar's court",
+  "year_start": 1582,
+  "precision": "exact",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism/svetambara"
+  ],
+  "type": "encounter",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The Tapa Gaccha leader wins imperial orders protecting animals during Jain festivals, the tradition's most celebrated court encounter.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

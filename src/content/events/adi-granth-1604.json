@@ -1,0 +1,27 @@
+{
+  "id": "adi-granth-1604",
+  "title": "Adi Granth compiled",
+  "year_start": 1604,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "text",
+  "importance": 5,
+  "region": [
+    "punjab"
+  ],
+  "summary": "Guru Arjan compiles the scripture, installing it in the newly built Harmandir Sahib; hymns of Hindu and Muslim saints stand within it.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

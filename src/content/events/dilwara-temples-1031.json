@@ -1,0 +1,27 @@
+{
+  "id": "dilwara-temples-1031",
+  "title": "Dilwara temples begun",
+  "year_start": 1031,
+  "precision": "exact",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism/svetambara"
+  ],
+  "type": "construction",
+  "importance": 4,
+  "region": [
+    "western-india"
+  ],
+  "summary": "The marble temples at Mount Abu carry Jain temple art to its most refined point.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

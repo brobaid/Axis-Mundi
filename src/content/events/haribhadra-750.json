@@ -1,0 +1,27 @@
+{
+  "id": "haribhadra-750",
+  "title": "Haribhadra",
+  "year_start": 750,
+  "precision": "century",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism/svetambara"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "The Svetambara philosopher whose comparative treatments of rival schools model Jain intellectual engagement.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

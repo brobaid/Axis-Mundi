@@ -1,0 +1,28 @@
+{
+  "id": "sgpc-gurdwara-act-1925",
+  "title": "Gurdwara Reform and the SGPC",
+  "year_start": 1920,
+  "year_end": 1925,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "punjab"
+  ],
+  "summary": "The Akali campaign wins the Sikh Gurdwaras Act, placing historic shrines under the elected SGPC.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "banda-singh-rising-1710",
+  "title": "Banda Singh Bahadur's rising",
+  "year_start": 1710,
+  "year_end": 1716,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "The first Sikh political power in Punjab rises and is crushed; its memory shapes the century of struggle that follows.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

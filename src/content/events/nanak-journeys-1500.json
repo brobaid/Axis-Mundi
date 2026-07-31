@@ -1,0 +1,28 @@
+{
+  "id": "nanak-journeys-1500",
+  "title": "Guru Nanak's journeys",
+  "year_start": 1500,
+  "year_end": 1524,
+  "precision": "decade",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "According to Sikh tradition, Nanak's four great journeys carry his message from Sri Lanka to Baghdad.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

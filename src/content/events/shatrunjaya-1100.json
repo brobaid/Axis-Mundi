@@ -1,0 +1,27 @@
+{
+  "id": "shatrunjaya-1100",
+  "title": "Shatrunjaya temple city flourishes",
+  "year_start": 1100,
+  "precision": "century",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism/svetambara"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "The hilltop complex at Palitana grows into the largest Jain temple precinct.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "eternal-guru-1708",
+  "title": "Guru Granth Sahib declared eternal Guru",
+  "year_start": 1708,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "deccan"
+  ],
+  "summary": "Before his death, Guru Gobind Singh closes the human line and vests guruship in the scripture itself.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

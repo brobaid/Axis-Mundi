@@ -1,0 +1,27 @@
+{
+  "id": "anuvrat-movement-1949",
+  "title": "Anuvrat movement launched",
+  "year_start": 1949,
+  "precision": "exact",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism"
+  ],
+  "type": "modern",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "Acharya Tulsi's small-vows movement carries Jain ethics into Indian public life.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

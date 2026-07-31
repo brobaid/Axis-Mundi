@@ -1,0 +1,27 @@
+{
+  "id": "jain-diaspora-temples-1985",
+  "title": "Diaspora temples established",
+  "year_start": 1985,
+  "precision": "decade",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "north-america"
+  ],
+  "summary": "Jain communities in North America, Britain, and East Africa consecrate temples, fixing the tradition's global presence.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

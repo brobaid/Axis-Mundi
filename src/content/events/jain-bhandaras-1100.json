@@ -1,0 +1,27 @@
+{
+  "id": "jain-bhandaras-1100",
+  "title": "Manuscript libraries flourish",
+  "year_start": 1100,
+  "precision": "century",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "Jain bhandaras preserve manuscripts on a scale that makes the community a guardian of Indian textual heritage well beyond its own canon.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

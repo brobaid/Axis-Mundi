@@ -5,7 +5,8 @@
   "precision": "exact",
   "traditions": [
     "buddhism",
-    "hinduism"
+    "hinduism",
+    "jainism"
   ],
   "branch_path": [
     "buddhism"
@@ -19,6 +20,7 @@
   "sources": [
     "princeton-dict-buddhism-2014",
     "flood-hinduism-1996",
+    "dundas-jains-2002",
     "britannica"
   ],
   "contested": false,

@@ -1,0 +1,27 @@
+{
+  "id": "gurmukhi-script-1540",
+  "title": "Guru Angad promotes Gurmukhi",
+  "year_start": 1540,
+  "precision": "decade",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "punjab"
+  ],
+  "summary": "The second Guru standardizes the Gurmukhi script, giving the community its scriptural medium.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

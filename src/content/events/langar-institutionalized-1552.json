@@ -1,0 +1,27 @@
+{
+  "id": "langar-institutionalized-1552",
+  "title": "Langar institutionalized",
+  "year_start": 1552,
+  "precision": "decade",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "Guru Amar Das makes the common kitchen central to Sikh practice: all eat together, caste set aside.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

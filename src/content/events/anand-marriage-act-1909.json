@@ -1,0 +1,27 @@
+{
+  "id": "anand-marriage-act-1909",
+  "title": "Anand Marriage Act",
+  "year_start": 1909,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "Colonial law recognizes the Sikh wedding rite, a milestone of distinct legal identity.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

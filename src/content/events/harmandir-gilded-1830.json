@@ -1,0 +1,27 @@
+{
+  "id": "harmandir-gilded-1830",
+  "title": "Harmandir Sahib gilded",
+  "year_start": 1830,
+  "precision": "decade",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "Ranjit Singh's gilding gives the temple the form the world knows as the Golden Temple.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

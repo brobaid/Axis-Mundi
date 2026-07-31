@@ -1,0 +1,27 @@
+{
+  "id": "tattvartha-sutra-350",
+  "title": "Tattvartha Sutra composed",
+  "year_start": 350,
+  "precision": "century",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Umasvati's compendium of doctrine is the one text both Svetambara and Digambara traditions accept as authoritative.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

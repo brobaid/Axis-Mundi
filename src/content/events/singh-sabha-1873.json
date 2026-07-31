@@ -1,0 +1,27 @@
+{
+  "id": "singh-sabha-1873",
+  "title": "Singh Sabha movement",
+  "year_start": 1873,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "punjab"
+  ],
+  "summary": "The Lahore and Amritsar societies renew Sikh learning and self-definition against conversion pressure, shaping modern Sikh identity.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

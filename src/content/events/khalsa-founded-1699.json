@@ -1,0 +1,27 @@
+{
+  "id": "khalsa-founded-1699",
+  "title": "Founding of the Khalsa",
+  "year_start": 1699,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "founding",
+  "importance": 5,
+  "region": [
+    "punjab"
+  ],
+  "summary": "At Anandpur, Guru Gobind Singh initiates the Khalsa with its discipline and the five articles of faith.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

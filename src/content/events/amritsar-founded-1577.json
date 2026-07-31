@@ -1,0 +1,27 @@
+{
+  "id": "amritsar-founded-1577",
+  "title": "Amritsar founded",
+  "year_start": 1577,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "construction",
+  "importance": 4,
+  "region": [
+    "punjab"
+  ],
+  "summary": "Guru Ram Das founds the town whose pool and temple become the tradition's center.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

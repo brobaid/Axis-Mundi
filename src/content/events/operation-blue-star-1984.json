@@ -1,0 +1,27 @@
+{
+  "id": "operation-blue-star-1984",
+  "title": "Operation Blue Star and the violence of 1984",
+  "year_start": 1984,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "punjab"
+  ],
+  "summary": "The Indian army's operation against armed militants in the Harmandir Sahib complex causes heavy loss of life and deep hurt; the assassination of Indira Gandhi by Sikh bodyguards follows, and thousands of Sikhs are killed in the violence that ensues.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

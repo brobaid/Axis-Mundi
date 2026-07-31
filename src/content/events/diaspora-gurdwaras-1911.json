@@ -1,0 +1,28 @@
+{
+  "id": "diaspora-gurdwaras-1911",
+  "title": "First gurdwaras in Britain and North America",
+  "year_start": 1911,
+  "year_end": 1912,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "north-america"
+  ],
+  "summary": "Congregations in London and on the Pacific coast open the global gurdwara network.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

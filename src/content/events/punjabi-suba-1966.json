@@ -1,0 +1,27 @@
+{
+  "id": "punjabi-suba-1966",
+  "title": "Punjabi Suba achieved",
+  "year_start": 1966,
+  "precision": "exact",
+  "traditions": [
+    "sikhism"
+  ],
+  "branch_path": [
+    "sikhism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "The redrawing of Punjab on linguistic lines follows a long Akali campaign entwined with Sikh identity.",
+  "sources": [
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-sikhism"
+  ],
+  "sourcing": "sourced"
+}

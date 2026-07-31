@@ -1,0 +1,28 @@
+{
+  "id": "svetambara-digambara-division-300",
+  "title": "Svetambara-Digambara division",
+  "year_start": 300,
+  "precision": "era",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism"
+  ],
+  "type": "schism",
+  "importance": 5,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Position 1: Digambara tradition traces the division to the famine-era migration and disputes over practice and the canon's survival. Position 2: Svetambara tradition and most scholars describe a gradual divergence, formalized by about the 5th century CE. The two communities differ on monastic dress, the canon, and women's liberation.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": true,
+  "contested_note": "Position 1: Digambara tradition traces the division to the famine-era migration and disputes over practice and the canon's survival. Position 2: Svetambara tradition and most scholars describe a gradual divergence, formalized by about the 5th century CE. The two communities differ on monastic dress, the canon, and women's liberation.",
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

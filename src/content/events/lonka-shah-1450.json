@@ -1,0 +1,27 @@
+{
+  "id": "lonka-shah-1450",
+  "title": "Lonka Shah's aniconic critique",
+  "year_start": 1450,
+  "precision": "decade",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism/svetambara"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "Lonka's rejection of image worship on scriptural grounds opens the aniconic stream within Svetambara Jainism.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "kundakunda-200",
+  "title": "Kundakunda",
+  "year_start": 200,
+  "precision": "era",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism/digambara"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "deccan"
+  ],
+  "summary": "The Digambara teacher of the pure self whose dating is uncertain by centuries but whose influence on that tradition is not.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}
