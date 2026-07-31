@@ -1,0 +1,30 @@
+{
+  "id": "christianization-of-kievan-rus-988",
+  "title": "Christianization of Kievan Rus",
+  "year_start": 988,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "eastern-europe"
+  ],
+  "summary": "Vladimir of Kiev adopted Christianity from Constantinople, drawing the Rus into the Byzantine ecclesiastical orbit.",
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
+  "sourcing": "todo"
+}

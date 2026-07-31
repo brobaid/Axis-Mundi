@@ -1,7 +1,8 @@
 {
-  "id": "calvin-returns-to-geneva-1541",
-  "title": "Calvin returns to Geneva",
-  "year_start": 1541,
+  "id": "synod-of-dort-1618",
+  "title": "Synod of Dort",
+  "year_start": 1618,
+  "year_end": 1619,
   "precision": "exact",
   "traditions": [
     "christianity"
@@ -9,16 +10,12 @@
   "branch_path": [
     "christianity/protestant/reformed"
   ],
-  "type": "reform",
+  "type": "council",
   "importance": 3,
   "region": [
-    "swiss-confederation"
+    "low-countries"
   ],
-  "summary": "Calvin returned to Geneva and instituted the ecclesiastical ordinances that shaped the Reformed city.",
-  "tags": [
-    "geneva",
-    "calvin"
-  ],
+  "summary": "An international Reformed synod met at Dordrecht and issued the canons defining Reformed teaching against Arminianism.",
   "sources": [],
   "contested": false,
   "media": [],
@@ -27,5 +24,8 @@
     "figures": []
   },
   "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
   "sourcing": "todo"
 }

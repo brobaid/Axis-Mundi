@@ -1,7 +1,7 @@
 {
-  "id": "calvin-returns-to-geneva-1541",
-  "title": "Calvin returns to Geneva",
-  "year_start": 1541,
+  "id": "geneva-academy-founded-1559",
+  "title": "Geneva Academy founded",
+  "year_start": 1559,
   "precision": "exact",
   "traditions": [
     "christianity"
@@ -9,16 +9,12 @@
   "branch_path": [
     "christianity/protestant/reformed"
   ],
-  "type": "reform",
+  "type": "founding",
   "importance": 3,
   "region": [
     "swiss-confederation"
   ],
-  "summary": "Calvin returned to Geneva and instituted the ecclesiastical ordinances that shaped the Reformed city.",
-  "tags": [
-    "geneva",
-    "calvin"
-  ],
+  "summary": "Calvin established the Geneva Academy, which trained Reformed ministers for congregations across Europe.",
   "sources": [],
   "contested": false,
   "media": [],
@@ -27,5 +23,8 @@
     "figures": []
   },
   "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
   "sourcing": "todo"
 }

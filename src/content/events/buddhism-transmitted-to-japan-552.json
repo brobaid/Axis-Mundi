@@ -16,17 +16,17 @@
   ],
   "summary": "Buddhist images and texts reached the Japanese court from the Korean kingdom of Baekje, in the traditional dating.",
   "tags": [
-    "needs-identification",
     "japan",
     "transmission"
   ],
   "sources": [],
-  "contested": false,
+  "contested": true,
   "media": [],
   "links": {
     "events": [],
     "figures": []
   },
   "influence": [],
-  "sourcing": "todo"
+  "sourcing": "todo",
+  "contested_note": "The date of the transmission is disputed. The Nihon Shoki places the arrival of Buddhist images and texts from Baekje at 552 CE, which this record follows. The Gangoji Garan Engi and the Jogu Shotoku Hoo Teisetsu give 538 CE, and much modern scholarship prefers that earlier dating. Both positions require citation before this note ships."
 }

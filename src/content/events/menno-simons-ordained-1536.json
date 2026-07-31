@@ -1,8 +1,7 @@
 {
-  "id": "munster-rebellion-1534",
-  "title": "Münster rebellion",
-  "year_start": 1534,
-  "year_end": 1535,
+  "id": "menno-simons-ordained-1536",
+  "title": "Menno Simons ordained",
+  "year_start": 1536,
   "precision": "exact",
   "traditions": [
     "christianity"
@@ -10,16 +9,12 @@
   "branch_path": [
     "christianity/protestant/anabaptist"
   ],
-  "type": "political",
+  "type": "figure",
   "importance": 3,
   "region": [
-    "german-lands"
+    "low-countries"
   ],
-  "summary": "A radical Anabaptist regime held the city of Münster until its violent suppression.",
-  "tags": [
-    "anabaptist",
-    "munster"
-  ],
+  "summary": "Menno Simons was ordained among the Anabaptists of the Low Countries; the Mennonite tradition takes its name from him.",
   "sources": [],
   "contested": false,
   "media": [],
@@ -28,5 +23,8 @@
     "figures": []
   },
   "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
   "sourcing": "todo"
 }
