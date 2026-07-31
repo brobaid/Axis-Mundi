@@ -1,0 +1,29 @@
+{
+  "id": "somnath-raid-1026",
+  "title": "Somnath temple destroyed",
+  "year_start": 1026,
+  "precision": "exact",
+  "traditions": [
+    "hinduism",
+    "islam"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "Mahmud of Ghazni's raid destroys the famed Shiva temple; the event's memory carries long political weight.",
+  "sources": [
+    "flood-hinduism-1996",
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "aurobindo-1910",
+  "title": "Aurobindo at Pondicherry",
+  "year_start": 1910,
+  "year_end": 1950,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "tamil-country"
+  ],
+  "summary": "The revolutionary-turned-sage's integral yoga becomes one of modern Hinduism's philosophical landmarks.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

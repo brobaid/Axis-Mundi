@@ -1,0 +1,28 @@
+{
+  "id": "hindu-code-bills-1955",
+  "title": "Hindu code bills enacted",
+  "year_start": 1955,
+  "year_end": 1956,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "south-asia"
+  ],
+  "summary": "Independent India codifies Hindu marriage, succession, and adoption law, the state's deepest intervention in religious custom.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

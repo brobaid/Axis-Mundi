@@ -1,0 +1,27 @@
+{
+  "id": "puranic-mainstream-500",
+  "title": "Temple worship and Puranic Hinduism become the mainstream",
+  "year_start": 500,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Deity worship in temples, guided by the Puranas, displaces Vedic sacrifice as the tradition's center of gravity.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

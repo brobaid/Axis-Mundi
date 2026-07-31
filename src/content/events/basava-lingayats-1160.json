@@ -1,0 +1,27 @@
+{
+  "id": "basava-lingayats-1160",
+  "title": "Basava and the Lingayat movement",
+  "year_start": 1160,
+  "precision": "decade",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism/shaivism"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "deccan"
+  ],
+  "summary": "Basava's Virashaiva movement rejects caste and temple mediation for direct devotion to Shiva.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

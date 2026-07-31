@@ -1,0 +1,28 @@
+{
+  "id": "gandhi-satyagraha-1915",
+  "title": "Gandhi's satyagraha era",
+  "year_start": 1915,
+  "year_end": 1948,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "south-asia"
+  ],
+  "summary": "Gandhi's fusion of Hindu ethics with nonviolent politics remakes both Indian public life and Hinduism's global image.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

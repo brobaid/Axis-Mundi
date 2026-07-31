@@ -1,0 +1,27 @@
+{
+  "id": "laws-of-manu-100",
+  "title": "Laws of Manu compiled",
+  "year_start": 100,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The Manusmriti codifies dharma, caste duty, and life stages, the most cited of the legal treatises.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

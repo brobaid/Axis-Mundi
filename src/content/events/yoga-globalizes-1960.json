@@ -1,0 +1,27 @@
+{
+  "id": "yoga-globalizes-1960",
+  "title": "Modern postural yoga globalizes",
+  "year_start": 1960,
+  "precision": "decade",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "north-america"
+  ],
+  "summary": "Teachers from Iyengar to the ashram movements make yoga a worldwide practice, loosely and complexly tied to its Hindu roots.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "bali-hinduism-1550",
+  "title": "Hindu Bali endures",
+  "year_start": 1550,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "malay-archipelago"
+  ],
+  "summary": "As Java Islamizes, Bali preserves the Hindu-Buddhist synthesis that continues today.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

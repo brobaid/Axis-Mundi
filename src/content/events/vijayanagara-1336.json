@@ -1,0 +1,27 @@
+{
+  "id": "vijayanagara-1336",
+  "title": "Vijayanagara founded",
+  "year_start": 1336,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "deccan"
+  ],
+  "summary": "The empire becomes the great patron of southern temple Hinduism for two centuries.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

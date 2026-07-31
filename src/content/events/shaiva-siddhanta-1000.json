@@ -1,0 +1,27 @@
+{
+  "id": "shaiva-siddhanta-1000",
+  "title": "Shaiva Siddhanta systematized",
+  "year_start": 1000,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism/shaivism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "tamil-country"
+  ],
+  "summary": "The Tamil Shaiva school fixes its scriptural canon and theology of grace.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

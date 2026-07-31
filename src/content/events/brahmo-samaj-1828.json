@@ -1,0 +1,27 @@
+{
+  "id": "brahmo-samaj-1828",
+  "title": "Brahmo Samaj founded",
+  "year_start": 1828,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "bengal"
+  ],
+  "summary": "Rammohan Roy's society opens modern Hindu reform, arguing scripture against image worship and social custom.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

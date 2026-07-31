@@ -1,0 +1,29 @@
+{
+  "id": "akbar-dialogues-1575",
+  "title": "Akbar's interreligious dialogues",
+  "year_start": 1575,
+  "precision": "decade",
+  "traditions": [
+    "hinduism",
+    "islam"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "encounter",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The Mughal emperor's discussions with Hindu, Jain, Christian, and Muslim scholars at Fatehpur Sikri mark early modern South Asia's most famous interfaith exchange.",
+  "sources": [
+    "flood-hinduism-1996",
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

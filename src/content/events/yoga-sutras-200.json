@@ -1,0 +1,27 @@
+{
+  "id": "yoga-sutras-200",
+  "title": "Yoga Sutras of Patanjali",
+  "year_start": 200,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Patanjali's aphorisms systematize yogic discipline; their modern global reach far exceeds their classical circulation.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

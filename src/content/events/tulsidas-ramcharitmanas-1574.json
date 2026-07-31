@@ -1,0 +1,28 @@
+{
+  "id": "tulsidas-ramcharitmanas-1574",
+  "title": "Tulsidas composes the Ramcharitmanas",
+  "year_start": 1574,
+  "year_end": 1577,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism/vaishnavism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The Awadhi Ramayana becomes the devotional scripture of the Hindi world.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

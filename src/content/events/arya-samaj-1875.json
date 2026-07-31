@@ -1,0 +1,27 @@
+{
+  "id": "arya-samaj-1875",
+  "title": "Arya Samaj founded",
+  "year_start": 1875,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "punjab"
+  ],
+  "summary": "Dayananda's back-to-the-Vedas movement reshapes Punjab's religious landscape and Hindu self-definition.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "madhva-1238",
+  "title": "Madhva",
+  "year_start": 1238,
+  "year_end": 1317,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism/vaishnavism"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "deccan"
+  ],
+  "summary": "The Dvaita teacher whose strict dualism completes Vedanta's classical triad.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

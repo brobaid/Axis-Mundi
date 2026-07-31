@@ -1,0 +1,27 @@
+{
+  "id": "gupta-temples-400",
+  "title": "First stone temples rise",
+  "year_start": 400,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Gupta-era shrines begin the temple architecture that becomes Hinduism's public face.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

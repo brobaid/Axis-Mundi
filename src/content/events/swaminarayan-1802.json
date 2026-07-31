@@ -1,0 +1,27 @@
+{
+  "id": "swaminarayan-1802",
+  "title": "Swaminarayan Sampradaya founded",
+  "year_start": 1802,
+  "precision": "year",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism/vaishnavism"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "Sahajanand Swami's movement grows into one of Gujarat's and the diaspora's largest devotional bodies.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "brihadishvara-1010",
+  "title": "Brihadishvara temple consecrated",
+  "year_start": 1010,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism/shaivism"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "tamil-country"
+  ],
+  "summary": "Rajaraja Chola's great temple at Thanjavur crowns the southern temple age.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

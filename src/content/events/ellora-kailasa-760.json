@@ -1,0 +1,27 @@
+{
+  "id": "ellora-kailasa-760",
+  "title": "Kailasa temple carved at Ellora",
+  "year_start": 760,
+  "precision": "decade",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism/shaivism"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "deccan"
+  ],
+  "summary": "The rock-cut Kailasa, hewn from a single cliff, is the summit of early medieval temple craft.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

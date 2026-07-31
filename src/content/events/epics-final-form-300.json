@@ -1,0 +1,28 @@
+{
+  "id": "epics-final-form-300",
+  "title": "Mahabharata and Ramayana reach final form",
+  "year_start": -400,
+  "year_end": 400,
+  "precision": "era",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The two epics, grown over centuries, reach the received shape through which most Hindus learn the tradition.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

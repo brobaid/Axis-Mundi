@@ -1,0 +1,27 @@
+{
+  "id": "vedanta-society-1894",
+  "title": "Vedanta Society founded in the West",
+  "year_start": 1894,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "north-america"
+  ],
+  "summary": "Vivekananda's New York society is the first durable Hindu institution in the West.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

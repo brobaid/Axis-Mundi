@@ -1,0 +1,28 @@
+{
+  "id": "indenture-diaspora-1834",
+  "title": "Indenture carries Hinduism overseas",
+  "year_start": 1834,
+  "year_end": 1917,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "south-asia"
+  ],
+  "summary": "Indentured laborers establish Hindu communities in Mauritius, the Caribbean, Fiji, and South Africa.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

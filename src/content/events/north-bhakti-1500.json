@@ -1,0 +1,28 @@
+{
+  "id": "north-bhakti-1500",
+  "title": "North Indian bhakti flowering",
+  "year_start": 1440,
+  "year_end": 1580,
+  "precision": "era",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Kabir, Mirabai, Chaitanya, Surdas, and Tulsidas carry devotional religion across the north in the vernaculars.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

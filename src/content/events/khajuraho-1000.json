@@ -1,0 +1,27 @@
+{
+  "id": "khajuraho-1000",
+  "title": "Khajuraho temples built",
+  "year_start": 1000,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The Chandela temple city exemplifies the mature northern style.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "temple-entry-1936",
+  "title": "Temple Entry Proclamation",
+  "year_start": 1936,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "south-asia"
+  ],
+  "summary": "Travancore opens its temples to all castes, a landmark in the reform of ritual exclusion.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

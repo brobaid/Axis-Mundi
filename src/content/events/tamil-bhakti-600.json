@@ -1,0 +1,27 @@
+{
+  "id": "tamil-bhakti-600",
+  "title": "Tamil bhakti movement rises",
+  "year_start": 600,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "tamil-country"
+  ],
+  "summary": "The Alvars and Nayanars sing personal devotion to Vishnu and Shiva, beginning the devotional wave that remakes Hinduism.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

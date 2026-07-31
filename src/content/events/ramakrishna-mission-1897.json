@@ -1,0 +1,27 @@
+{
+  "id": "ramakrishna-mission-1897",
+  "title": "Ramakrishna Mission founded",
+  "year_start": 1897,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "bengal"
+  ],
+  "summary": "Vivekananda institutionalizes his teacher's legacy in service and Vedanta teaching.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

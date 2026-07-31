@@ -1,0 +1,27 @@
+{
+  "id": "divya-prabandham-1000",
+  "title": "Divya Prabandham compiled",
+  "year_start": 1000,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism/vaishnavism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "tamil-country"
+  ],
+  "summary": "Nathamuni's compilation canonizes the Alvars' hymns, the Tamil Veda of Shri Vaishnavism.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

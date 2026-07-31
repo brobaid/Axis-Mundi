@@ -1,0 +1,27 @@
+{
+  "id": "tantra-spreads-800",
+  "title": "Tantric currents spread",
+  "year_start": 800,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Tantric ritual and theology permeate Shaiva and Shakta worship, reshaping practice across the subcontinent.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

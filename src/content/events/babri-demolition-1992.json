@@ -1,0 +1,29 @@
+{
+  "id": "babri-demolition-1992",
+  "title": "Demolition of the Babri Masjid",
+  "year_start": 1992,
+  "precision": "exact",
+  "traditions": [
+    "hinduism",
+    "islam"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Hindu nationalist activists demolish the 16th-century mosque at Ayodhya, setting off riots and reshaping religion-state politics in India.",
+  "sources": [
+    "flood-hinduism-1996",
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

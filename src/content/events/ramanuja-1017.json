@@ -1,0 +1,28 @@
+{
+  "id": "ramanuja-1017",
+  "title": "Ramanuja",
+  "year_start": 1017,
+  "year_end": 1137,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism/vaishnavism"
+  ],
+  "type": "figure",
+  "importance": 4,
+  "region": [
+    "tamil-country"
+  ],
+  "summary": "The Shri Vaishnava teacher whose qualified non-dualism gives bhakti its enduring theology.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

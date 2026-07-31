@@ -1,0 +1,27 @@
+{
+  "id": "iskcon-founded-1966",
+  "title": "ISKCON founded",
+  "year_start": 1966,
+  "precision": "exact",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism/vaishnavism"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "north-america"
+  ],
+  "summary": "Bhaktivedanta Swami's society carries Gaudiya Vaishnavism into a global movement.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}
