@@ -164,8 +164,9 @@
   --brass-wash: #f2e9d6;
   --brass-hover: #855f22;
 
-  /* Focus ring is brass (§3.1, §10) */
-  --focus-ring: #6e5620;
+  /* Focus ring is brass itself, matching the design export's
+     `:focus-visible{outline:2px solid #9C7A2F}` (§3.1: brass carries focus). */
+  --focus-ring: var(--brass);
 
   /* Contested / confidence (§3.3): neutral, never red */
   --contested-hatch: #8d8474;
@@ -253,7 +254,7 @@
   --brass-wash: #2b2418;
   --brass-hover: #ddb96c;
 
-  --focus-ring: #c9a250;
+  --focus-ring: var(--brass);
 
   --contested-hatch: #6f6658;
   --contested-badge-bg: #2b2418;
