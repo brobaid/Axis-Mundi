@@ -1,5 +1,6 @@
 import { createPanel, esc } from '../lib/panel';
 import { eraLabel } from '../lib/map-render';
+import { revealDetent } from '../lib/scrubber';
 
 /**
  * The map island.
@@ -111,6 +112,7 @@ if (root !== null) {
         btn.setAttribute('aria-checked', String(on));
         btn.tabIndex = on ? 0 : -1;
         btn.classList.toggle('scrub__detent--on', on);
+        if (on) revealDetent(rail!, btn);
       }
 
       const snapshot = data.snapshots.find((s) => s.era === activeEra);

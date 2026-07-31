@@ -1,4 +1,5 @@
 import { createPanel, esc } from '../lib/panel';
+import { revealDetent } from '../lib/scrubber';
 
 /**
  * The family-tree island.
@@ -91,6 +92,7 @@ if (root !== null) {
         btn.setAttribute('aria-checked', String(on));
         btn.tabIndex = on ? 0 : -1;
         btn.classList.toggle('scrub__detent--on', on);
+        if (on) revealDetent(rail!, btn);
       }
 
       if (readout !== null) {
