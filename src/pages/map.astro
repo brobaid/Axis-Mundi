@@ -178,6 +178,12 @@ const bootstrap = {
               Grade is rendered, never hidden: solid, reduced, hatched. A speculative realm looks
               speculative.
             </p>
+
+            <p class="caption legend__note">
+              Religiously unaffiliated is a Pew category, not a tradition; it renders in a neutral
+              tone and is never hatched, because a secular majority is a documented fact, not an
+              uncertain one.
+            </p>
           </div>
         </section>
       )
@@ -545,6 +551,13 @@ const bootstrap = {
   /* Outside the snapshot: the plate's own land tone, i.e. nothing painted. */
   .legend__swatch--outside {
     background: var(--land);
+  }
+
+  .legend__note {
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: var(--hairline-width) solid var(--hairline);
+    max-width: var(--measure);
   }
 
   .legend__second {
