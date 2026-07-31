@@ -1,0 +1,393 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DetailPanel from '../components/DetailPanel.astro';
+import TraditionSymbols from '../components/TraditionSymbols.astro';
+import { getPublishable, getStructural } from '../lib/content';
+import { TRADITIONS } from '../lib/traditions';
+import { layoutTree, treeDetents, type TreeNodeInput } from '../lib/tree-model';
+import { eraLabel } from '../lib/map-render';
+
+/**
+ * The family tree (reference build's tree screen).
+ *
+ * Descent across all ten traditions, anchored to time where a record carries a
+ * date. Every node on this page comes from the taxonomy; nothing is authored
+ * here.
+ */
+
+const [taxonomy, dives] = await Promise.all([
+  /* Structure only: ids, names, parents, contested flags, and the sourced
+     founding and adherent blocks. The authored one-line summaries stay gated. */
+  getStructural('taxonomy'),
+  getPublishable('deepDives'),
+]);
+
+const hasDive = new Set<string>(dives.map((d) => d.data.tradition));
+
+const input: TreeNodeInput[] = taxonomy.map((n) => ({
+  id: n.data.id,
+  name: n.data.name,
+  parent: n.data.parent,
+  tradition: n.data.tradition,
+  path: n.data.path,
+  depth: n.data.depth,
+  contested: n.data.contested,
+  foundedYear: n.data.founded.year,
+  foundedDisplay: n.data.founded.display,
+  foundedContested: n.data.founded.contested,
+  adherentsDisplay: n.data.adherents?.display,
+  adherentsContested: n.data.adherents?.contested ?? false,
+  order: n.data.order,
+}));
+
+const WIDTH = 1000;
+const layout = layoutTree(input, WIDTH, TRADITIONS.map((t) => t.id));
+const detents = treeDetents(input);
+const dated = input.filter((n) => n.foundedYear !== undefined).length;
+
+const bootstrap = {
+  nodes: layout.nodes.map((n) => ({
+    id: n.id,
+    name: n.name,
+    tradition: n.tradition,
+    path: n.path,
+    depth: n.depth,
+    contested: n.contested,
+    dated: n.dated,
+    foundedYear: n.foundedYear ?? null,
+    foundedDisplay: n.foundedDisplay ?? null,
+    foundedContested: n.foundedContested,
+    adherentsDisplay: n.adherentsDisplay ?? null,
+    adherentsContested: n.adherentsContested,
+    hasDive: hasDive.has(n.tradition),
+  })),
+  rootYears: Object.fromEntries(
+    input.filter((n) => n.depth === 1).map((n) => [n.tradition, n.foundedYear ?? null]),
+  ),
+  detents,
+  traditionNames: Object.fromEntries(TRADITIONS.map((t) => [t.id, t.name])),
+};
+---
+
+<BaseLayout
+  title="Family tree"
+  description="Descent across all ten traditions and their branches, anchored to time where a founding record exists, with contested classifications shown rather than resolved."
+>
+  <TraditionSymbols />
+
+  <section class="shell head">
+    <p class="eyebrow">Room V · The Genealogy Room</p>
+    <h1>Descent, branch by branch.</h1>
+    <p class="crumb caption">
+      <b>Family tree</b> · {input.length} nodes across {TRADITIONS.length} traditions · {dated} carry a
+      founding date
+    </p>
+  </section>
+
+  <div class="tree" data-tree>
+    <!-- era slider -------------------------------------------------------- -->
+    <div class="shell">
+      <div class="scrub">
+        <div class="scrub__rail" data-tree-scrubber role="radiogroup" aria-label="Era">
+          <div class="scrub__line" aria-hidden="true"></div>
+          <div class="meridian scrub__meridian" data-tree-meridian aria-hidden="true"></div>
+          {
+            detents.map((era, i) => (
+              <button
+                type="button"
+                class:list={['scrub__detent', i === detents.length - 1 && 'scrub__detent--on']}
+                data-era={era}
+                role="radio"
+                aria-checked={i === detents.length - 1}
+                tabindex={i === detents.length - 1 ? 0 : -1}
+              >
+                <span class="scrub__tick" aria-hidden="true" />
+                <span class="scrub__label">{eraLabel(era)}</span>
+              </button>
+            ))
+          }
+        </div>
+        <p class="scrub__readout mono caption" data-tree-readout aria-live="polite"></p>
+      </div>
+    </div>
+
+    <!-- the tree ---------------------------------------------------------- -->
+    <div class="tree-scroll">
+      <svg
+        class="tree-svg"
+        viewBox={`0 0 ${layout.width} ${layout.height}`}
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        aria-label={`Family tree of ${TRADITIONS.length} traditions and their branches`}
+      >
+        <g class="tree-axis" aria-hidden="true">
+          <line x1="0" y1={layout.axisY} x2={layout.width} y2={layout.axisY} />
+          {
+            layout.ticks.map((t) => (
+              <>
+                <line x1={t.x} y1={0} x2={t.x} y2={layout.axisY} class="tree-axis__rule" />
+                <text x={t.x} y={layout.axisY + 14}>{t.label}</text>
+              </>
+            ))
+          }
+        </g>
+
+        <g class="tree-edges" aria-hidden="true">
+          {layout.edges.map((e) => <path d={e.path} />)}
+        </g>
+
+        <g class="tree-nodes">
+          {
+            layout.nodes.map((n) => (
+              <g
+                class:list={['tree-node', `tree-node--d${n.depth}`, !n.dated && 'tree-node--undated']}
+                data-node={n.id}
+                data-tradition={n.tradition}
+                style={`--tradition-hue: var(--t-${n.tradition})`}
+              >
+                <circle cx={n.x} cy={n.y} r={n.depth === 1 ? 5.5 : n.depth === 2 ? 4 : 3} />
+                <text x={n.x + 10} y={n.y + 4}>
+                  {n.name}
+                  {n.contested ? ' ·' : ''}
+                </text>
+                {n.contested && (
+                  <circle class="tree-node__contested" cx={n.x + 10 + n.name.length * 6.1} cy={n.y} r={3.2}>
+                    <title>Contested classification</title>
+                  </circle>
+                )}
+              </g>
+            ))
+          }
+        </g>
+      </svg>
+    </div>
+
+    <p class="shell tree-note measure">
+      Horizontal position means a year only on the dated axis at the left, where the ten
+      tradition nodes sit at their founding records. Every branch and denomination node is placed
+      by descent instead, because no branch carries a founding date yet &mdash; their columns say
+      &ldquo;descends from&rdquo;, never &ldquo;began in&rdquo;. A ringed node carries a contested
+      classification and is placed by its own self-identification, per the standing rule.
+    </p>
+
+    <p class="shell caption tree-legend">
+      The era slider dims what did not yet exist. A branch answers from its tradition&rsquo;s
+      founding, since that is the only honest claim available: it cannot predate what it descends
+      from.
+    </p>
+  </div>
+
+  <DetailPanel />
+</BaseLayout>
+
+<script type="application/json" id="tree-data" set:html={JSON.stringify(bootstrap)} is:inline />
+
+<script>
+  import '../scripts/tree';
+</script>
+
+<style>
+  .head {
+    padding-block: var(--space-12) var(--space-4);
+    max-width: 46rem;
+  }
+
+  .head h1 {
+    font-size: clamp(2.125rem, 6vw, 2.875rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin-block: var(--space-3) var(--space-3);
+  }
+
+  .crumb {
+    color: var(--ink-soft);
+  }
+
+  /* --- era slider (the map's scrubber, same component vocabulary) -------- */
+
+  .scrub {
+    margin-block: var(--space-4) var(--space-6);
+  }
+
+  .scrub__rail {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-1);
+    padding-top: var(--space-4);
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .scrub__line {
+    position: absolute;
+    top: calc(var(--space-4) + 5px);
+    left: 0;
+    right: 0;
+    height: var(--hairline-width);
+    background: var(--hairline-strong);
+  }
+
+  .scrub__meridian {
+    top: 0;
+    bottom: 0;
+    height: auto;
+  }
+
+  .scrub__detent {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    background: none;
+    border: 0;
+    padding: 0 var(--space-1);
+    min-height: var(--tap-min);
+    cursor: pointer;
+    color: var(--ink-soft);
+  }
+
+  .scrub__tick {
+    width: 11px;
+    height: 11px;
+    rotate: 45deg;
+    border: 1.5px solid var(--hairline-strong);
+    background: var(--canvas);
+  }
+
+  .scrub__detent--on .scrub__tick {
+    border-color: var(--brass);
+    background: var(--brass);
+  }
+
+  .scrub__detent:hover .scrub__tick {
+    border-color: var(--brass);
+  }
+
+  .scrub__label {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    white-space: nowrap;
+  }
+
+  .scrub__detent--on .scrub__label {
+    color: var(--brass-ink);
+  }
+
+  .scrub__readout {
+    margin-top: var(--space-3);
+    color: var(--ink-soft);
+  }
+
+  /* --- the plate --------------------------------------------------------- */
+
+  .tree-scroll {
+    overflow-x: auto;
+    border-block: var(--hairline-width) solid var(--hairline);
+    background: var(--surface);
+  }
+
+  .tree-svg {
+    display: block;
+    min-width: 56rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .tree-axis line {
+    stroke: var(--hairline-strong);
+    stroke-width: 1;
+  }
+
+  .tree-axis__rule {
+    stroke: var(--hairline);
+    stroke-width: 1;
+  }
+
+  .tree-axis text {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    fill: var(--ink-soft);
+    text-anchor: middle;
+  }
+
+  .tree-edges path {
+    fill: none;
+    stroke: var(--hairline-strong);
+    stroke-width: 1.2;
+    opacity: 0.7;
+  }
+
+  .tree-node {
+    cursor: pointer;
+  }
+
+  .tree-node circle {
+    fill: var(--tradition-hue);
+    stroke: var(--surface);
+    stroke-width: 1.5;
+  }
+
+  .tree-node text {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    fill: var(--ink);
+    paint-order: stroke;
+    stroke: var(--surface);
+    stroke-width: 3px;
+    stroke-linejoin: round;
+  }
+
+  .tree-node--d1 text {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .tree-node--d3 text {
+    font-size: 10.5px;
+    fill: var(--ink-soft);
+  }
+
+  /* Placed by descent, not by date: hollow, so the eye can tell which nodes
+     the axis actually speaks for. */
+  .tree-node--undated circle {
+    fill: var(--surface);
+    stroke: var(--tradition-hue);
+    stroke-width: 2;
+  }
+
+  .tree-node__contested {
+    fill: none;
+    stroke: var(--contested-hatch);
+    stroke-width: 1.4;
+  }
+
+  .tree-node:hover text,
+  .tree-node:focus-within text {
+    fill: var(--brass-ink);
+  }
+
+  /* Dimmed by the era slider: not yet in existence at the chosen year. */
+  .tree-node[data-before] {
+    opacity: 0.16;
+  }
+
+  .tree-note,
+  .tree-legend {
+    color: var(--ink-soft);
+    padding-block: var(--space-4) 0;
+  }
+
+  .tree-legend {
+    padding-bottom: var(--space-16);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .tree-node {
+      transition: opacity var(--dur-micro) var(--ease-out);
+    }
+  }
+</style>

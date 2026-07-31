@@ -25,6 +25,7 @@ const rooms: { href: string; label: string }[] = [
   ...(dives.length === 0 ? [] : [{ href: '/traditions', label: 'Deep dives' }]),
   { href: '/matrix', label: 'Matrix' },
   { href: '/compare', label: 'Compare' },
+  { href: '/tree', label: 'Family tree' },
 ];
 
 const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
