@@ -1,0 +1,55 @@
+{
+  "name": "axis-mundi",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Axis Mundi — an interactive comparative reference for ten religious traditions.",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "validate:content": "tsx scripts/validate-content.ts",
+    "validate:tokens": "tsx scripts/check-tokens.ts",
+    "validate": "pnpm validate:content && pnpm validate:tokens",
+    "lint": "eslint . && astro check",
+    "check": "pnpm validate && pnpm lint && pnpm build"
+  },
+  "dependencies": {
+    "astro": "^5.14.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@eslint/js": "^10.0.1",
+    "@fontsource-variable/archivo": "^5.2.6",
+    "@fontsource-variable/newsreader": "^5.2.6",
+    "@fontsource-variable/source-serif-4": "^5.2.6",
+    "@fontsource/ibm-plex-mono": "^5.2.5",
+    "@fontsource/noto-naskh-arabic": "^5.2.5",
+    "@fontsource/noto-sans-gurmukhi": "^5.2.5",
+    "@fontsource/noto-serif-devanagari": "^5.2.5",
+    "@fontsource/noto-serif-hebrew": "^5.2.5",
+    "@fontsource/noto-serif-jp": "^5.2.5",
+    "@fontsource/noto-serif-sc": "^5.2.5",
+    "@types/node": "^22.10.5",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
+    "@typescript-eslint/parser": "^8.20.0",
+    "eslint": "^9.18.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "globals": "^15.14.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "zod": "^3.24.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
+  }
+}
