@@ -94,12 +94,16 @@ function parseModeBlocks(css: string): Record<Mode, Map<string, string>> {
 
   // `:root` and `:root, [data-mode='gallery']` both seed the light mode; the
   // night block then overrides. Walk declarations in source order.
+  // Strip comments first: they may legitimately quote CSS containing braces,
+  // which would otherwise be parsed as a rule and desynchronise everything.
+  const stripped = css.replace(/\/\*[\s\S]*?\*\//g, '');
+
   // tokens.css has no nested at-rules, so a flat `selector { body }` scan is
   // sufficient. Do NOT anchor on the previous `}` — consuming it would make
   // every second block unmatchable.
   const blockRe = /([^{}]+)\{([^{}]*)\}/g;
   let m: RegExpExecArray | null;
-  while ((m = blockRe.exec(css)) !== null) {
+  while ((m = blockRe.exec(stripped)) !== null) {
     const selector = (m[1] ?? '').trim();
     const body = m[2] ?? '';
     const decls = [...body.matchAll(/(--[\w-]+)\s*:\s*([^;]+);/g)].map(
