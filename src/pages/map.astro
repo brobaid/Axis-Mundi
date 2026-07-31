@@ -43,7 +43,19 @@ const snapshots: SnapshotView[] = entries
 
 const available = new Set(snapshots.map((s) => s.era));
 const rail = detents(available);
-const activeEra = snapshots[0]?.era ?? 1;
+/* The latest delivered era, not the earliest. This was `snapshots[0]` while
+   2020 was the only one, which read as "the present" by accident; with 1 CE
+   delivered it would have landed the room in antiquity. The tree's slider
+   opens on its last detent, and the two rooms share a cursor, so the map opens
+   on its last delivered one. */
+const activeEra = snapshots[snapshots.length - 1]?.era ?? 2020;
+
+/* The owner's era notes, one per delivered snapshot, all rendered and all but
+   the active one hidden — the island swaps them with the plate. */
+const eraNotes = entries
+  .map((entry) => ({ era: entry.data.era, label: entry.data.label, note: entry.data.era_note }))
+  .filter((n): n is { era: number; label: string; note: string } => n.note !== undefined)
+  .sort((a, b) => a.era - b.era);
 
 const canvasHtml =
   snapshots.length === 0
@@ -54,6 +66,7 @@ const canvasHtml =
         /* Renderable categories, not traditions: `unaffiliated` is a real
            majority in ten countries and needs its hatch pattern like the rest. */
         traditions: [...TRADITIONS.map((t) => t.id), 'unaffiliated'],
+        traditionNames: Object.fromEntries(TRADITIONS.map((t) => [t.id, t.name])),
       });
 
 const sources = await getPublishable('sources');
@@ -143,6 +156,21 @@ const bootstrap = {
             </div>
             <p class="scrub__readout mono caption" data-map-readout aria-live="polite" />
           </div>
+
+          <!-- era note ----------------------------------------------- -->
+          {
+            eraNotes.map((n) => (
+              <aside
+                class="era-note"
+                data-era-note={n.era}
+                hidden={n.era !== activeEra}
+                aria-label={`What the ${n.label} snapshot does and does not show`}
+              >
+                <p class="eyebrow">Reading the {n.label} map</p>
+                <p class="measure">{n.note}</p>
+              </aside>
+            ))
+          }
 
           <!-- legend ------------------------------------------------- -->
           <div class="legend">
@@ -282,6 +310,17 @@ const bootstrap = {
 
   .map-frame :global(.map-ocean) {
     fill: var(--ocean);
+  }
+
+  /* Land the snapshot does not shade. Not decoration and not emptiness: at an
+     era where the ten traditions cover a minority of the world, this tone is
+     everyone else. It never takes a pointer — only shaded realms answer. */
+  .map-frame :global(.map-land path) {
+    fill: var(--land);
+    stroke: var(--hairline-strong);
+    stroke-width: 0.3;
+    stroke-opacity: 0.45;
+    pointer-events: none;
   }
 
   .map-frame :global(.map-graticule line) {
@@ -497,6 +536,23 @@ const bootstrap = {
 
   .scrub__readout {
     margin-top: var(--space-3);
+    color: var(--ink-soft);
+  }
+
+  /* --- era note ----------------------------------------------------------- */
+
+  /* Sits between the scrubber and the legend: you choose an era, then read what
+     that era's plate does and does not claim, then learn how to read its
+     shading. The brass rule marks it as the owner's own words rather than the
+     interface's. */
+  .era-note {
+    margin-block: var(--space-5) 0;
+    padding-inline-start: var(--space-4);
+    border-inline-start: 2px solid var(--brass);
+  }
+
+  .era-note p:last-child {
+    margin-block-start: var(--space-2);
     color: var(--ink-soft);
   }
 

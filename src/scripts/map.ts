@@ -125,6 +125,12 @@ if (root !== null) {
       const awaiting = root!.querySelector<HTMLElement>('[data-map-awaiting]');
       if (awaiting !== null) awaiting.hidden = snapshot !== undefined;
 
+      /* The era note belongs to its plate, so it scrubs with it. An era with no
+         note shows none rather than the previous era's. */
+      for (const note of root!.querySelectorAll<HTMLElement>('[data-era-note]')) {
+        note.hidden = Number(note.dataset['eraNote']) !== activeEra;
+      }
+
       /* The cartouche is the plate's own label, so it has to follow the scrub —
          otherwise an undelivered era sits under the title of a delivered one. */
       const cartoucheEra = canvas!.querySelector<SVGTextElement>('[data-cartouche-era]');

@@ -105,6 +105,15 @@ export const snapshotSchema = z
      */
     fixture: z.boolean().default(false),
     sourcing: sourcingStatus,
+    /**
+     * The owner's note for this era, verbatim from its research memo.
+     *
+     * Not decoration. What a snapshot leaves unshaded is a claim as loud as
+     * what it shades, and at some eras it is the louder one — at 1 CE the ten
+     * traditions cover a minority of the inhabited world. The note is where
+     * that is said in words, since the plate can only say it in absence.
+     */
+    era_note: z.string().min(1).optional(),
     features: z.array(realmFeature),
   })
   .superRefine((value, ctx) => {

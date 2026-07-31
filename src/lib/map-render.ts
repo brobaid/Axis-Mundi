@@ -183,14 +183,26 @@ function realmLabel(realm: Realm, f: Frame, snapshotId: string): string {
  */
 const gradeClass = (grade: ConfidenceGrade): string => `map-realm--${grade}`;
 
-export function renderSnapshot(snapshot: SnapshotView, f: Frame, active: boolean): string {
+export function renderSnapshot(
+  snapshot: SnapshotView,
+  f: Frame,
+  active: boolean,
+  names: Readonly<Record<string, string>> = {},
+): string {
   const realms = snapshot.realms
     .map((realm) => {
       const fill = realm.grade === 'c' ? `url(#hatch-${realm.tradition})` : `var(--t-${realm.tradition})`;
       /* A realm is a control, so it is reachable and named. The label carries
          the same three facts the eye gets from the fill and the card: which
          country, which category, how confident. */
-      const category = realm.tradition === 'unaffiliated' ? 'religiously unaffiliated' : realm.tradition;
+      /* The display name, not the id: the card beside this realm reads
+         "Chinese traditions" where the id reads "chinese", and a label that
+         disagrees with the card is a label that lied about carrying the same
+         facts. */
+      const category =
+        realm.tradition === 'unaffiliated'
+          ? 'religiously unaffiliated'
+          : (names[realm.tradition] ?? realm.tradition);
       const label = `${realm.name}: ${category}, confidence ${realm.grade.toUpperCase()}`;
       return (
         `<g class="map-realm ${gradeClass(realm.grade)}" data-realm="${esc(realm.id)}"` +
@@ -266,6 +278,35 @@ export interface CanvasOptions {
   readonly title: string;
   readonly activeEra: number;
   readonly traditions: readonly string[];
+  /** Display names by id. The label must say what the card says. */
+  readonly traditionNames: Readonly<Record<string, string>>;
+}
+
+/**
+ * The land silhouette, beneath every snapshot layer.
+ *
+ * At 2020 the shaded realms cover nearly all land, so the plate reads as a
+ * world map whether or not land is drawn. At 1 CE fifteen realms float in an
+ * ocean, and without a coastline a reader cannot tell the Deccan from the
+ * Yellow Sea. Worse, it makes the era's own note false: "the land tone is not
+ * emptiness" only means something if there is a land tone.
+ *
+ * The geometry is the most complete delivered snapshot's, drawn as one
+ * silhouette in the land tone with no internal borders and no interactivity —
+ * a modern coastline under historical shading, which is what an atlas does.
+ * It carries no tradition and makes no claim beyond "here was land".
+ */
+function landBase(snapshots: readonly SnapshotView[], f: Frame): string {
+  const source = snapshots.reduce<SnapshotView | null>(
+    (best, s) => (best === null || s.realms.length > best.realms.length ? s : best),
+    null,
+  );
+  if (source === null) return '';
+  return (
+    `<g class="map-land" aria-hidden="true">` +
+    source.realms.map((r) => `<path d="${geometryPath(r.geometry, f)}"/>`).join('') +
+    `</g>`
+  );
 }
 
 export function renderMap(
@@ -285,9 +326,12 @@ export function renderMap(
     `<defs>${hatchDefs(options.traditions)}</defs>` +
     /* Ocean first, then land, then the graticule over both: the plate order. */
     `<rect class="map-ocean" x="0" y="0" width="${f.width}" height="${f.height}"/>` +
+    landBase(snapshots, f) +
     graticule(f) +
     `<g class="map-snapshots">` +
-    snapshots.map((s) => renderSnapshot(s, f, s.era === options.activeEra)).join('') +
+    snapshots
+      .map((s) => renderSnapshot(s, f, s.era === options.activeEra, options.traditionNames))
+      .join('') +
     `</g>` +
     cartouche(options.title, awaiting ? eraLabel(options.activeEra) : (active?.label ?? ''), awaiting) +
     compass(f) +
