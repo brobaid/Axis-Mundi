@@ -4,7 +4,12 @@ import TraditionSymbols from '../components/TraditionSymbols.astro';
 import { getPublishable, getStructural, includesUnsourced } from '../lib/content';
 import { TRADITIONS } from '../lib/traditions';
 import { buildRows } from '../lib/matrix-view';
-import { renderCompare, type AdherentsView, type CompareColumn } from '../lib/compare-render';
+import {
+  renderCompare,
+  type AdherentsView,
+  type CompareColumn,
+  type StatLine,
+} from '../lib/compare-render';
 
 /**
  * Compare mode.
@@ -16,13 +21,14 @@ import { renderCompare, type AdherentsView, type CompareColumn } from '../lib/co
  * borrowing prose from a deep dive.
  */
 
-const [rows, taxonomy, sources] = await Promise.all([
+const [rows, taxonomy, sources, texts] = await Promise.all([
   getPublishable('matrix'),
-  /* Structural: the tradition of each node, and the adherents block, which is
-     itself sourced and carries its own citation. The node's authored one-line
-     summary is not rendered here and stays gated. */
+  /* Structural: the tradition of each node, and the adherents and founding
+     blocks, which are themselves sourced and carry their own citations. The
+     node's authored one-line summary is not rendered here and stays gated. */
   getStructural('taxonomy'),
   getPublishable('sources'),
+  getPublishable('texts'),
 ]);
 
 const traditionOfNode = new Map(taxonomy.map((n) => [n.data.id, n.data.tradition]));
@@ -57,12 +63,54 @@ const adherentsOf = (tradition: string): AdherentsView | undefined => {
   };
 };
 
+/* Founding and principal scripture, spec §5.1's other two stat-box lines. Each
+   renders its record when there is one and names what it is waiting on when
+   there is not, so an empty slot never reads as a fact nobody bothered to
+   state. */
+const statsOf = (tradition: string): StatLine[] => {
+  const node = taxonomy.find((n) => n.data.id === tradition && n.data.depth === 1);
+  const founded = node?.data.founded;
+  const primary = texts.find((t) => t.data.tradition === tradition && t.data.primary);
+
+  return [
+    {
+      label: 'Founded',
+      display: founded?.display,
+      note: founded?.note,
+      contested: founded?.contested === true,
+      contestedNote: founded?.contested_note,
+      sourceTitle: founded?.sources
+        .map((id) => sourceTitles.get(id))
+        .filter((title): title is string => title !== undefined)
+        .join(' · '),
+      waitingOn: 'no founding record on this tradition node yet',
+    },
+    {
+      label: 'Principal scripture',
+      display: primary?.data.title,
+      note: primary?.data.note,
+      contested: primary?.data.contested === true,
+      contestedNote: primary?.data.contested_note,
+      sourceTitle: primary?.data.sources
+        .map((id) => sourceTitles.get(id))
+        .filter((title): title is string => title !== undefined)
+        .join(' · '),
+      waitingOn: 'no text record flagged primary for this tradition yet',
+    },
+  ].map((stat) => ({
+    ...stat,
+    /* An empty join is not a citation. */
+    sourceTitle: stat.sourceTitle === undefined || stat.sourceTitle === '' ? undefined : stat.sourceTitle,
+  }));
+};
+
 const columns: CompareColumn[] = view
   .filter((row) => row.node === row.tradition)
   .map((row) => ({
     tradition: row.tradition,
     name: TRADITIONS.find((t) => t.id === row.tradition)?.name ?? row.label,
     adherents: adherentsOf(row.tradition),
+    stats: statsOf(row.tradition),
     cells: row.cells,
   }));
 

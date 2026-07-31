@@ -26,6 +26,7 @@ import {
   siteSchema,
 } from '../src/schemas/deep-dive.js';
 import { snapshotSchema } from '../src/schemas/snapshot.js';
+import { textSchema } from '../src/schemas/text.js';
 import { glossaryRefs } from '../src/lib/prose.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -73,6 +74,7 @@ const COLLECTIONS = {
   sources: { dir: 'sources', schema: sourceSchema },
   regions: { dir: 'regions', schema: regionSchema },
   deepDives: { dir: 'deep-dives', schema: deepDiveSchema },
+  texts: { dir: 'texts', schema: textSchema },
   festivals: { dir: 'festivals', schema: festivalSchema },
   sites: { dir: 'sites', schema: siteSchema },
   figures: { dir: 'figures', schema: figureSchema },
@@ -90,6 +92,7 @@ const parsed: Record<CollectionName, Map<string, { file: string; data: any }>> =
   sources: new Map(),
   regions: new Map(),
   deepDives: new Map(),
+  texts: new Map(),
   festivals: new Map(),
   sites: new Map(),
   figures: new Map(),
@@ -153,6 +156,10 @@ const taxonomyPaths = new Set<string>(
 );
 
 for (const { file, data } of parsed.taxonomy.values()) {
+  for (const [i, src] of ((data.founded?.sources ?? []) as string[]).entries()) {
+    if (!has('sources', src)) note(file, `founded.sources.${i}`, `unknown source "${src}"`);
+  }
+
   if (data.parent !== null && !has('taxonomy', data.parent)) {
     note(file, 'parent', `unknown parent node "${data.parent}"`);
   }
@@ -277,6 +284,41 @@ for (const { file, data } of parsed.deepDives.values()) {
   /* Spec §5: the fourteen sections are identical for every tradition, so the
      structural slots must all be present even when a section is still empty. */
   if (data.stat_box === undefined) note(file, 'stat_box', 'the Overview stat box is required');
+}
+
+/* Sacred texts: the tradition must exist, sources must resolve, and exactly one
+   published text per tradition may claim to be the principal one. "The
+   principal scripture" stops meaning anything the moment two records assert it,
+   and a tradition whose primary is missing would silently render an empty stat
+   line that looks like an absent record rather than an un-flagged one. */
+{
+  const primaries = new Map<string, string[]>();
+
+  for (const { file, data } of parsed.texts.values()) {
+    if (!has('taxonomy', data.tradition as string)) {
+      note(file, 'tradition', `unknown tradition "${data.tradition}"`);
+    }
+    for (const [i, src] of (data.sources as string[]).entries()) {
+      if (!has('sources', src)) note(file, `sources.${i}`, `unknown source "${src}"`);
+    }
+    /* Only published records compete: a text still awaiting a source check is
+       held out of the build, so it cannot be the one the build names. */
+    if (data.primary === true && data.sourcing !== 'todo') {
+      const list = primaries.get(data.tradition as string) ?? [];
+      list.push(data.id as string);
+      primaries.set(data.tradition as string, list);
+    }
+  }
+
+  for (const [tradition, ids] of primaries) {
+    if (ids.length > 1) {
+      note(
+        `texts/${ids[0]}.json`,
+        'primary',
+        `${tradition} has ${ids.length} primary texts (${ids.join(', ')}); exactly one may be primary`,
+      );
+    }
+  }
 }
 
 /* Festivals, sites and figures: source references must resolve. */

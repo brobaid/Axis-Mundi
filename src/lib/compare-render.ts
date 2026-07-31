@@ -30,32 +30,55 @@ export interface CompareColumn {
   readonly tradition: string;
   readonly name: string;
   readonly adherents: AdherentsView | undefined;
+  /** Founding and principal scripture, in spec §5.1's stat-box order. */
+  readonly stats: readonly StatLine[];
   readonly cells: Partial<Record<MatrixDimension, MatrixCellView>>;
 }
 
 /**
- * A stat slot that has no record behind it yet.
+ * The stat box's other two lines (spec §5.1: adherents, founded, primary text).
  *
- * Rendered rather than hidden. The v5 stat box read "1.9 bn · 7th c. CE ·
- * Quran"; two of those three have no field in any schema the content has
- * filled, so they appear here as what they are — waiting on the owner's
- * research — instead of being written from general knowledge.
+ * Each renders its record when one exists and says what it is waiting on when
+ * one does not. The v5 stat box read "1.9 bn · 7th c. CE · Quran" as three
+ * facts of equal standing; here a line that has no record behind it says so,
+ * because an absent founding date and an unstated one look identical once you
+ * write the second from general knowledge.
  */
-export interface WaitingSlot {
+export interface StatLine {
   readonly label: string;
+  /** The authoritative rendering, used verbatim. Absent = no record yet. */
+  readonly display: string | undefined;
+  readonly note: string | undefined;
+  readonly contested: boolean;
+  readonly contestedNote: string | undefined;
+  readonly sourceTitle: string | undefined;
+  /** Shown in place of the value when there is no record. */
   readonly waitingOn: string;
 }
 
-export const WAITING_STATS: readonly WaitingSlot[] = [
-  {
-    label: 'Founded',
-    waitingOn: 'no founding year on any tradition node yet',
-  },
-  {
-    label: 'Principal scripture',
-    waitingOn: 'awaiting the scripture-and-authority matrix cells',
-  },
-];
+function statHtml(stat: StatLine): string {
+  if (stat.display === undefined) {
+    return (
+      `<p class="cmp-stat cmp-stat--waiting caption">` +
+      `${esc(stat.label)} &mdash; ${esc(stat.waitingOn)}.</p>`
+    );
+  }
+
+  const prose = stat.contested ? stat.contestedNote : stat.note;
+
+  return (
+    `<div class="cmp-stat">` +
+    `<span class="eyebrow">${esc(stat.label)}</span>` +
+    `<span class="cmp-stat__value"><span class="mono">${esc(stat.display)}</span>` +
+    (stat.contested ? `<span class="contested-badge">Contested</span>` : '') +
+    `</span>` +
+    (prose === undefined ? '' : `<p class="cmp-stat__note caption">${esc(prose)}</p>`) +
+    (stat.sourceTitle === undefined
+      ? ''
+      : `<p class="cmp-stat__src caption">${esc(stat.sourceTitle)}</p>`) +
+    `</div>`
+  );
+}
 
 /* ── the adherent line ──────────────────────────────────────────────────── */
 
@@ -113,11 +136,7 @@ function headCell(column: CompareColumn): string {
     ` style="color:var(--t-${esc(column.tradition)})"><use href="#symbol-${esc(column.tradition)}"></use></svg>` +
     `${esc(column.name)}</span>` +
     adherentHtml(column.adherents) +
-    WAITING_STATS.map(
-      (slot) =>
-        `<p class="cmp-stat cmp-stat--waiting caption">` +
-        `${esc(slot.label)} — ${esc(slot.waitingOn)}.</p>`,
-    ).join('') +
+    column.stats.map(statHtml).join('') +
     `</div>`
   );
 }

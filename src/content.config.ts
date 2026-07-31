@@ -14,6 +14,7 @@ import {
   siteSchema,
 } from './schemas/deep-dive.js';
 import { snapshotSchema } from './schemas/snapshot.js';
+import { textSchema } from './schemas/text.js';
 
 /**
  * Every piece of content in Axis Mundi is a collection entry validated by a Zod
@@ -36,6 +37,7 @@ const regions = defineCollection({ loader: json('regions'), schema: regionSchema
 /* Deep dives, plus the three record types the spec calls out as feeding later
    modules: festivals → year wheel, sites → map layer, figures → network. */
 const deepDives = defineCollection({ loader: json('deep-dives'), schema: deepDiveSchema });
+const texts = defineCollection({ loader: json('texts'), schema: textSchema });
 const festivals = defineCollection({ loader: json('festivals'), schema: festivalSchema });
 const sites = defineCollection({ loader: json('sites'), schema: siteSchema });
 const figures = defineCollection({ loader: json('figures'), schema: figureSchema });
@@ -51,6 +53,7 @@ export const collections = {
   sources,
   regions,
   deepDives,
+  texts,
   festivals,
   sites,
   figures,

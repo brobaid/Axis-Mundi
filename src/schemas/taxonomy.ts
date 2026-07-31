@@ -46,6 +46,31 @@ export const adherents = z
   .superRefine(requireContestedNote);
 
 /**
+ * Founding — spec §2.2 gives a node `founded` as year plus precision, and §5.1
+ * puts it in the deep-dive stat box.
+ *
+ * `display` is the authoritative rendering and is used verbatim, the same
+ * contract the adherents block keeps: a founding is rarely a year, and forcing
+ * "c. 2000–1500 BCE" or "no single founding moment" through an integer would
+ * make the interface assert a precision no source supports. `year` stays as the
+ * sortable anchor where one is meaningful, and is optional because for several
+ * traditions it is not.
+ *
+ * A contested founding must carry both positions, which `requireContestedNote`
+ * enforces — silence is never the treatment for a dispute (spec §10).
+ */
+export const founding = z
+  .object({
+    year: year.optional(),
+    precision: precision.optional(),
+    display: z.string().min(1).optional(),
+    note: z.string().optional(),
+    sources: z.array(sourceRef).default([]),
+    ...contestable,
+  })
+  .superRefine(requireContestedNote);
+
+/**
  * Spec §2.2 — "Currents vs branches." Movements that cut across branches
  * (Sufism, Kabbalah, bhakti, charismatic renewal) are modelled as currents:
  * tags that span nodes, NEVER lanes. This is a hard rule; Sufism is not a lane
@@ -72,12 +97,7 @@ export const taxonomyNodeSchema = z
     /** Full slug path, e.g. "christianity/protestant/lutheran". Depth <= 3. */
     path: z.string().min(1),
     depth: z.number().int().min(1).max(MAX_DRILL_DEPTH),
-    founded: z
-      .object({
-        year: year.optional(),
-        precision: precision.optional(),
-      })
-      .default({}),
+    founded: founding.default({}),
     status: nodeStatus,
     adherents: adherents.optional(),
     ...contestable,
