@@ -1,0 +1,27 @@
+{
+  "id": "fall-of-baghdad-1258",
+  "title": "Mongols sack Baghdad",
+  "year_start": 1258,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "Hulegu's army destroys the city and ends the Abbasid caliphate of Baghdad, closing the classical age.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

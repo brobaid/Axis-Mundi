@@ -1,0 +1,27 @@
+{
+  "id": "mansa-musa-hajj-1324",
+  "title": "Hajj of Mansa Musa",
+  "year_start": 1324,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "west-africa"
+  ],
+  "summary": "The Malian emperor's pilgrimage announces West African Islam's wealth and scholarship to the wider world.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

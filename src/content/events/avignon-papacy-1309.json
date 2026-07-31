@@ -1,0 +1,28 @@
+{
+  "id": "avignon-papacy-1309",
+  "title": "Avignon papacy",
+  "year_start": 1309,
+  "year_end": 1377,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "frankish-lands"
+  ],
+  "summary": "Seven popes reside at Avignon under French influence, damaging papal prestige.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

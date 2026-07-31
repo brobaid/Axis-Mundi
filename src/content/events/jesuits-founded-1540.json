@@ -1,0 +1,27 @@
+{
+  "id": "jesuits-founded-1540",
+  "title": "Society of Jesus approved",
+  "year_start": 1540,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/catholic"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "italian-peninsula"
+  ],
+  "summary": "Ignatius of Loyola's order becomes the spearhead of Catholic renewal and global missions.",
+  "sources": [
+    "macculloch-reformation-2003",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "zwingli-zurich-1522",
+  "title": "Zwingli's reform begins in Zurich",
+  "year_start": 1522,
+  "year_end": 1523,
+  "precision": "year",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/reformed"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "swiss-confederation"
+  ],
+  "summary": "Zurich's reformation under Zwingli opens the Reformed branch of Protestantism.",
+  "sources": [
+    "macculloch-reformation-2003",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "desert-monasticism-285",
+  "title": "Desert monasticism spreads",
+  "year_start": 285,
+  "precision": "decade",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "nile-valley"
+  ],
+  "summary": "Antony of Egypt's withdrawal to the desert becomes the model for Christian monasticism.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

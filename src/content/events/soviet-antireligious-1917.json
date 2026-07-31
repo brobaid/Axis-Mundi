@@ -1,0 +1,31 @@
+{
+  "id": "soviet-antireligious-1917",
+  "title": "Soviet antireligious campaigns begin",
+  "year_start": 1917,
+  "precision": "exact",
+  "traditions": [
+    "christianity",
+    "judaism",
+    "islam"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "persecution",
+  "importance": 3,
+  "region": [
+    "russian-lands"
+  ],
+  "summary": "The revolutionary state opens sustained campaigns against religious institutions, felt first and hardest by the Orthodox Church and extending to all faiths.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "ej2-2007",
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

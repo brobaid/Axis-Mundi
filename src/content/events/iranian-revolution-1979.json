@@ -1,0 +1,27 @@
+{
+  "id": "iranian-revolution-1979",
+  "title": "Iranian Revolution",
+  "year_start": 1979,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/shia/twelver"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "The revolution establishes a Twelver clerical state, the modern era's most consequential fusion of Shiism and political power.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

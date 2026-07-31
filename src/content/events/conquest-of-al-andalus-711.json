@@ -1,0 +1,28 @@
+{
+  "id": "conquest-of-al-andalus-711",
+  "title": "Conquest of al-Andalus",
+  "year_start": 711,
+  "year_end": 718,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "iberia"
+  ],
+  "summary": "Berber and Arab forces take most of the Iberian peninsula, opening eight centuries of Muslim presence in Western Europe.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

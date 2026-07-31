@@ -1,0 +1,28 @@
+{
+  "id": "arab-conquests-634",
+  "title": "Early Arab conquests",
+  "year_start": 634,
+  "year_end": 651,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "expansion",
+  "importance": 4,
+  "region": [
+    "levant"
+  ],
+  "summary": "Within two decades of Muhammad's death, Arab armies take the Levant, Egypt, and the Sasanian realm, carrying Islam far beyond Arabia.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

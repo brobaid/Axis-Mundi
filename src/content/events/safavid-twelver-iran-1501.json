@@ -1,0 +1,27 @@
+{
+  "id": "safavid-twelver-iran-1501",
+  "title": "Safavids make Twelver Shiism Iran's religion",
+  "year_start": 1501,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/shia/twelver"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "Shah Ismail's establishment of Twelver Shiism as state religion permanently redraws the Sunni-Shia map.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

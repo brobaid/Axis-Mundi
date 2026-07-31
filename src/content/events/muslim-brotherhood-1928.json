@@ -1,0 +1,27 @@
+{
+  "id": "muslim-brotherhood-1928",
+  "title": "Muslim Brotherhood founded",
+  "year_start": 1928,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/sunni"
+  ],
+  "type": "modern",
+  "importance": 3,
+  "region": [
+    "nile-valley"
+  ],
+  "summary": "Hasan al-Banna's society becomes the prototype of modern Islamic social and political movements.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

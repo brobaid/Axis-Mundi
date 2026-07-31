@@ -1,0 +1,27 @@
+{
+  "id": "rule-of-benedict-530",
+  "title": "Rule of Benedict",
+  "year_start": 530,
+  "precision": "decade",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "italian-peninsula"
+  ],
+  "summary": "Benedict's monastic rule becomes the charter of Western monasticism.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "non-chalcedonian-divergence-500",
+  "title": "Non-Chalcedonian churches diverge",
+  "year_start": 500,
+  "precision": "century",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "schism",
+  "importance": 3,
+  "region": [
+    "nile-valley"
+  ],
+  "summary": "The churches rejecting Chalcedon's definition, ancestors of the Oriental Orthodox, consolidate their separate communion.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "house-of-wisdom-830",
+  "title": "Translation movement at Baghdad",
+  "year_start": 830,
+  "precision": "decade",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "Under al-Mamun, Greek, Persian, and Indian learning is translated into Arabic, launching the classical age of Islamic science and philosophy.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

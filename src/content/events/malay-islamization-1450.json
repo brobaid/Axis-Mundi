@@ -1,0 +1,27 @@
+{
+  "id": "malay-islamization-1450",
+  "title": "Islamization of the Malay archipelago accelerates",
+  "year_start": 1450,
+  "precision": "century",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "malay-archipelago"
+  ],
+  "summary": "Trade networks and Sufi teachers carry Islam through the Malay world, the demographic future of the faith.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

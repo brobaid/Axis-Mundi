@@ -1,0 +1,27 @@
+{
+  "id": "canossa-1077",
+  "title": "Henry IV at Canossa",
+  "year_start": 1077,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "italian-peninsula"
+  ],
+  "summary": "The Investiture Controversy's emblematic moment: an emperor does penance before a pope, marking papal authority's high medieval claim.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

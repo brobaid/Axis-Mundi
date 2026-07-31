@@ -1,0 +1,27 @@
+{
+  "id": "ottoman-caliphate-abolished-1924",
+  "title": "Ottoman caliphate abolished",
+  "year_start": 1924,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "anatolia"
+  ],
+  "summary": "The Turkish Republic abolishes the caliphate, ending the institution that had framed Sunni political thought for thirteen centuries.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

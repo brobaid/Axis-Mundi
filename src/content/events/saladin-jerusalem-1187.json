@@ -1,0 +1,27 @@
+{
+  "id": "saladin-jerusalem-1187",
+  "title": "Saladin retakes Jerusalem",
+  "year_start": 1187,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "Salah al-Din's victory at Hattin returns Jerusalem to Muslim rule after 88 crusader years.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

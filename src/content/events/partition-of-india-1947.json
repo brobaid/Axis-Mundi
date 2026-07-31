@@ -1,0 +1,31 @@
+{
+  "id": "partition-of-india-1947",
+  "title": "Partition of India",
+  "year_start": 1947,
+  "precision": "exact",
+  "traditions": [
+    "islam",
+    "hinduism",
+    "sikhism"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "south-asia"
+  ],
+  "summary": "The subcontinent's partition into India and Pakistan displaces millions across religious lines and reshapes South Asian religious geography.",
+  "sources": [
+    "nchi-2010",
+    "flood-hinduism-1996",
+    "mcleod-sikhism-1997",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

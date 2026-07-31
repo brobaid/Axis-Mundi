@@ -1,0 +1,27 @@
+{
+  "id": "hadith-canon-870",
+  "title": "Canonical hadith collections compiled",
+  "year_start": 870,
+  "precision": "century",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/sunni"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "Bukhari, Muslim, and their peers sift prophetic traditions into the collections Sunni Islam treats as canonical.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

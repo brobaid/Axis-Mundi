@@ -1,0 +1,6 @@
+{
+  "id": "malay-archipelago",
+  "name": "Malay Archipelago",
+  "kind": "macro-region",
+  "note": "Historical macro-region; the existing java record sits within it, and both may be referenced at their own granularity."
+}

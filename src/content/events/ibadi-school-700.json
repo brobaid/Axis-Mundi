@@ -1,0 +1,27 @@
+{
+  "id": "ibadi-school-700",
+  "title": "Ibadi school takes shape",
+  "year_start": 700,
+  "precision": "century",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/ibadi"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "The moderate heirs of Basran Kharijism form the Ibadi school, later rooted in Oman and North Africa.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "vatican-ii-1962",
+  "title": "Second Vatican Council",
+  "year_start": 1962,
+  "year_end": 1965,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/catholic"
+  ],
+  "type": "council",
+  "importance": 4,
+  "region": [
+    "italian-peninsula"
+  ],
+  "summary": "The council reorients Catholic liturgy, ecumenism, and engagement with the modern world.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

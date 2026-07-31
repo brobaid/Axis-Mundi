@@ -1,0 +1,27 @@
+{
+  "id": "fourth-lateran-1215",
+  "title": "Fourth Lateran Council",
+  "year_start": 1215,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "council",
+  "importance": 3,
+  "region": [
+    "italian-peninsula"
+  ],
+  "summary": "The medieval West's most consequential council defines transubstantiation and annual confession.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "martyrdoms-under-nero-64",
+  "title": "Neronian persecution",
+  "year_start": 64,
+  "year_end": 67,
+  "precision": "year",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "persecution",
+  "importance": 3,
+  "region": [
+    "italian-peninsula"
+  ],
+  "summary": "The first imperial persecution of Christians at Rome; tradition places the deaths of Peter and Paul in these years.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

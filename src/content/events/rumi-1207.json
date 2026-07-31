@@ -1,0 +1,28 @@
+{
+  "id": "rumi-1207",
+  "title": "Jalal al-Din Rumi",
+  "year_start": 1207,
+  "year_end": 1273,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "anatolia"
+  ],
+  "summary": "The Persian poet of the Masnavi, the most widely read voice of the Sufi current.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

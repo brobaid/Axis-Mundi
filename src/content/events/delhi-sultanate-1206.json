@@ -1,0 +1,27 @@
+{
+  "id": "delhi-sultanate-1206",
+  "title": "Delhi Sultanate established",
+  "year_start": 1206,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Muslim rule consolidates in northern India, beginning five centuries of Indo-Islamic states.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "council-of-clermont-1095",
+  "title": "Council of Clermont calls the First Crusade",
+  "year_start": 1095,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "frankish-lands"
+  ],
+  "summary": "Urban II's summons launches the crusading movement toward Jerusalem.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

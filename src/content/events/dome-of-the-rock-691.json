@@ -1,0 +1,27 @@
+{
+  "id": "dome-of-the-rock-691",
+  "title": "Dome of the Rock completed",
+  "year_start": 691,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "construction",
+  "importance": 4,
+  "region": [
+    "levant"
+  ],
+  "summary": "Abd al-Malik's shrine on the Temple Mount is the earliest surviving monument of Islamic architecture.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

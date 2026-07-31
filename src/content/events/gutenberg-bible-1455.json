@@ -1,0 +1,27 @@
+{
+  "id": "gutenberg-bible-1455",
+  "title": "Gutenberg Bible printed",
+  "year_start": 1455,
+  "precision": "year",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "german-lands"
+  ],
+  "summary": "The first major printed book; print becomes the engine of every subsequent religious movement in Europe.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

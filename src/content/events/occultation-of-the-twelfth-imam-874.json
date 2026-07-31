@@ -1,0 +1,27 @@
+{
+  "id": "occultation-of-the-twelfth-imam-874",
+  "title": "Occultation of the twelfth Imam",
+  "year_start": 874,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/shia/twelver"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "According to Twelver tradition, the twelfth Imam entered occultation in 874 and remains the awaited Mahdi; the doctrine defines Twelver Shiism.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

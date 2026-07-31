@@ -1,0 +1,27 @@
+{
+  "id": "al-azhar-founded-970",
+  "title": "Al-Azhar founded",
+  "year_start": 970,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "nile-valley"
+  ],
+  "summary": "The Fatimids' mosque-university in Cairo becomes one of Islam's most enduring centers of learning.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

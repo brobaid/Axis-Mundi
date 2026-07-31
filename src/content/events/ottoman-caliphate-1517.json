@@ -1,0 +1,27 @@
+{
+  "id": "ottoman-caliphate-1517",
+  "title": "Ottomans take Egypt and the caliphal mantle",
+  "year_start": 1517,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/sunni"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "nile-valley"
+  ],
+  "summary": "Selim I's conquest of the Mamluks brings the holy cities under Ottoman protection and the caliphal claim to Istanbul.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

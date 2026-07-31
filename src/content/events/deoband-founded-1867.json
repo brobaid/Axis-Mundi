@@ -1,0 +1,27 @@
+{
+  "id": "deoband-founded-1867",
+  "title": "Dar al-Ulum Deoband founded",
+  "year_start": 1867,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/sunni"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The seminary at Deoband becomes the template for a global network of traditionalist madrasas.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

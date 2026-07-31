@@ -1,0 +1,28 @@
+{
+  "id": "aquinas-summa-1265",
+  "title": "Aquinas writes the Summa Theologiae",
+  "year_start": 1265,
+  "year_end": 1274,
+  "precision": "year",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "italian-peninsula"
+  ],
+  "summary": "Thomas Aquinas' synthesis of Aristotle and Christian doctrine becomes the touchstone of Catholic theology.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

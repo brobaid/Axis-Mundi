@@ -1,0 +1,28 @@
+{
+  "id": "old-believers-schism-1666",
+  "title": "Old Believers schism",
+  "year_start": 1666,
+  "year_end": 1667,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/orthodox/eastern-orthodox"
+  ],
+  "type": "schism",
+  "importance": 3,
+  "region": [
+    "russian-lands"
+  ],
+  "summary": "Russian councils anathematize opponents of Nikon's reforms; the Old Believers separate permanently.",
+  "sources": [
+    "macculloch-reformation-2003",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

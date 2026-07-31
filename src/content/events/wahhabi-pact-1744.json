@@ -1,0 +1,27 @@
+{
+  "id": "wahhabi-pact-1744",
+  "title": "Wahhabi-Saudi pact",
+  "year_start": 1744,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/sunni"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "arabia"
+  ],
+  "summary": "Muhammad ibn Abd al-Wahhab's alliance with the House of Saud launches the revivalist movement bearing his name.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

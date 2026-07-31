@@ -314,13 +314,23 @@ export function layoutLane(
 
   /* Resolve collisions. Two coincident nodes dodge to a second row, matching
      the design export's 50% / 71% pair. Three or more within one gap cluster
-     into a single node rather than stacking into illegibility. */
+     into a single node rather than stacking into illegibility.
+
+     A group chains: each candidate joins if it is within MIN_GAP of the one
+     before it, not of the group's first member. Measuring from the anchor looks
+     equivalent and is not — a run of events spaced just under a gap apart
+     splits into groups whose facing pair is still only a few pixels apart, and
+     each of them, alone in its group, is drawn undodged and overlapping.
+     Christianity's Rule of Benedict and Hagia Sophia, seven years apart in the
+     drilled Catholic lane, are what surfaced it. Chaining makes the invariant
+     hold by construction: two nodes in different groups are at least MIN_GAP
+     apart, which is wider than the largest dot. */
   const placed: Placed[] = [];
   let i = 0;
   while (i < all.length) {
     const group: Candidate[] = [all[i] as Candidate];
     let j = i + 1;
-    while (j < all.length && (all[j] as Candidate).x - (all[i] as Candidate).x < MIN_GAP) {
+    while (j < all.length && (all[j] as Candidate).x - (all[j - 1] as Candidate).x < MIN_GAP) {
       group.push(all[j] as Candidate);
       j += 1;
     }

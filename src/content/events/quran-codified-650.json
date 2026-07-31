@@ -1,0 +1,27 @@
+{
+  "id": "quran-codified-650",
+  "title": "Quran codified under Uthman",
+  "year_start": 650,
+  "precision": "year",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "text",
+  "importance": 5,
+  "region": [
+    "arabia"
+  ],
+  "summary": "The caliph Uthman commissions a standard written text of the Quran and distributes it across the garrison cities, fixing the canonical form.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

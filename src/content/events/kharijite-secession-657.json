@@ -1,0 +1,27 @@
+{
+  "id": "kharijite-secession-657",
+  "title": "Kharijite secession at Siffin",
+  "year_start": 657,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "schism",
+  "importance": 3,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "Rejecting arbitration between Ali and Muawiya, the Kharijites separate; their quietist heirs feed into the Ibadi school.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

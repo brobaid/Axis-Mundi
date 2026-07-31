@@ -1,0 +1,28 @@
+{
+  "id": "ibn-arabi-1165",
+  "title": "Ibn Arabi",
+  "year_start": 1165,
+  "year_end": 1240,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "iberia"
+  ],
+  "summary": "The Andalusian mystic whose metaphysics of the unity of being pervades later Sufi thought.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

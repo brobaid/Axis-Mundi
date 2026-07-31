@@ -1,0 +1,28 @@
+{
+  "id": "ibn-taymiyya-1263",
+  "title": "Ibn Taymiyya",
+  "year_start": 1263,
+  "year_end": 1328,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/sunni"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "The Damascene jurist whose scripturalist theology became the touchstone of later revivalist movements.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

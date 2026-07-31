@@ -1,0 +1,27 @@
+{
+  "id": "peace-of-westphalia-1648",
+  "title": "Peace of Westphalia",
+  "year_start": 1648,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "german-lands"
+  ],
+  "summary": "The end of the Thirty Years' War closes Europe's confessional wars and fixes the continent's religious map.",
+  "sources": [
+    "macculloch-reformation-2003",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

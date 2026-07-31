@@ -1,0 +1,27 @@
+{
+  "id": "azusa-street-1906",
+  "title": "Azusa Street Revival",
+  "year_start": 1906,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/pentecostal"
+  ],
+  "type": "founding",
+  "importance": 4,
+  "region": [
+    "north-america"
+  ],
+  "summary": "The Los Angeles revival becomes the launching point of global Pentecostalism, the century's fastest-growing Christian current.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

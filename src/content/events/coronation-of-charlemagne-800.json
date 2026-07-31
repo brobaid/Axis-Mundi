@@ -1,0 +1,27 @@
+{
+  "id": "coronation-of-charlemagne-800",
+  "title": "Coronation of Charlemagne",
+  "year_start": 800,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "western-europe"
+  ],
+  "summary": "The papal coronation of Charlemagne as emperor binds the Western church to a revived Western empire.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

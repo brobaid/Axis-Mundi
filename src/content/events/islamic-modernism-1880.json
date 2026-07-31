@@ -1,0 +1,27 @@
+{
+  "id": "islamic-modernism-1880",
+  "title": "Islamic modernism emerges",
+  "year_start": 1880,
+  "precision": "decade",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "nile-valley"
+  ],
+  "summary": "Al-Afghani and Abduh argue for reconciling revelation with modern science and institutions, founding a reformist current.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

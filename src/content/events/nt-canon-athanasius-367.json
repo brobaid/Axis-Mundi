@@ -1,0 +1,27 @@
+{
+  "id": "nt-canon-athanasius-367",
+  "title": "Athanasius lists the New Testament canon",
+  "year_start": 367,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "nile-valley"
+  ],
+  "summary": "Athanasius' Easter letter names the 27-book New Testament for the first time in the form that becomes standard.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

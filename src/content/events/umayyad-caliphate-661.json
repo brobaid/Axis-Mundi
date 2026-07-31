@@ -1,0 +1,27 @@
+{
+  "id": "umayyad-caliphate-661",
+  "title": "Umayyad caliphate established",
+  "year_start": 661,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "levant"
+  ],
+  "summary": "Muawiya founds the dynastic caliphate at Damascus, ruling the first Islamic empire.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

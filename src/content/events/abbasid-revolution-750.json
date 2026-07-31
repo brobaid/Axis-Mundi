@@ -1,0 +1,27 @@
+{
+  "id": "abbasid-revolution-750",
+  "title": "Abbasid revolution",
+  "year_start": 750,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "The Abbasids overthrow the Umayyads and reorient the caliphate eastward, soon founding Baghdad.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

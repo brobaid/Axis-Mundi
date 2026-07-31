@@ -1,0 +1,27 @@
+{
+  "id": "battle-of-tours-732",
+  "title": "Battle of Tours",
+  "year_start": 732,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "western-europe"
+  ],
+  "summary": "The Frankish victory near Tours marks the practical limit of the conquests' northwestern reach.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

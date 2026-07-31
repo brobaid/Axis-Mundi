@@ -1,0 +1,28 @@
+{
+  "id": "al-ghazali-1058",
+  "title": "Al-Ghazali",
+  "year_start": 1058,
+  "year_end": 1111,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/sunni"
+  ],
+  "type": "figure",
+  "importance": 4,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "His Revival of the Religious Sciences reconciled Sufi piety with Sunni orthodoxy, setting the mainstream synthesis.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

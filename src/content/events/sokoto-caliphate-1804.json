@@ -1,0 +1,27 @@
+{
+  "id": "sokoto-caliphate-1804",
+  "title": "Sokoto caliphate founded",
+  "year_start": 1804,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/sunni"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "west-africa"
+  ],
+  "summary": "Usman dan Fodio's jihad establishes West Africa's largest 19th-century Islamic state.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

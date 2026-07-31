@@ -1,0 +1,27 @@
+{
+  "id": "franciscan-order-1209",
+  "title": "Francis of Assisi founds his order",
+  "year_start": 1209,
+  "precision": "year",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "italian-peninsula"
+  ],
+  "summary": "Francis' movement of voluntary poverty receives papal approval and reshapes medieval piety.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

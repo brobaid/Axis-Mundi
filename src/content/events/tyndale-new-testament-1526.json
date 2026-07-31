@@ -1,0 +1,27 @@
+{
+  "id": "tyndale-new-testament-1526",
+  "title": "Tyndale's English New Testament",
+  "year_start": 1526,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "german-lands"
+  ],
+  "summary": "Tyndale's translation, printed abroad and smuggled into England, grounds the English Bible tradition.",
+  "sources": [
+    "macculloch-reformation-2003",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

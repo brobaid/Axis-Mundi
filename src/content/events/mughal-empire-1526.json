@@ -1,0 +1,27 @@
+{
+  "id": "mughal-empire-1526",
+  "title": "Mughal Empire founded",
+  "year_start": 1526,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Babur's victory at Panipat founds the empire under which Indo-Islamic culture reaches its height.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

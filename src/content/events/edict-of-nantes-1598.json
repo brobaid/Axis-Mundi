@@ -1,0 +1,27 @@
+{
+  "id": "edict-of-nantes-1598",
+  "title": "Edict of Nantes",
+  "year_start": 1598,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "frankish-lands"
+  ],
+  "summary": "Henry IV grants toleration to French Protestants, ending the Wars of Religion; revoked 1685.",
+  "sources": [
+    "macculloch-reformation-2003",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

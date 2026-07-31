@@ -1,0 +1,28 @@
+{
+  "id": "conquest-of-sindh-711",
+  "title": "Arab conquest of Sindh",
+  "year_start": 711,
+  "year_end": 712,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "Muhammad ibn Qasim's campaign brings the Indus valley under Muslim rule, Islam's first foothold in South Asia.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

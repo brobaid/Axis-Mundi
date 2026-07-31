@@ -1,0 +1,28 @@
+{
+  "id": "ibn-rushd-1126",
+  "title": "Ibn Rushd (Averroes)",
+  "year_start": 1126,
+  "year_end": 1198,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "iberia"
+  ],
+  "summary": "The Cordoban jurist-philosopher whose Aristotle commentaries profoundly influenced European scholasticism.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

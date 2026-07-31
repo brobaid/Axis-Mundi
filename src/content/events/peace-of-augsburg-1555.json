@@ -1,0 +1,27 @@
+{
+  "id": "peace-of-augsburg-1555",
+  "title": "Peace of Augsburg",
+  "year_start": 1555,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "german-lands"
+  ],
+  "summary": "The settlement allowing each prince to determine his territory's religion stabilizes the Lutheran-Catholic divide.",
+  "sources": [
+    "macculloch-reformation-2003",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

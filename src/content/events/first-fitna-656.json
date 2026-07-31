@@ -1,0 +1,28 @@
+{
+  "id": "first-fitna-656",
+  "title": "First fitna",
+  "year_start": 656,
+  "year_end": 661,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "schism",
+  "importance": 3,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "The community's first civil war, from Uthman's assassination through Ali's caliphate, sets the terms of every later division.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "death-of-muhammad-632",
+  "title": "Death of Muhammad",
+  "year_start": 632,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "founding",
+  "importance": 5,
+  "region": [
+    "arabia"
+  ],
+  "summary": "The Prophet's death leaves the community without a designated successor; the question of leadership becomes the root of Islam's principal division.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

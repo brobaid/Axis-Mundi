@@ -1,0 +1,27 @@
+{
+  "id": "ahmadiyya-founded-1889",
+  "title": "Ahmadiyya movement founded",
+  "year_start": 1889,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/ahmadiyya"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "punjab"
+  ],
+  "summary": "Mirza Ghulam Ahmad founds the movement at Qadian; its placement follows the project's contested-classification rule.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

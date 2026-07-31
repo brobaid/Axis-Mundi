@@ -1,0 +1,27 @@
+{
+  "id": "cordoba-mosque-785",
+  "title": "Great Mosque of Cordoba begun",
+  "year_start": 785,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "iberia"
+  ],
+  "summary": "The Umayyad emirate's great mosque becomes the emblem of al-Andalus.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

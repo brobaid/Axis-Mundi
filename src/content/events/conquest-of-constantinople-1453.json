@@ -1,0 +1,27 @@
+{
+  "id": "conquest-of-constantinople-1453",
+  "title": "Ottoman conquest of Constantinople",
+  "year_start": 1453,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "anatolia"
+  ],
+  "summary": "Mehmed II takes the Byzantine capital; the Ottomans become Islam's leading power for four centuries.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

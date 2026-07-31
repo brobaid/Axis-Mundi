@@ -1,0 +1,28 @@
+{
+  "id": "council-of-constance-1414",
+  "title": "Council of Constance",
+  "year_start": 1414,
+  "year_end": 1418,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "council",
+  "importance": 3,
+  "region": [
+    "german-lands"
+  ],
+  "summary": "The council ends the Western Schism with a single pope and executes Jan Hus, whose movement anticipates the Reformation.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

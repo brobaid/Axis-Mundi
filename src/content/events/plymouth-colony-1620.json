@@ -1,0 +1,27 @@
+{
+  "id": "plymouth-colony-1620",
+  "title": "Plymouth Colony founded",
+  "year_start": 1620,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "north-america"
+  ],
+  "summary": "Separatist Puritans plant reformed Christianity in New England, seeding American Protestant culture.",
+  "sources": [
+    "macculloch-reformation-2003",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

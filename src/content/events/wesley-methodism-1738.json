@@ -1,0 +1,27 @@
+{
+  "id": "wesley-methodism-1738",
+  "title": "Wesley's evangelical awakening",
+  "year_start": 1738,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/methodist"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "british-isles"
+  ],
+  "summary": "John Wesley's Aldersgate experience launches the Methodist movement within and then beyond the Church of England.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

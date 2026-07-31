@@ -1,0 +1,27 @@
+{
+  "id": "sunni-law-schools-800",
+  "title": "Four Sunni schools of law take shape",
+  "year_start": 800,
+  "precision": "century",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/sunni"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "The Hanafi, Maliki, Shafii, and Hanbali methods crystallize around their founding jurists across the 8th and 9th centuries.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "ibn-sina-980",
+  "title": "Ibn Sina (Avicenna)",
+  "year_start": 980,
+  "year_end": 1037,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "Philosopher and physician whose Canon of Medicine and metaphysics shaped both Islamic and European thought for centuries.",
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-islam"
+  ],
+  "sourcing": "sourced"
+}
