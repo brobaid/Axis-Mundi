@@ -1,0 +1,534 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TraditionSymbols from '../components/TraditionSymbols.astro';
+import DetailPanel from '../components/DetailPanel.astro';
+import { getPublishable, includesUnsourced } from '../lib/content';
+import { TRADITIONS } from '../lib/traditions';
+import {
+  DEFAULT_FRAME,
+  detents,
+  renderMap,
+  type Geometry,
+  type SnapshotView,
+} from '../lib/map-render';
+
+/**
+ * The map (M3).
+ *
+ * Twelve era snapshots (spec §6), each a hand-authored GeoJSON file. Pre-500
+ * BCE is deliberately absent: the evidence is too thin to polygon honestly, so
+ * the timeline carries that period and the map does not.
+ */
+
+const entries = await getPublishable('snapshots');
+
+const snapshots: SnapshotView[] = entries
+  .map((entry) => ({
+    id: entry.data.id,
+    era: entry.data.era,
+    label: entry.data.label,
+    fixture: entry.data.fixture,
+    realms: entry.data.features.map((feature) => ({
+      id: feature.properties.id,
+      name: feature.properties.name,
+      tradition: feature.properties.tradition,
+      grade: feature.properties.grade,
+      geometry: feature.geometry as Geometry,
+      labelAnchor: feature.properties.label_anchor,
+      labelCurve: feature.properties.label_curve,
+      contested: feature.properties.contested,
+    })),
+  }))
+  .sort((a, b) => a.era - b.era);
+
+const available = new Set(snapshots.map((s) => s.era));
+const rail = detents(available);
+const activeEra = snapshots[0]?.era ?? 1;
+const anyFixture = snapshots.some((s) => s.fixture);
+
+const canvasHtml =
+  snapshots.length === 0
+    ? ''
+    : renderMap(snapshots, DEFAULT_FRAME, {
+        title: 'The World, by Era',
+        activeEra,
+        traditions: TRADITIONS.map((t) => t.id),
+      });
+
+const sources = await getPublishable('sources');
+const sourceTitles = Object.fromEntries(sources.map((s) => [s.data.id, s.data.title]));
+
+const bootstrap = {
+  snapshots: entries
+    .map((entry) => ({
+      id: entry.data.id,
+      era: entry.data.era,
+      label: entry.data.label,
+      fixture: entry.data.fixture,
+      realms: entry.data.features.map((f) => ({
+        id: f.properties.id,
+        name: f.properties.name,
+        tradition: f.properties.tradition,
+        grade: f.properties.grade,
+        minorities: f.properties.minorities,
+        sources: f.properties.sources,
+        note: f.properties.note,
+        contested: f.properties.contested,
+        contested_note: f.properties.contested_note,
+      })),
+    }))
+    .sort((a, b) => a.era - b.era),
+  detents: rail,
+  sourceTitles,
+};
+---
+
+<BaseLayout
+  title="Map"
+  description="An animated historical world map across twelve era snapshots, showing the dominant tradition per realm with an explicit confidence grade."
+>
+  <TraditionSymbols />
+
+  <section class="shell head">
+    <p class="eyebrow">Room III · The Atlas Room</p>
+    <h1>The world, one era at a time.</h1>
+    <p class="lede">
+      Twelve snapshots, not an animation. Borders between them are never
+      interpolated — an intermediate line would be a claim no source supports.
+    </p>
+    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+  </section>
+
+  <div class="shell">
+    {
+      snapshots.length === 0 ? (
+        <p class="measure empty">
+          No era snapshots have been published yet. The map renders from one GeoJSON file per
+          snapshot year; the twelve years are locked by the spec, and the polygons come from the
+          owner's research rather than from anything generated here.
+        </p>
+      ) : (
+        <section class="map" data-map aria-label="Historical world map">
+          {anyFixture && (
+            <p class="map-fixture-note">
+              <span class="contested-badge">Fixture</span>
+              These polygons are development scaffolding — synthetic rectangles, not historical
+              boundaries. They are excluded from production builds and can never be promoted.
+            </p>
+          )}
+
+          <div class="map-frame" data-map-canvas set:html={canvasHtml} />
+
+          <!-- era scrubber ------------------------------------------- -->
+          <div class="scrub">
+            <div class="scrub__rail" data-scrubber role="radiogroup" aria-label="Era snapshot">
+              <div class="scrub__line" aria-hidden="true" />
+              <div class="meridian scrub__meridian" data-map-meridian aria-hidden="true" />
+              {rail.map((d) => (
+                <button
+                  type="button"
+                  class:list={['scrub__detent', !d.available && 'scrub__detent--empty']}
+                  data-era={d.era}
+                  role="radio"
+                  aria-checked={d.era === activeEra}
+                  tabindex={d.era === activeEra ? 0 : -1}
+                  disabled={!d.available}
+                  title={d.available ? d.label : `${d.label} — no snapshot in this build`}
+                >
+                  <span class="scrub__tick" aria-hidden="true" />
+                  <span class="scrub__label">{d.label}</span>
+                </button>
+              ))}
+            </div>
+            <p class="scrub__readout mono caption" data-map-readout aria-live="polite" />
+          </div>
+
+          <!-- legend ------------------------------------------------- -->
+          <div class="legend">
+            <p class="eyebrow">Confidence</p>
+            <ul role="list">
+              <li><span class="legend__swatch legend__swatch--a" aria-hidden="true" />A · documented</li>
+              <li><span class="legend__swatch legend__swatch--b" aria-hidden="true" />B · scholarly estimate</li>
+              <li><span class="legend__swatch legend__swatch--c" aria-hidden="true" />C · speculative</li>
+            </ul>
+            <p class="caption">
+              Grade is rendered, never hidden: solid, reduced, hatched. A speculative realm looks
+              speculative.
+            </p>
+          </div>
+        </section>
+      )
+    }
+
+    <p class="caption build-note">
+      {
+        includesUnsourced
+          ? 'This build includes fixture and unsourced records.'
+          : 'Fixture and unsourced records are held out of this build.'
+      }
+    </p>
+  </div>
+
+  <DetailPanel />
+</BaseLayout>
+
+<script type="application/json" id="map-data" set:html={JSON.stringify(bootstrap)} is:inline />
+
+<script>
+  import '../scripts/map';
+</script>
+
+<style>
+  .head {
+    text-align: center;
+    padding-block: var(--space-12) var(--space-2);
+  }
+
+  .head h1 {
+    font-size: clamp(2.125rem, 5vw, 3.125rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin: var(--space-3) auto;
+    max-width: 20ch;
+  }
+
+  .lede {
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin: 0 auto;
+  }
+
+  .ornament {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 520px;
+    margin: 26px auto 30px;
+  }
+
+  .ornament i {
+    flex: 1;
+    height: 3px;
+    border-top: var(--hairline-width) solid var(--hairline);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .ornament b {
+    width: 5px;
+    height: 5px;
+    rotate: 45deg;
+    background: var(--brass);
+    flex: 0 0 auto;
+  }
+
+  .empty,
+  .build-note {
+    color: var(--ink-soft);
+    padding-block: var(--space-6);
+  }
+
+  .map-fixture-note {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    font-size: var(--size-small);
+    color: var(--ink-soft);
+    max-width: var(--measure);
+    margin-bottom: var(--space-4);
+  }
+
+  /* --- the plate --------------------------------------------------------- */
+
+  .map-frame {
+    background: var(--land);
+    border: var(--hairline-width) solid var(--ink);
+    box-shadow:
+      0 0 0 3px var(--canvas),
+      0 0 0 4px var(--hairline);
+  }
+
+  .map-frame :global(.map-svg) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .map-frame :global(.map-ocean) {
+    fill: var(--ocean);
+  }
+
+  .map-frame :global(.map-graticule line) {
+    stroke: var(--hairline-strong);
+    stroke-width: 0.5;
+    opacity: 0.5;
+  }
+
+  /* Snapshots crossfade on opacity alone — never shape-tweened (§7). */
+  .map-frame :global(.map-snapshot) {
+    transition: opacity var(--dur-scrub) var(--ease-standard);
+  }
+
+  /* opacity:0 still takes clicks. Without this an inactive layer sits over the
+     visible one and a realm tap opens the wrong era's card. Tied to aria-hidden
+     so the pointer and the accessibility tree can never disagree. */
+  .map-frame :global(.map-snapshot[aria-hidden='true']) {
+    pointer-events: none;
+  }
+
+  .map-frame :global(.map-realm) {
+    cursor: pointer;
+  }
+
+  .map-frame :global(.map-realm__fill) {
+    stroke-width: 0.75;
+    transition: opacity var(--dur-micro) var(--ease-out);
+  }
+
+  /* Confidence grades (design language §3.3). */
+  .map-frame :global(.map-realm--a .map-realm__fill) {
+    fill-opacity: 0.82;
+  }
+
+  .map-frame :global(.map-realm--b .map-realm__fill) {
+    fill-opacity: 0.5;
+  }
+
+  .map-frame :global(.map-realm--c .map-realm__fill) {
+    fill-opacity: 1;
+    stroke-dasharray: 3 2;
+  }
+
+  .map-frame :global(.map-realm:hover .map-realm__fill),
+  .map-frame :global(.map-realm:focus-within .map-realm__fill) {
+    fill-opacity: 1;
+  }
+
+  /* Curved lettering with a paper halo, so a name stays legible over hatching. */
+  .map-frame :global(.map-label) {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    fill: var(--ink);
+    stroke: var(--land);
+    stroke-width: 3.5;
+    paint-order: stroke fill;
+    pointer-events: none;
+  }
+
+  /* --- atlas furniture --------------------------------------------------- */
+
+  .map-frame :global(.map-cartouche__plate) {
+    fill: var(--surface);
+    stroke: var(--ink);
+    stroke-width: 1;
+  }
+
+  .map-frame :global(.map-cartouche__inner) {
+    fill: none;
+    stroke: var(--hairline-strong);
+    stroke-width: 0.75;
+  }
+
+  .map-frame :global(.map-cartouche__title) {
+    font-family: var(--font-display);
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    fill: var(--ink);
+  }
+
+  .map-frame :global(.map-cartouche__era) {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    fill: var(--brass-ink);
+  }
+
+  .map-frame :global(.map-cartouche__fixture) {
+    font-family: var(--font-ui);
+    font-size: 7.5px;
+    letter-spacing: 0.18em;
+    fill: var(--contested-badge-ink);
+  }
+
+  .map-frame :global(.map-compass__ring),
+  .map-frame :global(.map-compass__cross) {
+    fill: none;
+    stroke: var(--brass);
+    stroke-width: 1;
+    opacity: 0.75;
+  }
+
+  .map-frame :global(.map-compass__needle) {
+    fill: var(--brass);
+    opacity: 0.5;
+    stroke: var(--brass);
+    stroke-width: 1;
+  }
+
+  .map-frame :global(.map-compass__n) {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    fill: var(--brass-ink);
+  }
+
+  .map-frame :global(.map-frame-outer),
+  .map-frame :global(.map-frame-inner) {
+    fill: none;
+    stroke: var(--ink);
+  }
+
+  .map-frame :global(.map-frame-outer) {
+    stroke-width: 2;
+  }
+
+  .map-frame :global(.map-frame-inner) {
+    stroke-width: 0.75;
+    opacity: 0.6;
+  }
+
+  /* --- scrubber ---------------------------------------------------------- */
+
+  .scrub {
+    margin-top: var(--space-6);
+  }
+
+  .scrub__rail {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-1);
+    padding-top: var(--space-4);
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .scrub__line {
+    position: absolute;
+    top: calc(var(--space-4) + 5px);
+    left: 0;
+    right: 0;
+    height: var(--hairline-width);
+    background: var(--hairline-strong);
+  }
+
+  /* The Brass Meridian, the same object as on the timeline. */
+  .scrub__meridian {
+    top: 0;
+    bottom: 0;
+    height: auto;
+  }
+
+  .scrub__detent {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    background: none;
+    border: 0;
+    padding: 0 var(--space-1);
+    min-height: var(--tap-min);
+    cursor: pointer;
+    color: var(--ink-soft);
+  }
+
+  .scrub__detent[disabled] {
+    cursor: default;
+    opacity: 0.4;
+  }
+
+  .scrub__tick {
+    width: 11px;
+    height: 11px;
+    rotate: 45deg;
+    border: 1.5px solid var(--hairline-strong);
+    background: var(--canvas);
+  }
+
+  .scrub__detent--on .scrub__tick {
+    border-color: var(--brass);
+    background: var(--brass);
+  }
+
+  .scrub__detent:not([disabled]):hover .scrub__tick {
+    border-color: var(--brass);
+  }
+
+  .scrub__label {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    white-space: nowrap;
+  }
+
+  .scrub__detent--on .scrub__label {
+    color: var(--brass-ink);
+  }
+
+  .scrub__readout {
+    margin-top: var(--space-3);
+    color: var(--ink-soft);
+  }
+
+  /* --- legend ------------------------------------------------------------ */
+
+  .legend {
+    margin-top: var(--space-6);
+    padding-top: var(--space-3);
+    border-top: var(--hairline-width) solid var(--hairline);
+  }
+
+  .legend ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-2) 0;
+    display: flex;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+    font-family: var(--font-ui);
+    font-size: var(--size-caption);
+  }
+
+  .legend li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .legend__swatch {
+    width: 16px;
+    height: 12px;
+    border: var(--hairline-width) solid var(--hairline-strong);
+    background: var(--ink-soft);
+  }
+
+  .legend__swatch--a {
+    opacity: 0.82;
+  }
+
+  .legend__swatch--b {
+    opacity: 0.5;
+  }
+
+  .legend__swatch--c {
+    opacity: 1;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 2px,
+      var(--land) 2px,
+      var(--land) 4px
+    );
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .map-frame :global(.map-snapshot),
+    .map-frame :global(.map-realm__fill) {
+      transition: none;
+    }
+  }
+</style>

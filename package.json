@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
-  "description": "Axis Mundi \u2014 an interactive comparative reference for ten religious traditions.",
+  "description": "Axis Mundi — an interactive comparative reference for ten religious traditions.",
   "engines": {
     "node": ">=20.11.0"
   },

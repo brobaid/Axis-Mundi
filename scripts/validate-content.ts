@@ -25,6 +25,7 @@ import {
   figureSchema,
   siteSchema,
 } from '../src/schemas/deep-dive.js';
+import { snapshotSchema } from '../src/schemas/snapshot.js';
 import { glossaryRefs } from '../src/lib/prose.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -75,6 +76,7 @@ const COLLECTIONS = {
   festivals: { dir: 'festivals', schema: festivalSchema },
   sites: { dir: 'sites', schema: siteSchema },
   figures: { dir: 'figures', schema: figureSchema },
+  snapshots: { dir: 'snapshots', schema: snapshotSchema },
 } satisfies Record<string, Collection<z.ZodTypeAny>>;
 
 type CollectionName = keyof typeof COLLECTIONS;
@@ -91,6 +93,7 @@ const parsed: Record<CollectionName, Map<string, { file: string; data: any }>> =
   festivals: new Map(),
   sites: new Map(),
   figures: new Map(),
+  snapshots: new Map(),
 };
 
 let fileCount = 0;
@@ -285,6 +288,21 @@ for (const group of ['festivals', 'sites', 'figures'] as const) {
   }
 }
 
+/* Era snapshots: every realm's sources must resolve, and a fixture must never
+   be able to reach a production build. */
+for (const { file, data } of parsed.snapshots.values()) {
+  for (const [i, feature] of (data.features as any[]).entries()) {
+    for (const [j, src] of (feature.properties.sources as string[]).entries()) {
+      if (!has('sources', src)) {
+        note(file, `features.${i}.properties.sources.${j}`, `unknown source "${src}"`);
+      }
+    }
+  }
+  if (data.fixture === true && data.sourcing !== 'todo') {
+    note(file, 'sourcing', 'a fixture must stay gated');
+  }
+}
+
 /* Spec §2.1 — all ten launch traditions must exist as depth-1 taxonomy nodes. */
 const LAUNCH_TEN = [
   'christianity',
@@ -317,8 +335,9 @@ for (const id of LAUNCH_TEN) {
 
 const counts = (name: CollectionName) => {
   const all = [...parsed[name].values()];
-  const todo = all.filter((e) => e.data.sourcing === 'todo').length;
-  return { total: all.length, todo };
+  const fixture = all.filter((e) => e.data.fixture === true).length;
+  const todo = all.filter((e) => e.data.sourcing === 'todo' && e.data.fixture !== true).length;
+  return { total: all.length, todo, fixture };
 };
 
 if (problems.length > 0) {
@@ -337,8 +356,12 @@ if (problems.length > 0) {
 
 console.log(`  Content validation passed — ${fileCount} files.`);
 for (const name of Object.keys(COLLECTIONS) as CollectionName[]) {
-  const { total, todo } = counts(name);
+  const { total, todo, fixture } = counts(name);
   if (total === 0) continue;
-  const suffix = todo > 0 ? `  (${todo} awaiting source check)` : '';
+  const parts: string[] = [];
+  if (todo > 0) parts.push(`${todo} awaiting source check`);
+  /* Fixtures are development scaffolding, never part of the published set. */
+  if (fixture > 0) parts.push(`${fixture} fixture, never published`);
+  const suffix = parts.length > 0 ? `  (${parts.join(', ')})` : '';
   console.log(`      ${name.padEnd(9)} ${String(total).padStart(3)}${suffix}`);
 }

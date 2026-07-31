@@ -130,7 +130,6 @@ export const media = z.object({
  */
 export const sourcingStatus = z.enum(['sourced', 'todo']).default('sourced');
 
-/** Era snapshots locked by Phase 0 §6. Phase 2 builds them; the list is fixed here. */
-export const ERA_SNAPSHOTS = [
-  -500, 1, 300, 600, 750, 1000, 1200, 1500, 1700, 1850, 1950, 2020,
-] as const;
+/** Era snapshots locked by Phase 0 §6. Defined in lib/eras.ts, which carries no
+    Zod dependency so the map island can import it without bundling the schemas. */
+export { ERA_SNAPSHOTS } from '../lib/eras.js';

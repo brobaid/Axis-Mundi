@@ -1,0 +1,145 @@
+{
+  "type": "FeatureCollection",
+  "id": "fixture-2020",
+  "era": 2020,
+  "label": "2020",
+  "fixture": true,
+  "sourcing": "todo",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fixture-realm-a",
+        "name": "Fixture Realm A",
+        "tradition": "christianity",
+        "grade": "a",
+        "minorities": [],
+        "label_anchor": [
+          -33.5,
+          40
+        ],
+        "label_curve": -8,
+        "sources": [],
+        "note": "Development fixture. Synthetic rectangle, not a historical boundary.",
+        "contested": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -56,
+              20
+            ],
+            [
+              -11,
+              20
+            ],
+            [
+              -11,
+              60
+            ],
+            [
+              -56,
+              60
+            ],
+            [
+              -56,
+              20
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fixture-realm-b",
+        "name": "Fixture Realm B",
+        "tradition": "islam",
+        "grade": "b",
+        "minorities": [],
+        "label_anchor": [
+          12,
+          22.5
+        ],
+        "label_curve": 4,
+        "sources": [],
+        "note": "Development fixture. Synthetic rectangle, not a historical boundary.",
+        "contested": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -10,
+              5
+            ],
+            [
+              34,
+              5
+            ],
+            [
+              34,
+              40
+            ],
+            [
+              -10,
+              40
+            ],
+            [
+              -10,
+              5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fixture-realm-c",
+        "name": "Fixture Realm C",
+        "tradition": "buddhism",
+        "grade": "c",
+        "minorities": [],
+        "label_anchor": [
+          62,
+          16.5
+        ],
+        "label_curve": 10,
+        "sources": [],
+        "note": "Development fixture. Synthetic rectangle, not a historical boundary.",
+        "contested": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              35,
+              -5
+            ],
+            [
+              89,
+              -5
+            ],
+            [
+              89,
+              38
+            ],
+            [
+              35,
+              38
+            ],
+            [
+              35,
+              -5
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -13,6 +13,7 @@ import {
   figureSchema,
   siteSchema,
 } from './schemas/deep-dive.js';
+import { snapshotSchema } from './schemas/snapshot.js';
 
 /**
  * Every piece of content in Axis Mundi is a collection entry validated by a Zod
@@ -39,6 +40,9 @@ const festivals = defineCollection({ loader: json('festivals'), schema: festival
 const sites = defineCollection({ loader: json('sites'), schema: siteSchema });
 const figures = defineCollection({ loader: json('figures'), schema: figureSchema });
 
+/* Era snapshots for the map (spec §6). One GeoJSON file per snapshot year. */
+const snapshots = defineCollection({ loader: json('snapshots'), schema: snapshotSchema });
+
 export const collections = {
   events,
   taxonomy,
@@ -50,4 +54,5 @@ export const collections = {
   festivals,
   sites,
   figures,
+  snapshots,
 };

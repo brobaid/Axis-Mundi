@@ -26,6 +26,7 @@ const isCurrent = (href: string): 'page' | undefined => (path === href ? 'page' 
     </a>
     <nav class="topbar__nav" aria-label="Rooms">
       <a class="tap" href="/timeline" aria-current={isCurrent('/timeline')}>Timeline</a>
+      <a class="tap" href="/map" aria-current={isCurrent('/map')}>Map</a>
       {
         firstDive && (
           <a class="tap" href={`/traditions/${firstDive}`} aria-current={isCurrent(`/traditions/${firstDive}`)}>
@@ -99,8 +100,13 @@ const isCurrent = (href: string): 'page' | undefined => (path === href ? 'page' 
      aria-label and its filled/hollow dot). */
   @media (max-width: 30rem) {
     .topbar__nav {
-      gap: var(--space-3);
-      margin-right: var(--space-2);
+      gap: var(--space-2);
+      margin-right: var(--space-1);
+      min-width: 0;
+    }
+
+    .topbar__nav a {
+      letter-spacing: 0.04em;
     }
 
     .wordmark__sub {
