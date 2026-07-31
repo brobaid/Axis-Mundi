@@ -13,5 +13,12 @@
   "contested": false,
   "currents": [],
   "order": 8,
-  "founded": {}
+  "founded": {},
+  "adherents": {
+    "display": "see note",
+    "source": "japan-aca-yearbook",
+    "basis": "Not enumerated by Pew.",
+    "contested": true,
+    "contested_note": "Shinto adherence is contested by definition. Shrine-affiliation registers count roughly 80 to 90 million; self-identification surveys yield a few percent of Japan's population. Both positions stand; neither is \"the\" number."
+  }
 }

@@ -14,5 +14,13 @@
   "contested_note": "The spec flags the classification of this cluster, and of Confucianism in particular, as a religion rather than a philosophy or a civic tradition. Both positions require citation before this note ships.",
   "currents": [],
   "order": 6,
-  "founded": {}
+  "founded": {},
+  "adherents": {
+    "display": "see note",
+    "source": "pew-grl-2025",
+    "year": 2020,
+    "basis": "No single authoritative figure.",
+    "note": "Formal zongjiao identification in the PRC runs at about 10% across all religions per Pew 2025, while scholarly estimates of folk religious practice run to hundreds of millions. The note stands in place of a point estimate. Taiwan is the one polity Pew records as majority \"other religions\".",
+    "contested": false
+  }
 }

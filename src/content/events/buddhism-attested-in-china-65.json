@@ -21,7 +21,12 @@
     "china",
     "transmission"
   ],
-  "sources": [],
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "kohn-daoism-2000",
+    "yao-confucianism-2000",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -29,6 +34,6 @@
     "figures": []
   },
   "influence": [],
-  "sourcing": "todo",
+  "sourcing": "sourced",
   "body": "The reference build dates the earliest attestation to 65 CE; the Claude Design export gives c. 67 CE for the same event. Both readings rest on the imperial edict concerning Liu Ying, Prince of Chu, which records an established Buddhist community at the Han court. The record keeps 65 and notes the alternative rather than averaging the two.\n\nHeld as a single multi-tradition record per Phase 0 §3: multi-tradition events are one record, never duplicated."
 }

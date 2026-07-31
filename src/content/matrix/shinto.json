@@ -8,30 +8,38 @@
       "dimension": "divine-concept",
       "value": "polytheist",
       "nuance": "Many kami, without a single supreme creator.",
-      "sources": [],
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
       "contested": false
     },
     {
       "dimension": "afterlife",
       "value": "ancestral-realm",
       "nuance": "Continuity with ancestors and kami.",
-      "sources": [],
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
       "contested": false
     },
     {
       "dimension": "dietary-law",
       "value": "none",
       "nuance": "No general dietary restriction.",
-      "sources": [],
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
       "contested": false
     },
     {
       "dimension": "calendar-system",
       "value": "solar",
       "nuance": "The modern observance follows a solar calendar.",
-      "sources": [],
+      "sources": [
+        "hardacre-shinto-2017"
+      ],
       "contested": false
     }
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

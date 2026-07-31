@@ -8,30 +8,38 @@
       "dimension": "divine-concept",
       "value": "monotheist",
       "nuance": "God is one, without partner or likeness.",
-      "sources": [],
+      "sources": [
+        "nchi-2010"
+      ],
       "contested": false
     },
     {
       "dimension": "afterlife",
       "value": "resurrection",
       "nuance": "Bodily resurrection and judgment.",
-      "sources": [],
+      "sources": [
+        "nchi-2010"
+      ],
       "contested": false
     },
     {
       "dimension": "dietary-law",
       "value": "halal",
       "nuance": "Dietary law follows the halal rules.",
-      "sources": [],
+      "sources": [
+        "nchi-2010"
+      ],
       "contested": false
     },
     {
       "dimension": "calendar-system",
       "value": "lunar",
       "nuance": "A purely lunar calendar, the Hijri.",
-      "sources": [],
+      "sources": [
+        "nchi-2010"
+      ],
       "contested": false
     }
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

@@ -19,7 +19,10 @@
     "japan",
     "transmission"
   ],
-  "sources": [],
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
   "contested": true,
   "media": [],
   "links": {
@@ -27,6 +30,6 @@
     "figures": []
   },
   "influence": [],
-  "sourcing": "todo",
+  "sourcing": "sourced",
   "contested_note": "The date of the transmission is disputed. The Nihon Shoki places the arrival of Buddhist images and texts from Baekje at 552 CE, which this record follows. The Gangoji Garan Engi and the Jogu Shotoku Hoo Teisetsu give 538 CE, and much modern scholarship prefers that earlier dating. Both positions require citation before this note ships."
 }

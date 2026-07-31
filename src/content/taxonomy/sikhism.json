@@ -13,5 +13,13 @@
   "contested": false,
   "currents": [],
   "order": 5,
-  "founded": {}
+  "founded": {},
+  "adherents": {
+    "display": "≈26 m (census + estimates)",
+    "estimate": 26000000,
+    "source": "india-census-2011",
+    "year": 2011,
+    "basis": "20.8 m in India per the 2011 census, plus diaspora estimates. Not enumerated by Pew.",
+    "contested": false
+  }
 }

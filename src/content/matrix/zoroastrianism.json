@@ -8,30 +8,38 @@
       "dimension": "divine-concept",
       "value": "monotheist",
       "nuance": "One God, within a dualist moral frame.",
-      "sources": [],
+      "sources": [
+        "boyce-zoroastrians"
+      ],
       "contested": false
     },
     {
       "dimension": "afterlife",
       "value": "resurrection",
       "nuance": "Bodily resurrection and final judgment.",
-      "sources": [],
+      "sources": [
+        "boyce-zoroastrians"
+      ],
       "contested": false
     },
     {
       "dimension": "dietary-law",
       "value": "purity-rules",
       "nuance": "Observance centres on purity rather than prohibition.",
-      "sources": [],
+      "sources": [
+        "boyce-zoroastrians"
+      ],
       "contested": false
     },
     {
       "dimension": "calendar-system",
       "value": "solar",
       "nuance": "The Zoroastrian calendar is solar.",
-      "sources": [],
+      "sources": [
+        "boyce-zoroastrians"
+      ],
       "contested": false
     }
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

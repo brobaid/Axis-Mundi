@@ -15,7 +15,10 @@
     "deccan"
   ],
   "summary": "The monolithic statue of Bahubali at Shravanabelagola was consecrated, becoming a major Digambara pilgrimage site.",
-  "sources": [],
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -26,5 +29,5 @@
   "tags": [
     "from-design-export"
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

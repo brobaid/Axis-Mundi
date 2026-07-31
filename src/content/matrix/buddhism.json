@@ -8,30 +8,38 @@
       "dimension": "divine-concept",
       "value": "non-theist",
       "nuance": "No creator deity is affirmed.",
-      "sources": [],
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
       "contested": false
     },
     {
       "dimension": "afterlife",
       "value": "rebirth",
       "nuance": "Rebirth without a persisting self.",
-      "sources": [],
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
       "contested": false
     },
     {
       "dimension": "dietary-law",
       "value": "varies",
       "nuance": "Dietary practice varies by vehicle and region.",
-      "sources": [],
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
       "contested": false
     },
     {
       "dimension": "calendar-system",
       "value": "lunisolar",
       "nuance": "Lunisolar reckoning, with regional variation.",
-      "sources": [],
+      "sources": [
+        "princeton-dict-buddhism-2014"
+      ],
       "contested": false
     }
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

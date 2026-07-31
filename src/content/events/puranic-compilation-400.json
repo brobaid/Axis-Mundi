@@ -18,7 +18,10 @@
   "tags": [
     "purana"
   ],
-  "sources": [],
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -26,5 +29,5 @@
     "figures": []
   },
   "influence": [],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

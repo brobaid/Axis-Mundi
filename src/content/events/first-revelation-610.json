@@ -15,7 +15,10 @@
     "arabia"
   ],
   "summary": "According to Islamic tradition, revelation to Muhammad began in a cave outside Mecca and continued for twenty-three years.",
-  "sources": [],
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -26,5 +29,5 @@
   "tags": [
     "from-design-export"
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

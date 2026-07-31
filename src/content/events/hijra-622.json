@@ -20,7 +20,10 @@
     "medina",
     "calendar"
   ],
-  "sources": [],
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -28,5 +31,5 @@
     "figures": []
   },
   "influence": [],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

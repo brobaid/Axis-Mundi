@@ -21,7 +21,12 @@
     "tang",
     "suppression"
   ],
-  "sources": [],
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "kohn-daoism-2000",
+    "yao-confucianism-2000",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -29,5 +34,5 @@
     "figures": []
   },
   "influence": [],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

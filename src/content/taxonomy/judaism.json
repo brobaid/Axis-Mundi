@@ -30,5 +30,13 @@
     }
   ],
   "order": 2,
-  "founded": {}
+  "founded": {},
+  "adherents": {
+    "display": "14.8 m (Pew, 2020)",
+    "estimate": 14800000,
+    "source": "pew-grl-2025",
+    "year": 2020,
+    "basis": "Enumerated by Pew. 0.2% of world population; the report carries definitional notes on Israel versus diaspora counting.",
+    "contested": false
+  }
 }

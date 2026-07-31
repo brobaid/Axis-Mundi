@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BrassMeridian from '../components/BrassMeridian.astro';
 import { TRADITIONS } from '../lib/traditions';
-import { getPublishable, includesUnsourced, tally } from '../lib/content';
+import { getPublishable, getStructural, includesUnsourced, tally } from '../lib/content';
 import { displayDate } from '../lib/display-date';
 
 /**
@@ -16,8 +16,25 @@ import { displayDate } from '../lib/display-date';
 
 const [events, taxonomy] = await Promise.all([
   getPublishable('events'),
-  getPublishable('taxonomy'),
+  /* Structure and the sourced adherents field; the authored node summaries are
+     not rendered here and stay gated on their own. */
+  getStructural('taxonomy'),
 ]);
+
+const adherentsOf = (id: string) =>
+  taxonomy.find((n) => n.data.id === id && n.data.depth === 1)?.data.adherents;
+
+/* Two traditions have no honest point estimate, and the sourcing memo requires
+   their notes to render rather than a number. "see note" has to point at a note. */
+const adherentNotes = TRADITIONS.map((t) => ({ tradition: t, adherents: adherentsOf(t.id) }))
+  .filter((row) => row.adherents !== undefined && row.adherents.display === 'see note')
+  .map((row) => ({
+    name: row.tradition.name,
+    text: row.adherents!.contested
+      ? (row.adherents!.contested_note ?? '')
+      : (row.adherents!.note ?? ''),
+    contested: row.adherents!.contested,
+  }));
 
 const [eventTally, taxonomyTally, sourceTally, regionTally] = await Promise.all([
   tally('events'),
@@ -69,11 +86,38 @@ const collections = [
           <li class="lane">
             <span class="swatch" style={`--tradition-hue: var(${t.hueToken})`} />
             <span class="lane__name">{t.name}</span>
-            <span class="lane__hue caption">{t.hue}</span>
+            {
+              (() => {
+                const a = adherentsOf(t.id);
+                if (a === undefined) return <span class="lane__hue caption">{t.hue}</span>;
+                /* Rendering rule 1: the display string is used verbatim.
+                   Rule 2: Shinto and the Chinese cluster never get coerced to a
+                   number — one renders contested, the other its note. */
+                return (
+                  <span class="lane__adherents">
+                    <span class="mono">{a.display}</span>
+                    {a.contested && <span class="contested-badge">Contested</span>}
+                  </span>
+                );
+              })()
+            }
           </li>
         ))
       }
     </ul>
+
+    {
+      adherentNotes.length > 0 && (
+        <div class="adherent-notes">
+          {adherentNotes.map((n) => (
+            <p class="caption">
+              <b>{n.name}</b>
+              {n.contested && <span class="contested-badge">Contested</span>} — {n.text}
+            </p>
+          ))}
+        </div>
+      )
+    }
   </section>
 
   <hr class="shell rule" />
@@ -245,6 +289,30 @@ const collections = [
   .lane__name {
     font-family: var(--font-ui);
     font-size: var(--size-small);
+  }
+
+  .adherent-notes {
+    margin-top: var(--space-4);
+    padding-top: var(--space-3);
+    border-top: var(--hairline-width) solid var(--hairline);
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .adherent-notes p {
+    max-width: var(--measure);
+  }
+
+  .adherent-notes :global(.contested-badge) {
+    margin-inline: var(--space-2);
+  }
+
+  .lane__adherents {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
   }
 
   /* --- meridian specimen -------------------------------------------------- */

@@ -43,6 +43,27 @@ export async function getPublishable<K extends CollectionKey>(
   });
 }
 
+/**
+ * Records regardless of sourcing state, for STRUCTURE ONLY.
+ *
+ * The taxonomy is a special case. A node's shape — its id, name, parent, path
+ * and contested flag — comes from Phase 0 spec §2.3, which is the product's own
+ * classification decision and carries no external citation. Only the authored
+ * one-sentence `summary` is unsourced prose.
+ *
+ * Gating the whole node on that summary was a mistake: it left the timeline
+ * with no lanes at all once events promoted ahead of summaries, because lanes
+ * are built from the taxonomy. Structure and prose gate separately now.
+ *
+ * Never use this to render an authored field. `summary`, and any prose a record
+ * carries, must still come through `getPublishable`.
+ */
+export async function getStructural<K extends CollectionKey>(
+  key: K,
+): Promise<CollectionEntry<K>[]> {
+  return getCollection(key);
+}
+
 export interface SourcingTally {
   readonly total: number;
   readonly sourced: number;

@@ -13,7 +13,11 @@
   "importance": 4,
   "region": [],
   "summary": "Zhang Daoling founded the Way of the Celestial Masters, the earliest organised Taoist movement.",
-  "sources": [],
+  "sources": [
+    "kohn-daoism-2000",
+    "yao-confucianism-2000",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -24,5 +28,5 @@
   "tags": [
     "from-design-export"
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

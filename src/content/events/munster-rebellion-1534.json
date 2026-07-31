@@ -20,7 +20,10 @@
     "anabaptist",
     "munster"
   ],
-  "sources": [],
+  "sources": [
+    "macculloch-reformation-2003",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -28,5 +31,5 @@
     "figures": []
   },
   "influence": [],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

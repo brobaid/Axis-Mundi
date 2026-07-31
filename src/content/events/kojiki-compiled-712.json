@@ -19,7 +19,10 @@
     "kojiki",
     "japan"
   ],
-  "sources": [],
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -27,5 +30,5 @@
     "figures": []
   },
   "influence": [],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

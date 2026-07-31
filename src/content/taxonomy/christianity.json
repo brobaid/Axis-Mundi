@@ -13,5 +13,13 @@
   "contested": false,
   "currents": [],
   "order": 0,
-  "founded": {}
+  "founded": {},
+  "adherents": {
+    "display": "2.3 bn (Pew, 2020)",
+    "estimate": 2300000000,
+    "source": "pew-grl-2025",
+    "year": 2020,
+    "basis": "Enumerated by Pew. 28.8% of world population.",
+    "contested": false
+  }
 }

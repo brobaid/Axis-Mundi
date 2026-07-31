@@ -1,13 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Timeline from '../components/Timeline.astro';
-import { getPublishable, includesUnsourced, tally } from '../lib/content';
+import { getPublishable, getStructural, includesUnsourced, tally } from '../lib/content';
 import { displayDate } from '../lib/display-date';
 import type { TaxonomyNode, TimelineEvent } from '../lib/timeline-model';
 
 const [eventEntries, taxonomyEntries] = await Promise.all([
   getPublishable('events'),
-  getPublishable('taxonomy'),
+  /* Structure only: lanes are the spec's taxonomy (§2.3). The nodes' authored
+     summaries are not rendered here and stay gated on their own. */
+  getStructural('taxonomy'),
 ]);
 const eventTally = await tally('events');
 

@@ -15,7 +15,10 @@
     "deccan"
   ],
   "summary": "Ramanuja taught Vishishtadvaita, the qualified non-dualism that became a foundation of later Vaishnava theology.",
-  "sources": [],
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -26,5 +29,5 @@
   "tags": [
     "from-design-export"
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

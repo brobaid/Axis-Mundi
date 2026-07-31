@@ -8,30 +8,42 @@
       "dimension": "divine-concept",
       "value": "varies",
       "nuance": "Positions vary across the Confucian, Taoist and folk strands.",
-      "sources": [],
+      "sources": [
+        "kohn-daoism-2000",
+        "yao-confucianism-2000"
+      ],
       "contested": false
     },
     {
       "dimension": "afterlife",
       "value": "ancestral-realm",
       "nuance": "Continuity with ancestors is the common frame.",
-      "sources": [],
+      "sources": [
+        "kohn-daoism-2000",
+        "yao-confucianism-2000"
+      ],
       "contested": false
     },
     {
       "dimension": "dietary-law",
       "value": "varies",
       "nuance": "Dietary practice varies by strand and observance.",
-      "sources": [],
+      "sources": [
+        "kohn-daoism-2000",
+        "yao-confucianism-2000"
+      ],
       "contested": false
     },
     {
       "dimension": "calendar-system",
       "value": "lunisolar",
       "nuance": "A lunisolar calendar.",
-      "sources": [],
+      "sources": [
+        "kohn-daoism-2000",
+        "yao-confucianism-2000"
+      ],
       "contested": false
     }
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

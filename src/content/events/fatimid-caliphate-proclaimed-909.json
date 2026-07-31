@@ -15,7 +15,10 @@
     "maghreb"
   ],
   "summary": "The Fatimids proclaimed a caliphate in Ifriqiya, establishing Ismaili Shia rule that later extended to Egypt.",
-  "sources": [],
+  "sources": [
+    "nchi-2010",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -26,5 +29,5 @@
   "tags": [
     "from-design-export"
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

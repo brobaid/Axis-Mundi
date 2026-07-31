@@ -8,30 +8,38 @@
       "dimension": "divine-concept",
       "value": "monotheist",
       "nuance": "One God, without form.",
-      "sources": [],
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
       "contested": false
     },
     {
       "dimension": "afterlife",
       "value": "rebirth",
       "nuance": "Rebirth, with liberation as release from it.",
-      "sources": [],
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
       "contested": false
     },
     {
       "dimension": "dietary-law",
       "value": "langar-norms",
       "nuance": "The communal langar meal is vegetarian.",
-      "sources": [],
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
       "contested": false
     },
     {
       "dimension": "calendar-system",
       "value": "solar",
       "nuance": "The Nanakshahi calendar is solar.",
-      "sources": [],
+      "sources": [
+        "mcleod-sikhism-1997"
+      ],
       "contested": false
     }
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

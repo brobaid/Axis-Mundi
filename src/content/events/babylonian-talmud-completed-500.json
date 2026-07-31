@@ -18,7 +18,10 @@
   "tags": [
     "talmud"
   ],
-  "sources": [],
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -26,5 +29,5 @@
     "figures": []
   },
   "influence": [],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

@@ -15,7 +15,10 @@
     "western-india"
   ],
   "summary": "Zoroastrian migrants from Iran settled at Sanjan on the Gujarat coast, the origin of the Parsi community.",
-  "sources": [],
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -27,5 +30,5 @@
     "from-design-export",
     "contested-date-candidate"
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

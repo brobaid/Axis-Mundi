@@ -11,9 +11,12 @@
   "subtitle": "Submission to the one God, in the tradition of the prophets",
   "stat_box": {
     "adherents": {
-      "display": "1.9 bn",
+      "display": "2.0 bn (Pew, 2020)",
+      "estimate": 2000000000,
+      "source": "pew-grl-2025",
       "year": 2020,
-      "note": "From the v5 reference build, pending the sourced Pew file."
+      "basis": "Enumerated by Pew. 25.6% of world population. Supersedes the v5 stat box figure of 1.9 bn.",
+      "contested": false
     },
     "founded": "7th c. CE, Hejaz",
     "origin_region": "arabia",
@@ -84,13 +87,13 @@
       "claim": "Muslims worship Muhammad.",
       "correction": "In Islamic teaching, worship is directed to God alone. Muhammad is revered as the final prophet and moral exemplar, and is not held to be divine; venerating him as such would contradict tawhid itself.",
       "sources": [
-        "esposito-islam-the-straight-path"
+        "esposito-straight-path"
       ],
-      "sourcing": "todo"
+      "sourcing": "sourced"
     }
   ],
   "further_reading": [
-    "esposito-islam-the-straight-path"
+    "esposito-straight-path"
   ],
   "sourcing": "todo"
 }

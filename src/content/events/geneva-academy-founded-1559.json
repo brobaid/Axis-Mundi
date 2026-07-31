@@ -15,7 +15,10 @@
     "swiss-confederation"
   ],
   "summary": "Calvin established the Geneva Academy, which trained Reformed ministers for congregations across Europe.",
-  "sources": [],
+  "sources": [
+    "macculloch-reformation-2003",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -26,5 +29,5 @@
   "tags": [
     "from-design-export"
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

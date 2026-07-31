@@ -8,30 +8,38 @@
       "dimension": "divine-concept",
       "value": "varies",
       "nuance": "Positions range from monist to theist across the streams.",
-      "sources": [],
+      "sources": [
+        "flood-hinduism-1996"
+      ],
       "contested": false
     },
     {
       "dimension": "afterlife",
       "value": "rebirth",
       "nuance": "Rebirth conditioned by karma.",
-      "sources": [],
+      "sources": [
+        "flood-hinduism-1996"
+      ],
       "contested": false
     },
     {
       "dimension": "dietary-law",
       "value": "often-vegetarian",
       "nuance": "Vegetarian practice is common though not universal.",
-      "sources": [],
+      "sources": [
+        "flood-hinduism-1996"
+      ],
       "contested": false
     },
     {
       "dimension": "calendar-system",
       "value": "lunisolar",
       "nuance": "Lunisolar reckoning, with regional variation.",
-      "sources": [],
+      "sources": [
+        "flood-hinduism-1996"
+      ],
       "contested": false
     }
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

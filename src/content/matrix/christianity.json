@@ -8,30 +8,38 @@
       "dimension": "divine-concept",
       "value": "monotheist",
       "nuance": "Trinitarian: one God in three persons, in Nicene Christianity.",
-      "sources": [],
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
       "contested": false
     },
     {
       "dimension": "afterlife",
       "value": "resurrection",
       "nuance": "Bodily resurrection and final judgment.",
-      "sources": [],
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
       "contested": false
     },
     {
       "dimension": "dietary-law",
       "value": "generally-none",
       "nuance": "No general dietary restriction across most branches.",
-      "sources": [],
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
       "contested": false
     },
     {
       "dimension": "calendar-system",
       "value": "solar",
       "nuance": "A solar calendar, with some movable feasts set by rule.",
-      "sources": [],
+      "sources": [
+        "macculloch-christianity-2009"
+      ],
       "contested": false
     }
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

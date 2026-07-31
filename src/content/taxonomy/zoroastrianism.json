@@ -13,5 +13,11 @@
   "contested": false,
   "currents": [],
   "order": 9,
-  "founded": {}
+  "founded": {},
+  "adherents": {
+    "display": "≈110-120 k (community surveys)",
+    "source": "fezana-demographics",
+    "basis": "Community demographic surveys. The 2011 India census counts 57,264 Parsis. Not enumerated by Pew.",
+    "contested": false
+  }
 }

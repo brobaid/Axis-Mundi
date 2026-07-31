@@ -15,7 +15,10 @@
     "tibetan-plateau"
   ],
   "summary": "The Bengali master Atisha arrived in Tibet, a key episode in the later diffusion of Buddhist teaching there.",
-  "sources": [],
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -26,5 +29,5 @@
   "tags": [
     "from-design-export"
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

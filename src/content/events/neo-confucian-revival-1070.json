@@ -15,7 +15,11 @@
     "north-china-plain"
   ],
   "summary": "Song-dynasty thinkers reworked the Confucian canon in dialogue with Buddhist and Taoist metaphysics.",
-  "sources": [],
+  "sources": [
+    "kohn-daoism-2000",
+    "yao-confucianism-2000",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -26,5 +30,5 @@
   "tags": [
     "from-design-export"
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

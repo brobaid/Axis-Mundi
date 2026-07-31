@@ -15,7 +15,10 @@
     "low-countries"
   ],
   "summary": "Menno Simons was ordained among the Anabaptists of the Low Countries; the Mennonite tradition takes its name from him.",
-  "sources": [],
+  "sources": [
+    "macculloch-reformation-2003",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -26,5 +29,5 @@
   "tags": [
     "from-design-export"
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

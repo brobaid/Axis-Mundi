@@ -8,30 +8,38 @@
       "dimension": "divine-concept",
       "value": "non-theist",
       "nuance": "No creator deity is affirmed.",
-      "sources": [],
+      "sources": [
+        "dundas-jains-2002"
+      ],
       "contested": false
     },
     {
       "dimension": "afterlife",
       "value": "rebirth",
       "nuance": "Rebirth conditioned by karma.",
-      "sources": [],
+      "sources": [
+        "dundas-jains-2002"
+      ],
       "contested": false
     },
     {
       "dimension": "dietary-law",
       "value": "strict-vegetarian",
       "nuance": "Strict vegetarianism follows from ahimsa.",
-      "sources": [],
+      "sources": [
+        "dundas-jains-2002"
+      ],
       "contested": false
     },
     {
       "dimension": "calendar-system",
       "value": "lunisolar",
       "nuance": "A lunisolar calendar.",
-      "sources": [],
+      "sources": [
+        "dundas-jains-2002"
+      ],
       "contested": false
     }
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

@@ -19,7 +19,10 @@
     "sasanian",
     "state-religion"
   ],
-  "sources": [],
+  "sources": [
+    "boyce-zoroastrians",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -27,5 +30,5 @@
     "figures": []
   },
   "influence": [],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

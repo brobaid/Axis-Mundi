@@ -13,5 +13,13 @@
   "contested": false,
   "currents": [],
   "order": 4,
-  "founded": {}
+  "founded": {},
+  "adherents": {
+    "display": "324 m (Pew, 2020)",
+    "estimate": 324000000,
+    "source": "pew-grl-2025",
+    "year": 2020,
+    "basis": "Enumerated by Pew. 4.1% of world population; the only major group that shrank between 2010 and 2020.",
+    "contested": false
+  }
 }

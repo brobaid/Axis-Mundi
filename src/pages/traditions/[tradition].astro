@@ -5,7 +5,7 @@ import TraditionSymbols from '../../components/TraditionSymbols.astro';
 import TraditionSymbol from '../../components/TraditionSymbol.astro';
 import GlossaryCard from '../../components/GlossaryCard.astro';
 import MatrixCells from '../../components/MatrixCells.astro';
-import { getPublishable, includesUnsourced } from '../../lib/content';
+import { getPublishable, getStructural, includesUnsourced } from '../../lib/content';
 import { renderProse } from '../../lib/prose';
 import { traditionMeta } from '../../lib/traditions';
 import type { MatrixDimension } from '../../schemas/matrix';
@@ -31,8 +31,11 @@ export const getStaticPaths = (async () => {
 const { dive } = Astro.props;
 const meta = traditionMeta(dive.tradition);
 
-const [glossary, taxonomy, matrixRows, festivals, sources, events] = await Promise.all([
+const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, sources, events] = await Promise.all([
   getPublishable('glossary'),
+  /* The branch tree renders names and contested flags — spec §2.3 structure. */
+  getStructural('taxonomy'),
+  /* Currents carry authored summaries, so they gate on sourcing. */
   getPublishable('taxonomy'),
   getPublishable('matrix'),
   getPublishable('festivals'),
@@ -59,7 +62,7 @@ const branches = taxonomy
       .map((c) => c.data),
   }));
 
-const traditionNode = taxonomy.find((n) => n.data.id === dive.tradition)?.data;
+const traditionNode = publishedTaxonomy.find((n) => n.data.id === dive.tradition)?.data;
 const currents = traditionNode?.currents ?? [];
 
 /* §5.3 and §5.7 — matrix cells, extracted not rewritten (§1.2). */

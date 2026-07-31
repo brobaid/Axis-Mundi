@@ -56,10 +56,14 @@ export const statBox = z.object({
   adherents: z
     .object({
       display: z.string().min(1),
+      estimate: z.number().int().nonnegative().optional(),
       source: sourceRef.optional(),
       year: z.number().int().min(1900).max(2100).optional(),
+      basis: z.string().optional(),
       note: z.string().optional(),
+      ...contestable,
     })
+    .superRefine(requireContestedNote)
     .optional(),
   founded: z.string().min(1),
   origin_region: slug.optional(),

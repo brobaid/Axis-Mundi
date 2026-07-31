@@ -19,7 +19,10 @@
     "canon",
     "agama"
   ],
-  "sources": [],
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
   "contested": true,
   "media": [],
   "links": {
@@ -27,6 +30,6 @@
     "figures": []
   },
   "influence": [],
-  "sourcing": "todo",
+  "sourcing": "sourced",
   "contested_note": "The date of the council is disputed. The redaction of the Svetambara Agama canon at Valabhi is placed at 453 CE on one reckoning of the traditional chronology and at 466 CE on another, the two differing by the interval taken from the death of Mahavira. This record follows 453. Both positions require citation before this note ships."
 }

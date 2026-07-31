@@ -8,7 +8,9 @@
       "dimension": "divine-concept",
       "value": "monotheist",
       "nuance": "One God, indivisible, without physical form.",
-      "sources": [],
+      "sources": [
+        "ej2-2007"
+      ],
       "contested": false
     },
     {
@@ -16,7 +18,7 @@
       "value": "varies",
       "nuance": "The reference build records the position as varying.",
       "sources": [
-        "encyclopaedia-judaica"
+        "ej2-2007"
       ],
       "contested": true,
       "contested_note": "Positions on afterlife range widely across rabbinic thought, from resurrection to more figurative readings."
@@ -25,16 +27,20 @@
       "dimension": "dietary-law",
       "value": "kosher",
       "nuance": "Dietary law follows the kashrut rules.",
-      "sources": [],
+      "sources": [
+        "ej2-2007"
+      ],
       "contested": false
     },
     {
       "dimension": "calendar-system",
       "value": "lunisolar",
       "nuance": "A lunisolar calendar with intercalated months.",
-      "sources": [],
+      "sources": [
+        "ej2-2007"
+      ],
       "contested": false
     }
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

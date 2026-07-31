@@ -30,5 +30,13 @@
     }
   ],
   "order": 1,
-  "founded": {}
+  "founded": {},
+  "adherents": {
+    "display": "2.0 bn (Pew, 2020)",
+    "estimate": 2000000000,
+    "source": "pew-grl-2025",
+    "year": 2020,
+    "basis": "Enumerated by Pew. 25.6% of world population. Supersedes the v5 stat box figure of 1.9 bn.",
+    "contested": false
+  }
 }

@@ -19,7 +19,10 @@
     "vedanta",
     "advaita"
   ],
-  "sources": [],
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -27,6 +30,6 @@
     "figures": []
   },
   "influence": [],
-  "sourcing": "todo",
+  "sourcing": "sourced",
   "year_end": 820
 }

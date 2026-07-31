@@ -15,7 +15,10 @@
     "eastern-europe"
   ],
   "summary": "Vladimir of Kiev adopted Christianity from Constantinople, drawing the Rus into the Byzantine ecclesiastical orbit.",
-  "sources": [],
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
   "contested": false,
   "media": [],
   "links": {
@@ -26,5 +29,5 @@
   "tags": [
     "from-design-export"
   ],
-  "sourcing": "todo"
+  "sourcing": "sourced"
 }

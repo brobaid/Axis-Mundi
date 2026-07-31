@@ -21,13 +21,29 @@ import {
 
 export const nodeStatus = z.enum(['living', 'historical']);
 
-/** Spec §9.2.4 — adherent counts are Pew unless explicitly noted otherwise. */
-export const adherents = z.object({
-  estimate: z.number().int().nonnegative(),
-  source: sourceRef,
-  year: z.number().int().min(1900).max(2100),
-  note: z.string().optional(),
-});
+/**
+ * Spec §9.2.4 — adherent counts are Pew unless explicitly noted otherwise.
+ *
+ * `display` is the authoritative rendering and is used verbatim: the sourcing
+ * memo fixes the exact string, including its unit and its parenthetical. Two
+ * traditions have no honest point estimate at all — Shinto, where shrine
+ * registers and self-identification disagree by an order of magnitude, and the
+ * Chinese cluster, where formal affiliation and folk practice are different
+ * questions. Neither is coerced to a number, so `estimate` is optional and
+ * `contested` carries the dispute.
+ */
+export const adherents = z
+  .object({
+    display: z.string().min(1),
+    estimate: z.number().int().nonnegative().optional(),
+    source: sourceRef,
+    year: z.number().int().min(1900).max(2100).optional(),
+    /** Why this basis, when it is not a Pew enumeration. */
+    basis: z.string().optional(),
+    note: z.string().optional(),
+    ...contestable,
+  })
+  .superRefine(requireContestedNote);
 
 /**
  * Spec §2.2 — "Currents vs branches." Movements that cut across branches
