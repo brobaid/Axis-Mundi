@@ -48,6 +48,7 @@ interface State {
   to: number;
   types: Set<string>;
   ghosts: boolean;
+  threads: boolean;
   selected: string | null;
 }
 
@@ -64,6 +65,7 @@ if (root !== null) {
   const zoomEl = root.querySelector<HTMLElement>('[data-zoom-label]');
   const upBtn = root.querySelector<HTMLButtonElement>('[data-up]');
   const ghostBtn = root.querySelector<HTMLButtonElement>('[data-ghost-toggle]');
+    const threadsBtn = root.querySelector<HTMLButtonElement>('[data-threads-toggle]');
   const panelEl = root.querySelector<HTMLElement>('[data-panel]');
   const scrimEl = root.querySelector<HTMLElement>('[data-scrim]');
   const filterEls = [...root.querySelectorAll<HTMLButtonElement>('[data-type]')];
@@ -82,6 +84,7 @@ if (root !== null) {
       to: data.defaultView.to,
       types: new Set(),
       ghosts: false,
+      threads: false,
       selected: null,
     };
 
@@ -104,6 +107,7 @@ if (root !== null) {
       const types = q.get('types');
       state.types = new Set(types === null || types === '' ? [] : types.split(','));
       state.ghosts = q.get('ghosts') === '1';
+      state.threads = q.get('threads') === '1';
       state.selected = q.get('event');
     }
 
@@ -114,6 +118,7 @@ if (root !== null) {
       q.set('to', String(Math.round(state.to)));
       if (state.types.size > 0) q.set('types', [...state.types].join(','));
       if (state.ghosts) q.set('ghosts', '1');
+      if (state.threads) q.set('threads', '1');
       if (state.selected !== null) q.set('event', state.selected);
       const url = `${location.pathname}?${q.toString()}`;
       if (replace) history.replaceState(null, '', url);
@@ -183,6 +188,7 @@ if (root !== null) {
         subtitle,
         meridianYear,
         meridianLabel: fmtYear(meridianYear),
+        threads: state.threads,
       });
 
       /* Chronological order drives arrow-key walking, and matches what a reader
@@ -196,6 +202,10 @@ if (root !== null) {
       if (crumbEl) crumbEl.innerHTML = crumbHtml();
       if (zoomEl) zoomEl.textContent = zoomLabel(state.to - state.from);
       if (upBtn) upBtn.hidden = state.drill === '';
+      if (threadsBtn) {
+        threadsBtn.setAttribute('aria-pressed', String(state.threads));
+        threadsBtn.textContent = state.threads ? 'Threads: on' : 'Influence threads';
+      }
       if (ghostBtn) {
         ghostBtn.hidden = state.drill === '';
         ghostBtn.setAttribute('aria-pressed', String(state.ghosts));
@@ -319,6 +329,15 @@ if (root !== null) {
     canvas.addEventListener('click', (ev) => {
       const target = ev.target as HTMLElement;
 
+      /* A thread stands for one record on two or more lanes, so tapping it
+         opens that record — the same panel the dot opens. */
+      const thread = target.closest<SVGPathElement>('[data-thread]');
+      const threadId = thread?.dataset['thread'];
+      if (threadId !== undefined && byId.has(threadId)) {
+        openPanel(threadId);
+        return;
+      }
+
       const node = target.closest<HTMLElement>('[data-event-id]');
       if (node !== null) {
         const id = node.dataset['eventId'];
@@ -349,6 +368,14 @@ if (root !== null) {
     });
 
     upBtn?.addEventListener('click', () => setDrill(drillParent(state.drill)));
+
+    threadsBtn?.addEventListener('click', () => {
+      state.threads = !state.threads;
+      render();
+      /* A lens on the canvas, not a destination: replace, so Back leaves the
+         room rather than unwinding every toggle. */
+      writeUrl(true);
+    });
 
     ghostBtn?.addEventListener('click', () => {
       state.ghosts = !state.ghosts;

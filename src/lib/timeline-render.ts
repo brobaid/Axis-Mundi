@@ -139,12 +139,93 @@ function renderLane(layout: LaneLayout, view: Viewport, symbolFor: (id: string) 
   );
 }
 
+/* ── influence threads ──────────────────────────────────────────────────── */
+
+export interface Thread {
+  readonly id: string;
+  readonly title: string;
+  readonly traditions: readonly string[];
+  readonly d: string;
+  /** True when either end attaches to a cluster rather than a single node. */
+  readonly clustered: boolean;
+}
+
+/**
+ * Arcs joining the lanes a multi-tradition record belongs to.
+ *
+ * The threads feature's first pass, and it invents nothing: a thread exists
+ * exactly where one record already names more than one tradition. It is drawn
+ * between the positions the layout already chose, dodge rows included, so a
+ * thread lands on the dot it belongs to rather than near it. Where a record's
+ * lane has collapsed it into a cluster, the thread attaches to the cluster —
+ * the honest anchor, since the individual dot is not on screen.
+ */
+export function threads(layouts: readonly LaneLayout[]): Thread[] {
+  interface Anchor { x: number; y: number; lane: number; clustered: boolean }
+  const byEvent = new Map<string, { title: string; traditions: string[]; anchors: Anchor[] }>();
+
+  layouts.forEach((layout, laneIndex) => {
+    const laneTop = laneIndex * LANE_HEIGHT;
+    for (const p of layout.placed) {
+      if ('events' in p) {
+        /* A cluster stands in for each event inside it. */
+        for (const e of p.events) {
+          const entry = byEvent.get(e.id) ?? { title: e.title, traditions: [...e.traditions], anchors: [] };
+          entry.anchors.push({ x: p.x, y: laneTop + LANE_HEIGHT / 2, lane: laneIndex, clustered: true });
+          byEvent.set(e.id, entry);
+        }
+        continue;
+      }
+      if (p.ghost) continue;
+      const frac = !p.dodged ? 0.5 : p.row === 0 ? 0.3 : 0.7;
+      const entry = byEvent.get(p.event.id) ?? {
+        title: p.event.title,
+        traditions: [...p.event.traditions],
+        anchors: [],
+      };
+      entry.anchors.push({ x: p.x, y: laneTop + LANE_HEIGHT * frac, lane: laneIndex, clustered: false });
+      byEvent.set(p.event.id, entry);
+    }
+  });
+
+  const out: Thread[] = [];
+  for (const [id, entry] of byEvent) {
+    if (entry.anchors.length < 2) continue;
+    const anchors = [...entry.anchors].sort((a, b) => a.lane - b.lane);
+    /* One arc per adjacent pair, so a five-tradition record threads through
+       every lane it touches rather than drawing a star from the first. */
+    const segments: string[] = [];
+    for (let i = 0; i < anchors.length - 1; i += 1) {
+      const a = anchors[i] as Anchor;
+      const b = anchors[i + 1] as Anchor;
+      /* Bowed toward the reader's left so a thread never hides under a lane
+         rule, with the bow scaled to the vertical distance it spans. */
+      const bow = Math.min(60, Math.abs(b.y - a.y) * 0.55) + 8;
+      const mx = (a.x + b.x) / 2 - bow;
+      const my = (a.y + b.y) / 2;
+      segments.push(
+        `M${a.x.toFixed(1)} ${a.y.toFixed(1)} Q${mx.toFixed(1)} ${my.toFixed(1)} ${b.x.toFixed(1)} ${b.y.toFixed(1)}`,
+      );
+    }
+    out.push({
+      id,
+      title: entry.title,
+      traditions: entry.traditions,
+      d: segments.join(' '),
+      clustered: anchors.some((a) => a.clustered),
+    });
+  }
+  return out;
+}
+
 export interface CanvasOptions {
   readonly title: string;
   readonly subtitle: string;
   /** Meridian year. Omitted hides it. */
   readonly meridianYear?: number | undefined;
   readonly meridianLabel?: string | undefined;
+  /** Draw the influence threads over the lanes. */
+  readonly threads?: boolean | undefined;
 }
 
 /** Inline `<use>` of a sprite symbol, hued by the tradition token. */
@@ -173,6 +254,29 @@ export function renderCanvas(
 
   const lanesHtml = layouts.map((l) => renderLane(l, view, symbolMarkup)).join('');
 
+  let threadsHtml = '';
+  if (options.threads === true) {
+    const drawn = threads(layouts);
+    const height = layouts.length * LANE_HEIGHT;
+    threadsHtml =
+      `<svg class="tl-threads" viewBox="0 0 ${view.width} ${height}" preserveAspectRatio="none"` +
+      ` aria-hidden="true" style="left:${LANE_GUTTER}px">` +
+      drawn
+        .map(
+          (t) =>
+            /* Two paths per thread: a transparent one carrying the hit area, and
+               the hairline the eye sees. A 1.25px stroke is untappable on a
+               phone, and under the overlay's non-uniform scale its hit region
+               collapses further — so the target is a fixed screen-width band. */
+            `<path class="tl-thread__hit" d="${t.d}" data-thread="${esc(t.id)}">` +
+            `<title>${esc(t.title)} — ${esc(t.traditions.join(', '))}</title></path>` +
+            `<path class="tl-thread${t.clustered ? ' tl-thread--clustered' : ''}" d="${t.d}"` +
+            ` aria-hidden="true"/>`,
+        )
+        .join('') +
+      `</svg>`;
+  }
+
   let meridian = '';
   if (options.meridianYear !== undefined) {
     const f = (options.meridianYear - view.from) / (view.to - view.from);
@@ -196,7 +300,7 @@ export function renderCanvas(
     `<div class="tl-plate__sub">${esc(options.subtitle)}</div>` +
     `</div></div>` +
     `<div class="tl-ruler">${rulerHtml}</div>` +
-    `<div class="tl-lanes" role="grid" aria-label="Timeline lanes">${lanesHtml}</div>` +
+    `<div class="tl-lanes" role="grid" aria-label="Timeline lanes">${lanesHtml}${threadsHtml}</div>` +
     meridian +
     `</div>`
   );

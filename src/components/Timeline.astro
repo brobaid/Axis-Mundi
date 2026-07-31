@@ -77,6 +77,9 @@ const bootstrap = {
       <button type="button" class="tl-btn" data-ghost-toggle aria-pressed="false" hidden>
         Ghost mode
       </button>
+      <button type="button" class="tl-btn" data-threads-toggle aria-pressed="false">
+        Influence threads
+      </button>
     </div>
   </div>
 
@@ -327,6 +330,55 @@ const bootstrap = {
   }
 
   /* --- lanes ------------------------------------------------------------ */
+
+  /* The threads overlay is absolutely positioned against the lanes block, so
+     the lanes block has to be the containing block. Without this it resolved
+     against .tl-inner and the arcs sat a gutter to the right and a plate-height
+     too high — drawn, but not on the dots they join. */
+  .tl-canvas :global(.tl-lanes) {
+    position: relative;
+  }
+
+  /* Influence threads: a brass hairline, the same accent the meridian uses,
+     because a thread is a relation the record already states rather than a new
+     claim. Never a tradition hue — a thread belongs to no single lane. */
+  .tl-canvas :global(.tl-threads) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+  }
+
+  .tl-canvas :global(.tl-thread) {
+    fill: none;
+    stroke: var(--brass);
+    stroke-width: 1.25;
+    vector-effect: non-scaling-stroke;
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  .tl-canvas :global(.tl-thread__hit) {
+    fill: none;
+    stroke: transparent;
+    stroke-width: 20;
+    vector-effect: non-scaling-stroke;
+    pointer-events: stroke;
+    cursor: pointer;
+  }
+
+  .tl-canvas :global(.tl-thread__hit:hover + .tl-thread),
+  .tl-canvas :global(.tl-thread__hit:focus-visible + .tl-thread) {
+    opacity: 1;
+    stroke-width: 2;
+  }
+
+  /* One end sits on a cluster rather than a dot, so the thread says so. */
+  .tl-canvas :global(.tl-thread--clustered) {
+    stroke-dasharray: 4 3;
+  }
 
   .tl-canvas :global(.tl-lane) {
     display: flex;
