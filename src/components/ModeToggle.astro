@@ -61,6 +61,18 @@
     min-width: 8.5ch;
     text-align: left;
   }
+
+  /* Below 30rem the label gives way; the button keeps its aria-label, and the
+     dot still shows state by fill rather than by colour alone. */
+  @media (max-width: 30rem) {
+    .mode-toggle__label {
+      display: none;
+    }
+
+    .mode-toggle {
+      padding: var(--space-1) var(--space-2);
+    }
+  }
 </style>
 
 <script>

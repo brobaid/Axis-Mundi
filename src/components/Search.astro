@@ -1,0 +1,431 @@
+---
+/**
+ * Universal search overlay (design language §8, kickoff M2).
+ *
+ * Searches events, traditions and glossary terms. The index is a static JSON
+ * file fetched on first open and matched in the browser — no server, and no
+ * network round trip per keystroke.
+ */
+---
+
+<button type="button" class="search-open" data-search-open aria-haspopup="dialog">
+  <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+      <circle cx="11" cy="11" r="6.5"></circle>
+      <path d="M15.8 15.8 L20 20"></path>
+    </g>
+  </svg>
+  <span class="search-open__label">Search</span>
+</button>
+
+<div class="search-scrim" data-search-scrim hidden></div>
+
+<div
+  class="search"
+  data-search
+  hidden
+  role="dialog"
+  aria-modal="true"
+  aria-label="Search Axis Mundi"
+>
+  <div class="search__bar">
+    <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+      <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <circle cx="11" cy="11" r="6.5"></circle>
+        <path d="M15.8 15.8 L20 20"></path>
+      </g>
+    </svg>
+    <input
+      type="search"
+      data-search-input
+      placeholder="Events, traditions, terms"
+      aria-label="Search events, traditions and glossary terms"
+      autocomplete="off"
+      spellcheck="false"
+    />
+    <button type="button" class="search__close" data-search-close aria-label="Close search">
+      <span aria-hidden="true">Esc</span>
+    </button>
+  </div>
+  <div class="search__results" data-search-results role="listbox" aria-label="Results"></div>
+  <p class="search__hint caption" data-search-hint>
+    Type to search across the timeline, the traditions and the glossary.
+  </p>
+</div>
+
+<script>
+  interface Doc {
+    kind: 'event' | 'tradition' | 'glossary';
+    id: string;
+    title: string;
+    meta: string;
+    body: string;
+    url: string;
+    tradition?: string;
+  }
+
+  const openBtn = document.querySelector<HTMLButtonElement>('[data-search-open]');
+  const panel = document.querySelector<HTMLElement>('[data-search]');
+  const scrim = document.querySelector<HTMLElement>('[data-search-scrim]');
+  const input = document.querySelector<HTMLInputElement>('[data-search-input]');
+  const results = document.querySelector<HTMLElement>('[data-search-results]');
+  const hint = document.querySelector<HTMLElement>('[data-search-hint]');
+
+  if (panel && input && results) {
+    let docs: Doc[] | null = null;
+    let loading = false;
+    let active = -1;
+
+    /* Fold diacritics so "Munster" finds "Münster" and "tawhid" finds
+       "tawḥīd" — the corpus is full of transliterations. */
+    const fold = (s: string): string =>
+      s
+        .normalize('NFD')
+        .replace(/[̀-ͯ]/g, '')
+        .toLowerCase();
+
+    async function ensureIndex(): Promise<void> {
+      if (docs !== null || loading) return;
+      loading = true;
+      try {
+        const res = await fetch('/search-index.json');
+        const data = (await res.json()) as { docs: Doc[] };
+        docs = data.docs;
+      } catch {
+        docs = [];
+        if (hint) hint.textContent = 'Search index unavailable.';
+      } finally {
+        loading = false;
+        if (input!.value.trim() !== '') render(input!.value);
+      }
+    }
+
+    interface Scored {
+      doc: Doc;
+      score: number;
+    }
+
+    function search(query: string): Scored[] {
+      if (docs === null) return [];
+      const q = fold(query.trim());
+      if (q === '') return [];
+      const terms = q.split(/\s+/).filter(Boolean);
+
+      const scored: Scored[] = [];
+      for (const doc of docs) {
+        const title = fold(doc.title);
+        const meta = fold(doc.meta);
+        const body = fold(doc.body);
+
+        let score = 0;
+        let matchedAll = true;
+
+        for (const term of terms) {
+          let best = 0;
+          if (title === term) best = 100;
+          else if (title.startsWith(term)) best = 60;
+          else if (title.includes(term)) best = 40;
+          else if (meta.includes(term)) best = 20;
+          else if (body.includes(term)) best = 10;
+
+          if (best === 0) {
+            matchedAll = false;
+            break;
+          }
+          score += best;
+        }
+
+        if (!matchedAll) continue;
+        /* Glossary terms are short and specific; nudge them up so a term
+           search does not drown under events that merely mention it. */
+        if (doc.kind === 'glossary') score += 8;
+        scored.push({ doc, score });
+      }
+
+      return scored.sort((a, b) => b.score - a.score || a.doc.title.localeCompare(b.doc.title)).slice(0, 24);
+    }
+
+    const esc = (s: string): string =>
+      s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+    function render(query: string): void {
+      const found = search(query);
+      active = found.length > 0 ? 0 : -1;
+
+      if (query.trim() === '') {
+        results!.innerHTML = '';
+        if (hint) {
+          hint.hidden = false;
+          hint.textContent = 'Type to search across the timeline, the traditions and the glossary.';
+        }
+        return;
+      }
+
+      if (hint) {
+        hint.hidden = found.length > 0;
+        hint.textContent = docs === null ? 'Loading index…' : `No matches for “${query}”.`;
+      }
+
+      results!.innerHTML = found
+        .map(({ doc }, i) => {
+          const chip =
+            doc.tradition === undefined
+              ? ''
+              : `<span class="swatch" style="--tradition-hue: var(--t-${doc.tradition})" aria-hidden="true"></span>`;
+          return (
+            `<a class="sr" role="option" aria-selected="${i === 0}" href="${doc.url}" data-index="${i}">` +
+            `<span class="sr__kind">${doc.kind}</span>` +
+            `<span class="sr__main">${chip}<b>${esc(doc.title)}</b>` +
+            `<span class="sr__meta">${esc(doc.meta)}</span></span>` +
+            `<span class="sr__body">${esc(doc.body)}</span>` +
+            `</a>`
+          );
+        })
+        .join('');
+    }
+
+    function highlight(): void {
+      const items = [...results!.querySelectorAll<HTMLElement>('.sr')];
+      items.forEach((el, i) => {
+        el.setAttribute('aria-selected', String(i === active));
+        el.classList.toggle('sr--active', i === active);
+      });
+      items[active]?.scrollIntoView({ block: 'nearest' });
+    }
+
+    function open(): void {
+      panel!.hidden = false;
+      scrim?.removeAttribute('hidden');
+      document.documentElement.style.overflow = 'hidden';
+      input!.focus();
+      input!.select();
+      void ensureIndex();
+    }
+
+    function close(): void {
+      panel!.hidden = true;
+      scrim?.setAttribute('hidden', '');
+      document.documentElement.style.overflow = '';
+      openBtn?.focus();
+    }
+
+    openBtn?.addEventListener('click', open);
+    scrim?.addEventListener('click', close);
+    document.querySelector('[data-search-close]')?.addEventListener('click', close);
+
+    input.addEventListener('input', () => render(input.value));
+
+    input.addEventListener('keydown', (ev) => {
+      const items = results!.querySelectorAll('.sr');
+      if (ev.key === 'ArrowDown' || ev.key === 'ArrowUp') {
+        if (items.length === 0) return;
+        ev.preventDefault();
+        active = (active + (ev.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length;
+        highlight();
+      } else if (ev.key === 'Enter') {
+        const el = items[active] as HTMLAnchorElement | undefined;
+        if (el) {
+          ev.preventDefault();
+          window.location.href = el.href;
+        }
+      }
+    });
+
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape' && !panel!.hidden) {
+        close();
+        return;
+      }
+      /* Cmd/Ctrl-K anywhere, and "/" when not already typing. */
+      const typing =
+        document.activeElement instanceof HTMLInputElement ||
+        document.activeElement instanceof HTMLTextAreaElement;
+      if ((ev.key === 'k' && (ev.metaKey || ev.ctrlKey)) || (ev.key === '/' && !typing)) {
+        ev.preventDefault();
+        open();
+      }
+    });
+  }
+</script>
+
+<style>
+  .search-open {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: none;
+    border: var(--hairline-width) solid var(--hairline-strong);
+    border-radius: var(--radius-pill);
+    padding: var(--space-1) var(--space-3);
+    color: var(--ink-soft);
+    font-family: var(--font-ui);
+    font-size: var(--size-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      color var(--dur-micro) var(--ease-out),
+      border-color var(--dur-micro) var(--ease-out);
+  }
+
+  .search-open:hover {
+    color: var(--ink);
+    border-color: var(--brass);
+  }
+
+  @media (max-width: 30rem) {
+    .search-open__label {
+      display: none;
+    }
+  }
+
+  .search-scrim {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-overlay);
+    background: var(--scrim);
+  }
+
+  .search {
+    position: fixed;
+    z-index: calc(var(--z-overlay) + 1);
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+    width: min(46rem, 100vw);
+    max-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--hairline);
+    border-top: 0;
+    box-shadow: var(--shadow-panel);
+    animation: search-in var(--dur-panel) var(--ease-standard);
+  }
+
+  @media (min-width: 48rem) {
+    .search {
+      top: 8vh;
+      border-top: var(--hairline-width) solid var(--hairline);
+      max-height: 78vh;
+    }
+  }
+
+  .search__bar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    color: var(--ink-soft);
+  }
+
+  .search__bar input {
+    flex: 1;
+    border: 0;
+    background: none;
+    font-family: var(--font-display);
+    font-size: var(--size-h3);
+    color: var(--ink);
+    min-height: var(--tap-min);
+  }
+
+  .search__bar input:focus {
+    outline: none;
+  }
+
+  .search__bar input::placeholder {
+    color: var(--ink-soft);
+    opacity: 0.7;
+  }
+
+  .search__close {
+    background: none;
+    border: var(--hairline-width) solid var(--hairline-strong);
+    border-radius: var(--radius-s);
+    color: var(--ink-soft);
+    font-family: var(--font-mono);
+    font-size: var(--size-caption);
+    padding: 2px var(--space-2);
+    min-height: var(--tap-min);
+    cursor: pointer;
+  }
+
+  .search__results {
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  .search__hint {
+    padding: var(--space-4);
+    color: var(--ink-soft);
+  }
+
+  :global(.sr) {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: var(--space-1) var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  :global(.sr--active),
+  :global(.sr:hover) {
+    background: var(--lane-hover);
+  }
+
+  :global(.sr__kind) {
+    grid-row: 1 / span 2;
+    font-family: var(--font-ui);
+    font-size: var(--size-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding-top: 3px;
+  }
+
+  :global(.sr__main) {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+  }
+
+  :global(.sr__meta) {
+    color: var(--ink-soft);
+    font-size: var(--size-caption);
+  }
+
+  :global(.sr__body) {
+    grid-column: 2;
+    color: var(--ink-soft);
+    font-size: var(--size-caption);
+    line-height: var(--leading-caption);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @keyframes search-in {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .search {
+      animation: none;
+    }
+  }
+</style>

@@ -1,0 +1,17 @@
+{
+  "id": "mahavir-jayanti",
+  "name": "Mahavir Jayanti",
+  "traditions": [
+    "jainism"
+  ],
+  "calendar": "lunisolar",
+  "date_rule": "Set by a lunisolar rule, so it wanders within a window rather than holding a fixed date.",
+  "observed": {
+    "2024": "04-21",
+    "2025": "04-10",
+    "2026": "03-31",
+    "2027": "04-19"
+  },
+  "sources": [],
+  "sourcing": "todo"
+}

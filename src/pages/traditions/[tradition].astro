@@ -1,0 +1,679 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TraditionSymbols from '../../components/TraditionSymbols.astro';
+import TraditionSymbol from '../../components/TraditionSymbol.astro';
+import GlossaryCard from '../../components/GlossaryCard.astro';
+import MatrixCells from '../../components/MatrixCells.astro';
+import { getPublishable, includesUnsourced } from '../../lib/content';
+import { renderProse } from '../../lib/prose';
+import { traditionMeta } from '../../lib/traditions';
+import type { MatrixDimension } from '../../schemas/matrix';
+import { displayDate } from '../../lib/display-date';
+
+/**
+ * The deep-dive template — Phase 0 spec §5.
+ *
+ * Fourteen sections, identical order for all ten traditions. The order never
+ * bends per tradition, because comparability is the product feature (§1.3);
+ * a section with nothing published yet keeps its heading and says so, rather
+ * than vanishing and changing the shape of the page.
+ */
+
+export const getStaticPaths = (async () => {
+  const dives = await getPublishable('deepDives');
+  return dives.map((entry) => ({
+    params: { tradition: entry.data.tradition },
+    props: { dive: entry.data },
+  }));
+}) satisfies GetStaticPaths;
+
+const { dive } = Astro.props;
+const meta = traditionMeta(dive.tradition);
+
+const [glossary, taxonomy, matrixRows, festivals, sources, events] = await Promise.all([
+  getPublishable('glossary'),
+  getPublishable('taxonomy'),
+  getPublishable('matrix'),
+  getPublishable('festivals'),
+  getPublishable('sources'),
+  getPublishable('events'),
+]);
+
+const available = new Set(glossary.map((g) => g.data.id));
+const prose = (body: string): string => renderProse(body, { available });
+
+/** A prose block renders only when it has passed a source check. */
+const publishable = <T extends { sourcing: 'sourced' | 'todo' } | undefined>(block: T): T | undefined =>
+  block === undefined ? undefined : includesUnsourced || block.sourcing !== 'todo' ? block : undefined;
+
+/* §5.5 Branches — the taxonomy under this tradition, to three levels. */
+const branches = taxonomy
+  .filter((n) => n.data.tradition === dive.tradition && n.data.depth === 2)
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((family) => ({
+    node: family.data,
+    children: taxonomy
+      .filter((n) => n.data.parent === family.data.id)
+      .sort((a, b) => a.data.order - b.data.order)
+      .map((c) => c.data),
+  }));
+
+const traditionNode = taxonomy.find((n) => n.data.id === dive.tradition)?.data;
+const currents = traditionNode?.currents ?? [];
+
+/* §5.3 and §5.7 — matrix cells, extracted not rewritten (§1.2). */
+const row = matrixRows.find((r) => r.data.node === dive.tradition);
+const cellsFor = (dimensions: readonly MatrixDimension[]) =>
+  dimensions
+    .map((d) => row?.data.cells.find((c) => c.dimension === d))
+    .filter((c): c is NonNullable<typeof c> => c !== undefined);
+
+const beliefCells = cellsFor(dive.belief_dimensions);
+const lawCells = cellsFor(dive.law_dimensions);
+
+/* §5.9 Holy days */
+const holyDays = dive.festivals
+  .map((id) => festivals.find((f) => f.data.id === id)?.data)
+  .filter((f): f is NonNullable<typeof f> => f !== undefined);
+
+/* §5.2 — events for the period marker, and the pre-filtered timeline link. */
+const traditionEvents = events
+  .filter((e) => e.data.traditions.includes(dive.tradition))
+  .sort((a, b) => a.data.year_start - b.data.year_start);
+
+/* §5.14 — everything cited anywhere on the page, plus further reading. */
+const citedIds = new Set<string>([
+  ...dive.further_reading,
+  ...[dive.overview, dive.origins, dive.core_beliefs, dive.law_and_ethics, dive.demographics]
+    .filter((b) => b !== undefined)
+    .flatMap((b) => b!.sources),
+  ...dive.canon.flatMap((c) => c.sources),
+  ...dive.practices.flatMap((p) => p.sources),
+  ...dive.misconceptions.flatMap((m) => m.sources),
+]);
+const cited = sources.filter((s) => citedIds.has(s.data.id));
+
+const SECTIONS = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'origins', label: 'Origins and history' },
+  { id: 'beliefs', label: 'Core beliefs' },
+  { id: 'texts', label: 'Sacred texts' },
+  { id: 'branches', label: 'Branches' },
+  { id: 'practices', label: 'Practices and worship' },
+  { id: 'law', label: 'Law and ethics' },
+  { id: 'rites', label: 'Rites of passage' },
+  { id: 'holy-days', label: 'Holy days' },
+  { id: 'sites', label: 'Sacred sites' },
+  { id: 'figures', label: 'Key figures' },
+  { id: 'demographics', label: 'Demographics' },
+  { id: 'misconceptions', label: 'Common misconceptions' },
+  { id: 'sources', label: 'Sources and further reading' },
+];
+
+const overview = publishable(dive.overview);
+const origins = publishable(dive.origins);
+const beliefs = publishable(dive.core_beliefs);
+const law = publishable(dive.law_and_ethics);
+const demographics = publishable(dive.demographics);
+const canon = dive.canon.filter((c) => includesUnsourced || c.sourcing !== 'todo');
+const practices = dive.practices.filter((p) => includesUnsourced || p.sourcing !== 'todo');
+const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.sourcing !== 'todo');
+---
+
+<BaseLayout
+  title={dive.name}
+  description={`${dive.name}: ${dive.subtitle}. Structured deep dive across beliefs, texts, branches, practice and demographics.`}
+>
+  <TraditionSymbols />
+
+  <article class="shell dd">
+    <!-- masthead ------------------------------------------------------- -->
+    <header class="dd-mast" style={`--tradition-hue: var(${meta.hueToken})`}>
+      <TraditionSymbol tradition={dive.tradition} size={40} />
+      {
+        dive.original && (
+          <div class="dd-mast__script" lang={dive.original.lang} dir="rtl">
+            {dive.original.text}
+          </div>
+        )
+      }
+      <h1>{dive.name}</h1>
+      <p class="dd-mast__sub">{dive.subtitle}</p>
+    </header>
+
+    <!-- §5.1 exhibit-label stat box ------------------------------------ -->
+    <dl class="exhibit-label dd-stats">
+      {
+        dive.stat_box.adherents && (
+          <>
+            <dt>Adherents</dt>
+            <dd>
+              {dive.stat_box.adherents.display}
+              {dive.stat_box.adherents.year && ` (${dive.stat_box.adherents.year})`}
+              <span class="dd-pending"> · unverified</span>
+            </dd>
+          </>
+        )
+      }
+      <dt>Founded</dt>
+      <dd>{dive.stat_box.founded}</dd>
+      {
+        dive.stat_box.primary_texts.length > 0 && (
+          <>
+            <dt>Primary texts</dt>
+            <dd>{dive.stat_box.primary_texts.join('; ')}</dd>
+          </>
+        )
+      }
+      {
+        dive.stat_box.branches_summary && (
+          <>
+            <dt>Branches</dt>
+            <dd>{dive.stat_box.branches_summary}</dd>
+          </>
+        )
+      }
+      {
+        dive.stat_box.calendar && (
+          <>
+            <dt>Calendar</dt>
+            <dd>{dive.stat_box.calendar}</dd>
+          </>
+        )
+      }
+    </dl>
+
+    <!-- sticky section nav --------------------------------------------- -->
+    <nav class="dd-nav" aria-label="Sections">
+      {SECTIONS.map((s) => <a href={`#${s.id}`}>{s.label}</a>)}
+    </nav>
+
+    <!-- 1 ------------------------------------------------------------- -->
+    <section id="overview" class="dd-section">
+      <h2>Overview</h2>
+      {overview ? <Fragment set:html={prose(overview.body)} /> : <p class="dd-pending">Awaiting a source check.</p>}
+    </section>
+
+    <!-- 2 ------------------------------------------------------------- -->
+    <section id="origins" class="dd-section">
+      <h2>Origins and history</h2>
+      {
+        dive.origins_period && (
+          <p class="dd-period mono">
+            {displayDate({
+              year_start: dive.origins_period.from,
+              year_end: dive.origins_period.to,
+              precision: dive.origins_period.precision,
+            })}
+          </p>
+        )
+      }
+      {origins ? <Fragment set:html={prose(origins.body)} /> : <p class="dd-pending">Awaiting a source check.</p>}
+      <p>
+        <a class="tap" href={`/timeline?drill=${dive.tradition}`}>
+          Open the timeline, filtered to {dive.name} &rarr;
+        </a>
+        <span class="caption"> · {traditionEvents.length} events in this build</span>
+      </p>
+    </section>
+
+    <!-- 3 ------------------------------------------------------------- -->
+    <section id="beliefs" class="dd-section">
+      <h2>Core beliefs</h2>
+      {beliefs ? <Fragment set:html={prose(beliefs.body)} /> : <p class="dd-pending">Awaiting a source check.</p>}
+      {beliefCells.length > 0 && <MatrixCells cells={beliefCells} />}
+    </section>
+
+    <!-- 4 ------------------------------------------------------------- -->
+    <section id="texts" class="dd-section">
+      <h2>Sacred texts</h2>
+      {
+        canon.length === 0 ? (
+          <p class="dd-pending">Awaiting a source check.</p>
+        ) : (
+          <div class="table-scroll">
+            <table class="canon">
+              <thead>
+                <tr>
+                  <th scope="col">Text</th>
+                  <th scope="col">Language</th>
+                  <th scope="col">Composition</th>
+                  <th scope="col">Canonical status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {canon.map((c) => (
+                  <tr>
+                    <th scope="row">
+                      {c.title}
+                      {c.original && (
+                        <span class="canon__script" lang={c.original.lang} dir="rtl">
+                          {c.original.text}
+                        </span>
+                      )}
+                    </th>
+                    <td>{c.language}</td>
+                    <td class="mono">{c.composition}</td>
+                    <td>{c.status}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )
+      }
+    </section>
+
+    <!-- 5 ------------------------------------------------------------- -->
+    <section id="branches" class="dd-section">
+      <h2>Branches</h2>
+      {
+        branches.length === 0 ? (
+          <p class="dd-pending">No branch records in this build.</p>
+        ) : (
+          <ul class="tree" role="list">
+            {branches.map(({ node, children }) => (
+              <li>
+                <span class="tree__family">
+                  {node.name}
+                  {node.contested && <span class="contested-badge">Contested</span>}
+                </span>
+                {children.length > 0 && (
+                  <ul role="list">
+                    {children.map((c) => (
+                      <li>
+                        {c.name}
+                        {c.contested && <span class="contested-badge">Contested</span>}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      {
+        currents.length > 0 && (
+          <div class="dd-currents">
+            <p class="eyebrow">Currents</p>
+            <p class="caption">
+              Movements that cut across branches rather than forming one. They are never rendered
+              as lanes or branches.
+            </p>
+            <ul role="list">
+              {currents.map((c) => (
+                <li>
+                  <b>{c.name}</b> — {c.summary}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+    </section>
+
+    <!-- 6 ------------------------------------------------------------- -->
+    <section id="practices" class="dd-section">
+      <h2>Practices and worship</h2>
+      {
+        practices.length === 0 ? (
+          <p class="dd-pending">Awaiting a source check.</p>
+        ) : (
+          <ul class="dd-list" role="list">
+            {practices.map((p) => (
+              <li>
+                <b>{p.name}</b>
+                {p.frequency && <span class="caption"> · {p.frequency}</span>}
+                <p>{p.summary}</p>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </section>
+
+    <!-- 7 ------------------------------------------------------------- -->
+    <section id="law" class="dd-section">
+      <h2>Law and ethics</h2>
+      {law ? <Fragment set:html={prose(law.body)} /> : null}
+      {
+        lawCells.length > 0 ? (
+          <MatrixCells cells={lawCells} />
+        ) : (
+          !law && <p class="dd-pending">Awaiting a source check.</p>
+        )
+      }
+    </section>
+
+    <!-- 8 ------------------------------------------------------------- -->
+    <section id="rites" class="dd-section">
+      <h2>Rites of passage</h2>
+      <p class="dd-pending">Life-arc records land in Phase 3.</p>
+    </section>
+
+    <!-- 9 ------------------------------------------------------------- -->
+    <section id="holy-days" class="dd-section">
+      <h2>Holy days</h2>
+      {
+        holyDays.length === 0 ? (
+          <p class="dd-pending">Awaiting a source check.</p>
+        ) : (
+          <ul class="dd-list" role="list">
+            {holyDays.map((f) => (
+              <li>
+                <b>{f.name}</b> <span class="caption">· {f.calendar}</span>
+                <p>{f.date_rule}</p>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </section>
+
+    <!-- 10 ------------------------------------------------------------ -->
+    <section id="sites" class="dd-section">
+      <h2>Sacred sites</h2>
+      <p class="dd-pending">Site records land with the map, in Phase 2.</p>
+    </section>
+
+    <!-- 11 ------------------------------------------------------------ -->
+    <section id="figures" class="dd-section">
+      <h2>Key figures</h2>
+      <p class="dd-pending">Figure records land with the influence network, in Phase 4.</p>
+    </section>
+
+    <!-- 12 ------------------------------------------------------------ -->
+    <section id="demographics" class="dd-section">
+      <h2>Demographics</h2>
+      {
+        demographics ? (
+          <Fragment set:html={prose(demographics.body)} />
+        ) : (
+          <p class="dd-pending">
+            Country-level figures follow Pew Research and land when the sourced file does.
+          </p>
+        )
+      }
+    </section>
+
+    <!-- 13 ------------------------------------------------------------ -->
+    <section id="misconceptions" class="dd-section">
+      <h2>Common misconceptions</h2>
+      <p class="caption measure">
+        These correct factual errors only. Theological disagreements between traditions, or within
+        one, are not misconceptions and are not treated as such.
+      </p>
+      {
+        misconceptions.length === 0 ? (
+          <p class="dd-pending">Awaiting a source check.</p>
+        ) : (
+          misconceptions.map((m) => (
+            <div class="miscon">
+              <p class="eyebrow">Misconception</p>
+              <p class="miscon__claim">&ldquo;{m.claim}&rdquo;</p>
+              <p>{m.correction}</p>
+              {m.sources.length > 0 && (
+                <p class="caption mono">
+                  Source: {m.sources.map((s) => sources.find((x) => x.data.id === s)?.data.title ?? s).join(', ')}
+                </p>
+              )}
+            </div>
+          ))
+        )
+      }
+    </section>
+
+    <!-- 14 ------------------------------------------------------------ -->
+    <section id="sources" class="dd-section">
+      <h2>Sources and further reading</h2>
+      {
+        cited.length === 0 ? (
+          <p class="dd-pending">No sources cited on this page yet.</p>
+        ) : (
+          <ul class="dd-list" role="list">
+            {cited.map((s) => (
+              <li>
+                <b>{s.data.title}</b>
+                {s.data.author && <span> — {s.data.author}</span>}
+                {s.data.publisher && <span class="caption"> · {s.data.publisher}</span>}
+                <span class="mono caption"> · {s.data.tier}</span>
+                {s.data.tier === 'T4' && <span class="caption"> · tradition-internal</span>}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </section>
+  </article>
+
+  <GlossaryCard />
+</BaseLayout>
+
+<style>
+  .dd {
+    padding-block: var(--space-12) var(--space-8);
+    max-width: 60rem;
+  }
+
+  /* --- masthead --------------------------------------------------------- */
+
+  .dd-mast {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+  }
+
+  /* The RTL box must shrink to its text, or it stretches the full column and
+     the name drifts to the far right of the page, away from its own masthead. */
+  .dd-mast__script {
+    font-family: var(--font-arabic);
+    font-size: 40px;
+    line-height: 1.3;
+    color: var(--tradition-hue);
+    align-self: start;
+    width: fit-content;
+  }
+
+  .dd-mast h1 {
+    margin: 0;
+  }
+
+  .dd-mast__sub {
+    color: var(--ink-soft);
+    font-size: var(--size-small);
+  }
+
+  .dd-stats {
+    max-width: 26rem;
+    margin-bottom: var(--space-6);
+  }
+
+  .dd-pending {
+    color: var(--ink-soft);
+    font-size: var(--size-small);
+    font-style: italic;
+  }
+
+  /* --- section nav ------------------------------------------------------ */
+
+  .dd-nav {
+    position: sticky;
+    top: 60px;
+    z-index: 10;
+    display: flex;
+    gap: var(--space-1);
+    overflow-x: auto;
+    background: var(--canvas);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    padding: var(--space-2) 0;
+    margin-bottom: var(--space-6);
+    scrollbar-width: thin;
+  }
+
+  .dd-nav a {
+    flex: 0 0 auto;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-pill);
+    min-height: var(--tap-min);
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .dd-nav a:hover {
+    background: var(--surface);
+    color: var(--brass-ink);
+  }
+
+  /* --- sections --------------------------------------------------------- */
+
+  .dd-section {
+    padding-block: var(--space-6);
+    border-top: var(--hairline-width) solid var(--hairline);
+    scroll-margin-top: 120px;
+  }
+
+  .dd-section h2 {
+    margin-bottom: var(--space-3);
+  }
+
+  .dd-section :global(p) {
+    max-width: var(--measure);
+    margin-bottom: var(--space-3);
+  }
+
+  .dd-period {
+    color: var(--brass-ink);
+    font-size: var(--size-caption);
+  }
+
+  /* --- canon table ------------------------------------------------------ */
+
+  .table-scroll {
+    overflow-x: auto;
+  }
+
+  .canon {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--size-small);
+    min-width: 34rem;
+  }
+
+  .canon th,
+  .canon td {
+    text-align: left;
+    vertical-align: top;
+    padding: var(--space-3) var(--space-4) var(--space-3) 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .canon thead th {
+    font-family: var(--font-ui);
+    font-size: var(--size-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .canon__script {
+    font-family: var(--font-arabic);
+    color: var(--ink-soft);
+    margin-left: var(--space-2);
+  }
+
+  /* --- branch tree ------------------------------------------------------ */
+
+  .tree,
+  .tree ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tree > li {
+    padding-block: var(--space-2);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .tree__family {
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .tree ul {
+    padding-left: var(--space-4);
+    margin-top: var(--space-1);
+  }
+
+  .tree ul li {
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
+    padding-block: 2px;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .dd-currents {
+    margin-top: var(--space-6);
+    padding: var(--space-4);
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--hairline);
+  }
+
+  .dd-currents ul {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-2);
+    font-size: var(--size-small);
+  }
+
+  .dd-currents li {
+    padding-block: var(--space-1);
+  }
+
+  /* --- lists and misconceptions ----------------------------------------- */
+
+  .dd-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .dd-list li {
+    padding-block: var(--space-3);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    font-size: var(--size-small);
+  }
+
+  .dd-list li :global(p) {
+    margin: var(--space-1) 0 0;
+    color: var(--ink-soft);
+  }
+
+  .miscon {
+    border: var(--hairline-width) solid var(--hairline);
+    border-left: 3px solid var(--brass);
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+    background: var(--surface);
+  }
+
+  .miscon__claim {
+    font-family: var(--font-display);
+    font-size: var(--size-h3);
+  }
+</style>

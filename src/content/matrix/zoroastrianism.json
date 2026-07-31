@@ -1,0 +1,37 @@
+{
+  "id": "zoroastrianism",
+  "node": "zoroastrianism",
+  "label": "Zoroastrianism",
+  "order": 9,
+  "cells": [
+    {
+      "dimension": "divine-concept",
+      "value": "monotheist",
+      "nuance": "One God, within a dualist moral frame.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "afterlife",
+      "value": "resurrection",
+      "nuance": "Bodily resurrection and final judgment.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "dietary-law",
+      "value": "purity-rules",
+      "nuance": "Observance centres on purity rather than prohibition.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "calendar-system",
+      "value": "solar",
+      "nuance": "The Zoroastrian calendar is solar.",
+      "sources": [],
+      "contested": false
+    }
+  ],
+  "sourcing": "todo"
+}

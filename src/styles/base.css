@@ -42,6 +42,12 @@ svg {
   max-width: 100%;
 }
 
+/* `hidden` must win over any component that sets a display value, or the
+   attribute becomes a lie. This bit the search overlay, which is a flex box. */
+[hidden] {
+  display: none !important;
+}
+
 input,
 button,
 textarea,

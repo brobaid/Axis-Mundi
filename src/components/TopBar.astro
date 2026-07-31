@@ -1,10 +1,18 @@
 ---
 import ModeToggle from './ModeToggle.astro';
+import Search from './Search.astro';
+import { getPublishable } from '../lib/content';
 
 /**
  * Global top bar (design language §8): wordmark, search, mode toggle.
  * Universal search lands in M2; the slot is held but not faked.
  */
+
+/* The deep dives that this build actually publishes. Linking to a gated one
+   would be a 404 in production, so the nav entry appears only when there is
+   somewhere for it to go. */
+const dives = await getPublishable('deepDives');
+const firstDive = dives[0]?.data.tradition;
 
 const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '');
 const isCurrent = (href: string): 'page' | undefined => (path === href ? 'page' : undefined);
@@ -18,8 +26,18 @@ const isCurrent = (href: string): 'page' | undefined => (path === href ? 'page' 
     </a>
     <nav class="topbar__nav" aria-label="Rooms">
       <a class="tap" href="/timeline" aria-current={isCurrent('/timeline')}>Timeline</a>
+      {
+        firstDive && (
+          <a class="tap" href={`/traditions/${firstDive}`} aria-current={isCurrent(`/traditions/${firstDive}`)}>
+            Traditions
+          </a>
+        )
+      }
     </nav>
-    <ModeToggle />
+    <div class="topbar__tools">
+      <Search />
+      <ModeToggle />
+    </div>
   </div>
 </header>
 
@@ -67,6 +85,32 @@ const isCurrent = (href: string): 'page' | undefined => (path === href ? 'page' 
     margin-right: var(--space-4);
     display: flex;
     gap: var(--space-4);
+  }
+
+  .topbar__tools {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  /* At 390px the bar carries wordmark, two nav links, search and the mode
+     toggle. The two labels that are recoverable elsewhere give up their width
+     first: the wordmark subtitle, and the toggle's text (which keeps its
+     aria-label and its filled/hollow dot). */
+  @media (max-width: 30rem) {
+    .topbar__nav {
+      gap: var(--space-3);
+      margin-right: var(--space-2);
+    }
+
+    .wordmark__sub {
+      display: none;
+    }
+
+    .wordmark__name {
+      white-space: nowrap;
+      font-size: var(--size-body);
+    }
   }
 
   .topbar__nav a {

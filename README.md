@@ -53,6 +53,25 @@ browser, and the two can never disagree:
 Reading it needs no JavaScript: the first paint is real content, and the full
 chronological list alternative is always in the DOM.
 
+## Deep dives, glossary and search
+
+The deep-dive template renders the spec's fourteen sections in the same order for
+every tradition — a section with nothing published keeps its heading and says so,
+because comparability is the product feature. Sourcing is per block, not per
+page: a tradition's history can be source-checked while its practices are not,
+and the unchecked block is held out on its own.
+
+Glossary terms are wrapped in prose at authoring time with a small syntax —
+`[[tawhid]]`, or `[[quran|the Quran]]` to change the display text. A reference to
+a term that is not in the build degrades to plain text, so a gated term never
+becomes a control that opens an empty card. `validate:content` fails on a
+reference to a term that has no record at all.
+
+Search indexes the source records, not the rendered HTML, so a gated record
+cannot leak into results through a page it was excluded from. The index is a
+static JSON file matched in the browser; there is no server and no per-keystroke
+request. Press `/` or `Cmd`/`Ctrl`-`K`.
+
 ## Two rules worth knowing before you edit anything
 
 **Colour lives in exactly one file.** `src/styles/tokens.css` defines every colour,
@@ -79,6 +98,8 @@ matrix cells need T1 or a labelled T4, and contested items need a note.
 - **M1 — the timeline engine.** Complete. Taxonomy-driven lanes, recursive drill
   with breadcrumb, semantic zoom, the density budget, dodge and cluster, the
   event panel, ghost mode, keyboard navigation, and full state in the URL.
-- **M2 — deep dives, glossary, universal search.** Next.
+- **M2 — deep dives, glossary, universal search.** Complete. The fourteen-section
+  deep-dive template with Islam as the first instance, glossary tap-cards, and
+  client-side universal search.
 
 The map, matrix and remaining modules are sequenced separately.

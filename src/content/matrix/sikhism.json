@@ -1,0 +1,37 @@
+{
+  "id": "sikhism",
+  "node": "sikhism",
+  "label": "Sikhism",
+  "order": 5,
+  "cells": [
+    {
+      "dimension": "divine-concept",
+      "value": "monotheist",
+      "nuance": "One God, without form.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "afterlife",
+      "value": "rebirth",
+      "nuance": "Rebirth, with liberation as release from it.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "dietary-law",
+      "value": "langar-norms",
+      "nuance": "The communal langar meal is vegetarian.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "calendar-system",
+      "value": "solar",
+      "nuance": "The Nanakshahi calendar is solar.",
+      "sources": [],
+      "contested": false
+    }
+  ],
+  "sourcing": "todo"
+}

@@ -7,6 +7,12 @@ import { glossaryTermSchema } from './schemas/glossary.js';
 import { matrixRowSchema } from './schemas/matrix.js';
 import { sourceSchema } from './schemas/source.js';
 import { regionSchema } from './schemas/region.js';
+import {
+  deepDiveSchema,
+  festivalSchema,
+  figureSchema,
+  siteSchema,
+} from './schemas/deep-dive.js';
 
 /**
  * Every piece of content in Axis Mundi is a collection entry validated by a Zod
@@ -26,4 +32,22 @@ const matrix = defineCollection({ loader: json('matrix'), schema: matrixRowSchem
 const sources = defineCollection({ loader: json('sources'), schema: sourceSchema });
 const regions = defineCollection({ loader: json('regions'), schema: regionSchema });
 
-export const collections = { events, taxonomy, glossary, matrix, sources, regions };
+/* Deep dives, plus the three record types the spec calls out as feeding later
+   modules: festivals → year wheel, sites → map layer, figures → network. */
+const deepDives = defineCollection({ loader: json('deep-dives'), schema: deepDiveSchema });
+const festivals = defineCollection({ loader: json('festivals'), schema: festivalSchema });
+const sites = defineCollection({ loader: json('sites'), schema: siteSchema });
+const figures = defineCollection({ loader: json('figures'), schema: figureSchema });
+
+export const collections = {
+  events,
+  taxonomy,
+  glossary,
+  matrix,
+  sources,
+  regions,
+  deepDives,
+  festivals,
+  sites,
+  figures,
+};

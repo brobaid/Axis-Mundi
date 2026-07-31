@@ -1,0 +1,37 @@
+{
+  "id": "hinduism",
+  "node": "hinduism",
+  "label": "Hinduism",
+  "order": 3,
+  "cells": [
+    {
+      "dimension": "divine-concept",
+      "value": "varies",
+      "nuance": "Positions range from monist to theist across the streams.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "afterlife",
+      "value": "rebirth",
+      "nuance": "Rebirth conditioned by karma.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "dietary-law",
+      "value": "often-vegetarian",
+      "nuance": "Vegetarian practice is common though not universal.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "calendar-system",
+      "value": "lunisolar",
+      "nuance": "Lunisolar reckoning, with regional variation.",
+      "sources": [],
+      "contested": false
+    }
+  ],
+  "sourcing": "todo"
+}

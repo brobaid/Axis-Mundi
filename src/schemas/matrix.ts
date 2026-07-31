@@ -68,9 +68,11 @@ export const matrixCellSchema = z
     dimension: matrixDimension,
     value: enumish,
     nuance: z.string().min(1, 'one to three sentences (spec §7)'),
-    /* Spec §9.2.2: every matrix cell cites T1 or labelled T4. Tier is verified
-       against the sources collection by validate-content.ts. */
-    sources: z.array(sourceRef).min(1, 'every matrix cell cites a source (spec §9.2.2)'),
+    /* Spec §9.2.2: every matrix cell cites T1 or labelled T4. The tier check
+       lives in validate-content.ts and applies once the row is source-checked;
+       a row still at sourcing:"todo" may carry none, and is excluded from the
+       build rather than published unsourced. */
+    sources: z.array(sourceRef).default([]),
     ...contestable,
   })
   .superRefine((value, ctx) => {

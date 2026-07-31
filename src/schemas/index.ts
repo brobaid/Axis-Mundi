@@ -12,3 +12,4 @@ export * from './glossary.js';
 export * from './matrix.js';
 export * from './source.js';
 export * from './region.js';
+export * from './deep-dive.js';

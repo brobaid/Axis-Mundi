@@ -1,0 +1,17 @@
+{
+  "id": "diwali",
+  "name": "Diwali",
+  "traditions": [
+    "hinduism"
+  ],
+  "calendar": "lunisolar",
+  "date_rule": "Set by a lunisolar rule, so it wanders within a window rather than holding a fixed date.",
+  "observed": {
+    "2024": "11-01",
+    "2025": "10-20",
+    "2026": "11-08",
+    "2027": "10-29"
+  },
+  "sources": [],
+  "sourcing": "todo"
+}

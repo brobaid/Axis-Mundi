@@ -1,0 +1,37 @@
+{
+  "id": "christianity",
+  "node": "christianity",
+  "label": "Christianity",
+  "order": 1,
+  "cells": [
+    {
+      "dimension": "divine-concept",
+      "value": "monotheist",
+      "nuance": "Trinitarian: one God in three persons, in Nicene Christianity.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "afterlife",
+      "value": "resurrection",
+      "nuance": "Bodily resurrection and final judgment.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "dietary-law",
+      "value": "generally-none",
+      "nuance": "No general dietary restriction across most branches.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "calendar-system",
+      "value": "solar",
+      "nuance": "A solar calendar, with some movable feasts set by rule.",
+      "sources": [],
+      "contested": false
+    }
+  ],
+  "sourcing": "todo"
+}

@@ -19,6 +19,13 @@ import { glossaryTermSchema } from '../src/schemas/glossary.js';
 import { matrixRowSchema } from '../src/schemas/matrix.js';
 import { sourceSchema } from '../src/schemas/source.js';
 import { regionSchema } from '../src/schemas/region.js';
+import {
+  deepDiveSchema,
+  festivalSchema,
+  figureSchema,
+  siteSchema,
+} from '../src/schemas/deep-dive.js';
+import { glossaryRefs } from '../src/lib/prose.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = resolve(ROOT, 'src/content');
@@ -64,6 +71,10 @@ const COLLECTIONS = {
   matrix: { dir: 'matrix', schema: matrixRowSchema },
   sources: { dir: 'sources', schema: sourceSchema },
   regions: { dir: 'regions', schema: regionSchema },
+  deepDives: { dir: 'deep-dives', schema: deepDiveSchema },
+  festivals: { dir: 'festivals', schema: festivalSchema },
+  sites: { dir: 'sites', schema: siteSchema },
+  figures: { dir: 'figures', schema: figureSchema },
 } satisfies Record<string, Collection<z.ZodTypeAny>>;
 
 type CollectionName = keyof typeof COLLECTIONS;
@@ -76,6 +87,10 @@ const parsed: Record<CollectionName, Map<string, { file: string; data: any }>> =
   matrix: new Map(),
   sources: new Map(),
   regions: new Map(),
+  deepDives: new Map(),
+  festivals: new Map(),
+  sites: new Map(),
+  figures: new Map(),
 };
 
 let fileCount = 0;
@@ -213,6 +228,60 @@ for (const { file, data } of parsed.glossary.values()) {
   }
   for (const [i, src] of (data.sources as string[]).entries()) {
     if (!has('sources', src)) note(file, `sources.${i}`, `unknown source "${src}"`);
+  }
+}
+
+/* Deep dives (spec §5). Every id reference has to resolve, and every glossary
+   term wrapped in prose has to exist, or the tap-card silently degrades to
+   plain text and the reader never learns the word. */
+for (const { file, data } of parsed.deepDives.values()) {
+  if (!has('taxonomy', data.tradition)) {
+    note(file, 'tradition', `unknown taxonomy node "${data.tradition}"`);
+  }
+
+  for (const key of ['festivals', 'sites', 'figures'] as const) {
+    for (const [i, ref] of (data[key] as string[]).entries()) {
+      if (!has(key, ref)) note(file, `${key}.${i}`, `unknown ${key} record "${ref}"`);
+    }
+  }
+
+  const proseKeys = ['overview', 'origins', 'core_beliefs', 'law_and_ethics', 'demographics'];
+  for (const key of proseKeys) {
+    const block = data[key];
+    if (block === undefined) continue;
+    for (const [i, src] of (block.sources as string[]).entries()) {
+      if (!has('sources', src)) note(file, `${key}.sources.${i}`, `unknown source "${src}"`);
+    }
+    for (const term of glossaryRefs(block.body as string)) {
+      if (!has('glossary', term)) {
+        note(file, key, `prose wraps glossary term "${term}", which has no record`);
+      }
+    }
+  }
+
+  for (const group of ['canon', 'practices', 'misconceptions', 'rites'] as const) {
+    for (const [i, entry] of (data[group] as { sources: string[] }[]).entries()) {
+      for (const [j, src] of entry.sources.entries()) {
+        if (!has('sources', src)) note(file, `${group}.${i}.sources.${j}`, `unknown source "${src}"`);
+      }
+    }
+  }
+
+  for (const [i, src] of (data.further_reading as string[]).entries()) {
+    if (!has('sources', src)) note(file, `further_reading.${i}`, `unknown source "${src}"`);
+  }
+
+  /* Spec §5: the fourteen sections are identical for every tradition, so the
+     structural slots must all be present even when a section is still empty. */
+  if (data.stat_box === undefined) note(file, 'stat_box', 'the Overview stat box is required');
+}
+
+/* Festivals, sites and figures: source references must resolve. */
+for (const group of ['festivals', 'sites', 'figures'] as const) {
+  for (const { file, data } of parsed[group].values()) {
+    for (const [i, src] of (data.sources as string[]).entries()) {
+      if (!has('sources', src)) note(file, `sources.${i}`, `unknown source "${src}"`);
+    }
   }
 }
 

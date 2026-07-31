@@ -1,0 +1,17 @@
+{
+  "id": "chinese-new-year",
+  "name": "Chinese New Year",
+  "traditions": [
+    "chinese"
+  ],
+  "calendar": "lunisolar",
+  "date_rule": "Set by a lunisolar rule, so it wanders within a window rather than holding a fixed date.",
+  "observed": {
+    "2024": "02-10",
+    "2025": "01-29",
+    "2026": "02-17",
+    "2027": "02-06"
+  },
+  "sources": [],
+  "sourcing": "todo"
+}

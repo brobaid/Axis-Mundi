@@ -1,0 +1,40 @@
+{
+  "id": "judaism",
+  "node": "judaism",
+  "label": "Judaism",
+  "order": 0,
+  "cells": [
+    {
+      "dimension": "divine-concept",
+      "value": "monotheist",
+      "nuance": "One God, indivisible, without physical form.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "afterlife",
+      "value": "varies",
+      "nuance": "The reference build records the position as varying.",
+      "sources": [
+        "encyclopaedia-judaica"
+      ],
+      "contested": true,
+      "contested_note": "Positions on afterlife range widely across rabbinic thought, from resurrection to more figurative readings."
+    },
+    {
+      "dimension": "dietary-law",
+      "value": "kosher",
+      "nuance": "Dietary law follows the kashrut rules.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "calendar-system",
+      "value": "lunisolar",
+      "nuance": "A lunisolar calendar with intercalated months.",
+      "sources": [],
+      "contested": false
+    }
+  ],
+  "sourcing": "todo"
+}

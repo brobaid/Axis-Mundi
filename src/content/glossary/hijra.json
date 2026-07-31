@@ -1,0 +1,17 @@
+{
+  "id": "hijra",
+  "term": "hijra",
+  "original": {
+    "text": "هجرة",
+    "script": "arabic",
+    "transliteration": "hijra",
+    "lang": "ar"
+  },
+  "definition": "The migration of Muhammad and the early community from Mecca to Medina in 622 CE, which marks year one of the Islamic calendar.",
+  "traditions": [
+    "islam"
+  ],
+  "see_also": [],
+  "sources": [],
+  "sourcing": "todo"
+}

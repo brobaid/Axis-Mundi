@@ -1,0 +1,115 @@
+---
+import { MATRIX_DIMENSION_LABELS, type MatrixCell } from '../schemas/matrix';
+
+/**
+ * Belief-matrix cells, rendered inside a deep dive.
+ *
+ * Spec §1.2: the matrix is extracted from the same structured fields the deep
+ * dive uses, never rewritten. These are literally the same records the matrix
+ * page will render.
+ *
+ * Spec §3.3 and §10: a contested cell is hatched and carries its note. It is
+ * never styled as a warning — a dispute is not an error.
+ */
+
+interface Props {
+  cells: MatrixCell[];
+}
+
+const { cells } = Astro.props;
+
+/** Enum-ish values are stored kebab-case so they stay filterable (§7). */
+const label = (value: string): string =>
+  value.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
+---
+
+<dl class="mx" role="list">
+  {
+    cells.map((cell) => (
+      <div class:list={['mx__cell', cell.contested && 'mx__cell--contested']} role="listitem">
+        <dt>{MATRIX_DIMENSION_LABELS[cell.dimension]}</dt>
+        <dd>
+          <span class="mx__value">
+            {label(cell.value)}
+            {cell.contested && <span class="contested-badge">Contested</span>}
+          </span>
+          <span class="mx__nuance">{cell.nuance}</span>
+          {cell.contested && cell.contested_note && (
+            <span class="mx__note caption">{cell.contested_note}</span>
+          )}
+        </dd>
+      </div>
+    ))
+  }
+</dl>
+
+<style>
+  .mx {
+    margin: var(--space-4) 0 0;
+    display: grid;
+    gap: 0;
+    max-width: var(--measure);
+  }
+
+  .mx__cell {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+    padding: var(--space-3);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  /* The same diagonal hatching used on map polygons and timeline spans. */
+  .mx__cell--contested {
+    background-image: repeating-linear-gradient(
+      var(--hatch-angle),
+      transparent 0,
+      transparent calc(var(--hatch-width) - 1px),
+      var(--contested-hatch) calc(var(--hatch-width) - 1px),
+      var(--contested-hatch) var(--hatch-width)
+    );
+    background-blend-mode: normal;
+  }
+
+  /* Keep the text legible over the hatch by seating it on a surface plate. */
+  .mx__cell--contested dt,
+  .mx__cell--contested dd {
+    background: var(--surface);
+    padding: 2px 4px;
+  }
+
+  .mx dt {
+    font-family: var(--font-ui);
+    font-size: var(--size-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+
+  .mx dd {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .mx__value {
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  .mx__nuance {
+    font-size: var(--size-small);
+    color: var(--ink-soft);
+  }
+
+  .mx__note {
+    margin-top: var(--space-1);
+  }
+</style>

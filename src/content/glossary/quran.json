@@ -1,0 +1,19 @@
+{
+  "id": "quran",
+  "term": "Quran",
+  "original": {
+    "text": "القرآن",
+    "script": "arabic",
+    "transliteration": "al-Qurʾān",
+    "lang": "ar"
+  },
+  "definition": "The scripture of Islam, held in Islamic teaching to be the final revelation of God, delivered through Muhammad and codified in Classical Arabic.",
+  "traditions": [
+    "islam"
+  ],
+  "see_also": [
+    "tawhid"
+  ],
+  "sources": [],
+  "sourcing": "todo"
+}

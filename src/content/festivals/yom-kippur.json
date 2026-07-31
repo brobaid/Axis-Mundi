@@ -1,0 +1,17 @@
+{
+  "id": "yom-kippur",
+  "name": "Yom Kippur",
+  "traditions": [
+    "judaism"
+  ],
+  "calendar": "lunisolar",
+  "date_rule": "Set by a lunisolar rule, so it wanders within a window rather than holding a fixed date.",
+  "observed": {
+    "2024": "10-12",
+    "2025": "10-02",
+    "2026": "09-21",
+    "2027": "10-11"
+  },
+  "sources": [],
+  "sourcing": "todo"
+}

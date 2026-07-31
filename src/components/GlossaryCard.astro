@@ -1,0 +1,265 @@
+---
+import { getPublishable } from '../lib/content';
+
+/**
+ * Glossary tap-cards (spec §8, kickoff M2).
+ *
+ * "Any term wrapped at authoring time renders the card with original script,
+ *  transliteration, and definition."
+ *
+ * One card element per page, populated on demand from a JSON payload of the
+ * terms this build actually publishes. Terms still awaiting a source check are
+ * not in the payload, and `renderProse` leaves those references as plain text,
+ * so a gated term never becomes a control that opens an empty card.
+ */
+
+const terms = await getPublishable('glossary');
+
+const payload = Object.fromEntries(
+  terms.map((entry) => [
+    entry.data.id,
+    {
+      term: entry.data.term,
+      original: entry.data.original ?? null,
+      definition: entry.data.definition,
+      traditions: entry.data.traditions,
+      see_also: entry.data.see_also,
+    },
+  ]),
+);
+---
+
+<div class="gcard-scrim" data-gloss-scrim hidden></div>
+<aside
+  class="gcard"
+  id="glossary-card"
+  data-gloss-card
+  hidden
+  role="dialog"
+  aria-label="Glossary term"
+>
+  <button type="button" class="gcard__close" data-gloss-close aria-label="Close glossary card">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div class="gcard__head">
+    <b data-gloss-term></b>
+    <span data-gloss-original></span>
+  </div>
+  <p class="gcard__translit mono" data-gloss-translit></p>
+  <p class="gcard__def" data-gloss-def></p>
+  <p class="gcard__also caption" data-gloss-also hidden></p>
+</aside>
+
+<script type="application/json" id="glossary-data" set:html={JSON.stringify(payload)} is:inline />
+
+<script>
+  interface Original {
+    text: string;
+    script: string;
+    transliteration: string;
+    lang: string;
+  }
+  interface Term {
+    term: string;
+    original: Original | null;
+    definition: string;
+    traditions: string[];
+    see_also: string[];
+  }
+
+  const dataEl = document.getElementById('glossary-data');
+  const TERMS = JSON.parse(dataEl?.textContent ?? '{}') as Record<string, Term>;
+
+  const card = document.querySelector<HTMLElement>('[data-gloss-card]');
+  const scrim = document.querySelector<HTMLElement>('[data-gloss-scrim]');
+
+  if (card !== null) {
+    const el = (name: string): HTMLElement | null =>
+      card.querySelector<HTMLElement>(`[data-gloss-${name}]`);
+
+    let lastTrigger: HTMLElement | null = null;
+
+    function open(id: string, trigger: HTMLElement): void {
+      const entry = TERMS[id];
+      if (entry === undefined || card === null) return;
+
+      lastTrigger = trigger;
+
+      const termEl = el('term');
+      if (termEl) termEl.textContent = entry.term;
+
+      const originalEl = el('original');
+      if (originalEl) {
+        if (entry.original === null) {
+          originalEl.textContent = '';
+          originalEl.removeAttribute('lang');
+          originalEl.removeAttribute('dir');
+        } else {
+          originalEl.textContent = entry.original.text;
+          originalEl.setAttribute('lang', entry.original.lang);
+          /* RTL scripts need the direction set explicitly; the surrounding
+             page is LTR (design language §4.3). */
+          const rtl = ['arabic', 'hebrew', 'syriac'].includes(entry.original.script);
+          originalEl.setAttribute('dir', rtl ? 'rtl' : 'ltr');
+        }
+      }
+
+      const translitEl = el('translit');
+      if (translitEl) {
+        translitEl.textContent = entry.original?.transliteration ?? '';
+        translitEl.hidden = entry.original === null;
+      }
+
+      const defEl = el('def');
+      if (defEl) defEl.textContent = entry.definition;
+
+      const alsoEl = el('also');
+      if (alsoEl) {
+        const related = entry.see_also.filter((r) => TERMS[r] !== undefined);
+        if (related.length === 0) {
+          alsoEl.hidden = true;
+        } else {
+          alsoEl.hidden = false;
+          alsoEl.textContent = `See also: ${related.map((r) => TERMS[r]?.term ?? r).join(', ')}`;
+        }
+      }
+
+      card.hidden = false;
+      scrim?.removeAttribute('hidden');
+      card.querySelector<HTMLButtonElement>('[data-gloss-close]')?.focus();
+    }
+
+    function close(): void {
+      if (card === null || card.hidden) return;
+      card.hidden = true;
+      scrim?.setAttribute('hidden', '');
+      lastTrigger?.focus();
+      lastTrigger = null;
+    }
+
+    /* Delegated, so prose rendered at build time needs no per-term wiring. */
+    document.addEventListener('click', (ev) => {
+      const target = ev.target as HTMLElement;
+      const trigger = target.closest<HTMLElement>('.gloss[data-term]');
+      if (trigger !== null) {
+        const id = trigger.dataset['term'];
+        if (id !== undefined) open(id, trigger);
+        return;
+      }
+      if (target.closest('[data-gloss-close]') || target.closest('[data-gloss-scrim]')) close();
+    });
+
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape') close();
+    });
+  }
+</script>
+
+<style>
+  /* The wrapped term in running prose: a dashed brass underline, not a link. */
+  :global(.gloss) {
+    border: 0;
+    border-bottom: 1px dashed var(--brass);
+    cursor: pointer;
+    background: none;
+    font: inherit;
+    color: inherit;
+    padding: 0;
+    min-height: 0;
+  }
+
+  :global(.gloss:hover) {
+    color: var(--brass-ink);
+    border-bottom-color: var(--brass-ink);
+  }
+
+  .gcard-scrim {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-panel);
+    background: var(--scrim);
+  }
+
+  .gcard {
+    position: fixed;
+    z-index: var(--z-sheet);
+    left: var(--space-3);
+    right: var(--space-3);
+    bottom: var(--space-3);
+    max-width: 420px;
+    margin: 0 auto;
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--hairline);
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-panel);
+    padding: var(--space-4);
+    animation: gcard-in var(--dur-panel) var(--ease-standard);
+  }
+
+  .gcard__close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: var(--tap-min);
+    height: var(--tap-min);
+    min-height: 0;
+    background: none;
+    border: 0;
+    color: var(--ink-soft);
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .gcard__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-3);
+    padding-right: var(--space-8);
+  }
+
+  .gcard__head b {
+    font-family: var(--font-display);
+    font-size: var(--size-h3);
+    font-weight: 500;
+  }
+
+  /* Original script sits larger than the surrounding Latin (§4.3). */
+  .gcard__head span {
+    font-size: 22px;
+    color: var(--ink-soft);
+  }
+
+  .gcard__translit {
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
+    margin-top: var(--space-1);
+  }
+
+  .gcard__def {
+    font-size: var(--size-small);
+    line-height: var(--leading-small);
+    margin-top: var(--space-2);
+  }
+
+  .gcard__also {
+    margin-top: var(--space-2);
+  }
+
+  @keyframes gcard-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gcard {
+      animation: none;
+    }
+  }
+</style>

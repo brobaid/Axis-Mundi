@@ -1,0 +1,37 @@
+{
+  "id": "chinese",
+  "node": "chinese",
+  "label": "Chinese traditions",
+  "order": 6,
+  "cells": [
+    {
+      "dimension": "divine-concept",
+      "value": "varies",
+      "nuance": "Positions vary across the Confucian, Taoist and folk strands.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "afterlife",
+      "value": "ancestral-realm",
+      "nuance": "Continuity with ancestors is the common frame.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "dietary-law",
+      "value": "varies",
+      "nuance": "Dietary practice varies by strand and observance.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "calendar-system",
+      "value": "lunisolar",
+      "nuance": "A lunisolar calendar.",
+      "sources": [],
+      "contested": false
+    }
+  ],
+  "sourcing": "todo"
+}

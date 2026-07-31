@@ -1,0 +1,37 @@
+{
+  "id": "buddhism",
+  "node": "buddhism",
+  "label": "Buddhism",
+  "order": 4,
+  "cells": [
+    {
+      "dimension": "divine-concept",
+      "value": "non-theist",
+      "nuance": "No creator deity is affirmed.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "afterlife",
+      "value": "rebirth",
+      "nuance": "Rebirth without a persisting self.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "dietary-law",
+      "value": "varies",
+      "nuance": "Dietary practice varies by vehicle and region.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "calendar-system",
+      "value": "lunisolar",
+      "nuance": "Lunisolar reckoning, with regional variation.",
+      "sources": [],
+      "contested": false
+    }
+  ],
+  "sourcing": "todo"
+}

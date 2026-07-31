@@ -1,0 +1,17 @@
+{
+  "id": "obon",
+  "name": "Obon",
+  "traditions": [
+    "shinto"
+  ],
+  "calendar": "solar",
+  "date_rule": "Set by the solar calendar, so it holds close to the same Gregorian date each year.",
+  "observed": {
+    "2024": "08-13",
+    "2025": "08-13",
+    "2026": "08-13",
+    "2027": "08-13"
+  },
+  "sources": [],
+  "sourcing": "todo"
+}

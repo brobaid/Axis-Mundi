@@ -1,0 +1,96 @@
+{
+  "id": "islam",
+  "tradition": "islam",
+  "name": "Islam",
+  "original": {
+    "text": "الإسلام",
+    "script": "arabic",
+    "transliteration": "al-Islām",
+    "lang": "ar"
+  },
+  "subtitle": "Submission to the one God, in the tradition of the prophets",
+  "stat_box": {
+    "adherents": {
+      "display": "1.9 bn",
+      "year": 2020,
+      "note": "From the v5 reference build, pending the sourced Pew file."
+    },
+    "founded": "7th c. CE, Hejaz",
+    "origin_region": "arabia",
+    "primary_texts": [
+      "Quran",
+      "hadith"
+    ],
+    "branches_summary": "Sunni · Shia · Ibadi",
+    "calendar": "Lunar (Hijri)",
+    "symbol": "crescent-and-star"
+  },
+  "overview": {
+    "body": "Islam holds that God is one, without partner or likeness, and that the [[quran|Quran]] is God's final revelation, delivered through Muhammad, the last in a line of prophets that includes Abraham, Moses, and Jesus. The believer's life is structured by five obligatory practices, from daily prayer to the pilgrimage at Mecca.",
+    "sources": [],
+    "sourcing": "todo"
+  },
+  "origins_period": {
+    "from": 610,
+    "to": 632,
+    "precision": "exact"
+  },
+  "origins": {
+    "body": "According to Islamic tradition, revelation began in 610 CE in a cave outside Mecca and continued for twenty-three years. The community's migration to Medina in 622, the [[hijra|Hijra]], marks year one of the Islamic calendar. By Muhammad's death in 632, most of the Arabian Peninsula had entered the new polity.",
+    "sources": [],
+    "sourcing": "todo"
+  },
+  "core_beliefs": {
+    "body": "At the center is [[tawhid]], the absolute oneness of God. Faith is classically summarized in six articles: God, the angels, the revealed books, the prophets, the Day of Judgment, and divine decree.",
+    "sources": [],
+    "sourcing": "todo"
+  },
+  "belief_dimensions": [
+    "divine-concept",
+    "afterlife"
+  ],
+  "canon": [
+    {
+      "id": "quran",
+      "title": "Quran",
+      "original": {
+        "text": "القرآن",
+        "script": "arabic",
+        "transliteration": "al-Qurʾān",
+        "lang": "ar"
+      },
+      "language": "Classical Arabic",
+      "composition": "610–632 CE; codified c. 650",
+      "status": "Canonical in all branches",
+      "sources": [],
+      "sourcing": "todo",
+      "contested": false
+    }
+  ],
+  "practices": [],
+  "law_dimensions": [
+    "dietary-law",
+    "calendar-system"
+  ],
+  "rites": [],
+  "festivals": [
+    "ramadan-begins"
+  ],
+  "sites": [],
+  "figures": [],
+  "misconceptions": [
+    {
+      "id": "muslims-worship-muhammad",
+      "claim": "Muslims worship Muhammad.",
+      "correction": "In Islamic teaching, worship is directed to God alone. Muhammad is revered as the final prophet and moral exemplar, and is not held to be divine; venerating him as such would contradict tawhid itself.",
+      "sources": [
+        "esposito-islam-the-straight-path"
+      ],
+      "sourcing": "todo"
+    }
+  ],
+  "further_reading": [
+    "esposito-islam-the-straight-path"
+  ],
+  "sourcing": "todo"
+}

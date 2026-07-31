@@ -1,0 +1,37 @@
+{
+  "id": "jainism",
+  "node": "jainism",
+  "label": "Jainism",
+  "order": 7,
+  "cells": [
+    {
+      "dimension": "divine-concept",
+      "value": "non-theist",
+      "nuance": "No creator deity is affirmed.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "afterlife",
+      "value": "rebirth",
+      "nuance": "Rebirth conditioned by karma.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "dietary-law",
+      "value": "strict-vegetarian",
+      "nuance": "Strict vegetarianism follows from ahimsa.",
+      "sources": [],
+      "contested": false
+    },
+    {
+      "dimension": "calendar-system",
+      "value": "lunisolar",
+      "nuance": "A lunisolar calendar.",
+      "sources": [],
+      "contested": false
+    }
+  ],
+  "sourcing": "todo"
+}
