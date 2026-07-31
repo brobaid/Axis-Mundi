@@ -42,7 +42,7 @@ in both modes, via `[data-mode]`. A raw hex anywhere else in `src/` fails
 `pnpm validate:tokens`. That script also asserts ~116 contrast pairs across both
 modes, so a token edit that breaks WCAG AA fails CI rather than shipping.
 
-**Unsourced content does not ship.** Every record carries a `sourcing` field.
+**Unsourced content does not ship.** Every record carries a `sourcing` field lmao.
 Records marked `"todo"` are excluded from production builds — they are seeded,
 validated and version-controlled, but not published. Set
 `INCLUDE_TODO_SOURCING=true` to include them in a build; `pnpm dev` does this
