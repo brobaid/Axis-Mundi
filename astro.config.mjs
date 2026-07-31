@@ -8,9 +8,14 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'ignore',
   build: {
-    // Emit `/methodology.html` style pages rather than nested index files so the
-    // static host does not depend on directory-index resolution.
-    format: 'file',
+    // Emit `/timeline/index.html`, so `/timeline` resolves by ordinary
+    // directory-index lookup — the one thing every static host does.
+    //
+    // This was `'file'` until it 404'd in production. That form emits
+    // `/timeline.html`, which only works if the host rewrites extensionless
+    // paths to `.html`. `astro preview` does that rewrite and Vercel does not,
+    // so the bug could not reproduce locally.
+    format: 'directory',
   },
   compressHTML: true,
 });

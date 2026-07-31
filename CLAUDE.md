@@ -39,6 +39,6 @@ no CMS, and none should ever be added.
 - Push directly to `main`. No pull requests, no preview review step.
 - **Local gate before every push, non-negotiable:** `pnpm validate:content`, `pnpm lint` and `pnpm build` must all pass locally. Never push with any of them failing.
 - Conventional commit messages, one concern each.
-- CI runs on every push and is the sourcing gate. It must stay green on `main`.
+- CI runs on every push and is the sourcing gate. It must stay green on `main`. It additionally runs `validate:tokens`, `validate:timeline` and `validate:links`; `pnpm check` runs the whole set locally.
 - The owner reviews from a phone, so check mobile (390px) before pushing anything visual.
 - When a spec and an implementation convenience conflict, the spec wins; if the spec seems wrong, stop and ask instead of deviating.

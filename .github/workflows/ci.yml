@@ -70,3 +70,9 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      # Every internal href must resolve using the rules a plain static host
+      # applies. `astro preview` rewrites extensionless paths to .html and
+      # Vercel does not, so this is checked against dist/ rather than a server.
+      - name: Check internal links
+        run: pnpm validate:links
