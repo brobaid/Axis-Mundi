@@ -231,6 +231,15 @@
   --t-zoroastrianism: #b3382c;
   --t-zoroastrianism-line: #b3382c;
   --t-zoroastrianism-ink: #962f24;
+
+  /* Unaffiliated (2020 snapshot memo). Not a tradition and not a hue: a neutral
+     warm grey drawn from the same paper family as the hairlines, so a country
+     that answers "none" reads as answered rather than as a competing identity.
+     Deliberately unsaturated — no tradition can be mistaken for it, and it can
+     never be mistaken for a tradition. */
+  --t-unaffiliated: #9a9086;
+  --t-unaffiliated-line: #7a7166;
+  --t-unaffiliated-ink: #5a5249;
 }
 
 /* =============================================================================
@@ -320,4 +329,9 @@
   --t-zoroastrianism: #e8808f;
   --t-zoroastrianism-line: #e8808f;
   --t-zoroastrianism-ink: #ee9ba7;
+
+  /* Unaffiliated, night gallery. Same neutral role, lifted off the umber black. */
+  --t-unaffiliated: #8b8276;
+  --t-unaffiliated-line: #a49a8c;
+  --t-unaffiliated-ink: #c3b9a9;
 }

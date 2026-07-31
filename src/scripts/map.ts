@@ -39,6 +39,7 @@ interface Bootstrap {
   snapshots: SnapshotData[];
   detents: { era: number; label: string; available: boolean }[];
   sourceTitles: Record<string, string>;
+  traditionNames: Record<string, string>;
 }
 
 const GRADE_LABEL: Record<'a' | 'b' | 'c', string> = {
@@ -174,9 +175,15 @@ if (root !== null) {
     });
 
     function realmHtml(realm: RealmData, snapshot: SnapshotData): string {
+      /* "Dominant: unaffiliated" would read as a tradition named Unaffiliated.
+         The label says what the category actually asserts. */
+      const isUnaffiliated = realm.tradition === 'unaffiliated';
       const rows: [string, string][] = [
         ['Era', snapshot.label],
-        ['Dominant', realm.tradition],
+        [isUnaffiliated ? 'Largest group' : 'Dominant',
+         isUnaffiliated
+           ? 'Religiously unaffiliated'
+           : (data.traditionNames[realm.tradition] ?? realm.tradition)],
         ['Confidence', GRADE_LABEL[realm.grade]],
       ];
       if (realm.minorities.length > 0) rows.push(['Significant minorities', realm.minorities.join(', ')]);
@@ -193,11 +200,16 @@ if (root !== null) {
             ? 'Development fixture. Not a historical claim, and not published.'
             : 'Awaiting a source check.';
 
+      /* There is no symbol for unaffiliated, and inventing one would make a
+         category into an identity. A plain swatch carries the tone instead. */
+      const mark = isUnaffiliated
+        ? `<span class="swatch" style="--tradition-hue:var(--t-unaffiliated)"></span>`
+        : `<svg width="14" height="14" viewBox="0 0 24 24" style="color:var(--t-${realm.tradition})"` +
+          ` aria-hidden="true"><use href="#symbol-${realm.tradition}"></use></svg>`;
+
       return (
-        `<div class="panel__meta"><span>` +
-        `<svg width="14" height="14" viewBox="0 0 24 24" style="color:var(--t-${realm.tradition})"` +
-        ` aria-hidden="true"><use href="#symbol-${realm.tradition}"></use></svg>` +
-        `${esc(realm.tradition)}</span></div>` +
+        `<div class="panel__meta"><span>` + mark +
+        `${esc(isUnaffiliated ? 'Unaffiliated' : (data.traditionNames[realm.tradition] ?? realm.tradition))}</span></div>` +
         `<h2 id="panel-title">${esc(realm.name)}</h2>` +
         `<div class="panel__rule" aria-hidden="true"><i></i><b></b><i></i></div>` +
         `<div class="panel__label"><span class="eyebrow">Exhibit label</span>` +

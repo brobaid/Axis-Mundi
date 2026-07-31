@@ -76,7 +76,9 @@ const CHECKS: readonly Check[] = [
 
   // Tradition ramps: text-safe at 4.5:1, lines and fills at 3:1, in BOTH modes
   // and against BOTH backgrounds (design language §3.2).
-  ...TRADITIONS.flatMap((t): Check[] => [
+  /* Unaffiliated is not a tradition but it is a map fill with a legend entry, so
+     it is held to the same contrast bar as the ten. */
+  ...[...TRADITIONS, 'unaffiliated'].flatMap((t): Check[] => [
     { fg: `--t-${t}-ink`, bg: '--canvas', min: 4.5, why: `${t} label text on the canvas` },
     { fg: `--t-${t}-ink`, bg: '--surface', min: 4.5, why: `${t} label text on a surface` },
     { fg: `--t-${t}-line`, bg: '--canvas', min: 3, why: `${t} lane rule / event node` },

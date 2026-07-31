@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { ERA_SNAPSHOTS, contestable, requireContestedNote, slug, sourceRef, sourcingStatus, traditionId } from './primitives.js';
+import { ERA_SNAPSHOTS, TRADITION_IDS, contestable, requireContestedNote, slug, sourceRef, sourcingStatus, traditionId } from './primitives.js';
 
 /**
  * Era-snapshot schema — Phase 0 spec §6.
@@ -21,6 +21,21 @@ import { ERA_SNAPSHOTS, contestable, requireContestedNote, slug, sourceRef, sour
 
 /** A: well-documented. B: scholarly estimate. C: speculative, rendered hatched. */
 export const confidenceGrade = z.enum(['a', 'b', 'c']);
+
+/**
+ * What a realm can be shaded as: one of the ten traditions, or `unaffiliated`.
+ *
+ * The 2020 memo's ruling. Unaffiliated is a real, renderable majority in ten
+ * countries, and it is not the same thing as outside-scope: a country with no
+ * feature is one the snapshot does not cover, while an unaffiliated one is
+ * covered and answered. It carries a neutral tone and its own legend entry, and
+ * it is never hatched for being secular — hatching is the confidence
+ * convention, and a well-documented unaffiliated majority is grade A like any
+ * other.
+ */
+export const REALM_CATEGORIES = [...TRADITION_IDS, 'unaffiliated'] as const;
+export const realmCategory = z.enum(REALM_CATEGORIES);
+export type RealmCategory = (typeof REALM_CATEGORIES)[number];
 
 const longitude = z.number().min(-180).max(180);
 const latitude = z.number().min(-90).max(90);
@@ -56,7 +71,7 @@ export const realmProperties = z
   .object({
     id: slug,
     name: z.string().min(1),
-    tradition: traditionId,
+    tradition: realmCategory,
     grade: confidenceGrade,
     minorities: z.array(traditionId).default([]),
     /** Where the label sits and how it curves, for the atlas lettering. */

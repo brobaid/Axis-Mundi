@@ -52,12 +52,37 @@ export const project = (lon: number, lat: number, f: Frame): [number, number] =>
 /* ── geometry ───────────────────────────────────────────────────────────── */
 
 type Ring = [number, number][];
+
+/**
+ * A ring that straddles the antimeridian, shifted to one side of it.
+ *
+ * The frame's seam sits at -170. A ring holding points at both -180 and +180 —
+ * Russia's mainland and Fiji each have one — projects with one end off the left
+ * edge and the other at the right, drawing the ring as a band straight across
+ * the plate. Shifting its western points a full turn east makes it contiguous.
+ *
+ * The decision is per ring, never per point. Wrapping each coordinate on its own
+ * looks equivalent and is not: Alaska's ring runs -179 to -130 without
+ * straddling anything, and moving only its westernmost points would tear it
+ * across the whole plate — which is exactly what a first attempt at this did.
+ * A ring is either wholly shifted or wholly left alone.
+ */
+const unwrapRing = (ring: Ring): Ring => {
+  let min = Infinity;
+  let max = -Infinity;
+  for (const [lon] of ring) {
+    if (lon < min) min = lon;
+    if (lon > max) max = lon;
+  }
+  if (max - min <= 180) return ring;
+  return ring.map(([lon, lat]) => [lon < 0 ? lon + 360 : lon, lat]);
+};
 export type Geometry =
   | { type: 'Polygon'; coordinates: Ring[] }
   | { type: 'MultiPolygon'; coordinates: Ring[][] };
 
-const ringPath = (ring: Ring, f: Frame): string =>
-  ring
+const ringPath = (raw: Ring, f: Frame): string =>
+  unwrapRing(raw)
     .map(([lon, lat], i) => {
       const [x, y] = project(lon, lat, f);
       return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)} ${y.toFixed(1)}`;

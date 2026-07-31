@@ -52,7 +52,9 @@ const canvasHtml =
     : renderMap(snapshots, DEFAULT_FRAME, {
         title: 'The World, by Era',
         activeEra,
-        traditions: TRADITIONS.map((t) => t.id),
+        /* Renderable categories, not traditions: `unaffiliated` is a real
+           majority in ten countries and needs its hatch pattern like the rest. */
+        traditions: [...TRADITIONS.map((t) => t.id), 'unaffiliated'],
       });
 
 const sources = await getPublishable('sources');
@@ -80,6 +82,9 @@ const bootstrap = {
     .sort((a, b) => a.era - b.era),
   detents: rail,
   sourceTitles,
+  /* Display names for the realm card. The raw id reads "chinese" where the
+     tradition is "Chinese traditions". */
+  traditionNames: Object.fromEntries(TRADITIONS.map((t) => [t.id, t.name])),
 };
 ---
 
@@ -145,7 +150,25 @@ const bootstrap = {
 
           <!-- legend ------------------------------------------------- -->
           <div class="legend">
-            <p class="eyebrow">Confidence</p>
+            <p class="eyebrow">Categories</p>
+            <ul role="list">
+              <li>
+                <span class="legend__swatch legend__swatch--unaffiliated" aria-hidden="true" />
+                Unaffiliated
+              </li>
+              <li>
+                <span class="legend__swatch legend__swatch--outside" aria-hidden="true" />
+                Outside this snapshot
+              </li>
+            </ul>
+            <p class="caption">
+              A realm shaded as unaffiliated is one the snapshot covers and answers: the
+              religiously unaffiliated are its largest group. An unshaded one is outside the
+              snapshot's scope. The two are never the same claim, and neither is hatched —
+              hatching carries confidence, not secularity.
+            </p>
+
+            <p class="eyebrow legend__second">Confidence</p>
             <ul role="list">
               <li><span class="legend__swatch legend__swatch--a" aria-hidden="true" />A · documented</li>
               <li><span class="legend__swatch legend__swatch--b" aria-hidden="true" />B · scholarly estimate</li>
@@ -512,6 +535,20 @@ const bootstrap = {
 
   .legend__swatch--b {
     opacity: 0.5;
+  }
+
+  .legend__swatch--unaffiliated {
+    background: var(--t-unaffiliated);
+    opacity: 0.82;
+  }
+
+  /* Outside the snapshot: the plate's own land tone, i.e. nothing painted. */
+  .legend__swatch--outside {
+    background: var(--land);
+  }
+
+  .legend__second {
+    margin-top: var(--space-4);
   }
 
   .legend__swatch--c {
