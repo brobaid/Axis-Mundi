@@ -277,6 +277,21 @@ a:hover {
   height: 100%;
 }
 
+/* The meridian now stands exactly on its detent rather than near it, which puts
+   it straight through that detent's label. The plate's own answer: a paper halo
+   in the canvas tone, the same trick the map uses to set region names over
+   coastlines. The line passes behind the year it names instead of striking it
+   out. */
+.scrub__detent--on .scrub__label {
+  position: relative;
+  /* Above the line, or the halo is painted under it and does nothing. */
+  z-index: calc(var(--z-meridian) + 1);
+  text-shadow:
+    0 0 2px var(--canvas),
+    0 0 2px var(--canvas),
+    0 0 4px var(--canvas);
+}
+
 /* =============================================================================
    Contested and confidence (spec §10, design language §2, §3.3)
    Hatching is one drafting convention, applied identically on map polygons,

@@ -51,6 +51,43 @@ const isCurrent = (href: string): 'page' | undefined =>
   </ul>
 </nav>
 
+<script>
+  import { CURSOR_PARAM, readCursor } from '../lib/cursor';
+
+  /**
+   * Carry the time cursor through the doorway.
+   *
+   * The Brass Meridian is one object standing in four rooms, so walking from
+   * the map at 1000 into the timeline should arrive at 1000 rather than at
+   * whatever the timeline last defaulted to.
+   *
+   * The cursor is read at click time, not at load. Each room writes its state
+   * back with replaceState, which fires no event a listener could catch — a
+   * rail that fixed its hrefs on load would hand out the year the reader
+   * arrived with, not the one they scrubbed to. Rewriting the href from inside
+   * the click handler still lets the browser do the navigating, so
+   * middle-click, cmd-click and Enter all keep working.
+   *
+   * Rooms with no time axis — the matrix, compare, the dive index — are left
+   * alone. A parameter they ignore is a parameter that lies about being read.
+   */
+  const TIMED = ['/timeline', '/map', '/tree'];
+
+  function carry(ev: Event): void {
+    const link = (ev.target as Element | null)?.closest<HTMLAnchorElement>('.rooms a[href]');
+    if (link === null || link === undefined) return;
+    const url = new URL(link.href, location.origin);
+    if (!TIMED.includes(url.pathname.replace(/\/$/, ''))) return;
+    const year = readCursor(location.search);
+    if (year === null) return;
+    url.searchParams.set(CURSOR_PARAM, String(year));
+    link.setAttribute('href', `${url.pathname}${url.search}`);
+  }
+
+  document.addEventListener('click', carry, true);
+  document.addEventListener('auxclick', carry, true);
+</script>
+
 <style>
   .rooms {
     border-top: var(--hairline-width) solid var(--hairline);

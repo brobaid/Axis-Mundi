@@ -1,6 +1,7 @@
 import { createPanel, esc } from '../lib/panel';
 import { eraLabel } from '../lib/map-render';
-import { revealDetent } from '../lib/scrubber';
+import { revealDetent, standMeridian } from '../lib/scrubber';
+import { CURSOR_PARAM, readCursor, snapToDetent } from '../lib/cursor';
 
 /**
  * The map island.
@@ -63,23 +64,35 @@ if (root !== null) {
     /* Every detent is reachable: an undelivered era draws the plate's furniture
        and says what it awaits, which beats a dead stop with no explanation. */
     const withData = data.detents;
-    const firstDelivered = data.detents.find((d) => d.available);
-    let activeEra = firstDelivered?.era ?? data.detents[0]?.era ?? 1;
+    /* The last delivered era, matching what the page server-rendered. Taking
+       the first would have the island snap the room back to antiquity on load
+       the moment a second snapshot landed. */
+    const delivered = data.detents.filter((d) => d.available);
+    let activeEra =
+      delivered[delivered.length - 1]?.era ?? data.detents[data.detents.length - 1]?.era ?? 2020;
 
     const panel = createPanel();
 
     /* ── URL state, shared with the rest of the site ─────────────────── */
 
     function readUrl(): void {
-      const era = Number(new URLSearchParams(location.search).get('era'));
-      if (Number.isFinite(era) && data.detents.some((d) => d.era === era)) {
-        activeEra = era;
-      }
+      const year = readCursor(location.search);
+      if (year === null) return;
+      /* An exact detent is taken as given; anything else snaps back to the
+         plate that covers it, because the map has twelve and not five
+         thousand. */
+      const snapped = data.detents.some((d) => d.era === year)
+        ? year
+        : snapToDetent(year, data.detents.map((d) => d.era));
+      if (snapped !== null) activeEra = snapped;
     }
 
     function writeUrl(replace = false): void {
       const q = new URLSearchParams(location.search);
-      q.set('era', String(activeEra));
+      /* The snapped detent, so the cursor round-trips: a reader who arrives on
+         1100 and leaves for the tree takes 1000, the plate they actually saw. */
+      q.delete('era');
+      q.set(CURSOR_PARAM, String(activeEra));
       const url = `${location.pathname}?${q.toString()}`;
       if (replace) history.replaceState(null, '', url);
       else history.pushState(null, '', url);
@@ -143,12 +156,10 @@ if (root !== null) {
         else cartoucheNote.setAttribute('visibility', 'hidden');
       }
 
-      const meridian = root!.querySelector<HTMLElement>('[data-map-meridian]');
-      if (meridian !== null) {
-        const index = data.detents.findIndex((d) => d.era === activeEra);
-        const fraction = data.detents.length > 1 ? index / (data.detents.length - 1) : 0;
-        meridian.style.left = `${(fraction * 100).toFixed(2)}%`;
-      }
+      standMeridian(
+        root!.querySelector<HTMLElement>('[data-map-meridian]'),
+        rail!.querySelector<HTMLElement>(`[data-era="${activeEra}"]`),
+      );
     }
 
     function setEra(era: number, push = true): void {

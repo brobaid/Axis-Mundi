@@ -1,4 +1,5 @@
 import { scaleLinear } from 'd3-scale';
+import { CURSOR_PARAM, centreOn, readCursor } from '../lib/cursor';
 import { select } from 'd3-selection';
 import { zoom, zoomIdentity, type D3ZoomEvent, type ZoomBehavior, type ZoomTransform } from 'd3-zoom';
 
@@ -103,6 +104,15 @@ if (root !== null) {
       if (Number.isFinite(from) && Number.isFinite(to) && to - from >= MIN_SPAN) {
         state.from = from;
         state.to = to;
+      } else {
+        /* Arriving from another room. The shared cursor moves where the reader
+           is looking; how far they are zoomed stays theirs. */
+        const year = readCursor(location.search);
+        if (year !== null) {
+          const view = centreOn(year, { from: state.from, to: state.to }, data.bounds);
+          state.from = view.from;
+          state.to = view.to;
+        }
       }
       const types = q.get('types');
       state.types = new Set(types === null || types === '' ? [] : types.split(','));
@@ -116,6 +126,10 @@ if (root !== null) {
       if (state.drill !== '') q.set('drill', state.drill);
       q.set('from', String(Math.round(state.from)));
       q.set('to', String(Math.round(state.to)));
+      /* The cursor is the centre of the window — the year the meridian stands
+         on. `from`/`to` are the timeline's own zoom; this is what leaves the
+         room with the reader. */
+      q.set(CURSOR_PARAM, String(Math.round((state.from + state.to) / 2)));
       if (state.types.size > 0) q.set('types', [...state.types].join(','));
       if (state.ghosts) q.set('ghosts', '1');
       if (state.threads) q.set('threads', '1');

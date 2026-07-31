@@ -1,5 +1,6 @@
 import { createPanel, esc } from '../lib/panel';
-import { revealDetent } from '../lib/scrubber';
+import { revealDetent, standMeridian } from '../lib/scrubber';
+import { CURSOR_PARAM, readCursor, snapToDetent } from '../lib/cursor';
 
 /**
  * The family-tree island.
@@ -64,15 +65,18 @@ if (root !== null) {
     };
 
     function readUrl(): void {
-      const q = Number(new URLSearchParams(location.search).get('era'));
-      if (Number.isFinite(q) && data.detents.includes(q)) era = q;
+      const year = readCursor(location.search);
+      if (year === null) return;
+      const snapped = data.detents.includes(year) ? year : snapToDetent(year, data.detents);
+      if (snapped !== null) era = snapped;
     }
 
     /* Replace, never push: the slider is a lens on one page, so Back should
        leave the room rather than unwind twelve detents. */
     function writeUrl(): void {
       const q = new URLSearchParams(location.search);
-      q.set('era', String(era));
+      q.delete('era');
+      q.set(CURSOR_PARAM, String(era));
       history.replaceState(null, '', `${location.pathname}?${q.toString()}`);
     }
 
@@ -98,11 +102,7 @@ if (root !== null) {
       if (readout !== null) {
         readout.textContent = `${eraLabel(era)} · ${shown} of ${data.nodes.length} nodes in existence`;
       }
-      if (meridian !== null) {
-        const i = data.detents.indexOf(era);
-        const f = data.detents.length > 1 ? i / (data.detents.length - 1) : 0;
-        meridian.style.left = `${(f * 100).toFixed(2)}%`;
-      }
+      standMeridian(meridian, rail!.querySelector<HTMLElement>(`[data-era="${era}"]`));
     }
 
     rail.addEventListener('click', (ev) => {
@@ -205,5 +205,9 @@ if (root !== null) {
 
     readUrl();
     render();
+    /* Publish the cursor even when the reader arrived without one: the rooms
+       rail carries whatever the URL says, and a bare /tree standing at 2020
+       would otherwise hand the next room nothing. */
+    writeUrl();
   }
 }

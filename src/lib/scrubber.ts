@@ -33,3 +33,22 @@ export function revealDetent(rail: HTMLElement, btn: HTMLElement | null): void {
     rail.scrollLeft -= railBox.left - btnBox.left + margin;
   }
 }
+
+/**
+ * Stand the Brass Meridian on a detent.
+ *
+ * Measured, never computed from an index. The rail is a flex row with
+ * `space-between`, so a detent's centre is not `i / (n - 1)` of the rail's
+ * width — the first and last sit inside their own half-widths, and at 390px
+ * the rail also scrolls, which moves every detent again. The fraction was off
+ * by up to 67px on a phone: the site's signature element pointing at the wrong
+ * year is worse than no cursor at all.
+ */
+export function standMeridian(meridian: HTMLElement | null, btn: HTMLElement | null): void {
+  if (meridian === null || btn === null) return;
+  /* offsetLeft is measured from the rail's border box and does not move with
+     scrollLeft; neither does an absolutely-positioned child of the same
+     scrolling box. So the pair stays welded whether the rail is scrolled or
+     not, which the percentage never managed. */
+  meridian.style.left = `${btn.offsetLeft + btn.offsetWidth / 2}px`;
+}
