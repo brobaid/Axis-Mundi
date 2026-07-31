@@ -1,0 +1,27 @@
+{
+  "id": "rise-of-mahayana-100",
+  "title": "Emergence of the Mahayana",
+  "year_start": 100,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "founding",
+  "importance": 5,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "New sutras and the bodhisattva ideal crystallize into the great vehicle, the stream that will carry Buddhism across East Asia.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

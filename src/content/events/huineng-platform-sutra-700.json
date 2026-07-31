@@ -1,0 +1,27 @@
+{
+  "id": "huineng-platform-sutra-700",
+  "title": "Huineng and the Platform Sutra",
+  "year_start": 700,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The southern school's sudden-awakening teaching, voiced through the Platform Sutra, defines mature Chan.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

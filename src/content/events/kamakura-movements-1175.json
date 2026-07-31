@@ -1,0 +1,28 @@
+{
+  "id": "kamakura-movements-1175",
+  "title": "Kamakura Buddhist movements emerge",
+  "year_start": 1175,
+  "year_end": 1253,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "founding",
+  "importance": 4,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "Honen, Shinran, Dogen, and Nichiren found the Pure Land, Zen, and Lotus movements that define Japanese Buddhism.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

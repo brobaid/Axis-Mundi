@@ -1,0 +1,27 @@
+{
+  "id": "shotoku-constitution-604",
+  "title": "Prince Shotoku's constitution",
+  "year_start": 604,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The seventeen-article constitution enshrines Buddhist and Confucian ideals in the Japanese state.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

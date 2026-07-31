@@ -1,0 +1,27 @@
+{
+  "id": "gandharan-art-100",
+  "title": "Gandharan Buddhist art flourishes",
+  "year_start": 100,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "gandhara"
+  ],
+  "summary": "The Gandharan workshops create the first great tradition of Buddha images, blending Indian and Hellenistic forms.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

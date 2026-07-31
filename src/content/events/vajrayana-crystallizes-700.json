@@ -1,0 +1,27 @@
+{
+  "id": "vajrayana-crystallizes-700",
+  "title": "Vajrayana crystallizes",
+  "year_start": 700,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/vajrayana"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Tantric ritual, mantra, and initiation cohere into the diamond vehicle in India's late Buddhist centuries.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

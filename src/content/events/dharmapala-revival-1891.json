@@ -1,0 +1,27 @@
+{
+  "id": "dharmapala-revival-1891",
+  "title": "Maha Bodhi Society founded",
+  "year_start": 1891,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/theravada"
+  ],
+  "type": "modern",
+  "importance": 3,
+  "region": [
+    "sri-lanka"
+  ],
+  "summary": "Anagarika Dharmapala's society launches the modern Buddhist revival and the campaign to restore Bodh Gaya.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

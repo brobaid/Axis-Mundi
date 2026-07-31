@@ -1,0 +1,27 @@
+{
+  "id": "zhiyi-tiantai-590",
+  "title": "Zhiyi and the Tiantai synthesis",
+  "year_start": 590,
+  "precision": "decade",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Zhiyi's doctrinal classification founds Tiantai, the first fully Chinese school.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

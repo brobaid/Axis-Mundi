@@ -1,0 +1,27 @@
+{
+  "id": "pagan-theravada-1057",
+  "title": "Pagan adopts Theravada",
+  "year_start": 1057,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/theravada"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "mainland-southeast-asia"
+  ],
+  "summary": "Anawrahta's Pagan makes Theravada the religion of the Irrawaddy valley.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

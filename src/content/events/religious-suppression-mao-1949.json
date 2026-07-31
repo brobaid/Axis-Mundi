@@ -1,0 +1,31 @@
+{
+  "id": "religious-suppression-mao-1949",
+  "title": "Religious suppression in Mao's China",
+  "year_start": 1949,
+  "year_end": 1976,
+  "precision": "exact",
+  "traditions": [
+    "buddhism",
+    "chinese"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "persecution",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The People's Republic suppresses religious institutions, peaking in the Cultural Revolution, before partial revival follows.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

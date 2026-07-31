@@ -1,0 +1,27 @@
+{
+  "id": "lotus-sutra-100",
+  "title": "Lotus Sutra composed",
+  "year_start": 100,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The sutra of the one vehicle becomes East Asian Buddhism's most influential scripture.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

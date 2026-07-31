@@ -1,0 +1,28 @@
+{
+  "id": "xuanzang-journey-629",
+  "title": "Xuanzang's journey and translations",
+  "year_start": 629,
+  "year_end": 645,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The pilgrim's sixteen-year journey to India and his translation corpus reset Chinese Buddhist scholarship.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nagarjuna-150",
+  "title": "Nagarjuna",
+  "year_start": 150,
+  "year_end": 250,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "figure",
+  "importance": 4,
+  "region": [
+    "deccan"
+  ],
+  "summary": "The Madhyamaka founder whose analysis of emptiness underlies most later Buddhist philosophy.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "nalanda-founded-427",
+  "title": "Nalanda founded",
+  "year_start": 427,
+  "precision": "decade",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "construction",
+  "importance": 4,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The great monastic university becomes the intellectual center of the Buddhist world for seven centuries.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

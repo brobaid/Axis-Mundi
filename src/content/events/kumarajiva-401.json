@@ -1,0 +1,28 @@
+{
+  "id": "kumarajiva-401",
+  "title": "Kumarajiva translates at Chang'an",
+  "year_start": 401,
+  "year_end": 413,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Kumarajiva's translation bureau produces the Chinese versions of the major sutras still in liturgical use.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

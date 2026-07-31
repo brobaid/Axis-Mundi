@@ -1,0 +1,27 @@
+{
+  "id": "fifth-dalai-lama-1642",
+  "title": "Fifth Dalai Lama unifies Tibet",
+  "year_start": 1642,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/vajrayana"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "tibetan-plateau"
+  ],
+  "summary": "The Great Fifth joins spiritual and temporal rule, the order that lasts until 1959.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "tripitaka-koreana-1236",
+  "title": "Tripitaka Koreana carved",
+  "year_start": 1236,
+  "year_end": 1251,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "korean-peninsula"
+  ],
+  "summary": "Eighty thousand woodblocks preserve East Asia's most complete canon.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

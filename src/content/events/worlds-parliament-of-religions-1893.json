@@ -1,0 +1,29 @@
+{
+  "id": "worlds-parliament-of-religions-1893",
+  "title": "World's Parliament of Religions",
+  "year_start": 1893,
+  "precision": "exact",
+  "traditions": [
+    "buddhism",
+    "hinduism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "modern",
+  "importance": 4,
+  "region": [
+    "north-america"
+  ],
+  "summary": "The Chicago parliament introduces Buddhist and Hindu teachers to a Western mass audience, opening the modern global exchange.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

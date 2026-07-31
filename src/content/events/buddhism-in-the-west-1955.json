@@ -1,0 +1,27 @@
+{
+  "id": "buddhism-in-the-west-1955",
+  "title": "Buddhism takes root in the West",
+  "year_start": 1955,
+  "precision": "decade",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "north-america"
+  ],
+  "summary": "Zen writing, Theravada meditation lineages, and Tibetan teachers plant durable Western Buddhist communities.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

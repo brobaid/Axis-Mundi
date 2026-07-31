@@ -1,0 +1,27 @@
+{
+  "id": "tsongkhapa-gelug-1409",
+  "title": "Tsongkhapa founds Ganden",
+  "year_start": 1409,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/vajrayana"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "tibetan-plateau"
+  ],
+  "summary": "Tsongkhapa's reform movement becomes the Gelug school, later the tradition of the Dalai Lamas.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

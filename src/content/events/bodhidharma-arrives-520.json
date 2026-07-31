@@ -1,0 +1,27 @@
+{
+  "id": "bodhidharma-arrives-520",
+  "title": "Bodhidharma arrives in China",
+  "year_start": 520,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "According to Chan tradition, the Indian master's arrival founds the meditation school; the account is the school's own origin story.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

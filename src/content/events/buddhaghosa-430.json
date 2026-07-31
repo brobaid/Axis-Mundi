@@ -1,0 +1,27 @@
+{
+  "id": "buddhaghosa-430",
+  "title": "Buddhaghosa systematizes Theravada",
+  "year_start": 430,
+  "precision": "decade",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/theravada"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "sri-lanka"
+  ],
+  "summary": "The Visuddhimagga and his commentaries fix the shape of Theravada doctrine.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

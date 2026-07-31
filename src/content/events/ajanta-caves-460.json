@@ -1,0 +1,28 @@
+{
+  "id": "ajanta-caves-460",
+  "title": "Ajanta cave sanctuaries flourish",
+  "year_start": 460,
+  "year_end": 480,
+  "precision": "decade",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "deccan"
+  ],
+  "summary": "The Vakataka-era caves preserve the finest surviving early Buddhist painting.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

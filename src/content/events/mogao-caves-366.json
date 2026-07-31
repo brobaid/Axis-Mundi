@@ -1,0 +1,27 @@
+{
+  "id": "mogao-caves-366",
+  "title": "Mogao cave sanctuaries begun",
+  "year_start": 366,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The Dunhuang caves open nine centuries of Buddhist art and manuscript preservation on the Silk Road.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

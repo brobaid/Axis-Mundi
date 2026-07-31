@@ -1,0 +1,27 @@
+{
+  "id": "ambedkar-conversion-1956",
+  "title": "Ambedkar's mass conversion",
+  "year_start": 1956,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "modern",
+  "importance": 3,
+  "region": [
+    "deccan"
+  ],
+  "summary": "B.R. Ambedkar and hundreds of thousands of Dalits embrace Buddhism at Nagpur, refounding it in India.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

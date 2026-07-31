@@ -1,0 +1,27 @@
+{
+  "id": "dalai-lama-flees-1959",
+  "title": "The Dalai Lama flees Tibet",
+  "year_start": 1959,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/vajrayana"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "tibetan-plateau"
+  ],
+  "summary": "The fourteenth Dalai Lama's exile globalizes Tibetan Buddhism and its cause.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

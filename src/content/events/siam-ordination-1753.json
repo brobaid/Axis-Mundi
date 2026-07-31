@@ -1,0 +1,27 @@
+{
+  "id": "siam-ordination-1753",
+  "title": "Higher ordination restored from Siam",
+  "year_start": 1753,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/theravada"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "sri-lanka"
+  ],
+  "summary": "The Siyam Nikaya's founding restores the Lankan monastic lineage from Thailand.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

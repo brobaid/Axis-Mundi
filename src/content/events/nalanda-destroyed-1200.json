@@ -1,0 +1,27 @@
+{
+  "id": "nalanda-destroyed-1200",
+  "title": "Nalanda destroyed",
+  "year_start": 1200,
+  "precision": "decade",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "persecution",
+  "importance": 4,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The university's destruction marks the effective end of Buddhism in the land of its birth.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}
