@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F3EC;color:#201B16;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:#6E5620}a:hover{color:#9C7A2F}
+button{font-family:inherit}
+:focus-visible{outline:2px solid #9C7A2F;outline-offset:2px;border-radius:2px}
+@keyframes lmSheetIn{from{transform:translateX(40px);opacity:0}to{transform:none;opacity:1}}
+@keyframes lmFadeIn{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<svg style="display:none" aria-hidden="true"><defs>
+<symbol id="sy-jud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.6 L18.4 15.7 L5.6 15.7 Z"></path><path d="M12 19.4 L5.6 8.3 L18.4 8.3 Z"></path></g></symbol>
+<symbol id="sy-chr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 V20"></path><path d="M6.5 9.5 H17.5"></path></g></symbol>
+<symbol id="sy-isl" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.89 4.45 A7.8 7.8 0 1 0 18.37 16.57 A7.5 7.5 0 1 1 9.89 4.45 Z"></path><path fill="currentColor" stroke="none" d="M16.34 6.26 L17.02 8.03 L18.91 8.13 L17.43 9.32 L17.93 11.14 L16.34 10.11 L14.75 11.14 L15.25 9.32 L13.77 8.13 L15.66 8.03 Z"></path></g></symbol>
+<symbol id="sy-hin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.4 8.9 A2.5 2.5 0 1 0 6.6 6.8"></path><path d="M10.4 8.9 C6.9 8.9 5.4 11.3 5.4 13.5 C5.4 16.4 7.6 18.4 10.2 18.4 C12.9 18.4 14.6 16.5 14.6 14.2 C14.6 12.2 13.2 10.9 11.4 10.9 C10 10.9 9 11.9 9 13.1"></path><path d="M14.6 14.2 C15.9 15.4 17.8 15.3 18.9 14"></path><path d="M13.9 5.9 A3 3 0 0 0 19.1 5.9"></path><circle cx="16.5" cy="3.4" r="0.9" fill="currentColor" stroke="none"></circle></g></symbol>
+<symbol id="sy-bud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="2.1"></circle><path d="M15 12 H19.9 M9 12 H4.1 M12 15 V19.9 M12 9 V4.1 M14.1 14.1 L17.6 17.6 M9.9 9.9 L6.4 6.4 M14.1 9.9 L17.6 6.4 M9.9 14.1 L6.4 17.6"></path></g></symbol>
+<symbol id="sy-sik" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11.8" r="4.6"></circle><path d="M12 3.4 V17.6"></path><path d="M12 3.4 L10.9 5.9 M12 3.4 L13.1 5.9"></path><path d="M10.6 16 H13.4"></path><path d="M13.6 19.6 C9.6 18.6 6.4 15 5.8 9.8 L5.7 8"></path><path d="M10.4 19.6 C14.4 18.6 17.6 15 18.2 9.8 L18.3 8"></path></g></symbol>
+<symbol id="sy-chi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 4 A4 4 0 0 1 12 12 A4 4 0 0 0 12 20"></path><circle cx="12" cy="8" r="1.2" fill="currentColor" stroke="none"></circle><circle cx="12" cy="16" r="1.2"></circle></g></symbol>
+<symbol id="sy-shi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.8 Q12 5 20 6.8"></path><path d="M5.8 10.4 H18.2"></path><path d="M7.4 6.4 L6.8 20"></path><path d="M16.6 6.4 L17.2 20"></path><path d="M12 6 V10.4"></path></g></symbol>
+<symbol id="sy-jai" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20.5 C6.8 18.8 6.2 16.6 6.2 14.4 L6.2 10 A1.1 1.1 0 0 1 8.4 10 L8.4 12.6 L9.3 12.6 L9.3 6.5 A1.1 1.1 0 0 1 11.5 6.5 L11.5 12 L12.4 12 L12.4 5.6 A1.1 1.1 0 0 1 14.6 5.6 L14.6 12.2 L15.5 12.2 L15.5 8.2 A1.1 1.1 0 0 1 17.7 8.2 L17.7 14.4 C17.7 16.6 17.1 18.8 15.9 20.5 Z"></path><circle cx="11.9" cy="15.9" r="1.9"></circle></g></symbol>
+<symbol id="sy-zor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9.8" r="2.4"></circle><path d="M9.6 8.9 C7.4 7.8 5.2 7.4 3.2 7.8 M9.5 10.6 C7.3 10.2 5.2 10.4 3.6 11.2 M9.8 12.3 C8.2 12.2 6.8 12.6 5.8 13.5"></path><path d="M14.4 8.9 C16.6 7.8 18.8 7.4 20.8 7.8 M14.5 10.6 C16.7 10.2 18.8 10.4 20.4 11.2 M14.2 12.3 C15.8 12.2 17.2 12.6 18.2 13.5"></path><path d="M11 13.2 L10.2 17.6 M13 13.2 L13.8 17.6 M12 13.6 V17.8"></path></g></symbol>
+</defs></svg>
+
+<header style="position:sticky;top:0;z-index:50;background:#F7F3EC;border-bottom:1px solid #E3DCD0;display:flex;align-items:center;gap:8px;padding:0 20px;height:56px">
+  <div style="font-family:Newsreader,Georgia,serif;font-size:19px;font-weight:600;letter-spacing:.01em;white-space:nowrap">Axis <span style="color:#9C7A2F">Mundi</span></div>
+  <div style="flex:1"></div>
+  <div style="font-family:Archivo,system-ui,sans-serif;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#5C544A">Gallery · Light</div>
+</header>
+
+<main data-screen-label="Timeline" style="max-width:1160px;margin:0 auto;padding:0 20px 24px">
+  <div style="text-align:center;padding:46px 0 8px">
+    <div style="font-family:Archivo,system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#6E5620;margin-bottom:14px">Room II · The Corridor of Time</div>
+    <h1 style="font-family:Newsreader,Georgia,serif;font-weight:500;line-height:1.12;font-size:clamp(34px,5vw,50px);letter-spacing:-.01em;margin:0 auto 14px;max-width:20ch">Five thousand years of belief, on one line.</h1>
+    <p style="color:#5C544A;max-width:52ch;margin:0 auto;font-size:16.5px">Timelines, maps, and deep dives across ten traditions, drawn from academic sources, presented without a thumb on the scale.</p>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px;max-width:520px;margin:26px auto 30px">
+    <div style="flex:1;height:3px;border-top:1px solid #E3DCD0;border-bottom:1px solid #E3DCD0"></div>
+    <div style="width:5px;height:5px;transform:rotate(45deg);background:#9C7A2F;flex:0 0 auto"></div>
+    <div style="flex:1;height:3px;border-top:1px solid #E3DCD0;border-bottom:1px solid #E3DCD0"></div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:10px;padding:0 2px 10px;flex-wrap:wrap">
+    <sc-if value="{{ notDrilled }}" hint-placeholder-val="{{ true }}">
+      <div style="font-family:Archivo,system-ui,sans-serif;font-size:13px;color:#5C544A"><b style="color:#201B16;font-weight:600">World</b> · all traditions · 0–1200 CE</div>
+    </sc-if>
+    <sc-if value="{{ drilled }}" hint-placeholder-val="{{ false }}">
+      <div style="font-family:Archivo,system-ui,sans-serif;font-size:13px;color:#5C544A">World → Christianity → <b style="color:#201B16;font-weight:600">Protestant</b> · 1500–1650</div>
+    </sc-if>
+    <div style="display:flex;gap:8px;margin-left:auto">
+      <sc-if value="{{ drilled }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ toggleGhosts }}" aria-pressed="{{ ghostPressed }}" style="border:1px solid {{ ghostBorder }};background:#FDFBF7;border-radius:6px;padding:0 12px;height:36px;min-height:36px;white-space:nowrap;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;color:{{ ghostColor }};cursor:pointer" style-hover="border-color:#9C7A2F">{{ ghostLabel }}</button>
+      </sc-if>
+      <button onClick="{{ toggleDrill }}" aria-pressed="{{ drillPressed }}" style="border:1px solid #E3DCD0;background:#FDFBF7;border-radius:6px;padding:0 12px;height:36px;min-height:36px;white-space:nowrap;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;color:#5C544A;cursor:pointer" style-hover="border-color:#9C7A2F">{{ drillLabel }}</button>
+    </div>
+  </div>
+
+  <sc-if value="{{ notDrilled }}" hint-placeholder-val="{{ true }}">
+  <div style="display:flex;gap:6px;overflow-x:auto;padding:0 2px 14px">
+    <button style="flex:0 0 auto;border:1px solid #9C7A2F;background:#FDFBF7;border-radius:16px;padding:0 12px;height:32px;min-height:32px;white-space:nowrap;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;color:#6E5620;cursor:pointer" aria-pressed="true">All types</button>
+    <button style="flex:0 0 auto;border:1px solid #E3DCD0;background:#FDFBF7;border-radius:16px;padding:0 12px;height:32px;min-height:32px;white-space:nowrap;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;color:#5C544A;cursor:pointer" style-hover="border-color:#9C7A2F" aria-pressed="false">Schisms</button>
+    <button style="flex:0 0 auto;border:1px solid #E3DCD0;background:#FDFBF7;border-radius:16px;padding:0 12px;height:32px;min-height:32px;white-space:nowrap;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;color:#5C544A;cursor:pointer" style-hover="border-color:#9C7A2F" aria-pressed="false">Texts</button>
+    <button style="flex:0 0 auto;border:1px solid #E3DCD0;background:#FDFBF7;border-radius:16px;padding:0 12px;height:32px;min-height:32px;white-space:nowrap;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;color:#5C544A;cursor:pointer" style-hover="border-color:#9C7A2F" aria-pressed="false">Councils</button>
+    <button style="flex:0 0 auto;border:1px solid #E3DCD0;background:#FDFBF7;border-radius:16px;padding:0 12px;height:32px;min-height:32px;white-space:nowrap;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;color:#5C544A;cursor:pointer" style-hover="border-color:#9C7A2F" aria-pressed="false">Political</button>
+  </div>
+  </sc-if>
+
+  <div style="position:relative;border:1px solid #201B16;box-shadow:0 0 0 3px #F7F3EC, 0 0 0 4px #E3DCD0;background:#FDFBF7;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#E3DCD0 transparent">
+    <sc-if value="{{ notDrilled }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative;min-width:880px;padding:0 0 6px">
+      <div style="display:flex;align-items:center;padding:12px 12px 12px;border-bottom:1px solid #E3DCD0">
+        <div style="position:sticky;left:12px;background:#FDFBF7;border:1px solid #201B16;box-shadow:0 0 0 3px #FDFBF7, 0 0 0 4px #201B16;padding:6px 13px 5px;margin:4px 0 4px 4px;z-index:5">
+          <div style="font-family:Newsreader,Georgia,serif;font-size:12.5px;letter-spacing:.26em;text-transform:uppercase">The World Timeline</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#6E5620">0 – 1200 CE</div>
+        </div>
+      </div>
+      <div style="position:relative;margin-left:132px;height:34px;border-bottom:1px solid #E3DCD0">
+        <span style="position:absolute;left:0;bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A;padding-left:6px">0</span>
+        <span style="position:absolute;left:16.67%;bottom:8px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A">200</span>
+        <span style="position:absolute;left:33.33%;bottom:8px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A">400</span>
+        <span style="position:absolute;left:50%;bottom:8px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A">600</span>
+        <span style="position:absolute;left:66.67%;bottom:8px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A">800</span>
+        <span style="position:absolute;left:83.33%;bottom:8px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A">1000</span>
+        <span style="position:absolute;left:100%;bottom:8px;transform:translateX(-100%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A;padding-right:6px;white-space:nowrap">1200 CE</span>
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;height:46px;border-bottom:1px solid #E3DCD0" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><svg width="15" height="15" viewBox="0 0 24 24" style="color:#2B6CB0;flex:0 0 auto"><use href="#sy-jud"></use></svg>Judaism</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="Second Temple destroyed, 70 CE" style="position:absolute;top:50%;left:5.83%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:13px;height:13px;border-radius:50%;background:#2B6CB0;box-shadow:0 0 0 3px rgba(43,108,176,.2)"></i><u style="position:absolute;top:1px;left:8px;text-decoration:none;font-family:Archivo,system-ui,sans-serif;font-size:10.5px;white-space:nowrap;color:#5C544A">Second Temple destroyed</u></button>
+            <button aria-label="Mishnah compiled, c. 200 CE" style="position:absolute;top:50%;left:16.67%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#2B6CB0"></i></button>
+            <button aria-label="Babylonian Talmud completed, c. 500 CE" style="position:absolute;top:50%;left:41.67%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#2B6CB0"></i></button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;height:46px;border-bottom:1px solid #E3DCD0" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><svg width="15" height="15" viewBox="0 0 24 24" style="color:#6B46A0;flex:0 0 auto"><use href="#sy-chr"></use></svg>Christianity</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="Edict of Milan, 313 CE" style="position:absolute;top:71%;left:26.08%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#6B46A0"></i></button>
+            <button onClick="{{ openSheet }}" aria-label="First Council of Nicaea, 325 CE. Open event." style="position:absolute;top:50%;left:27.08%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:pointer;z-index:2"><i style="display:block;width:13px;height:13px;border-radius:50%;background:#6B46A0;box-shadow:0 0 0 3px rgba(107,70,160,.2)"></i><u style="position:absolute;top:1px;left:50%;transform:translateX(-50%);text-decoration:none;font-family:Archivo,system-ui,sans-serif;font-size:10.5px;white-space:nowrap;color:#5C544A">Nicaea</u></button>
+            <button aria-label="Council of Chalcedon, 451 CE" style="position:absolute;top:50%;left:37.58%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#6B46A0"></i></button>
+            <button aria-label="Christianization of Kievan Rus, 988 CE" style="position:absolute;top:50%;left:82.33%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#6B46A0;opacity:.75"></i></button>
+            <button aria-label="Great Schism, 1054 CE" style="position:absolute;top:50%;left:87.83%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:13px;height:13px;border-radius:50%;background:#6B46A0;box-shadow:0 0 0 3px rgba(107,70,160,.2)"></i><u style="position:absolute;top:1px;left:50%;transform:translateX(-50%);text-decoration:none;font-family:Archivo,system-ui,sans-serif;font-size:10.5px;white-space:nowrap;color:#5C544A">Great Schism</u></button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;height:46px;border-bottom:1px solid #E3DCD0" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><svg width="15" height="15" viewBox="0 0 24 24" style="color:#1E7A4C;flex:0 0 auto"><use href="#sy-isl"></use></svg>Islam</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="First revelation, 610 CE" style="position:absolute;top:71%;left:50.83%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#1E7A4C"></i></button>
+            <button aria-label="Hijra, 622 CE" style="position:absolute;top:50%;left:51.83%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default;z-index:2"><i style="display:block;width:13px;height:13px;border-radius:50%;background:#1E7A4C;box-shadow:0 0 0 3px rgba(30,122,76,.2)"></i><u style="position:absolute;top:1px;left:50%;transform:translateX(-50%);text-decoration:none;font-family:Archivo,system-ui,sans-serif;font-size:10.5px;white-space:nowrap;color:#5C544A">Hijra</u></button>
+            <button aria-label="Battle of Karbala, 680 CE" style="position:absolute;top:50%;left:56.67%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#1E7A4C"></i></button>
+            <button aria-label="Baghdad founded, 762 CE" style="position:absolute;top:50%;left:63.5%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#1E7A4C;opacity:.75"></i></button>
+            <button aria-label="Fatimid caliphate proclaimed, 909 CE" style="position:absolute;top:50%;left:75.75%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#1E7A4C;opacity:.75"></i></button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;height:46px;border-bottom:1px solid #E3DCD0" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><svg width="15" height="15" viewBox="0 0 24 24" style="color:#D9740B;flex:0 0 auto"><use href="#sy-hin"></use></svg>Hinduism</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="Puranas take shape, c. 400 CE" style="position:absolute;top:50%;left:33.33%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#D9740B;opacity:.75"></i></button>
+            <button aria-label="Adi Shankara born, c. 788 CE" style="position:absolute;top:50%;left:65.67%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#D9740B"></i></button>
+            <button aria-label="Ramanuja teaches, c. 1100 CE" style="position:absolute;top:50%;left:91.67%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#D9740B;opacity:.75"></i></button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;height:46px;border-bottom:1px solid #E3DCD0" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><svg width="15" height="15" viewBox="0 0 24 24" style="color:#8A3033;flex:0 0 auto"><use href="#sy-bud"></use></svg>Buddhism</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="Buddhism enters China, c. 67 CE" style="position:absolute;top:50%;left:5.58%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#8A3033"></i></button>
+            <button aria-label="Buddhism reaches Japan, 552 CE" style="position:absolute;top:50%;left:46%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#8A3033"></i></button>
+            <button aria-label="Borobudur begun, c. 760 CE" style="position:absolute;top:50%;left:63.33%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#8A3033;opacity:.75"></i></button>
+            <button aria-label="Atisha arrives in Tibet, 1042 CE" style="position:absolute;top:50%;left:86.83%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#8A3033;opacity:.75"></i></button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;height:46px;border-bottom:1px solid #E3DCD0" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><svg width="15" height="15" viewBox="0 0 24 24" style="color:#2F3B7A;flex:0 0 auto"><use href="#sy-sik"></use></svg>Sikhism</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <span style="position:absolute;top:50%;right:8px;transform:translateY(-50%);font-family:Archivo,system-ui,sans-serif;font-size:11px;color:#5C544A;opacity:.6;white-space:nowrap">begins 1469 →</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;height:46px;border-bottom:1px solid #E3DCD0" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><svg width="15" height="15" viewBox="0 0 24 24" style="color:#C9A100;flex:0 0 auto"><use href="#sy-chi"></use></svg>Chinese traditions</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="Way of the Celestial Masters founded, 142 CE" style="position:absolute;top:50%;left:11.83%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#C9A100"></i></button>
+            <button aria-label="Huichang persecution, 845 CE" style="position:absolute;top:50%;left:70.42%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#C9A100"></i></button>
+            <button aria-label="Neo-Confucian revival, c. 1070 CE" style="position:absolute;top:50%;left:89.17%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#C9A100;opacity:.75"></i></button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;height:46px;border-bottom:1px solid #E3DCD0" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><svg width="15" height="15" viewBox="0 0 24 24" style="color:#D34E3A;flex:0 0 auto"><use href="#sy-shi"></use></svg>Shinto</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="Kojiki compiled, 712 CE" style="position:absolute;top:50%;left:59.33%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#D34E3A"></i></button>
+            <button aria-label="Engishiki completed, 927 CE" style="position:absolute;top:50%;left:77.25%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#D34E3A;opacity:.75"></i></button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;height:46px;border-bottom:1px solid #E3DCD0" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><svg width="15" height="15" viewBox="0 0 24 24" style="color:#147D77;flex:0 0 auto"><use href="#sy-jai"></use></svg>Jainism</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="Council of Valabhi, c. 453 CE" style="position:absolute;top:50%;left:37.75%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#147D77;opacity:.75"></i></button>
+            <button aria-label="Gommateshwara consecrated, 981 CE" style="position:absolute;top:50%;left:81.75%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#147D77;opacity:.75"></i></button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;height:46px" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><svg width="15" height="15" viewBox="0 0 24 24" style="color:#B3382C;flex:0 0 auto"><use href="#sy-zor"></use></svg>Zoroastrianism</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="Sasanian state religion, 224 CE" style="position:absolute;top:50%;left:18.67%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#B3382C"></i></button>
+            <button aria-label="Fall of the Sasanians, 651 CE" style="position:absolute;top:50%;left:54.25%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#B3382C"></i></button>
+            <button aria-label="Parsi settlement at Sanjan, c. 936 CE" style="position:absolute;top:50%;left:78%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#B3382C;opacity:.75"></i></button>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute;top:0;bottom:0;width:2px;background:#9C7A2F;z-index:3;left:calc(132px + (100% - 132px) * 0.5267)"><b style="position:absolute;top:18px;left:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;color:#6E5620;background:#F7F3EC;border:1px solid #E3DCD0;padding:1px 6px;white-space:nowrap">632 CE · Death of Muhammad</b></div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ drilled }}" hint-placeholder-val="{{ false }}">
+    <div style="position:relative;min-width:880px;padding:0 0 6px">
+      <div style="display:flex;align-items:center;padding:12px 12px 12px;border-bottom:1px solid #E3DCD0">
+        <div style="position:sticky;left:12px;background:#FDFBF7;border:1px solid #201B16;box-shadow:0 0 0 3px #FDFBF7, 0 0 0 4px #201B16;padding:6px 13px 5px;margin:4px 0 4px 4px;z-index:5">
+          <div style="font-family:Newsreader,Georgia,serif;font-size:12.5px;letter-spacing:.26em;text-transform:uppercase">The Protestant Drill</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#6E5620">1500 – 1650</div>
+        </div>
+      </div>
+      <div style="position:relative;margin-left:132px;height:34px;border-bottom:1px solid #E3DCD0">
+        <span style="position:absolute;left:0;bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A;padding-left:6px">1500</span>
+        <span style="position:absolute;left:16.67%;bottom:8px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A">1525</span>
+        <span style="position:absolute;left:33.33%;bottom:8px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A">1550</span>
+        <span style="position:absolute;left:50%;bottom:8px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A">1575</span>
+        <span style="position:absolute;left:66.67%;bottom:8px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A">1600</span>
+        <span style="position:absolute;left:83.33%;bottom:8px;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A">1625</span>
+        <span style="position:absolute;left:100%;bottom:8px;transform:translateX(-100%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5C544A;padding-right:6px">1650</span>
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;height:46px;border-bottom:1px solid #E3DCD0" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><span style="width:10px;height:10px;border-radius:2px;background:#6B46A0;flex:0 0 auto"></span>Lutheran</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="Ninety-five Theses, 1517" style="position:absolute;top:50%;left:11.33%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:13px;height:13px;border-radius:50%;background:#6B46A0;box-shadow:0 0 0 3px rgba(107,70,160,.2)"></i><u style="position:absolute;top:1px;left:50%;transform:translateX(-50%);text-decoration:none;font-family:Archivo,system-ui,sans-serif;font-size:10.5px;white-space:nowrap;color:#5C544A">Ninety-five Theses</u></button>
+            <button aria-label="Augsburg Confession, 1530" style="position:absolute;top:50%;left:20%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:#6B46A0"></i></button>
+            <button aria-label="Death of Luther, 1546" style="position:absolute;top:71%;left:30.67%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:#6B46A0;opacity:.75"></i></button>
+            <sc-if value="{{ ghosts }}" hint-placeholder-val="{{ false }}">
+              <button aria-label="Council of Trent, 1545. Ghost event, Catholic." style="position:absolute;top:50%;left:30%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:transparent;border:1.5px dashed #5C544A;opacity:.55"></i><u style="position:absolute;top:1px;left:50%;transform:translateX(-50%);text-decoration:none;font-family:Archivo,system-ui,sans-serif;font-size:10.5px;white-space:nowrap;color:#5C544A;opacity:.7">Council of Trent · 1545</u></button>
+            </sc-if>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;height:46px;border-bottom:1px solid #E3DCD0" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><span style="width:10px;height:10px;border-radius:2px;background:color-mix(in srgb, #6B46A0 84%, #FDFBF7);flex:0 0 auto"></span>Reformed</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="Institutes of the Christian Religion published, 1536" style="position:absolute;top:50%;left:24%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:color-mix(in srgb, #6B46A0 84%, #FDFBF7)"></i></button>
+            <button aria-label="Geneva Academy founded, 1559" style="position:absolute;top:50%;left:39.33%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:color-mix(in srgb, #6B46A0 84%, #FDFBF7);opacity:.75"></i></button>
+            <button aria-label="Synod of Dort, 1618" style="position:absolute;top:50%;left:78.67%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:color-mix(in srgb, #6B46A0 84%, #FDFBF7);opacity:.75"></i></button>
+            <button aria-label="Westminster Confession, 1646" style="position:absolute;top:50%;left:97.33%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:color-mix(in srgb, #6B46A0 84%, #FDFBF7);opacity:.75"></i></button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;height:46px;border-bottom:1px solid #E3DCD0" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><span style="width:10px;height:10px;border-radius:2px;background:color-mix(in srgb, #6B46A0 68%, #FDFBF7);flex:0 0 auto"></span>Anglican</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="Act of Supremacy, 1534" style="position:absolute;top:50%;left:22.67%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:color-mix(in srgb, #6B46A0 68%, #FDFBF7)"></i></button>
+            <button aria-label="Book of Common Prayer, 1549" style="position:absolute;top:50%;left:32.67%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:color-mix(in srgb, #6B46A0 68%, #FDFBF7);opacity:.75"></i></button>
+            <button aria-label="King James Bible, 1611" style="position:absolute;top:50%;left:74%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:9px;height:9px;border-radius:50%;background:color-mix(in srgb, #6B46A0 68%, #FDFBF7)"></i></button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;height:46px" style-hover="background:rgba(156,122,47,.045)">
+          <div style="flex:0 0 132px;padding:0 10px;display:flex;align-items:center;gap:8px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;position:sticky;left:0;background:#FDFBF7;z-index:2;height:100%;border-right:1px solid #E3DCD0"><span style="width:10px;height:10px;border-radius:2px;background:color-mix(in srgb, #6B46A0 52%, #FDFBF7);flex:0 0 auto"></span>Anabaptist</div>
+          <div style="position:relative;flex:1;height:100%;background:repeating-linear-gradient(to right, transparent 0 calc(100%/12 - 1px), rgba(227,220,208,.55) calc(100%/12 - 1px) calc(100%/12))">
+            <button aria-label="First believers' baptism, Zurich, 1525" style="position:absolute;top:50%;left:16.67%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:color-mix(in srgb, #6B46A0 52%, #FDFBF7);opacity:.75"></i></button>
+            <button aria-label="Menno Simons ordained, 1536" style="position:absolute;top:50%;left:24%;transform:translate(-50%,-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;cursor:default"><i style="display:block;width:6px;height:6px;border-radius:50%;background:color-mix(in srgb, #6B46A0 52%, #FDFBF7);opacity:.75"></i></button>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute;top:0;bottom:0;width:2px;background:#9C7A2F;z-index:3;left:calc(132px + (100% - 132px) * 0.1133)"><b style="position:absolute;top:18px;left:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;color:#6E5620;background:#F7F3EC;border:1px solid #E3DCD0;padding:1px 6px;white-space:nowrap">1517 · Ninety-five Theses</b></div>
+    </div>
+    </sc-if>
+  </div>
+  <p style="padding:12px 2px 0;font-size:13px;color:#5C544A;max-width:64ch">Dot size encodes importance rank; only rank-5 events carry labels at this zoom. Tap any event to open it without losing your place. Drill in to see a tradition split into its branch lanes.</p>
+</main>
+
+<sc-if value="{{ showPlate }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="Symbol plate" style="max-width:1160px;margin:0 auto;padding:26px 20px 70px">
+  <div style="display:flex;align-items:center;gap:12px;max-width:520px;margin:0 auto 34px">
+    <div style="flex:1;height:3px;border-top:1px solid #E3DCD0;border-bottom:1px solid #E3DCD0"></div>
+    <div style="width:5px;height:5px;transform:rotate(45deg);background:#9C7A2F;flex:0 0 auto"></div>
+    <div style="flex:1;height:3px;border-top:1px solid #E3DCD0;border-bottom:1px solid #E3DCD0"></div>
+  </div>
+  <div style="text-align:center;margin-bottom:22px">
+    <div style="font-family:Newsreader,Georgia,serif;font-style:italic;font-size:15px;color:#6E5620;letter-spacing:.04em;margin-bottom:6px">Plate Ⅱ</div>
+    <h2 style="font-family:Newsreader,Georgia,serif;font-weight:500;font-size:30px;margin:0 0 8px">The Tradition Symbols</h2>
+    <p style="color:#5C544A;font-size:14.5px;max-width:56ch;margin:0 auto">Ten marks on one grid. They live in lane headers, chips, and deep-dive mastheads only — never as decoration.</p>
+  </div>
+  <figure style="margin:0;background:#FDFBF7;border:1px solid #201B16;box-shadow:0 0 0 3px #F7F3EC, 0 0 0 4px #E3DCD0;padding:26px 18px 16px">
+    <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;padding:18px 8px 14px;border:1px solid #E3DCD0">
+        <svg width="44" height="44" viewBox="0 0 24 24" style="color:#201B16"><use href="#sy-jud"></use></svg>
+        <div style="text-align:center;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500"><span style="display:inline-block;vertical-align:-1px;margin-right:6px;width:10px;height:10px;border-radius:2px;background:#2B6CB0"></span>Judaism</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5C544A">Star of David</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;padding:18px 8px 14px;border:1px solid #E3DCD0">
+        <svg width="44" height="44" viewBox="0 0 24 24" style="color:#201B16"><use href="#sy-chr"></use></svg>
+        <div style="text-align:center;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500"><span style="display:inline-block;vertical-align:-1px;margin-right:6px;width:10px;height:10px;border-radius:2px;background:#6B46A0"></span>Christianity</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5C544A">Cross</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;padding:18px 8px 14px;border:1px solid #E3DCD0">
+        <svg width="44" height="44" viewBox="0 0 24 24" style="color:#201B16"><use href="#sy-isl"></use></svg>
+        <div style="text-align:center;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500"><span style="display:inline-block;vertical-align:-1px;margin-right:6px;width:10px;height:10px;border-radius:2px;background:#1E7A4C"></span>Islam</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5C544A">Crescent &amp; star</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;padding:18px 8px 14px;border:1px solid #E3DCD0">
+        <svg width="44" height="44" viewBox="0 0 24 24" style="color:#201B16"><use href="#sy-hin"></use></svg>
+        <div style="text-align:center;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500"><span style="display:inline-block;vertical-align:-1px;margin-right:6px;width:10px;height:10px;border-radius:2px;background:#D9740B"></span>Hinduism</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5C544A">Om</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;padding:18px 8px 14px;border:1px solid #E3DCD0">
+        <svg width="44" height="44" viewBox="0 0 24 24" style="color:#201B16"><use href="#sy-bud"></use></svg>
+        <div style="text-align:center;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500"><span style="display:inline-block;vertical-align:-1px;margin-right:6px;width:10px;height:10px;border-radius:2px;background:#8A3033"></span>Buddhism</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5C544A">Dharmachakra</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;padding:18px 8px 14px;border:1px solid #E3DCD0">
+        <svg width="44" height="44" viewBox="0 0 24 24" style="color:#201B16"><use href="#sy-sik"></use></svg>
+        <div style="text-align:center;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500"><span style="display:inline-block;vertical-align:-1px;margin-right:6px;width:10px;height:10px;border-radius:2px;background:#2F3B7A"></span>Sikhism</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5C544A">Khanda</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;padding:18px 8px 14px;border:1px solid #E3DCD0">
+        <svg width="44" height="44" viewBox="0 0 24 24" style="color:#201B16"><use href="#sy-chi"></use></svg>
+        <div style="text-align:center;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500"><span style="display:inline-block;vertical-align:-1px;margin-right:6px;width:10px;height:10px;border-radius:2px;background:#C9A100"></span>Chinese traditions</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5C544A">Taijitu</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;padding:18px 8px 14px;border:1px solid #E3DCD0">
+        <svg width="44" height="44" viewBox="0 0 24 24" style="color:#201B16"><use href="#sy-shi"></use></svg>
+        <div style="text-align:center;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500"><span style="display:inline-block;vertical-align:-1px;margin-right:6px;width:10px;height:10px;border-radius:2px;background:#D34E3A"></span>Shinto</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5C544A">Torii</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;padding:18px 8px 14px;border:1px solid #E3DCD0">
+        <svg width="44" height="44" viewBox="0 0 24 24" style="color:#201B16"><use href="#sy-jai"></use></svg>
+        <div style="text-align:center;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500"><span style="display:inline-block;vertical-align:-1px;margin-right:6px;width:10px;height:10px;border-radius:2px;background:#147D77"></span>Jainism</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5C544A">Ahimsa hand</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;padding:18px 8px 14px;border:1px solid #E3DCD0">
+        <svg width="44" height="44" viewBox="0 0 24 24" style="color:#201B16"><use href="#sy-zor"></use></svg>
+        <div style="text-align:center;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500"><span style="display:inline-block;vertical-align:-1px;margin-right:6px;width:10px;height:10px;border-radius:2px;background:#B3382C"></span>Zoroastrianism</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5C544A">Faravahar</div>
+      </div>
+    </div>
+    <figcaption style="padding-top:12px;font-size:13px;color:#5C544A;line-height:1.45">Line-art marks for lane headers, chips, and mastheads. Forms follow each tradition's own convention.
+      <span style="font-family:Archivo,system-ui,sans-serif;font-size:11.5px;letter-spacing:.03em;display:block;margin-top:2px">24px grid · 1.5px stroke · rounded caps · drawn for Axis Mundi</span>
+    </figcaption>
+  </figure>
+</section>
+</sc-if>
+
+<footer style="max-width:1160px;margin:0 auto;padding:24px 20px 44px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;color:#5C544A;border-top:1px solid #E3DCD0">Adherent figures follow Pew Research. Classifications and framing per the project methodology. Dates follow academic consensus; uncertainty renders as "c.", never silently rounded.</footer>
+
+<sc-if value="{{ sheet }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeSheet }}" style="position:fixed;inset:0;background:rgba(20,17,13,.2);z-index:60;animation:lmFadeIn 280ms ease"></div>
+  <aside role="dialog" aria-label="Event detail: First Council of Nicaea" style="position:fixed;z-index:61;top:0;bottom:0;right:0;width:min(430px,100vw);background:#FDFBF7;border-left:1px solid #E3DCD0;box-shadow:-10px 0 34px rgba(20,17,13,.08);overflow-y:auto;padding:20px 20px 30px;animation:lmSheetIn 280ms ease">
+    <button onClick="{{ closeSheet }}" aria-label="Close" style="position:absolute;top:8px;right:8px;width:44px;height:44px;font-size:20px;color:#5C544A;background:none;border:none;cursor:pointer">×</button>
+    <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:6px 0 12px">
+      <span style="display:inline-flex;align-items:center;gap:7px;font-family:Archivo,system-ui,sans-serif;font-size:12.5px;font-weight:500;color:#5C544A"><svg width="14" height="14" viewBox="0 0 24 24" style="color:#6B46A0"><use href="#sy-chr"></use></svg>Christianity</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#5C544A">325 CE · Council · Rank 5</span>
+    </div>
+    <h2 style="font-family:Newsreader,Georgia,serif;font-weight:500;font-size:27px;line-height:1.15;margin:0 0 6px">First Council of Nicaea</h2>
+    <div style="display:flex;align-items:center;gap:10px;margin:10px 0 14px">
+      <div style="flex:1;height:3px;border-top:1px solid #E3DCD0;border-bottom:1px solid #E3DCD0"></div>
+      <div style="width:4px;height:4px;transform:rotate(45deg);background:#9C7A2F;flex:0 0 auto"></div>
+      <div style="flex:1;height:3px;border-top:1px solid #E3DCD0;border-bottom:1px solid #E3DCD0"></div>
+    </div>
+    <div style="background:#FDFBF7;border:1px solid #201B16;box-shadow:0 0 0 2px #FDFBF7, 0 0 0 3px #E3DCD0;padding:12px 14px;margin-bottom:14px">
+      <div style="font-family:Archivo,system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#5C544A;margin-bottom:6px">Exhibit label</div>
+      <div style="display:flex;justify-content:space-between;gap:12px;padding:7px 0;font-size:14px"><span style="font-family:Archivo,system-ui,sans-serif;color:#5C544A;font-size:12.5px;padding-top:2px">Convened by</span><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:right">Constantine I</span></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid #E3DCD0;font-size:14px"><span style="font-family:Archivo,system-ui,sans-serif;color:#5C544A;font-size:12.5px;padding-top:2px">Location</span><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:right">Nicaea, Anatolia</span></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid #E3DCD0;font-size:14px"><span style="font-family:Archivo,system-ui,sans-serif;color:#5C544A;font-size:12.5px;padding-top:2px">Type</span><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:right">Ecumenical council</span></div>
+    </div>
+    <p style="margin:14px 0;color:#201B16">First ecumenical council of the Christian church. It produced the original Nicene Creed and condemned Arianism, setting the pattern for conciliar authority that shaped every later schism and settlement.</p>
+    <div style="font-size:13px;color:#5C544A;border-top:1px solid #E3DCD0;padding-top:12px;margin-top:14px"><span style="font-family:Archivo,system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase">Sources</span><br>Oxford Handbook of Early Christian Studies · Britannica</div>
+    <div style="margin-top:12px;font-size:14px"><span style="font-family:Archivo,system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#5C544A">Related</span><br><a href="#nicaea" onClick="{{ noop }}">Edict of Milan (313)</a> · <a href="#nicaea" onClick="{{ noop }}">Constantine I</a> · <a href="#nicaea" onClick="{{ noop }}">Athanasius</a></div>
+  </aside>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;startDrilled&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Timeline&quot;},&quot;ghostMode&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Timeline&quot;},&quot;showPlate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Symbol plate&quot;}}">
+class Component extends DCLogic {
+  state = { drilled: null, ghosts: null, sheet: false };
+  componentDidMount() {
+    this._esc = (e) => { if (e.key === 'Escape') this.setState({ sheet: false }); };
+    document.addEventListener('keydown', this._esc);
+  }
+  componentWillUnmount() { document.removeEventListener('keydown', this._esc); }
+  renderVals() {
+    const drilled = this.state.drilled ?? (this.props.startDrilled ?? false);
+    const ghosts = this.state.ghosts ?? (this.props.ghostMode ?? false);
+    return {
+      drilled, notDrilled: !drilled, ghosts,
+      sheet: this.state.sheet,
+      showPlate: this.props.showPlate ?? true,
+      drillLabel: drilled ? 'Back to World' : 'Drill: Protestant',
+      drillPressed: String(drilled),
+      ghostLabel: ghosts ? 'Ghosts: on' : 'Ghost mode',
+      ghostPressed: String(ghosts),
+      ghostBorder: ghosts ? '#9C7A2F' : '#E3DCD0',
+      ghostColor: ghosts ? '#6E5620' : '#5C544A',
+      toggleDrill: () => this.setState({ drilled: !drilled }),
+      toggleGhosts: () => this.setState({ ghosts: !ghosts }),
+      openSheet: () => this.setState({ sheet: true }),
+      closeSheet: () => this.setState({ sheet: false }),
+      noop: (e) => e.preventDefault(),
+    };
+  }
+}
+</script>
+</body>
+</html>
