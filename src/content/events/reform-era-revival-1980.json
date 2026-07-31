@@ -1,0 +1,28 @@
+{
+  "id": "reform-era-revival-1980",
+  "title": "Reform-era religious revival",
+  "year_start": 1980,
+  "precision": "decade",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese"
+  ],
+  "type": "modern",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Temples reopen and folk practice returns across the mainland as controls loosen, unevenly and under supervision.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "xunzi-bce-250",
+  "title": "Xunzi",
+  "year_start": -250,
+  "precision": "century",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The realist Confucian of ritual as artifice, teacher of the Legalists, long unorthodox and never unread.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "jinja-honcho-1946",
+  "title": "Association of Shinto Shrines founded",
+  "year_start": 1946,
+  "precision": "exact",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The voluntary association gathers most shrines, including Ise, into the postwar organization of shrine Shinto.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

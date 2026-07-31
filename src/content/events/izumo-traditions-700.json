@@ -1,0 +1,27 @@
+{
+  "id": "izumo-traditions-700",
+  "title": "Izumo shrine traditions consolidate",
+  "year_start": 700,
+  "precision": "century",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The great shrine of Okuninushi anchors the tradition's second pole, the land-ceding myths across from Ise's solar line.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

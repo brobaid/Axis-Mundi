@@ -1,0 +1,27 @@
+{
+  "id": "nihon-shoki-720",
+  "title": "Nihon Shoki compiled",
+  "year_start": 720,
+  "precision": "exact",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The court's second chronicle fixes the kami narratives in their most cited form.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

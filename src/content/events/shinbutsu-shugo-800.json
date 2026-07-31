@@ -1,0 +1,27 @@
+{
+  "id": "shinbutsu-shugo-800",
+  "title": "Kami and buddhas amalgamate",
+  "year_start": 800,
+  "precision": "century",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "Shrines and temples interweave as kami become protectors and local traces of buddhas, the settled pattern for a millennium.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

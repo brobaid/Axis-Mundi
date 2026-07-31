@@ -1,0 +1,28 @@
+{
+  "id": "rigveda-composed-bce-1500",
+  "title": "Rigveda composed",
+  "year_start": -1500,
+  "year_end": -1200,
+  "precision": "era",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "text",
+  "importance": 5,
+  "region": [
+    "punjab"
+  ],
+  "summary": "The hymns of the Rigveda, orally composed and transmitted with extraordinary fidelity, are the oldest layer of the tradition.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "parshvanatha-bce-750",
+  "title": "Parshvanatha",
+  "year_start": -750,
+  "precision": "era",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism"
+  ],
+  "type": "figure",
+  "importance": 4,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The twenty-third tirthankara of the tradition; many scholars accept a historical Parshva of roughly the 8th to 7th century BCE.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

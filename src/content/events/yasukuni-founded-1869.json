@@ -1,0 +1,27 @@
+{
+  "id": "yasukuni-founded-1869",
+  "title": "Yasukuni Shrine founded",
+  "year_start": 1869,
+  "precision": "exact",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The shrine for the war dead is founded in Tokyo; its enshrinements keep it politically charged to the present.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

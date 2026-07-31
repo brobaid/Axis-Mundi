@@ -1,0 +1,27 @@
+{
+  "id": "buddha-teaching-career-bce-450",
+  "title": "The Buddha's awakening and teaching career",
+  "year_start": -450,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "founding",
+  "importance": 5,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Siddhartha Gautama's awakening and forty-five years of teaching found the dharma; scholarly dating of his death centers on the 480s BCE.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

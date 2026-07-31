@@ -1,0 +1,29 @@
+{
+  "id": "white-lotus-1796",
+  "title": "White Lotus rebellion",
+  "year_start": 1796,
+  "year_end": 1804,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/chinese-folk-religion"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The millenarian rising shows the mobilizing power of folk-Buddhist salvationism against the Qing.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

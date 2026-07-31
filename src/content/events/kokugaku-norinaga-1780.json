@@ -1,0 +1,27 @@
+{
+  "id": "kokugaku-norinaga-1780",
+  "title": "Motoori Norinaga's kokugaku",
+  "year_start": 1780,
+  "precision": "decade",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "Nativist philology exalts the Kojiki and the ancient Way, the scholarship behind Shinto's modern self-assertion.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "josiah-reform-bce-622",
+  "title": "Josiah's reform",
+  "year_start": -622,
+  "precision": "year",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "The Jerusalem cult is centralized and a rediscovered law scroll, associated by scholars with Deuteronomy, anchors the reform.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

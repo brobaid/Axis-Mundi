@@ -1,0 +1,30 @@
+{
+  "id": "ricci-in-beijing-1601",
+  "title": "Matteo Ricci reaches Beijing",
+  "year_start": 1601,
+  "precision": "exact",
+  "traditions": [
+    "chinese",
+    "christianity"
+  ],
+  "branch_path": [
+    "chinese"
+  ],
+  "type": "encounter",
+  "importance": 4,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The Jesuit's accommodation to Confucian learning opens the early modern encounter between Chinese tradition and Christianity.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "macculloch-reformation-2003",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

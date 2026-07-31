@@ -1,0 +1,27 @@
+{
+  "id": "song-masters-1070",
+  "title": "Northern Song masters open Neo-Confucianism",
+  "year_start": 1070,
+  "precision": "decade",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Zhou Dunyi and the Cheng brothers give Confucianism a metaphysics answering Buddhism and Taoism.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

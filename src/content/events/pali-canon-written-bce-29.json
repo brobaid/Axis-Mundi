@@ -1,0 +1,27 @@
+{
+  "id": "pali-canon-written-bce-29",
+  "title": "Pali Canon committed to writing",
+  "year_start": -29,
+  "precision": "decade",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/theravada"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "sri-lanka"
+  ],
+  "summary": "At Aluvihara, the Lankan sangha writes down the canon that Theravada holds authoritative.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

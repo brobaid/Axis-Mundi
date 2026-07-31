@@ -1,0 +1,28 @@
+{
+  "id": "exodus-narrative-bce-1250",
+  "title": "The Exodus (foundational narrative)",
+  "year_start": -1250,
+  "precision": "era",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "founding",
+  "importance": 5,
+  "region": [
+    "nile-valley"
+  ],
+  "summary": "Position 1: the exodus from Egypt is the founding narrative of Israelite religion and is treated by the tradition as historical. Position 2: archaeology and Egyptology find no direct corroboration, and most scholars treat the narrative's historicity as unresolved. The record dates the narrative's traditional setting, not a verified event.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": true,
+  "contested_note": "Position 1: the exodus from Egypt is the founding narrative of Israelite religion and is treated by the tradition as historical. Position 2: archaeology and Egyptology find no direct corroboration, and most scholars treat the narrative's historicity as unresolved. The record dates the narrative's traditional setting, not a verified event.",
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

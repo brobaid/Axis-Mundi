@@ -1,0 +1,27 @@
+{
+  "id": "ge-hong-320",
+  "title": "Ge Hong's Baopuzi",
+  "year_start": 320,
+  "precision": "decade",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/taoism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "south-china-coast"
+  ],
+  "summary": "The master of alchemy and immortality arts systematizes the esoteric side of the Taoist tradition.",
+  "sources": [
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

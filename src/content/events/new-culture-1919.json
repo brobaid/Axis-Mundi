@@ -1,0 +1,27 @@
+{
+  "id": "new-culture-1919",
+  "title": "New Culture movement targets Confucianism",
+  "year_start": 1919,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "May Fourth intellectuals blame the tradition for China's weakness, opening a century of contested Confucian standing.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

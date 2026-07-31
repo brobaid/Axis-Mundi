@@ -1,0 +1,27 @@
+{
+  "id": "wang-yangming-1510",
+  "title": "Wang Yangming's teaching",
+  "year_start": 1510,
+  "precision": "decade",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "reform",
+  "importance": 4,
+  "region": [
+    "south-china-coast"
+  ],
+  "summary": "The philosophy of innate knowing and the unity of knowledge and action opens Neo-Confucianism's second wave.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

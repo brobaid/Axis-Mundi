@@ -1,0 +1,27 @@
+{
+  "id": "analects-compiled-bce-400",
+  "title": "Analects compiled",
+  "year_start": -400,
+  "precision": "century",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Confucius' sayings are gathered by his school into the tradition's most read book.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

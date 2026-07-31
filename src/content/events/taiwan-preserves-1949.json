@@ -1,0 +1,28 @@
+{
+  "id": "taiwan-preserves-1949",
+  "title": "Taiwan preserves the traditions",
+  "year_start": 1949,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "taiwan"
+  ],
+  "summary": "Temple religion, Taoist liturgy, and Confucian observance continue on Taiwan through the mainland's suppression years.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

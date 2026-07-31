@@ -1,0 +1,27 @@
+{
+  "id": "daodejing-bce-400",
+  "title": "Daodejing composed",
+  "year_start": -400,
+  "precision": "century",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/taoism"
+  ],
+  "type": "text",
+  "importance": 5,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The classic of the Way and its power, attributed by tradition to the legendary Laozi, becomes Taoism's founding text.",
+  "sources": [
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

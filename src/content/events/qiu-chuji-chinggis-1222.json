@@ -1,0 +1,27 @@
+{
+  "id": "qiu-chuji-chinggis-1222",
+  "title": "Qiu Chuji meets Chinggis Khan",
+  "year_start": 1222,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/taoism"
+  ],
+  "type": "encounter",
+  "importance": 3,
+  "region": [
+    "transoxiana"
+  ],
+  "summary": "The Quanzhen patriarch's journey to the khan wins protection for his order at the empire's founding.",
+  "sources": [
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

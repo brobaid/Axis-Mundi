@@ -1,0 +1,28 @@
+{
+  "id": "mazu-canonized-1156",
+  "title": "Mazu receives imperial titles",
+  "year_start": 1156,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/chinese-folk-religion"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "south-china-coast"
+  ],
+  "summary": "The state canonizes the Fujian sea goddess, the classic case of folk deity and empire legitimating each other.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

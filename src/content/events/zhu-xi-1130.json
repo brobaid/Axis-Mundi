@@ -1,0 +1,28 @@
+{
+  "id": "zhu-xi-1130",
+  "title": "Zhu Xi",
+  "year_start": 1130,
+  "year_end": 1200,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "figure",
+  "importance": 4,
+  "region": [
+    "south-china-coast"
+  ],
+  "summary": "The great synthesizer whose Four Books curriculum defines orthodoxy across East Asia for seven centuries.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

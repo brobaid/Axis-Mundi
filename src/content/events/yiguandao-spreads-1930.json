@@ -1,0 +1,28 @@
+{
+  "id": "yiguandao-spreads-1930",
+  "title": "Yiguandao spreads",
+  "year_start": 1930,
+  "precision": "decade",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/chinese-folk-religion"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The largest of the redemptive societies carries syncretic salvationism through republican China and later Taiwan.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "exams-abolished-1905",
+  "title": "Civil examinations abolished",
+  "year_start": 1905,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The end of the examination system severs Confucian learning from state power after two millennia.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

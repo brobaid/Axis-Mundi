@@ -1,0 +1,28 @@
+{
+  "id": "three-teachings-700",
+  "title": "Three teachings discourse matures",
+  "year_start": 700,
+  "precision": "century",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese"
+  ],
+  "type": "encounter",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Confucian, Taoist, and Buddhist claims settle into the \"three teachings\" frame that defines Chinese religious pluralism.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

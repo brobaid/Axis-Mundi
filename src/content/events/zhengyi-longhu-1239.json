@@ -1,0 +1,27 @@
+{
+  "id": "zhengyi-longhu-1239",
+  "title": "Zhengyi patriarchate confirmed",
+  "year_start": 1239,
+  "precision": "decade",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/taoism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "south-china-coast"
+  ],
+  "summary": "The Celestial Masters' line at Longhu Shan is confirmed as the liturgical authority of southern Taoism.",
+  "sources": [
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

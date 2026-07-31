@@ -1,0 +1,27 @@
+{
+  "id": "kami-worship-attested-300",
+  "title": "Kami worship attested",
+  "year_start": 300,
+  "precision": "era",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "Archaeology attests ritual sites and offerings from the Yayoi and Kofun periods; the practices later called Shinto have no founding moment.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

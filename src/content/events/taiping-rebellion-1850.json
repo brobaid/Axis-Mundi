@@ -1,0 +1,31 @@
+{
+  "id": "taiping-rebellion-1850",
+  "title": "Taiping rebellion",
+  "year_start": 1850,
+  "year_end": 1864,
+  "precision": "exact",
+  "traditions": [
+    "chinese",
+    "christianity"
+  ],
+  "branch_path": [
+    "chinese"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "south-china-coast"
+  ],
+  "summary": "Hong Xiuquan's Heavenly Kingdom, built on a reworked Christianity, wars on the Confucian order at the cost of millions of lives.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

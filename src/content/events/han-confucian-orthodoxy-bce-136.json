@@ -1,0 +1,27 @@
+{
+  "id": "han-confucian-orthodoxy-bce-136",
+  "title": "Han establishes Confucian orthodoxy",
+  "year_start": -136,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Emperor Wu installs the Five Classics at court, wedding the Confucian canon to the imperial state.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "shangqing-lingbao-400",
+  "title": "Shangqing and Lingbao revelations",
+  "year_start": 400,
+  "precision": "century",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/taoism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "south-china-coast"
+  ],
+  "summary": "New scriptural corpora reorganize Taoism around revealed liturgy and celestial hierarchy.",
+  "sources": [
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

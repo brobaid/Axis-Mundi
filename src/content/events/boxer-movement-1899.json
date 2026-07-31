@@ -1,0 +1,31 @@
+{
+  "id": "boxer-movement-1899",
+  "title": "Boxer movement",
+  "year_start": 1899,
+  "year_end": 1901,
+  "precision": "exact",
+  "traditions": [
+    "chinese",
+    "christianity"
+  ],
+  "branch_path": [
+    "chinese/chinese-folk-religion"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Spirit-possession bands attack missions and converts; the suppression that follows reshapes religion and state alike.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

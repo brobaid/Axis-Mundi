@@ -1,0 +1,27 @@
+{
+  "id": "kitano-tenjin-947",
+  "title": "Kitano shrine and the Tenjin cult",
+  "year_start": 947,
+  "precision": "exact",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The deification of the wronged scholar Michizane shows the tradition's mechanism for turning turbulent spirits into benevolent kami.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

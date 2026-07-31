@@ -1,0 +1,27 @@
+{
+  "id": "shinto-directive-1945",
+  "title": "Shinto Directive",
+  "year_start": 1945,
+  "precision": "exact",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The occupation disestablishes State Shinto, ending government support and compulsory reverence.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

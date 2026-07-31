@@ -1,0 +1,27 @@
+{
+  "id": "confucius-teaching-bce-500",
+  "title": "Confucius' teaching career",
+  "year_start": -500,
+  "precision": "decade",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "founding",
+  "importance": 5,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Kongzi teaches ritual propriety, humaneness, and self-cultivation; his school becomes the spine of Chinese ethics and statecraft.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

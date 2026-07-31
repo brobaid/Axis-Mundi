@@ -1,0 +1,27 @@
+{
+  "id": "quanzhen-founded-1167",
+  "title": "Quanzhen Taoism founded",
+  "year_start": 1167,
+  "precision": "year",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/taoism"
+  ],
+  "type": "founding",
+  "importance": 4,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Wang Chongyang's monastic, internally alchemical order becomes Taoism's great northern school.",
+  "sources": [
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

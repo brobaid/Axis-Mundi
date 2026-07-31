@@ -1,0 +1,27 @@
+{
+  "id": "qumran-community-bce-150",
+  "title": "Qumran community active",
+  "year_start": -150,
+  "precision": "century",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "The sectarian settlement by the Dead Sea copies and composes the scrolls that reveal Second Temple Judaism's diversity.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

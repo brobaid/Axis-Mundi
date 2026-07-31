@@ -1,0 +1,28 @@
+{
+  "id": "mandate-of-heaven-bce-1040",
+  "title": "Mandate of Heaven articulated",
+  "year_start": -1040,
+  "precision": "era",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The Zhou justify their rule as Heaven's mandate, the moral-cosmic frame of Chinese statecraft for three millennia.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "yijing-divination-bce-800",
+  "title": "Yijing divination layer forms",
+  "year_start": -800,
+  "precision": "era",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The Changes' hexagram divination takes shape, later absorbed into every stream of the tradition.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

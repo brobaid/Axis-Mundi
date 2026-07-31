@@ -1,0 +1,27 @@
+{
+  "id": "qin-burning-bce-213",
+  "title": "Qin suppression of the schools",
+  "year_start": -213,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "persecution",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The First Emperor's proscription of the classics becomes the tradition's memory of persecution.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

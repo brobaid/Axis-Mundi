@@ -1,0 +1,27 @@
+{
+  "id": "yoshida-shinto-1470",
+  "title": "Yoshida Shinto founded",
+  "year_start": 1470,
+  "precision": "decade",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "founding",
+  "importance": 4,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "Yoshida Kanetomo's \"one and only Shinto\" claims independence from Buddhism and licenses shrines nationwide.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

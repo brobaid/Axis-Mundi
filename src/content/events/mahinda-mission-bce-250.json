@@ -1,0 +1,27 @@
+{
+  "id": "mahinda-mission-bce-250",
+  "title": "Mahinda's mission to Sri Lanka",
+  "year_start": -250,
+  "precision": "decade",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/theravada"
+  ],
+  "type": "expansion",
+  "importance": 4,
+  "region": [
+    "sri-lanka"
+  ],
+  "summary": "Ashoka's son brings the dharma to Lanka, founding the lineage that becomes Theravada's heartland.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

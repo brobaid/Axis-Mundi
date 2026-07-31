@@ -1,0 +1,28 @@
+{
+  "id": "oracle-bones-bce-1200",
+  "title": "Shang ancestral religion attested",
+  "year_start": -1200,
+  "precision": "era",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese"
+  ],
+  "type": "founding",
+  "importance": 5,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The oracle bones document divination and ancestor veneration, the bedrock of Chinese religious life ever since.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

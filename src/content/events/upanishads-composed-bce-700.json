@@ -1,0 +1,28 @@
+{
+  "id": "upanishads-composed-bce-700",
+  "title": "Principal Upanishads composed",
+  "year_start": -800,
+  "year_end": -400,
+  "precision": "era",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "text",
+  "importance": 5,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The Upanishads turn the tradition inward, toward brahman, atman, karma, and liberation, the axis of all later Hindu thought.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

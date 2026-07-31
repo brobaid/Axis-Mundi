@@ -1,0 +1,27 @@
+{
+  "id": "bhadrabahu-migration-bce-300",
+  "title": "Bhadrabahu's migration south",
+  "year_start": -300,
+  "precision": "century",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism"
+  ],
+  "type": "expansion",
+  "importance": 4,
+  "region": [
+    "deccan"
+  ],
+  "summary": "According to Digambara tradition, Bhadrabahu leads part of the community south during famine, planting Jainism in Karnataka.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

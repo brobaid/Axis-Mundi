@@ -1,0 +1,27 @@
+{
+  "id": "panini-grammar-bce-400",
+  "title": "Panini's grammar",
+  "year_start": -400,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "gandhara"
+  ],
+  "summary": "The Ashtadhyayi fixes Sanskrit, the medium of the entire scriptural tradition.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "exams-on-zhu-xi-1315",
+  "title": "Examinations fixed on Zhu Xi's canon",
+  "year_start": 1315,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The restored civil examinations adopt Zhu Xi's commentaries, making Neo-Confucianism the empire's tested truth.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

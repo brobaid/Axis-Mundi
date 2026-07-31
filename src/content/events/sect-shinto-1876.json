@@ -1,0 +1,27 @@
+{
+  "id": "sect-shinto-1876",
+  "title": "Sect Shinto classified",
+  "year_start": 1876,
+  "precision": "decade",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The state licenses independent movements as \"sect Shinto,\" splitting them from the shrine system.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

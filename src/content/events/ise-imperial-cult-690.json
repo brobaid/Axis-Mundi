@@ -1,0 +1,27 @@
+{
+  "id": "ise-imperial-cult-690",
+  "title": "Ise emerges as the imperial cult's center",
+  "year_start": 690,
+  "precision": "decade",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "founding",
+  "importance": 5,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "Under Empress Jito, the Ise Grand Shrine and its twenty-year rebuilding cycle become the ritual heart of imperial kami worship.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

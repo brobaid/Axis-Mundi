@@ -1,0 +1,27 @@
+{
+  "id": "zhuangzi-bce-320",
+  "title": "Zhuangzi composed",
+  "year_start": -320,
+  "precision": "century",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/taoism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The inner chapters' freedom and perspectivism give Taoism its philosophical depth and its wit.",
+  "sources": [
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

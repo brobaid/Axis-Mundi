@@ -1,0 +1,28 @@
+{
+  "id": "mahavira-teaching-bce-550",
+  "title": "Mahavira's teaching career",
+  "year_start": -550,
+  "year_end": -527,
+  "precision": "century",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism"
+  ],
+  "type": "founding",
+  "importance": 5,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Vardhamana Mahavira, the twenty-fourth tirthankara, teaches the path of nonviolence, non-possession, and liberation that defines Jainism.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

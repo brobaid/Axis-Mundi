@@ -1,0 +1,28 @@
+{
+  "id": "mozi-bce-420",
+  "title": "Mozi and the Mohists",
+  "year_start": -420,
+  "precision": "century",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The rival school of impartial care and frugality sharpens early Confucian self-definition before fading.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

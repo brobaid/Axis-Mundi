@@ -1,0 +1,27 @@
+{
+  "id": "septuagint-bce-250",
+  "title": "Septuagint translation begins",
+  "year_start": -250,
+  "precision": "century",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "nile-valley"
+  ],
+  "summary": "The Torah is rendered into Greek at Alexandria, the first major scripture translation and the Bible of the early church.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

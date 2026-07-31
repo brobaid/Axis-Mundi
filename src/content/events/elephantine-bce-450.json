@@ -1,0 +1,27 @@
+{
+  "id": "elephantine-bce-450",
+  "title": "Elephantine Jewish community attested",
+  "year_start": -450,
+  "precision": "century",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "nile-valley"
+  ],
+  "summary": "Papyri document a Jewish garrison with its own temple in upper Egypt, the earliest richly attested diaspora community.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

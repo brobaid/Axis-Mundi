@@ -1,0 +1,27 @@
+{
+  "id": "okage-mairi-1705",
+  "title": "Mass Ise pilgrimages",
+  "year_start": 1705,
+  "precision": "exact",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "modern",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "Millions walk to Ise in the okage mairi surges, popular devotion on a scale the state neither planned nor controlled.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

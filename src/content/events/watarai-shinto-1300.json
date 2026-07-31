@@ -1,0 +1,27 @@
+{
+  "id": "watarai-shinto-1300",
+  "title": "Watarai Shinto at Ise",
+  "year_start": 1300,
+  "precision": "century",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The outer shrine's priests articulate the first kami-centered theology, reversing the amalgamation's polarity.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

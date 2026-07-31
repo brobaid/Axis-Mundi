@@ -1,0 +1,27 @@
+{
+  "id": "second-council-bce-380",
+  "title": "Second Council at Vaishali",
+  "year_start": -380,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "council",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The dispute over monastic discipline at Vaishali foreshadows the sangha's first lasting divisions.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

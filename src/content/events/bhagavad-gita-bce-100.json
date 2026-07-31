@@ -1,0 +1,28 @@
+{
+  "id": "bhagavad-gita-bce-100",
+  "title": "Bhagavad Gita composed",
+  "year_start": -200,
+  "year_end": 100,
+  "precision": "era",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "text",
+  "importance": 5,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Krishna's teaching on duty, devotion, and liberation becomes the tradition's most widely read text.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

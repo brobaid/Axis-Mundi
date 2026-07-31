@@ -1,0 +1,28 @@
+{
+  "id": "city-god-temples-1370",
+  "title": "City God temples mandated",
+  "year_start": 1370,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/chinese-folk-religion"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The Ming founder orders City God temples throughout the realm, folding folk religion into imperial administration.",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

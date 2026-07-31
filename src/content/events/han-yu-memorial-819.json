@@ -1,0 +1,27 @@
+{
+  "id": "han-yu-memorial-819",
+  "title": "Han Yu's memorial on the Buddha relic",
+  "year_start": 819,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The Confucian polemic against imperial Buddhism opens the revival that leads to Neo-Confucianism.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

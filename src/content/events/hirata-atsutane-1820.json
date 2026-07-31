@@ -1,0 +1,27 @@
+{
+  "id": "hirata-atsutane-1820",
+  "title": "Hirata Atsutane's school",
+  "year_start": 1820,
+  "precision": "decade",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "Hirata turns kokugaku toward theology and afterlife, feeding the restorationist mood before Meiji.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

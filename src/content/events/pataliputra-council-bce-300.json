@@ -1,0 +1,27 @@
+{
+  "id": "pataliputra-council-bce-300",
+  "title": "Council of Pataliputra",
+  "year_start": -300,
+  "precision": "century",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism"
+  ],
+  "type": "council",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "According to tradition, the community gathers after famine to recite and preserve the canon, the first of the great redaction efforts.",
+  "sources": [
+    "dundas-jains-2002",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-jainism"
+  ],
+  "sourcing": "sourced"
+}

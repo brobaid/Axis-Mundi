@@ -1,0 +1,27 @@
+{
+  "id": "state-shinto-1871",
+  "title": "State Shinto instituted",
+  "year_start": 1871,
+  "precision": "exact",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "Shrines become state institutions ranked under the government, worship framed as civic duty rather than religion.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

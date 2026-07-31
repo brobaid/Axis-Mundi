@@ -1,0 +1,27 @@
+{
+  "id": "shinbutsu-bunri-1868",
+  "title": "Separation of kami and buddhas",
+  "year_start": 1868,
+  "precision": "exact",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "political",
+  "importance": 5,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The Meiji decrees tear shrine from temple, creating an independent Shinto for the first time and unleashing anti-Buddhist iconoclasm.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "mencius-bce-320",
+  "title": "Mencius",
+  "year_start": -320,
+  "precision": "century",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "figure",
+  "importance": 4,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Mengzi's defense of human nature's goodness becomes Confucian orthodoxy's second voice.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

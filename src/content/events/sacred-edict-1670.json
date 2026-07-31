@@ -1,0 +1,27 @@
+{
+  "id": "sacred-edict-1670",
+  "title": "Kangxi's Sacred Edict",
+  "year_start": 1670,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/confucianism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The maxims read aloud across the empire distill state Confucian moral instruction.",
+  "sources": [
+    "yao-confucianism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "shrauta-sutras-bce-500",
+  "title": "Shrauta and Grihya sutras codified",
+  "year_start": -500,
+  "precision": "era",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "Ritual manuals fix the solemn and domestic rites that structure orthodox practice.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

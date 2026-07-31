@@ -1,0 +1,27 @@
+{
+  "id": "brahmanas-composed-bce-900",
+  "title": "Brahmanas composed",
+  "year_start": -900,
+  "precision": "era",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The ritual commentaries systematize Vedic sacrifice and its cosmology.",
+  "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-hinduism"
+  ],
+  "sourcing": "sourced"
+}

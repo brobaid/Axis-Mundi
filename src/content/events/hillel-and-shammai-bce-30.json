@@ -1,0 +1,27 @@
+{
+  "id": "hillel-and-shammai-bce-30",
+  "title": "Hillel and Shammai",
+  "year_start": -30,
+  "precision": "decade",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "The paired sages whose rival schools frame early rabbinic debate.",
+  "sources": [
+    "ej2-2007",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-judaism"
+  ],
+  "sourcing": "sourced"
+}

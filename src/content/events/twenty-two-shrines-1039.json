@@ -1,0 +1,27 @@
+{
+  "id": "twenty-two-shrines-1039",
+  "title": "Twenty-two shrine system fixed",
+  "year_start": 1039,
+  "precision": "decade",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The court's roster of shrines receiving official offerings formalizes state patronage.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

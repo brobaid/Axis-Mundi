@@ -1,0 +1,27 @@
+{
+  "id": "ashoka-patronage-bce-260",
+  "title": "Ashoka embraces and spreads the dharma",
+  "year_start": -260,
+  "precision": "decade",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "political",
+  "importance": 5,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The Mauryan emperor's patronage and missions turn a regional renunciant movement into a transregional religion.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

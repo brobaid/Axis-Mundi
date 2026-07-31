@@ -1,0 +1,27 @@
+{
+  "id": "milindapanha-bce-150",
+  "title": "The Milinda dialogues",
+  "year_start": -150,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "gandhara"
+  ],
+  "summary": "The dialogues of the Indo-Greek king Menander and the monk Nagasena carry Buddhist thought into the Hellenistic world.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

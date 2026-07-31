@@ -1,0 +1,27 @@
+{
+  "id": "tenrikyo-founded-1838",
+  "title": "Tenrikyo founded",
+  "year_start": 1838,
+  "precision": "exact",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "Nakayama Miki's revelations begin the largest of the movements later classed as sect Shinto.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

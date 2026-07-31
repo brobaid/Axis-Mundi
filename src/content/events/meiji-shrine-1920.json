@@ -1,0 +1,27 @@
+{
+  "id": "meiji-shrine-1920",
+  "title": "Meiji Shrine dedicated",
+  "year_start": 1920,
+  "precision": "exact",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The capital's great shrine to the Meiji emperor crowns the state system at its height.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}

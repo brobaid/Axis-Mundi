@@ -1,0 +1,27 @@
+{
+  "id": "ming-daozang-1445",
+  "title": "Ming Daoist canon printed",
+  "year_start": 1445,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/taoism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The surviving Daozang fixes the Taoist scriptural corpus; its Tang predecessor is lost.",
+  "sources": [
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

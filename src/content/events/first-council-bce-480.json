@@ -1,0 +1,27 @@
+{
+  "id": "first-council-bce-480",
+  "title": "First Council at Rajagriha",
+  "year_start": -480,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "council",
+  "importance": 4,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "According to tradition, the community's elders recite and fix the Buddha's discourses and discipline shortly after his death.",
+  "sources": [
+    "princeton-dict-buddhism-2014",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-buddhism"
+  ],
+  "sourcing": "sourced"
+}

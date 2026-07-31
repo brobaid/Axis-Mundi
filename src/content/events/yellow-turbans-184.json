@@ -1,0 +1,27 @@
+{
+  "id": "yellow-turbans-184",
+  "title": "Yellow Turban rising",
+  "year_start": 184,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese/taoism"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The Taoist millenarian revolt reveals organized religion's political force at the Han's end.",
+  "sources": [
+    "kohn-daoism-2000",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-chinese"
+  ],
+  "sourcing": "sourced"
+}

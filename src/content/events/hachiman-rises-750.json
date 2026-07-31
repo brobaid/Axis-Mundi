@@ -1,0 +1,27 @@
+{
+  "id": "hachiman-rises-750",
+  "title": "Hachiman cult rises",
+  "year_start": 750,
+  "precision": "century",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "founding",
+  "importance": 3,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The kami of Usa, soon patron of warriors and protector of the great Buddhist temple projects, models kami-buddha partnership.",
+  "sources": [
+    "hardacre-shinto-2017",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-shinto"
+  ],
+  "sourcing": "sourced"
+}
