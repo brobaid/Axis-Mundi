@@ -33,9 +33,13 @@ const fullTitle = title === 'Axis Mundi' ? title : `${title} — Axis Mundi`;
 /* Canonical and social URLs are absolute against the configured site. The card
    is the Brass Meridian over the ten lanes — the site's own object, not a
    photograph: the design language bans stock religious imagery, and a social
-   card is the one place that ban is easiest to forget. */
+   card is the one place that ban is easiest to forget.
+
+   PNG, not the SVG it is drawn from: the crawlers that read og:image do not
+   rasterise SVG, so an SVG card is a card nobody sees. social-card.svg stays
+   in the repo as the editable source. */
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const socialCard = new URL('/social-card.svg', Astro.site).href;
+const socialCard = new URL('/social-card.png', Astro.site).href;
 ---
 
 <!doctype html>
@@ -55,6 +59,9 @@ const socialCard = new URL('/social-card.svg', Astro.site).href;
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={socialCard} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="The Brass Meridian standing across ten timeline lanes, one per tradition." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />

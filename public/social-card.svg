@@ -5,6 +5,10 @@
   below are the light-mode tokens verbatim — canvas #F7F3EC, surface #FDFBF7,
   ink #201B16, ink-soft #5C544A, hairline #E3DCD0, brass #9C7A2F, and the ten
   tradition hues in taxonomy order. If a token changes, change it here too.
+
+  This file is the source; social-card.png beside it is what the page actually
+  serves as og:image, because the crawlers that read og:image do not rasterise
+  SVG. Editing this file means re-rendering that one — 1200x630, no scaling.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <rect width="1200" height="630" fill="#F7F3EC"/>
