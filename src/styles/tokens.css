@@ -1,0 +1,313 @@
+/* =============================================================================
+   Axis Mundi — design tokens
+   -----------------------------------------------------------------------------
+   THE SINGLE SOURCE OF EVERY COLOR IN THE CODEBASE.
+   A raw hex value anywhere else is a bug (CLAUDE.md, hard rule 1).
+
+   Values are taken verbatim from:
+     docs/religions-dashboard-design-language.md  §3 Color, §4 Typography, §7 Motion
+     docs/claude-design-handoff-prompt.md         "Settled system (binding)"
+
+   Both modes are always defined:
+     [data-mode="gallery"]        light, the default (design language §9)
+     [data-mode="night-gallery"]  dark
+
+   Derived values (hue ramps, tints) are labelled as such. Every contrast pair
+   this file promises is asserted by `pnpm validate:contrast`.
+   ============================================================================= */
+
+:root {
+  /* ===========================================================================
+     Non-color primitives — identical in both modes
+     =========================================================================== */
+
+  /* --- Type families (design language §4.1, §4.3) ------------------------- */
+  --font-display: 'Newsreader Variable', Newsreader, Georgia, 'Times New Roman', serif;
+  --font-prose: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif;
+  --font-ui: 'Archivo Variable', Archivo, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Per-script faces (design language §4.3). Applied via [lang] in base.css. */
+  --font-arabic: 'Noto Naskh Arabic', var(--font-prose);
+  --font-hebrew: 'Noto Serif Hebrew', var(--font-prose);
+  --font-devanagari: 'Noto Serif Devanagari', var(--font-prose);
+  --font-gurmukhi: 'Noto Sans Gurmukhi', var(--font-ui);
+  --font-sc: 'Noto Serif SC', var(--font-prose);
+  --font-jp: 'Noto Serif JP', var(--font-prose);
+
+  /* Original scripts render 5–10% larger than surrounding Latin (§4.3). */
+  --script-upscale: 1.07;
+
+  /* --- Type scale (design language §4.2, exact) --------------------------- */
+  /* Display 44/1.1, H1 34/1.15, H2 26/1.2, H3 21/1.3,
+     body 17/1.6, small 15/1.5, caption 13/1.4, eyebrow 12/1.2 +8% small caps. */
+  --size-display: 2.75rem;   /* 44px */
+  --size-h1: 2.125rem;       /* 34px */
+  --size-h2: 1.625rem;       /* 26px */
+  --size-h3: 1.3125rem;      /* 21px */
+  --size-body: 1.0625rem;    /* 17px */
+  --size-small: 0.9375rem;   /* 15px */
+  --size-caption: 0.8125rem; /* 13px */
+  --size-eyebrow: 0.75rem;   /* 12px */
+
+  --leading-display: 1.1;
+  --leading-h1: 1.15;
+  --leading-h2: 1.2;
+  --leading-h3: 1.3;
+  --leading-body: 1.6;
+  --leading-small: 1.5;
+  --leading-caption: 1.4;
+  --leading-eyebrow: 1.2;
+
+  --tracking-eyebrow: 0.08em; /* +8% (§4.2) */
+  --tracking-display: -0.012em;
+  --tracking-normal: 0;
+
+  /* Phone-first display sizes. The owner reviews previews at 390px, so the two
+     largest steps step down rather than overflow. Everything else holds. */
+  --size-display-sm: 2.125rem; /* 34px */
+  --size-h1-sm: 1.75rem;       /* 28px */
+
+  /* --- Space (design language §4.2: 4px base, 8px section rhythm) --------- */
+  --space-1: 0.25rem;  /* 4  */
+  --space-2: 0.5rem;   /* 8  */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-6: 1.5rem;   /* 24 */
+  --space-8: 2rem;     /* 32 */
+  --space-12: 3rem;    /* 48 */
+  --space-16: 4rem;    /* 64 */
+  --space-24: 6rem;    /* 96 */
+
+  /* --- Layout (design language §5) ---------------------------------------- */
+  --grid-columns: 12;
+  --content-max: 80rem;   /* 1280px max content width */
+  --measure: 72ch;        /* prose measure cap */
+  --gutter: var(--space-6);
+  --hairline-width: 1px;
+
+  /* --- Hit targets (§10) --------------------------------------------------- */
+  --tap-min: 44px;
+
+  /* --- Radii — restrained; museum plates, not dashboard cards -------------- */
+  --radius-xs: 2px;
+  --radius-s: 3px;
+  --radius-pill: 999px;
+
+  /* --- Motion (design language §7, exact) --------------------------------- */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  /* The meridian "moves as a physical object: eased, slightly weighted". */
+  --ease-meridian: cubic-bezier(0.32, 0.72, 0.24, 1);
+
+  --dur-micro: 175ms;      /* hover, chips, toggles: 150–200ms */
+  --dur-panel: 280ms;      /* panel / bottom sheet */
+  --dur-meridian: 400ms;   /* meridian, everywhere */
+  --dur-zoom: 600ms;       /* timeline semantic zoom: 500–700ms */
+  --dur-scrub: 600ms;      /* map era crossfade */
+  --dur-page: 200ms;       /* page transition fade */
+  --stagger-rank: 30ms;    /* events enter by importance rank */
+
+  --canvas-dim: 20%;       /* canvas dims behind a panel (§7) */
+
+  /* --- The Brass Meridian (design language §2) ----------------------------- */
+  /* One shared component: the same weight and easing everywhere, drawing its
+     color from the single --brass token, which mode-swaps as a set (§9). */
+  --meridian-color: var(--brass);
+  --meridian-weight: 1.5px;
+  --meridian-ease: var(--ease-meridian);
+  --meridian-duration: var(--dur-meridian);
+
+  /* --- Hatching (design language §2, §3.3, §10) ---------------------------- */
+  /* One drafting convention, used identically on map polygons, timeline spans
+     and matrix cells. Contested is neutral, never a warning red. */
+  --hatch-angle: 45deg;
+  --hatch-width: 5px;
+
+  /* --- Z layers ------------------------------------------------------------ */
+  --z-canvas: 0;
+  --z-meridian: 20;
+  --z-panel: 40;
+  --z-topbar: 60;
+  --z-sheet: 80;
+  --z-overlay: 100;
+}
+
+/* =============================================================================
+   GALLERY — light mode. Default regardless of OS preference (§9).
+   ============================================================================= */
+
+:root,
+[data-mode='gallery'] {
+  color-scheme: light;
+
+  /* Neutrals + accent (design language §3.1, verbatim) */
+  --canvas: #f7f3ec;
+  --surface: #fdfbf7;
+  --ink: #201b16;
+  --ink-soft: #5c544a;
+  --hairline: #e3dcd0;
+  --brass: #9c7a2f;
+  --brass-ink: #6e5620;
+
+  /* Map tones (handoff prompt, binding) */
+  --ocean: #eae0cc;
+  --land: #f3ecdc;
+
+  /* --- Derived neutrals. Museum-plate depth without new palette entries. --- */
+  --surface-sunken: #f1ece2;
+  /* `--hairline` is the doc's quiet structural rule. `--hairline-strong` is for
+     borders that carry information (control edges, table structure) and so is
+     held to 3:1 by the contrast audit. */
+  --hairline-strong: #8d8478;
+  --ink-inverse: #fdfbf7;
+  --brass-wash: #f2e9d6;
+  --brass-hover: #855f22;
+
+  /* Focus ring is brass (§3.1, §10) */
+  --focus-ring: #6e5620;
+
+  /* Contested / confidence (§3.3): neutral, never red */
+  --contested-hatch: #8d8474;
+  --contested-badge-bg: #efe9dc;
+  --contested-badge-ink: #574e3f;
+  --ghost: #a89f8f;
+
+  /* Elevation (§5): 1px hairline + 2% shadow in light mode */
+  --shadow-panel: 0 1px 2px rgb(32 27 22 / 4%), 0 6px 20px rgb(32 27 22 / 6%);
+  --shadow-sheet: 0 -2px 20px rgb(32 27 22 / 8%);
+
+  /* ===========================================================================
+     Tradition hues (design language §3.2). Light bases are verbatim from the
+     doc. Each ships as a ramp: `fill` (lane, chip, map polygon), `line`
+     (stroke, >=3:1) and `ink` (text-safe, >=4.5:1 on both canvas and surface).
+     Branch lanes are stepped tints of the parent hue, never new hues (§3.2/3) —
+     produced with color-mix at render time, see --branch-tint in base.css.
+     =========================================================================== */
+
+  --t-judaism: #2b6cb0;
+  --t-judaism-line: #2b6cb0;
+  --t-judaism-ink: #1c4d80;
+
+  --t-christianity: #6b46a0;
+  --t-christianity-line: #6b46a0;
+  --t-christianity-ink: #573780;
+
+  --t-islam: #1e7a4c;
+  --t-islam-line: #1e7a4c;
+  --t-islam-ink: #175c39;
+
+  --t-hinduism: #d9740b;
+  --t-hinduism-line: #a85a08;
+  --t-hinduism-ink: #7d4306;
+
+  --t-buddhism: #8a3033;
+  --t-buddhism-line: #8a3033;
+  --t-buddhism-ink: #78292c;
+
+  --t-sikhism: #2f3b7a;
+  --t-sikhism-line: #2f3b7a;
+  --t-sikhism-ink: #2f3b7a;
+
+  --t-chinese: #c9a100;
+  --t-chinese-line: #8f7200;
+  --t-chinese-ink: #665200;
+
+  --t-shinto: #d34e3a;
+  --t-shinto-line: #b03e2c;
+  --t-shinto-ink: #8f3123;
+
+  --t-jainism: #147d77;
+  --t-jainism-line: #147d77;
+  --t-jainism-ink: #0f5e59;
+
+  --t-zoroastrianism: #b3382c;
+  --t-zoroastrianism-line: #b3382c;
+  --t-zoroastrianism-ink: #962f24;
+}
+
+/* =============================================================================
+   NIGHT GALLERY — dark mode. Full token swap (§9).
+   ============================================================================= */
+
+[data-mode='night-gallery'] {
+  color-scheme: dark;
+
+  /* Neutrals + accent (design language §3.1, verbatim) */
+  --canvas: #14110d;
+  --surface: #1d1915;
+  --ink: #ede7dc;
+  --ink-soft: #a89f92;
+  --hairline: #2e2822;
+  --brass: #c9a250;
+  --brass-ink: #e2c77e;
+
+  /* Map tones (handoff prompt, binding) */
+  --ocean: #0f0d0a;
+  --land: #241f18;
+
+  /* --- Derived neutrals. Lighter surface steps, no glow (§5, ban list). ---- */
+  --surface-sunken: #100e0b;
+  --hairline-strong: #706756;
+  --ink-inverse: #14110d;
+  --brass-wash: #2b2418;
+  --brass-hover: #ddb96c;
+
+  --focus-ring: #c9a250;
+
+  --contested-hatch: #6f6658;
+  --contested-badge-bg: #2b2418;
+  --contested-badge-ink: #cdc0aa;
+  --ghost: #4b443a;
+
+  --shadow-panel: 0 1px 2px rgb(0 0 0 / 40%), 0 6px 20px rgb(0 0 0 / 45%);
+  --shadow-sheet: 0 -2px 20px rgb(0 0 0 / 55%);
+
+  /* ===========================================================================
+     Tradition ramps, dark. Per §9: luminance-boosted, saturation eased, so the
+     hues read on umber-black without vibrating. Per §3.2 rule 2 the two nearest
+     pairs push further apart here than in light mode:
+       Hinduism saffron  -> orange     vs  Chinese yellow  -> green-gold
+       Shinto vermilion  -> warm coral vs  Zoroastrian crimson -> rose
+     =========================================================================== */
+
+  --t-judaism: #7cb2e8;
+  --t-judaism-line: #7cb2e8;
+  --t-judaism-ink: #9cc6ee;
+
+  --t-christianity: #b195dd;
+  --t-christianity-line: #b195dd;
+  --t-christianity-ink: #c3ade5;
+
+  --t-islam: #5cbb8b;
+  --t-islam-line: #5cbb8b;
+  --t-islam-ink: #7ecba4;
+
+  --t-hinduism: #eda049;
+  --t-hinduism-line: #eda049;
+  --t-hinduism-ink: #f0b06a;
+
+  --t-buddhism: #d98b8d;
+  --t-buddhism-line: #d98b8d;
+  --t-buddhism-ink: #e3a3a5;
+
+  --t-sikhism: #96a2e2;
+  --t-sikhism-line: #96a2e2;
+  --t-sikhism-ink: #adb6e9;
+
+  --t-chinese: #ccc054;
+  --t-chinese-line: #ccc054;
+  --t-chinese-ink: #dad073;
+
+  --t-shinto: #f0917c;
+  --t-shinto-line: #f0917c;
+  --t-shinto-ink: #f3a794;
+
+  --t-jainism: #4fc0b8;
+  --t-jainism-line: #4fc0b8;
+  --t-jainism-ink: #75cec8;
+
+  --t-zoroastrianism: #e8808f;
+  --t-zoroastrianism-line: #e8808f;
+  --t-zoroastrianism-ink: #ee9ba7;
+}

@@ -1,0 +1,16 @@
+{
+  "id": "methodist",
+  "name": "Methodist",
+  "parent": "protestant",
+  "tradition": "christianity",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "christianity/protestant/methodist",
+  "depth": 3,
+  "summary": "Churches in the Wesleyan tradition, emphasising personal holiness and connexional structure.",
+  "contested": false,
+  "currents": [],
+  "order": 5,
+  "founded": {}
+}

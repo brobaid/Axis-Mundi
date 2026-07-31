@@ -1,0 +1,32 @@
+{
+  "id": "advaita-vedanta-consolidated-800",
+  "title": "Advaita Vedanta consolidated",
+  "year_start": 800,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism/smartism"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "deccan"
+  ],
+  "summary": "The Advaita commentarial tradition associated with Shankara was consolidated, shaping later Vedanta.",
+  "tags": [
+    "needs-identification",
+    "vedanta",
+    "advaita"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

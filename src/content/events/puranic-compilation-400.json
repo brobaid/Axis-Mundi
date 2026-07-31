@@ -1,0 +1,31 @@
+{
+  "id": "puranic-compilation-400",
+  "title": "Puranic compilation",
+  "year_start": 400,
+  "precision": "century",
+  "traditions": [
+    "hinduism"
+  ],
+  "branch_path": [
+    "hinduism"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "gangetic-plain"
+  ],
+  "summary": "The major Puranas took shape, consolidating narrative and devotional material.",
+  "tags": [
+    "needs-identification",
+    "purana"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "munster-rebellion-1534",
+  "title": "Münster rebellion",
+  "year_start": 1534,
+  "year_end": 1535,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/anabaptist"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "german-lands"
+  ],
+  "summary": "A radical Anabaptist regime held the city of Münster until its violent suppression.",
+  "tags": [
+    "needs-identification",
+    "anabaptist",
+    "munster"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

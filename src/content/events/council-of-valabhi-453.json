@@ -1,0 +1,32 @@
+{
+  "id": "council-of-valabhi-453",
+  "title": "Council of Valabhi",
+  "year_start": 453,
+  "precision": "century",
+  "traditions": [
+    "jainism"
+  ],
+  "branch_path": [
+    "jainism/svetambara"
+  ],
+  "type": "council",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "The Svetambara canon was redacted at Valabhi, fixing the Agama corpus in written form.",
+  "tags": [
+    "needs-identification",
+    "canon",
+    "agama"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

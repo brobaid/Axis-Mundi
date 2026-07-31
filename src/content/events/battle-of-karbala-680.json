@@ -1,0 +1,32 @@
+{
+  "id": "battle-of-karbala-680",
+  "title": "Battle of Karbala",
+  "year_start": 680,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam/shia"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "The killing of Husayn ibn Ali and his companions at Karbala, an event central to Shia memory and ritual.",
+  "tags": [
+    "needs-identification",
+    "karbala",
+    "ashura"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

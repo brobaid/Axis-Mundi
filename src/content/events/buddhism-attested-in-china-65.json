@@ -1,0 +1,34 @@
+{
+  "id": "buddhism-attested-in-china-65",
+  "title": "Buddhism attested in China",
+  "year_start": 65,
+  "precision": "year",
+  "traditions": [
+    "chinese",
+    "buddhism"
+  ],
+  "branch_path": [
+    "chinese",
+    "buddhism"
+  ],
+  "type": "encounter",
+  "importance": 4,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "The earliest secure documentary attestation of a Buddhist community in China.",
+  "tags": [
+    "needs-identification",
+    "china",
+    "transmission"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

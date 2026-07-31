@@ -1,0 +1,31 @@
+{
+  "id": "babylonian-talmud-completed-500",
+  "title": "Babylonian Talmud completed",
+  "year_start": 500,
+  "precision": "century",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "The Babylonian Talmud reached substantially its present form in the academies of Mesopotamia.",
+  "tags": [
+    "needs-identification",
+    "talmud"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

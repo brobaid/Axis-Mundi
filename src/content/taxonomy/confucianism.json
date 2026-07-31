@@ -1,0 +1,17 @@
+{
+  "id": "confucianism",
+  "name": "Confucianism",
+  "parent": "chinese",
+  "tradition": "chinese",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "chinese/confucianism",
+  "depth": 2,
+  "summary": "A tradition of ritual, ethics and statecraft descending from Confucius and the classical canon.",
+  "contested": true,
+  "contested_note": "Whether Confucianism is classified as a religion, a philosophy or a civic tradition is itself disputed, per spec §2.3. Both positions require citation before this note ships.",
+  "currents": [],
+  "order": 0,
+  "founded": {}
+}

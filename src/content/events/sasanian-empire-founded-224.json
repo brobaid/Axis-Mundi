@@ -1,0 +1,32 @@
+{
+  "id": "sasanian-empire-founded-224",
+  "title": "Sasanian Empire founded",
+  "year_start": 224,
+  "precision": "exact",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "iranian-plateau"
+  ],
+  "summary": "Ardashir I founded the Sasanian Empire, under which Zoroastrianism became the state religion of Iran.",
+  "tags": [
+    "needs-identification",
+    "sasanian",
+    "state-religion"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

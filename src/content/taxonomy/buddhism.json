@@ -1,0 +1,17 @@
+{
+  "id": "buddhism",
+  "name": "Buddhism",
+  "parent": null,
+  "tradition": "buddhism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "buddhism",
+  "depth": 1,
+  "symbol": "dharmachakra",
+  "summary": "A tradition originating with Siddhartha Gautama, organised at launch into the Theravada, Mahayana and Vajrayana vehicles.",
+  "contested": false,
+  "currents": [],
+  "order": 4,
+  "founded": {}
+}

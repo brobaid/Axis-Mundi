@@ -1,0 +1,17 @@
+{
+  "id": "christianity",
+  "name": "Christianity",
+  "parent": null,
+  "tradition": "christianity",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "christianity",
+  "depth": 1,
+  "symbol": "cross",
+  "summary": "A tradition centred on Jesus of Nazareth, organised at launch into the Catholic, Orthodox, Church of the East, Protestant and Restorationist families.",
+  "contested": false,
+  "currents": [],
+  "order": 0,
+  "founded": {}
+}

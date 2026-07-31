@@ -1,0 +1,16 @@
+{
+  "id": "khalsa",
+  "name": "Khalsa mainstream",
+  "parent": "sikhism",
+  "tradition": "sikhism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "sikhism/khalsa",
+  "depth": 2,
+  "summary": "The mainstream at launch; the Namdhari and Nirankari communities are treated as prose rather than lanes.",
+  "contested": false,
+  "currents": [],
+  "order": 0,
+  "founded": {}
+}

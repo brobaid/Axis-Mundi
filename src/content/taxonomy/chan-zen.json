@@ -1,0 +1,16 @@
+{
+  "id": "chan-zen",
+  "name": "Chan and Zen",
+  "parent": "mahayana",
+  "tradition": "buddhism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "buddhism/mahayana/chan-zen",
+  "depth": 3,
+  "summary": "Schools emphasising meditative practice and direct transmission.",
+  "contested": false,
+  "currents": [],
+  "order": 0,
+  "founded": {}
+}

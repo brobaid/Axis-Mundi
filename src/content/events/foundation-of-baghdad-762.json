@@ -1,0 +1,32 @@
+{
+  "id": "foundation-of-baghdad-762",
+  "title": "Foundation of Baghdad",
+  "year_start": 762,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "mesopotamia"
+  ],
+  "summary": "The Abbasid caliphate founded Baghdad as its capital, which became a centre of scholarship.",
+  "tags": [
+    "needs-identification",
+    "abbasid",
+    "baghdad"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

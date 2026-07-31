@@ -1,0 +1,16 @@
+{
+  "id": "theravada",
+  "name": "Theravada",
+  "parent": "buddhism",
+  "tradition": "buddhism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "buddhism/theravada",
+  "depth": 2,
+  "summary": "The vehicle transmitting the Pali canon, predominant in Sri Lanka and mainland Southeast Asia.",
+  "contested": false,
+  "currents": [],
+  "order": 0,
+  "founded": {}
+}

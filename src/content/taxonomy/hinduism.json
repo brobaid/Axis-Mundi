@@ -1,0 +1,42 @@
+{
+  "id": "hinduism",
+  "name": "Hinduism",
+  "parent": null,
+  "tradition": "hinduism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "hinduism",
+  "depth": 1,
+  "symbol": "om",
+  "summary": "A tradition of the Indian subcontinent, organised at launch into the Vaishnava, Shaiva, Shakta and Smarta streams.",
+  "contested": false,
+  "currents": [
+    {
+      "id": "bhakti",
+      "name": "Bhakti",
+      "summary": "A devotional current cutting across the sampradayas rather than forming one.",
+      "spans": [],
+      "sources": [],
+      "contested": false
+    },
+    {
+      "id": "vedanta-schools",
+      "name": "Vedanta schools",
+      "summary": "Interpretive schools of the Upanishadic corpus, spanning multiple streams.",
+      "spans": [],
+      "sources": [],
+      "contested": false
+    },
+    {
+      "id": "tantra",
+      "name": "Tantra",
+      "summary": "A ritual and esoteric current present within several streams.",
+      "spans": [],
+      "sources": [],
+      "contested": false
+    }
+  ],
+  "order": 3,
+  "founded": {}
+}

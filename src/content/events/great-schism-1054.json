@@ -1,0 +1,33 @@
+{
+  "id": "great-schism-1054",
+  "title": "Great Schism",
+  "year_start": 1054,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "schism",
+  "importance": 5,
+  "region": [
+    "anatolia",
+    "italian-peninsula"
+  ],
+  "summary": "Mutual excommunications between Rome and Constantinople marked the rupture between the Latin and Greek churches.",
+  "tags": [
+    "schism",
+    "rome",
+    "constantinople"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

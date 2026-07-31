@@ -1,0 +1,16 @@
+{
+  "id": "lutheran",
+  "name": "Lutheran",
+  "parent": "protestant",
+  "tradition": "christianity",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "christianity/protestant/lutheran",
+  "depth": 3,
+  "summary": "Churches confessing the Augsburg Confession, originating with the reform movement led by Martin Luther.",
+  "contested": false,
+  "currents": [],
+  "order": 0,
+  "founded": {}
+}

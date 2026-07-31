@@ -1,0 +1,34 @@
+{
+  "id": "judaism",
+  "name": "Judaism",
+  "parent": null,
+  "tradition": "judaism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "judaism",
+  "depth": 1,
+  "symbol": "star-of-david",
+  "summary": "A tradition centred on the Torah and the covenant, organised at launch into the Rabbinic, Karaite and Beta Israel branches.",
+  "contested": false,
+  "currents": [
+    {
+      "id": "hasidism",
+      "name": "Hasidism",
+      "summary": "A devotional revival current within Orthodoxy, spanning communities rather than forming a branch.",
+      "spans": [],
+      "sources": [],
+      "contested": false
+    },
+    {
+      "id": "kabbalah",
+      "name": "Kabbalah",
+      "summary": "An esoteric interpretive current running across Jewish communities; per spec §2.2 it is never rendered as a lane.",
+      "spans": [],
+      "sources": [],
+      "contested": false
+    }
+  ],
+  "order": 2,
+  "founded": {}
+}

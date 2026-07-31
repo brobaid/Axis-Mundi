@@ -1,0 +1,34 @@
+{
+  "id": "islam",
+  "name": "Islam",
+  "parent": null,
+  "tradition": "islam",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "islam",
+  "depth": 1,
+  "symbol": "crescent-and-star",
+  "summary": "A tradition centred on the Qur’an and the prophethood of Muhammad, organised at launch into the Sunni, Shia, Ibadi and Ahmadiyya branches.",
+  "contested": false,
+  "currents": [
+    {
+      "id": "sufism",
+      "name": "Sufism",
+      "summary": "A devotional and mystical current running across Sunni and Shia branches alike; per spec §2.2 it is never rendered as a lane.",
+      "spans": [],
+      "sources": [],
+      "contested": false
+    },
+    {
+      "id": "salafism",
+      "name": "Salafism",
+      "summary": "A reformist current appealing to the practice of the earliest generations, cutting across existing branches.",
+      "spans": [],
+      "sources": [],
+      "contested": false
+    }
+  ],
+  "order": 1,
+  "founded": {}
+}

@@ -1,0 +1,32 @@
+{
+  "id": "kojiki-compiled-712",
+  "title": "Kojiki compiled",
+  "year_start": 712,
+  "precision": "exact",
+  "traditions": [
+    "shinto"
+  ],
+  "branch_path": [
+    "shinto"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "The Kojiki was presented to the court, recording the kami narratives and imperial genealogy.",
+  "tags": [
+    "needs-identification",
+    "kojiki",
+    "japan"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

@@ -1,0 +1,58 @@
+---
+import ModeToggle from './ModeToggle.astro';
+
+/**
+ * Global top bar (design language §8): wordmark, search, mode toggle.
+ * Universal search lands in M2; the slot is held but not faked.
+ */
+---
+
+<header class="topbar">
+  <div class="shell topbar__inner">
+    <a class="wordmark" href="/">
+      <span class="wordmark__name">Axis Mundi</span>
+      <span class="wordmark__sub eyebrow">The Living Museum</span>
+    </a>
+    <ModeToggle />
+  </div>
+</header>
+
+<style>
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-topbar);
+    background: var(--canvas);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .topbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    min-height: 60px;
+    padding-block: var(--space-2);
+  }
+
+  .wordmark {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1px;
+    text-decoration: none;
+    color: var(--ink);
+    min-height: var(--tap-min);
+  }
+
+  .wordmark__name {
+    font-family: var(--font-display);
+    font-size: var(--size-h3);
+    line-height: 1.1;
+    letter-spacing: var(--tracking-display);
+  }
+
+  .wordmark__sub {
+    color: var(--ink-soft);
+  }
+</style>

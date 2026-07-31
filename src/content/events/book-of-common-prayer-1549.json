@@ -1,0 +1,32 @@
+{
+  "id": "book-of-common-prayer-1549",
+  "title": "Book of Common Prayer",
+  "year_start": 1549,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/anglican"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "british-isles"
+  ],
+  "summary": "The first Book of Common Prayer established a vernacular liturgy for the Church of England.",
+  "tags": [
+    "needs-identification",
+    "liturgy",
+    "vernacular"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

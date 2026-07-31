@@ -1,0 +1,16 @@
+{
+  "id": "sakya",
+  "name": "Sakya",
+  "parent": "vajrayana",
+  "tradition": "buddhism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "buddhism/vajrayana/sakya",
+  "depth": 3,
+  "summary": "A Tibetan school centred on Sakya monastery and its scholastic tradition.",
+  "contested": false,
+  "currents": [],
+  "order": 2,
+  "founded": {}
+}

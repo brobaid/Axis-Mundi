@@ -1,0 +1,32 @@
+{
+  "id": "redaction-of-the-mishnah-200",
+  "title": "Redaction of the Mishnah",
+  "year_start": 200,
+  "precision": "century",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism/rabbinic"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "levant"
+  ],
+  "summary": "The oral law was compiled into the Mishnah, the foundation of the rabbinic legal corpus.",
+  "tags": [
+    "needs-identification",
+    "mishnah",
+    "oral-law"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

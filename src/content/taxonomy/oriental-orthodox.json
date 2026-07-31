@@ -1,0 +1,16 @@
+{
+  "id": "oriental-orthodox",
+  "name": "Oriental Orthodox",
+  "parent": "orthodox",
+  "tradition": "christianity",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "christianity/orthodox/oriental-orthodox",
+  "depth": 3,
+  "summary": "The communion of churches that did not receive the Council of Chalcedon.",
+  "contested": false,
+  "currents": [],
+  "order": 1,
+  "founded": {}
+}

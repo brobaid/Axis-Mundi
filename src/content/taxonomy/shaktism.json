@@ -1,0 +1,16 @@
+{
+  "id": "shaktism",
+  "name": "Shaktism",
+  "parent": "hinduism",
+  "tradition": "hinduism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "hinduism/shaktism",
+  "depth": 2,
+  "summary": "The stream centred on the Goddess as ultimate reality.",
+  "contested": false,
+  "currents": [],
+  "order": 2,
+  "founded": {}
+}

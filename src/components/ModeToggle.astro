@@ -1,0 +1,102 @@
+---
+/**
+ * Gallery / Night Gallery toggle (design language §9).
+ *
+ * "Default is light, as a product decision, regardless of OS preference on
+ *  first visit. The toggle sits in the top bar; the choice persists."
+ *
+ * The choice persists in localStorage. Reading the site never depends on that:
+ * with storage unavailable the site renders in Gallery and the toggle still
+ * works for the session (CLAUDE.md ban: no browser-storage dependencies for
+ * core reading paths).
+ */
+---
+
+<button id="mode-toggle" type="button" class="mode-toggle" aria-pressed="false">
+  <span class="mode-toggle__dot" aria-hidden="true"></span>
+  <span class="mode-toggle__label" data-label>Gallery</span>
+</button>
+
+<style>
+  .mode-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: none;
+    border: var(--hairline-width) solid var(--hairline-strong);
+    border-radius: var(--radius-pill);
+    padding: var(--space-1) var(--space-3);
+    color: var(--ink-soft);
+    font-family: var(--font-ui);
+    font-size: var(--size-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      color var(--dur-micro) var(--ease-out),
+      border-color var(--dur-micro) var(--ease-out);
+  }
+
+  .mode-toggle:hover {
+    color: var(--ink);
+    border-color: var(--brass);
+  }
+
+  .mode-toggle__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1.5px solid var(--brass);
+    /* Filled in Night Gallery, hollow in Gallery: the state reads without color. */
+    background: transparent;
+    transition: background-color var(--dur-micro) var(--ease-out);
+  }
+
+  :global([data-mode='night-gallery']) .mode-toggle__dot {
+    background: var(--brass);
+  }
+
+  .mode-toggle__label {
+    min-width: 8.5ch;
+    text-align: left;
+  }
+</style>
+
+<script>
+  const STORAGE_KEY = 'axis-mundi-mode';
+  type Mode = 'gallery' | 'night-gallery';
+
+  const LABELS: Record<Mode, string> = {
+    gallery: 'Gallery',
+    'night-gallery': 'Night Gallery',
+  };
+
+  const button = document.getElementById('mode-toggle');
+  const label = button?.querySelector<HTMLElement>('[data-label]');
+
+  const currentMode = (): Mode =>
+    document.documentElement.dataset['mode'] === 'night-gallery' ? 'night-gallery' : 'gallery';
+
+  function render(mode: Mode): void {
+    document.documentElement.dataset['mode'] = mode;
+    if (label) label.textContent = LABELS[mode];
+    button?.setAttribute('aria-pressed', String(mode === 'night-gallery'));
+    button?.setAttribute(
+      'aria-label',
+      mode === 'night-gallery' ? 'Switch to Gallery, the light mode' : 'Switch to Night Gallery, the dark mode',
+    );
+  }
+
+  render(currentMode());
+
+  button?.addEventListener('click', () => {
+    const next: Mode = currentMode() === 'night-gallery' ? 'gallery' : 'night-gallery';
+    render(next);
+    try {
+      localStorage.setItem(STORAGE_KEY, next);
+    } catch {
+      /* Storage unavailable: the choice simply does not outlive the session. */
+    }
+  });
+</script>

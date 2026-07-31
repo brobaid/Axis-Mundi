@@ -1,0 +1,32 @@
+{
+  "id": "edict-of-milan-313",
+  "title": "Edict of Milan",
+  "year_start": 313,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "italian-peninsula"
+  ],
+  "summary": "Constantine and Licinius extended toleration to Christians across the Roman Empire.",
+  "tags": [
+    "needs-identification",
+    "roman-empire",
+    "toleration"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

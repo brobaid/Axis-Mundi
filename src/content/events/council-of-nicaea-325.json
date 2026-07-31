@@ -1,0 +1,39 @@
+{
+  "id": "council-of-nicaea-325",
+  "title": "First Council of Nicaea",
+  "year_start": 325,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "council",
+  "importance": 5,
+  "region": [
+    "anatolia"
+  ],
+  "location": {
+    "lat": 40.43,
+    "lng": 29.72
+  },
+  "summary": "First ecumenical council, convened by Constantine. Produced the original Nicene Creed and condemned Arianism.",
+  "sources": [
+    "oxford-early-christianity-2008",
+    "britannica-nicaea"
+  ],
+  "tags": [
+    "creed",
+    "christology",
+    "roman-empire"
+  ],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "sourced"
+}

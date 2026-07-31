@@ -1,0 +1,32 @@
+{
+  "id": "later-diffusion-in-tibet-1000",
+  "title": "Later diffusion in Tibet",
+  "year_start": 1000,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/vajrayana"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "tibetan-plateau"
+  ],
+  "summary": "A renewed wave of translation and transmission reshaped Tibetan Buddhism and gave rise to its major schools.",
+  "tags": [
+    "needs-identification",
+    "tibet",
+    "translation"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

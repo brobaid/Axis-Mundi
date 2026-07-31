@@ -1,0 +1,47 @@
+---
+/**
+ * Global footer (design language §8): methodology link.
+ *
+ * The methodology page is where the site states that the tradition-hue
+ * associations are conventional and not official (design language §3.2 rule 4).
+ */
+const year = 2026;
+---
+
+<footer class="footer">
+  <div class="shell footer__inner">
+    <nav aria-label="Site">
+      <a class="tap" href="/methodology">Methodology and sources</a>
+    </nav>
+    <p class="caption">
+      Axis Mundi is a comparative reference. It describes what traditions hold and practise;
+      it does not evaluate them.
+    </p>
+    <p class="caption footer__meta">
+      <span class="mono">{year}</span>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    margin-top: var(--space-24);
+    border-top: var(--hairline-width) solid var(--hairline);
+    background: var(--canvas);
+  }
+
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-block: var(--space-8) var(--space-12);
+  }
+
+  .footer__inner p {
+    max-width: var(--measure);
+  }
+
+  .footer__meta {
+    color: var(--ink-soft);
+  }
+</style>

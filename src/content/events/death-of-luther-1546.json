@@ -1,0 +1,31 @@
+{
+  "id": "death-of-luther-1546",
+  "title": "Death of Martin Luther",
+  "year_start": 1546,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/lutheran"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "german-lands"
+  ],
+  "summary": "Luther died at Eisleben, leaving the movement to its second generation of leadership.",
+  "tags": [
+    "needs-identification",
+    "reformation"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}
