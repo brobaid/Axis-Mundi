@@ -143,6 +143,9 @@ const bootstrap = {
                 class:list={['tree-node', `tree-node--d${n.depth}`, !n.dated && 'tree-node--undated']}
                 data-node={n.id}
                 data-tradition={n.tradition}
+                tabindex="0"
+                role="button"
+                aria-label={`${n.name}, ${n.path.split('/').join(' in ')}${n.contested ? ', contested classification' : ''}${n.foundedDisplay ? `, founded ${n.foundedDisplay}` : ', no founding record'}`}
                 style={`--tradition-hue: var(--t-${n.tradition})`}
               >
                 <circle cx={n.x} cy={n.y} r={n.depth === 1 ? 5.5 : n.depth === 2 ? 4 : 3} />

@@ -405,3 +405,94 @@ dl.exhibit-label,
     scroll-behavior: auto !important;
   }
 }
+
+/* =============================================================================
+   Print (design language §5: the museum's reading rooms on paper)
+   Deep dives and the methodology page are the two things a reader prints. The
+   canvases are not: a timeline without its zoom is a smear, and a map without
+   its scrubber is one era pretending to be all twelve.
+   ============================================================================= */
+
+@media print {
+  /* The print palette itself lives in tokens.css — tokens are the single source
+     of every colour, print included. Everything below is layout. */
+  body {
+    background: var(--canvas);
+    color: var(--ink);
+    font-size: 11pt;
+  }
+
+  /* Interface furniture leaves. Nothing here survives on paper. */
+  .topbar,
+  .rooms,
+  .search,
+  .panel,
+  .panel-scrim,
+  .skip-link,
+  .dd-nav,
+  .chips,
+  .scrub,
+  .doors,
+  .tl-controls,
+  [data-map],
+  [data-tree],
+  [data-matrix] .mx-wrap {
+    display: none !important;
+  }
+
+  /* A link's destination is worthless in ink unless it is printed. Internal
+     ones resolve against the site; external ones print as written. */
+  main a[href^='/']::after {
+    content: ' (axis-mundi-mu.vercel.app' attr(href) ')';
+    font-size: 9pt;
+    color: var(--ink-soft);
+  }
+
+  main a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 9pt;
+    color: var(--ink-soft);
+  }
+
+  /* A heading orphaned at the foot of a page is a broken section. */
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .dd-section,
+  .section {
+    break-inside: avoid-page;
+  }
+
+  /* The contested treatment has to survive monochrome: hatching reads, a tint
+     does not, and a dispute that prints as ordinary text is a lie on paper. */
+  .contested-badge {
+    border: 1px solid var(--ink);
+    background: none;
+    color: var(--contested-badge-ink);
+  }
+
+  .hatch {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 3px,
+      var(--contested-hatch) 3px,
+      var(--contested-hatch) 4px
+    );
+  }
+
+  .exhibit-label {
+    border-top: 1px solid var(--hairline-strong);
+  }
+
+  /* The waiting-on states matter most in print: a printed page has no build
+     note beside it to explain what is missing. */
+  .dd-pending {
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+}

@@ -187,9 +187,15 @@ export function renderSnapshot(snapshot: SnapshotView, f: Frame, active: boolean
   const realms = snapshot.realms
     .map((realm) => {
       const fill = realm.grade === 'c' ? `url(#hatch-${realm.tradition})` : `var(--t-${realm.tradition})`;
+      /* A realm is a control, so it is reachable and named. The label carries
+         the same three facts the eye gets from the fill and the card: which
+         country, which category, how confident. */
+      const category = realm.tradition === 'unaffiliated' ? 'religiously unaffiliated' : realm.tradition;
+      const label = `${realm.name}: ${category}, confidence ${realm.grade.toUpperCase()}`;
       return (
         `<g class="map-realm ${gradeClass(realm.grade)}" data-realm="${esc(realm.id)}"` +
-        ` data-snapshot="${esc(snapshot.id)}">` +
+        ` data-snapshot="${esc(snapshot.id)}" tabindex="${active ? 0 : -1}" role="button"` +
+        ` aria-label="${esc(label)}">` +
         `<path class="map-realm__fill" d="${geometryPath(realm.geometry, f)}" fill="${fill}"` +
         ` stroke="var(--t-${realm.tradition})"/>` +
         realmLabel(realm, f, snapshot.id) +

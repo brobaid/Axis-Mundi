@@ -29,6 +29,13 @@ interface Props {
 
 const { title, description } = Astro.props;
 const fullTitle = title === 'Axis Mundi' ? title : `${title} — Axis Mundi`;
+
+/* Canonical and social URLs are absolute against the configured site. The card
+   is the Brass Meridian over the ten lanes — the site's own object, not a
+   photograph: the design language bans stock religious imagery, and a social
+   card is the one place that ban is easiest to forget. */
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const socialCard = new URL('/social-card.svg', Astro.site).href;
 ---
 
 <!doctype html>
@@ -38,9 +45,21 @@ const fullTitle = title === 'Axis Mundi' ? title : `${title} — Axis Mundi`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+    <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="color-scheme" content="light dark" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Axis Mundi" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialCard} />
+    <meta property="og:image:alt" content="The Brass Meridian standing across ten timeline lanes, one per tradition." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialCard} />
 
     <!--
       Set the mode before first paint so there is no flash. Default is Gallery

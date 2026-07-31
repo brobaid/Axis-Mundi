@@ -246,92 +246,133 @@
    NIGHT GALLERY — dark mode. Full token swap (§9).
    ============================================================================= */
 
-[data-mode='night-gallery'] {
-  color-scheme: dark;
+/* Wrapped in `screen` so paper never inherits the dark palette. This is the
+   whole night-mode fallback: on print the block simply does not apply and the
+   Gallery ramp above — already audited against a light canvas — takes over, so
+   there is no second copy of forty colours to drift out of sync. */
+@media screen {
+  [data-mode='night-gallery'] {
+    color-scheme: dark;
 
-  /* Neutrals + accent (design language §3.1, verbatim) */
-  --canvas: #14110d;
-  --surface: #1d1915;
-  --ink: #ede7dc;
-  --ink-soft: #a89f92;
-  --hairline: #2e2822;
-  --brass: #c9a250;
-  --brass-ink: #e2c77e;
+    /* Neutrals + accent (design language §3.1, verbatim) */
+    --canvas: #14110d;
+    --surface: #1d1915;
+    --ink: #ede7dc;
+    --ink-soft: #a89f92;
+    --hairline: #2e2822;
+    --brass: #c9a250;
+    --brass-ink: #e2c77e;
 
-  /* Map tones (handoff prompt, binding) */
-  --ocean: #0f0d0a;
-  --land: #241f18;
+    /* Map tones (handoff prompt, binding) */
+    --ocean: #0f0d0a;
+    --land: #241f18;
 
-  /* --- Derived neutrals. Lighter surface steps, no glow (§5, ban list). ---- */
-  --surface-sunken: #100e0b;
-  --hairline-strong: #706756;
-  --ink-inverse: #14110d;
-  --brass-wash: #2b2418;
-  --brass-hover: #ddb96c;
+    /* --- Derived neutrals. Lighter surface steps, no glow (§5, ban list). ---- */
+    --surface-sunken: #100e0b;
+    --hairline-strong: #706756;
+    --ink-inverse: #14110d;
+    --brass-wash: #2b2418;
+    --brass-hover: #ddb96c;
 
-  --focus-ring: var(--brass);
+    --focus-ring: var(--brass);
 
-  --contested-hatch: #6f6658;
-  --contested-badge-bg: #2b2418;
-  --contested-badge-ink: #cdc0aa;
-  --ghost: #4b443a;
+    --contested-hatch: #6f6658;
+    --contested-badge-bg: #2b2418;
+    --contested-badge-ink: #cdc0aa;
+    --ghost: #4b443a;
 
-  --shadow-panel: 0 1px 2px rgb(0 0 0 / 40%), 0 6px 20px rgb(0 0 0 / 45%);
-  --shadow-sheet: 0 -2px 20px rgb(0 0 0 / 55%);
+    --shadow-panel: 0 1px 2px rgb(0 0 0 / 40%), 0 6px 20px rgb(0 0 0 / 45%);
+    --shadow-sheet: 0 -2px 20px rgb(0 0 0 / 55%);
 
-  --scrim: rgb(0 0 0 / 45%);
-  --lane-hover: rgb(201 162 80 / 7%);
+    --scrim: rgb(0 0 0 / 45%);
+    --lane-hover: rgb(201 162 80 / 7%);
 
-  /* ===========================================================================
-     Tradition ramps, dark. Per §9: luminance-boosted, saturation eased, so the
-     hues read on umber-black without vibrating. Per §3.2 rule 2 the two nearest
-     pairs push further apart here than in light mode:
-       Hinduism saffron  -> orange     vs  Chinese yellow  -> green-gold
-       Shinto vermilion  -> warm coral vs  Zoroastrian crimson -> rose
-     =========================================================================== */
+    /* ===========================================================================
+       Tradition ramps, dark. Per §9: luminance-boosted, saturation eased, so the
+       hues read on umber-black without vibrating. Per §3.2 rule 2 the two nearest
+       pairs push further apart here than in light mode:
+         Hinduism saffron  -> orange     vs  Chinese yellow  -> green-gold
+         Shinto vermilion  -> warm coral vs  Zoroastrian crimson -> rose
+       =========================================================================== */
 
-  --t-judaism: #7cb2e8;
-  --t-judaism-line: #7cb2e8;
-  --t-judaism-ink: #9cc6ee;
+    --t-judaism: #7cb2e8;
+    --t-judaism-line: #7cb2e8;
+    --t-judaism-ink: #9cc6ee;
 
-  --t-christianity: #b195dd;
-  --t-christianity-line: #b195dd;
-  --t-christianity-ink: #c3ade5;
+    --t-christianity: #b195dd;
+    --t-christianity-line: #b195dd;
+    --t-christianity-ink: #c3ade5;
 
-  --t-islam: #5cbb8b;
-  --t-islam-line: #5cbb8b;
-  --t-islam-ink: #7ecba4;
+    --t-islam: #5cbb8b;
+    --t-islam-line: #5cbb8b;
+    --t-islam-ink: #7ecba4;
 
-  --t-hinduism: #eda049;
-  --t-hinduism-line: #eda049;
-  --t-hinduism-ink: #f0b06a;
+    --t-hinduism: #eda049;
+    --t-hinduism-line: #eda049;
+    --t-hinduism-ink: #f0b06a;
 
-  --t-buddhism: #d98b8d;
-  --t-buddhism-line: #d98b8d;
-  --t-buddhism-ink: #e3a3a5;
+    --t-buddhism: #d98b8d;
+    --t-buddhism-line: #d98b8d;
+    --t-buddhism-ink: #e3a3a5;
 
-  --t-sikhism: #96a2e2;
-  --t-sikhism-line: #96a2e2;
-  --t-sikhism-ink: #adb6e9;
+    --t-sikhism: #96a2e2;
+    --t-sikhism-line: #96a2e2;
+    --t-sikhism-ink: #adb6e9;
 
-  --t-chinese: #ccc054;
-  --t-chinese-line: #ccc054;
-  --t-chinese-ink: #dad073;
+    --t-chinese: #ccc054;
+    --t-chinese-line: #ccc054;
+    --t-chinese-ink: #dad073;
 
-  --t-shinto: #f0917c;
-  --t-shinto-line: #f0917c;
-  --t-shinto-ink: #f3a794;
+    --t-shinto: #f0917c;
+    --t-shinto-line: #f0917c;
+    --t-shinto-ink: #f3a794;
 
-  --t-jainism: #4fc0b8;
-  --t-jainism-line: #4fc0b8;
-  --t-jainism-ink: #75cec8;
+    --t-jainism: #4fc0b8;
+    --t-jainism-line: #4fc0b8;
+    --t-jainism-ink: #75cec8;
 
-  --t-zoroastrianism: #e8808f;
-  --t-zoroastrianism-line: #e8808f;
-  --t-zoroastrianism-ink: #ee9ba7;
+    --t-zoroastrianism: #e8808f;
+    --t-zoroastrianism-line: #e8808f;
+    --t-zoroastrianism-ink: #ee9ba7;
 
-  /* Unaffiliated, night gallery. Same neutral role, lifted off the umber black. */
-  --t-unaffiliated: #8b8276;
-  --t-unaffiliated-line: #a49a8c;
-  --t-unaffiliated-ink: #c3b9a9;
+    /* Unaffiliated, night gallery. Same neutral role, lifted off the umber black. */
+    --t-unaffiliated: #8b8276;
+    --t-unaffiliated-line: #a49a8c;
+    --t-unaffiliated-ink: #c3b9a9;
+  }
+}
+
+/* =============================================================================
+   PRINT — paper is the canvas.
+
+   The print palette lives here rather than in base.css because tokens.css is the
+   single source of every colour (CLAUDE.md hard rule 1), and a print stylesheet
+   is exactly the place that rule is easiest to forget.
+
+   The night block above is `@media screen`, so paper already gets the Gallery
+   ramp — including the ten tradition hues, which are the light ones and stay
+   legible on white. All that is left is the difference between a cream canvas
+   and actual paper: white where the screen has warmth, and no elevation, since
+   a shadow prints as grey mud.
+   ============================================================================= */
+
+@media print {
+  :root {
+    --canvas: #ffffff;
+    --surface: #ffffff;
+    --surface-sunken: #ffffff;
+    --ocean: #ffffff;
+    --land: #ffffff;
+
+    /* Washes become paper: a tint that reads as emphasis on screen prints as a
+       smudge, and the ink on top was already audited against white. */
+    --brass-wash: #ffffff;
+    --contested-badge-bg: #ffffff;
+
+    /* Elevation and scrims are screen affordances. */
+    --shadow-panel: none;
+    --shadow-sheet: none;
+    --scrim: transparent;
+    --lane-hover: transparent;
+  }
 }

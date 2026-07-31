@@ -202,6 +202,19 @@ if (root !== null) {
       if (crumbEl) crumbEl.innerHTML = crumbHtml();
       if (zoomEl) zoomEl.textContent = zoomLabel(state.to - state.from);
       if (upBtn) upBtn.hidden = state.drill === '';
+      /* The map, matrix and tree all announce their state; the timeline did
+         not, so a screen-reader user got no confirmation that a zoom, drill or
+         filter had changed anything. Same strings the eye gets. */
+      const liveEl = root!.querySelector<HTMLElement>('[data-tl-readout]');
+      if (liveEl !== null) {
+        const drawn = layouts.reduce((n, l) => n + l.placed.length, 0);
+        const demoted = layouts.reduce((n, l) => n + l.demoted, 0);
+        liveEl.textContent =
+          `${subtitle}. ${layouts.length} lanes, ${drawn} events drawn` +
+          (demoted > 0 ? `, ${demoted} held back by the density budget` : '') +
+          (state.threads ? ', influence threads on' : '') + '.';
+      }
+
       if (threadsBtn) {
         threadsBtn.setAttribute('aria-pressed', String(state.threads));
         threadsBtn.textContent = state.threads ? 'Threads: on' : 'Influence threads';

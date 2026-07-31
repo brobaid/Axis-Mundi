@@ -55,7 +55,7 @@
 
 <script>
   interface Doc {
-    kind: 'event' | 'tradition' | 'glossary';
+    kind: 'event' | 'tradition' | 'glossary' | 'belief' | 'region';
     id: string;
     title: string;
     meta: string;
@@ -139,11 +139,24 @@
         /* Glossary terms are short and specific; nudge them up so a term
            search does not drown under events that merely mention it. */
         if (doc.kind === 'glossary') score += 8;
+        /* A belief cell answers "what does X hold about Y" directly, so it
+           outranks the events that merely mention the word. */
+        if (doc.kind === 'belief') score += 4;
         scored.push({ doc, score });
       }
 
       return scored.sort((a, b) => b.score - a.score || a.doc.title.localeCompare(b.doc.title)).slice(0, 24);
     }
+
+    /* The index's kind ids are not display copy: "belief" is a record type, and
+       a reader searching the site should see what the result is. */
+    const KIND_LABEL: Record<string, string> = {
+      event: 'Event',
+      tradition: 'Tradition',
+      glossary: 'Term',
+      belief: 'Belief',
+      region: 'Region',
+    };
 
     const esc = (s: string): string =>
       s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -174,7 +187,7 @@
               : `<span class="swatch" style="--tradition-hue: var(--t-${doc.tradition})" aria-hidden="true"></span>`;
           return (
             `<a class="sr" role="option" aria-selected="${i === 0}" href="${doc.url}" data-index="${i}">` +
-            `<span class="sr__kind">${doc.kind}</span>` +
+            `<span class="sr__kind">${KIND_LABEL[doc.kind] ?? doc.kind}</span>` +
             `<span class="sr__main">${chip}<b>${esc(doc.title)}</b>` +
             `<span class="sr__meta">${esc(doc.meta)}</span></span>` +
             `<span class="sr__body">${esc(doc.body)}</span>` +

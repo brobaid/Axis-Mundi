@@ -134,6 +134,14 @@ if (root !== null) {
 
     /* ── node tap ──────────────────────────────────────────────────────── */
 
+    root.addEventListener('keydown', (ev) => {
+      if (ev.key !== 'Enter' && ev.key !== ' ') return;
+      const g = (ev.target as Element).closest<SVGGElement>('[data-node]');
+      if (g === null) return;
+      ev.preventDefault();
+      g.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    });
+
     root.addEventListener('click', (ev) => {
       const g = (ev.target as Element).closest<SVGGElement>('[data-node]');
       if (g === null || panel === null) return;

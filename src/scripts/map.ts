@@ -98,6 +98,11 @@ if (root !== null) {
         layer.style.opacity = on ? '1' : '0';
         if (on) layer.removeAttribute('aria-hidden');
         else layer.setAttribute('aria-hidden', 'true');
+        /* A hidden layer's realms must leave the tab order too, or a reader
+           tabs through 175 invisible controls. */
+        for (const realm of layer.querySelectorAll<SVGGElement>('[data-realm]')) {
+          realm.setAttribute('tabindex', on ? '0' : '-1');
+        }
       }
 
       for (const btn of rail!.querySelectorAll<HTMLButtonElement>('[data-era]')) {
@@ -179,6 +184,14 @@ if (root !== null) {
     });
 
     /* ── realm tap → the shared panel ────────────────────────────────── */
+
+    canvas.addEventListener('keydown', (ev) => {
+      if (ev.key !== 'Enter' && ev.key !== ' ') return;
+      const group = (ev.target as Element).closest<SVGGElement>('[data-realm]');
+      if (group === null) return;
+      ev.preventDefault();
+      group.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    });
 
     canvas.addEventListener('click', (ev) => {
       const group = (ev.target as Element).closest<SVGGElement>('[data-realm]');

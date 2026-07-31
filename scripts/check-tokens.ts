@@ -23,14 +23,21 @@ const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
 const tokensPath = resolve(root, 'src/styles/tokens.css');
 
-type Mode = 'gallery' | 'night-gallery';
+/**
+ * The three contexts a token set is resolved in. Print is a first-class one:
+ * paper is a rendering target the reader can reach from either mode, so its
+ * palette is audited rather than assumed.
+ */
+type Mode = 'gallery' | 'night-gallery' | 'print';
+
+const MODES = ['gallery', 'night-gallery', 'print'] as const;
 
 interface Check {
   readonly fg: string;
   readonly bg: string;
   readonly min: number;
   readonly why: string;
-  /** Restrict to one mode; omitted means "must hold in both". */
+  /** Restrict to one mode; omitted means "must hold in all three". */
   readonly mode?: Mode;
 }
 
@@ -88,48 +95,108 @@ const CHECKS: readonly Check[] = [
 
 /* ------------------------------------------------------------------------- */
 
-function parseModeBlocks(css: string): Record<Mode, Map<string, string>> {
-  const out: Record<Mode, Map<string, string>> = {
-    gallery: new Map(),
-    'night-gallery': new Map(),
-  };
+interface Block {
+  /** Space-joined preludes of every enclosing at-rule; '' at top level. */
+  readonly media: string;
+  readonly selector: string;
+  readonly decls: readonly (readonly [string, string])[];
+}
 
-  // `:root` and `:root, [data-mode='gallery']` both seed the light mode; the
-  // night block then overrides. Walk declarations in source order.
+/**
+ * Flatten tokens.css into rule blocks, in source order, each tagged with the
+ * at-rules it sits inside.
+ *
+ * A flat regex scan cannot do this: `@media print { :root { … } }` reads to a
+ * `selector { body }` pattern as a block whose selector is the inner one and
+ * whose media context has vanished — which is how a print override silently
+ * became a night-mode override. Brace matching is the only honest read.
+ */
+function parseBlocks(css: string): Block[] {
   // Strip comments first: they may legitimately quote CSS containing braces,
   // which would otherwise be parsed as a rule and desynchronise everything.
   const stripped = css.replace(/\/\*[\s\S]*?\*\//g, '');
 
-  // tokens.css has no nested at-rules, so a flat `selector { body }` scan is
-  // sufficient. Do NOT anchor on the previous `}` — consuming it would make
-  // every second block unmatchable.
-  const blockRe = /([^{}]+)\{([^{}]*)\}/g;
-  let m: RegExpExecArray | null;
-  while ((m = blockRe.exec(stripped)) !== null) {
-    const selector = (m[1] ?? '').trim();
-    const body = m[2] ?? '';
-    const decls = [...body.matchAll(/(--[\w-]+)\s*:\s*([^;]+);/g)].map(
-      (d) => [d[1] as string, (d[2] as string).trim()] as const,
-    );
+  const blocks: Block[] = [];
+  const atRules: string[] = [];
+  let i = 0;
+  let preludeStart = 0;
 
-    const isNight = selector.includes('night-gallery');
-    const isLight = selector.includes(':root') || selector.includes("data-mode='gallery'");
+  while (i < stripped.length) {
+    const ch = stripped[i];
 
-    for (const [name, value] of decls) {
-      if (isNight) {
-        out['night-gallery'].set(name, value);
-      } else if (isLight) {
-        out.gallery.set(name, value);
-        // Shared primitives in :root apply to night mode too, unless overridden later.
-        if (!out['night-gallery'].has(name)) out['night-gallery'].set(name, value);
+    if (ch === '{') {
+      const prelude = stripped.slice(preludeStart, i).trim();
+      if (prelude.startsWith('@')) {
+        atRules.push(prelude);
+        i += 1;
+        preludeStart = i;
+        continue;
       }
+      // A declaration block. tokens.css nests no rules inside a rule, so the
+      // next `}` closes it.
+      const close = stripped.indexOf('}', i);
+      const end = close === -1 ? stripped.length : close;
+      const body = stripped.slice(i + 1, end);
+      blocks.push({
+        media: atRules.join(' '),
+        selector: prelude,
+        decls: [...body.matchAll(/(--[\w-]+)\s*:\s*([^;]+);/g)].map(
+          (d) => [d[1] as string, (d[2] as string).trim()] as const,
+        ),
+      });
+      i = end + 1;
+      preludeStart = i;
+      continue;
     }
+
+    if (ch === '}') {
+      atRules.pop();
+      i += 1;
+      preludeStart = i;
+      continue;
+    }
+
+    i += 1;
   }
 
-  // Night mode inherits every :root primitive it did not override.
-  for (const [name, value] of out.gallery) {
-    if (!out['night-gallery'].has(name)) out['night-gallery'].set(name, value);
+  return blocks;
+}
+
+/** Does a block's media context apply when rendering to `medium`? */
+function mediaApplies(media: string, medium: 'screen' | 'print'): boolean {
+  const mentionsPrint = /\bprint\b/.test(media);
+  const mentionsScreen = /\bscreen\b/.test(media);
+  if (!mentionsPrint && !mentionsScreen) return true;
+  return medium === 'print' ? mentionsPrint : mentionsScreen;
+}
+
+/**
+ * Resolve the token set for one context by replaying every applicable block in
+ * source order — which is the cascade, since every selector here is a single
+ * class-weight one and so ties are broken by position.
+ */
+function resolveMode(blocks: readonly Block[], mode: Mode): Map<string, string> {
+  const medium = mode === 'print' ? 'print' : 'screen';
+  const out = new Map<string, string>();
+
+  for (const block of blocks) {
+    if (!mediaApplies(block.media, medium)) continue;
+
+    const isNight = block.selector.includes('night-gallery');
+    const isLight =
+      block.selector.includes(':root') || block.selector.includes("data-mode='gallery'");
+
+    // Gallery takes only the light blocks. Night and print both start from the
+    // light ramp and let anything later override it — for night that is the
+    // dark block, for print the paper block. If the night block ever escapes
+    // its `@media screen` wrapper it lands here too, and the toner-burning
+    // contrast failures that follow are the point.
+    const applies = mode === 'gallery' ? isLight : isLight || isNight;
+    if (!applies) continue;
+
+    for (const [name, value] of block.decls) out.set(name, value);
   }
+
   return out;
 }
 
@@ -220,7 +287,7 @@ if (strays.length > 0) {
 /* -------------------------------------------------------------------------- */
 
 const css = readFileSync(tokensPath, 'utf8');
-const modes = parseModeBlocks(css);
+const blocks = parseBlocks(css);
 
 interface Failure {
   readonly mode: Mode;
@@ -232,8 +299,8 @@ interface Failure {
 const failures: Failure[] = [];
 let passed = 0;
 
-for (const mode of ['gallery', 'night-gallery'] as const) {
-  const vars = modes[mode];
+for (const mode of MODES) {
+  const vars = resolveMode(blocks, mode);
   for (const check of CHECKS) {
     if (check.mode !== undefined && check.mode !== mode) continue;
 
@@ -279,5 +346,6 @@ if (failures.length > 0) {
 }
 
 console.log(
-  `  Design token audit passed — no stray colours, ${passed} contrast checks across both modes.`,
+  `  Design token audit passed — no stray colours, ${passed} contrast checks across ` +
+    `${MODES.join(', ')}.`,
 );
