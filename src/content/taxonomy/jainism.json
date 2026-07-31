@@ -13,7 +13,16 @@
   "contested": false,
   "currents": [],
   "order": 7,
-  "founded": {},
+  "founded": {
+    "year": -550,
+    "precision": "century",
+    "display": "Mahavira, 6th-5th c. BCE",
+    "note": "Tradition itself holds a lineage of earlier tirthankaras; that view is tradition-internal",
+    "sources": [
+      "dundas-jains-2002"
+    ],
+    "contested": false
+  },
   "adherents": {
     "display": "≈4.5 m (census + estimates)",
     "estimate": 4500000,

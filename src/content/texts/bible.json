@@ -1,0 +1,12 @@
+{
+  "id": "bible",
+  "tradition": "christianity",
+  "title": "The Bible",
+  "primary": true,
+  "note": "Hebrew scriptures and New Testament",
+  "sources": [
+    "macculloch-christianity-2009"
+  ],
+  "sourcing": "sourced",
+  "contested": false
+}

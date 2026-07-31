@@ -1,0 +1,11 @@
+{
+  "id": "guru-granth-sahib",
+  "tradition": "sikhism",
+  "title": "Guru Granth Sahib",
+  "primary": true,
+  "sources": [
+    "mcleod-sikhism-1997"
+  ],
+  "sourcing": "sourced",
+  "contested": false
+}

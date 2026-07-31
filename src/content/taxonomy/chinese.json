@@ -14,7 +14,17 @@
   "contested_note": "The spec flags the classification of this cluster, and of Confucianism in particular, as a religion rather than a philosophy or a civic tradition. Both positions require citation before this note ships.",
   "currents": [],
   "order": 6,
-  "founded": {},
+  "founded": {
+    "year": -500,
+    "precision": "era",
+    "display": "Cluster: Confucius 6th-5th c. BCE; organized Taoism 142 CE; folk religion immemorial",
+    "note": "A cluster, not a single founding",
+    "sources": [
+      "yao-confucianism-2000",
+      "kohn-daoism-2000"
+    ],
+    "contested": false
+  },
   "adherents": {
     "display": "see note",
     "source": "pew-grl-2025",

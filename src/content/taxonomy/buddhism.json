@@ -13,7 +13,16 @@
   "contested": false,
   "currents": [],
   "order": 4,
-  "founded": {},
+  "founded": {
+    "year": -480,
+    "precision": "century",
+    "display": "5th century BCE",
+    "note": "Anchored to the Buddha's teaching career; scholarly dating of his death centers on the 480s BCE",
+    "sources": [
+      "princeton-dict-buddhism-2014"
+    ],
+    "contested": false
+  },
   "adherents": {
     "display": "324 m (Pew, 2020)",
     "estimate": 324000000,

@@ -30,7 +30,16 @@
     }
   ],
   "order": 1,
-  "founded": {},
+  "founded": {
+    "year": 610,
+    "precision": "year",
+    "display": "7th century CE (610 first revelation, 622 Hijra)",
+    "note": "First revelation 610; the community dates from the Hijra, 622",
+    "sources": [
+      "nchi-2010"
+    ],
+    "contested": false
+  },
   "adherents": {
     "display": "2.0 bn (Pew, 2020)",
     "estimate": 2000000000,

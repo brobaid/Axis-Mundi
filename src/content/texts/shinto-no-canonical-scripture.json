@@ -1,0 +1,12 @@
+{
+  "id": "shinto-no-canonical-scripture",
+  "tradition": "shinto",
+  "title": "No canonical scripture",
+  "primary": true,
+  "note": "Kojiki and Nihon Shoki as foundational chronicles",
+  "sources": [
+    "hardacre-shinto-2017"
+  ],
+  "sourcing": "sourced",
+  "contested": false
+}

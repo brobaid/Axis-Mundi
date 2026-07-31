@@ -38,7 +38,16 @@
     }
   ],
   "order": 3,
-  "founded": {},
+  "founded": {
+    "year": -1500,
+    "precision": "era",
+    "display": "No founding; coalesces from Vedic tradition",
+    "note": "Vedic roots c. 1500 BCE; no founder and no founding moment",
+    "sources": [
+      "flood-hinduism-1996"
+    ],
+    "contested": false
+  },
   "adherents": {
     "display": "1.2 bn (Pew, 2020)",
     "estimate": 1200000000,

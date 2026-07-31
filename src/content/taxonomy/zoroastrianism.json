@@ -13,7 +13,16 @@
   "contested": false,
   "currents": [],
   "order": 9,
-  "founded": {},
+  "founded": {
+    "year": -1000,
+    "precision": "era",
+    "display": "Contested: c. 1500-1000 BCE or 6th century BCE",
+    "sources": [
+      "boyce-zoroastrians"
+    ],
+    "contested": true,
+    "contested_note": "Position 1: linguistic dating of the Gathas places Zoroaster c. 1500-1000 BCE. Position 2: a later tradition dates him to the 6th century BCE. Scholarship is divided"
+  },
   "adherents": {
     "display": "≈110-120 k (community surveys)",
     "source": "fezana-demographics",

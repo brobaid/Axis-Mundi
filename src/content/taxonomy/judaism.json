@@ -30,7 +30,16 @@
     }
   ],
   "order": 2,
-  "founded": {},
+  "founded": {
+    "year": -1000,
+    "precision": "era",
+    "display": "1st millennium BCE (emergence)",
+    "note": "No founding moment; Israelite religion developing into Second Temple Judaism",
+    "sources": [
+      "ej2-2007"
+    ],
+    "contested": false
+  },
   "adherents": {
     "display": "14.8 m (Pew, 2020)",
     "estimate": 14800000,

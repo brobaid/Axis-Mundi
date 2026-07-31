@@ -1,0 +1,11 @@
+{
+  "id": "avesta",
+  "tradition": "zoroastrianism",
+  "title": "Avesta",
+  "primary": true,
+  "sources": [
+    "boyce-zoroastrians"
+  ],
+  "sourcing": "sourced",
+  "contested": false
+}

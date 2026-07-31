@@ -1,0 +1,12 @@
+{
+  "id": "tanakh",
+  "tradition": "judaism",
+  "title": "Tanakh",
+  "primary": true,
+  "note": "Hebrew Bible",
+  "sources": [
+    "ej2-2007"
+  ],
+  "sourcing": "sourced",
+  "contested": false
+}

@@ -1,0 +1,11 @@
+{
+  "id": "quran",
+  "tradition": "islam",
+  "title": "Quran",
+  "primary": true,
+  "sources": [
+    "nchi-2010"
+  ],
+  "sourcing": "sourced",
+  "contested": false
+}

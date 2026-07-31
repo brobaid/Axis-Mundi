@@ -13,7 +13,16 @@
   "contested": false,
   "currents": [],
   "order": 8,
-  "founded": {},
+  "founded": {
+    "year": 700,
+    "precision": "era",
+    "display": "No founding; kami worship from prehistory",
+    "note": "Institutionalized in the 7th-8th centuries CE; practice long predates it",
+    "sources": [
+      "hardacre-shinto-2017"
+    ],
+    "contested": false
+  },
   "adherents": {
     "display": "see note",
     "source": "japan-aca-yearbook",

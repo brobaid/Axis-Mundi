@@ -13,7 +13,16 @@
   "contested": false,
   "currents": [],
   "order": 0,
-  "founded": {},
+  "founded": {
+    "year": 30,
+    "precision": "decade",
+    "display": "1st century CE",
+    "note": "Anchored to the ministry of Jesus, c. 30 CE",
+    "sources": [
+      "macculloch-christianity-2009"
+    ],
+    "contested": false
+  },
   "adherents": {
     "display": "2.3 bn (Pew, 2020)",
     "estimate": 2300000000,

@@ -1,0 +1,12 @@
+{
+  "id": "tripitaka",
+  "tradition": "buddhism",
+  "title": "Tripitaka",
+  "primary": true,
+  "note": "Pali Canon; Mahayana branches add sutras per branch",
+  "sources": [
+    "princeton-dict-buddhism-2014"
+  ],
+  "sourcing": "sourced",
+  "contested": false
+}

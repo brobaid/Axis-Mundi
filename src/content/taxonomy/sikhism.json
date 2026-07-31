@@ -13,7 +13,15 @@
   "contested": false,
   "currents": [],
   "order": 5,
-  "founded": {},
+  "founded": {
+    "year": 1469,
+    "precision": "year",
+    "display": "1469 CE (birth of Guru Nanak)",
+    "sources": [
+      "mcleod-sikhism-1997"
+    ],
+    "contested": false
+  },
   "adherents": {
     "display": "≈26 m (census + estimates)",
     "estimate": 26000000,

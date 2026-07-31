@@ -1,0 +1,13 @@
+{
+  "id": "analects-and-daodejing",
+  "tradition": "chinese",
+  "title": "Analects; Daodejing",
+  "primary": true,
+  "note": "No unified canon across the cluster",
+  "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+  ],
+  "sourcing": "sourced",
+  "contested": false
+}

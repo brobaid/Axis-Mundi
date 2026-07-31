@@ -1,0 +1,13 @@
+{
+  "id": "agamas",
+  "tradition": "jainism",
+  "title": "Agamas",
+  "primary": true,
+  "note": "Svetambara canon; its completeness is disputed by Digambaras",
+  "sources": [
+    "dundas-jains-2002"
+  ],
+  "sourcing": "sourced",
+  "contested": true,
+  "contested_note": "Svetambara hold the surviving Agamas authentic; Digambara hold the original canon lost."
+}
