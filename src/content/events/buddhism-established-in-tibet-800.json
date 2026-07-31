@@ -1,8 +1,8 @@
 {
   "id": "buddhism-established-in-tibet-800",
-  "title": "Buddhism established in Tibet",
-  "year_start": 800,
-  "precision": "century",
+  "title": "Buddhism established in Tibet (Samye Monastery founded)",
+  "year_start": 779,
+  "precision": "year",
   "traditions": [
     "buddhism"
   ],
@@ -14,9 +14,8 @@
   "region": [
     "tibetan-plateau"
   ],
-  "summary": "Buddhism was established under imperial patronage in Tibet, beginning the first diffusion.",
+  "summary": "Samye, the first Buddhist monastery in Tibet, was founded under royal patronage, establishing monastic Buddhism there.",
   "tags": [
-    "needs-identification",
     "tibet",
     "transmission"
   ],

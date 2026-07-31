@@ -1,7 +1,7 @@
 {
-  "id": "kojiki-compiled-712",
-  "title": "Kojiki compiled",
-  "year_start": 712,
+  "id": "engishiki-completed-927",
+  "title": "Engishiki completed",
+  "year_start": 927,
   "precision": "exact",
   "traditions": [
     "shinto"
@@ -10,15 +10,11 @@
     "shinto"
   ],
   "type": "text",
-  "importance": 4,
+  "importance": 3,
   "region": [
     "japanese-archipelago"
   ],
-  "summary": "The Kojiki was presented to the court, recording the kami narratives and imperial genealogy.",
-  "tags": [
-    "kojiki",
-    "japan"
-  ],
+  "summary": "The Engishiki was completed, codifying court ritual procedure and the register of recognised shrines.",
   "sources": [],
   "contested": false,
   "media": [],
@@ -27,5 +23,8 @@
     "figures": []
   },
   "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
   "sourcing": "todo"
 }

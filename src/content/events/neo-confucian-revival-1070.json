@@ -1,0 +1,30 @@
+{
+  "id": "neo-confucian-revival-1070",
+  "title": "Neo-Confucian revival",
+  "year_start": 1070,
+  "precision": "century",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "Song-dynasty thinkers reworked the Confucian canon in dialogue with Buddhist and Taoist metaphysics.",
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
+  "sourcing": "todo"
+}

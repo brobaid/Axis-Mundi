@@ -1,7 +1,7 @@
 {
-  "id": "puranic-compilation-400",
-  "title": "Puranic compilation",
-  "year_start": 400,
+  "id": "ramanuja-teaches-1100",
+  "title": "Ramanuja teaches",
+  "year_start": 1100,
   "precision": "century",
   "traditions": [
     "hinduism"
@@ -9,15 +9,12 @@
   "branch_path": [
     "hinduism"
   ],
-  "type": "text",
+  "type": "figure",
   "importance": 3,
   "region": [
-    "gangetic-plain"
+    "deccan"
   ],
-  "summary": "The major Puranas took shape, consolidating narrative and devotional material.",
-  "tags": [
-    "purana"
-  ],
+  "summary": "Ramanuja taught Vishishtadvaita, the qualified non-dualism that became a foundation of later Vaishnava theology.",
   "sources": [],
   "contested": false,
   "media": [],
@@ -26,5 +23,8 @@
     "figures": []
   },
   "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
   "sourcing": "todo"
 }

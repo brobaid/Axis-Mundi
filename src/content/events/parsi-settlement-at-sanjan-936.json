@@ -1,0 +1,31 @@
+{
+  "id": "parsi-settlement-at-sanjan-936",
+  "title": "Parsi settlement at Sanjan",
+  "year_start": 936,
+  "precision": "century",
+  "traditions": [
+    "zoroastrianism"
+  ],
+  "branch_path": [
+    "zoroastrianism/parsi"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "western-india"
+  ],
+  "summary": "Zoroastrian migrants from Iran settled at Sanjan on the Gujarat coast, the origin of the Parsi community.",
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "tags": [
+    "from-design-export",
+    "contested-date-candidate"
+  ],
+  "sourcing": "todo"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "atisha-arrives-in-tibet-1042",
+  "title": "Atisha arrives in Tibet",
+  "year_start": 1042,
+  "precision": "exact",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism"
+  ],
+  "type": "figure",
+  "importance": 3,
+  "region": [
+    "tibetan-plateau"
+  ],
+  "summary": "The Bengali master Atisha arrived in Tibet, a key episode in the later diffusion of Buddhist teaching there.",
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
+  "sourcing": "todo"
+}

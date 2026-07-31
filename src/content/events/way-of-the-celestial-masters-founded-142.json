@@ -1,0 +1,28 @@
+{
+  "id": "way-of-the-celestial-masters-founded-142",
+  "title": "Way of the Celestial Masters founded",
+  "year_start": 142,
+  "precision": "exact",
+  "traditions": [
+    "chinese"
+  ],
+  "branch_path": [
+    "chinese"
+  ],
+  "type": "founding",
+  "importance": 4,
+  "region": [],
+  "summary": "Zhang Daoling founded the Way of the Celestial Masters, the earliest organised Taoist movement.",
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
+  "sourcing": "todo"
+}

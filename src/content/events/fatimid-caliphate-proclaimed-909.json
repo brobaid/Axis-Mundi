@@ -1,0 +1,30 @@
+{
+  "id": "fatimid-caliphate-proclaimed-909",
+  "title": "Fatimid caliphate proclaimed",
+  "year_start": 909,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "political",
+  "importance": 3,
+  "region": [
+    "maghreb"
+  ],
+  "summary": "The Fatimids proclaimed a caliphate in Ifriqiya, establishing Ismaili Shia rule that later extended to Egypt.",
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "tags": [
+    "from-design-export"
+  ],
+  "sourcing": "todo"
+}

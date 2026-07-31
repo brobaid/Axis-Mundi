@@ -8,7 +8,7 @@
     "buddhism"
   ],
   "branch_path": [
-    "chinese/taoism",
+    "chinese",
     "buddhism"
   ],
   "type": "persecution",
@@ -18,7 +18,6 @@
   ],
   "summary": "A Tang imperial suppression of Buddhist institutions, with lasting consequences for the monastic economy.",
   "tags": [
-    "needs-identification",
     "tang",
     "suppression"
   ],
