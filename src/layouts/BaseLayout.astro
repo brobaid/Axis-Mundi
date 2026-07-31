@@ -1,0 +1,66 @@
+---
+/* Self-hosted at build time (design language §4.1: "All available on Google
+   Fonts; self-host at build"). Weight-axis variable files only — the optical
+   and width axes are not used by the type scale, so they are not shipped.
+   The Noto per-script faces are declared in tokens.css and imported when
+   original-script content lands in M2; importing the CJK sets now would add
+   megabytes for no current glyph. */
+import '@fontsource-variable/newsreader/wght.css';
+import '@fontsource-variable/source-serif-4/wght.css';
+import '@fontsource-variable/source-serif-4/wght-italic.css';
+import '@fontsource-variable/archivo/wght.css';
+import '@fontsource/ibm-plex-mono/latin-400.css';
+import '@fontsource/ibm-plex-mono/latin-500.css';
+
+import '../styles/tokens.css';
+import '../styles/base.css';
+
+import TopBar from '../components/TopBar.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const fullTitle = title === 'Axis Mundi' ? title : `${title} — Axis Mundi`;
+---
+
+<!doctype html>
+<html lang="en" data-mode="gallery">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+    <meta name="color-scheme" content="light dark" />
+
+    <!--
+      Set the mode before first paint so there is no flash. Default is Gallery
+      regardless of OS preference, as a product decision (design language §9).
+    -->
+    <script is:inline>
+      (function () {
+        var mode = 'gallery';
+        try {
+          var stored = localStorage.getItem('axis-mundi-mode');
+          if (stored === 'gallery' || stored === 'night-gallery') mode = stored;
+        } catch {
+          /* storage unavailable; Gallery it is */
+        }
+        document.documentElement.dataset.mode = mode;
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <TopBar />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

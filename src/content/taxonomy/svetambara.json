@@ -1,0 +1,16 @@
+{
+  "id": "svetambara",
+  "name": "Svetambara",
+  "parent": "jainism",
+  "tradition": "jainism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "jainism/svetambara",
+  "depth": 2,
+  "summary": "The branch whose monastics wear white, holding the Agama canon.",
+  "contested": false,
+  "currents": [],
+  "order": 1,
+  "founded": {}
+}

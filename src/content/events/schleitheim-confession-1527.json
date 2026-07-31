@@ -1,0 +1,32 @@
+{
+  "id": "schleitheim-confession-1527",
+  "title": "Schleitheim Confession",
+  "year_start": 1527,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/anabaptist"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "swiss-confederation"
+  ],
+  "summary": "An early Anabaptist articles of agreement, setting out believers’ baptism and separation from the world.",
+  "tags": [
+    "needs-identification",
+    "anabaptist",
+    "confession"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

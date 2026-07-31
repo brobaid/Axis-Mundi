@@ -1,0 +1,16 @@
+{
+  "id": "eastern-orthodox",
+  "name": "Eastern Orthodox",
+  "parent": "orthodox",
+  "tradition": "christianity",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "christianity/orthodox/eastern-orthodox",
+  "depth": 3,
+  "summary": "The communion of autocephalous churches that received the first seven ecumenical councils.",
+  "contested": false,
+  "currents": [],
+  "order": 0,
+  "founded": {}
+}

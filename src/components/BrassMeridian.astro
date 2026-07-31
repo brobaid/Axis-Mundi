@@ -1,0 +1,35 @@
+---
+/**
+ * The Brass Meridian — the product's signature (design language §2).
+ *
+ * "A single thin brass vertical rule representing the global time cursor.
+ *  On the timeline it is the playhead. On the map it lives inside the era
+ *  scrubber. On a deep dive it appears in the margin beside history sections.
+ *  It is always the same color, weight, and behavior."
+ *
+ * There is exactly one implementation, and it is this file. Every surface that
+ * needs a time cursor renders this component; nothing restyles it locally.
+ * Color, weight and easing come from --meridian-* in tokens.css.
+ */
+
+interface Props {
+  /** Horizontal position within the positioned ancestor, 0–100. */
+  at?: number;
+  /** Accessible label. Omit only when an adjacent element already names it. */
+  label?: string | undefined;
+  /** Inset from the top and bottom of the positioned ancestor. */
+  inset?: string;
+  class?: string | undefined;
+}
+
+const { at = 0, label, inset = '0', class: className } = Astro.props;
+---
+
+<div
+  class:list={['meridian', className]}
+  style={`--meridian-inset:${inset};left:${at}%;`}
+  role={label === undefined ? 'presentation' : 'img'}
+  aria-label={label}
+  aria-hidden={label === undefined ? 'true' : undefined}
+>
+</div>

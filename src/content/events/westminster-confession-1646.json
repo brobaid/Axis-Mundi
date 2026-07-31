@@ -1,0 +1,32 @@
+{
+  "id": "westminster-confession-1646",
+  "title": "Westminster Confession",
+  "year_start": 1646,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/reformed"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "british-isles"
+  ],
+  "summary": "The Westminster Assembly completed the confession that became the Presbyterian doctrinal standard.",
+  "tags": [
+    "needs-identification",
+    "confession",
+    "presbyterian"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

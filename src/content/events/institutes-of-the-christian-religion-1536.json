@@ -1,0 +1,32 @@
+{
+  "id": "institutes-of-the-christian-religion-1536",
+  "title": "Institutes of the Christian Religion",
+  "year_start": 1536,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/reformed"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "swiss-confederation"
+  ],
+  "summary": "John Calvin published the first edition of the Institutes, the systematic core of Reformed theology.",
+  "tags": [
+    "needs-identification",
+    "calvin",
+    "reformation"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

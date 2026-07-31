@@ -1,0 +1,16 @@
+{
+  "id": "quanzhen",
+  "name": "Quanzhen",
+  "parent": "taoism",
+  "tradition": "chinese",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "chinese/taoism/quanzhen",
+  "depth": 3,
+  "summary": "A monastic Taoist school emphasising internal alchemy.",
+  "contested": false,
+  "currents": [],
+  "order": 0,
+  "founded": {}
+}

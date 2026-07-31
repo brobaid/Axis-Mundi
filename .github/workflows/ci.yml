@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: validate · lint · build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      # Zod-validates every content file, then checks the cross-file rules:
+      # referential integrity and the Phase 0 sourcing rules (spec §9.2).
+      - name: Validate content
+        run: pnpm validate:content
+
+      # tokens.css is the single source of every colour, and every contrast
+      # contract must hold in BOTH modes (CLAUDE.md hard rule 1).
+      - name: Audit design tokens
+        run: pnpm validate:tokens
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Build
+        run: pnpm build

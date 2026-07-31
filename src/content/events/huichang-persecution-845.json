@@ -1,0 +1,34 @@
+{
+  "id": "huichang-persecution-845",
+  "title": "Huichang persecution",
+  "year_start": 845,
+  "precision": "exact",
+  "traditions": [
+    "chinese",
+    "buddhism"
+  ],
+  "branch_path": [
+    "chinese/taoism",
+    "buddhism"
+  ],
+  "type": "persecution",
+  "importance": 3,
+  "region": [
+    "north-china-plain"
+  ],
+  "summary": "A Tang imperial suppression of Buddhist institutions, with lasting consequences for the monastic economy.",
+  "tags": [
+    "needs-identification",
+    "tang",
+    "suppression"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

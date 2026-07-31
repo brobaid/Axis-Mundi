@@ -1,0 +1,32 @@
+{
+  "id": "act-of-supremacy-1534",
+  "title": "Act of Supremacy",
+  "year_start": 1534,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/anglican"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "british-isles"
+  ],
+  "summary": "Parliament declared the English crown supreme head of the Church of England, severing papal jurisdiction.",
+  "tags": [
+    "needs-identification",
+    "england",
+    "supremacy"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "jainism",
+  "name": "Jainism",
+  "parent": null,
+  "tradition": "jainism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "jainism",
+  "depth": 1,
+  "symbol": "jain-hand-with-wheel",
+  "summary": "A tradition of the Indian subcontinent centred on ahimsa and the teaching of the tirthankaras, organised into the Digambara and Svetambara branches.",
+  "contested": false,
+  "currents": [],
+  "order": 7,
+  "founded": {}
+}

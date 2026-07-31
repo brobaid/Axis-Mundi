@@ -1,0 +1,16 @@
+{
+  "id": "shrine-shinto",
+  "name": "Shrine Shinto",
+  "parent": "shinto",
+  "tradition": "shinto",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "shinto/shrine-shinto",
+  "depth": 2,
+  "summary": "The mainstream centred on the network of public shrines and their rites.",
+  "contested": false,
+  "currents": [],
+  "order": 0,
+  "founded": {}
+}

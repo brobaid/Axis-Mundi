@@ -1,0 +1,16 @@
+{
+  "id": "vajrayana",
+  "name": "Vajrayana",
+  "parent": "buddhism",
+  "tradition": "buddhism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "buddhism/vajrayana",
+  "depth": 2,
+  "summary": "The tantric vehicle, comprising the Nyingma, Kagyu, Sakya and Gelug schools.",
+  "contested": false,
+  "currents": [],
+  "order": 2,
+  "founded": {}
+}

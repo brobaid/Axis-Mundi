@@ -1,0 +1,32 @@
+{
+  "id": "ninety-five-theses-1517",
+  "title": "Ninety-five Theses",
+  "year_start": 1517,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/lutheran"
+  ],
+  "type": "reform",
+  "importance": 5,
+  "region": [
+    "german-lands"
+  ],
+  "summary": "Martin Luther published theses against the sale of indulgences, the conventional starting point of the Reformation.",
+  "tags": [
+    "reformation",
+    "indulgences",
+    "wittenberg"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

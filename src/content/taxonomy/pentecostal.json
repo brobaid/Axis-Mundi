@@ -1,0 +1,16 @@
+{
+  "id": "pentecostal",
+  "name": "Pentecostal",
+  "parent": "protestant",
+  "tradition": "christianity",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "christianity/protestant/pentecostal",
+  "depth": 3,
+  "summary": "Churches emphasising baptism in the Holy Spirit and the continuing exercise of spiritual gifts.",
+  "contested": false,
+  "currents": [],
+  "order": 6,
+  "founded": {}
+}

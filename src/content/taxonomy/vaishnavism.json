@@ -1,0 +1,16 @@
+{
+  "id": "vaishnavism",
+  "name": "Vaishnavism",
+  "parent": "hinduism",
+  "tradition": "hinduism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "hinduism/vaishnavism",
+  "depth": 2,
+  "summary": "The stream centred on Vishnu and his avataras.",
+  "contested": false,
+  "currents": [],
+  "order": 0,
+  "founded": {}
+}

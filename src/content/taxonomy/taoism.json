@@ -1,0 +1,16 @@
+{
+  "id": "taoism",
+  "name": "Taoism",
+  "parent": "chinese",
+  "tradition": "chinese",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "chinese/taoism",
+  "depth": 2,
+  "summary": "A tradition centred on the Dao, comprising the Quanzhen and Zhengyi schools.",
+  "contested": false,
+  "currents": [],
+  "order": 1,
+  "founded": {}
+}

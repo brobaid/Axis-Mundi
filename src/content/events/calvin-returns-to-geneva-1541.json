@@ -1,0 +1,32 @@
+{
+  "id": "calvin-returns-to-geneva-1541",
+  "title": "Calvin returns to Geneva",
+  "year_start": 1541,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/reformed"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "swiss-confederation"
+  ],
+  "summary": "Calvin returned to Geneva and instituted the ecclesiastical ordinances that shaped the Reformed city.",
+  "tags": [
+    "needs-identification",
+    "geneva",
+    "calvin"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

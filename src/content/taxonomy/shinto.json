@@ -1,0 +1,17 @@
+{
+  "id": "shinto",
+  "name": "Shinto",
+  "parent": null,
+  "tradition": "shinto",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "shinto",
+  "depth": 1,
+  "symbol": "torii",
+  "summary": "The kami traditions of the Japanese archipelago, organised at launch into Shrine, Sect and Folk Shinto.",
+  "contested": false,
+  "currents": [],
+  "order": 8,
+  "founded": {}
+}

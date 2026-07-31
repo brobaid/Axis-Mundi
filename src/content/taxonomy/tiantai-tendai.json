@@ -1,0 +1,16 @@
+{
+  "id": "tiantai-tendai",
+  "name": "Tiantai and Tendai",
+  "parent": "mahayana",
+  "tradition": "buddhism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "buddhism/mahayana/tiantai-tendai",
+  "depth": 3,
+  "summary": "Schools organised around a graded classification of the Buddhist teachings.",
+  "contested": false,
+  "currents": [],
+  "order": 3,
+  "founded": {}
+}

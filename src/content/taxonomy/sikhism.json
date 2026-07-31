@@ -1,0 +1,17 @@
+{
+  "id": "sikhism",
+  "name": "Sikhism",
+  "parent": null,
+  "tradition": "sikhism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "sikhism",
+  "depth": 1,
+  "symbol": "khanda",
+  "summary": "A tradition originating in fifteenth-century Punjab with Guru Nanak and centred on the Guru Granth Sahib.",
+  "contested": false,
+  "currents": [],
+  "order": 5,
+  "founded": {}
+}

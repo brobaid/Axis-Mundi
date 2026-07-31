@@ -1,0 +1,32 @@
+{
+  "id": "buddhism-established-in-tibet-800",
+  "title": "Buddhism established in Tibet",
+  "year_start": 800,
+  "precision": "century",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/vajrayana"
+  ],
+  "type": "expansion",
+  "importance": 3,
+  "region": [
+    "tibetan-plateau"
+  ],
+  "summary": "Buddhism was established under imperial patronage in Tibet, beginning the first diffusion.",
+  "tags": [
+    "needs-identification",
+    "tibet",
+    "transmission"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

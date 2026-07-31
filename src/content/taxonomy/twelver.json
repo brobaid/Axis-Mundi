@@ -1,0 +1,16 @@
+{
+  "id": "twelver",
+  "name": "Twelver",
+  "parent": "shia",
+  "tradition": "islam",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "islam/shia/twelver",
+  "depth": 3,
+  "summary": "The largest Shia community, recognising a line of twelve imams.",
+  "contested": false,
+  "currents": [],
+  "order": 0,
+  "founded": {}
+}

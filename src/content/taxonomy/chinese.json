@@ -1,0 +1,18 @@
+{
+  "id": "chinese",
+  "name": "Chinese traditions",
+  "parent": null,
+  "tradition": "chinese",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "chinese",
+  "depth": 1,
+  "symbol": "taijitu",
+  "summary": "A cluster comprising Confucianism, Taoism and Chinese folk religion, whose boundaries in practice are porous.",
+  "contested": true,
+  "contested_note": "The spec flags the classification of this cluster, and of Confucianism in particular, as a religion rather than a philosophy or a civic tradition. Both positions require citation before this note ships.",
+  "currents": [],
+  "order": 6,
+  "founded": {}
+}

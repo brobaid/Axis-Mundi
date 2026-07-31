@@ -1,0 +1,16 @@
+{
+  "id": "mahayana",
+  "name": "Mahayana",
+  "parent": "buddhism",
+  "tradition": "buddhism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "buddhism/mahayana",
+  "depth": 2,
+  "summary": "The vehicle centred on the bodhisattva ideal, comprising the Chan/Zen, Pure Land, Nichiren and Tiantai/Tendai schools.",
+  "contested": false,
+  "currents": [],
+  "order": 1,
+  "founded": {}
+}

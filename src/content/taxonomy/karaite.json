@@ -1,0 +1,16 @@
+{
+  "id": "karaite",
+  "name": "Karaite",
+  "parent": "judaism",
+  "tradition": "judaism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "judaism/karaite",
+  "depth": 2,
+  "summary": "A branch recognising the written Torah while not accepting the authority of the rabbinic oral law.",
+  "contested": false,
+  "currents": [],
+  "order": 1,
+  "founded": {}
+}

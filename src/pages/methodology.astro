@@ -1,0 +1,211 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { TRADITIONS } from '../lib/traditions';
+
+/**
+ * Methodology page.
+ *
+ * Design language §3.2 rule 4 requires the site to state that the tradition-hue
+ * associations are conventional rather than official. Phase 0 §9 requires the
+ * sourcing and neutrality rules to be stated. Both live here.
+ */
+
+const tiers = [
+  { tier: 'T1', label: 'Academic', detail: 'Oxford and Cambridge handbooks, Brill’s Encyclopaedia of Islam, Encyclopaedia Judaica, peer-reviewed journals.' },
+  { tier: 'T2', label: 'Demographic', detail: 'Pew Research, national censuses. Adherent counts are Pew unless explicitly noted otherwise.' },
+  { tier: 'T3', label: 'General reference', detail: 'Britannica, BBC archive.' },
+  { tier: 'T4', label: 'Tradition-internal', detail: 'Catechisms and official denominational statements. Required for self-description of belief, and always labelled as internal.' },
+];
+---
+
+<BaseLayout
+  title="Methodology"
+  description="How Axis Mundi classifies traditions, sources its claims, handles contested material, and chooses its colours."
+>
+  <article class="shell page">
+    <p class="eyebrow">Methodology</p>
+    <h1>How this reference is built</h1>
+
+    <section class="section measure">
+      <h2>Voice</h2>
+      <p>
+        Supernatural claims are attributed uniformly across every tradition: “according to
+        [tradition],” “in [tradition’s] account.” The framing never shifts by tradition. Each
+        tradition’s own terminology comes first, with translation alongside — <i>salat</i> before
+        “prayer,” <i>puja</i> before “worship.” Practices and beliefs are described, never ranked,
+        praised or criticised.
+      </p>
+    </section>
+
+    <section class="section measure">
+      <h2>Classification</h2>
+      <p>
+        Tree structure follows academic consensus, using the conventions of the Oxford and
+        Cambridge handbooks. Demographic categories follow Pew. Where membership in a tradition
+        is contested, a group is placed according to its own self-identification, and the
+        contestation is shown rather than resolved: a badge, a note, and citations for both
+        positions.
+      </p>
+      <p>
+        Movements that cut across branches — Sufism, Kabbalah, bhakti, charismatic renewal — are
+        modelled as <b>currents</b>: tags that span nodes. They are never rendered as branches of
+        their own, because that would misrepresent how they actually sit within a tradition.
+      </p>
+      <p>
+        Drill depth stops at three levels: tradition, family, denomination. Finer granularity is
+        prose inside a deep dive, not another lane.
+      </p>
+    </section>
+
+    <section class="section measure">
+      <h2>Sources</h2>
+      <p>
+        Every event of importance 3 and above cites at least one academic, demographic or
+        general-reference source. Every belief-matrix cell cites an academic source or a labelled
+        tradition-internal one. Every contested item cites both positions. Aggregator religion
+        websites are never cited. Dates follow academic consensus, and uncertainty is rendered
+        as “c.” rather than silently rounded away.
+      </p>
+      <div class="table-scroll">
+        <table class="tiers">
+          <thead>
+            <tr><th scope="col">Tier</th><th scope="col">Kind</th><th scope="col">What counts</th></tr>
+          </thead>
+          <tbody>
+            {
+              tiers.map((t) => (
+                <tr>
+                  <th scope="row" class="mono">{t.tier}</th>
+                  <td>{t.label}</td>
+                  <td>{t.detail}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Content that has not yet passed a source check is marked as such and held out of the
+        production build. It is not published unsourced.
+      </p>
+    </section>
+
+    <section class="section measure">
+      <h2>Contested material</h2>
+      <p>
+        Contested status is a first-class part of every schema — taxonomy nodes, events, matrix
+        cells, influence edges, map polygons. It always renders: a badge in the interface, a
+        dashed line for influence threads, diagonal hatching on the map and in matrix cells, and
+        a note citing both positions. Silence is never the treatment for a dispute. A dispute is
+        also not an error, so it is never styled as a warning.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="measure">Colour</h2>
+      <p class="measure">
+        Each tradition carries an identity hue, drawn from a strong traditional or liturgical
+        association where one exists and assigned pragmatically where none does.
+        <b>These associations are conventional, not official.</b> No tradition has authorised
+        them, and they are not claims about doctrine. They exist so that lanes, chips and map
+        fills stay legible and consistent. Colour never carries meaning on its own: every
+        coloured element is paired with a text label.
+      </p>
+      <div class="table-scroll">
+        <table class="tiers">
+          <thead>
+            <tr>
+              <th scope="col">Tradition</th><th scope="col">Hue</th><th scope="col">Association</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              TRADITIONS.map((t) => (
+                <tr>
+                  <th scope="row">
+                    <span class="swatch" style={`--tradition-hue: var(${t.hueToken})`} />
+                    {t.name}
+                  </th>
+                  <td>{t.hue}</td>
+                  <td>{t.rationale}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section measure">
+      <h2>Accessibility</h2>
+      <p>
+        The site meets WCAG AA contrast in both Gallery and Night Gallery modes, for text and
+        interface alike; the token set is audited automatically on every build. Colour is never
+        the sole carrier of information. Focus is always visible. Touch targets are at least
+        44 pixels. Reduced-motion preferences collapse every transition to a cut.
+      </p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-block: var(--space-12) var(--space-8);
+  }
+
+  .page h1 {
+    margin-block: var(--space-2) var(--space-8);
+  }
+
+  .section {
+    margin-bottom: var(--space-12);
+  }
+
+  .section h2 {
+    margin-bottom: var(--space-3);
+  }
+
+  .section p {
+    margin-bottom: var(--space-4);
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    margin-block: var(--space-6);
+  }
+
+  .tiers {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--size-small);
+    min-width: 34rem;
+  }
+
+  .tiers th,
+  .tiers td {
+    text-align: left;
+    vertical-align: top;
+    padding: var(--space-3) var(--space-4) var(--space-3) 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .tiers thead th {
+    font-family: var(--font-ui);
+    font-size: var(--size-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .tiers tbody th {
+    font-family: var(--font-ui);
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  .tiers tbody th .swatch {
+    margin-right: var(--space-2);
+  }
+</style>

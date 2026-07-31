@@ -1,0 +1,32 @@
+{
+  "id": "second-temple-destroyed-70",
+  "title": "Second Temple destroyed",
+  "year_start": 70,
+  "precision": "exact",
+  "traditions": [
+    "judaism"
+  ],
+  "branch_path": [
+    "judaism"
+  ],
+  "type": "political",
+  "importance": 5,
+  "region": [
+    "levant"
+  ],
+  "summary": "Roman forces under Titus destroyed the Second Temple in Jerusalem, ending the sacrificial cult and reshaping Jewish practice around study and prayer.",
+  "tags": [
+    "jerusalem",
+    "temple",
+    "roman-empire"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

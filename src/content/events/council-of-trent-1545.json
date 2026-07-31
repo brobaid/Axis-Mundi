@@ -1,0 +1,32 @@
+{
+  "id": "council-of-trent-1545",
+  "title": "Council of Trent",
+  "year_start": 1545,
+  "year_end": 1563,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/catholic"
+  ],
+  "type": "council",
+  "importance": 4,
+  "region": [
+    "italian-peninsula"
+  ],
+  "summary": "The Catholic reforming council that responded to the Reformation, sitting in three periods between 1545 and 1563.",
+  "tags": [
+    "counter-reformation",
+    "council"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

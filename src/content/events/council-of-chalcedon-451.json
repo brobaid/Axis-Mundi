@@ -1,0 +1,32 @@
+{
+  "id": "council-of-chalcedon-451",
+  "title": "Council of Chalcedon",
+  "year_start": 451,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "council",
+  "importance": 4,
+  "region": [
+    "anatolia"
+  ],
+  "summary": "The fourth ecumenical council defined the two natures of Christ; the churches that did not receive it form the Oriental Orthodox communion.",
+  "tags": [
+    "needs-identification",
+    "christology",
+    "schism"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

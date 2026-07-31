@@ -1,0 +1,345 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BrassMeridian from '../components/BrassMeridian.astro';
+import { TRADITIONS } from '../lib/traditions';
+import { getPublishable, includesUnsourced, tally } from '../lib/content';
+import { displayDate } from '../lib/display-date';
+
+/**
+ * M0 foundation page.
+ *
+ * The timeline is M1. What this page does is show that the foundation is real:
+ * the token system in both modes, the Brass Meridian as a shared component, the
+ * launch ten with their hues, and an honest readout of the content pipeline
+ * (spec §11) including how much is still awaiting a source check.
+ */
+
+const [events, taxonomy] = await Promise.all([
+  getPublishable('events'),
+  getPublishable('taxonomy'),
+]);
+
+const [eventTally, taxonomyTally, sourceTally, regionTally] = await Promise.all([
+  tally('events'),
+  tally('taxonomy'),
+  tally('sources'),
+  tally('regions'),
+]);
+
+const sortedEvents = [...events].sort((a, b) => a.data.year_start - b.data.year_start);
+
+const collections = [
+  { name: 'Events', ...eventTally },
+  { name: 'Taxonomy nodes', ...taxonomyTally },
+  { name: 'Sources', ...sourceTally },
+  { name: 'Regions', ...regionTally },
+];
+---
+
+<BaseLayout
+  title="Axis Mundi"
+  description="An interactive comparative reference for ten religious traditions: timeline, historical map, deep dives and belief matrix."
+>
+  <section class="shell hero">
+    <p class="eyebrow">Milestone 0 — foundation</p>
+    <h1>Five thousand years of belief, on one line.</h1>
+    <p class="lede measure">
+      Axis Mundi is a comparative reference for ten religious traditions: an event-driven
+      timeline, an animated historical map, structured deep dives and a belief matrix. It
+      describes what traditions hold and practise. It does not evaluate them.
+    </p>
+  </section>
+
+  <hr class="shell rule" />
+
+  <!-- The launch ten ---------------------------------------------------- -->
+  <section class="shell block">
+    <h2>The launch ten</h2>
+    <p class="measure small">
+      Identity hues carry lanes, chips, map fills and chart series. Colour never carries
+      meaning alone — every hue here sits beside its name, and always will.
+    </p>
+
+    <ul class="lanes" role="list">
+      {
+        TRADITIONS.map((t) => (
+          <li class="lane">
+            <span class="swatch" style={`--tradition-hue: var(${t.hueToken})`} />
+            <span class="lane__name">{t.name}</span>
+            <span class="lane__hue caption">{t.hue}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <hr class="shell rule" />
+
+  <!-- The Brass Meridian ------------------------------------------------- -->
+  <section class="shell block">
+    <h2>The Brass Meridian</h2>
+    <p class="measure small">
+      One thin brass rule, one colour, one weight, one easing. It is the playhead on the
+      timeline, the handle in the map's era scrubber, and the margin marker on a deep dive —
+      the visible form of “one time cursor, many lenses.” It exists once in the codebase.
+    </p>
+
+    <div class="specimen">
+      <div class="specimen__track">
+        <BrassMeridian at={38} label="Time cursor specimen" inset="0" />
+      </div>
+      <dl class="exhibit-label specimen__label">
+        <dt>Weight</dt>
+        <dd>1.5px</dd>
+        <dt>Motion</dt>
+        <dd>400ms</dd>
+        <dt>Reduced motion</dt>
+        <dd>snaps</dd>
+      </dl>
+    </div>
+  </section>
+
+  <hr class="shell rule" />
+
+  <!-- Content pipeline --------------------------------------------------- -->
+  <section class="shell block">
+    <h2>Content pipeline</h2>
+    <p class="measure small">
+      Every record is a JSON file validated by a Zod schema mirroring the Phase 0 spec.
+      Records that have not yet been source-checked are marked and held out of the
+      production build rather than published unsourced.
+    </p>
+
+    <div class="table-scroll">
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th scope="col">Collection</th>
+            <th scope="col">Seeded</th>
+            <th scope="col">Checked</th>
+            <th scope="col">Pending</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            collections.map((c) => (
+              <tr>
+                <th scope="row">{c.name}</th>
+                <td class="mono">{c.total}</td>
+                <td class="mono">{c.sourced}</td>
+                <td class="mono">{c.todo > 0 ? c.todo : '—'}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <p class="caption build-state">
+      {
+        includesUnsourced
+          ? 'This build includes records awaiting a source check.'
+          : 'This build shows source-checked records only.'
+      }
+    </p>
+  </section>
+
+  <hr class="shell rule" />
+
+  <!-- Events in the build ------------------------------------------------ -->
+  <section class="shell block">
+    <h2>Events in this build</h2>
+    {
+      sortedEvents.length === 0 ? (
+        <p class="measure small">
+          No events have completed a source check yet. The timeline engine lands in M1.
+        </p>
+      ) : (
+        <ol class="events" role="list">
+          {sortedEvents.map((event) => {
+            const meta = TRADITIONS.find((t) => t.id === event.data.traditions[0]);
+            return (
+              <li class="event">
+                <span
+                  class="swatch"
+                  style={`--tradition-hue: var(${meta?.hueToken ?? '--ink-soft'})`}
+                />
+                <span class="event__date mono">{displayDate(event.data)}</span>
+                <span class="event__title">{event.data.title}</span>
+                <span class="event__rank caption" title="Importance rank">
+                  r{event.data.importance}
+                </span>
+                {event.data.contested && <span class="contested-badge">Contested</span>}
+              </li>
+            );
+          })}
+        </ol>
+      )
+    }
+    <p class="caption">
+      Showing {sortedEvents.length} of {eventTally.total} seeded events · {taxonomy.length} of{' '}
+      {taxonomyTally.total} taxonomy nodes.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-block: var(--space-12) var(--space-8);
+  }
+
+  .hero h1 {
+    margin-block: var(--space-2) var(--space-4);
+    max-width: 20ch;
+  }
+
+  .lede {
+    font-size: var(--size-h3);
+    line-height: var(--leading-h3);
+    color: var(--ink-soft);
+  }
+
+  .block {
+    padding-block: var(--space-8);
+  }
+
+  .block h2 {
+    margin-bottom: var(--space-2);
+  }
+
+  .block > p {
+    color: var(--ink-soft);
+  }
+
+  /* --- lanes ------------------------------------------------------------- */
+
+  .lanes {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-6);
+    display: grid;
+    gap: 0;
+  }
+
+  .lane {
+    display: grid;
+    grid-template-columns: 10px 1fr auto;
+    align-items: center;
+    gap: var(--space-3);
+    padding-block: var(--space-3);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .lane__name {
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+  }
+
+  /* --- meridian specimen -------------------------------------------------- */
+
+  .specimen {
+    margin-top: var(--space-6);
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .specimen__track {
+    position: relative;
+    height: 96px;
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--hairline);
+    border-radius: var(--radius-s);
+  }
+
+  .specimen__label {
+    max-width: 22rem;
+  }
+
+  @media (min-width: 48rem) {
+    .specimen {
+      grid-template-columns: 1fr 22rem;
+      align-items: start;
+    }
+  }
+
+  /* --- ledger ------------------------------------------------------------- */
+
+  .table-scroll {
+    overflow-x: auto;
+    margin-top: var(--space-6);
+  }
+
+  .ledger {
+    width: 100%;
+    max-width: 40rem;
+    border-collapse: collapse;
+    font-size: var(--size-small);
+  }
+
+  .ledger th,
+  .ledger td {
+    text-align: left;
+    padding: var(--space-3) var(--space-3) var(--space-3) 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    white-space: nowrap;
+  }
+
+  /* Numeric columns stay narrow so the label column keeps the space. */
+  .ledger td {
+    width: 5.5rem;
+  }
+
+  .ledger thead th {
+    font-family: var(--font-ui);
+    font-size: var(--size-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+
+  .ledger tbody th {
+    font-family: var(--font-ui);
+    font-weight: 400;
+  }
+
+  .build-state {
+    margin-top: var(--space-3);
+  }
+
+  /* --- events ------------------------------------------------------------- */
+
+  .events {
+    list-style: none;
+    padding: 0;
+    margin-block: var(--space-6);
+  }
+
+  .event {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2) var(--space-3);
+    padding-block: var(--space-3);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .event .swatch {
+    align-self: center;
+  }
+
+  .event__date {
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
+    min-width: 9ch;
+  }
+
+  .event__title {
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+  }
+
+  .event__rank {
+    margin-left: auto;
+  }
+</style>

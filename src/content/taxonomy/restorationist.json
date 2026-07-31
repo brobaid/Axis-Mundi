@@ -1,0 +1,16 @@
+{
+  "id": "restorationist",
+  "name": "Restorationist",
+  "parent": "christianity",
+  "tradition": "christianity",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "christianity/restorationist",
+  "depth": 2,
+  "summary": "Movements holding that they restore an original Christianity understood to have been lost, whose placement within Christianity is contested.",
+  "contested": false,
+  "currents": [],
+  "order": 4,
+  "founded": {}
+}

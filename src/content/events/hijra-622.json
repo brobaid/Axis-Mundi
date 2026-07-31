@@ -1,0 +1,32 @@
+{
+  "id": "hijra-622",
+  "title": "Hijra",
+  "year_start": 622,
+  "precision": "exact",
+  "traditions": [
+    "islam"
+  ],
+  "branch_path": [
+    "islam"
+  ],
+  "type": "founding",
+  "importance": 5,
+  "region": [
+    "arabia"
+  ],
+  "summary": "The migration of Muhammad and the early community from Mecca to Medina, which marks year one of the Islamic calendar.",
+  "tags": [
+    "mecca",
+    "medina",
+    "calendar"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

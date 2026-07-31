@@ -1,0 +1,16 @@
+{
+  "id": "orthodox-judaism",
+  "name": "Orthodox",
+  "parent": "rabbinic",
+  "tradition": "judaism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "judaism/rabbinic/orthodox-judaism",
+  "depth": 3,
+  "summary": "Movements holding the binding authority of halakha as traditionally transmitted; Haredi and Modern Orthodox are treated as prose rather than lanes.",
+  "contested": false,
+  "currents": [],
+  "order": 0,
+  "founded": {}
+}

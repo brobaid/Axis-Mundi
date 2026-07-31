@@ -1,0 +1,16 @@
+{
+  "id": "reform",
+  "name": "Reform",
+  "parent": "rabbinic",
+  "tradition": "judaism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "judaism/rabbinic/reform",
+  "depth": 3,
+  "summary": "A movement emphasising individual autonomy in the observance of tradition.",
+  "contested": false,
+  "currents": [],
+  "order": 2,
+  "founded": {}
+}

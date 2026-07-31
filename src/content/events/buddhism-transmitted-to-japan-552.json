@@ -1,0 +1,32 @@
+{
+  "id": "buddhism-transmitted-to-japan-552",
+  "title": "Buddhism transmitted to Japan",
+  "year_start": 552,
+  "precision": "year",
+  "traditions": [
+    "buddhism"
+  ],
+  "branch_path": [
+    "buddhism/mahayana"
+  ],
+  "type": "expansion",
+  "importance": 4,
+  "region": [
+    "japanese-archipelago"
+  ],
+  "summary": "Buddhist images and texts reached the Japanese court from the Korean kingdom of Baekje, in the traditional dating.",
+  "tags": [
+    "needs-identification",
+    "japan",
+    "transmission"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

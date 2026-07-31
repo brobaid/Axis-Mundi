@@ -1,0 +1,32 @@
+{
+  "id": "augsburg-confession-1530",
+  "title": "Augsburg Confession",
+  "year_start": 1530,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/lutheran"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "german-lands"
+  ],
+  "summary": "The primary Lutheran confession of faith was presented to the imperial diet at Augsburg.",
+  "tags": [
+    "needs-identification",
+    "confession",
+    "reformation"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

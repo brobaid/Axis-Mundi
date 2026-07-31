@@ -1,0 +1,16 @@
+{
+  "id": "gelug",
+  "name": "Gelug",
+  "parent": "vajrayana",
+  "tradition": "buddhism",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "buddhism/vajrayana/gelug",
+  "depth": 3,
+  "summary": "A Tibetan school founded in the reform movement of Tsongkhapa.",
+  "contested": false,
+  "currents": [],
+  "order": 3,
+  "founded": {}
+}

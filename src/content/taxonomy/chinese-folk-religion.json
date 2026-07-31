@@ -1,0 +1,16 @@
+{
+  "id": "chinese-folk-religion",
+  "name": "Chinese folk religion",
+  "parent": "chinese",
+  "tradition": "chinese",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "chinese/chinese-folk-religion",
+  "depth": 2,
+  "summary": "Local practice centred on deities, ancestors and temple communities, overlapping both Taoism and Confucian ritual.",
+  "contested": false,
+  "currents": [],
+  "order": 2,
+  "founded": {}
+}

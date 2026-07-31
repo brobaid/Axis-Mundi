@@ -1,0 +1,16 @@
+{
+  "id": "anglican",
+  "name": "Anglican",
+  "parent": "protestant",
+  "tradition": "christianity",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "christianity/protestant/anglican",
+  "depth": 3,
+  "summary": "Churches descending from the Church of England and united by the Book of Common Prayer tradition.",
+  "contested": false,
+  "currents": [],
+  "order": 2,
+  "founded": {}
+}

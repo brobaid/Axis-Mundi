@@ -1,0 +1,32 @@
+{
+  "id": "king-james-bible-1611",
+  "title": "King James Bible",
+  "year_start": 1611,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity/protestant/anglican"
+  ],
+  "type": "text",
+  "importance": 4,
+  "region": [
+    "british-isles"
+  ],
+  "summary": "The Authorised Version was published, becoming the dominant English Bible for three centuries.",
+  "tags": [
+    "needs-identification",
+    "bible",
+    "translation"
+  ],
+  "sources": [],
+  "contested": false,
+  "media": [],
+  "links": {
+    "events": [],
+    "figures": []
+  },
+  "influence": [],
+  "sourcing": "todo"
+}

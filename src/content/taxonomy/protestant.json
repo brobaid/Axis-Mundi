@@ -1,0 +1,16 @@
+{
+  "id": "protestant",
+  "name": "Protestant",
+  "parent": "christianity",
+  "tradition": "christianity",
+  "status": "living",
+  "sourcing": "todo",
+  "sources": [],
+  "path": "christianity/protestant",
+  "depth": 2,
+  "summary": "The family originating in the sixteenth-century reform movements, comprising the Lutheran, Reformed, Anglican, Anabaptist, Baptist, Methodist, Pentecostal and evangelical non-denominational branches.",
+  "contested": false,
+  "currents": [],
+  "order": 3,
+  "founded": {}
+}
