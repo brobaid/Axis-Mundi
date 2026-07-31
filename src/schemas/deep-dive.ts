@@ -65,9 +65,12 @@ export const statBox = z.object({
     })
     .superRefine(requireContestedNote)
     .optional(),
-  founded: z.string().min(1),
+  /* Founding and primary texts are NOT fields here. Spec §2: the dive is
+     extracted from structured records, never rewritten. The founding lives on
+     the tradition's taxonomy node and the principal text is the `primary` record
+     in the texts collection, both of which carry their own sources; a second
+     authored copy here could only ever drift from them, and did. */
   origin_region: slug.optional(),
-  primary_texts: z.array(z.string().min(1)).default([]),
   branches_summary: z.string().optional(),
   calendar: z.string().optional(),
   symbol: slug.optional(),

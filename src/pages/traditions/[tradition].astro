@@ -31,7 +31,7 @@ export const getStaticPaths = (async () => {
 const { dive } = Astro.props;
 const meta = traditionMeta(dive.tradition);
 
-const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, sources, events] = await Promise.all([
+const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, sources, events, texts] = await Promise.all([
   getPublishable('glossary'),
   /* The branch tree renders names and contested flags — spec §2.3 structure. */
   getStructural('taxonomy'),
@@ -41,7 +41,16 @@ const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, sources, ev
   getPublishable('festivals'),
   getPublishable('sources'),
   getPublishable('events'),
+  getPublishable('texts'),
 ]);
+
+/* §5.1 stat box: founding and principal text are extracted, never authored
+   here. The founding lives on the tradition's taxonomy node — structural, like
+   adherents, because it is sourced in its own right — and the principal text is
+   the `primary` record in the texts collection. */
+const founded = taxonomy.find((n) => n.data.id === dive.tradition && n.data.depth === 1)?.data
+  .founded;
+const primaryText = texts.find((t) => t.data.tradition === dive.tradition && t.data.primary);
 
 const available = new Set(glossary.map((g) => g.data.id));
 const prose = (body: string): string => renderProse(body, { available });
@@ -159,13 +168,25 @@ const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.
           </>
         )
       }
-      <dt>Founded</dt>
-      <dd>{dive.stat_box.founded}</dd>
       {
-        dive.stat_box.primary_texts.length > 0 && (
+        founded?.display && (
           <>
-            <dt>Primary texts</dt>
-            <dd>{dive.stat_box.primary_texts.join('; ')}</dd>
+            <dt>Founded</dt>
+            <dd>
+              {founded.display}
+              {founded.contested && <span class="contested-badge">Contested</span>}
+            </dd>
+          </>
+        )
+      }
+      {
+        primaryText && (
+          <>
+            <dt>Primary text</dt>
+            <dd>
+              {primaryText.data.title}
+              {primaryText.data.contested && <span class="contested-badge">Contested</span>}
+            </dd>
           </>
         )
       }

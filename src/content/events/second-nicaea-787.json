@@ -1,0 +1,27 @@
+{
+  "id": "second-nicaea-787",
+  "title": "Second Council of Nicaea",
+  "year_start": 787,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "council",
+  "importance": 3,
+  "region": [
+    "anatolia"
+  ],
+  "summary": "The seventh ecumenical council restores the veneration of icons.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

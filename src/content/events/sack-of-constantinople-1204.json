@@ -1,0 +1,27 @@
+{
+  "id": "sack-of-constantinople-1204",
+  "title": "Fourth Crusade sacks Constantinople",
+  "year_start": 1204,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "political",
+  "importance": 4,
+  "region": [
+    "anatolia"
+  ],
+  "summary": "Crusaders sack the Eastern capital, hardening the East-West schism into lasting estrangement.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

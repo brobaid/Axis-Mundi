@@ -1,0 +1,28 @@
+{
+  "id": "augustine-of-hippo-354",
+  "title": "Augustine of Hippo",
+  "year_start": 354,
+  "year_end": 430,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "figure",
+  "importance": 4,
+  "region": [
+    "maghreb"
+  ],
+  "summary": "Bishop of Hippo whose Confessions and City of God set the trajectory of Western Christian theology.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

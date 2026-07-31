@@ -1,0 +1,27 @@
+{
+  "id": "hagia-sophia-537",
+  "title": "Hagia Sophia consecrated",
+  "year_start": 537,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "construction",
+  "importance": 3,
+  "region": [
+    "anatolia"
+  ],
+  "summary": "Justinian's great church at Constantinople, the architectural center of Eastern Christianity for nine centuries.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "diocletianic-persecution-303",
+  "title": "Diocletianic persecution begins",
+  "year_start": 303,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "persecution",
+  "importance": 3,
+  "region": [
+    "anatolia"
+  ],
+  "summary": "The empire's last and most severe persecution of Christians opens under Diocletian, ending with toleration a decade later.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

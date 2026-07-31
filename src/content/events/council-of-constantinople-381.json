@@ -1,0 +1,27 @@
+{
+  "id": "council-of-constantinople-381",
+  "title": "First Council of Constantinople",
+  "year_start": 381,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "council",
+  "importance": 4,
+  "region": [
+    "anatolia"
+  ],
+  "summary": "The second ecumenical council completes the Nicene Creed in the form still recited across most of Christianity.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

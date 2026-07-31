@@ -1,0 +1,27 @@
+{
+  "id": "council-of-jerusalem-49",
+  "title": "Council of Jerusalem",
+  "year_start": 49,
+  "precision": "year",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "council",
+  "importance": 4,
+  "region": [
+    "levant"
+  ],
+  "summary": "The apostolic council rules that gentile converts need not keep the full Mosaic law, opening Christianity beyond a Jewish movement.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "council-of-ephesus-431",
+  "title": "Council of Ephesus",
+  "year_start": 431,
+  "precision": "exact",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "council",
+  "importance": 3,
+  "region": [
+    "anatolia"
+  ],
+  "summary": "The council condemns Nestorius; the Church of the East continues separately beyond the empire's border.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

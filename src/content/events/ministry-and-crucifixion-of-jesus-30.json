@@ -1,0 +1,28 @@
+{
+  "id": "ministry-and-crucifixion-of-jesus-30",
+  "title": "Ministry and crucifixion of Jesus",
+  "year_start": 30,
+  "year_end": 33,
+  "precision": "decade",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "founding",
+  "importance": 5,
+  "region": [
+    "levant"
+  ],
+  "summary": "According to Christian tradition, the public ministry of Jesus of Nazareth ends in his crucifixion under Pontius Pilate; the resurrection faith of his followers becomes the founding conviction of Christianity.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

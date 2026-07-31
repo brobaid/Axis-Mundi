@@ -1,0 +1,27 @@
+{
+  "id": "iconoclasm-begins-726",
+  "title": "Byzantine iconoclasm begins",
+  "year_start": 726,
+  "precision": "year",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "reform",
+  "importance": 3,
+  "region": [
+    "anatolia"
+  ],
+  "summary": "Imperial campaigns against religious images divide Eastern Christianity for over a century.",
+  "sources": [
+    "macculloch-christianity-2009",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}

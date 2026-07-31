@@ -1,0 +1,28 @@
+{
+  "id": "jerome-vulgate-382",
+  "title": "Jerome begins the Vulgate",
+  "year_start": 382,
+  "year_end": 405,
+  "precision": "year",
+  "traditions": [
+    "christianity"
+  ],
+  "branch_path": [
+    "christianity"
+  ],
+  "type": "text",
+  "importance": 3,
+  "region": [
+    "levant"
+  ],
+  "summary": "Jerome's Latin translation of the Bible becomes the standard scripture of Western Christianity for a millennium.",
+  "sources": [
+    "oxford-early-christian-studies-2008",
+    "britannica"
+  ],
+  "contested": false,
+  "tags": [
+    "from-slate-christianity"
+  ],
+  "sourcing": "sourced"
+}
