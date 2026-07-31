@@ -44,7 +44,6 @@ const snapshots: SnapshotView[] = entries
 const available = new Set(snapshots.map((s) => s.era));
 const rail = detents(available);
 const activeEra = snapshots[0]?.era ?? 1;
-const anyFixture = snapshots.some((s) => s.fixture);
 
 const canvasHtml =
   snapshots.length === 0
@@ -114,13 +113,11 @@ const bootstrap = {
         </p>
       ) : (
         <section class="map" data-map aria-label="Historical world map">
-          {anyFixture && (
-            <p class="map-fixture-note">
-              <span class="contested-badge">Fixture</span>
-              These polygons are development scaffolding — synthetic rectangles, not historical
-              boundaries. They are excluded from production builds and can never be promoted.
-            </p>
-          )}
+          <p class="map-fixture-note" data-map-awaiting hidden>
+            <span class="contested-badge">Not yet researched</span>
+            This era has no snapshot. Its boundaries arrive as a sourced research memo from the
+            owner; until then the plate stays empty rather than showing an invented one.
+          </p>
 
           <div class="map-frame" data-map-canvas set:html={canvasHtml} />
 
@@ -137,8 +134,7 @@ const bootstrap = {
                   role="radio"
                   aria-checked={d.era === activeEra}
                   tabindex={d.era === activeEra ? 0 : -1}
-                  disabled={!d.available}
-                  title={d.available ? d.label : `${d.label} — no snapshot in this build`}
+                  title={d.available ? d.label : `${d.label} — awaiting the owner's research memo`}
                 >
                   <span class="scrub__tick" aria-hidden="true" />
                   <span class="scrub__label">{d.label}</span>
@@ -191,9 +187,10 @@ const bootstrap = {
 
     <p class="caption build-note">
       {
-        includesUnsourced
-          ? 'This build includes fixture and unsourced records.'
-          : 'Fixture and unsourced records are held out of this build.'
+        `${snapshots.length} of ${rail.length} era snapshots delivered. ` +
+          (includesUnsourced
+            ? 'This build includes records awaiting a source check.'
+            : 'Records awaiting a source check are held out of this build.')
       }
     </p>
   </div>

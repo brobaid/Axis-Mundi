@@ -59,8 +59,11 @@ if (root !== null) {
   const readout = root.querySelector<HTMLElement>('[data-map-readout]');
 
   if (canvas !== null && rail !== null) {
-    const withData = data.detents.filter((d) => d.available);
-    let activeEra = withData[0]?.era ?? data.detents[0]?.era ?? 1;
+    /* Every detent is reachable: an undelivered era draws the plate's furniture
+       and says what it awaits, which beats a dead stop with no explanation. */
+    const withData = data.detents;
+    const firstDelivered = data.detents.find((d) => d.available);
+    let activeEra = firstDelivered?.era ?? data.detents[0]?.era ?? 1;
 
     const panel = createPanel();
 
@@ -68,7 +71,7 @@ if (root !== null) {
 
     function readUrl(): void {
       const era = Number(new URLSearchParams(location.search).get('era'));
-      if (Number.isFinite(era) && data.detents.some((d) => d.era === era && d.available)) {
+      if (Number.isFinite(era) && data.detents.some((d) => d.era === era)) {
         activeEra = era;
       }
     }
@@ -109,8 +112,22 @@ if (root !== null) {
       if (readout !== null) {
         readout.textContent =
           snapshot === undefined
-            ? `${eraLabel(activeEra)} · no snapshot in this build`
-            : `${snapshot.label} · ${snapshot.realms.length} realms${snapshot.fixture ? ' · fixture data' : ''}`;
+            ? `${eraLabel(activeEra)} · awaiting the owner's research memo`
+            : `${snapshot.label} · ${snapshot.realms.length} realms`;
+      }
+      const awaiting = root!.querySelector<HTMLElement>('[data-map-awaiting]');
+      if (awaiting !== null) awaiting.hidden = snapshot !== undefined;
+
+      /* The cartouche is the plate's own label, so it has to follow the scrub —
+         otherwise an undelivered era sits under the title of a delivered one. */
+      const cartoucheEra = canvas!.querySelector<SVGTextElement>('[data-cartouche-era]');
+      if (cartoucheEra !== null) {
+        cartoucheEra.textContent = snapshot?.label ?? eraLabel(activeEra);
+      }
+      const cartoucheNote = canvas!.querySelector<SVGTextElement>('[data-cartouche-awaiting]');
+      if (cartoucheNote !== null) {
+        if (snapshot === undefined) cartoucheNote.removeAttribute('visibility');
+        else cartoucheNote.setAttribute('visibility', 'hidden');
       }
 
       const meridian = root!.querySelector<HTMLElement>('[data-map-meridian]');
@@ -122,7 +139,10 @@ if (root !== null) {
     }
 
     function setEra(era: number, push = true): void {
-      if (!data.detents.some((d) => d.era === era && d.available)) return;
+      /* Every detent is selectable now that fixtures are gone: choosing an
+         undelivered era shows an empty plate that says what it awaits, which is
+         more honest than a stop the reader cannot reach and no explanation. */
+      if (!data.detents.some((d) => d.era === era)) return;
       activeEra = era;
       render();
       writeUrl(!push);
@@ -138,8 +158,7 @@ if (root !== null) {
     });
 
     /* Arrows step between snapshots that exist; Home and End jump to the ends.
-       Only available detents are reachable, so the cursor never lands on a year
-       with nothing behind it. */
+       An undelivered era is reachable and states what it awaits. */
     rail.addEventListener('keydown', (ev) => {
       const keys = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'];
       if (!keys.includes(ev.key)) return;

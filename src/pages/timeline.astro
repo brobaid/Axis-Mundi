@@ -72,8 +72,7 @@ const boundsTo = Math.max(DEFAULT_TO, ...years) + 50;
       events.length === 0 ? (
         <p class="measure empty">
           No events have completed a source check yet, so the canvas has nothing to draw.
-          The seed data is in the repository and validated; it is held out of this build
-          until each record carries its citations.
+          Records are held out of the build until each carries its citations.
         </p>
       ) : (
         <Timeline

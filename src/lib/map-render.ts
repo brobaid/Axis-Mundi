@@ -220,17 +220,23 @@ function hatchDefs(traditions: readonly string[]): string {
     .join('');
 }
 
-/** The cartouche: the engraved title plate an atlas carries in a corner. */
-function cartouche(title: string, era: string, fixture: boolean): string {
+/**
+ * The cartouche: the engraved title plate an atlas carries in a corner.
+ *
+ * `awaiting` is the state an undelivered era carries. The map used to fill those
+ * detents with fixture rectangles; it now says the snapshot has not been
+ * researched yet, because scaffolding on a plate that reads as an atlas is
+ * invented history whatever the label above it says.
+ */
+function cartouche(title: string, era: string, awaiting: boolean): string {
   return (
     `<g class="map-cartouche" transform="translate(24 24)" aria-hidden="true">` +
     `<rect class="map-cartouche__plate" x="0" y="0" width="214" height="66" rx="2"/>` +
     `<rect class="map-cartouche__inner" x="5" y="5" width="204" height="56" rx="1"/>` +
     `<text class="map-cartouche__title" x="107" y="28" text-anchor="middle">${esc(title)}</text>` +
-    `<text class="map-cartouche__era" x="107" y="48" text-anchor="middle">${esc(era)}</text>` +
-    (fixture
-      ? `<text class="map-cartouche__fixture" x="107" y="61" text-anchor="middle">FIXTURE DATA</text>`
-      : '') +
+    `<text class="map-cartouche__era" x="107" y="48" text-anchor="middle" data-cartouche-era>${esc(era)}</text>` +
+    `<text class="map-cartouche__fixture" x="107" y="61" text-anchor="middle" data-cartouche-awaiting` +
+    `${awaiting ? '' : ' visibility="hidden"'}>AWAITING RESEARCH MEMO</text>` +
     `</g>`
   );
 }
@@ -262,7 +268,9 @@ export function renderMap(
   options: CanvasOptions,
 ): string {
   const active = snapshots.find((s) => s.era === options.activeEra) ?? snapshots[0];
-  const anyFixture = snapshots.some((s) => s.fixture);
+  /* The chosen era has no snapshot: the plate draws its furniture and nothing
+     else, and the cartouche says why. */
+  const awaiting = snapshots.every((s) => s.era !== options.activeEra);
 
   return (
     `<svg class="map-svg" viewBox="0 0 ${f.width} ${f.height}"` +
@@ -275,7 +283,7 @@ export function renderMap(
     `<g class="map-snapshots">` +
     snapshots.map((s) => renderSnapshot(s, f, s.era === options.activeEra)).join('') +
     `</g>` +
-    cartouche(options.title, active?.label ?? '', anyFixture) +
+    cartouche(options.title, awaiting ? eraLabel(options.activeEra) : (active?.label ?? ''), awaiting) +
     compass(f) +
     /* The engraved frame sits on top, so nothing bleeds past the plate edge. */
     `<rect class="map-frame-outer" x="1" y="1" width="${f.width - 2}" height="${f.height - 2}"/>` +

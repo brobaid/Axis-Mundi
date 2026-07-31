@@ -151,8 +151,13 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
 
     <p class="strip__caption shell caption">
       {eventCount} source-checked events across {traditionsWithEvents} of {TRADITIONS.length}
-      traditions, {heroYear(firstYear)} to {heroYear(lastYear)}. An empty lane is a tradition
-      whose events are still awaiting a source check, not a tradition without a history.
+      traditions, {heroYear(firstYear)} to {heroYear(lastYear)}.
+      {
+        /* This sentence existed because Sikhism's lane was empty. Every lane
+           carries events now, so it earns its place only if one empties again. */
+        traditionsWithEvents < TRADITIONS.length &&
+          ' An empty lane is a tradition whose events are still awaiting a source check, not a tradition without a history.'
+      }
     </p>
   </div>
 

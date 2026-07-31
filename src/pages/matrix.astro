@@ -149,9 +149,18 @@ const bootstrap = { rows: view, sourceTitles };
 
         <p class="shell mx-note measure">
           Tap any cell for its nuance and its source. Hatched cells are contested and carry both
-          positions. A dash is a dimension with no published record yet, not a tradition without
-          a position on it &mdash; the column stays in the table so the comparison never looks
-          more complete than it is.
+          positions.
+          {
+            /* All thirteen dimensions are filled, so the note about dashes has
+               nothing to explain until one empties again. */
+            filled.length < MATRIX_DIMENSIONS.length && (
+              <>
+                {' '}A dash is a dimension with no published record yet, not a tradition without a
+                position on it &mdash; the column stays in the table so the comparison never
+                looks more complete than it is.
+              </>
+            )
+          }
         </p>
 
         <p class="shell caption build-note">
