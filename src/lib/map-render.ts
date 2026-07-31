@@ -1,4 +1,5 @@
 import { ERA_SNAPSHOTS } from './eras';
+import { esc } from './escape';
 
 /** A: well-documented. B: scholarly estimate. C: speculative, hatched. */
 export type ConfidenceGrade = 'a' | 'b' | 'c';
@@ -88,9 +89,6 @@ export const detents = (available: ReadonlySet<number>): Detent[] =>
   ERA_SNAPSHOTS.map((era) => ({ era, label: eraLabel(era), available: available.has(era) }));
 
 /* ── rendering ──────────────────────────────────────────────────────────── */
-
-const esc = (s: string): string =>
-  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 export interface Realm {
   readonly id: string;

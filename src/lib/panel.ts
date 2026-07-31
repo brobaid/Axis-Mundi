@@ -64,6 +64,5 @@ export function createPanel(hooks: PanelHooks = {}): PanelController | null {
   return controller;
 }
 
-/** Escapes text for insertion into the panel. */
-export const esc = (s: string): string =>
-  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+/** Escapes text for insertion into the panel. Shared with the other renderers. */
+export { esc } from './escape';

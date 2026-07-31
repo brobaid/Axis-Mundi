@@ -190,6 +190,20 @@ a:hover {
   min-height: var(--tap-min);
 }
 
+/* Text for assistive technology only. Used where a visual convention — a hatch
+   swatch, an em-dash standing for an absent record — carries meaning that has
+   to reach a screen reader as words. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .skip-link {
   position: absolute;
   left: var(--space-4);

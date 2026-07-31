@@ -1,425 +1,423 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BrassMeridian from '../components/BrassMeridian.astro';
+import TraditionSymbols from '../components/TraditionSymbols.astro';
 import { TRADITIONS } from '../lib/traditions';
-import { getPublishable, getStructural, includesUnsourced, tally } from '../lib/content';
-import { displayDate } from '../lib/display-date';
+import { getPublishable } from '../lib/content';
+import { heroLanes, heroWindow, heroYear, position, type HeroEvent } from '../lib/hero-strip';
 
 /**
- * M0 foundation page.
+ * The entrance hall (reference build's home screen).
  *
- * The timeline is M1. What this page does is show that the foundation is real:
- * the token system in both modes, the Brass Meridian as a shared component, the
- * launch ten with their hues, and an honest readout of the content pipeline
- * (spec §11) including how much is still awaiting a source check.
+ * Three things and no more: the living timeline, the four doors, and the
+ * curator's account of what this is. The foundation exhibits that stood here
+ * through M0 — the token specimen, the pipeline ledger, the launch-ten roll —
+ * were scaffolding for a build with nothing else to show. The timeline, the
+ * map and the matrix are real now, so the ledger moved to the methodology page
+ * where a reader goes to ask how the thing is made.
  */
 
-const [events, taxonomy] = await Promise.all([
-  getPublishable('events'),
-  /* Structure and the sourced adherents field; the authored node summaries are
-     not rendered here and stay gated on their own. */
-  getStructural('taxonomy'),
-]);
+const events = await getPublishable('events');
 
-const adherentsOf = (id: string) =>
-  taxonomy.find((n) => n.data.id === id && n.data.depth === 1)?.data.adherents;
+/* One dot per tradition per event: a multi-tradition record genuinely belongs
+   in both lanes, exactly as it does on the timeline itself. */
+const heroEvents: HeroEvent[] = events.flatMap((entry) =>
+  entry.data.traditions.map((tradition) => ({
+    year: entry.data.year_start,
+    tradition,
+    importance: entry.data.importance,
+  })),
+);
 
-/* Two traditions have no honest point estimate, and the sourcing memo requires
-   their notes to render rather than a number. "see note" has to point at a note. */
-const adherentNotes = TRADITIONS.map((t) => ({ tradition: t, adherents: adherentsOf(t.id) }))
-  .filter((row) => row.adherents !== undefined && row.adherents.display === 'see note')
-  .map((row) => ({
-    name: row.tradition.name,
-    text: row.adherents!.contested
-      ? (row.adherents!.contested_note ?? '')
-      : (row.adherents!.note ?? ''),
-    contested: row.adherents!.contested,
-  }));
+const window = heroWindow(heroEvents);
+const lanes = heroLanes(heroEvents, TRADITIONS, window);
 
-const [eventTally, taxonomyTally, sourceTally, regionTally] = await Promise.all([
-  tally('events'),
-  tally('taxonomy'),
-  tally('sources'),
-  tally('regions'),
-]);
+/* The meridian marks the middle of the window. A time cursor points at a year,
+   not at a claim, so it carries no assertion about what happened there. */
+const meridianYear = Math.round((window.from + window.to) / 2);
+const meridianAt = position(meridianYear, window);
 
-const sortedEvents = [...events].sort((a, b) => a.data.year_start - b.data.year_start);
+/* The axis names its two extents and nothing between them. Intermediate marks
+   would have to be absolutely positioned and centred, and at 390px the last two
+   collide — while the faint century rules already carry the interval, and the
+   meridian names the one year in the middle. An axis with its ends labelled is
+   also simply the plate convention. */
+const columns = Math.max(1, Math.round((window.to - window.from) / 100));
 
-const collections = [
-  { name: 'Events', ...eventTally },
-  { name: 'Taxonomy nodes', ...taxonomyTally },
-  { name: 'Sources', ...sourceTally },
-  { name: 'Regions', ...regionTally },
+/* The real span of the records, which is not the axis: the window rounds out to
+   whole centuries so the strip reads as an axis rather than as the extremes of
+   whatever happens to be sourced this week. */
+const years = heroEvents.map((e) => e.year);
+const firstYear = years.length === 0 ? window.from : Math.min(...years);
+const lastYear = years.length === 0 ? window.to : Math.max(...years);
+
+/* A door only opens onto a page that exists in this build. Deep dives are gated
+   behind their own sourcing, so in production that door stays shut and says
+   what it is waiting for rather than leading to a 404. */
+const dives = await getPublishable('deepDives');
+const firstDive = dives[0]?.data.tradition;
+
+interface Door {
+  eyebrow: string;
+  title: string;
+  blurb: string;
+  href: string | undefined;
+  waitingOn?: string;
+}
+
+const doors: Door[] = [
+  {
+    eyebrow: 'Explore',
+    title: 'Timeline',
+    blurb: 'Every tradition on one canvas. Zoom from millennia to decades.',
+    href: '/timeline',
+  },
+  {
+    eyebrow: 'Explore',
+    title: 'Map',
+    blurb: 'Watch belief move across regions, era by era.',
+    href: '/map',
+  },
+  {
+    eyebrow: 'Read',
+    title: 'Deep dives',
+    blurb: 'Ten traditions, one identical structure, fully sourced.',
+    href: firstDive === undefined ? undefined : `/traditions/${firstDive}`,
+    waitingOn: 'Waiting on the first source-checked dive.',
+  },
+  {
+    eyebrow: 'Compare',
+    title: 'Belief matrix',
+    blurb: 'Filter every tradition by what it holds.',
+    href: '/matrix',
+  },
 ];
+
+const eventCount = events.length;
+const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
 ---
 
 <BaseLayout
   title="Axis Mundi"
   description="An interactive comparative reference for ten religious traditions: timeline, historical map, deep dives and belief matrix."
 >
+  <TraditionSymbols />
+
   <section class="shell hero">
-    <p class="eyebrow">Milestone 0 — foundation</p>
+    <p class="eyebrow">A comparative reference for the world&rsquo;s religions</p>
     <h1>Five thousand years of belief, on one line.</h1>
-    <p class="lede measure">
-      Axis Mundi is a comparative reference for ten religious traditions: an event-driven
-      timeline, an animated historical map, structured deep dives and a belief matrix. It
-      describes what traditions hold and practise. It does not evaluate them.
-    </p>
-    <p class="hero__enter">
-      <a class="tap" href="/timeline">Enter the timeline &rarr;</a>
+    <p class="lede">
+      Timelines, maps and deep dives across ten traditions, drawn from academic sources,
+      presented without a thumb on the scale.
     </p>
   </section>
 
-  <hr class="shell rule" />
+  <!-- The living timeline ------------------------------------------------- -->
+  <div class="strip-wrap">
+    <section class="strip" aria-labelledby="strip-heading" style={`--strip-cols:${columns}`}>
+      <h2 id="strip-heading" class="visually-hidden">Timeline preview</h2>
 
-  <!-- The launch ten ---------------------------------------------------- -->
-  <section class="shell block">
-    <h2>The launch ten</h2>
-    <p class="measure small">
-      Identity hues carry lanes, chips, map fills and chart series. Colour never carries
-      meaning alone — every hue here sits beside its name, and always will.
-    </p>
-
-    <ul class="lanes" role="list">
-      {
-        TRADITIONS.map((t) => (
-          <li class="lane">
-            <span class="swatch" style={`--tradition-hue: var(${t.hueToken})`} />
-            <span class="lane__name">{t.name}</span>
-            {
-              (() => {
-                const a = adherentsOf(t.id);
-                if (a === undefined) return <span class="lane__hue caption">{t.hue}</span>;
-                /* Rendering rule 1: the display string is used verbatim.
-                   Rule 2: Shinto and the Chinese cluster never get coerced to a
-                   number — one renders contested, the other its note. */
-                return (
-                  <span class="lane__adherents">
-                    <span class="mono">{a.display}</span>
-                    {a.contested && <span class="contested-badge">Contested</span>}
-                  </span>
-                );
-              })()
-            }
-          </li>
-        ))
-      }
-    </ul>
-
-    {
-      adherentNotes.length > 0 && (
-        <div class="adherent-notes">
-          {adherentNotes.map((n) => (
-            <p class="caption">
-              <b>{n.name}</b>
-              {n.contested && <span class="contested-badge">Contested</span>} — {n.text}
-            </p>
-          ))}
-        </div>
-      )
-    }
-  </section>
-
-  <hr class="shell rule" />
-
-  <!-- The Brass Meridian ------------------------------------------------- -->
-  <section class="shell block">
-    <h2>The Brass Meridian</h2>
-    <p class="measure small">
-      One thin brass rule, one colour, one weight, one easing. It is the playhead on the
-      timeline, the handle in the map's era scrubber, and the margin marker on a deep dive —
-      the visible form of “one time cursor, many lenses.” It exists once in the codebase.
-    </p>
-
-    <div class="specimen">
-      <div class="specimen__track">
-        <BrassMeridian at={38} label="Time cursor specimen" inset="0" />
-      </div>
-      <dl class="exhibit-label specimen__label">
-        <dt>Weight</dt>
-        <dd>1.5px</dd>
-        <dt>Motion</dt>
-        <dd>400ms</dd>
-        <dt>Reduced motion</dt>
-        <dd>snaps</dd>
-      </dl>
-    </div>
-  </section>
-
-  <hr class="shell rule" />
-
-  <!-- Content pipeline --------------------------------------------------- -->
-  <section class="shell block">
-    <h2>Content pipeline</h2>
-    <p class="measure small">
-      Every record is a JSON file validated by a Zod schema mirroring the Phase 0 spec.
-      Records that have not yet been source-checked are marked and held out of the
-      production build rather than published unsourced.
-    </p>
-
-    <div class="table-scroll">
-      <table class="ledger">
-        <thead>
-          <tr>
-            <th scope="col">Collection</th>
-            <th scope="col">Seeded</th>
-            <th scope="col">Checked</th>
-            <th scope="col">Pending</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            collections.map((c) => (
-              <tr>
-                <th scope="row">{c.name}</th>
-                <td class="mono">{c.total}</td>
-                <td class="mono">{c.sourced}</td>
-                <td class="mono">{c.todo > 0 ? c.todo : '—'}</td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
-    </div>
-
-    <p class="caption build-state">
-      {
-        includesUnsourced
-          ? 'This build includes records awaiting a source check.'
-          : 'This build shows source-checked records only.'
-      }
-    </p>
-  </section>
-
-  <hr class="shell rule" />
-
-  <!-- Events in the build ------------------------------------------------ -->
-  <section class="shell block">
-    <h2>Events in this build</h2>
-    {
-      sortedEvents.length === 0 ? (
-        <p class="measure small">
-          No events have completed a source check yet. The timeline engine lands in M1.
-        </p>
-      ) : (
-        <ol class="events" role="list">
-          {sortedEvents.map((event) => {
-            const meta = TRADITIONS.find((t) => t.id === event.data.traditions[0]);
-            return (
-              <li class="event">
-                <span
-                  class="swatch"
-                  style={`--tradition-hue: var(${meta?.hueToken ?? '--ink-soft'})`}
+      <div class="strip__lanes">
+        {
+          lanes.map((lane, laneIndex) => (
+            <div class="strip__lane" style={`--tradition-hue: var(--t-${lane.tradition})`}>
+              <span class="visually-hidden">
+                {lane.name}: {lane.dots.length} events in this build
+              </span>
+              {lane.dots.map((dot, dotIndex) => (
+                <i
+                  class={`strip__dot strip__dot--r${dot.importance}`}
+                  style={`left:${dot.x.toFixed(2)}%; --enter-delay:${(6 - dot.importance) * 30 + laneIndex * 20 + (dotIndex % 5) * 12}ms`}
+                  aria-hidden="true"
                 />
-                <span class="event__date mono">{displayDate(event.data)}</span>
-                <span class="event__title">{event.data.title}</span>
-                <span class="event__rank caption" title="Importance rank">
-                  r{event.data.importance}
-                </span>
-                {event.data.contested && <span class="contested-badge">Contested</span>}
-              </li>
-            );
-          })}
-        </ol>
+              ))}
+            </div>
+          ))
+        }
+        <div
+          class="meridian strip__meridian"
+          style={`left:${meridianAt.toFixed(2)}%`}
+          aria-hidden="true"
+        >
+        </div>
+        <b class="strip__year mono" style={`left:${meridianAt.toFixed(2)}%`} aria-hidden="true">
+          {heroYear(meridianYear)}
+        </b>
+      </div>
+
+      <div class="strip__axis" aria-hidden="true">
+        <span class="mono">{heroYear(window.from)}</span>
+        <span class="mono">{heroYear(window.to)}</span>
+      </div>
+    </section>
+
+    <p class="strip__caption shell caption">
+      {eventCount} source-checked events across {traditionsWithEvents} of {TRADITIONS.length}
+      traditions, {heroYear(firstYear)} to {heroYear(lastYear)}. An empty lane is a tradition
+      whose events are still awaiting a source check, not a tradition without a history.
+    </p>
+  </div>
+
+  <!-- The four doors ------------------------------------------------------ -->
+  <section class="shell doors" aria-label="Rooms">
+    {
+      doors.map((door) =>
+        door.href === undefined ? (
+          <div class="door door--shut">
+            <span class="eyebrow">{door.eyebrow}</span>
+            <h3>{door.title}</h3>
+            <p>{door.blurb}</p>
+            <p class="door__waiting caption">{door.waitingOn}</p>
+          </div>
+        ) : (
+          <a class="door" href={door.href}>
+            <span class="eyebrow">{door.eyebrow}</span>
+            <h3>{door.title}</h3>
+            <p>{door.blurb}</p>
+          </a>
+        ),
       )
     }
-    <p class="caption">
-      Showing {sortedEvents.length} of {eventTally.total} seeded events · {taxonomy.length} of{' '}
-      {taxonomyTally.total} taxonomy nodes.
+  </section>
+
+  <!-- Curator's copy ------------------------------------------------------ -->
+  <section class="shell curator">
+    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+    <p>
+      Axis Mundi describes what ten traditions hold and practise. It does not evaluate them.
+      Supernatural claims are attributed uniformly &mdash; &ldquo;according to Sunni
+      tradition&rdquo; carries the same temperature as &ldquo;according to Theravada
+      accounts&rdquo; &mdash; and each tradition&rsquo;s own terminology comes first, with
+      translation alongside.
+    </p>
+    <p>
+      Where scholarship disagrees, the disagreement is shown rather than resolved: a badge, a
+      note, and citations for both positions. Where a record has not yet passed a source check,
+      it is held out of the build rather than published unsourced. That is why some rooms here
+      are emptier than they will be.
+    </p>
+    <p class="curator__more">
+      <a class="tap" href="/methodology">How this reference is built &rarr;</a>
     </p>
   </section>
 </BaseLayout>
 
 <style>
+  /* --- hero --------------------------------------------------------------- */
+
   .hero {
-    padding-block: var(--space-12) var(--space-8);
+    max-width: 46rem;
+    padding-block: var(--space-12) var(--space-2);
   }
 
   .hero h1 {
-    margin-block: var(--space-2) var(--space-4);
-    max-width: 20ch;
+    font-size: clamp(2.125rem, 7vw, 2.875rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin-block: var(--space-3) var(--space-3);
   }
 
   .lede {
-    font-size: var(--size-h3);
-    line-height: var(--leading-h3);
     color: var(--ink-soft);
+    max-width: 52ch;
   }
 
-  .hero__enter {
-    margin-top: var(--space-4);
+
+  /* --- the living timeline ------------------------------------------------ */
+
+  .strip-wrap {
+    margin-top: var(--space-8);
   }
 
-  .hero__enter a {
-    font-family: var(--font-ui);
-    font-size: var(--size-small);
-  }
-
-  .block {
-    padding-block: var(--space-8);
-  }
-
-  .block h2 {
-    margin-bottom: var(--space-2);
-  }
-
-  .block > p {
-    color: var(--ink-soft);
-  }
-
-  /* --- lanes ------------------------------------------------------------- */
-
-  .lanes {
-    list-style: none;
-    padding: 0;
-    margin-top: var(--space-6);
-    display: grid;
-    gap: 0;
-  }
-
-  .lane {
-    display: grid;
-    grid-template-columns: 10px 1fr auto;
-    align-items: center;
-    gap: var(--space-3);
-    padding-block: var(--space-3);
-    border-bottom: var(--hairline-width) solid var(--hairline);
-  }
-
-  .lane__name {
-    font-family: var(--font-ui);
-    font-size: var(--size-small);
-  }
-
-  .adherent-notes {
-    margin-top: var(--space-4);
-    padding-top: var(--space-3);
-    border-top: var(--hairline-width) solid var(--hairline);
-    display: grid;
-    gap: var(--space-2);
-  }
-
-  .adherent-notes p {
-    max-width: var(--measure);
-  }
-
-  .adherent-notes :global(.contested-badge) {
-    margin-inline: var(--space-2);
-  }
-
-  .lane__adherents {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    font-size: var(--size-caption);
-    color: var(--ink-soft);
-  }
-
-  /* --- meridian specimen -------------------------------------------------- */
-
-  .specimen {
-    margin-top: var(--space-6);
-    display: grid;
-    gap: var(--space-4);
-  }
-
-  .specimen__track {
+  .strip {
     position: relative;
-    height: 96px;
+    max-width: 61.25rem;
+    margin-inline: auto;
     background: var(--surface);
-    border: var(--hairline-width) solid var(--hairline);
-    border-radius: var(--radius-s);
+    border-block: var(--hairline-width) solid var(--hairline);
+    overflow: hidden;
   }
 
-  .specimen__label {
-    max-width: 22rem;
+  .strip__lanes {
+    position: relative;
+    padding-block: var(--space-4);
+    /* The lane rhythm from the reference build: a faint column grid behind the
+       dots so the strip reads as an axis rather than as scattered marks. One
+       rule per century of the window, so the grid means something — a column is
+       a hundred years — rather than dividing the plate into an arbitrary twelve. */
+    background-image: repeating-linear-gradient(
+      to right,
+      transparent 0 calc(100% / var(--strip-cols) - 1px),
+      var(--hairline) calc(100% / var(--strip-cols) - 1px) calc(100% / var(--strip-cols))
+    );
   }
 
-  @media (min-width: 48rem) {
-    .specimen {
-      grid-template-columns: 1fr 22rem;
-      align-items: start;
+  .strip__lane {
+    position: relative;
+    height: 22px;
+  }
+
+  .strip__dot {
+    position: absolute;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--tradition-hue);
+    translate: -50% -50%;
+    /* Events enter by importance rank (design language §7). */
+    animation: dot-in var(--dur-panel) var(--ease-out) backwards;
+    animation-delay: var(--enter-delay, 0ms);
+  }
+
+  /* Rank drives size, as it does on the timeline canvas. */
+  .strip__dot--r5 {
+    width: 9px;
+    height: 9px;
+  }
+
+  .strip__dot--r3 {
+    width: 6px;
+    height: 6px;
+  }
+
+  @keyframes dot-in {
+    from {
+      opacity: 0;
+      scale: 0.4;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
     }
   }
 
-  /* --- ledger ------------------------------------------------------------- */
-
-  .table-scroll {
-    overflow-x: auto;
-    margin-top: var(--space-6);
+  .strip__meridian {
+    top: 0;
+    bottom: 0;
+    height: auto;
   }
 
-  .ledger {
-    width: 100%;
-    max-width: 40rem;
-    border-collapse: collapse;
-    font-size: var(--size-small);
-  }
-
-  .ledger th,
-  .ledger td {
-    text-align: left;
-    padding: var(--space-3) var(--space-3) var(--space-3) 0;
-    border-bottom: var(--hairline-width) solid var(--hairline);
+  .strip__year {
+    position: absolute;
+    top: var(--space-1);
+    translate: -50% 0;
+    background: var(--brass);
+    color: var(--ink-inverse);
+    font-size: 10px;
+    font-weight: 500;
+    padding: 2px var(--space-2);
+    border-radius: var(--radius-xs);
     white-space: nowrap;
   }
 
-  /* Numeric columns stay narrow so the label column keeps the space. */
-  .ledger td {
-    width: 5.5rem;
-  }
-
-  .ledger thead th {
-    font-family: var(--font-ui);
-    font-size: var(--size-eyebrow);
-    letter-spacing: var(--tracking-eyebrow);
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    font-weight: 600;
-  }
-
-  .ledger tbody th {
-    font-family: var(--font-ui);
-    font-weight: 400;
-  }
-
-  .build-state {
-    margin-top: var(--space-3);
-  }
-
-  /* --- events ------------------------------------------------------------- */
-
-  .events {
-    list-style: none;
-    padding: 0;
-    margin-block: var(--space-6);
-  }
-
-  .event {
+  .strip__axis {
     display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: var(--space-2) var(--space-3);
-    padding-block: var(--space-3);
-    border-bottom: var(--hairline-width) solid var(--hairline);
-  }
-
-  .event .swatch {
-    align-self: center;
-  }
-
-  .event__date {
-    font-size: var(--size-caption);
+    justify-content: space-between;
+    padding: var(--space-1) var(--space-2);
+    border-top: var(--hairline-width) solid var(--hairline);
+    font-size: 10px;
     color: var(--ink-soft);
-    min-width: 9ch;
   }
 
-  .event__title {
+  .strip__caption {
+    display: block;
+    margin-top: var(--space-3);
+    max-width: 52rem;
+  }
+
+  /* --- doors -------------------------------------------------------------- */
+
+  .doors {
+    margin-top: var(--space-8);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .door {
+    display: block;
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--hairline);
+    padding: var(--space-4) var(--space-3);
+    color: inherit;
+    text-decoration: none;
+    transition: border-color var(--dur-micro) var(--ease-out);
+  }
+
+  a.door:hover {
+    border-color: var(--brass);
+  }
+
+  .door h3 {
+    font-size: var(--size-h3);
+    margin-block: var(--space-1) var(--space-1);
+  }
+
+  .door p {
+    font-size: var(--size-caption);
+    line-height: 1.45;
+    color: var(--ink-soft);
+  }
+
+  .door--shut {
+    border-style: dashed;
+  }
+
+  .door--shut h3 {
+    color: var(--ink-soft);
+  }
+
+  .door__waiting {
+    margin-top: var(--space-2);
+    padding-top: var(--space-2);
+    border-top: var(--hairline-width) solid var(--hairline);
+    color: var(--brass-ink);
+  }
+
+  /* --- curator ------------------------------------------------------------ */
+
+  .curator {
+    max-width: 46rem;
+    padding-block: var(--space-12) var(--space-16);
+  }
+
+  .curator p {
+    max-width: var(--measure);
+    color: var(--ink-soft);
+    margin-bottom: var(--space-4);
+  }
+
+  .curator__more a {
     font-family: var(--font-ui);
     font-size: var(--size-small);
   }
 
-  .event__rank {
-    margin-left: auto;
+  .ornament {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 32.5rem;
+    margin: 0 0 var(--space-6);
+  }
+
+  .ornament i {
+    flex: 1;
+    height: 3px;
+    border-top: var(--hairline-width) solid var(--hairline);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .ornament b {
+    width: 5px;
+    height: 5px;
+    rotate: 45deg;
+    background: var(--brass);
+    flex: 0 0 auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .strip__dot {
+      animation: none;
+    }
   }
 </style>

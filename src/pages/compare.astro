@@ -1,0 +1,394 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TraditionSymbols from '../components/TraditionSymbols.astro';
+import { getPublishable, getStructural, includesUnsourced } from '../lib/content';
+import { TRADITIONS } from '../lib/traditions';
+import { buildRows } from '../lib/matrix-view';
+import { renderCompare, type AdherentsView, type CompareColumn } from '../lib/compare-render';
+
+/**
+ * Compare mode.
+ *
+ * Two traditions on the shared schema — the same thirteen dimensions and the
+ * same matrix records the matrix page renders. Spec §1.2: extracted from the
+ * structured fields, never rewritten. Nothing on this page is authored for it,
+ * which is why a dimension with no record says "no record yet" instead of
+ * borrowing prose from a deep dive.
+ */
+
+const [rows, taxonomy, sources] = await Promise.all([
+  getPublishable('matrix'),
+  /* Structural: the tradition of each node, and the adherents block, which is
+     itself sourced and carries its own citation. The node's authored one-line
+     summary is not rendered here and stays gated. */
+  getStructural('taxonomy'),
+  getPublishable('sources'),
+]);
+
+const traditionOfNode = new Map(taxonomy.map((n) => [n.data.id, n.data.tradition]));
+const sourceTitles = new Map(sources.map((s) => [s.data.id, s.data.title]));
+
+const view = buildRows(
+  rows.map((entry) => ({
+    id: entry.data.id,
+    node: entry.data.node,
+    label: entry.data.label,
+    order: entry.data.order,
+    cells: entry.data.cells,
+  })),
+  (node) => traditionOfNode.get(node) ?? node,
+);
+
+/* One column per tradition that has a matrix row. A tradition without one
+   cannot be compared on the shared schema, so it is not offered as a chip
+   rather than being offered and then coming up empty. */
+const adherentsOf = (tradition: string): AdherentsView | undefined => {
+  const node = taxonomy.find((n) => n.data.id === tradition && n.data.depth === 1);
+  const a = node?.data.adherents;
+  if (a === undefined) return undefined;
+  return {
+    display: a.display,
+    contested: a.contested,
+    contestedNote: a.contested_note,
+    note: a.note,
+    basis: a.basis,
+    sourceTitle: sourceTitles.get(a.source),
+    year: a.year,
+  };
+};
+
+const columns: CompareColumn[] = view
+  .filter((row) => row.node === row.tradition)
+  .map((row) => ({
+    tradition: row.tradition,
+    name: TRADITIONS.find((t) => t.id === row.tradition)?.name ?? row.label,
+    adherents: adherentsOf(row.tradition),
+    cells: row.cells,
+  }));
+
+const defaultA = columns[0];
+const defaultB = columns[1];
+
+const gridHtml =
+  defaultA === undefined || defaultB === undefined ? '' : renderCompare(defaultA, defaultB);
+
+const bootstrap = { columns };
+---
+
+<BaseLayout
+  title="Compare"
+  description="Any two of the ten traditions side by side on one identical schema, with adherent figures rendered exactly as their sources support them."
+>
+  <TraditionSymbols />
+
+  <section class="shell head">
+    <p class="eyebrow">Room IV · The Comparison Gallery</p>
+    <h1>Two traditions, one schema.</h1>
+    <p class="crumb caption">
+      <b>Compare</b> · every row extracted from the same structured fields that drive the matrix
+      and the deep dives. Nothing here is written twice.
+    </p>
+  </section>
+
+  {
+    columns.length < 2 ? (
+      <p class="shell measure empty">
+        Compare needs at least two source-checked matrix rows and this build has {columns.length}.
+        The schema is ready; the records are what is missing.
+      </p>
+    ) : (
+      <div class="compare" data-compare>
+        <div class="picks shell">
+          <div class="pick" role="group" aria-label="First tradition" data-pick="a">
+            {columns.map((column) => (
+              <button
+                type="button"
+                class="chip"
+                data-tradition={column.tradition}
+                aria-pressed={column.tradition === defaultA?.tradition}
+              >
+                <span class="swatch" style={`--tradition-hue: var(--t-${column.tradition})`} />
+                {column.name}
+              </button>
+            ))}
+          </div>
+
+          <p class="pick__vs eyebrow" aria-hidden="true">vs</p>
+
+          <div class="pick" role="group" aria-label="Second tradition" data-pick="b">
+            {columns.map((column) => (
+              <button
+                type="button"
+                class="chip"
+                data-tradition={column.tradition}
+                aria-pressed={column.tradition === defaultB?.tradition}
+              >
+                <span class="swatch" style={`--tradition-hue: var(--t-${column.tradition})`} />
+                {column.name}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div class="shell">
+          <div class="cmp-grid" data-compare-grid set:html={gridHtml} />
+        </div>
+
+        <p class="shell mx-note measure">
+          Adherent figures are rendered exactly as their sources support them. Two traditions have
+          no honest point estimate and are not coerced into one: Shinto&rsquo;s count is contested
+          between shrine registers and self-identification, and the Chinese cluster has no single
+          authoritative figure at all. Both say so where a number would otherwise sit.
+        </p>
+
+        <p class="shell caption build-note">
+          {includesUnsourced
+            ? 'This build includes records awaiting a source check.'
+            : 'This build shows source-checked records only.'}
+          {' '}
+          <a href="/matrix">See all ten in the belief matrix &rarr;</a>
+        </p>
+      </div>
+    )
+  }
+</BaseLayout>
+
+<script type="application/json" id="compare-data" set:html={JSON.stringify(bootstrap)} is:inline />
+
+<script>
+  import '../scripts/compare';
+</script>
+
+<style>
+  .head {
+    padding-block: var(--space-12) var(--space-4);
+    max-width: 46rem;
+  }
+
+  .head h1 {
+    font-size: clamp(2.125rem, 6vw, 2.875rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin-block: var(--space-3) var(--space-3);
+  }
+
+  .crumb,
+  .empty {
+    color: var(--ink-soft);
+  }
+
+  .empty {
+    padding-block: var(--space-6);
+  }
+
+  /* --- the pickers -------------------------------------------------------- */
+
+  .picks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding-block: var(--space-2) var(--space-6);
+  }
+
+  .pick {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  .pick__vs {
+    color: var(--brass-ink);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--tap-min);
+    padding-inline: var(--space-3);
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--hairline-strong);
+    border-radius: var(--radius-pill);
+    font-family: var(--font-ui);
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition:
+      border-color var(--dur-micro) var(--ease-out),
+      color var(--dur-micro) var(--ease-out);
+  }
+
+  .chip:hover:not(:disabled) {
+    border-color: var(--brass);
+  }
+
+  .chip[aria-pressed='true'] {
+    background: var(--brass-wash);
+    border-color: var(--brass);
+    color: var(--ink);
+  }
+
+  /* The tradition already chosen in the other column. Disabled rather than
+     hidden, so the two rails stay the same shape as the reader switches. */
+  .chip:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  /* --- the grid ----------------------------------------------------------- */
+
+  .cmp-grid {
+    border-block: var(--hairline-width) solid var(--hairline);
+    background: var(--surface);
+  }
+
+  .cmp-grid :global(.cmp-row) {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr 1fr;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .cmp-grid :global(.cmp-row:last-child) {
+    border-bottom: 0;
+  }
+
+  .cmp-grid :global(.cmp-row--head) {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--surface);
+    border-bottom: var(--hairline-width) solid var(--hairline-strong);
+  }
+
+  .cmp-grid :global(.cmp-dim) {
+    font-family: var(--font-ui);
+    font-size: var(--size-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding: var(--space-3) var(--space-2);
+    border-right: var(--hairline-width) solid var(--hairline);
+  }
+
+  .cmp-grid :global(.cmp-headcell) {
+    padding: var(--space-3);
+    border-right: var(--hairline-width) solid var(--hairline);
+  }
+
+  .cmp-grid :global(.cmp-headcell:last-child),
+  .cmp-grid :global(.cmp-cell:last-child) {
+    border-right: 0;
+  }
+
+  .cmp-grid :global(.cmp-name) {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-display);
+    font-size: var(--size-h3);
+  }
+
+  /* --- stat lines --------------------------------------------------------- */
+
+  .cmp-grid :global(.cmp-stat) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    margin-top: var(--space-3);
+  }
+
+  .cmp-grid :global(.cmp-stat__value) {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    font-size: var(--size-small);
+  }
+
+  /* Where a point estimate would sit and does not. Set in the interface face,
+     not the mono numeral face, so it never reads as a suppressed number. */
+  .cmp-grid :global(.cmp-stat__nofigure) {
+    font-family: var(--font-ui);
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  .cmp-grid :global(.cmp-stat__note),
+  .cmp-grid :global(.cmp-stat__src) {
+    color: var(--ink-soft);
+  }
+
+  .cmp-grid :global(.cmp-stat--waiting) {
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
+    border-top: var(--hairline-width) solid var(--hairline);
+    padding-top: var(--space-2);
+  }
+
+  /* --- body cells --------------------------------------------------------- */
+
+  .cmp-grid :global(.cmp-cell) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-3);
+    border-right: var(--hairline-width) solid var(--hairline);
+    font-size: var(--size-small);
+  }
+
+  .cmp-grid :global(.cmp-cell__value) {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    font-family: var(--font-ui);
+    font-weight: 500;
+  }
+
+  .cmp-grid :global(.cmp-cell__nuance) {
+    color: var(--ink-soft);
+  }
+
+  .cmp-grid :global(.cmp-cell--empty) {
+    background: var(--surface-sunken);
+    color: var(--ink-soft);
+  }
+
+  /* Hatched cells seat their text on a plate so it stays legible over the
+     drafting hatch — the same treatment the deep-dive matrix block uses. */
+  .cmp-grid :global(.cmp-cell.hatch > *) {
+    background: var(--surface);
+    padding: 2px 4px;
+  }
+
+  .mx-note,
+  .build-note {
+    color: var(--ink-soft);
+    padding-block: var(--space-4) 0;
+  }
+
+  .build-note {
+    padding-block: var(--space-3) var(--space-16);
+  }
+
+  /* At 390px three columns cannot hold prose. The dimension label moves above
+     its pair and the two traditions keep the side-by-side that is the point. */
+  @media (max-width: 34rem) {
+    .cmp-grid :global(.cmp-row) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .cmp-grid :global(.cmp-dim) {
+      grid-column: 1 / -1;
+      border-right: 0;
+      border-bottom: var(--hairline-width) solid var(--hairline);
+      padding-block: var(--space-2);
+      background: var(--surface-sunken);
+    }
+
+    .cmp-grid :global(.cmp-row--head .cmp-dim) {
+      display: none;
+    }
+  }
+</style>

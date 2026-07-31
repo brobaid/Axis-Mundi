@@ -1,0 +1,414 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DetailPanel from '../components/DetailPanel.astro';
+import TraditionSymbols from '../components/TraditionSymbols.astro';
+import { getPublishable, getStructural, includesUnsourced } from '../lib/content';
+import { MATRIX_DIMENSIONS, MATRIX_DIMENSION_SHORT } from '../lib/dimensions';
+import { buildRows, filledDimensions, filterChips, chipKey } from '../lib/matrix-view';
+
+/**
+ * The belief matrix (spec §7).
+ *
+ * Thirteen columns, ten rows, and nine of those columns empty — which is the
+ * point. The grid is the shape of the schema, not the shape of what happens to
+ * be written, so a reader can see how much of the comparison exists and how
+ * much is still coming. Filling a cell here means promoting a record, never
+ * editing this page.
+ */
+
+const [rows, taxonomy, sources] = await Promise.all([
+  getPublishable('matrix'),
+  /* Structure only: the node's tradition, for its hue. The authored node
+     summaries stay gated on their own. */
+  getStructural('taxonomy'),
+  getPublishable('sources'),
+]);
+
+const traditionOfNode = new Map(taxonomy.map((n) => [n.data.id, n.data.tradition]));
+
+const view = buildRows(
+  rows.map((entry) => ({
+    id: entry.data.id,
+    node: entry.data.node,
+    label: entry.data.label,
+    order: entry.data.order,
+    cells: entry.data.cells,
+  })),
+  (node) => traditionOfNode.get(node) ?? node,
+);
+
+const filled = filledDimensions(view);
+const chips = filterChips(view);
+const sourceTitles = Object.fromEntries(sources.map((s) => [s.data.id, s.data.title]));
+
+/* The island re-filters and fills the panel; it gets the same records the table
+   was built from rather than scraping them back out of the DOM. */
+const bootstrap = { rows: view, sourceTitles };
+---
+
+<BaseLayout
+  title="Belief matrix"
+  description="Ten traditions across thirteen belief dimensions, each cell carrying its nuance and its source, with contested positions hatched rather than resolved."
+>
+  <TraditionSymbols />
+
+  <section class="shell head">
+    <p class="eyebrow">Room IV · The Comparison Gallery</p>
+    <h1>What each tradition holds.</h1>
+    <p class="crumb caption">
+      <b>Belief matrix</b> · {view.length} rows · {filled.length} of {MATRIX_DIMENSIONS.length} dimensions
+      filled
+    </p>
+  </section>
+
+  {
+    view.length === 0 ? (
+      <p class="shell measure empty">
+        No matrix rows have completed a source check yet. Every cell cites an academic source or
+        a labelled tradition-internal one before it is published.
+      </p>
+    ) : (
+      <div class="matrix" data-matrix>
+        {chips.length > 0 && (
+          <div class="chips shell" role="group" aria-label="Filter by value">
+            {chips.map((chip) => (
+              <button
+                type="button"
+                class="chip"
+                data-chip={chipKey(chip)}
+                aria-pressed="false"
+              >
+                {chip.label}
+                <span class="chip__count mono">{chip.count}</span>
+              </button>
+            ))}
+            <button type="button" class="chip chip--clear" data-chip-clear hidden>
+              Clear filters
+            </button>
+          </div>
+        )}
+
+        <p class="shell readout caption" data-matrix-readout aria-live="polite" />
+
+        <div class="mx-wrap">
+          <table class="mx">
+            <caption class="visually-hidden">
+              Belief positions by tradition. Hatched cells are contested; empty cells have no
+              published record yet.
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col" class="mx__corner">Tradition</th>
+                {MATRIX_DIMENSIONS.map((dimension) => (
+                  <th scope="col" class:list={[!filled.includes(dimension) && 'mx__col--empty']}>
+                    {MATRIX_DIMENSION_SHORT[dimension]}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {view.map((row) => (
+                <tr data-row={row.id}>
+                  <th scope="row" class="mx__rowh">
+                    <span>
+                      <span class="swatch" style={`--tradition-hue: var(--t-${row.tradition})`} />
+                      {row.label}
+                    </span>
+                  </th>
+                  {MATRIX_DIMENSIONS.map((dimension) => {
+                    const cell = row.cells[dimension];
+                    return cell === undefined ? (
+                      <td class="mx__cell mx__cell--empty">
+                        <span class="mx__none">
+                          <span aria-hidden="true">&mdash;</span>
+                          <span class="visually-hidden">No record yet</span>
+                        </span>
+                      </td>
+                    ) : (
+                      <td class:list={['mx__cell', cell.contested && 'hatch']}>
+                        <button
+                          type="button"
+                          data-cell={`${row.id}:${dimension}`}
+                          aria-haspopup="dialog"
+                        >
+                          <span class="mx__value">{cell.label}</span>
+                          {cell.contested && (
+                            <span class="contested-badge">
+                              <span class="visually-hidden">Contested</span>
+                            </span>
+                          )}
+                        </button>
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p class="shell mx-note measure">
+          Tap any cell for its nuance and its source. Hatched cells are contested and carry both
+          positions. A dash is a dimension with no published record yet, not a tradition without
+          a position on it &mdash; the column stays in the table so the comparison never looks
+          more complete than it is.
+        </p>
+
+        <p class="shell caption build-note">
+          {includesUnsourced
+            ? 'This build includes records awaiting a source check.'
+            : 'This build shows source-checked records only.'}
+          {' '}
+          <a href="/compare">Compare two traditions side by side &rarr;</a>
+        </p>
+      </div>
+    )
+  }
+
+  <DetailPanel />
+</BaseLayout>
+
+<script type="application/json" id="matrix-data" set:html={JSON.stringify(bootstrap)} is:inline />
+
+<script>
+  import '../scripts/matrix';
+</script>
+
+<style>
+  .head {
+    padding-block: var(--space-12) var(--space-4);
+    max-width: 46rem;
+  }
+
+  .head h1 {
+    font-size: clamp(2.125rem, 6vw, 2.875rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin-block: var(--space-3) var(--space-3);
+  }
+
+  .crumb {
+    color: var(--ink-soft);
+  }
+
+  .empty {
+    color: var(--ink-soft);
+    padding-block: var(--space-6);
+  }
+
+
+  /* --- filter chips ------------------------------------------------------- */
+
+  .chips {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    padding-block: var(--space-2) var(--space-4);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--tap-min);
+    padding-inline: var(--space-4);
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--hairline-strong);
+    border-radius: var(--radius-pill);
+    font-family: var(--font-ui);
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition:
+      border-color var(--dur-micro) var(--ease-out),
+      color var(--dur-micro) var(--ease-out);
+  }
+
+  .chip:hover {
+    border-color: var(--brass);
+  }
+
+  /* Pressed state carries a fill, a border and a brass dot, so it is never
+     colour alone that says which filters are on. */
+  .chip[aria-pressed='true'] {
+    background: var(--brass-wash);
+    border-color: var(--brass);
+    color: var(--ink);
+  }
+
+  .chip[aria-pressed='true']::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--brass);
+    flex: none;
+  }
+
+  .chip__count {
+    font-size: 11px;
+    color: var(--ink-soft);
+  }
+
+  .chip--clear {
+    border-style: dashed;
+  }
+
+  .readout {
+    padding-bottom: var(--space-3);
+    min-height: 1.4em;
+  }
+
+  /* --- the table ---------------------------------------------------------- */
+
+  .mx-wrap {
+    overflow: auto;
+    max-height: 80vh;
+    border-block: var(--hairline-width) solid var(--hairline);
+    background: var(--surface);
+  }
+
+  .mx {
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 60rem;
+    width: 100%;
+    font-size: var(--size-caption);
+  }
+
+  .mx th {
+    font-family: var(--font-ui);
+    font-size: var(--size-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-align: left;
+    font-weight: 600;
+    padding: var(--space-3);
+    background: var(--surface);
+    border-bottom: var(--hairline-width) solid var(--hairline-strong);
+  }
+
+  /* Sticky column headers, sticky row headers, and the corner sticks to both —
+     without it the corner scrolls under the row headings. */
+  .mx thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  .mx__corner {
+    position: sticky;
+    left: 0;
+    z-index: 3 !important;
+    min-width: 10.5rem;
+    border-right: var(--hairline-width) solid var(--hairline-strong);
+  }
+
+  /* Specificity has to match `.mx th`, or the uppercase eyebrow treatment meant
+     for the column heads wins and the tradition names shout. */
+  .mx th.mx__rowh {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--surface);
+    text-transform: none;
+    letter-spacing: var(--tracking-normal);
+    font-family: var(--font-ui);
+    font-size: var(--size-caption);
+    font-weight: 500;
+    color: var(--ink);
+    border-right: var(--hairline-width) solid var(--hairline-strong);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    vertical-align: middle;
+  }
+
+  .mx__rowh > span {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  /* A column nothing has filled is dimmed in the head, so the reader can see at
+     a glance which parts of the schema are still ahead. */
+  .mx__col--empty {
+    color: var(--ink-soft);
+    opacity: 0.65;
+  }
+
+  .mx__cell {
+    padding: 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    border-right: var(--hairline-width) solid var(--hairline);
+    vertical-align: top;
+  }
+
+  .mx__cell button {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: var(--tap-min);
+    padding: var(--space-3);
+    text-align: left;
+    background: none;
+    border: 0;
+    font-family: var(--font-prose);
+    font-size: var(--size-caption);
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .mx__cell button:hover {
+    background: var(--lane-hover);
+  }
+
+  /* The badge inside a cell is the hatch swatch alone; the word would not fit
+     and the cell is already hatched. Its label survives for screen readers. */
+  .mx__cell .contested-badge {
+    padding: 2px;
+    border: 0;
+    background: none;
+  }
+
+  /* Hatching is the convention for contested material, but it must not be read
+     through. The value sits on a surface plate, the same way the deep dive's
+     matrix block seats its text, so the hatch surrounds the word rather than
+     crossing it. */
+  .mx__cell.hatch .mx__value {
+    background: var(--surface);
+    box-shadow: 0 0 0 3px var(--surface);
+  }
+
+  .mx__cell--empty {
+    background: var(--surface-sunken);
+  }
+
+  .mx__none {
+    display: block;
+    padding: var(--space-3);
+    color: var(--ink-soft);
+    min-height: var(--tap-min);
+  }
+
+  .mx tbody tr[hidden] {
+    display: none;
+  }
+
+  .mx-note,
+  .build-note {
+    color: var(--ink-soft);
+    padding-block: var(--space-4) 0;
+  }
+
+  .build-note {
+    padding-block: var(--space-3) var(--space-16);
+  }
+
+  @media (max-width: 48rem) {
+    .mx-wrap {
+      max-height: 70vh;
+    }
+  }
+</style>

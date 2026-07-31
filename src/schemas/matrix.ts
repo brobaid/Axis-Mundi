@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { contestable, requireContestedNote, slug, sourceRef, sourcingStatus } from './primitives.js';
+import { CONSTRAINED_VALUES, MATRIX_DIMENSIONS } from '../lib/dimensions.js';
 
 /**
  * Belief matrix schema — Phase 0 spec §7.
@@ -11,53 +12,16 @@ import { contestable, requireContestedNote, slug, sourceRef, sourcingStatus } fr
  *
  * Spec §2 principle: the matrix is EXTRACTED from deep-dive structured fields,
  * never rewritten. These records are the extraction target.
+ *
+ * The dimension list and the constrained value sets live in lib/dimensions.ts,
+ * which carries no Zod, because the matrix and compare islands need them in the
+ * browser and must not ship the schema layer to get them.
  */
-
-export const MATRIX_DIMENSIONS = [
-  'divine-concept',
-  'cosmology',
-  'afterlife',
-  'salvation-path',
-  'scripture-authority',
-  'clergy-leadership',
-  'worship-form',
-  'dietary-law',
-  'dress-modesty',
-  'conversion-stance',
-  'ethical-frame',
-  'view-of-others',
-  'calendar-system',
-] as const;
 
 export const matrixDimension = z.enum(MATRIX_DIMENSIONS);
-export type MatrixDimension = (typeof MATRIX_DIMENSIONS)[number];
 
-/** Human-facing column headings, in spec §7 order. */
-export const MATRIX_DIMENSION_LABELS: Record<MatrixDimension, string> = {
-  'divine-concept': 'Concept of the divine',
-  cosmology: 'Cosmology and creation',
-  afterlife: 'Afterlife',
-  'salvation-path': 'Path to salvation or liberation',
-  'scripture-authority': 'Scripture and authority structure',
-  'clergy-leadership': 'Clergy and leadership',
-  'worship-form': 'Worship form and frequency',
-  'dietary-law': 'Dietary law',
-  'dress-modesty': 'Dress and modesty codes',
-  'conversion-stance': 'Conversion and missionary stance',
-  'ethical-frame': 'Core ethical frame',
-  'view-of-others': 'View of other religions',
-  'calendar-system': 'Calendar system',
-};
-
-/**
- * The three dimensions the spec enumerates explicitly. The rest are "enum-ish":
- * free strings kept in kebab-case so they still filter cleanly.
- */
-export const CONSTRAINED_VALUES = {
-  'divine-concept': ['monotheist', 'non-theist', 'polytheist', 'monist', 'varies'],
-  afterlife: ['resurrection', 'reincarnation', 'rebirth', 'ancestral-realm', 'varies', 'none'],
-  'calendar-system': ['solar', 'lunar', 'lunisolar'],
-} as const satisfies Partial<Record<MatrixDimension, readonly string[]>>;
+export { MATRIX_DIMENSIONS, MATRIX_DIMENSION_LABELS, CONSTRAINED_VALUES } from '../lib/dimensions.js';
+export type { MatrixDimension } from '../lib/dimensions.js';
 
 const enumish = z
   .string()

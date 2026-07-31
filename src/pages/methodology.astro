@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { TRADITIONS } from '../lib/traditions';
+import { getStructural, includesUnsourced, tally } from '../lib/content';
 
 /**
  * Methodology page.
@@ -8,7 +9,40 @@ import { TRADITIONS } from '../lib/traditions';
  * Design language §3.2 rule 4 requires the site to state that the tradition-hue
  * associations are conventional rather than official. Phase 0 §9 requires the
  * sourcing and neutrality rules to be stated. Both live here.
+ *
+ * M4 also brought the pipeline ledger and the adherent figures down from the
+ * home page. Reporting how much content is parked is itself publishable — it is
+ * the state of the pipeline (spec §11), not the parked content — and this is
+ * where a reader comes to ask where a number came from.
  */
+
+const [eventTally, taxonomyTally, matrixTally, sourceTally, regionTally, snapshotTally] =
+  await Promise.all([
+    tally('events'),
+    tally('taxonomy'),
+    tally('matrix'),
+    tally('sources'),
+    tally('regions'),
+    tally('snapshots'),
+  ]);
+
+const collections = [
+  { name: 'Events', ...eventTally },
+  { name: 'Taxonomy nodes', ...taxonomyTally },
+  { name: 'Belief-matrix rows', ...matrixTally },
+  { name: 'Sources', ...sourceTally },
+  { name: 'Regions', ...regionTally },
+  { name: 'Era snapshots', ...snapshotTally },
+];
+
+/* Structural: the adherents block is sourced and carries its own citation. The
+   node's authored one-line summary is not rendered here and stays gated. */
+const taxonomy = await getStructural('taxonomy');
+
+const adherents = TRADITIONS.map((tradition) => ({
+  tradition,
+  data: taxonomy.find((n) => n.data.id === tradition.id && n.data.depth === 1)?.data.adherents,
+}));
 
 const tiers = [
   { tier: 'T1', label: 'Academic', detail: 'Oxford and Cambridge handbooks, Brill’s Encyclopaedia of Islam, Encyclopaedia Judaica, peer-reviewed journals.' },
@@ -88,6 +122,95 @@ const tiers = [
         Content that has not yet passed a source check is marked as such and held out of the
         production build. It is not published unsourced.
       </p>
+
+      <h3>What is in this build</h3>
+      <p>
+        Every record is a JSON file validated against a Zod schema mirroring the Phase 0 spec.
+        This is the current state of the pipeline, not a projection.
+      </p>
+      <div class="table-scroll">
+        <table class="tiers">
+          <thead>
+            <tr>
+              <th scope="col">Collection</th>
+              <th scope="col">Seeded</th>
+              <th scope="col">Checked</th>
+              <th scope="col">Pending</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              collections.map((c) => (
+                <tr>
+                  <th scope="row">{c.name}</th>
+                  <td class="mono">{c.total}</td>
+                  <td class="mono">{c.sourced}</td>
+                  <td class="mono">{c.todo > 0 ? c.todo : '—'}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="caption">
+        {
+          includesUnsourced
+            ? 'This build includes records awaiting a source check.'
+            : 'This build shows source-checked records only.'
+        }
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="measure">Adherent figures</h2>
+      <p class="measure">
+        Counts follow Pew unless the table says otherwise, and each is rendered exactly as its
+        source supports it &mdash; including the unit and the parenthetical. Two traditions have
+        no honest point estimate and are not given one. Shinto&rsquo;s count is contested by
+        definition, and the Chinese cluster has no single authoritative figure at all; in both
+        cases the note stands where a number would otherwise sit.
+      </p>
+      <div class="table-scroll">
+        <table class="tiers">
+          <thead>
+            <tr>
+              <th scope="col">Tradition</th>
+              <th scope="col">Figure</th>
+              <th scope="col">Basis</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              adherents.map(({ tradition, data }) => (
+                <tr>
+                  <th scope="row">
+                    <span class="swatch" style={`--tradition-hue: var(${tradition.hueToken})`} />
+                    {tradition.name}
+                  </th>
+                  <td>
+                    {data === undefined ? (
+                      <span class="caption">No sourced figure yet</span>
+                    ) : data.display === 'see note' ? (
+                      <span class="nofigure">No single figure</span>
+                    ) : (
+                      <span class="mono">{data.display}</span>
+                    )}
+                    {data?.contested && <span class="contested-badge">Contested</span>}
+                  </td>
+                  <td>
+                    {data?.basis}
+                    {(data?.contested ? data.contested_note : data?.note) && (
+                      <span class="figure-note caption">
+                        {data?.contested ? data.contested_note : data?.note}
+                      </span>
+                    )}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="section measure">
@@ -207,5 +330,28 @@ const tiers = [
 
   .tiers tbody th .swatch {
     margin-right: var(--space-2);
+  }
+
+  .section h3 {
+    margin-block: var(--space-8) var(--space-2);
+  }
+
+  /* Where a point estimate would sit and does not. Set in the interface face
+     rather than the mono numeral face, so it never reads as a hidden number. */
+  .nofigure {
+    font-family: var(--font-ui);
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  .tiers td .contested-badge {
+    margin-left: var(--space-2);
+  }
+
+  .figure-note {
+    display: block;
+    margin-top: var(--space-1);
+    max-width: 40ch;
   }
 </style>

@@ -1,5 +1,6 @@
 ---
-import { MATRIX_DIMENSION_LABELS, type MatrixCell } from '../schemas/matrix';
+import { MATRIX_DIMENSION_LABELS, valueLabel } from '../lib/dimensions';
+import type { MatrixCell } from '../schemas/matrix';
 
 /**
  * Belief-matrix cells, rendered inside a deep dive.
@@ -19,8 +20,7 @@ interface Props {
 const { cells } = Astro.props;
 
 /** Enum-ish values are stored kebab-case so they stay filterable (§7). */
-const label = (value: string): string =>
-  value.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
+const label = valueLabel;
 ---
 
 <dl class="mx" role="list">
