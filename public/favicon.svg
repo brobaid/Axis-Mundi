@@ -1,0 +1,12 @@
+<!--
+  Axis Mundi favicon: the Brass Meridian.
+
+  A favicon cannot reference CSS custom properties, so this is the one file
+  outside src/styles/tokens.css that names a colour. The value is --brass
+  (#9C7A2F), verbatim. If the brass token changes, change it here too.
+  Transparent ground, so it sits on light and dark browser chrome alike.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect x="15" y="8" width="2" height="19" fill="#9C7A2F"/>
+  <rect x="12.5" y="3.5" width="7" height="7" transform="rotate(45 16 7)" fill="#9C7A2F"/>
+</svg>

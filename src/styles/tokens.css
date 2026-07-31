@@ -114,7 +114,8 @@
   /* One shared component: the same weight and easing everywhere, drawing its
      color from the single --brass token, which mode-swaps as a set (§9). */
   --meridian-color: var(--brass);
-  --meridian-weight: 1.5px;
+  /* 2px, matching the design export's timeline playhead. */
+  --meridian-weight: 2px;
   --meridian-ease: var(--ease-meridian);
   --meridian-duration: var(--dur-meridian);
 
@@ -177,6 +178,11 @@
   /* Elevation (§5): 1px hairline + 2% shadow in light mode */
   --shadow-panel: 0 1px 2px rgb(32 27 22 / 4%), 0 6px 20px rgb(32 27 22 / 6%);
   --shadow-sheet: 0 -2px 20px rgb(32 27 22 / 8%);
+
+  /* Canvas dims 20% behind a panel (design language §7). */
+  --scrim: rgb(20 17 13 / 20%);
+  /* Lane hover, from the design export: brass at 4.5%. */
+  --lane-hover: rgb(156 122 47 / 4.5%);
 
   /* ===========================================================================
      Tradition hues (design language §3.2). Light bases are verbatim from the
@@ -263,6 +269,9 @@
 
   --shadow-panel: 0 1px 2px rgb(0 0 0 / 40%), 0 6px 20px rgb(0 0 0 / 45%);
   --shadow-sheet: 0 -2px 20px rgb(0 0 0 / 55%);
+
+  --scrim: rgb(0 0 0 / 45%);
+  --lane-hover: rgb(201 162 80 / 7%);
 
   /* ===========================================================================
      Tradition ramps, dark. Per §9: luminance-boosted, saturation eased, so the

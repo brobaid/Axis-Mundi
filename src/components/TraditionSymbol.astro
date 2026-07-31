@@ -1,0 +1,48 @@
+---
+import type { TraditionId } from '../schemas/primitives';
+import { traditionMeta } from '../lib/traditions';
+
+/**
+ * Renders one tradition symbol from the sprite.
+ *
+ * Requires <TraditionSymbols /> to be present once on the page.
+ *
+ * Design language §6: symbols are identifiers only — lane headers, chips,
+ * deep-dive mastheads. The symbol is decorative *markup* here because the
+ * tradition is always named in adjacent text (§3.2 rule 1: colour, and by the
+ * same principle a mark, never carries meaning alone). Pass `labelled` when the
+ * symbol stands alone and genuinely has to carry the name.
+ */
+
+interface Props {
+  tradition: TraditionId;
+  size?: number;
+  /** Tint the mark with the tradition hue. Off means it inherits `currentColor`. */
+  hued?: boolean;
+  /** Expose the tradition name to assistive tech. Only when no adjacent label. */
+  labelled?: boolean;
+  class?: string | undefined;
+}
+
+const { tradition, size = 15, hued = true, labelled = false, class: className } = Astro.props;
+const meta = traditionMeta(tradition);
+---
+
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  class:list={['tradition-symbol', className]}
+  style={hued ? `color: var(${meta.hueToken})` : undefined}
+  role={labelled ? 'img' : 'presentation'}
+  aria-label={labelled ? meta.name : undefined}
+  aria-hidden={labelled ? undefined : 'true'}
+>
+  <use href={`#symbol-${tradition}`}></use>
+</svg>
+
+<style>
+  .tradition-symbol {
+    flex: 0 0 auto;
+  }
+</style>

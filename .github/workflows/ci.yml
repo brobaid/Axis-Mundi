@@ -39,6 +39,11 @@ jobs:
       - name: Audit design tokens
         run: pnpm validate:tokens
 
+      # Layout invariants for the timeline canvas: density budget, rank gating,
+      # nothing overlaps, branch tints step (spec §4, kickoff M1).
+      - name: Check timeline invariants
+        run: pnpm validate:timeline
+
       - name: Lint
         run: pnpm lint
 
