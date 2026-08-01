@@ -38,9 +38,11 @@
       border-color var(--dur-micro) var(--ease-out);
   }
 
-  .mode-toggle:hover {
-    color: var(--ink);
-    border-color: var(--brass);
+  @media (hover: hover) {
+    .mode-toggle:hover {
+      color: var(--ink);
+      border-color: var(--brass);
+    }
   }
 
   .mode-toggle__dot {

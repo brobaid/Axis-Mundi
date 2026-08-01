@@ -285,8 +285,10 @@ const withoutEstimateWord = NUMBER_WORD[withoutEstimate] ?? String(withoutEstima
       color var(--dur-micro) var(--ease-out);
   }
 
-  .chip:hover:not(:disabled) {
-    border-color: var(--brass);
+  @media (hover: hover) {
+    .chip:hover:not(:disabled) {
+      border-color: var(--brass);
+    }
   }
 
   .chip[aria-pressed='true'] {

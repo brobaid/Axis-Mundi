@@ -18,6 +18,12 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* The top bar is sticky, so every anchor jump, every scrollIntoView and every
+     focus-scroll would otherwise land its target underneath it — all fourteen
+     section links on a deep dive included. This is the static fallback; the bar
+     measures itself and corrects this at runtime, because a hard-coded height
+     is a number waiting to drift from the type it is made of. */
+  scroll-padding-top: 8.5rem;
 }
 
 body {
@@ -132,8 +138,10 @@ a {
   transition: color var(--dur-micro) var(--ease-out);
 }
 
-a:hover {
-  color: var(--brass-hover);
+@media (hover: hover) {
+  a:hover {
+    color: var(--brass-hover);
+  }
 }
 
 /* --- Original scripts (design language §4.3) ------------------------------- */

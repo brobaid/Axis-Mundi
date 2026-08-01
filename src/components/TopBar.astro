@@ -32,6 +32,24 @@ const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/'
   </div>
 </header>
 
+<script>
+  /**
+   * Keep `scroll-padding-top` equal to the sticky bar's real height.
+   *
+   * The bar is two rows of type, so its height follows the type scale rather
+   * than any number we could write down. Measuring it means an anchor can never
+   * land underneath it, whatever the fonts do.
+   */
+  const bar = document.querySelector<HTMLElement>('.topbar');
+  if (bar !== null) {
+    const sync = (): void => {
+      document.documentElement.style.scrollPaddingTop = `${Math.ceil(bar.getBoundingClientRect().height) + 12}px`;
+    };
+    sync();
+    new ResizeObserver(sync).observe(bar);
+  }
+</script>
+
 <style>
   .topbar {
     position: sticky;

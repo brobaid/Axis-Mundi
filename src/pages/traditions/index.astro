@@ -195,9 +195,14 @@ const openCount = rooms.filter((r) => r.href !== undefined).length;
     transition: border-color var(--dur-micro) var(--ease-out);
   }
 
-  .dive:has(a:hover),
   .dive:has(a:focus-visible) {
     border-color: var(--brass);
+  }
+
+  @media (hover: hover) {
+    .dive:has(a:hover) {
+      border-color: var(--brass);
+    }
   }
 
   .dive--shut {

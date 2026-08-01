@@ -348,8 +348,10 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
     transition: border-color var(--dur-micro) var(--ease-out);
   }
 
-  a.door:hover {
-    border-color: var(--brass);
+  @media (hover: hover) {
+    a.door:hover {
+      border-color: var(--brass);
+    }
   }
 
   .door h3 {

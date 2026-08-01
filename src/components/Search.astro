@@ -282,9 +282,11 @@
       border-color var(--dur-micro) var(--ease-out);
   }
 
-  .search-open:hover {
-    color: var(--ink);
-    border-color: var(--brass);
+  @media (hover: hover) {
+    .search-open:hover {
+      color: var(--ink);
+      border-color: var(--brass);
+    }
   }
 
   @media (max-width: 30rem) {
@@ -385,9 +387,11 @@
     color: var(--ink);
   }
 
-  :global(.sr--active),
-  :global(.sr:hover) {
-    background: var(--lane-hover);
+  @media (hover: hover) {
+    :global(.sr--active),
+    :global(.sr:hover) {
+      background: var(--lane-hover);
+    }
   }
 
   :global(.sr__kind) {

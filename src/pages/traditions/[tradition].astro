@@ -570,9 +570,11 @@ const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.
     align-items: center;
   }
 
-  .dd-nav a:hover {
-    background: var(--surface);
-    color: var(--brass-ink);
+  @media (hover: hover) {
+    .dd-nav a:hover {
+      background: var(--surface);
+      color: var(--brass-ink);
+    }
   }
 
   /* --- sections --------------------------------------------------------- */

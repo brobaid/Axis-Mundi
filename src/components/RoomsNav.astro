@@ -127,8 +127,10 @@ const isCurrent = (href: string): 'page' | undefined =>
     transition: color var(--dur-micro) var(--ease-out);
   }
 
-  .room:hover {
-    color: var(--ink);
+  @media (hover: hover) {
+    .room:hover {
+      color: var(--ink);
+    }
   }
 
   .room[aria-current='page'] {

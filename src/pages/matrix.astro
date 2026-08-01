@@ -253,8 +253,10 @@ const bootstrap = { rows: view, sourceTitles };
       color var(--dur-micro) var(--ease-out);
   }
 
-  .chip:hover {
-    border-color: var(--brass);
+  @media (hover: hover) {
+    .chip:hover {
+      border-color: var(--brass);
+    }
   }
 
   /* Pressed state carries a fill, a border and a brass dot, so it is never
@@ -389,8 +391,10 @@ const bootstrap = { rows: view, sourceTitles };
     cursor: pointer;
   }
 
-  .mx__cell button:hover {
-    background: var(--lane-hover);
+  @media (hover: hover) {
+    .mx__cell button:hover {
+      background: var(--lane-hover);
+    }
   }
 
   /* The badge inside a cell is the hatch swatch alone; the word would not fit
