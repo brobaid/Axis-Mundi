@@ -1,17 +1,21 @@
 {
-  "id": "vesak",
-  "name": "Vesak",
-  "traditions": [
-    "buddhism"
-  ],
-  "calendar": "lunisolar",
-  "date_rule": "Set by a lunisolar rule, so it wanders within a window rather than holding a fixed date.",
-  "observed": {
-    "2024": "05-23",
-    "2025": "05-12",
-    "2026": "05-01",
-    "2027": "05-20"
-  },
-  "sources": [],
-  "sourcing": "todo"
+ "id": "vesak",
+ "name": "Vesak",
+ "traditions": [
+  "buddhism"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "Full moon of the second lunar month",
+ "observed": {
+  "2024": "05-23",
+  "2025": "05-12",
+  "2026": "05-01",
+  "2027": "05-20"
+ },
+ "summary": "The Buddha's birth, awakening, and passing, kept as one festival of light.",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "sourcing": "sourced"
 }

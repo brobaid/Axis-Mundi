@@ -1,0 +1,19 @@
+{
+ "id": "lumbini",
+ "name": "Lumbini",
+ "traditions": [
+  "buddhism"
+ ],
+ "place": "Nepal",
+ "location": {
+  "lat": 27.4695,
+  "lng": 83.2754
+ },
+ "region": "gangetic-plain",
+ "significance": "The Buddha's birthplace, marked since Ashoka's pillar.",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "sourcing": "sourced"
+}

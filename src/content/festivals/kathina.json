@@ -1,0 +1,16 @@
+{
+ "id": "kathina",
+ "name": "Kathina",
+ "traditions": [
+  "buddhism"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "End of the rains retreat",
+ "observed": {},
+ "summary": "The great lay offering of robes to the sangha, closing the monastic year.",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "sourcing": "sourced"
+}

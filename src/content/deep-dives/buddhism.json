@@ -1,44 +1,247 @@
 {
-  "id": "buddhism",
-  "tradition": "buddhism",
-  "name": "Buddhism",
-  "stat_box": {
-    "adherents": {
-      "display": "324 m (Pew, 2020)",
-      "estimate": 324000000,
-      "source": "pew-grl-2025",
-      "year": 2020,
-      "basis": "Enumerated by Pew. 4.1% of world population; the only major group that shrank between 2010 and 2020.",
-      "contested": false
-    },
-    "symbol": "dharmachakra"
+ "id": "buddhism",
+ "tradition": "buddhism",
+ "name": "Buddhism",
+ "stat_box": {
+  "adherents": {
+   "display": "324 m (Pew, 2020)",
+   "estimate": 324000000,
+   "source": "pew-grl-2025",
+   "year": 2020,
+   "basis": "Enumerated by Pew. 4.1% of world population; the only major group that shrank between 2010 and 2020.",
+   "contested": false
   },
-  "belief_dimensions": [
-    "divine-concept",
-    "cosmology",
-    "afterlife",
-    "salvation-path",
-    "scripture-authority",
-    "view-of-others"
+  "symbol": "dharmachakra"
+ },
+ "belief_dimensions": [
+  "divine-concept",
+  "cosmology",
+  "afterlife",
+  "salvation-path",
+  "scripture-authority",
+  "view-of-others"
+ ],
+ "law_dimensions": [
+  "dietary-law",
+  "dress-modesty",
+  "ethical-frame",
+  "conversion-stance",
+  "clergy-leadership",
+  "worship-form",
+  "calendar-system"
+ ],
+ "festivals": [
+  "vesak",
+  "kathina",
+  "losar"
+ ],
+ "sites": [
+  "bodh-gaya",
+  "lumbini",
+  "shwedagon"
+ ],
+ "figures": [
+  "buddha-figure",
+  "nagarjuna-figure",
+  "dalai-lama-xiv"
+ ],
+ "canon": [
+  {
+   "id": "pali-canon",
+   "title": "The Pali Canon (Tipitaka)",
+   "language": "Pali",
+   "composition": "oral from the 5th c. BCE; written c. 29 BCE",
+   "status": "Canonical in Theravada; its discourse collections are honored across all vehicles",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "mahayana-sutras",
+   "title": "The Mahayana sutras",
+   "language": "Sanskrit, preserved largely in Chinese and Tibetan",
+   "composition": "c. 1st c. BCE - 5th c. CE",
+   "status": "Canonical in Mahayana and Vajrayana, which adds the tantras; not accepted as the Buddha's word by Theravada",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "practices": [
+  {
+   "id": "meditation",
+   "name": "Meditation",
+   "kind": "meditation",
+   "summary": "The tradition's laboratory: calm and insight practice, Zen's sitting, the Vajrayana's visualizations.",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "offerings",
+   "name": "Offerings",
+   "kind": "offering",
+   "summary": "Flowers, incense, and light before the image, honoring the awakened and recollecting impermanence.",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "chanting",
+   "name": "Chanting",
+   "kind": "chanting",
+   "frequency": "Daily",
+   "summary": "Recitation of refuge, precepts, and scripture, the daily liturgy of monastery and home.",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "dana",
+   "name": "Dana",
+   "kind": "almsgiving",
+   "summary": "Giving, above all the lay gift of food and requisites to the sangha, the engine of merit.",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "uposatha",
+   "name": "Uposatha",
+   "kind": "observance",
+   "frequency": "The lunar fortnight's observance days",
+   "summary": "The observance days of the lunar fortnight, kept with precepts, teaching, and renewal.",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "rites": [
+  {
+   "id": "birth",
+   "stage": "birth",
+   "name": "Birth",
+   "summary": "Blessing ceremonies for the newborn vary by culture; monks chant protection and the child is presented at the temple.",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "coming-of-age",
+   "stage": "coming-of-age",
+   "name": "Coming of age",
+   "summary": "Ordination, permanent or temporary: in Theravada lands a season in robes remains a young man's rite of passage.",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "marriage",
+   "stage": "marriage",
+   "name": "Marriage",
+   "summary": "Blessed by monks but civil in nature; the tradition treats it as a lay matter, not a sacrament.",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "death",
+   "stage": "death",
+   "name": "Death",
+   "summary": "The tradition's central rite: chanting, merit transferred to the dead, and in Tibetan and Chinese practice the forty-nine days of passage.",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "misconceptions": [
+  {
+   "id": "buddha-is-a-god",
+   "claim": "Buddhists worship the Buddha as a god.",
+   "correction": "The Buddha is honored as the awakened teacher, not a creator; how much aid awakened beings give differs by branch, and none makes him God.",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "buddhism-is-philosophy",
+   "claim": "Buddhism is a philosophy, not a religion.",
+   "correction": "It has monastics, ritual, scripture, festivals, and devotion; the philosophy is real, and so is the religion around it.",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "nirvana-is-annihilation",
+   "claim": "Nirvana means annihilation.",
+   "correction": "It is the end of craving and the round of rebirth; the tradition itself refuses to describe it as either existence or extinction.",
+   "sources": [
+    "princeton-dict-buddhism-2014",
+    "harvey-buddhism-2013"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "further_reading": [
+  "harvey-buddhism-2013",
+  "princeton-dict-buddhism-2014"
+ ],
+ "sourcing": "sourced",
+ "overview": {
+  "body": "Buddhism is a path rather than a creed about God: the way taught by Siddhartha Gautama, the Buddha, for uprooting the craving that binds beings to suffering and the round of rebirth. Its 324 million adherents by affiliation understate its reach, since across East Asia it lives inside plural religious lives that censuses cannot count. From one teacher in fifth-century-BCE India it became Asia's great missionary religion, carried in three broad vehicles: the Theravada of Sri Lanka and mainland Southeast Asia, the Mahayana of East Asia, and the Vajrayana of Tibet and Mongolia, each with its own canon, practice, and genius, all honoring the same awakening.",
+  "sources": [
+   "princeton-dict-buddhism-2014",
+   "harvey-buddhism-2013"
   ],
-  "law_dimensions": [
-    "dietary-law",
-    "dress-modesty",
-    "ethical-frame",
-    "conversion-stance",
-    "clergy-leadership",
-    "worship-form",
-    "calendar-system"
-  ],
-  "festivals": [
-    "vesak"
-  ],
-  "sites": [],
-  "figures": [],
-  "canon": [],
-  "practices": [],
-  "rites": [],
-  "misconceptions": [],
-  "further_reading": [],
   "sourcing": "sourced"
+ },
+ "origins": {
+  "body": "According to tradition, Siddhartha Gautama, born to rule a small state below the Himalayas, renounced his inheritance at twenty-nine, and after six years' search awoke under the Bodhi tree: the Buddha, the awakened one. He taught for forty-five years across the Gangetic plain, founding the [[sangha]], the monastic community that preserved his discourses; scholarly dating centers his death on the 480s BCE. Ashoka's third-century patronage carried the dharma across India and beyond, to Sri Lanka where the Pali Canon was written down, along the Silk Road into China by the first century CE, onward to Korea and Japan, and over the Himalayas into Tibet. In the land of its birth it faded by the thirteenth century, to return in the twentieth; everywhere else it became native, and in the modern West it has planted its newest communities.",
+  "sources": [
+   "princeton-dict-buddhism-2014",
+   "harvey-buddhism-2013"
+  ],
+  "sourcing": "sourced"
+ },
+ "core_beliefs": {
+  "body": "The four noble truths frame everything: suffering pervades conditioned existence; craving drives it; it can end; and the eightfold path, right view through right concentration, is the way to its ending, [[nirvana]]. All conditioned things are impermanent, unsatisfactory, and without self: what wanders rebirth is not a soul but a stream of conditions, arising dependently. Ethics, meditation, and wisdom train that stream; compassion grows with insight, and in the Mahayana the [[bodhisattva]]'s vow to awaken for all beings becomes the ideal itself. The traditions differ over how many buddhas aid the path and how much help they give, from the Theravada's sober reverence to Pure Land reliance on Amitabha's vow, and the museum's tree carries those differences.",
+  "sources": [
+   "princeton-dict-buddhism-2014",
+   "harvey-buddhism-2013"
+  ],
+  "sourcing": "sourced"
+ }
 }

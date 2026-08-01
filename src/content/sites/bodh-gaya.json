@@ -1,0 +1,19 @@
+{
+ "id": "bodh-gaya",
+ "name": "Bodh Gaya",
+ "traditions": [
+  "buddhism"
+ ],
+ "place": "Bihar",
+ "location": {
+  "lat": 24.6959,
+  "lng": 84.9911
+ },
+ "region": "gangetic-plain",
+ "significance": "The Bodhi tree and the Mahabodhi temple, the place of awakening and the tradition's center of pilgrimage.",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "sourcing": "sourced"
+}

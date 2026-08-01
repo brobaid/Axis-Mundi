@@ -1,0 +1,16 @@
+{
+ "id": "losar",
+ "name": "Losar",
+ "traditions": [
+  "buddhism"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "Tibetan lunar new year",
+ "observed": {},
+ "summary": "The Tibetan new year's purification and celebration, opening the year's practice.",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "sourcing": "sourced"
+}

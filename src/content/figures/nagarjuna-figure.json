@@ -1,0 +1,23 @@
+{
+ "id": "nagarjuna-figure",
+ "name": "Nagarjuna",
+ "traditions": [
+  "buddhism"
+ ],
+ "born": {
+  "year": 150,
+  "precision": "year"
+ },
+ "died": {
+  "year": 250,
+  "precision": "year"
+ },
+ "role": "Philosopher of emptiness",
+ "summary": "The philosopher of emptiness whose Madhyamaka underlies most later Buddhist thought.",
+ "events": [],
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "sourcing": "sourced"
+}

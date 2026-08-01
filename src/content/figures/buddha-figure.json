@@ -1,0 +1,19 @@
+{
+ "id": "buddha-figure",
+ "name": "The Buddha (Siddhartha Gautama)",
+ "traditions": [
+  "buddhism"
+ ],
+ "born": {
+  "year": -450,
+  "precision": "century"
+ },
+ "role": "The awakened teacher",
+ "summary": "The awakened teacher whose path the tradition follows; scholarly dating centers his death on the 480s BCE.",
+ "events": [],
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "sourcing": "sourced"
+}

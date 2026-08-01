@@ -1,0 +1,19 @@
+{
+ "id": "shwedagon",
+ "name": "Shwedagon Pagoda",
+ "traditions": [
+  "buddhism"
+ ],
+ "place": "Yangon",
+ "location": {
+  "lat": 16.7983,
+  "lng": 96.1494
+ },
+ "region": "mainland-southeast-asia",
+ "significance": "The golden stupa of Myanmar, Theravada devotion at its most radiant.",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "sourcing": "sourced"
+}
