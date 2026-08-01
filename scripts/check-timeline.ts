@@ -33,6 +33,10 @@ import {
 } from '../src/lib/timeline-model.js';
 import { displayDate } from '../src/lib/display-date.js';
 import {
+  CONTESTED_AT,
+  CONTESTED_R,
+  LABEL_AT,
+  LABEL_AT_CONTESTED,
   TICK_ADVANCE,
   TICK_FONT_SIZE,
   TICK_ROW_HEIGHT,
@@ -309,6 +313,29 @@ for (const { name, drill, view } of SCENARIOS) {
     }
     ok();
   }
+}
+
+/*
+  The contested mark must clear the label it stands beside.
+
+  Its position used to be guessed from a character count — a proportional face
+  has no such thing — and four of the five marks landed wrong, two of them
+  inside their own label. It is a fixed offset from the node dot now, and the
+  arithmetic that keeps it clear of the text is asserted rather than assumed.
+*/
+{
+  const markEnds = CONTESTED_AT + CONTESTED_R;
+  if (markEnds >= LABEL_AT_CONTESTED) {
+    fail(
+      `tree: the contested mark ends at ${markEnds} and a contested node's label ` +
+        `starts at ${LABEL_AT_CONTESTED} — the mark would sit inside the text`,
+    );
+  }
+  /* And a node without one must not leave a gap where a mark would have been. */
+  if (LABEL_AT >= LABEL_AT_CONTESTED) {
+    fail(`tree: an unmarked label starts at ${LABEL_AT}, no closer than a marked one`);
+  }
+  ok();
 }
 
 if (failures.length > 0) {

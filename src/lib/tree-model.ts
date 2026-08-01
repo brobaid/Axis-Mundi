@@ -66,6 +66,22 @@ export interface TreeLayout {
 }
 
 export const ROW_HEIGHT = 22;
+
+/* ── the node row's own geometry ────────────────────────────────────────── */
+
+/*
+  Where a node's marks sit, relative to its dot.
+
+  Named here rather than written into the template, because the invariant
+  between them — the contested mark must end before the label begins — is the
+  thing that broke: the mark used to be placed at a character count past the
+  end of the label, which a proportional face does not have, and four of five
+  landed wrong. Both numbers in one place means the check can hold them to it.
+*/
+export const CONTESTED_AT = 12;
+export const CONTESTED_R = 3;
+export const LABEL_AT = 10;
+export const LABEL_AT_CONTESTED = 21;
 export const TRADITION_GAP = 14;
 const PAD_TOP = 18;
 

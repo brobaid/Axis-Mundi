@@ -5,6 +5,10 @@ import TraditionSymbols from '../components/TraditionSymbols.astro';
 import { getPublishable, getStructural } from '../lib/content';
 import { TRADITIONS } from '../lib/traditions';
 import {
+  CONTESTED_AT,
+  CONTESTED_R,
+  LABEL_AT,
+  LABEL_AT_CONTESTED,
   ROW_HEIGHT,
   TICK_FONT_SIZE,
   TICK_ROW_HEIGHT,
@@ -223,16 +227,16 @@ const bootstrap = {
                   */
                   <rect
                     class="tree-node__contested"
-                    x={n.x + 12 - 3}
-                    y={n.y - 3}
-                    width={6}
-                    height={6}
-                    transform={`rotate(45 ${n.x + 12} ${n.y})`}
+                    x={n.x + CONTESTED_AT - CONTESTED_R}
+                    y={n.y - CONTESTED_R}
+                    width={CONTESTED_R * 2}
+                    height={CONTESTED_R * 2}
+                    transform={`rotate(45 ${n.x + CONTESTED_AT} ${n.y})`}
                   >
                     <title>Contested classification</title>
                   </rect>
                 )}
-                <text x={n.x + (n.contested ? 21 : 10)} y={n.y + 4}>{n.name}</text>
+                <text x={n.x + (n.contested ? LABEL_AT_CONTESTED : LABEL_AT)} y={n.y + 4}>{n.name}</text>
               </g>
             ))
           }
