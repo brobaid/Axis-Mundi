@@ -10,7 +10,11 @@ permissions:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  # Never on main. The standing rule is that CI verifies each commit
+  # individually, and cancelling in progress silently defeats it: three pushes
+  # a minute apart leave two commits with a cancelled run and one verified
+  # tree. Elsewhere superseding a run is still the right economy.
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 env:
   # The build must not reach the network. Astro's telemetry ping is the only
