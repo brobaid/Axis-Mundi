@@ -26,9 +26,8 @@ const { room, line } = Astro.props;
     </svg>
     {line}
   </p>
-  <button type="button" class="rotate__close" data-landscape-dismiss aria-label="Dismiss">
-    Got it
-  </button>
+  <!-- WCAG 2.5.3: the accessible name has to contain the visible label. -->
+  <button type="button" class="rotate__close" data-landscape-dismiss>Got it</button>
 </div>
 
 <script>

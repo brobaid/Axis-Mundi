@@ -8,7 +8,10 @@
  */
 ---
 
-<button type="button" class="search-open" data-search-open aria-haspopup="dialog">
+<!-- The visible label is display:none on a phone, which left the button with
+     no accessible name at all there. The aria-label matches it exactly, so a
+     wide viewport announces one name rather than two. -->
+<button type="button" class="search-open" data-search-open aria-haspopup="dialog" aria-label="Search">
   <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
     <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
       <circle cx="11" cy="11" r="6.5"></circle>

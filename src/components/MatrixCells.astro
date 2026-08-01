@@ -23,10 +23,13 @@ const { cells } = Astro.props;
 const label = valueLabel;
 ---
 
-<dl class="mx" role="list">
+<!-- No role overrides: `role="list"` on a <dl> takes the dt/dd pairs out of
+     the description list in the accessibility tree, which is exactly the
+     association a matrix cell needs. Native semantics say it already. -->
+<dl class="mx">
   {
     cells.map((cell) => (
-      <div class:list={['mx__cell', cell.contested && 'mx__cell--contested']} role="listitem">
+      <div class:list={['mx__cell', cell.contested && 'mx__cell--contested']}>
         <dt>{MATRIX_DIMENSION_LABELS[cell.dimension]}</dt>
         <dd>
           <span class="mx__value">

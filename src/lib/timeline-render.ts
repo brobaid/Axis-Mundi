@@ -138,16 +138,16 @@ function renderLane(layout: LaneLayout, view: Viewport, symbolFor: (id: string) 
     : '';
 
   return (
-    `<div class="tl-lane" role="row" style="--tradition-base: var(--t-${lane.tradition});` +
+    `<div class="tl-lane" style="--tradition-base: var(--t-${lane.tradition});` +
     `--tradition-hue: color-mix(in srgb, var(--t-${lane.tradition}) ${lane.tintPercent.toFixed(1)}%, var(--surface))">` +
     `<${lane.drillable ? 'button type="button"' : 'div'} class="tl-lane__head"${drill}` +
-    ` title="${esc(title)}" role="rowheader">` +
+    ` title="${esc(title)}">` +
     mark +
     `<span class="tl-lane__name">${esc(lane.name)}</span>` +
     contested +
     chevron +
     `</${lane.drillable ? 'button' : 'div'}>` +
-    `<div class="tl-track" role="gridcell">${nodes}${more}${empty}</div>` +
+    `<div class="tl-track">${nodes}${more}${empty}</div>` +
     `</div>`
   );
 }
@@ -316,7 +316,12 @@ export function renderCanvas(
     `<div class="tl-plate__sub">${esc(options.subtitle)}</div>` +
     `</div></div>` +
     `<div class="tl-ruler">${rulerHtml}</div>` +
-    `<div class="tl-lanes" role="grid" aria-label="Timeline lanes">${lanesHtml}${threadsHtml}</div>` +
+    /* A group, not a grid. The grid roles claimed two-dimensional cell
+       navigation this room does not implement — arrows pan and zoom — and
+       `rowheader` is not a role a button may take, so the markup was both
+       promising and invalid. The lane buttons and event buttons carry their own
+       names, and the list view below is the accessible path through the data. */
+    `<div class="tl-lanes" role="group" aria-label="Timeline lanes">${lanesHtml}${threadsHtml}</div>` +
     meridian +
     `</div>`
   );

@@ -85,7 +85,7 @@ const bootstrap = {
 
 <BaseLayout
   title="Family tree"
-  description="Descent across all ten traditions and their branches, anchored to time where a founding record exists, with contested classifications shown rather than resolved."
+  description="Descent across ten traditions and their branches, anchored to time where a founding record exists, with contested classifications shown rather than resolved."
 >
   <TraditionSymbols />
 
@@ -131,6 +131,7 @@ const bootstrap = {
         class="tree-svg"
         viewBox={`0 0 ${layout.width} ${layout.height}`}
         preserveAspectRatio="xMinYMin meet"
+        style={`--tree-ratio: ${layout.width} / ${layout.height}`}
         role="img"
         aria-label={`Family tree of ${TRADITIONS.length} traditions and their branches`}
       >
@@ -323,11 +324,15 @@ const bootstrap = {
     background: var(--surface);
   }
 
+  /* The box is reserved from the viewBox's own ratio, so the page does not
+     jump when the drawing lands: `height: auto` alone left the browser to
+     guess a replaced element's height and then correct it. */
   .tree-svg {
     display: block;
     min-width: 56rem;
     width: 100%;
     height: auto;
+    aspect-ratio: var(--tree-ratio);
   }
 
   .tree-axis line {

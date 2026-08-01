@@ -384,6 +384,8 @@ const bootstrap = {
     display: block;
     width: 100%;
     height: auto;
+    /* DEFAULT_FRAME's own ratio, so the plate's box exists before it draws. */
+    aspect-ratio: 2 / 1;
   }
 
   .map-frame :global(.map-ocean) {
