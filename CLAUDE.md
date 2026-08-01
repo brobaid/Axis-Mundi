@@ -51,16 +51,24 @@ no CMS, and none should ever be added.
 - **Local gate before every push, non-negotiable:** `pnpm validate:content`, `pnpm lint` and `pnpm build` must all pass locally. Never push with any of them failing.
 - Conventional commit messages, one concern each.
 - CI runs on every push and is the sourcing gate. It must stay green on `main`. It additionally runs `validate:install`, `validate:tokens`, `validate:timeline` and `validate:links`; `pnpm check` runs the whole set locally.
-- **Dependencies: the tree must install two ways, and both lockfiles are load-bearing.**
+- **Dependencies: npm deploys, pnpm develops, and both lockfiles are load-bearing.**
   A build that passes every check is still undeliverable if the deploy cannot install it —
   `@eslint/js@^10` against `eslint@^9` once shipped a fully verified commit that production
   never got past `npm install`, because pnpm resolves a conflicting peer with a warning and
-  npm refuses outright. So: `package-lock.json` and `pnpm-lock.yaml` are both committed and
-  both must match `package.json`; CI installs with `npm ci` and no cache, the way a deploy
-  does; and `validate:install` asserts both. Never add `--legacy-peer-deps`, `--force`, or an
-  `.npmrc` that relaxes peer resolution — those make the gate pass and the deploy fail, which
-  is the failure this rule exists to prevent. Regenerate **both** lockfiles whenever
-  `package.json` changes, and do not delete either without settling which manager the deploy
-  actually uses.
+  npm refuses outright. **The deploy path is npm only:** `vercel.json` installs with `npm ci`
+  and builds with `npm run`, and CI installs the same way with no cache. pnpm stays for local
+  work and keeps its lockfile. So: `package-lock.json` and `pnpm-lock.yaml` are both committed
+  and both must match `package.json`, regenerate **both** whenever `package.json` changes, and
+  `validate:install` asserts both. Never add `--legacy-peer-deps`, `--force`, or an `.npmrc`
+  that relaxes peer resolution — those make the gate pass and the deploy fail, which is the
+  failure this rule exists to prevent.
+- **Nothing on the deploy path may invoke `pnpm`,** including indirectly. npm ships with Node
+  and pnpm does not, so a composite script that shells out to `pnpm` turns a missing toolchain
+  into a failed deploy: `npm run validate` once exited 127 for exactly that reason. Composite
+  scripts chain with `npm run`; `pnpm check` still works locally because pnpm is only ever the
+  outer runner.
+- **A change to how the site installs, builds or deploys gets its own commit and its own line
+  in the report,** never a clause inside a feature run. `vercel.json` and the pnpm choice both
+  rode in unremarked with the scaffold and cost two runs to find.
 - The owner reviews from a phone, so check mobile (390px) before pushing anything visual.
 - When a spec and an implementation convenience conflict, the spec wins; if the spec seems wrong, stop and ask instead of deviating.

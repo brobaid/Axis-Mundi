@@ -17,13 +17,12 @@
  *   2. Nothing committed to the repo quietly relaxes that. `legacy-peer-deps`
  *      in an .npmrc would make every check here pass and the deploy still fail,
  *      which is the exact shape of the bug this file exists to prevent.
- *   3. The pnpm lockfile still satisfies the manifest, because `vercel.json`
- *      names pnpm as the install command and a lockfile nobody verifies is how
- *      a manifest and its lock drift apart in the first place.
+ *   3. The pnpm lockfile still satisfies the manifest. pnpm is off the deploy
+ *      path now, but it is still what a developer installs with, and a lockfile
+ *      nobody verifies is how a manifest and its lock drift apart.
  *
- * Neither manager is the "real" one here on purpose. The deploy has used one
- * of them and the config names the other; until that is settled, both have to
- * work, and the cost of proving it is under two seconds.
+ * npm is the deploy's manager and pnpm is the local one, so both have to work
+ * and the cost of proving it is under two seconds.
  */
 
 import { execFileSync } from 'node:child_process';
@@ -100,15 +99,26 @@ for (const file of ['.npmrc', '.yarnrc.yml']) {
 
 /* ── 3. the pnpm lockfile still matches the manifest ────────────────────── */
 
+let pnpmChecked = false;
 if (existsSync(join(ROOT, 'pnpm-lock.yaml'))) {
-  /* Resolution only: this rewrites nothing and links nothing, and fails the
-     same way `pnpm install --frozen-lockfile` would on a runner. */
-  const pnpm = run('pnpm', ['install', '--frozen-lockfile', '--lockfile-only']);
-  if (pnpm.code !== 0) {
-    fail(
-      'pnpm install --frozen-lockfile',
-      `exited ${pnpm.code}, so pnpm-lock.yaml no longer matches package.json:\n      ${tail(pnpm.out)}`,
-    );
+  /* pnpm is a local convenience and is deliberately not on the deploy path, so
+     it may simply be absent. That is not a failure — but it is not a pass
+     either, and saying so out loud is the whole point: a check that quietly
+     skips is a check that has stopped checking. CI installs pnpm precisely so
+     this always runs somewhere. */
+  if (run('pnpm', ['--version']).code !== 0) {
+    console.log('  pnpm not installed — skipping the pnpm-lock.yaml check (CI runs it).');
+  } else {
+    /* Resolution only: this rewrites nothing and links nothing, and fails the
+       same way `pnpm install --frozen-lockfile` would on a runner. */
+    const pnpm = run('pnpm', ['install', '--frozen-lockfile', '--lockfile-only']);
+    pnpmChecked = true;
+    if (pnpm.code !== 0) {
+      fail(
+        'pnpm install --frozen-lockfile',
+        `exited ${pnpm.code}, so pnpm-lock.yaml no longer matches package.json:\n      ${tail(pnpm.out)}`,
+      );
+    }
   }
 }
 
@@ -124,4 +134,6 @@ if (problems.length > 0) {
   process.exit(1);
 }
 
-console.log('  Install check passed — npm ci resolves, and both lockfiles match the manifest.');
+console.log(
+  `  Install check passed — npm ci resolves${pnpmChecked ? ', and both lockfiles match the manifest' : ' and matches the manifest'}.`,
+);
