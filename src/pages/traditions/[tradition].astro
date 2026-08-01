@@ -169,6 +169,13 @@ const demographics = publishable(dive.demographics);
 const canon = dive.canon.filter((c) => includesUnsourced || c.sourcing !== 'todo');
 const practices = dive.practices.filter((p) => includesUnsourced || p.sourcing !== 'todo');
 const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.sourcing !== 'todo');
+
+/* Seven of the ten display strings already carry their year; repeating it read
+   as "2.3 bn (Pew, 2020) (2020)". The two census figures do not, and there the
+   year is the only thing telling the reader the count is a decade old. */
+const adherentYear = dive.stat_box.adherents?.year;
+const showAdherentYear =
+  adherentYear !== undefined && !dive.stat_box.adherents?.display.includes(String(adherentYear));
 ---
 
 <BaseLayout
@@ -200,8 +207,11 @@ const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.
             <dt>Adherents</dt>
             <dd>
               {dive.stat_box.adherents.display}
-              {dive.stat_box.adherents.year && ` (${dive.stat_box.adherents.year})`}
-              <span class="dd-pending"> · unverified</span>
+              {showAdherentYear && ` (${adherentYear})`}
+              {/* An unsourced figure says so. A cited one does not: the citation
+                  stands in the Sources section below. */}
+              {!dive.stat_box.adherents.source && <span class="dd-pending"> · unverified</span>}
+              {dive.stat_box.adherents.contested && <span class="contested-badge">Contested</span>}
             </dd>
           </>
         )
