@@ -1,0 +1,18 @@
+{
+ "id": "ise-jingu",
+ "name": "Ise Grand Shrine",
+ "traditions": [
+  "shinto"
+ ],
+ "place": "Mie",
+ "location": {
+  "lat": 34.455,
+  "lng": 136.7256
+ },
+ "region": "japanese-archipelago",
+ "significance": "Amaterasu's sanctuary, rebuilt anew every twenty years for thirteen centuries.",
+ "sources": [
+  "hardacre-shinto-2017"
+ ],
+ "sourcing": "sourced"
+}

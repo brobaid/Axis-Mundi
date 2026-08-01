@@ -1,0 +1,18 @@
+{
+ "id": "fushimi-inari",
+ "name": "Fushimi Inari Taisha",
+ "traditions": [
+  "shinto"
+ ],
+ "place": "Kyoto",
+ "location": {
+  "lat": 34.9671,
+  "lng": 135.7727
+ },
+ "region": "japanese-archipelago",
+ "significance": "Head shrine of Inari, its mountain path roofed by ten thousand vermilion gates.",
+ "sources": [
+  "hardacre-shinto-2017"
+ ],
+ "sourcing": "sourced"
+}

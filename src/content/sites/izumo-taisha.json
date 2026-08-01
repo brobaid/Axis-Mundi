@@ -1,0 +1,18 @@
+{
+ "id": "izumo-taisha",
+ "name": "Izumo Taisha",
+ "traditions": [
+  "shinto"
+ ],
+ "place": "Shimane",
+ "location": {
+  "lat": 35.402,
+  "lng": 132.6857
+ },
+ "region": "japanese-archipelago",
+ "significance": "The great shrine of Okuninushi, where the kami of all Japan gather in the tenth month.",
+ "sources": [
+  "hardacre-shinto-2017"
+ ],
+ "sourcing": "sourced"
+}

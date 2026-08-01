@@ -1,0 +1,22 @@
+{
+ "id": "nakayama-miki",
+ "name": "Nakayama Miki",
+ "traditions": [
+  "shinto"
+ ],
+ "born": {
+  "year": 1798,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1887,
+  "precision": "exact"
+ },
+ "role": "Founder of Tenrikyo",
+ "summary": "The farm wife whose revelations founded Tenrikyo, greatest of the movements later classed as sect Shinto.",
+ "events": [],
+ "sources": [
+  "hardacre-shinto-2017"
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,15 @@
+{
+ "id": "gion-matsuri",
+ "name": "Gion Matsuri",
+ "traditions": [
+  "shinto"
+ ],
+ "calendar": "solar",
+ "date_rule": "July",
+ "observed": {},
+ "summary": "Kyoto's month-long festival of Yasaka shrine, the grandest of the matsuri.",
+ "sources": [
+  "hardacre-shinto-2017"
+ ],
+ "sourcing": "sourced"
+}

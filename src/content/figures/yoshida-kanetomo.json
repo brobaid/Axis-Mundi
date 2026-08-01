@@ -1,0 +1,22 @@
+{
+ "id": "yoshida-kanetomo",
+ "name": "Yoshida Kanetomo",
+ "traditions": [
+  "shinto"
+ ],
+ "born": {
+  "year": 1435,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1511,
+  "precision": "exact"
+ },
+ "role": "Theologian of \"one and only Shinto\"",
+ "summary": "The theologian of \"one and only Shinto,\" first to claim the tradition's independence from Buddhism.",
+ "events": [],
+ "sources": [
+  "hardacre-shinto-2017"
+ ],
+ "sourcing": "sourced"
+}

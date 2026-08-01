@@ -1,0 +1,15 @@
+{
+ "id": "hatsumode",
+ "name": "Hatsumode",
+ "traditions": [
+  "shinto"
+ ],
+ "calendar": "solar",
+ "date_rule": "January 1-3",
+ "observed": {},
+ "summary": "The year's first shrine visit, made by tens of millions.",
+ "sources": [
+  "hardacre-shinto-2017"
+ ],
+ "sourcing": "sourced"
+}

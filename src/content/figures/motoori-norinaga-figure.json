@@ -1,0 +1,22 @@
+{
+ "id": "motoori-norinaga-figure",
+ "name": "Motoori Norinaga",
+ "traditions": [
+  "shinto"
+ ],
+ "born": {
+  "year": 1730,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1801,
+  "precision": "exact"
+ },
+ "role": "Kokugaku scholar",
+ "summary": "The kokugaku scholar whose Kojiki studies gave Shinto its modern self-understanding.",
+ "events": [],
+ "sources": [
+  "hardacre-shinto-2017"
+ ],
+ "sourcing": "sourced"
+}

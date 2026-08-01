@@ -1,43 +1,217 @@
 {
-  "id": "shinto",
-  "tradition": "shinto",
-  "name": "Shinto",
-  "stat_box": {
-    "adherents": {
-      "display": "see note",
-      "source": "japan-aca-yearbook",
-      "basis": "Not enumerated by Pew.",
-      "contested": true,
-      "contested_note": "Shinto adherence is contested by definition. Shrine-affiliation registers count roughly 80 to 90 million; self-identification surveys yield a few percent of Japan's population. Both positions stand; neither is \"the\" number."
-    },
-    "symbol": "torii"
+ "id": "shinto",
+ "tradition": "shinto",
+ "name": "Shinto",
+ "stat_box": {
+  "adherents": {
+   "display": "see note",
+   "source": "japan-aca-yearbook",
+   "basis": "Not enumerated by Pew.",
+   "contested": true,
+   "contested_note": "Shinto adherence is contested by definition. Shrine-affiliation registers count roughly 80 to 90 million; self-identification surveys yield a few percent of Japan's population. Both positions stand; neither is \"the\" number."
   },
-  "belief_dimensions": [
-    "divine-concept",
-    "cosmology",
-    "afterlife",
-    "salvation-path",
-    "scripture-authority",
-    "view-of-others"
+  "symbol": "torii"
+ },
+ "belief_dimensions": [
+  "divine-concept",
+  "cosmology",
+  "afterlife",
+  "salvation-path",
+  "scripture-authority",
+  "view-of-others"
+ ],
+ "law_dimensions": [
+  "dietary-law",
+  "dress-modesty",
+  "ethical-frame",
+  "conversion-stance",
+  "clergy-leadership",
+  "worship-form",
+  "calendar-system"
+ ],
+ "festivals": [
+  "hatsumode",
+  "gion-matsuri",
+  "niiname-sai"
+ ],
+ "sites": [
+  "ise-jingu",
+  "izumo-taisha",
+  "fushimi-inari"
+ ],
+ "figures": [
+  "motoori-norinaga-figure",
+  "yoshida-kanetomo",
+  "nakayama-miki"
+ ],
+ "canon": [
+  {
+   "id": "kojiki-nihon-shoki",
+   "title": "Kojiki and Nihon Shoki",
+   "language": "Old Japanese and Classical Chinese",
+   "composition": "712 and 720 CE",
+   "status": "Foundational chronicles fixing the kami narratives; revered and studied, but not revealed scripture, and Shinto has none",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "practices": [
+  {
+   "id": "shrine-visiting",
+   "name": "Shrine visiting",
+   "kind": "shrine visiting",
+   "frequency": "Everyday",
+   "summary": "Through the torii, water at the basin, offering, two bows, two claps, one bow: the everyday grammar of the tradition.",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "harae",
+   "name": "Harae",
+   "kind": "purification",
+   "frequency": "Before rites and after pollution",
+   "summary": "Purification by water, salt, and the priest's wand, before rites and after pollution.",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "offerings",
+   "name": "Offerings",
+   "kind": "offering",
+   "summary": "Food, sake, and the sakaki branch presented to the kami, at household kamidana and shrine alike.",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "matsuri",
+   "name": "Matsuri",
+   "kind": "festival",
+   "summary": "The shrine festival, when the kami processes through its neighborhood in the mikoshi and the community feasts it.",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "omamori",
+   "name": "Omamori",
+   "kind": "amulet",
+   "frequency": "Renewed with the year",
+   "summary": "Amulets, votive tablets, and fortunes: portable blessing and petition, renewed with the year.",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "rites": [
+  {
+   "id": "birth",
+   "stage": "birth",
+   "name": "Birth",
+   "summary": "Hatsumiyamairi, the newborn's first shrine presentation, about a month after birth.",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "childhood",
+   "stage": "childhood",
+   "name": "Childhood",
+   "summary": "Shichi-go-san: children of seven, five, and three brought in November to give thanks for growth.",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "marriage",
+   "stage": "marriage",
+   "name": "Marriage",
+   "summary": "The shrine wedding before the kami, sake shared in three sets of three sips.",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "death",
+   "stage": "death",
+   "name": "Death",
+   "summary": "Funerals are almost always Buddhist, and shrines avoid death's pollution; Shinto's own rites accompany life, and its dead are honored as household ancestors.",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "misconceptions": [
+  {
+   "id": "shinto-membership",
+   "claim": "Shinto is an organized religion one joins.",
+   "correction": "It is a practice woven into place and season; most participants claim no religious affiliation, and the shrine asks none.",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "shinto-equals-nationalism",
+   "claim": "Shinto is essentially nationalist State Shinto.",
+   "correction": "The state system lasted from 1868 to 1945, one chapter in a tradition many centuries older and, for most of its life, local and devotional.",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "torii-decoration",
+   "claim": "Torii gates are decorative architecture.",
+   "correction": "The gate marks the boundary into a kami's presence; passing it is entering sacred ground.",
+   "sources": [
+    "hardacre-shinto-2017"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "further_reading": [
+  "hardacre-shinto-2017"
+ ],
+ "sourcing": "sourced",
+ "overview": {
+  "body": "Shinto is the way of the [[kami]]: the venerated presences of Japan, from the sun goddess of the imperial line to the spirit of a mountain, a river, a founding ancestor, or an extraordinary life. It has no founder, no canonical scripture, no salvation doctrine, and no exclusive membership, which is why this site counts it with a note rather than a number: most Japanese visit shrines and keep its rites while telling surveys they have no religion. Its substance is practice, purification, offering, festival, and the marking of life's passages, and its home is the shrine, some eighty thousand of them, from Ise's imperial sanctuary to the neighborhood compound behind a single vermilion gate.",
+  "sources": [
+   "hardacre-shinto-2017"
   ],
-  "law_dimensions": [
-    "dietary-law",
-    "dress-modesty",
-    "ethical-frame",
-    "conversion-stance",
-    "clergy-leadership",
-    "worship-form",
-    "calendar-system"
-  ],
-  "festivals": [
-    "obon"
-  ],
-  "sites": [],
-  "figures": [],
-  "canon": [],
-  "practices": [],
-  "rites": [],
-  "misconceptions": [],
-  "further_reading": [],
   "sourcing": "sourced"
+ },
+ "origins": {
+  "body": "Ritual sites and offerings are attested archaeologically from the Yayoi and Kofun centuries; the practices later called Shinto have no founding moment. The eighth-century chronicles, the Kojiki and Nihon Shoki, fixed the kami narratives and the imperial line's descent from Amaterasu, and the Engishiki codified shrine ritual. For a millennium kami and buddhas were worshipped together, shrines and temples interwoven, until the Meiji decrees of 1868 tore them apart, creating an independent Shinto for the first time and then a state system that framed shrine rites as civic duty. The occupation disestablished State Shinto in 1945; the shrines regathered voluntarily under the Association of Shinto Shrines, and the tradition returned to what it had longest been: local, seasonal, and woven into ordinary life.",
+  "sources": [
+   "hardacre-shinto-2017"
+  ],
+  "sourcing": "sourced"
+ },
+ "core_beliefs": {
+  "body": "The kami are not omnipotent creators but presences, in the world and of it, responsive to sincerity and offended by pollution. Purity and impurity, not sin and salvation, order the tradition's map: death, blood, and disorder pollute; water, salt, and rite purify, and purification, harae, is the tradition's central act. The prized disposition is makoto, sincerity: uprightness of heart before the kami and one's community. Blessing is sought in this world, harvest, health, passage, prosperity, and the dead become ancestral presences honored by the household. Myth is told, not enforced: the chronicles ground the rites without functioning as dogma, and belief follows practice rather than preceding it.",
+  "sources": [
+   "hardacre-shinto-2017"
+  ],
+  "sourcing": "sourced"
+ }
 }
