@@ -34,56 +34,75 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # pnpm is still set up, but only so the install check can prove
+      # pnpm-lock.yaml has not drifted. Nothing in the gate installs with it.
       # Version comes from `packageManager` in package.json, so the runner and a
       # developer machine can never disagree about which pnpm built the lockfile.
       - uses: pnpm/action-setup@v4
 
+      # No `cache:` here, deliberately. This gate exists because a tree that
+      # every check passed could not be installed by the deploy, and a restored
+      # dependency cache is a tree somebody else already resolved. The install
+      # below has to start from nothing, the way a deploy does.
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
-          cache: pnpm
 
       # Printed so any future divergence between a local machine and the runner
       # is visible in the log rather than inferred.
       - name: Toolchain
         run: |
           echo "node    $(node --version)"
+          echo "npm     $(npm --version)"
           echo "pnpm    $(pnpm --version)"
           echo "declared $(node -p "require('./package.json').packageManager")"
 
+      # The install the deploy performs, performed here first.
+      #
+      # `npm ci`, from package-lock.json, with no --legacy-peer-deps and no
+      # --force: those flags accept a dependency graph npm has judged incorrect,
+      # and accepting it here while the deploy refuses it is exactly how a
+      # verified commit failed to ship. npm's strict peer resolution is the
+      # check; hiding from it defeats the step.
       - name: Install
-        run: pnpm install --frozen-lockfile
+        run: npm ci --no-audit --no-fund
+
+      # And the assertion in its own right, so the failure is named rather than
+      # inferred from whichever step happened to break first. Also checks that
+      # nothing committed to the repo relaxes peer resolution behind its back.
+      - name: Check the install
+        run: npm run validate:install
 
       # Zod-validates every content file, then checks the cross-file rules:
       # referential integrity and the Phase 0 sourcing rules (spec §9.2).
       - name: Validate content
-        run: pnpm validate:content
+        run: npm run validate:content
 
       # tokens.css is the single source of every colour, and every contrast
       # contract must hold in BOTH modes (CLAUDE.md hard rule 1).
       - name: Audit design tokens
-        run: pnpm validate:tokens
+        run: npm run validate:tokens
 
       # Layout invariants for the timeline canvas: density budget, rank gating,
       # nothing overlaps, branch tints step (spec §4, kickoff M1).
       - name: Check timeline invariants
-        run: pnpm validate:timeline
+        run: npm run validate:timeline
 
       - name: Lint
-        run: pnpm lint
+        run: npm run lint
 
       - name: Build
-        run: pnpm build
+        run: npm run build
 
       # Every internal href must resolve using the rules a plain static host
       # applies. `astro preview` rewrites extensionless paths to .html and
       # Vercel does not, so this is checked against dist/ rather than a server.
       - name: Check internal links
-        run: pnpm validate:links
+        run: npm run validate:links
 
       # The pages must agree with the records they were built from. Content
       # validation proves the records agree with each other; it cannot see a
       # build that resolved every one of them to nothing, which is how thirty-
       # nine books of scripture once shipped empty with the gate green.
       - name: Check the Reading Room
-        run: pnpm validate:reader
+        run: npm run validate:reader

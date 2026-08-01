@@ -26,6 +26,7 @@ no CMS, and none should ever be added.
 - `pnpm dev` / `pnpm build` / `pnpm preview`
 - `pnpm validate:content` — Zod-validates every content file. Must exist from M0 and must pass before any commit.
 - `pnpm lint` — eslint + astro check.
+- `pnpm validate:install` — proves the tree can be installed, not just built. See the dependency rule below.
 
 ## Hard rules
 
@@ -49,6 +50,17 @@ no CMS, and none should ever be added.
   reason to fall back to a branch.
 - **Local gate before every push, non-negotiable:** `pnpm validate:content`, `pnpm lint` and `pnpm build` must all pass locally. Never push with any of them failing.
 - Conventional commit messages, one concern each.
-- CI runs on every push and is the sourcing gate. It must stay green on `main`. It additionally runs `validate:tokens`, `validate:timeline` and `validate:links`; `pnpm check` runs the whole set locally.
+- CI runs on every push and is the sourcing gate. It must stay green on `main`. It additionally runs `validate:install`, `validate:tokens`, `validate:timeline` and `validate:links`; `pnpm check` runs the whole set locally.
+- **Dependencies: the tree must install two ways, and both lockfiles are load-bearing.**
+  A build that passes every check is still undeliverable if the deploy cannot install it —
+  `@eslint/js@^10` against `eslint@^9` once shipped a fully verified commit that production
+  never got past `npm install`, because pnpm resolves a conflicting peer with a warning and
+  npm refuses outright. So: `package-lock.json` and `pnpm-lock.yaml` are both committed and
+  both must match `package.json`; CI installs with `npm ci` and no cache, the way a deploy
+  does; and `validate:install` asserts both. Never add `--legacy-peer-deps`, `--force`, or an
+  `.npmrc` that relaxes peer resolution — those make the gate pass and the deploy fail, which
+  is the failure this rule exists to prevent. Regenerate **both** lockfiles whenever
+  `package.json` changes, and do not delete either without settling which manager the deploy
+  actually uses.
 - The owner reviews from a phone, so check mobile (390px) before pushing anything visual.
 - When a spec and an implementation convenience conflict, the spec wins; if the spec seems wrong, stop and ask instead of deviating.
