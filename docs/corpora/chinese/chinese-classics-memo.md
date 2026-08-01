@@ -18,8 +18,8 @@ corpora, one memo; they open the Chinese shelf together.
 1. Chinese: the received text of the twenty books with the traditional book
    names carried (new source record `analects-received-text`). English: Legge's
    1861 Chinese Classics translation (new source record `legge-classics-1`).
-2. **The honest structure: 11 of 20 books align saying-for-saying and render
-   paired. Nine books (I, V, VI, VII, IX, X, XI, XV, XX) carry `aligned: false`
+2. **The honest structure: 10 of 20 books align saying-for-saying and render
+   paired. Ten books (I, V, VI, VII, IX, X, XI, XIV, XV, XX) carry `aligned: false`
    because Legge's chapter divisions differ from the received Chinese text,
    most sharply in Book X; forcing an index pairing there would silently
    mismatch text after the first divergence.** Those books render as parallel
