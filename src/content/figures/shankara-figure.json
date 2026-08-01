@@ -1,0 +1,23 @@
+{
+ "id": "shankara-figure",
+ "name": "Adi Shankara",
+ "traditions": [
+  "hinduism"
+ ],
+ "born": {
+  "year": 788,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 820,
+  "precision": "exact"
+ },
+ "dates_note": "traditional",
+ "role": "Philosopher of non-dualism",
+ "summary": "The philosopher of non-dualism whose commentaries and monastic seats frame orthodox Vedanta.",
+ "events": [],
+ "sources": [
+  "flood-hinduism-1996"
+ ],
+ "sourcing": "sourced"
+}

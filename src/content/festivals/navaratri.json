@@ -1,0 +1,15 @@
+{
+ "id": "navaratri",
+ "name": "Navaratri",
+ "traditions": [
+  "hinduism"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "Nine nights, Ashvin",
+ "observed": {},
+ "summary": "The Goddess's festival, ending in Dussehra's victory of good over evil.",
+ "sources": [
+  "flood-hinduism-1996"
+ ],
+ "sourcing": "sourced"
+}

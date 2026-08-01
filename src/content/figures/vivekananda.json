@@ -1,0 +1,22 @@
+{
+ "id": "vivekananda",
+ "name": "Swami Vivekananda",
+ "traditions": [
+  "hinduism"
+ ],
+ "born": {
+  "year": 1863,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1902,
+  "precision": "exact"
+ },
+ "role": "Vedanta teacher and reformer",
+ "summary": "Ramakrishna's disciple who carried Vedanta to the West and service into its center.",
+ "events": [],
+ "sources": [
+  "flood-hinduism-1996"
+ ],
+ "sourcing": "sourced"
+}

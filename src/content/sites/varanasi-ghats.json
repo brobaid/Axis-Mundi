@@ -1,0 +1,18 @@
+{
+ "id": "varanasi-ghats",
+ "name": "Varanasi",
+ "traditions": [
+  "hinduism"
+ ],
+ "place": "Uttar Pradesh",
+ "location": {
+  "lat": 25.3109,
+  "lng": 83.0107
+ },
+ "region": "gangetic-plain",
+ "significance": "Kashi, the city of Shiva on the Ganges, where death itself is auspicious.",
+ "sources": [
+  "flood-hinduism-1996"
+ ],
+ "sourcing": "sourced"
+}

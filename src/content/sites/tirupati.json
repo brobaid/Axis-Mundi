@@ -1,0 +1,18 @@
+{
+ "id": "tirupati",
+ "name": "Tirumala Venkateswara",
+ "traditions": [
+  "hinduism"
+ ],
+ "place": "Andhra Pradesh",
+ "location": {
+  "lat": 13.6833,
+  "lng": 79.3473
+ },
+ "region": "deccan",
+ "significance": "The hill shrine of Vishnu, among the most visited religious sites on earth.",
+ "sources": [
+  "flood-hinduism-1996"
+ ],
+ "sourcing": "sourced"
+}

@@ -1,44 +1,231 @@
 {
-  "id": "hinduism",
-  "tradition": "hinduism",
-  "name": "Hinduism",
-  "stat_box": {
-    "adherents": {
-      "display": "1.2 bn (Pew, 2020)",
-      "estimate": 1200000000,
-      "source": "pew-grl-2025",
-      "year": 2020,
-      "basis": "Enumerated by Pew. 14.9% of world population.",
-      "contested": false
-    },
-    "symbol": "om"
+ "id": "hinduism",
+ "tradition": "hinduism",
+ "name": "Hinduism",
+ "stat_box": {
+  "adherents": {
+   "display": "1.2 bn (Pew, 2020)",
+   "estimate": 1200000000,
+   "source": "pew-grl-2025",
+   "year": 2020,
+   "basis": "Enumerated by Pew. 14.9% of world population.",
+   "contested": false
   },
-  "belief_dimensions": [
-    "divine-concept",
-    "cosmology",
-    "afterlife",
-    "salvation-path",
-    "scripture-authority",
-    "view-of-others"
+  "symbol": "om"
+ },
+ "belief_dimensions": [
+  "divine-concept",
+  "cosmology",
+  "afterlife",
+  "salvation-path",
+  "scripture-authority",
+  "view-of-others"
+ ],
+ "law_dimensions": [
+  "dietary-law",
+  "dress-modesty",
+  "ethical-frame",
+  "conversion-stance",
+  "clergy-leadership",
+  "worship-form",
+  "calendar-system"
+ ],
+ "festivals": [
+  "diwali",
+  "holi",
+  "navaratri"
+ ],
+ "sites": [
+  "varanasi-ghats",
+  "tirupati",
+  "prayagraj-sangam"
+ ],
+ "figures": [
+  "shankara-figure",
+  "mirabai",
+  "vivekananda"
+ ],
+ "canon": [
+  {
+   "id": "vedas",
+   "title": "The Vedas and Upanishads",
+   "language": "Vedic Sanskrit",
+   "composition": "c. 1500-400 BCE",
+   "status": "Shruti, \"heard\" revelation, nominally supreme in all orthodox schools",
+   "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "epics-gita",
+   "title": "The Epics and the Bhagavad Gita",
+   "language": "Sanskrit",
+   "composition": "c. 400 BCE - 400 CE",
+   "status": "Smriti, \"remembered\": in practice the texts through which most Hindus meet the tradition",
+   "sources": [
+    "flood-hinduism-1996",
+    "britannica"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "practices": [
+  {
+   "id": "puja",
+   "name": "Puja",
+   "kind": "worship",
+   "frequency": "Daily at the home shrine",
+   "summary": "Worship of the deity with offerings, light, and mantra, at the home shrine daily and in the temple.",
+   "sources": [
+    "flood-hinduism-1996"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "darshan",
+   "name": "Darshan",
+   "kind": "temple visiting",
+   "summary": "Seeing and being seen by the deity's image, the heart of temple visiting.",
+   "sources": [
+    "flood-hinduism-1996"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "yoga",
+   "name": "Yoga",
+   "kind": "discipline",
+   "summary": "The disciplines of body, breath, and mind, from Patanjali's path to modern practice.",
+   "sources": [
+    "flood-hinduism-1996"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "pilgrimage",
+   "name": "Pilgrimage",
+   "kind": "pilgrimage",
+   "summary": "Journeys to the tirthas, the fords between worlds, from local shrines to the great gatherings at the rivers.",
+   "sources": [
+    "flood-hinduism-1996"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "vrata",
+   "name": "Vrata",
+   "kind": "fasting",
+   "frequency": "By the sacred calendar",
+   "summary": "Vowed fasts and observances, kept especially by women, binding household life to the sacred calendar.",
+   "sources": [
+    "flood-hinduism-1996"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "rites": [
+  {
+   "id": "birth",
+   "stage": "birth",
+   "name": "Birth",
+   "summary": "Namakarana, the naming ceremony, among the first of the samskaras.",
+   "sources": [
+    "flood-hinduism-1996"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "childhood",
+   "stage": "childhood",
+   "name": "Childhood",
+   "summary": "Upanayana, the sacred-thread initiation into Vedic study, traditionally for boys of the upper varnas between eight and twelve.",
+   "sources": [
+    "flood-hinduism-1996"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "marriage",
+   "stage": "marriage",
+   "name": "Marriage",
+   "summary": "Vivaha around the sacred fire, the seven steps binding the couple.",
+   "sources": [
+    "flood-hinduism-1996"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "death",
+   "stage": "death",
+   "name": "Death",
+   "summary": "Antyeshti, cremation, with the ashes given to a river, the Ganges above all, and rites feeding the ancestors.",
+   "sources": [
+    "flood-hinduism-1996"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "misconceptions": [
+  {
+   "id": "hinduism-is-polytheism",
+   "claim": "Hindus worship millions of gods as separate deities.",
+   "correction": "The tradition's many forms are widely understood as faces of one reality; theologies range from strict non-dualism to devotion to one supreme God.",
+   "sources": [
+    "flood-hinduism-1996"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "caste-is-the-essence",
+   "claim": "Caste is Hinduism's scriptural essence.",
+   "correction": "Social hierarchy and the tradition are historically entangled, but reformers from the bhakti poets to Gandhi have contested caste from within, and modern Hindu law rejects exclusion.",
+   "sources": [
+    "flood-hinduism-1996"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "cow-worship",
+   "claim": "Hindus worship cows.",
+   "correction": "The cow is revered and protected as a symbol of life and generosity, not worshipped as a deity.",
+   "sources": [
+    "flood-hinduism-1996"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "further_reading": [
+  "flood-hinduism-1996"
+ ],
+ "sourcing": "sourced",
+ "overview": {
+  "body": "Hinduism has no founder, no single scripture, no central authority, and no requirement that its 1.2 billion adherents believe alike; it is a family of traditions grown on Indian soil across four millennia, held together by shared concepts, [[dharma]], [[karma]], [[samsara]], [[moksha]], shared texts, and shared practice more than by creed. A Hindu may worship Vishnu, Shiva, or the Goddess, pursue the divine through knowledge, devotion, action, or discipline, and understand ultimate reality as personal, impersonal, or both: the tradition's own formula is that truth is one and the wise call it by many names. It is the world's third-largest religion and its oldest major living tradition in continuous practice.",
+  "sources": [
+   "flood-hinduism-1996"
   ],
-  "law_dimensions": [
-    "dietary-law",
-    "dress-modesty",
-    "ethical-frame",
-    "conversion-stance",
-    "clergy-leadership",
-    "worship-form",
-    "calendar-system"
-  ],
-  "festivals": [
-    "diwali"
-  ],
-  "sites": [],
-  "figures": [],
-  "canon": [],
-  "practices": [],
-  "rites": [],
-  "misconceptions": [],
-  "further_reading": [],
   "sourcing": "sourced"
+ },
+ "origins": {
+  "body": "The oldest layer is the Rigveda, composed in the northwest around 1500-1200 BCE and transmitted orally with astonishing fidelity. The Upanishads, from about 800 BCE, turned the ritual tradition inward toward [[brahman]] and [[atman]], the questions all later Hindu philosophy works; the epics and the Bhagavad Gita brought the teaching into narrative and devotion. In the first millennium CE, temple worship guided by the Puranas displaced Vedic sacrifice as the mainstream, and the bhakti movements, beginning among the Tamil poets and sweeping north over a thousand years, made loving devotion the tradition's dominant voice. Vedanta's teachers, Shankara, Ramanuja, and Madhva, fixed its classical philosophies, and the nineteenth century's reformers carried Hinduism into the modern world and the world beyond India.",
+  "sources": [
+   "flood-hinduism-1996"
+  ],
+  "sourcing": "sourced"
+ },
+ "core_beliefs": {
+  "body": "The self, [[atman]], is not the body and does not die with it; it wanders [[samsara]] under the law of [[karma]], and the tradition's shared aim is [[moksha]], release. What release means divides the schools: identity with [[brahman]] in Shankara's non-dualism, eternal communion with a personal God in the devotional Vedantas. [[dharma]] orders life in the meantime: duty fitted to one's station and stage, with nonviolence, truthfulness, and hospitality broadly enjoined. The divine is approached through chosen forms, the ishta-devata, without denying the others; four recognized paths, knowledge, devotion, action, and meditative discipline, lead to the same end, and most Hindus walk several at once.",
+  "sources": [
+   "flood-hinduism-1996"
+  ],
+  "sourcing": "sourced"
+ }
 }

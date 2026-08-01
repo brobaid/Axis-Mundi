@@ -1,17 +1,20 @@
 {
-  "id": "diwali",
-  "name": "Diwali",
-  "traditions": [
-    "hinduism"
-  ],
-  "calendar": "lunisolar",
-  "date_rule": "Set by a lunisolar rule, so it wanders within a window rather than holding a fixed date.",
-  "observed": {
-    "2024": "11-01",
-    "2025": "10-20",
-    "2026": "11-08",
-    "2027": "10-29"
-  },
-  "sources": [],
-  "sourcing": "todo"
+ "id": "diwali",
+ "name": "Diwali",
+ "traditions": [
+  "hinduism"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "New moon of Kartik",
+ "observed": {
+  "2024": "11-01",
+  "2025": "10-20",
+  "2026": "11-08",
+  "2027": "10-29"
+ },
+ "summary": "The festival of lights: lamps for Lakshmi, Rama's return, and the year's renewal; also kept by Jains and Sikhs with their own meanings.",
+ "sources": [
+  "flood-hinduism-1996"
+ ],
+ "sourcing": "sourced"
 }

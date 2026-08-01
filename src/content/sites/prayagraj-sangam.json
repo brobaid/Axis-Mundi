@@ -1,0 +1,18 @@
+{
+ "id": "prayagraj-sangam",
+ "name": "The Sangam at Prayagraj",
+ "traditions": [
+  "hinduism"
+ ],
+ "place": "Uttar Pradesh",
+ "location": {
+  "lat": 25.4224,
+  "lng": 81.8866
+ },
+ "region": "gangetic-plain",
+ "significance": "The confluence of Ganges, Yamuna, and the unseen Sarasvati, site of the Kumbh Mela's greatest gatherings.",
+ "sources": [
+  "flood-hinduism-1996"
+ ],
+ "sourcing": "sourced"
+}

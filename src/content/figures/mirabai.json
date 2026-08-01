@@ -1,0 +1,22 @@
+{
+ "id": "mirabai",
+ "name": "Mirabai",
+ "traditions": [
+  "hinduism"
+ ],
+ "born": {
+  "year": 1498,
+  "precision": "year"
+ },
+ "died": {
+  "year": 1547,
+  "precision": "year"
+ },
+ "role": "Poet of devotion to Krishna",
+ "summary": "The Rajput princess-poet whose songs to Krishna made devotion a woman's own voice.",
+ "events": [],
+ "sources": [
+  "flood-hinduism-1996"
+ ],
+ "sourcing": "sourced"
+}

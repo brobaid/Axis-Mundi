@@ -1,0 +1,15 @@
+{
+ "id": "holi",
+ "name": "Holi",
+ "traditions": [
+  "hinduism"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "Full moon of Phalguna",
+ "observed": {},
+ "summary": "The spring festival of colors, when hierarchy briefly dissolves in play.",
+ "sources": [
+  "flood-hinduism-1996"
+ ],
+ "sourcing": "sourced"
+}
