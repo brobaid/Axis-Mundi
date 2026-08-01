@@ -2,6 +2,7 @@ import { createPanel, esc } from '../lib/panel';
 import { eraLabel } from '../lib/map-render';
 import { revealDetent, standMeridian } from '../lib/scrubber';
 import { CURSOR_PARAM, readCursor, snapToDetent } from '../lib/cursor';
+import { nearestRealm, realmViewBox } from '../lib/nearest-realm';
 
 /**
  * The map island.
@@ -212,18 +213,141 @@ if (root !== null) {
       group.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
 
-    canvas.addEventListener('click', (ev) => {
-      const group = (ev.target as Element).closest<SVGGElement>('[data-realm]');
-      if (group === null || panel === null) return;
-
+    /** Open a realm's sheet from its group element. */
+    function openRealm(group: SVGGElement): void {
+      if (panel === null) return;
       const realmId = group.dataset['realm'];
       const snapshotId = group.dataset['snapshot'];
       const snapshot = data.snapshots.find((s) => s.id === snapshotId);
       const realm = snapshot?.realms.find((r) => r.id === realmId);
       if (realm === undefined || snapshot === undefined) return;
-
       panel.open(realmHtml(realm, snapshot), group as unknown as HTMLElement);
+    }
+
+    /* Coarse pointers get tap resolution; a mouse is precise enough already,
+       and putting a confirm step in front of a click that already landed would
+       be an extra tap for nothing. */
+    const coarse = window.matchMedia('(pointer: coarse)');
+
+    canvas.addEventListener('click', (ev) => {
+      const direct = (ev.target as Element).closest<SVGGElement>('[data-realm]');
+
+      if (!coarse.matches) {
+        if (direct !== null) openRealm(direct);
+        return;
+      }
+
+      /* On touch the tap point is a fingertip, not a pixel. Search outward for
+         the realm the reader most likely meant. */
+      const layer = canvas!.querySelector<SVGGElement>('.map-snapshot:not([aria-hidden])');
+      if (layer === null) {
+        if (direct !== null) openRealm(direct);
+        return;
+      }
+
+      const hit = nearestRealm((ev as MouseEvent).clientX, (ev as MouseEvent).clientY, {
+        within: layer,
+      });
+      if (hit === null) {
+        dismissChip();
+        return;
+      }
+
+      const group = hit.group as SVGGElement;
+
+      /* A second tap on the same candidate commits. Anything else re-aims. */
+      if (chipFor === group.dataset['realm']) {
+        dismissChip();
+        openRealm(group);
+        return;
+      }
+      showChip(group, (ev as MouseEvent).clientX, (ev as MouseEvent).clientY);
     });
+
+    /* ── the confirm chip ────────────────────────────────────────────── */
+
+    let chipEl: HTMLElement | null = null;
+    let chipFor: string | undefined;
+
+    function dismissChip(): void {
+      chipEl?.remove();
+      chipEl = null;
+      chipFor = undefined;
+    }
+
+    /**
+     * Offer a candidate before opening it.
+     *
+     * The chip carries the realm's own outline, magnified — a name is not
+     * enough to answer "did I mean that one?" when the reader is looking at a
+     * coastline of eleven-pixel countries. Tapping it opens the sheet; tapping
+     * anywhere else re-aims, and nothing has been committed in between.
+     */
+    function showChip(group: SVGGElement, x: number, y: number): void {
+      dismissChip();
+      const realmId = group.dataset['realm'];
+      const snapshot = data.snapshots.find((s) => s.id === group.dataset['snapshot']);
+      const realm = snapshot?.realms.find((r) => r.id === realmId);
+      const path = group.querySelector<SVGPathElement>('.map-realm__fill');
+      if (realm === undefined || path === null) return;
+
+      const name = data.traditionNames[realm.tradition] ?? realm.tradition;
+      const category = realm.tradition === 'unaffiliated' ? 'Religiously unaffiliated' : name;
+      const fill =
+        realm.grade === 'c' ? `url(#hatch-${realm.tradition})` : `var(--t-${realm.tradition})`;
+
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'map-chip';
+      chip.setAttribute('data-map-chip', '');
+      chip.setAttribute(
+        'aria-label',
+        `${realm.name}: ${category}, confidence ${realm.grade.toUpperCase()}. Tap again to open.`,
+      );
+      chip.innerHTML =
+        `<svg class="map-chip__shape" viewBox="${realmViewBox(path.getBBox())}" aria-hidden="true">` +
+        `<path d="${path.getAttribute('d') ?? ''}" fill="${fill}"` +
+        ` stroke="var(--t-${esc(realm.tradition)})" stroke-width="0.6"` +
+        ` vector-effect="non-scaling-stroke"/></svg>` +
+        `<span class="map-chip__text"><b>${esc(realm.name)}</b>` +
+        `<i>${esc(category)} · ${realm.grade.toUpperCase()}</i></span>`;
+
+      /* The chip lives beside the plate rather than inside it, so it needs its
+         own commit handler — a tap here never reaches the canvas listener. */
+      chip.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dismissChip();
+        openRealm(group);
+      });
+
+      root!.appendChild(chip);
+      chipEl = chip;
+      chipFor = realmId;
+
+      /* Above the finger, so the chip is not under the hand that summoned it,
+         and clamped to the plate so it never leaves the room. */
+      const frame = canvas!.getBoundingClientRect();
+      const box = chip.getBoundingClientRect();
+      const left = Math.min(
+        Math.max(x - box.width / 2, frame.left + 4),
+        frame.right - box.width - 4,
+      );
+      const above = y - box.height - 16;
+      const top = above > frame.top + 4 ? above : y + 24;
+      chip.style.left = `${left - frame.left + canvas!.offsetLeft}px`;
+      chip.style.top = `${top - frame.top + canvas!.offsetTop}px`;
+      /* preventScroll, or focusing a chip that is already under the reader's
+         thumb yanks the page to it. */
+      chip.focus({ preventScroll: true });
+    }
+
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape') dismissChip();
+    });
+
+    /* No scroll listener: the chip is positioned inside the room, so it travels
+       with the plate and stays on its realm. Dismissal is Escape, a tap
+       elsewhere, or the tap that commits. */
 
     function realmHtml(realm: RealmData, snapshot: SnapshotData): string {
       /* "Dominant: unaffiliated" would read as a tradition named Unaffiliated.

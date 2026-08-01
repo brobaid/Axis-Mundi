@@ -294,6 +294,12 @@ const bootstrap = {
 
   /* --- the plate --------------------------------------------------------- */
 
+  /* The chip is positioned against this box, so the room is its own
+     coordinate space. */
+  .map {
+    position: relative;
+  }
+
   .map-frame {
     background: var(--land);
     border: var(--hairline-width) solid var(--ink);
@@ -364,9 +370,14 @@ const bootstrap = {
     stroke-dasharray: 3 2;
   }
 
-  .map-frame :global(.map-realm:hover .map-realm__fill),
   .map-frame :global(.map-realm:focus-within .map-realm__fill) {
     fill-opacity: 1;
+  }
+
+  @media (hover: hover) {
+    .map-frame :global(.map-realm:hover .map-realm__fill) {
+      fill-opacity: 1;
+    }
   }
 
   /* Curved lettering with a paper halo, so a name stays legible over hatching. */
@@ -520,8 +531,10 @@ const bootstrap = {
     background: var(--brass);
   }
 
-  .scrub__detent:not([disabled]):hover .scrub__tick {
-    border-color: var(--brass);
+  @media (hover: hover) {
+    .scrub__detent:not([disabled]):hover .scrub__tick {
+      border-color: var(--brass);
+    }
   }
 
   .scrub__label {
@@ -537,6 +550,79 @@ const bootstrap = {
   .scrub__readout {
     margin-top: var(--space-3);
     color: var(--ink-soft);
+  }
+
+  /* --- tap-resolution chip (touch only) ----------------------------------- */
+
+  /* Built by the island at runtime, so these selectors are global: a node the
+     compiler never saw carries no scope attribute.
+
+     A country is as big as its geography, so the 44px rule cannot be met by
+     growing the target. It is met by resolving the tap instead: the nearest
+     realm within a fingertip is offered here, magnified, and nothing opens
+     until the reader taps it. A stray thumb that opened Belgium would be worse
+     than a small country that takes two taps. */
+  :global(.map-chip) {
+    position: absolute;
+    z-index: var(--z-sheet);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: var(--tap-min);
+    padding: var(--space-2) var(--space-3);
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--ink);
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-panel);
+    text-align: left;
+    cursor: pointer;
+    animation: chip-in var(--dur-micro) var(--ease-out);
+  }
+
+  /* The magnifier. Square so the outline is never stretched, and sized so an
+     eleven-pixel country becomes something a thumb can judge. */
+  :global(.map-chip__shape) {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+    overflow: visible;
+  }
+
+  :global(.map-chip__text) {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+
+  :global(.map-chip__text b) {
+    font-family: var(--font-ui);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  :global(.map-chip__text i) {
+    font-style: normal;
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    color: var(--ink-soft);
+  }
+
+  @keyframes chip-in {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :global(.map-chip) {
+      animation: none;
+    }
   }
 
   /* --- era note ----------------------------------------------------------- */
