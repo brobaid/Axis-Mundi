@@ -70,6 +70,7 @@ function renderEventNode(p: PlacedEvent, view: Viewport): string {
 
   return (
     `<button type="button" class="${classes}" data-event-id="${esc(p.event.id)}"` +
+    ` data-morph-key="e:${esc(p.event.id)}"` +
     ` style="left:${pct(p.x, view.width)};top:${top};--dot:${size}px"` +
     ` aria-label="${esc(aria)}"${p.ghost ? ' data-ghost="1"' : ''}>` +
     bar +
@@ -79,12 +80,17 @@ function renderEventNode(p: PlacedEvent, view: Viewport): string {
   );
 }
 
-function renderCluster(c: PlacedCluster, view: Viewport): string {
+function renderCluster(c: PlacedCluster, view: Viewport, lanePath: string): string {
   const range = c.from === c.to ? String(c.from) : `${c.from} to ${c.to}`;
   return (
     `<button type="button" class="tl-node tl-node--cluster" data-cluster-from="${c.from}"` +
-    ` data-cluster-to="${c.to}" style="left:${pct(c.x, view.width)};top:50%"` +
-    ` aria-label="${c.count} events between ${range}. Zoom in to separate them.">` +
+    ` data-cluster-to="${c.to}" data-cluster-lane="${esc(lanePath)}"` +
+    ` data-morph-key="c:${esc(lanePath)}:${c.from}-${c.to}"` +
+    ` style="left:${pct(c.x, view.width)};top:50%"` +
+    /* Says what it is and what tapping does, in that order. "Zoom in to
+       separate them" described a gesture the reader had to work out; this
+       describes the control they are on. */
+    ` aria-label="${c.count} events between ${range}. Opens this range.">` +
     `<span class="tl-cluster" aria-hidden="true">${c.count}</span>` +
     `</button>`
   );
@@ -93,7 +99,7 @@ function renderCluster(c: PlacedCluster, view: Viewport): string {
 function renderLane(layout: LaneLayout, view: Viewport, symbolFor: (id: string) => string): string {
   const { lane } = layout;
   const nodes = layout.placed
-    .map((p) => (p.kind === 'cluster' ? renderCluster(p, view) : renderEventNode(p, view)))
+    .map((p) => (p.kind === 'cluster' ? renderCluster(p, view, lane.path) : renderEventNode(p, view)))
     .join('');
 
   const more =
@@ -114,8 +120,14 @@ function renderLane(layout: LaneLayout, view: Viewport, symbolFor: (id: string) 
       ? `<span class="swatch" aria-hidden="true"></span>`
       : symbolFor(lane.symbol);
 
-  const title = lane.drillable ? `Drill into ${lane.name}` : lane.name;
+  const title = lane.drillable ? `Open ${lane.name} branches` : lane.name;
   const drill = lane.drillable ? ` data-drill="${esc(lane.path)}"` : '';
+  /* A lane that goes somewhere says so. The chevron is the affordance and the
+     word is the label; a lane head that only changed colour on hover told a
+     touch reader nothing at all. */
+  const chevron = lane.drillable
+    ? `<span class="tl-lane__chev" aria-hidden="true">›</span>`
+    : '';
 
   /* Contested classification renders as the same hatched mark used everywhere
      else (spec §10). A lane header has no room for the full badge, so it wears
@@ -133,6 +145,7 @@ function renderLane(layout: LaneLayout, view: Viewport, symbolFor: (id: string) 
     mark +
     `<span class="tl-lane__name">${esc(lane.name)}</span>` +
     contested +
+    chevron +
     `</${lane.drillable ? 'button' : 'div'}>` +
     `<div class="tl-track" role="gridcell">${nodes}${more}${empty}</div>` +
     `</div>`
@@ -246,7 +259,10 @@ export function renderCanvas(
       const align =
         left <= 0.5 ? 'translateX(0)' : left >= 99.5 ? 'translateX(-100%)' : 'translateX(-50%)';
       return (
-        `<span class="tl-tick" style="left:${left.toFixed(3)}%;transform:${align}">` +
+        /* Alignment rides a custom property, not `transform`: the morph writes
+           a transform of its own and the two must compose rather than fight. */
+        `<span class="tl-tick" data-morph-key="tick:${year}"` +
+        ` style="left:${left.toFixed(3)}%;--tick-align:${align}">` +
         `${esc(formatTick(year, isEdge))}</span>`
       );
     })

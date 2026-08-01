@@ -1,5 +1,6 @@
 import { scaleLinear } from 'd3-scale';
 import { CURSOR_PARAM, centreOn, readCursor } from '../lib/cursor';
+import { playMorph, snapshotPositions } from '../lib/morph';
 import { select } from 'd3-selection';
 import { zoom, zoomIdentity, type D3ZoomEvent, type ZoomBehavior, type ZoomTransform } from 'd3-zoom';
 
@@ -7,9 +8,11 @@ import {
   buildLanes,
   drillParent,
   drillSegments,
+  pathContains,
+  zoomLevelFrom,
+  type ZoomLevel,
   ghostEvents,
   layoutTimeline,
-  zoomLabel,
   type DrillPath,
   type Lane,
   type TaxonomyNode,
@@ -184,6 +187,25 @@ if (root !== null) {
       return r < 0 ? `${Math.abs(r)} BCE` : `${r} CE`;
     }
 
+    /**
+     * The granularity currently on screen, and the view it was reached from.
+     *
+     * Held here rather than derived per frame so hysteresis has something to
+     * remember: without it a span resting on a boundary strobes the label on
+     * every frame of a drag.
+     */
+    let level: ZoomLevel | null = null;
+
+    /**
+     * Views the reader was moved out of, newest last.
+     *
+     * Opening a cluster moves the window without the reader choosing where to;
+     * one tap of Back has to put them exactly where they were. Only involuntary
+     * moves are pushed — a deliberate scrub or stepper press is the reader
+     * navigating, and unwinding those would make Back mean two things.
+     */
+    const viewStack: { from: number; to: number }[] = [];
+
     function render(): void {
       const events = activeEvents();
       lanes = buildLanes(data.taxonomy, state.drill);
@@ -196,6 +218,14 @@ if (root !== null) {
 
       const { title, subtitle } = currentTitle();
       const meridianYear = (state.from + state.to) / 2;
+
+      /* A change of granularity is the one re-render worth animating: every dot
+         and every tick lands somewhere else at once, and without the movement a
+         reader cannot tell whether the scale changed or the data did. */
+      const nextLevel = zoomLevelFrom(state.to - state.from, level);
+      const levelChanged = level !== null && nextLevel !== level;
+      const before = levelChanged ? snapshotPositions(canvas) : null;
+      level = nextLevel;
 
       canvas.innerHTML = renderCanvas(layouts, view, {
         title,
@@ -213,9 +243,21 @@ if (root !== null) {
         .map((p) => p.event)
         .sort((a, b) => a.year_start - b.year_start || a.title.localeCompare(b.title));
 
+      if (before !== null) playMorph(canvas, before);
+
       if (crumbEl) crumbEl.innerHTML = crumbHtml();
-      if (zoomEl) zoomEl.textContent = zoomLabel(state.to - state.from);
-      if (upBtn) upBtn.hidden = state.drill === '';
+      if (zoomEl) zoomEl.textContent = level;
+      const scaleEl = root!.querySelector<HTMLElement>('[data-scale-level]');
+      if (scaleEl !== null) scaleEl.textContent = level;
+      const scaleSpan = root!.querySelector<HTMLElement>('[data-scale-span]');
+      if (scaleSpan !== null) scaleSpan.textContent = subtitle;
+      /* Back is not only for drilling: opening a cluster changes the view too,
+         and a reader who has been moved deserves a way out of it either way. */
+      if (upBtn) {
+        const canRetreat = state.drill !== '' || viewStack.length > 0;
+        upBtn.hidden = !canRetreat;
+        upBtn.textContent = state.drill !== '' && viewStack.length === 0 ? 'Back up' : 'Back';
+      }
       /* The map, matrix and tree all announce their state; the timeline did
          not, so a screen-reader user got no confirmation that a zoom, drill or
          filter had changed anything. Same strings the eye gets. */
@@ -282,6 +324,62 @@ if (root !== null) {
       root?.setAttribute('data-panel-open', '');
       panelEl.querySelector<HTMLButtonElement>('[data-panel-close]')?.focus();
       writeUrl();
+    }
+
+    /**
+     * Open a cluster where it stands.
+     *
+     * The sheet lists every event the cluster holds, each one openable without
+     * moving the canvas an inch, and offers the range as a named action rather
+     * than performing it on contact.
+     */
+    function openCluster(el: HTMLElement): void {
+      if (panelEl === null) return;
+      const from = Number(el.dataset['clusterFrom']);
+      const to = Number(el.dataset['clusterTo']);
+      const lanePath = el.dataset['clusterLane'] ?? '';
+      if (!Number.isFinite(from) || !Number.isFinite(to)) return;
+
+      const inRange = activeEvents()
+        .filter((e) => {
+          const start = e.year_start;
+          const end = e.year_end ?? e.year_start;
+          const touches = end >= from && start <= to;
+          /* The same predicate the layout used to put the event in this lane,
+             so the sheet lists exactly what the cluster stands for. */
+          const inLane = lanePath === '' || e.branch_path.some((b) => pathContains(lanePath, b));
+          return touches && inLane;
+        })
+        .sort((a, b) => a.year_start - b.year_start || a.title.localeCompare(b.title));
+
+      const esc = (t: string): string =>
+        t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      const range = from === to ? fmtYear(from) : `${fmtYear(from)} – ${fmtYear(to)}`;
+
+      panelEl.innerHTML =
+        `<button type="button" class="panel__close" data-panel-close aria-label="Close">` +
+        `<span aria-hidden="true">&times;</span></button>` +
+        `<div class="panel__meta"><span>Cluster</span></div>` +
+        `<h2 id="panel-title">${inRange.length} events, tap to open this range</h2>` +
+        `<div class="panel__rule" aria-hidden="true"><i></i><b></b><i></i></div>` +
+        `<p class="caption">${esc(range)}</p>` +
+        `<ul class="tl-cluster-list" role="list">` +
+        inRange
+          .map(
+            (e) =>
+              `<li><button type="button" class="tl-cluster-item" data-open-event="${esc(e.id)}">` +
+              `<b>${esc(e.title)}</b><i class="mono">${esc(e.display_date)}</i>` +
+              `</button></li>`,
+          )
+          .join('') +
+        `</ul>` +
+        `<p class="panel__sources"><button type="button" class="tl-btn" data-open-range` +
+        ` data-range-from="${from}" data-range-to="${to}">Open this range on the canvas</button></p>`;
+
+      panelEl.hidden = false;
+      scrimEl?.removeAttribute('hidden');
+      root?.setAttribute('data-panel-open', '');
+      panelEl.querySelector<HTMLButtonElement>('[data-panel-close]')?.focus();
     }
 
     function closePanel(): void {
@@ -376,11 +474,12 @@ if (root !== null) {
 
       const cluster = target.closest<HTMLElement>('[data-cluster-from]');
       if (cluster !== null) {
-        /* Zooming into a cluster is the only honest way to separate it. */
-        const from = Number(cluster.dataset['clusterFrom']);
-        const to = Number(cluster.dataset['clusterTo']);
-        const pad = Math.max(MIN_SPAN, (to - from) * 2 || MIN_SPAN);
-        setView(from - pad / 2, to + pad / 2);
+        /* A cluster opens where it stands. It used to zoom on the first tap,
+           which is how a mark that looks like a dot came to move the whole
+           canvas — the reader asked to read something and the room moved. Now
+           it expands in place: every event inside it is listed and reachable,
+           and opening the range is a second, named choice. */
+        openCluster(cluster);
         return;
       }
 
@@ -396,7 +495,16 @@ if (root !== null) {
       if (btn !== null) setDrill(btn.dataset['crumbTo'] ?? '');
     });
 
-    upBtn?.addEventListener('click', () => setDrill(drillParent(state.drill)));
+    /* Back retreats the way the reader came: out of an opened range first,
+       since that is the move they did not choose, and only then up the drill. */
+    upBtn?.addEventListener('click', () => {
+      const previous = viewStack.pop();
+      if (previous !== undefined) {
+        setView(previous.from, previous.to);
+        return;
+      }
+      setDrill(drillParent(state.drill));
+    });
 
     threadsBtn?.addEventListener('click', () => {
       state.threads = !state.threads;
@@ -424,8 +532,39 @@ if (root !== null) {
     }
 
     panelEl?.addEventListener('click', (ev) => {
-      if ((ev.target as HTMLElement).closest('[data-panel-close]')) closePanel();
+      const t = ev.target as HTMLElement;
+      if (t.closest('[data-panel-close]')) {
+        closePanel();
+        return;
+      }
+      /* An event inside a cluster opens as itself, with the canvas untouched. */
+      const open = t.closest<HTMLElement>('[data-open-event]');
+      if (open !== null) {
+        const id = open.dataset['openEvent'];
+        if (id !== undefined) openPanel(id);
+        return;
+      }
+      /* The range, only when asked for by name. The view being left is pushed
+         so Back returns to it exactly. */
+      const range = t.closest<HTMLElement>('[data-open-range]');
+      if (range !== null) {
+        const from = Number(range.dataset['rangeFrom']);
+        const to = Number(range.dataset['rangeTo']);
+        if (!Number.isFinite(from) || !Number.isFinite(to)) return;
+        viewStack.push({ from: state.from, to: state.to });
+        closeSheet();
+        const pad = Math.max(MIN_SPAN, (to - from) * 2 || MIN_SPAN);
+        setView(from - pad / 2, to + pad / 2);
+      }
     });
+
+    /** Close the sheet without the event-panel bookkeeping. */
+    function closeSheet(): void {
+      if (panelEl === null) return;
+      panelEl.hidden = true;
+      scrimEl?.setAttribute('hidden', '');
+      root?.removeAttribute('data-panel-open');
+    }
     scrimEl?.addEventListener('click', closePanel);
 
     function setDrill(path: DrillPath): void {
@@ -577,6 +716,41 @@ if (root !== null) {
       });
 
     select(scroller as HTMLElement).call(zoomBehaviour);
+
+    /* ── first-visit coach ────────────────────────────────────────────── */
+
+    /* Shown once, then never. Storage failing is not an error worth handling
+       loudly: the coach reappears, which is a smaller cost than a room that
+       will not load because a browser refused a key. */
+    const COACH_KEY = 'axis-mundi-timeline-coach';
+    const coach = root?.querySelector<HTMLElement>('[data-tl-coach]');
+    if (coach !== null && coach !== undefined) {
+      let seen = false;
+      try {
+        seen = localStorage.getItem(COACH_KEY) === 'seen';
+      } catch {
+        /* storage unavailable; show it */
+      }
+      if (!seen) {
+        coach.hidden = false;
+        coach.querySelector<HTMLButtonElement>('[data-coach-dismiss]')?.focus();
+      }
+      const dismiss = (): void => {
+        coach.hidden = true;
+        try {
+          localStorage.setItem(COACH_KEY, 'seen');
+        } catch {
+          /* nothing to remember it with; it will greet them again */
+        }
+      };
+      coach.addEventListener('click', (ev) => {
+        const t = ev.target as HTMLElement;
+        if (t.closest('[data-coach-dismiss]') || t === coach) dismiss();
+      });
+      document.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Escape' && !coach.hidden) dismiss();
+      });
+    }
 
     /* ── go ───────────────────────────────────────────────────────────── */
 

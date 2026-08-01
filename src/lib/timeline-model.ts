@@ -207,13 +207,72 @@ export function minimumRank(span: number): number {
 }
 
 /** Human name for the current zoom, for the breadcrumb and screen readers. */
-export function zoomLabel(span: number): string {
-  if (span > 3000) return 'Millennia';
-  if (span > 1500) return 'Centuries';
-  if (span > 400) return 'Century';
-  if (span > 100) return 'Decade';
-  return 'Close';
+/**
+ * The four granularities the timeline reads at, in the museum's voice.
+ *
+ * Named for what the axis is counting in, not for how far the reader has
+ * zoomed: a scale bar that says "Centuries" tells you what a tick means, and a
+ * scale bar that says "Close" tells you nothing.
+ */
+export const ZOOM_LEVELS = ['Millennia', 'Centuries', 'Decades', 'Years'] as const;
+export type ZoomLevel = (typeof ZOOM_LEVELS)[number];
+
+/**
+ * Span thresholds, widest first. A span at or above the threshold reads at that
+ * granularity.
+ */
+const LEVEL_FLOOR: readonly (readonly [ZoomLevel, number])[] = [
+  ['Millennia', 3000],
+  ['Centuries', 400],
+  ['Decades', 60],
+  ['Years', 0],
+];
+
+/**
+ * Hysteresis, as a fraction of the threshold.
+ *
+ * Without it a span resting on a boundary flips the label on every frame of a
+ * drag — the reader sees "Centuries/Decades/Centuries" strobe while they are
+ * trying to read a date. A move has to cross the boundary by this much before
+ * the name changes, so small movements never flip it and a deliberate one
+ * always does.
+ */
+const HYSTERESIS = 0.12;
+
+/** The granularity a span reads at, with no memory of where it came from. */
+export function zoomLevel(span: number): ZoomLevel {
+  for (const [level, floor] of LEVEL_FLOOR) {
+    if (span >= floor) return level;
+  }
+  return 'Years';
 }
+
+/**
+ * The granularity a span reads at, given the one it is already showing.
+ *
+ * Keeps `previous` until the span clears its boundary by the hysteresis margin,
+ * in whichever direction the reader is moving.
+ */
+export function zoomLevelFrom(span: number, previous: ZoomLevel | null): ZoomLevel {
+  const next = zoomLevel(span);
+  if (previous === null || next === previous) return next;
+
+  const prevIndex = ZOOM_LEVELS.indexOf(previous);
+  const nextIndex = ZOOM_LEVELS.indexOf(next);
+  /* Zooming in crosses the floor of the level being left; zooming out crosses
+     the floor of the level being entered. Either way, one boundary decides. */
+  const boundary =
+    LEVEL_FLOOR[nextIndex > prevIndex ? prevIndex : nextIndex]?.[1] ?? 0;
+  if (boundary === 0) return next;
+
+  const margin = boundary * HYSTERESIS;
+  if (nextIndex > prevIndex && span > boundary - margin) return previous;
+  if (nextIndex < prevIndex && span < boundary + margin) return previous;
+  return next;
+}
+
+/** Back-compatible name used by the server render and the zoom readout. */
+export const zoomLabel = (span: number): string => zoomLevel(span);
 
 /** Spec §4: no more than ~8 visible events per lane per viewport width. */
 export const DENSITY_BUDGET = 8;

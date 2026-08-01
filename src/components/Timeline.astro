@@ -72,7 +72,6 @@ const bootstrap = {
       <b>World</b>
     </nav>
     <div class="tl-bar__actions">
-      <span class="tl-zoom eyebrow"><span data-zoom-label>{zoomLabel(to - from)}</span> view</span>
       <button type="button" class="tl-btn" data-up hidden>Back up</button>
       <button type="button" class="tl-btn" data-ghost-toggle aria-pressed="false" hidden>
         Ghost mode
@@ -85,9 +84,15 @@ const bootstrap = {
         under a thumb: pinch belongs to the browser and double-tap has been
         given back to it. A phone reader had no way to change the span at all.
       -->
-      <span class="tl-zoomer" role="group" aria-label="Zoom">
-        <button type="button" class="tl-btn tl-btn--icon" data-zoom-out aria-label="Zoom out, show a longer span">&minus;</button>
-        <button type="button" class="tl-btn tl-btn--icon" data-zoom-in aria-label="Zoom in, show a shorter span">+</button>
+      <!--
+        The stepper names the level it is stepping between, so changing scale is
+        a thing the reader does on purpose rather than something that happens to
+        them mid-scrub.
+      -->
+      <span class="tl-zoomer" role="group" aria-label="Scale">
+        <button type="button" class="tl-btn tl-btn--icon" data-zoom-out aria-label="Wider scale">&minus;</button>
+        <span class="tl-zoomer__level mono" data-zoom-label>{zoomLabel(to - from)}</span>
+        <button type="button" class="tl-btn tl-btn--icon" data-zoom-in aria-label="Closer scale">+</button>
       </span>
       <p class="visually-hidden" data-tl-readout aria-live="polite"></p>
     </div>
@@ -104,6 +109,17 @@ const bootstrap = {
     }
   </div>
 
+  <!--
+    The scale bar's own label. It sits with the ruler rather than up in the
+    controls, because it names what a tick means: a reader looking at the axis
+    should not have to look away to find out what it is counting in.
+  -->
+  <p class="tl-scale">
+    <span class="eyebrow">Scale</span>
+    <b class="mono" data-scale-level>{zoomLabel(to - from)}</b>
+    <span class="tl-scale__span mono" data-scale-span></span>
+  </p>
+
   <!-- canvas --------------------------------------------------------- -->
   <div class="tl-frame" data-scroll tabindex="0" role="region" aria-label="Timeline canvas, scrollable">
     <div class="tl-canvas" data-canvas set:html={canvasHtml} />
@@ -116,6 +132,26 @@ const bootstrap = {
     <span class="tl-note__coarse">Drag the canvas sideways to travel; the &minus; and + buttons change the
     span. Pinch and double tap belong to the page, so they zoom the page.</span>
   </p>
+
+  <!--
+    First visit only. Three lines, in the house voice, and then never again.
+
+    It uses localStorage, which the design language bans for core reading paths
+    — this is not one. Every word the coach says is true of the room whether or
+    not the coach ever appeared, and with storage unavailable it simply shows
+    each visit rather than breaking anything.
+  -->
+  <div class="tl-coach" data-tl-coach hidden>
+    <div class="tl-coach__card" role="dialog" aria-labelledby="coach-title" aria-modal="false">
+      <p class="eyebrow" id="coach-title">Reading this room</p>
+      <ol role="list">
+        <li>Scroll sideways to travel through time.</li>
+        <li>Change the scale with the &minus; and + stepper, or pinch.</li>
+        <li>Tap a dot to read the event; tap a ringed count to open that range.</li>
+      </ol>
+      <button type="button" class="tl-btn" data-coach-dismiss>Begin</button>
+    </div>
+  </div>
 
   <!-- accessible alternative ----------------------------------------- -->
   <details class="tl-list">
@@ -219,6 +255,108 @@ const bootstrap = {
   .tl-zoomer {
     display: inline-flex;
     gap: var(--space-1);
+  }
+
+  /* --- first-visit coach ------------------------------------------------- */
+
+  .tl-coach {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-overlay);
+    display: grid;
+    place-items: end center;
+    padding: var(--space-6) var(--space-4);
+    background: var(--scrim);
+  }
+
+  .tl-coach__card {
+    width: min(30rem, 100%);
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--ink);
+    box-shadow: var(--shadow-panel);
+    padding: var(--space-5);
+  }
+
+  .tl-coach__card ol {
+    margin: var(--space-3) 0 var(--space-4);
+    padding-left: var(--space-5);
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .tl-coach__card li {
+    font-size: var(--size-small);
+  }
+
+  @media (min-width: 48rem) {
+    .tl-coach {
+      place-items: center;
+    }
+  }
+
+  /* The cluster sheet's list: every event the cluster stands for, reachable
+     without moving the canvas. */
+  .tl-panel :global(.tl-cluster-list) {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-3) 0;
+    border-top: var(--hairline-width) solid var(--hairline);
+  }
+
+  .tl-panel :global(.tl-cluster-item) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
+    width: 100%;
+    min-height: var(--tap-min);
+    padding: var(--space-2) 0;
+    border: 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    background: none;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .tl-panel :global(.tl-cluster-item b) {
+    font-weight: 500;
+    color: var(--brass-ink);
+  }
+
+  .tl-panel :global(.tl-cluster-item i) {
+    font-style: normal;
+    flex: 0 0 auto;
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
+  }
+
+  .tl-zoomer__level {
+    display: inline-flex;
+    align-items: center;
+    min-width: 8ch;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+
+  /* The scale bar's label, on the rule above the ruler. */
+  .tl-scale {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    padding: 0 2px var(--space-2);
+  }
+
+  .tl-scale b {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+
+  .tl-scale__span {
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
   }
 
   .tl-btn--icon {
@@ -404,6 +542,12 @@ const bootstrap = {
     border-bottom: var(--hairline-width) solid var(--hairline);
   }
 
+  /* Both the morph's shift and the element's own placement live here, so the
+     two compose rather than one clobbering the other. */
+  .tl-canvas :global([data-morph-key]) {
+    transform: var(--morph-shift, translate(0, 0)) var(--tick-align, translate(0, 0));
+  }
+
   .tl-canvas :global(.tl-tick) {
     position: absolute;
     bottom: 8px;
@@ -488,8 +632,20 @@ const bootstrap = {
   }
 
   .tl-canvas :global(.tl-lane__head) {
+    position: relative;
     flex: 0 0 132px;
-    padding: 0 10px;
+    /* A flex item's automatic minimum size is its content, which overrides the
+       basis — so "Chinese traditions" widened its own rail to 148px and pushed
+       that lane's whole track 16px right of the other nine. On a world view
+       that is forty-four years: the same year did not sit at the same x, which
+       is the one promise a comparative timeline makes. */
+    min-width: 0;
+    /* Every pixel of the rail is budgeted: 132 total, less padding, symbol,
+       gap and the chevron's reserve, leaves 84 for the name. That is enough
+       for "Zoroastrianism" on one line at this size and one pixel short for
+       "Chinese traditions", which wraps at its space — which is the difference
+       between a name that breaks mid-word and one that reads. */
+    padding: 0 8px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -522,10 +678,56 @@ const bootstrap = {
     }
   }
 
+  /* Two lines rather than an ellipsis: the rail is fixed, so a long name wraps
+     inside it instead of stretching it. Fixed leading keeps a two-line name on
+     the same rhythm as its one-line siblings, and the block centres so every
+     lane's label sits on the same axis. */
+  /* The chevron says the lane opens; it sits at the rail's edge so all ten
+     read as a column of doors, and only the ones that are doors have it. */
+  /* Out of flow, at the rail's edge. In flow it took twenty pixels from the
+     name, which is what forced "Zoroastrianism" to break mid-word — and a
+     lane label reading "Zoroastrianis / m" is worse than the ellipsis it
+     replaced. The name reserves the space with padding instead, so nothing
+     overlaps and every one of the ten fits on a line. */
+  /* The contested hatch is also a right-edge mark, so on a lane that carries
+     both they stack rather than collide: hatch inboard, chevron at the edge. */
+  .tl-canvas :global(.tl-lane__head:has(.tl-lane__contested) .tl-lane__contested) {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    translate: 0 -50%;
+  }
+
+  .tl-canvas :global(.tl-lane__head:has(.tl-lane__contested) .tl-lane__name) {
+    padding-right: 26px;
+  }
+
+  .tl-canvas :global(.tl-lane__chev) {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    translate: 0 -50%;
+    font-size: 15px;
+    line-height: 1;
+    color: var(--ink-soft);
+  }
+
   .tl-canvas :global(.tl-lane__name) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.25;
+    /* "Chinese traditions" wraps at its space. "Zoroastrianism" has no space,
+       so it hyphenates rather than being clipped — the rail is fixed and the
+       name has to fit inside it, not the other way round. */
+    /* Wrapping stays available for a name longer than the rail; none of the
+       ten needs it today, and a word is never broken to force it. */
+    overflow-wrap: normal;
+    padding-right: 10px;
+    font-size: 12px;
   }
 
   /* The contested hatch, same drafting convention as the badge and the map. */
@@ -637,19 +839,28 @@ const bootstrap = {
     outline-offset: 2px;
   }
 
+  /* A cluster is not an event and must not read as one. A dot is a small solid
+     mark in the lane's hue; this is a filled capsule in that hue, ringed twice,
+     carrying its count in ink that can be read at arm's length. The owner's
+     report was of a "dot" in the Islam lane that zoomed instead of opening —
+     that dot was this, wearing a hairline and the surface colour. */
   .tl-canvas :global(.tl-cluster) {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 20px;
-    height: 18px;
-    padding: 0 5px;
+    min-width: 24px;
+    height: 20px;
+    padding: 0 6px;
     border-radius: var(--radius-pill);
-    border: var(--hairline-width) solid var(--hairline-strong);
-    background: var(--surface);
+    border: 1.5px solid var(--tradition-base, var(--hairline-strong));
+    background: color-mix(in srgb, var(--tradition-base, var(--ink-soft)) 22%, var(--surface));
+    box-shadow:
+      0 0 0 2px var(--surface),
+      0 0 0 3.5px color-mix(in srgb, var(--tradition-base, var(--ink-soft)) 35%, var(--surface));
     font-family: var(--font-mono);
-    font-size: 10.5px;
-    color: var(--ink-soft);
+    font-weight: 500;
+    font-size: 11px;
+    color: var(--ink);
   }
 
   .tl-canvas :global(.tl-more),
