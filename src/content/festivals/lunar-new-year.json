@@ -6,7 +6,12 @@
  ],
  "calendar": "lunisolar",
  "date_rule": "First day of the first lunar month",
- "observed": {},
+ "observed": {
+  "2024": "02-10",
+  "2025": "01-29",
+  "2026": "02-17",
+  "2027": "02-06"
+ },
  "summary": "The reunion of family, living and dead: ancestors honored, gods welcomed, the year renewed.",
  "sources": [
   "yao-confucianism-2000",

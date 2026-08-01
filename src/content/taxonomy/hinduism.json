@@ -11,7 +11,11 @@
  "path": "hinduism",
  "depth": 1,
  "symbol": "om",
- "summary": "A tradition of the Indian subcontinent, organised at launch into the Vaishnava, Shaiva, Shakta and Smarta streams.",
+ "summary": "A tradition of the Indian subcontinent.",
+ "editorial_note": {
+  "body": "Organised at launch into the Vaishnava, Shaiva, Shakta and Smarta streams.",
+  "sourcing": "editorial"
+ },
  "contested": false,
  "currents": [
   {

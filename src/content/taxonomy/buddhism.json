@@ -12,7 +12,11 @@
  "path": "buddhism",
  "depth": 1,
  "symbol": "dharmachakra",
- "summary": "A tradition originating with Siddhartha Gautama, organised at launch into the Theravada, Mahayana and Vajrayana vehicles.",
+ "summary": "A tradition originating with Siddhartha Gautama.",
+ "editorial_note": {
+  "body": "Organised at launch into the Theravada, Mahayana and Vajrayana vehicles.",
+  "sourcing": "editorial"
+ },
  "contested": false,
  "currents": [],
  "order": 4,

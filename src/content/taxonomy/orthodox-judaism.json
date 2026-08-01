@@ -10,7 +10,11 @@
  ],
  "path": "judaism/rabbinic/orthodox-judaism",
  "depth": 3,
- "summary": "Movements holding the binding authority of halakha as traditionally transmitted; Haredi and Modern Orthodox are treated as prose rather than lanes.",
+ "summary": "Movements holding the binding authority of halakha as traditionally transmitted.",
+ "editorial_note": {
+  "body": "Haredi and Modern Orthodox are treated as prose rather than lanes.",
+  "sourcing": "editorial"
+ },
  "contested": false,
  "currents": [],
  "order": 0,

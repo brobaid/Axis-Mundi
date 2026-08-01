@@ -31,6 +31,8 @@ interface TreeNode {
   adherentsDisplay: string | null;
   adherentsContested: boolean;
   hasDive: boolean;
+  summary: string | null;
+  editorialNote: string | null;
 }
 
 interface Bootstrap {
@@ -178,6 +180,16 @@ if (root !== null) {
         `<a href="/timeline?drill=${esc(n.depth === 1 ? n.tradition : n.path.split('/').slice(0, -1).join('/'))}">` +
         `Timeline lane</a></p></div>`;
 
+      /* The node's own sentence, and beneath it the museum's note about how
+         this site renders the node — two statements of different kinds, which
+         is why they carry different sourcing. */
+      const prose =
+        (n.summary === null ? '' : `<p class="panel__summary">${esc(n.summary)}</p>`) +
+        (n.editorialNote === null
+          ? ''
+          : `<p class="panel__editorial caption">${esc(n.editorialNote)}` +
+            `<span class="panel__editorial-tag"> · this museum's own convention</span></p>`);
+
       return (
         `<div class="panel__meta"><span>` +
         `<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"` +
@@ -185,6 +197,7 @@ if (root !== null) {
         `${esc(data.traditionNames[n.tradition] ?? n.tradition)}</span></div>` +
         `<h2 id="panel-title">${esc(n.name)}</h2>` +
         `<div class="panel__rule" aria-hidden="true"><i></i><b></b><i></i></div>` +
+        prose +
         `<div class="panel__label"><span class="eyebrow">Exhibit label</span>` +
         rows
           .map(

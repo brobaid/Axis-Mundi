@@ -12,7 +12,11 @@
  "path": "islam",
  "depth": 1,
  "symbol": "crescent-and-star",
- "summary": "A tradition centred on the Qur’an and the prophethood of Muhammad, organised at launch into the Sunni, Shia, Ibadi and Ahmadiyya branches.",
+ "summary": "A tradition centred on the Qur’an and the prophethood of Muhammad.",
+ "editorial_note": {
+  "body": "Organised at launch into the Sunni, Shia, Ibadi and Ahmadiyya branches.",
+  "sourcing": "editorial"
+ },
  "contested": false,
  "currents": [
   {

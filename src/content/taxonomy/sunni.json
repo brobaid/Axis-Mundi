@@ -11,7 +11,11 @@
  ],
  "path": "islam/sunni",
  "depth": 2,
- "summary": "The largest branch; its Hanafi, Maliki, Shafi’i and Hanbali schools are jurisprudential sub-entries rather than lanes.",
+ "summary": "The largest branch.",
+ "editorial_note": {
+  "body": "Its Hanafi, Maliki, Shafi’i and Hanbali schools are jurisprudential sub-entries rather than lanes.",
+  "sourcing": "editorial"
+ },
  "contested": false,
  "currents": [],
  "order": 0,

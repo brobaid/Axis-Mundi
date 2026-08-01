@@ -102,6 +102,18 @@ export const taxonomyNodeSchema = z
     adherents: adherents.optional(),
     ...contestable,
     summary: z.string().min(1, 'one sentence, per spec §2.2'),
+    /**
+     * The museum's own convention about this node, kept out of `summary`.
+     *
+     * "A tradition centred on Jesus of Nazareth, organised at launch into five
+     * families" is two statements of different kinds in one sentence: the first
+     * is a claim about Christianity and cites MacCulloch, the second is a
+     * decision this site made and cites nobody. Splitting them lets each be
+     * sourced by its kind, which is why `sourcing: 'editorial'` exists.
+     */
+    editorial_note: z
+      .object({ body: z.string().min(1), sourcing: z.literal('editorial') })
+      .optional(),
     /** Tradition-level nodes may declare currents; branches inherit them. */
     currents: z.array(current).default([]),
     /** Line-art identifier, drawn on the 24px grid. Identifiers only, never decoration. */

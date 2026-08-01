@@ -23,7 +23,7 @@ const flag: string | undefined =
 export const includesUnsourced: boolean =
   flag === undefined || flag === '' ? import.meta.env.DEV === true : flag === 'true';
 
-type Sourced = { data: { sourcing?: 'sourced' | 'todo' } };
+type Sourced = { data: { sourcing?: 'sourced' | 'todo' | 'editorial' } };
 
 const isPublishable = (entry: Sourced): boolean =>
   includesUnsourced || entry.data.sourcing !== 'todo';

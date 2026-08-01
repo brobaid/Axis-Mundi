@@ -49,6 +49,7 @@ export interface FestivalRecord {
   readonly observed: Readonly<Record<string, string>>;
   readonly span_days?: number | undefined;
   readonly summary?: string | undefined;
+  readonly note?: string | undefined;
   readonly sources: readonly string[];
 }
 

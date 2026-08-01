@@ -6,8 +6,14 @@
  ],
  "calendar": "solar",
  "date_rule": "Moveable: the Sunday after the first full moon of spring",
- "observed": {},
+ "observed": {
+  "2024": "03-31",
+  "2025": "04-20",
+  "2026": "04-05",
+  "2027": "03-28"
+ },
  "summary": "The resurrection, the year's chief feast; East and West usually keep it on different Sundays.",
+ "note": "Eastern observance falls on different Sundays: 5 May 2024, 20 April 2025, 12 April 2026 and 2 May 2027. In 2025 the two reckonings coincide, which they do only occasionally.",
  "sources": [
   "macculloch-christianity-2009"
  ],

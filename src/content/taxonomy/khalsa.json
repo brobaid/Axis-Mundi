@@ -10,7 +10,11 @@
  ],
  "path": "sikhism/khalsa",
  "depth": 2,
- "summary": "The mainstream at launch; the Namdhari and Nirankari communities are treated as prose rather than lanes.",
+ "summary": "The mainstream.",
+ "editorial_note": {
+  "body": "At launch; the Namdhari and Nirankari communities are treated as prose rather than lanes.",
+  "sourcing": "editorial"
+ },
  "contested": false,
  "currents": [],
  "order": 0,

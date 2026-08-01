@@ -17,6 +17,9 @@ import { ERA_SNAPSHOTS } from './eras';
 export interface TreeNodeInput {
   readonly id: string;
   readonly name: string;
+  /** The node's one sentence, and the museum's own note about it. */
+  readonly summary?: string | undefined;
+  readonly editorialNote?: string | undefined;
   readonly parent: string | null;
   readonly tradition: string;
   readonly path: string;

@@ -11,7 +11,11 @@
  "path": "zoroastrianism",
  "depth": 1,
  "symbol": "faravahar",
- "summary": "A tradition originating with Zarathustra and centred on the Avesta, organised at launch into the Parsi and Irani communities.",
+ "summary": "A tradition originating with Zarathustra and centred on the Avesta.",
+ "editorial_note": {
+  "body": "Organised at launch into the Parsi and Irani communities.",
+  "sourcing": "editorial"
+ },
  "contested": false,
  "currents": [],
  "order": 9,

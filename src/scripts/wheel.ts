@@ -21,6 +21,7 @@ interface CardData {
   readonly calendar: string;
   readonly rule: string;
   readonly summary: string;
+  readonly note: string;
   readonly sources: readonly string[];
 }
 
@@ -53,6 +54,7 @@ if (data !== undefined && root !== null) {
         `<p class="mono caption">${esc(card.calendar)} calendar</p>` +
         (card.summary === '' ? '' : `<p>${esc(card.summary)}</p>`) +
         `<p class="caption"><b>When:</b> ${esc(card.rule)}</p>` +
+        (card.note === '' ? '' : `<p class="caption">${esc(card.note)}</p>`) +
         (basis === undefined
           ? `<p class="caption">Not placed on the circle: the record gives its rule in words and no Gregorian date, and this museum carries no calendar conversion it could cite.</p>`
           : `<p class="caption"><b>On the ${year} wheel:</b> ${esc(basis)}</p>`) +

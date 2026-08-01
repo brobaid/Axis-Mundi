@@ -11,7 +11,11 @@
  "path": "shinto",
  "depth": 1,
  "symbol": "torii",
- "summary": "The kami traditions of the Japanese archipelago, organised at launch into Shrine, Sect and Folk Shinto.",
+ "summary": "The kami traditions of the Japanese archipelago.",
+ "editorial_note": {
+  "body": "Organised at launch into Shrine, Sect and Folk Shinto.",
+  "sourcing": "editorial"
+ },
  "contested": false,
  "currents": [],
  "order": 8,

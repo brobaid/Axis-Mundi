@@ -11,7 +11,11 @@
  "path": "judaism",
  "depth": 1,
  "symbol": "star-of-david",
- "summary": "A tradition centred on the Torah and the covenant, organised at launch into the Rabbinic, Karaite and Beta Israel branches.",
+ "summary": "A tradition centred on the Torah and the covenant.",
+ "editorial_note": {
+  "body": "Organised at launch into the Rabbinic, Karaite and Beta Israel branches.",
+  "sourcing": "editorial"
+ },
  "contested": false,
  "currents": [
   {

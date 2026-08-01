@@ -77,7 +77,9 @@ const autoTerms = termsFor(
 const prose = (body: string): string => renderProse(body, { available, autoTerms });
 
 /** A prose block renders only when it has passed a source check. */
-const publishable = <T extends { sourcing: 'sourced' | 'todo' } | undefined>(block: T): T | undefined =>
+const publishable = <T extends { sourcing: 'sourced' | 'todo' | 'editorial' } | undefined>(
+  block: T,
+): T | undefined =>
   block === undefined ? undefined : includesUnsourced || block.sourcing !== 'todo' ? block : undefined;
 
 /* §5.5 Branches — the taxonomy under this tradition, to three levels. */

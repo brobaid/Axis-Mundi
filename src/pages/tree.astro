@@ -15,14 +15,24 @@ import { eraLabel } from '../lib/map-render';
  * here.
  */
 
-const [taxonomy, dives] = await Promise.all([
+const [taxonomy, dives, publishedTaxonomy] = await Promise.all([
   /* Structure only: ids, names, parents, contested flags, and the sourced
-     founding and adherent blocks. The authored one-line summaries stay gated. */
+     founding and adherent blocks. */
   getStructural('taxonomy'),
   getPublishable('deepDives'),
+  /* Prose gates separately from structure, as on the dive pages: a node whose
+     summary is still awaiting a check keeps its place in the tree and says
+     nothing. */
+  getPublishable('taxonomy'),
 ]);
 
 const hasDive = new Set<string>(dives.map((d) => d.data.tradition));
+const proseOf = new Map(
+  publishedTaxonomy.map((n) => [
+    n.data.id,
+    { summary: n.data.summary, editorialNote: n.data.editorial_note?.body },
+  ]),
+);
 
 const input: TreeNodeInput[] = taxonomy.map((n) => ({
   id: n.data.id,
@@ -38,6 +48,8 @@ const input: TreeNodeInput[] = taxonomy.map((n) => ({
   adherentsDisplay: n.data.adherents?.display,
   adherentsContested: n.data.adherents?.contested ?? false,
   order: n.data.order,
+  summary: proseOf.get(n.data.id)?.summary,
+  editorialNote: proseOf.get(n.data.id)?.editorialNote,
 }));
 
 const WIDTH = 1000;
@@ -60,6 +72,8 @@ const bootstrap = {
     adherentsDisplay: n.adherentsDisplay ?? null,
     adherentsContested: n.adherentsContested,
     hasDive: hasDive.has(n.tradition),
+    summary: n.summary ?? null,
+    editorialNote: n.editorialNote ?? null,
   })),
   rootYears: Object.fromEntries(
     input.filter((n) => n.depth === 1).map((n) => [n.tradition, n.foundedYear ?? null]),

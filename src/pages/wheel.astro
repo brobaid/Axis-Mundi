@@ -50,6 +50,8 @@ const cards = Object.fromEntries(
       tradition: nameOf.get((f.traditions[0] ?? '') as TraditionId) ?? (f.traditions[0] ?? ''),
       calendar: f.calendar,
       rule: f.date_rule,
+      /* A second reckoning the one observed series cannot hold. */
+      note: f.note ?? '',
       summary: f.summary ?? '',
       sources: f.sources.map((s) => titleOf.get(s) ?? s),
     },

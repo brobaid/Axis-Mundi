@@ -128,7 +128,19 @@ export const media = z.object({
  * excluded from production builds by default (CLAUDE.md hard rule 2). Set
  * INCLUDE_TODO_SOURCING=true to include it in a preview build.
  */
-export const sourcingStatus = z.enum(['sourced', 'todo']).default('sourced');
+/**
+ * How a statement earns its place in a build.
+ *
+ * `sourced` cites the collection; `todo` is held out of production.
+ *
+ * `editorial` is neither. A scholar cannot source a sentence about this
+ * museum's own conventions — "organised at launch into three vehicles" is a
+ * rendering decision, not a claim about Buddhism, and citing Harvey for it
+ * would put a historian's name behind a choice this site made. Editorial
+ * statements publish without a citation and may only describe the museum's own
+ * rules and rendering; a claim about a tradition is never editorial.
+ */
+export const sourcingStatus = z.enum(['sourced', 'todo', 'editorial']).default('sourced');
 
 /** Era snapshots locked by Phase 0 §6. Defined in lib/eras.ts, which carries no
     Zod dependency so the map island can import it without bundling the schemas. */

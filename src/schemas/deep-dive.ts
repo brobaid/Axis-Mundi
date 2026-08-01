@@ -243,6 +243,15 @@ export const festivalSchema = z
     /** Length in days, for festivals that span. */
     span_days: z.number().int().positive().optional(),
     summary: z.string().optional(),
+    /**
+     * A second reckoning the one `observed` series cannot hold.
+     *
+     * Easter is one feast on two calendars and the Julian series is not a
+     * variant of the Gregorian one — it is a different set of Sundays. The
+     * schema keeps one series per record, so the second lands here in words
+     * rather than being averaged into the first.
+     */
+    note: z.string().min(1).optional(),
     sources: z.array(sourceRef).default([]),
     sourcing: sourcingStatus,
   })
