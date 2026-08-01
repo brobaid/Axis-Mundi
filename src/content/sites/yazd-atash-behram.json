@@ -1,0 +1,18 @@
+{
+ "id": "yazd-atash-behram",
+ "name": "Yazd Atash Behram",
+ "traditions": [
+  "zoroastrianism"
+ ],
+ "place": "Yazd",
+ "location": {
+  "lat": 31.8974,
+  "lng": 54.3569
+ },
+ "region": "iranian-plateau",
+ "significance": "The great fire of Iran, burning, by the community's account, since 470 CE.",
+ "sources": [
+  "boyce-zoroastrians"
+ ],
+ "sourcing": "sourced"
+}

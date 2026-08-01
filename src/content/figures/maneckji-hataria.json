@@ -1,0 +1,22 @@
+{
+ "id": "maneckji-hataria",
+ "name": "Maneckji Limji Hataria",
+ "traditions": [
+  "zoroastrianism"
+ ],
+ "born": {
+  "year": 1813,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1890,
+  "precision": "exact"
+ },
+ "role": "Parsi emissary to Iran",
+ "summary": "The Parsi emissary whose mission to Iran won the lifting of the jizya and the community's emancipation.",
+ "events": [],
+ "sources": [
+  "boyce-zoroastrians"
+ ],
+ "sourcing": "sourced"
+}

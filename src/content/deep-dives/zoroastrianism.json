@@ -1,42 +1,228 @@
 {
-  "id": "zoroastrianism",
-  "tradition": "zoroastrianism",
-  "name": "Zoroastrianism",
-  "stat_box": {
-    "adherents": {
-      "display": "≈110-120 k (community surveys)",
-      "source": "fezana-demographics",
-      "basis": "Community demographic surveys. The 2011 India census counts 57,264 Parsis. Not enumerated by Pew.",
-      "contested": false
-    },
-    "symbol": "faravahar"
+ "id": "zoroastrianism",
+ "tradition": "zoroastrianism",
+ "name": "Zoroastrianism",
+ "stat_box": {
+  "adherents": {
+   "display": "≈110-120 k (community surveys)",
+   "source": "fezana-demographics",
+   "basis": "Community demographic surveys. The 2011 India census counts 57,264 Parsis. Not enumerated by Pew.",
+   "contested": false
   },
-  "belief_dimensions": [
-    "divine-concept",
-    "cosmology",
-    "afterlife",
-    "salvation-path",
-    "scripture-authority",
-    "view-of-others"
+  "symbol": "faravahar"
+ },
+ "belief_dimensions": [
+  "divine-concept",
+  "cosmology",
+  "afterlife",
+  "salvation-path",
+  "scripture-authority",
+  "view-of-others"
+ ],
+ "law_dimensions": [
+  "dietary-law",
+  "dress-modesty",
+  "ethical-frame",
+  "conversion-stance",
+  "clergy-leadership",
+  "worship-form",
+  "calendar-system"
+ ],
+ "festivals": [
+  "nowruz",
+  "mehregan",
+  "sadeh"
+ ],
+ "sites": [
+  "yazd-atash-behram",
+  "udvada-iranshah",
+  "takht-e-soleyman"
+ ],
+ "figures": [
+  "zarathustra-figure",
+  "maneckji-hataria",
+  "dastur-dhalla"
+ ],
+ "canon": [
+  {
+   "id": "avesta",
+   "title": "The Avesta",
+   "language": "Avestan",
+   "composition": "Gathas c. 1500-1000 BCE or later (contested); written down c. 500 CE",
+   "status": "Canonical; roughly a quarter of the Sasanian text survives, the liturgy nearly whole",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "pahlavi-books",
+   "title": "The Pahlavi books",
+   "language": "Middle Persian",
+   "composition": "9th-10th c. CE",
+   "status": "The Denkard, Bundahishn, and their companions: the theology's post-conquest preservation, authoritative commentary rather than scripture",
+   "sources": [
+    "boyce-zoroastrians",
+    "wiley-zoroastrianism-2015"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "practices": [
+  {
+   "id": "kusti-prayers",
+   "name": "Kusti prayers",
+   "kind": "prayer",
+   "frequency": "Five times daily, at the day's watches",
+   "summary": "The sacred cord untied and retied with prayers at the day's five watches, the initiated Zoroastrian's constant discipline.",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "fire-reverence",
+   "name": "Fire reverence",
+   "kind": "prayer",
+   "summary": "Prayer before flame, from hearth to the great Atash Behrams whose fires have burned for centuries.",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "gahambars",
+   "name": "Gahambars",
+   "kind": "feast",
+   "frequency": "Six seasonal feasts",
+   "summary": "The six seasonal feasts of obligation, thanksgiving, and communal meal.",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "purity",
+   "name": "Purity",
+   "kind": "purity",
+   "summary": "The care of fire, water, and earth from pollution, the ritual architecture of the tradition.",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "charity",
+   "name": "Charity",
+   "kind": "almsgiving",
+   "summary": "Ashodad, righteous giving; the community's philanthropies have long outrun its numbers.",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "rites": [
+  {
+   "id": "birth",
+   "stage": "birth",
+   "name": "Birth",
+   "summary": "The newborn is welcomed with prayers and the household fire kept bright; formal entry waits for initiation.",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "childhood",
+   "stage": "childhood",
+   "name": "Childhood",
+   "summary": "Navjote (sedreh-pushi in Iran): between about seven and twelve the child is invested with the sacred shirt and cord, taking on the religion's obligations.",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "marriage",
+   "stage": "marriage",
+   "name": "Marriage",
+   "summary": "The ashirvad blessings before witnesses, sweetened with rice and rose petals.",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "death",
+   "stage": "death",
+   "name": "Death",
+   "summary": "Rites keep the elements unpolluted: the towers of silence where tradition and law allow, burial or cremation increasingly elsewhere, a change the community itself debates; the soul's crossing is prayed for on the fourth dawn.",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "misconceptions": [
+  {
+   "id": "fire-worship",
+   "claim": "Zoroastrians worship fire.",
+   "correction": "Fire is the symbol and direction of prayer, as light toward the Wise Lord; worship belongs to Ahura Mazda alone.",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "two-equal-gods",
+   "claim": "Zoroastrian dualism means two equal gods.",
+   "correction": "Ahura Mazda is supreme and evil's spirit is neither his equal nor eternal; the contest is real but its end is not in doubt.",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "extinct-religion",
+   "claim": "Zoroastrianism is extinct.",
+   "correction": "It is small and alive: fires tended, navjotes performed, and a diaspora now rivaling the homelands, with its demographic future the community's own most debated question.",
+   "sources": [
+    "boyce-zoroastrians"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "further_reading": [
+  "boyce-zoroastrians"
+ ],
+ "sourcing": "sourced",
+ "overview": {
+  "body": "Zoroastrianism is the religion of the [[gathas|Gathas]]: the hymns of Zarathustra, who proclaimed Ahura Mazda, the Wise Lord, wholly good, and the world as the arena of a real contest between truth and the lie in which every human choice matters. Once the faith of three Iranian empires, it survives today in perhaps 110 to 120 thousand adherents, the Parsis of India, the Zoroastrians of Iran, and a growing diaspora, making it the smallest tradition in this museum and among the oldest. Its ethic is the tradition's own summary: good thoughts, good words, good deeds; its emblem is the fire kept burning in its temples, symbol of the divine light, and many scholars have argued for its influence on the eschatology of the Abrahamic faiths, in degrees still debated.",
+  "sources": [
+   "boyce-zoroastrians"
   ],
-  "law_dimensions": [
-    "dietary-law",
-    "dress-modesty",
-    "ethical-frame",
-    "conversion-stance",
-    "clergy-leadership",
-    "worship-form",
-    "calendar-system"
-  ],
-  "festivals": [
-    "nowruz"
-  ],
-  "sites": [],
-  "figures": [],
-  "canon": [],
-  "practices": [],
-  "rites": [],
-  "misconceptions": [],
-  "further_reading": [],
   "sourcing": "sourced"
+ },
+ "origins": {
+  "body": "The Gathas are the beginning, and their date is the tradition's oldest open question: linguistic dating places Zarathustra around 1500-1000 BCE on the Central Asian steppe, while a later tradition set him in the sixth century BCE, and this museum carries both positions. The Achaemenid kings invoked Ahura Mazda over the first world empire; the Sasanians built a church of the realm, fixed the [[avesta|Avesta]] in writing, and made the fires imperial. The Arab conquest of the seventh century began a long demotion from majority to minority: by the millennium Iran was Muslim, and the ninth-century Pahlavi books preserved the theology through the change. One migration, remembered in the Qissa-ye Sanjan, carried the faith to Gujarat, where the Parsis became colonial India's most prominent small community; Iran's Zoroastrians endured at Yazd and Kerman, emancipated in 1882, and the twentieth century scattered both branches into a worldwide diaspora.",
+  "sources": [
+   "boyce-zoroastrians"
+  ],
+  "sourcing": "sourced"
+ },
+ "core_beliefs": {
+  "body": "Ahura Mazda is wholly good, creator of a good world; evil is real, the work of the hostile spirit, and not God's, which is the tradition's answer to the problem other monotheisms carry. History is the contest's field and it ends in renovation: evil defeated, the dead raised, the world made fresh, among the oldest articulated eschatologies on record. The human being is a combatant by birthright: free, responsible, and enlisted through good thoughts, good words, and good deeds; at death the soul crosses the account-keeper's bridge, wide for the just and knife-edged for the wicked. Fire is the symbol and direction of worship, never its object; purity guards creation's good order; and despair is, in the tradition's own tenor, a kind of desertion.",
+  "sources": [
+   "boyce-zoroastrians"
+  ],
+  "sourcing": "sourced"
+ }
 }

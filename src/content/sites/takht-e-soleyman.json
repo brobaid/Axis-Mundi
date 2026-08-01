@@ -1,0 +1,18 @@
+{
+ "id": "takht-e-soleyman",
+ "name": "Takht-e Soleyman",
+ "traditions": [
+  "zoroastrianism"
+ ],
+ "place": "Iranian Azerbaijan",
+ "location": {
+  "lat": 36.6044,
+  "lng": 47.2354
+ },
+ "region": "iranian-plateau",
+ "significance": "The ruined Sasanian sanctuary of Adur Gushnasp, the royal fire's mountain lake.",
+ "sources": [
+  "boyce-zoroastrians"
+ ],
+ "sourcing": "sourced"
+}

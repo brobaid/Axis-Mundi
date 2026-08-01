@@ -1,0 +1,19 @@
+{
+ "id": "zarathustra-figure",
+ "name": "Zarathustra",
+ "traditions": [
+  "zoroastrianism"
+ ],
+ "born": {
+  "year": -1500,
+  "precision": "era"
+ },
+ "dates_note": "c. 1500–1000 BCE or 6th c. BCE; contested",
+ "role": "Prophet, composer of the Gathas",
+ "summary": "The composer of the Gathas and the tradition's prophet; his dating divides scholarship and this museum carries both positions.",
+ "events": [],
+ "sources": [
+  "boyce-zoroastrians"
+ ],
+ "sourcing": "sourced"
+}

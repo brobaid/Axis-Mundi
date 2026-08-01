@@ -1,0 +1,15 @@
+{
+ "id": "sadeh",
+ "name": "Sadeh",
+ "traditions": [
+  "zoroastrianism"
+ ],
+ "calendar": "solar",
+ "date_rule": "Midwinter, fifty days before Nowruz",
+ "observed": {},
+ "summary": "The festival of fire against the deep of winter, bonfires lit at dusk.",
+ "sources": [
+  "boyce-zoroastrians"
+ ],
+ "sourcing": "sourced"
+}

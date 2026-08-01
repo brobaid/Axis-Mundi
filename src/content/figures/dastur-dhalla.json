@@ -1,0 +1,22 @@
+{
+ "id": "dastur-dhalla",
+ "name": "Maneckji Nusserwanji Dhalla",
+ "traditions": [
+  "zoroastrianism"
+ ],
+ "born": {
+  "year": 1875,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1956,
+  "precision": "exact"
+ },
+ "role": "High priest and historian",
+ "summary": "The Karachi high priest and historian, voice of the tradition's modernist stream.",
+ "events": [],
+ "sources": [
+  "boyce-zoroastrians"
+ ],
+ "sourcing": "sourced"
+}

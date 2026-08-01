@@ -1,17 +1,20 @@
 {
-  "id": "nowruz",
-  "name": "Nowruz",
-  "traditions": [
-    "zoroastrianism"
-  ],
-  "calendar": "solar",
-  "date_rule": "Set by the solar calendar, so it holds close to the same Gregorian date each year.",
-  "observed": {
-    "2024": "03-20",
-    "2025": "03-20",
-    "2026": "03-21",
-    "2027": "03-21"
-  },
-  "sources": [],
-  "sourcing": "todo"
+ "id": "nowruz",
+ "name": "Nowruz",
+ "traditions": [
+  "zoroastrianism"
+ ],
+ "calendar": "solar",
+ "date_rule": "Spring equinox",
+ "observed": {
+  "2024": "03-20",
+  "2025": "03-20",
+  "2026": "03-21",
+  "2027": "03-21"
+ },
+ "summary": "The new day: the new year of the Iranian world, Zoroastrian in root and shared far beyond the faith.",
+ "sources": [
+  "boyce-zoroastrians"
+ ],
+ "sourcing": "sourced"
 }
