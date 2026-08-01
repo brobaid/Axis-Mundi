@@ -326,8 +326,17 @@ const showAdherentYear =
                       )}
                     </th>
                     <td>{c.language}</td>
-                    <td class="mono">{c.composition}</td>
-                    <td>{c.status}</td>
+                    <td class="mono">
+                      {c.composition}
+                      {c.contested && <span class="contested-badge">Contested</span>}
+                    </td>
+                    <td>
+                      {c.status}
+                      {/* Spec §9.2.3: a contested row cites both positions. */}
+                      {c.contested && c.contested_note && (
+                        <span class="canon__note caption">{c.contested_note}</span>
+                      )}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -491,6 +500,9 @@ const showAdherentYear =
                 {f.born && (
                   <span class="caption mono">
                     {' · '}
+                    {/* "b." only where the record says the person is living;
+                        a missing death date does not mean one. */}
+                    {f.living && 'b. '}
                     {displayDate({ year_start: f.born.year, precision: f.born.precision })}
                     {f.died && ' – '}
                     {f.died && displayDate({ year_start: f.died.year, precision: f.died.precision })}
@@ -499,7 +511,11 @@ const showAdherentYear =
                     {f.dates_note && ` (${f.dates_note})`}
                   </span>
                 )}
+                {f.contested && <span class="contested-badge">Contested</span>}
                 <p>{f.summary}</p>
+                {f.contested && f.contested_note && (
+                  <p class="dd-note caption">{f.contested_note}</p>
+                )}
               </li>
             ))}
           </ul>
@@ -714,6 +730,14 @@ const showAdherentYear =
     font-family: var(--font-arabic);
     color: var(--ink-soft);
     margin-left: var(--space-2);
+  }
+
+  /* Both positions, under the status they qualify. */
+  .canon__note,
+  .dd-note {
+    display: block;
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
   }
 
   /* --- branch tree ------------------------------------------------------ */

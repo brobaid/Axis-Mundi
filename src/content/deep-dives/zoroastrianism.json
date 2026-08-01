@@ -54,7 +54,8 @@
     "boyce-zoroastrians"
    ],
    "sourcing": "sourced",
-   "contested": false
+   "contested": true,
+   "contested_note": "Position 1: linguistic dating places the Gathas c. 1500-1000 BCE. Position 2: a later tradition dates Zarathustra to the 6th century BCE."
   },
   {
    "id": "pahlavi-books",

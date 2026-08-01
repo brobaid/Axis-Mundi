@@ -1,17 +1,20 @@
 {
-  "id": "obon",
-  "name": "Obon",
-  "traditions": [
-    "shinto"
-  ],
-  "calendar": "solar",
-  "date_rule": "Set by the solar calendar, so it holds close to the same Gregorian date each year.",
-  "observed": {
-    "2024": "08-13",
-    "2025": "08-13",
-    "2026": "08-13",
-    "2027": "08-13"
-  },
-  "sources": [],
-  "sourcing": "todo"
+ "id": "obon",
+ "name": "Obon",
+ "traditions": [
+  "buddhism"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "13th-15th of the seventh month, July or August by region",
+ "observed": {
+  "2024": "08-13",
+  "2025": "08-13",
+  "2026": "08-13",
+  "2027": "08-13"
+ },
+ "summary": "The Japanese festival of returning ancestors, Buddhist in frame and universal in observance.",
+ "sources": [
+  "princeton-dict-buddhism-2014"
+ ],
+ "sourcing": "sourced"
 }

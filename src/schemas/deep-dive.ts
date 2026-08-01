@@ -284,14 +284,27 @@ export const figureSchema = z
      * attribution is uniform and never dropped.
      */
     dates_note: z.string().min(1).optional(),
+    /**
+     * True only where a birth date is a birth and the person is alive, so the
+     * page can prefix "b.".
+     *
+     * It cannot be inferred from a missing `died`: the Buddha, Hillel, Laozi
+     * and Zarathustra all carry a `born` with no death, because `born` is the
+     * only slot the schema has for "when this person lived". An explicit flag
+     * is the only reading that is never wrong.
+     */
+    living: z.boolean().default(false),
     role: z.string().min(1),
     summary: z.string().min(1),
     /** Related event ids. */
     events: z.array(slug).default([]),
     sources: z.array(sourceRef).default([]),
     sourcing: sourcingStatus,
+    /* Spec §9.2.3. Zarathustra's dating divides scholarship, and a figure had
+       no way to say so; the canon rows' pair is the precedent. */
+    ...contestable,
   })
-  .strict();
+  .superRefine(requireContestedNote);
 
 export type Festival = z.infer<typeof festivalSchema>;
 export type Site = z.infer<typeof siteSchema>;

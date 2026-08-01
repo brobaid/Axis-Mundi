@@ -8,7 +8,8 @@
   "year": -1500,
   "precision": "era"
  },
- "dates_note": "c. 1500–1000 BCE or 6th c. BCE; contested",
+ "contested": true,
+ "contested_note": "Position 1: linguistic dating places the Gathas c. 1500-1000 BCE. Position 2: a later tradition dates Zarathustra to the 6th century BCE.",
  "role": "Prophet, composer of the Gathas",
  "summary": "The composer of the Gathas and the tradition's prophet; his dating divides scholarship and this museum carries both positions.",
  "events": [],
