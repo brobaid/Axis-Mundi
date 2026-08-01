@@ -1,0 +1,304 @@
+{
+ "id": "analects",
+ "tradition": "chinese",
+ "title": "The Analects",
+ "title_original": "论语",
+ "division_label": "book",
+ "division_label_plural": "books",
+ "script": "han",
+ "direction": "ltr",
+ "editions": {
+  "zh": "analects-received-text",
+  "en": "legge-classics-1"
+ },
+ "lang_tags": {
+  "zh": "zh-Hans"
+ },
+ "divisions": [
+  {
+   "n": 1,
+   "slug": "1",
+   "name": "学而篇",
+   "parallel": [
+    {
+     "unit": "saying",
+     "n": 16
+    },
+    {
+     "unit": "chapter",
+     "n": 15
+    }
+   ],
+   "verses": 16,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 2,
+   "slug": "2",
+   "name": "为政篇",
+   "verses": 24,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 3,
+   "slug": "3",
+   "name": "八佾篇",
+   "verses": 26,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 4,
+   "slug": "4",
+   "name": "里仁篇",
+   "verses": 26,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 5,
+   "slug": "5",
+   "name": "公冶长篇",
+   "parallel": [
+    {
+     "unit": "saying",
+     "n": 28
+    },
+    {
+     "unit": "chapter",
+     "n": 27
+    }
+   ],
+   "verses": 28,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 6,
+   "slug": "6",
+   "name": "雍也篇",
+   "parallel": [
+    {
+     "unit": "saying",
+     "n": 30
+    },
+    {
+     "unit": "chapter",
+     "n": 28
+    }
+   ],
+   "verses": 30,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 7,
+   "slug": "7",
+   "name": "述而篇",
+   "parallel": [
+    {
+     "unit": "saying",
+     "n": 38
+    },
+    {
+     "unit": "chapter",
+     "n": 36
+    }
+   ],
+   "verses": 38,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 8,
+   "slug": "8",
+   "name": "泰伯篇",
+   "verses": 21,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 9,
+   "slug": "9",
+   "name": "子罕篇",
+   "parallel": [
+    {
+     "unit": "saying",
+     "n": 31
+    },
+    {
+     "unit": "chapter",
+     "n": 30
+    }
+   ],
+   "verses": 31,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 10,
+   "slug": "10",
+   "name": "乡党篇",
+   "parallel": [
+    {
+     "unit": "saying",
+     "n": 27
+    },
+    {
+     "unit": "chapter",
+     "n": 17
+    }
+   ],
+   "verses": 27,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 11,
+   "slug": "11",
+   "name": "先进篇",
+   "parallel": [
+    {
+     "unit": "saying",
+     "n": 26
+    },
+    {
+     "unit": "chapter",
+     "n": 25
+    }
+   ],
+   "verses": 26,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 12,
+   "slug": "12",
+   "name": "颜渊篇",
+   "verses": 24,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 13,
+   "slug": "13",
+   "name": "子路篇",
+   "verses": 30,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 14,
+   "slug": "14",
+   "name": "宪问篇",
+   "parallel": [
+    {
+     "unit": "saying",
+     "n": 44
+    },
+    {
+     "unit": "chapter",
+     "n": 47
+    }
+   ],
+   "verses": 44,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 15,
+   "slug": "15",
+   "name": "卫灵公篇",
+   "parallel": [
+    {
+     "unit": "saying",
+     "n": 42
+    },
+    {
+     "unit": "chapter",
+     "n": 41
+    }
+   ],
+   "verses": 42,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 16,
+   "slug": "16",
+   "name": "季氏篇",
+   "verses": 14,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 17,
+   "slug": "17",
+   "name": "阳货篇",
+   "verses": 26,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 18,
+   "slug": "18",
+   "name": "微子篇",
+   "verses": 11,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 19,
+   "slug": "19",
+   "name": "子张篇",
+   "verses": 25,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 20,
+   "slug": "20",
+   "name": "尧曰篇",
+   "parallel": [
+    {
+     "unit": "saying",
+     "n": 3
+    },
+    {
+     "unit": "chapter",
+     "n": 2
+    }
+   ],
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  }
+ ],
+ "total_verses": 512,
+ "english_gaps": 0,
+ "original_gaps": 0,
+ "blank": 0,
+ "sourcing": "sourced"
+}

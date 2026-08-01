@@ -1,0 +1,248 @@
+{
+ "id": "analects--5",
+ "work": "analects",
+ "n": 5,
+ "slug": "5",
+ "parallel": {
+  "note": "Legge's chapter divisions differ from the received Chinese text in this book; each column follows its own numbering.",
+  "columns": [
+   {
+    "lang": "zh",
+    "numbering": "zh",
+    "label": "The received text, by saying",
+    "unit": "saying",
+    "entries": [
+     {
+      "n": 1,
+      "text": "子谓公冶长：“可妻也，虽在缧绁之中，非其罪也！”以其子妻之。"
+     },
+     {
+      "n": 2,
+      "text": "子谓南容：“邦有道不废；邦无道免于刑戮。”以其兄之子妻之。"
+     },
+     {
+      "n": 3,
+      "text": "子谓子贱：“君子哉若人！鲁无君子者，斯焉取斯？”"
+     },
+     {
+      "n": 4,
+      "text": "子贡问曰：“赐也何如？”子曰：“女器也。”曰：“何器也？”曰：“瑚琏也。”"
+     },
+     {
+      "n": 5,
+      "text": "或曰：“雍也仁而不佞。”子曰：“焉用佞？御人以口给，屡憎于人。不知其仁，焉用佞？”"
+     },
+     {
+      "n": 6,
+      "text": "子使漆雕开仕，对曰：“吾斯之未能信。”子说。"
+     },
+     {
+      "n": 7,
+      "text": "子曰：“道不行，乘桴浮于海，从我者其由与？”子路闻之喜，子曰：“由也好勇过我，无所取材。”"
+     },
+     {
+      "n": 8,
+      "text": "孟武伯问：“子路仁乎？”子曰：“不知也。”又问，子曰：“由也，千乘之国，可使治其赋也，不知其仁也。”“求也何如？”子曰：“求也，千室之邑、百乘之家，可使为之宰也，不知其仁也。”“赤也何如？”子曰：“赤也，束带立于朝，可使与宾客言也，不知其仁也。”"
+     },
+     {
+      "n": 9,
+      "text": "子谓子贡曰：“女与回也孰愈？”对曰：“赐也何敢望回？回也闻一以知十，赐也闻一以知二。”子曰：“弗如也，吾与女弗如也！”"
+     },
+     {
+      "n": 10,
+      "text": "宰予昼寝，子曰：“朽木不可雕也，粪土之墙不可杇也，于予与何诛？”子曰：“始吾于人也，听其言而信其行；今吾于人也，听其言而观其行。于予与改是。”"
+     },
+     {
+      "n": 11,
+      "text": "子曰：“吾未见刚者。”或对曰：“申枨。”子曰：“枨也欲，焉得刚。”"
+     },
+     {
+      "n": 12,
+      "text": "子贡曰：“我不欲人之加诸我也，吾亦欲无加诸人。”子曰：“赐也，非尔所及也。”"
+     },
+     {
+      "n": 13,
+      "text": "子贡曰：“夫子之文章，可得而闻也；夫子之言性与天道，不可得而闻也。”"
+     },
+     {
+      "n": 14,
+      "text": "子路有闻，未之能行，唯恐有闻。"
+     },
+     {
+      "n": 15,
+      "text": "子贡问曰：“孔文子何以谓之文也？”子曰：“敏而好学，不耻下问，是以谓之文也。”"
+     },
+     {
+      "n": 16,
+      "text": "子谓子产：“有君子之道四焉：其行己也恭，其事上也敬，其养民也惠，其使民也义。”"
+     },
+     {
+      "n": 17,
+      "text": "子曰：“晏平仲善与人交，久而敬之。”"
+     },
+     {
+      "n": 18,
+      "text": "子曰：“臧文仲居蔡，山节藻棁，何如其知也？”"
+     },
+     {
+      "n": 19,
+      "text": "子张问曰：“令尹子文三仕为令尹，无喜色，三已之无愠色，旧令尹之政必以告新令尹，何如？”子曰：“忠矣。”曰：“仁矣乎？”曰：“未知，焉得仁？”“崔子弑齐君，陈文子有马十乘，弃而违之。至于他邦，则曰：‘犹吾大夫崔子也。’违之。之一邦，则又曰：‘犹吾大夫崔子也。’违之，何如？”子曰：“清矣。”曰：“仁矣乎？”曰：“未知，焉得仁？”"
+     },
+     {
+      "n": 20,
+      "text": "季文子三思而后行，子闻之曰：“再斯可矣。”"
+     },
+     {
+      "n": 21,
+      "text": "子曰：“宁武子，邦有道则知，邦无道则愚。其知可及也，其愚不可及也。”"
+     },
+     {
+      "n": 22,
+      "text": "子在陈，曰：“归与！归与！吾党之小子狂简，斐然成章，不知所以裁之。”"
+     },
+     {
+      "n": 23,
+      "text": "子曰：“伯夷、叔齐不念旧恶，怨是用希。”"
+     },
+     {
+      "n": 24,
+      "text": "子曰：“孰谓微生高直？或乞醯焉，乞诸其邻而与之。”"
+     },
+     {
+      "n": 25,
+      "text": "子曰：“巧言、令色、足恭，左丘明耻之，丘亦耻之。匿怨而友其人，左丘明耻之，丘亦耻之。”"
+     },
+     {
+      "n": 26,
+      "text": "颜渊、季路侍，子曰：“盍各言尔志？”子路曰：“愿车马、衣轻裘与朋友共，敝之而无憾。”颜渊曰：“愿无伐善，无施劳。”子路曰：“愿闻子之志。”子曰：“老者安之，朋友信之，少者怀之。”"
+     },
+     {
+      "n": 27,
+      "text": "子曰：“已矣乎！吾未见能见其过而内自讼者也。”"
+     },
+     {
+      "n": 28,
+      "text": "子曰：“十室之邑，必有忠信如丘者焉，不如丘之好学也。”"
+     }
+    ]
+   },
+   {
+    "lang": "en",
+    "numbering": "en",
+    "label": "Legge's translation, by his chapters",
+    "unit": "chapter",
+    "entries": [
+     {
+      "n": 1,
+      "text": "1. The Master said of Kung-ye Ch'ang that he might be wived; although he was put in bonds, he had not been guilty of any crime. Accordingly, he gave him his own daughter to wife. 2. Of Nan Yung he said that if the country were well governed he would not be out of office, and if it were ill-governed, he would escape punishment and disgrace. He gave him the daughter of his own elder brother to wife."
+     },
+     {
+      "n": 2,
+      "text": "The Master said of Tsze-chien, 'Of superior virtue indeed is such a man! If there were not virtuous men in Lu, how could this man have acquired this character?'"
+     },
+     {
+      "n": 3,
+      "text": "Tsze-kung asked, 'What do you say of me, Ts'ze? The Master said, 'You are a utensil.' 'What utensil?' 'A gemmed sacrificial utensil.'"
+     },
+     {
+      "n": 4,
+      "text": "1. Some one said, 'Yung is truly virtuous, but he is not ready with his tongue.' 2. The Master said, 'What is the good of being ready with the tongue? They who encounter men with smartnesses of speech for the most part procure themselves hatred. I know not whether he be truly virtuous, but why should he show readiness of the tongue?'"
+     },
+     {
+      "n": 5,
+      "text": "The Master was wishing Ch'i-tiao K'ai to enter on official employment. He replied, 'I am not yet able to rest in the assurance of THIS.' The Master was pleased."
+     },
+     {
+      "n": 6,
+      "text": "The Master said, 'My doctrines make no way. I will get upon a raft, and float about on the sea. He that will accompany me will be Yu, I dare say.' Tsze-lu hearing this was glad, upon which the Master said, 'Yu is fonder of daring than I am. He does not exercise his judgment upon matters.'"
+     },
+     {
+      "n": 7,
+      "text": "1. Mang Wu asked about Tsze-lu, whether he was perfectly virtuous. The Master said, 'I do not know.' 2. He asked again, when the Master replied, 'In a kingdom of a thousand chariots, Yu might be employed to manage the military levies, but I do not know whether he be perfectly virtuous.' 3. 'And what do you say of Ch'iu?' The Master replied, 'In a city of a thousand families, or a clan of a hundred chariots, Ch'iu might be employed as governor, but I do not know whether he is perfectly virtuous.' 4. 'What do you say of Ch'ih?' The Master replied, 'With his sash girt and standing in a court, Ch'ih might be employed to converse with the visitors and guests, but I do not know whether he is perfectly virtuous.'"
+     },
+     {
+      "n": 8,
+      "text": "1. The Master said to Tsze-kung, 'Which do you consider superior, yourself or Hui?' 2. Tsze-kung replied, 'How dare I compare myself with Hui? Hui hears one point and knows all about a subject; I hear one point, and know a second.' 3. The Master said, 'You are not equal to him. I grant you, you are not equal to him.'"
+     },
+     {
+      "n": 9,
+      "text": "1. Tsai Yu being asleep during the daytime, the Master said, 'Rotten wood cannot be carved; a wall of dirty earth will not receive the trowel. This Yu!-- what is the use of my reproving him?' 2. The Master said, 'At first, my way with men was to hear their words, and give them credit for their conduct. Now my way is to hear their words, and look at their conduct. It is from Yu that I have learned to make this change.'"
+     },
+     {
+      "n": 10,
+      "text": "The Master said, 'I have not seen a firm and unbending man.' Some one replied, 'There is Shan Ch'ang.' 'Ch'ang,' said the Master, 'is under the influence of his passions; how can he be pronounced firm and unbending?'"
+     },
+     {
+      "n": 11,
+      "text": "Tsze-kung said, 'What I do not wish men to do to me, I also wish not to do to men.' The Master said, 'Ts'ze, you have not attained to that.'"
+     },
+     {
+      "n": 12,
+      "text": "Tsze-kung said, 'The Master's personal displays of his principles and ordinary descriptions of them may be heard. His discourses about man's nature, and the way of Heaven, cannot be heard.'"
+     },
+     {
+      "n": 13,
+      "text": "When Tsze-lu heard anything, if he had not yet succeeded in carrying it into practice, he was only afraid lest he should hear something else."
+     },
+     {
+      "n": 14,
+      "text": "Tsze-kung asked, saying, 'On what ground did Kung-wan get that title of Wan?' The Master said, 'He was of an active nature and yet fond of learning, and he was not ashamed to ask and learn of his inferiors!-- On these grounds he has been styled Wan.'"
+     },
+     {
+      "n": 15,
+      "text": "The Master said of Tsze-ch'an that he had four of the characteristics of a superior man:-- in his conduct of himself, he was humble; in serving his superiors, he was respectful; in nourishing the people, he was kind; in ordering the people, he was just.'"
+     },
+     {
+      "n": 16,
+      "text": "The Master said, 'Yen P'ing knew well how to maintain friendly intercourse. The acquaintance might be long, but he showed the same respect as at first.'"
+     },
+     {
+      "n": 17,
+      "text": "The Master said, 'Tsang Wan kept a large tortoise in a house, on the capitals of the pillars of which he had hills made, and with representations of duckweed on the small pillars above the beams supporting the rafters.-- Of what sort was his wisdom?'"
+     },
+     {
+      "n": 18,
+      "text": "1. Tsze-chang asked, saying, 'The minister Tsze- wan thrice took office, and manifested no joy in his countenance. Thrice he retired from office, and manifested no displeasure. He made it a point to inform the new minister of the way in which he had conducted the government;-- what do you say of him?' The Master replied. 'He was loyal.' 'Was he perfectly virtuous?' 'I do not know. How can he be pronounced perfectly virtuous?' 2. Tsze-chang proceeded, 'When the officer Ch'ui killed the prince of Ch'i, Ch'an Wan, though he was the owner of forty horses, abandoned them and left the country. Coming to another State, he said, \"They are here like our great officer, Ch'ui,\" and left it. He came to a second State, and with the same observation left it also;-- what do you say of him?' The Master replied, 'He was pure.' 'Was he perfectly virtuous?' 'I do not know. How can he be pronounced perfectly virtuous?'"
+     },
+     {
+      "n": 19,
+      "text": "Chi Wan thought thrice, and then acted. When the Master was informed of it, he said, 'Twice may do.'"
+     },
+     {
+      "n": 20,
+      "text": "The Master said, 'When good order prevailed in his country, Ning Wu acted the part of a wise man. When his country was in disorder, he acted the part of a stupid man. Others may equal his wisdom, but they cannot equal his stupidity.'"
+     },
+     {
+      "n": 21,
+      "text": "When the Master was in Ch'an, he said, 'Let me return! Let me return! The little children of my school are ambitious and too hasty. They are accomplished and complete so far, but they do not know how to restrict and shape themselves.'"
+     },
+     {
+      "n": 22,
+      "text": "The Master said, 'Po-i and Shu-ch'i did not keep the former wickednesses of men in mind, and hence the resentments directed towards them were few.'"
+     },
+     {
+      "n": 23,
+      "text": "The Master said, 'Who says of Wei-shang Kao that he is upright? One begged some vinegar of him, and he begged it of a neighbor and gave it to the man.'"
+     },
+     {
+      "n": 24,
+      "text": "The Master said, 'Fine words, an insinuating appearance, and excessive respect;-- Tso Ch'iu-ming was ashamed of them. I also am ashamed of them. To conceal resentment against a person, and appear friendly with him;-- Tso Ch'iu-ming was ashamed of such conduct. I also am ashamed of it.'"
+     },
+     {
+      "n": 25,
+      "text": "1. Yen Yuan and Chi Lu being by his side, the Master said to them, 'Come, let each of you tell his wishes.' 2. Tsze-lu said, 'I should like, having chariots and horses, and light fur dresses, to share them with my friends, and though they should spoil them, I would not be displeased.' 3. Yen Yuan said, 'I should like not to boast of my excellence, nor to make a display of my meritorious deeds.' 4. Tsze-lu then said, 'I should like, sir, to hear your wishes.' The Master said, 'They are, in regard to the aged, to give them rest; in regard to friends, to show them sincerity; in regard to the young, to treat them tenderly.'"
+     },
+     {
+      "n": 26,
+      "text": "The Master said, 'It is all over! I have not yet seen one who could perceive his faults, and inwardly accuse himself.'"
+     },
+     {
+      "n": 27,
+      "text": "The Master said, 'In a hamlet of ten families, there may be found one honourable and sincere as I am, but not so fond of learning.'"
+     }
+    ]
+   }
+  ]
+ },
+ "sourcing": "sourced"
+}

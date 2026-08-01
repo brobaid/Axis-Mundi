@@ -1,0 +1,232 @@
+{
+ "id": "analects--11",
+ "work": "analects",
+ "n": 11,
+ "slug": "11",
+ "parallel": {
+  "note": "Legge's chapter divisions differ from the received Chinese text in this book; each column follows its own numbering.",
+  "columns": [
+   {
+    "lang": "zh",
+    "numbering": "zh",
+    "label": "The received text, by saying",
+    "unit": "saying",
+    "entries": [
+     {
+      "n": 1,
+      "text": "子曰：“先进于礼乐，野人也；后进于礼乐，君子也。如用之，则吾从先进。”"
+     },
+     {
+      "n": 2,
+      "text": "子曰：“从我于陈、蔡者，皆不及门也。”"
+     },
+     {
+      "n": 3,
+      "text": "德行：颜渊，闵子骞，冉伯牛，仲弓。言语：宰我，子贡。政事：冉有，季路。文学：子游，子夏。"
+     },
+     {
+      "n": 4,
+      "text": "子曰：“回也非助我者也，于吾言无所不说。”"
+     },
+     {
+      "n": 5,
+      "text": "子曰：“孝哉闵子骞！人不间于其父母昆弟之言。”"
+     },
+     {
+      "n": 6,
+      "text": "南容三复白圭，孔子以其兄之子妻之。"
+     },
+     {
+      "n": 7,
+      "text": "季康子问：“弟子孰为好学？”孔子对曰：“有颜回者好学，不幸短命死矣，今也则亡。”"
+     },
+     {
+      "n": 8,
+      "text": "颜渊死，颜路请子之车以为之椁。子曰：“才不才，亦各言其子也。鲤也死，有棺而无椁，吾不徒行以为之椁。以吾从大夫之后，不可徒行也。”"
+     },
+     {
+      "n": 9,
+      "text": "颜渊死。子曰：“噫！天丧予！天丧予！”"
+     },
+     {
+      "n": 10,
+      "text": "颜渊死，子哭之恸，从者曰：“子恸矣！”曰：“有恸乎？非夫人之为恸而谁为？”"
+     },
+     {
+      "n": 11,
+      "text": "颜渊死，门人欲厚葬之，子曰：“不可。”门人厚葬之，子曰：“回也视予犹父也，予不得视犹子也。非我也，夫二三子也！”"
+     },
+     {
+      "n": 12,
+      "text": "季路问事鬼神，子曰：“未能事人，焉能事鬼？”,曰：“敢问死。”曰：“未知生，焉知死？”"
+     },
+     {
+      "n": 13,
+      "text": "闵子侍侧，訚訚如也；子路，行行如也；冉有、子贡，侃侃如也。子乐。“若由也，不得其死然。”"
+     },
+     {
+      "n": 14,
+      "text": "鲁人为长府，闵子骞曰：“仍旧贯如之何？何必改作？”子曰：“夫人不言，言必有中。”"
+     },
+     {
+      "n": 15,
+      "text": "子曰：“由之瑟奚为于丘之门？”门人不敬子路，子曰：“由也升堂矣，未入于室也。”"
+     },
+     {
+      "n": 16,
+      "text": "子贡问：“师与商也孰贤？”子曰：“师也过，商也不及。”曰：“然则师愈与？”子曰：“过犹不及。”"
+     },
+     {
+      "n": 17,
+      "text": "季氏富于周公，而求也为之聚敛而附益之。子曰：“非吾徒也，小子鸣鼓而攻之可也。”"
+     },
+     {
+      "n": 18,
+      "text": "柴也愚，参也鲁，师也辟，由也喭。"
+     },
+     {
+      "n": 19,
+      "text": "子曰：“回也其庶乎，屡空。赐不受命而货殖焉，亿则屡中。”"
+     },
+     {
+      "n": 20,
+      "text": "子张问善人之道，子曰：“不践迹，亦不入于室。”"
+     },
+     {
+      "n": 21,
+      "text": "子曰：“论笃是与，君子者乎，色庄者乎？”"
+     },
+     {
+      "n": 22,
+      "text": "子路问：“闻斯行诸？”子曰：“有父兄在，如之何其闻斯行之？”冉有问：“闻斯行诸？”子曰：“闻斯行之。公西华曰：“由也问闻斯行诸，子曰‘有父兄在’；求也问闻斯行诸，子曰‘闻斯行之’。赤也惑，敢问。”子曰：“求也退，故进之；由也兼人，故退之。”"
+     },
+     {
+      "n": 23,
+      "text": "子畏于匡，颜渊后。子曰：“吾以女为死矣！”曰：“子在，回何敢死！”"
+     },
+     {
+      "n": 24,
+      "text": "季子然问：“仲由、冉求可谓大臣与？”子曰：“吾以子为异之问，曾由与求之问。所谓大臣者，以道事君，不可则止。今由与求也，可谓具臣矣。”曰：“然则从之者与？”子曰：“弑父与君，亦不从也。”"
+     },
+     {
+      "n": 25,
+      "text": "子路使子羔为费宰，子曰：“贼夫人之子。”子路曰：“有民人焉，有社稷焉，何必读书然后为学。”子曰：“是故恶夫佞者。”"
+     },
+     {
+      "n": 26,
+      "text": "子路、曾皙、冉有、公西华侍坐，子曰：“以吾一日长乎尔，毋吾以也。居则曰‘不吾知也’如或知尔，则何以哉？”子路率尔而对曰：“千乘之国，摄乎大国之间，加之以师旅，因之以饥馑，由也为之，比及三年，可使有勇，且知方也。”夫子哂之。“求，尔何如？”对曰：“方六七十，如五六十，求也为之，比及三年，可使足民。如其礼乐，以俟君子。”“赤！尔何如？”对曰：“非曰能之，愿学焉。宗庙之事，如会同，端章甫，愿为小相焉。”“点，尔何如？”鼓瑟希，铿尔，舍瑟而作，对曰：“异乎三子者之撰。”子曰：“何伤乎？亦各言其志也。”曰：“暮春者，春服既成，冠者五六人，童子六七人，浴乎沂，风乎舞雩，咏而归。”夫子喟然叹曰：“吾与点也！”三子者出，曾皙后。曾皙曰：“夫三子者之言何如？”子曰：“亦各言其志也已矣。”曰：“夫子何哂由也？”曰：“为国以礼，其言不让，是故哂之。”“唯求则非邦也与？”“安见方六七十、如五六十而非邦也者？”“唯赤则非邦也与？”“宗庙会同，非诸侯而何？赤也为之小，孰能为之大？”"
+     }
+    ]
+   },
+   {
+    "lang": "en",
+    "numbering": "en",
+    "label": "Legge's translation, by his chapters",
+    "unit": "chapter",
+    "entries": [
+     {
+      "n": 1,
+      "text": "1. The Master said, 'The men of former times, in the matters of ceremonies and music were rustics, it is said, while the men of these latter times, in ceremonies and music, are accomplished gentlemen. 2. 'If I have occasion to use those things, I follow the men of former times.'"
+     },
+     {
+      "n": 2,
+      "text": "1. The Master said, 'Of those who were with me in Ch'an and Ts'ai, there are none to be found to enter my door.' 2. Distinguished for their virtuous principles and practice, there were Yen Yuan, Min Tsze-ch'ien, Zan Po-niu, and Chung-kung; for their ability in speech, Tsai Wo and Tsze-kung; for their adminis- trative talents, Zan Yu and Chi Lu; for their literary acquirements, Tsze-yu and Tsze-hsia."
+     },
+     {
+      "n": 3,
+      "text": "The Master said, 'Hui gives me no assistance. There is nothing that I say in which he does not delight.'"
+     },
+     {
+      "n": 4,
+      "text": "The Master said, 'Filial indeed is Min Tsze-ch'ien! Other people say nothing of him different from the report of his parents and brothers.'"
+     },
+     {
+      "n": 5,
+      "text": "Nan Yung was frequently repeating the lines about a white scepter stone. Confucius gave him the daughter of his elder brother to wife."
+     },
+     {
+      "n": 6,
+      "text": "Chi K'ang asked which of the disciples loved to learn. Confucius replied to him, 'There was Yen Hui; he loved to learn. Unfortunately his appointed time was short, and he died. Now there is no one who loves to learn, as he did.'"
+     },
+     {
+      "n": 7,
+      "text": "1. When Yen Yuan died, Yen Lu begged the carriage of the Master to sell and get an outer shell for his son's coffin. 2. The Master said, 'Every one calls his son his son, whether he has talents or has not talents. There was Li; when he died, he had a coffin but no outer shell. I would not walk on foot to get a shell for him, because, having followed in the rear of the great officers, it was not proper that I should walk on foot.'"
+     },
+     {
+      "n": 8,
+      "text": "When Yen Yuan died, the Master said, 'Alas! Heaven is destroying me! Heaven is destroying me!'"
+     },
+     {
+      "n": 9,
+      "text": "1. When Yen Yuan died, the Master bewailed him exceedingly, and the disciples who were with him said, 'Master, your grief is excessive?' 2. 'Is it excessive?' said he. 3. 'If I am not to mourn bitterly for this man, for whom should I mourn?'"
+     },
+     {
+      "n": 10,
+      "text": "1. When Yen Yuan died, the disciples wished to give him a great funeral, and the Master said, 'You may not do so.' 2. The disciples did bury him in great style. 3. The Master said, 'Hui behaved towards me as his father. I have not been able to treat him as my son. The fault is not mine; it belongs to you, O disciples.'"
+     },
+     {
+      "n": 11,
+      "text": "Chi Lu asked about serving the spirits of the dead. The Master said, 'While you are not able to serve men, how can you serve their spirits?' Chi Lu added, 'I venture to ask about death?' He was answered, 'While you do not know life, how can you know about death?'"
+     },
+     {
+      "n": 12,
+      "text": "1. The disciple Min was standing by his side, looking bland and precise; Tsze-lu, looking bold and soldierly; Zan Yu and Tsze-kung, with a free and straightforward manner. The Master was pleased. 2. He said, 'Yu, there!-- he will not die a natural death.'"
+     },
+     {
+      "n": 13,
+      "text": "1. Some parties in Lu were going to take down and rebuild the Long Treasury. 2. Min Tsze-ch'ien said, 'Suppose it were to be repaired after its old style;-- why must it be altered and made anew?' 3. The Master said, 'This man seldom speaks; when he does, he is sure to hit the point.'"
+     },
+     {
+      "n": 14,
+      "text": "1. The Master said, 'What has the lute of Yu to do in my door?' 2. The other disciples began not to respect Tsze-lu. The Master said, 'Yu has ascended to the hall, though he has not yet passed into the inner apartments.'"
+     },
+     {
+      "n": 15,
+      "text": "1. Tsze-kung asked which of the two, Shih or Shang, was the superior. The Master said, 'Shih goes beyond the due mean, and Shang does not come up to it.' 2. 'Then,' said Tsze-kung, 'the superiority is with Shih, I suppose.' 3. The Master said, 'To go beyond is as wrong as to fall short.'"
+     },
+     {
+      "n": 16,
+      "text": "1. The head of the Chi family was richer than the duke of Chau had been, and yet Ch'iu collected his imposts for him, and increased his wealth. 2. The Master said, 'He is no disciple of mine. My little children, beat the drum and assail him.'"
+     },
+     {
+      "n": 17,
+      "text": "1. Ch'ai is simple. 2. Shan is dull. 3. Shih is specious. 4. Yu is coarse."
+     },
+     {
+      "n": 18,
+      "text": "1. The Master said, 'There is Hui! He has nearly attained to perfect virtue. He is often in want. 2. 'Ts'ze does not acquiesce in the appointments of Heaven, and his goods are increased by him. Yet his judgments are often correct.'"
+     },
+     {
+      "n": 19,
+      "text": "Tsze-chang asked what were the characteristics of the GOOD man. The Master said, 'He does not tread in the footsteps of others, but moreover, he does not enter the chamber of the sage.'"
+     },
+     {
+      "n": 20,
+      "text": "The Master said, 'If, because a man's discourse appears solid and sincere, we allow him to be a good man, is he really a superior man? or is his gravity only in appearance?'"
+     },
+     {
+      "n": 21,
+      "text": "Tsze-lu asked whether he should immediately carry into practice what he heard. The Master said, 'There are your father and elder brothers to be consulted;-- why should you act on that principle of immediately carrying into practice what you hear?' Zan Yu asked the same, whether he should immediately carry into practice what he heard, and the Master answered, 'Immediately carry into practice what you hear.' Kung-hsi Hwa said, 'Yu asked whether he should carry immediately into practice what he heard, and you said, \"There are your father and elder brothers to be consulted.\" Ch'iu asked whether he should immediately carry into practice what he heard, and you said, \"Carry it immediately into practice.\" I, Ch'ih, am perplexed, and venture to ask you for an explanation.' The Master said, 'Ch'iu is retiring and slow; therefore, I urged him forward. Yu has more than his own share of energy; therefore I kept him back.'"
+     },
+     {
+      "n": 22,
+      "text": "The Master was put in fear in K'wang and Yen Yuan fell behind. The Master, on his rejoining him, said, 'I thought you had died.' Hui replied, 'While you were alive, how should I presume to die?'"
+     },
+     {
+      "n": 23,
+      "text": "1. Chi Tsze-zan asked whether Chung Yu and Zan Ch'iu could be called great ministers. 2. The Master said, 'I thought you would ask about some extraordinary individuals, and you only ask about Yu and Ch'iu! 3. 'What is called a great minister, is one who serves his prince according to what is right, and when he finds he cannot do so, retires. 4. 'Now, as to Yu and Ch'iu, they may be called ordinary ministers.' 5. Tsze-zan said, 'Then they will always follow their chief;-- will they?' 6. The Master said, 'In an act of parricide or regicide, they would not follow him.'"
+     },
+     {
+      "n": 24,
+      "text": "1. Tsze-lu got Tsze-kao appointed governor of Pi. 2. The Master said, 'You are injuring a man's son.' 3. Tsze-lu said, 'There are (there) common people and officers; there are the altars of the spirits of the land and grain. Why must one read books before he can be considered to have learned?' 4. The Master said, 'It is on this account that I hate your glib-tongued people.'"
+     },
+     {
+      "n": 25,
+      "text": "1. Tsze-lu, Tsang Hsi, Zan Yu, and Kung-hsi Hwa were sitting by the Master. 2. He said to them, 'Though I am a day or so older than you, do not think of that. 3. 'From day to day you are saying, \"We are not known.\" If some ruler were to know you, what would you like to do?' 4. Tsze-lu hastily and lightly replied, 'Suppose the case of a State of ten thousand chariots; let it be straitened between other large States; let it be suffering from invading armies; and to this let there be added a famine in corn and in all vegetables:-- if I were intrusted with the government of it, in three years' time I could make the people to be bold, and to recognise the rules of righteous conduct.' The Master smiled at him. 5. Turning to Yen Yu, he said, 'Ch'iu, what are your wishes?' Ch'iu replied, 'Suppose a state of sixty or seventy li square, or one of fifty or sixty, and let me have the government of it;-- in three years' time, I could make plenty to abound among the people. As to teaching them the principles of propriety, and music, I must wait for the rise of a superior man to do that.' 6. 'What are your wishes, Ch'ih,' said the Master next to Kung- hsi Hwa. Ch'ih replied, 'I do not say that my ability extends to these things, but I should wish to learn them. At the services of the ancestral temple, and at the audiences of the princes with the sovereign, I should like, dressed in the dark square-made robe and the black linen cap, to act as a small assistant.' 7. Last of all, the Master asked Tsang Hsi, 'Tien, what are your wishes?' Tien, pausing as he was playing on his lute, while it was yet twanging, laid the instrument aside, and rose. 'My wishes,' he said, 'are different from the cherished purposes of these three gentlemen.' 'What harm is there in that?' said the Master; 'do you also, as well as they, speak out your wishes.' Tien then said, 'In this, the last month of spring, with the dress of the season all complete, along with five or six young men who have assumed the cap, and six or seven boys, I would wash in the I, enjoy the breeze among the rain altars, and return home singing.' The Master heaved a sigh and said, 'I give my approval to Tien.' 8. The three others having gone out, Tsang Hsi remained behind, and said, 'What do you think of the words of these three friends?' The Master replied, 'They simply told each one his wishes.' 9. Hsi pursued, 'Master, why did you smile at Yu?' 10. He was answered, 'The management of a State demands the rules of propriety. His words were not humble; therefore I smiled at him.' 11. Hsi again said, 'But was it not a State which Ch'iu proposed for himself?' The reply was, 'Yes; did you ever see a territory of sixty or seventy li or one of fifty or sixty, which was not a State?' 12. Once more, Hsi inquired, 'And was it not a State which Ch'ih proposed for himself?' The Master again replied, 'Yes; who but princes have to do with ancestral temples, and with audiences but the sovereign? If Ch'ih were to be a small assistant in these services, who could be a great one?"
+     }
+    ]
+   }
+  ]
+ },
+ "sourcing": "sourced"
+}

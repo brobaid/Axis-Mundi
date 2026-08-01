@@ -1,0 +1,48 @@
+{
+ "id": "analects--20",
+ "work": "analects",
+ "n": 20,
+ "slug": "20",
+ "parallel": {
+  "note": "Legge's chapter divisions differ from the received Chinese text in this book; each column follows its own numbering.",
+  "columns": [
+   {
+    "lang": "zh",
+    "numbering": "zh",
+    "label": "The received text, by saying",
+    "unit": "saying",
+    "entries": [
+     {
+      "n": 1,
+      "text": "尧曰：“咨！尔舜，天之历数在尔躬，允执其中。四海困穷，天禄永终。”舜亦以命禹。曰：“予小子履，敢用玄牡，敢昭告于皇皇后帝：有罪不敢赦，帝臣不蔽，简在帝心。朕躬有罪，无以万方；万方有罪，罪在朕躬。”周有大赉，善人是富。“虽有周亲，不如仁人。百姓有过，在予一人。”谨权量，审法度，修废官，四方之政行焉。兴灭国，继绝世，举逸民，天下之民归心焉。所重：民、食、丧、祭。宽则得众，信则民任焉，敏则有功，公则说。"
+     },
+     {
+      "n": 2,
+      "text": "子张问于孔子曰：“何如斯可以从政矣？”子曰：“尊五美，屏四恶，斯可以从政矣。”子张曰：“何谓五美？”子曰：“君子惠而不费，劳而不怨，欲而不贪，泰而不骄，威而不猛。”子张曰：“何谓惠而不费？”子曰：“因民之所利而利之，斯不亦惠而不费乎？择可劳而劳之，又谁怨？欲仁而得仁，又焉贪？君子无众寡，无小大，无敢慢，斯不亦泰而不骄乎？君子正其衣冠，尊其瞻视，俨然人望而畏之，斯不亦威而不猛乎？”子张曰：“何谓四恶？”子曰：“不教而杀谓之虐；不戒视成谓之暴；慢令致期谓之贼；犹之与人也，出纳之吝谓之有司。”"
+     },
+     {
+      "n": 3,
+      "text": "孔子曰：“不知命，无以为君子也；不知礼，无以立也；不知言，无以知人也。”"
+     }
+    ]
+   },
+   {
+    "lang": "en",
+    "numbering": "en",
+    "label": "Legge's translation, by his chapters",
+    "unit": "chapter",
+    "entries": [
+     {
+      "n": 1,
+      "text": "1. Yao said, 'Oh! you, Shun, the Heaven-determined order of succession now rests in your person. Sincerely hold fast the due Mean. If there shall be distress and want within the four seas, the Heavenly revenue will come to a perpetual end.' 2. Shun also used the same language in giving charge to Yu. 3. T'ang said, 'I the child Li, presume to use a dark-coloured victim, and presume to announce to Thee, O most great and sovereign God, that the sinner I dare not pardon, and thy ministers, O God, I do not keep in obscurity. The examination of them is by thy mind, O God. If, in my person, I commit offences, they are not to be attributed to you, the people of the myriad regions. If you in the myriad regions commit offences, these offences must rest on my person.' 4. Chau conferred great gifts, and the good were enriched. 5. 'Although he has his near relatives, they are not equal to my virtuous men. The people are throwing blame upon me, the One man.' 6. He carefully attended to the weights and measures, examined the body of the laws, restored the discarded officers, and the good government of the kingdom took its course. 7. He revived States that had been extinguished, restored families whose line of succession had been broken, and called to office those who had retired into obscurity, so that throughout the kingdom the hearts of the people turned towards him. 8. What he attached chief importance to, were the food of the people, the duties of mourning, and sacrifices. 9. By his generosity, he won all. By his sincerity, he made the people repose trust in him. By his earnest activity, his achievements were great. By his justice, all were delighted."
+     },
+     {
+      "n": 2,
+      "text": "1. Tsze-chang asked Confucius, saying, 'In what way should a person in authority act in order that he may conduct government properly?' The Master replied, 'Let him honour the five excellent, and banish away the four bad, things;-- then may he conduct government properly.' Tsze-chang said, 'What are meant by the five excellent things?' The Master said, 'When the person in authority is beneficent without great expenditure; when he lays tasks on the people without their repining; when he pursues what he desires without being covetous; when he maintains a dignified ease without being proud; when he is majestic without being fierce.' 2. Tsze-chang said, 'What is meant by being beneficent without great expenditure?' The Master replied, 'When the person in authority makes more beneficial to the people the things from which they naturally derive benefit;-- is not this being beneficent without great expenditure? When he chooses the labours which are proper, and makes them labour on them, who will repine? When his desires are set on benevolent government, and he secures it, who will accuse him of covetousness? Whether he has to do with many people or few, or with things great or small, he does not dare to indicate any disrespect;-- is not this to maintain a dignified ease without any pride? He adjusts his clothes and cap, and throws a dignity into his looks, so that, thus dignified, he is looked at with awe;-- is not this to be majestic without being fierce?' 3. Tsze-chang then asked, 'What are meant by the four bad things?' The Master said, 'To put the people to death without having instructed them;-- this is called cruelty. To require from them, suddenly, the full tale of work, without having given them warning;-- this is called oppression. To issue orders as if without urgency, at first, and, when the time comes, to insist on them with severity;-- this is called injury. And, generally, in the giving pay or rewards to men, to do it in a stingy way;-- this is called acting the part of a mere official.' CHAP III. 1. The Master said, 'Without recognising the ordinances of Heaven, it is impossible to be a superior man. 2. 'Without an acquaintance with the rules of Propriety, it is impossible for the character to be established. 3. 'Without knowing the force of words, it is impossible to know men.' End of Project Gutenberg Etext THE CHINESE CLASSICS (CONFUCIAN ANALECTS) by James Legge"
+     }
+    ]
+   }
+  ]
+ },
+ "sourcing": "sourced"
+}

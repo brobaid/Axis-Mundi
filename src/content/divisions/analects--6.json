@@ -1,0 +1,260 @@
+{
+ "id": "analects--6",
+ "work": "analects",
+ "n": 6,
+ "slug": "6",
+ "parallel": {
+  "note": "Legge's chapter divisions differ from the received Chinese text in this book; each column follows its own numbering.",
+  "columns": [
+   {
+    "lang": "zh",
+    "numbering": "zh",
+    "label": "The received text, by saying",
+    "unit": "saying",
+    "entries": [
+     {
+      "n": 1,
+      "text": "子曰：“雍也可使南面。”"
+     },
+     {
+      "n": 2,
+      "text": "仲弓问子桑伯子，子曰：“可也简。”仲弓曰：“居敬而行简，以临其民，不亦可乎？居简而行简，无乃大简乎？”子曰：“雍之言然。”"
+     },
+     {
+      "n": 3,
+      "text": "哀公问：“弟子孰为好学？”孔子对曰：“有颜回者好学，不迁怒，不贰过，不幸短命死矣，今也则亡，未闻好学者也。”"
+     },
+     {
+      "n": 4,
+      "text": "子华使于齐，冉子为其母请粟，子曰：“与之釜。”请益，曰：“与之庾。”冉子与之粟五秉。子曰：“赤之适齐也，乘肥马，衣轻裘。吾闻之也，君子周急不继富。”"
+     },
+     {
+      "n": 5,
+      "text": "原思为之宰，与之粟九百，辞。子曰：“毋，以与尔邻里乡党乎！”"
+     },
+     {
+      "n": 6,
+      "text": "子谓仲弓曰：“犁牛之子骍且角，虽欲勿用，山川其舍诸？”"
+     },
+     {
+      "n": 7,
+      "text": "子曰：“回也，其心三月不违仁，其余则日月至焉而已矣。”"
+     },
+     {
+      "n": 8,
+      "text": "季康子问：“仲由可使从政也与？”子曰：“由也果，于从政乎何有？”曰：“赐也可使从政也与？”曰：“赐也达，于从政乎何有？”曰：“求也可使从政也与？”曰：“求也艺，于从政乎何有？”"
+     },
+     {
+      "n": 9,
+      "text": "季氏使闵子骞为费宰，闵子骞曰：“善为我辞焉。如有复我者，则吾必在汶上矣。”"
+     },
+     {
+      "n": 10,
+      "text": "伯牛有疾，子问之，自牖执其手，曰：“亡之，命矣夫！斯人也而有斯疾也！斯人也而有斯疾也！”"
+     },
+     {
+      "n": 11,
+      "text": "子曰：“贤哉回也！一箪食，一瓢饮，在陋巷，人不堪其忧，回也不改其乐。贤哉，回也！”"
+     },
+     {
+      "n": 12,
+      "text": "冉求曰：“非不说子之道，力不足也。”子曰：“力不足者，中道而废，今女画。”"
+     },
+     {
+      "n": 13,
+      "text": "子谓子夏曰：“女为君子儒，无为小人儒。”"
+     },
+     {
+      "n": 14,
+      "text": "子游为武城宰，子曰：“女得人焉尔乎？”曰：“有澹台灭明者，行不由径，非公事，未尝至于偃之室也。”"
+     },
+     {
+      "n": 15,
+      "text": "子曰：“孟之反不伐，奔而殿，将入门，策其马曰：‘非敢后也，马不进也。’”"
+     },
+     {
+      "n": 16,
+      "text": "子曰：“不有祝鮀之佞，而有宋朝之美，难乎免于今之世矣。”"
+     },
+     {
+      "n": 17,
+      "text": "子曰：“谁能出不由户？何莫由斯道也？”"
+     },
+     {
+      "n": 18,
+      "text": "子曰：“质胜文则野，文胜质则史。文质彬彬，然后君子。”"
+     },
+     {
+      "n": 19,
+      "text": "子曰：“人之生也直，罔之生也幸而免。”"
+     },
+     {
+      "n": 20,
+      "text": "子曰：“知之者不如好之者；好之者不如乐之者。”"
+     },
+     {
+      "n": 21,
+      "text": "子曰：“中人以上，可以语上也；中人以下，不可以语上也。”"
+     },
+     {
+      "n": 22,
+      "text": "樊迟问知，子曰：“务民之义，敬鬼神而远之，可谓知矣。”问仁，曰：“仁者先难而后获，可谓仁矣。”"
+     },
+     {
+      "n": 23,
+      "text": "子曰：“知者乐水，仁者乐山。知者动，仁者静。知者乐，仁者寿。”"
+     },
+     {
+      "n": 24,
+      "text": "子曰：“齐一变至于鲁，鲁一变至于道。”"
+     },
+     {
+      "n": 25,
+      "text": "子曰：“觚不觚，觚哉！觚哉！”"
+     },
+     {
+      "n": 26,
+      "text": "宰我问曰：“仁者，虽告之曰：‘井有仁焉。’其从之也？”子曰：“何为其然也？君子可逝也，不可陷也；可欺也，不可罔也。”"
+     },
+     {
+      "n": 27,
+      "text": "子曰：“君子博学于文，约之以礼，亦可以弗畔矣夫。”"
+     },
+     {
+      "n": 28,
+      "text": "子见南子，子路不说，夫子矢之曰：“予所否者，天厌之！天厌之！”"
+     },
+     {
+      "n": 29,
+      "text": "子曰：“中庸之为德也，其至矣乎！民鲜久矣。”"
+     },
+     {
+      "n": 30,
+      "text": "子贡曰：“如有博施于民而能济众，何如？可谓仁乎？”子曰：“何事于仁，必也圣乎！尧、舜其犹病诸！夫仁者，己欲立而立人，己欲达而达人。能近取譬，可谓仁之方也已。”"
+     }
+    ]
+   },
+   {
+    "lang": "en",
+    "numbering": "en",
+    "label": "Legge's translation, by his chapters",
+    "unit": "chapter",
+    "entries": [
+     {
+      "n": 1,
+      "text": "1. The Master said, 'There is Yung!-- He might occupy the place of a prince.' 2. Chung-kung asked about Tsze-sang Po-tsze. The Master said, 'He may pass. He does not mind small matters.' 3. Chung-kung said, 'If a man cherish in himself a reverential feeling of the necessity of attention to business, though he may be easy in small matters in his government of the people, that may be allowed. But if he cherish in himself that easy feeling, and also carry it out in his practice, is not such an easy mode of procedure excessive?' 4. The Master said, 'Yung's words are right.'"
+     },
+     {
+      "n": 2,
+      "text": "The Duke Ai asked which of the disciples loved to learn. Confucius replied to him, 'There was Yen Hui; HE loved to learn. He did not transfer his anger; he did not repeat a fault. Unfortunately, his appointed time was short and he died; and now there is not such another. I have not yet heard of any one who loves to learn as he did.'"
+     },
+     {
+      "n": 3,
+      "text": "1. Tsze-hwa being employed on a mission to Ch'i, the disciple Zan requested grain for his mother. The Master said, 'Give her a fu.' Yen requested more. 'Give her an yu,' said the Master. Yen gave her five ping. 2. The Master said, 'When Ch'ih was proceeding to Ch'i, he had fat horses to his carriage, and wore light furs. I have heard that a superior man helps the distressed, but does not add to the wealth of the rich.' 3. Yuan Sze being made governor of his town by the Master, he gave him nine hundred measures of grain, but Sze declined them. 4. The Master said, 'Do not decline them. May you not give them away in the neighborhoods, hamlets, towns, and villages?'"
+     },
+     {
+      "n": 4,
+      "text": "The Master, speaking of Chung-kung, said, 'If the calf of a brindled cow be red and horned, although men may not wish to use it, would the spirits of the mountains and rivers put it aside?'"
+     },
+     {
+      "n": 5,
+      "text": "The Master said, 'Such was Hui that for three months there would be nothing in his mind contrary to perfect virtue. The others may attain to this on some days or in some months, but nothing more.'"
+     },
+     {
+      "n": 6,
+      "text": "Chi K'ang asked about Chung-yu, whether he was fit to be employed as an officer of government. The Master said, 'Yu is a man of decision; what difficulty would he find in being an officer of government?' K'ang asked, 'Is Ts'ze fit to be employed as an officer of government?' and was answered, 'Ts'ze is a man of intelligence; what difficulty would he find in being an officer of government?' And to the same question about Ch'iu the Master gave the same reply, saying, 'Ch'iu is a man of various ability.'"
+     },
+     {
+      "n": 7,
+      "text": "The chief of the Chi family sent to ask Min Tsze- ch'ien to be governor of Pi. Min Tsze-ch'ien said, 'Decline the offer for me politely. If any one come again to me with a second invitation, I shall be obliged to go and live on the banks of the Wan.'"
+     },
+     {
+      "n": 8,
+      "text": "Po-niu being ill, the Master went to ask for him. He took hold of his hand through the window, and said, 'It is killing him. It is the appointment of Heaven, alas! That such a man should have such a sickness! That such a man should have such a sickness!'"
+     },
+     {
+      "n": 9,
+      "text": "The Master said, 'Admirable indeed was the virtue of Hui! With a single bamboo dish of rice, a single gourd dish of drink, and living in his mean narrow lane, while others could not have endured the distress, he did not allow his joy to be affected by it. Admirable indeed was the virtue of Hui!'"
+     },
+     {
+      "n": 10,
+      "text": "Yen Ch'iu said, 'It is not that I do not delight in your doctrines, but my strength is insufficient.' The Master said, 'Those whose strength is insufficient give over in the middle of the way but now you limit yourself.'"
+     },
+     {
+      "n": 11,
+      "text": "The Master said to Tsze-hsia, 'Do you be a scholar after the style of the superior man, and not after that of the mean man.'"
+     },
+     {
+      "n": 12,
+      "text": "Tsze-yu being governor of Wu-ch'ang, the Master said to him, 'Have you got good men there?' He answered, 'There is Tan-t'ai Mieh-ming, who never in walking takes a short cut, and never comes to my office, excepting on public business.'"
+     },
+     {
+      "n": 13,
+      "text": "The Master said, 'Mang Chih-fan does not boast of his merit. Being in the rear on an occasion of flight, when they were about to enter the gate, he whipped up his horse, saying, \"It is not that I dare to be last. My horse would not advance.\"'"
+     },
+     {
+      "n": 14,
+      "text": "The Master said, 'Without the specious speech of the litanist T'o and the beauty of the prince Chao of Sung, it is difficult to escape in the present age.'"
+     },
+     {
+      "n": 15,
+      "text": "The Master said, 'Who can go out but by the door? How is it that men will not walk according to these ways?'"
+     },
+     {
+      "n": 16,
+      "text": "The Master said, 'Where the solid qualities are in excess of accomplishments, we have rusticity; where the accomplishments are in excess of the solid qualities, we have the manners of a clerk. When the accomplishments and solid qualities are equally blended, we then have the man of virtue.'"
+     },
+     {
+      "n": 17,
+      "text": "The Master said, 'Man is born for uprightness. If a man lose his uprightness, and yet live, his escape from death is the effect of mere good fortune.'"
+     },
+     {
+      "n": 18,
+      "text": "The Master said, 'They who know the truth are not equal to those who love it, and they who love it are not equal to those who delight in it.'"
+     },
+     {
+      "n": 19,
+      "text": "The Master said, 'To those whose talents are above mediocrity, the highest subjects may be announced. To those who are below mediocrity, the highest subjects may not be announced.'"
+     },
+     {
+      "n": 20,
+      "text": "Fan Ch'ih asked what constituted wisdom. The Master said, 'To give one's self earnestly to the duties due to men, and, while respecting spiritual beings, to keep aloof from them, may be called wisdom.' He asked about perfect virtue. The Master said, 'The man of virtue makes the difficulty to be overcome his first business, and success only a subsequent consideration;-- this may be called perfect virtue.'"
+     },
+     {
+      "n": 21,
+      "text": "The Master said, 'The wise find pleasure in water; the virtuous find pleasure in hills. The wise are active; the virtuous are tranquil. The wise are joyful; the virtuous are long-lived.'"
+     },
+     {
+      "n": 22,
+      "text": "The Master said, 'Ch'i, by one change, would come to the State of Lu. Lu, by one change, would come to a State where true principles predominated.'"
+     },
+     {
+      "n": 23,
+      "text": "The Master said, 'A cornered vessel without corners.-- A strange cornered vessel! A strange cornered vessel!'"
+     },
+     {
+      "n": 24,
+      "text": "Tsai Wo asked, saying, 'A benevolent man, though it be told him,-- 'There is a man in the well' will go in after him, I suppose.' Confucius said, 'Why should he do so?' A superior man may be made to go to the well, but he cannot be made to go down into it. He may be imposed upon, but he cannot be fooled.'"
+     },
+     {
+      "n": 25,
+      "text": "The Master said, 'The superior man, extensively studying all learning, and keeping himself under the restraint of the rules of propriety, may thus likewise not overstep what is right.'"
+     },
+     {
+      "n": 26,
+      "text": "The Master having visited Nan-tsze, Tsze-lu was displeased, on which the Master swore, saying, 'Wherein I have done improperly, may Heaven reject me, may Heaven reject me!'"
+     },
+     {
+      "n": 27,
+      "text": "The Master said, 'Perfect is the virtue which is according to the Constant Mean! Rare for a long time has been its practise among the people.'"
+     },
+     {
+      "n": 28,
+      "text": "1. Tsze-kung said, 'Suppose the case of a man extensively conferring benefits on the people, and able to assist all, what would you say of him? Might he be called perfectly virtuous?' The Master said, 'Why speak only of virtue in connexion with him? Must he not have the qualities of a sage? Even Yao and Shun were still solicitous about this. 2. 'Now the man of perfect virtue, wishing to be established himself, seeks also to establish others; wishing to be enlarged himself, he seeks also to enlarge others. 3. 'To be able to judge of others by what is nigh in ourselves;-- this may be called the art of virtue.'"
+     }
+    ]
+   }
+  ]
+ },
+ "sourcing": "sourced"
+}

@@ -1,0 +1,204 @@
+{
+ "id": "analects--10",
+ "work": "analects",
+ "n": 10,
+ "slug": "10",
+ "parallel": {
+  "note": "Legge's chapter divisions differ from the received Chinese text in this book; each column follows its own numbering.",
+  "columns": [
+   {
+    "lang": "zh",
+    "numbering": "zh",
+    "label": "The received text, by saying",
+    "unit": "saying",
+    "entries": [
+     {
+      "n": 1,
+      "text": "孔子于乡党，恂恂如也，似不能言者；其在宗庙朝庭，便便言，唯谨尔。"
+     },
+     {
+      "n": 2,
+      "text": "朝，与下大夫言，侃侃如也；与上大夫言，訚訚如也。君在，踧踖如也，与与如也。"
+     },
+     {
+      "n": 3,
+      "text": "君召使摈，色勃如也，足躩如也。揖所与立，左右手，衣前后襜如也。趋进，翼如也。宾退，必复命曰：“宾不顾矣。”"
+     },
+     {
+      "n": 4,
+      "text": "入公门，鞠躬如也，如不容。立不中门，行不履阈。过位，色勃如也，足躩如也，其言似不足者。摄齐升堂，鞠躬如也，屏气似不息者。出，降一等，逞颜色，怡怡如也；没阶，趋进，翼如也；复其位，踧踖如也。"
+     },
+     {
+      "n": 5,
+      "text": "执圭，鞠躬如也，如不胜。上如揖，下如授。勃如战色，足蹜蹜如有循。享礼，有容色。私觌，愉愉如也。"
+     },
+     {
+      "n": 6,
+      "text": "君子不以绀緅饰，红紫不以为亵服。当暑袗絺绤，必表而出之。缁衣羔裘，素衣麑裘，黄衣狐裘。亵裘长，短右袂。必有寝衣，长一身有半。狐貉之厚以居。去丧，无所不佩。非帷裳，必杀之。羔裘玄冠不以吊。吉月，必朝服而朝。"
+     },
+     {
+      "n": 7,
+      "text": "齐，必有明衣，布。齐必变食，居必迁坐。"
+     },
+     {
+      "n": 8,
+      "text": "食不厌精，脍不厌细。食饐而餲，鱼馁而肉败，不食；色恶，不食；臭恶，不食；失饪，不食；不时，不食；割不正，不食；不得其酱，不食。肉虽多，不使胜食气。唯酒无量，不及乱。沽酒市脯，不食。不撤姜食，不多食。"
+     },
+     {
+      "n": 9,
+      "text": "祭于公，不宿肉。祭肉不出三日，出三日不食之矣。"
+     },
+     {
+      "n": 10,
+      "text": "食不语，寝不言。"
+     },
+     {
+      "n": 11,
+      "text": "虽疏食菜羹，必祭，必齐如也。"
+     },
+     {
+      "n": 12,
+      "text": "席不正，不坐。"
+     },
+     {
+      "n": 13,
+      "text": "乡人饮酒，杖者出，斯出矣。"
+     },
+     {
+      "n": 14,
+      "text": "乡人傩，朝服而立于阼阶。"
+     },
+     {
+      "n": 15,
+      "text": "问人于他邦，再拜而送之。"
+     },
+     {
+      "n": 16,
+      "text": "康子馈药，拜而受之。曰：“丘未达，不敢尝。”"
+     },
+     {
+      "n": 17,
+      "text": "厩焚，子退朝，曰：“伤人乎？”不问马。"
+     },
+     {
+      "n": 18,
+      "text": "君赐食，必正席先尝之；君赐腥，必熟而荐之；君赐生，必畜之。侍食于君，君祭，先饭。"
+     },
+     {
+      "n": 19,
+      "text": "疾，君视之，东首，加朝服，拖绅。"
+     },
+     {
+      "n": 20,
+      "text": "君命召，不俟驾行矣。"
+     },
+     {
+      "n": 21,
+      "text": "入太庙，每事问。"
+     },
+     {
+      "n": 22,
+      "text": "朋友死，无所归，曰：“于我殡。”"
+     },
+     {
+      "n": 23,
+      "text": "朋友之馈，虽车马，非祭肉，不拜。"
+     },
+     {
+      "n": 24,
+      "text": "寝不尸，居不客。"
+     },
+     {
+      "n": 25,
+      "text": "见齐衰者，虽狎，必变。见冕者与瞽者，虽亵，必以貌。凶服者式之，式负版者。有盛馔，必变色而作。迅雷风烈，必变。"
+     },
+     {
+      "n": 26,
+      "text": "升车，必正立，执绥。车中不内顾，不疾言，不亲指。"
+     },
+     {
+      "n": 27,
+      "text": "色斯举矣，翔而后集。曰：“山梁雌雉，时哉时哉！”子路共之，三嗅而作。"
+     }
+    ]
+   },
+   {
+    "lang": "en",
+    "numbering": "en",
+    "label": "Legge's translation, by his chapters",
+    "unit": "chapter",
+    "entries": [
+     {
+      "n": 1,
+      "text": "1. Confucius, in his village, looked simple and sincere, and as if he were not able to speak. 2. When he was in the prince's ancestorial temple, or in the court, he spoke minutely on every point, but cautiously. CHAP II. 1. When he was waiting at court, in speaking with the great officers of the lower grade, he spake freely, but in a straightforward manner; in speaking with those of the higher grade, he did so blandly, but precisely. 2. When the ruler was present, his manner displayed respectful uneasiness; it was grave, but self-possessed."
+     },
+     {
+      "n": 2,
+      "text": "1. When the prince called him to employ him in the reception of a visitor, his countenance appeared to change, and his legs to move forward with difficulty. 2. He inclined himself to the other officers among whom he stood, moving his left or right arm, as their position required, but keeping the skirts of his robe before and behind evenly adjusted. 3. He hastened forward, with his arms like the wings of a bird. 4. When the guest had retired, he would report to the prince, 'The visitor is not turning round any more.'"
+     },
+     {
+      "n": 3,
+      "text": "1. When he entered the palace gate, he seemed to bend his body, as if it were not sufficient to admit him. 2. When he was standing, he did not occupy the middle of the gate-way; when he passed in or out, he did not tread upon the threshold. 3. When he was passing the vacant place of the prince, his countenance appeared to change, and his legs to bend under him, and his words came as if he hardly had breath to utter them. 4. He ascended the reception hall, holding up his robe with both his hands, and his body bent; holding in his breath also, as if he dared not breathe. 5. When he came out from the audience, as soon as he had descended one step, he began to relax his countenance, and had a satisfied look. When he had got to the bottom of the steps, he advanced rapidly to his place, with his arms like wings, and on occupying it, his manner still showed respectful uneasiness."
+     },
+     {
+      "n": 4,
+      "text": "1. When he was carrying the scepter of his ruler, he seemed to bend his body, as if he were not able to bear its weight. He did not hold it higher than the position of the hands in making a bow, nor lower than their position in giving anything to another. His countenance seemed to change, and look apprehensive, and he dragged his feet along as if they were held by something to the ground. 2. In presenting the presents with which he was charged, he wore a placid appearance. 3. At his private audience, he looked highly pleased."
+     },
+     {
+      "n": 5,
+      "text": "1. The superior man did not use a deep purple, or a puce colour, in the ornaments of his dress. 2. Even in his undress, he did not wear anything of a red or reddish colour. 3. In warm weather, he had a single garment either of coarse or fine texture, but he wore it displayed over an inner garment. 4. Over lamb's fur he wore a garment of black; over fawn's fur one of white; and over fox's fur one of yellow. 5. The fur robe of his undress was long, with the right sleeve short. 6. He required his sleeping dress to be half as long again as his body. 7. When staying at home, he used thick furs of the fox or the badger. 8. When he put off mourning, he wore all the appendages of the girdle. 9. His under-garment, except when it was required to be of the curtain shape, was made of silk cut narrow above and wide below. 10. He did not wear lamb's fur or a black cap, on a visit of condolence. 11. On the first day of the month he put on his court robes, and presented himself at court."
+     },
+     {
+      "n": 6,
+      "text": "1. When fasting, he thought it necessary to have his clothes brightly clean and made of linen cloth. 2. When fasting, he thought it necessary to change his food, and also to change the place where he commonly sat in the apartment."
+     },
+     {
+      "n": 7,
+      "text": "1. He did not dislike to have his rice finely cleaned, nor to have his minced meat cut quite small. 2. He did not eat rice which had been injured by heat or damp and turned sour, nor fish or flesh which was gone. He did not eat what was discoloured, or what was of a bad flavour, nor anything which was ill-cooked, or was not in season. 3. He did not eat meat which was not cut properly, nor what was served without its proper sauce. 4. Though there might be a large quantity of meat, he would not allow what he took to exceed the due proportion for the rice. It was only in wine that he laid down no limit for himself, but he did not allow himself to be confused by it. 5. He did not partake of wine and dried meat bought in the market. 6. He was never without ginger when he ate. 7. He did not eat much. 8. When he had been assisting at the prince's sacrifice, he did not keep the flesh which he received overnight. The flesh of his family sacrifice he did not keep over three days. If kept over three days, people could not eat it. 9. When eating, he did not converse. When in bed, he did not speak. 10. Although his food might be coarse rice and vegetable soup, he would offer a little of it in sacrifice with a grave, respectful air."
+     },
+     {
+      "n": 8,
+      "text": "If his mat was not straight, he did not sit on it."
+     },
+     {
+      "n": 9,
+      "text": "1. When the villagers were drinking together, on those who carried staffs going out, he went out immediately after. 2. When the villagers were going through their ceremonies to drive away pestilential influences, he put on his court robes and stood on the eastern steps."
+     },
+     {
+      "n": 10,
+      "text": "1. When he was sending complimentary inquiries to any one in another State, he bowed twice as he escorted the messenger away. 2. Chi K'ang having sent him a present of physic, he bowed and received it, saying, 'I do not know it. I dare not taste it.'"
+     },
+     {
+      "n": 11,
+      "text": "The stable being burned down, when he was at court, on his return he said, 'Has any man been hurt?' He did not ask about the horses."
+     },
+     {
+      "n": 12,
+      "text": "1. When the prince sent him a gift of cooked meat, he would adjust his mat, first taste it, and then give it away to others. When the prince sent him a gift of undressed meat, he would have it cooked, and offer it to the spirits of his ancestors. When the prince sent him a gift of a living animal, he would keep it alive. 2. When he was in attendance on the prince and joining in the entertainment, the prince only sacrificed. He first tasted everything. 3. When he was ill and the prince came to visit him, he had his head to the east, made his court robes be spread over him, and drew his girdle across them. 4. When the prince's order called him, without waiting for his carriage to be yoked, he went at once."
+     },
+     {
+      "n": 13,
+      "text": "When he entered the ancestral temple of the State, he asked about everything."
+     },
+     {
+      "n": 14,
+      "text": "1. When any of his friends died, if he had no relations who could be depended on for the necessary offices, he would say, 'I will bury him.' 2. When a friend sent him a present, though it might be a carriage and horses, he did not bow. 3. The only present for which he bowed was that of the flesh of sacrifice."
+     },
+     {
+      "n": 15,
+      "text": "1. In bed, he did not lie like a corpse. At home, he did not put on any formal deportment. 2. When he saw any one in a mourning dress, though it might be an acquaintance, he would change countenance; when he saw any one wearing the cap of full dress, or a blind person, though he might be in his undress, he would salute them in a ceremonious manner. 3. To any person in mourning he bowed forward to the crossbar of his carriage; he bowed in the same way to any one bearing the tables of population. 4. When he was at an entertainment where there was an abundance of provisions set before him, he would change countenance and rise up. 5. On a sudden clap of thunder, or a violent wind, he would change countenance."
+     },
+     {
+      "n": 16,
+      "text": "1. When he was about to mount his carriage, he would stand straight, holding the cord. 2. When he was in the carriage, he did not turn his head quite round, he did not talk hastily, he did not point with his hands."
+     },
+     {
+      "n": 17,
+      "text": "1. Seeing the countenance, it instantly rises. It flies round, and by and by settles. 2. The Master said, 'There is the hen-pheasant on the hill bridge. At its season! At its season!' Tsze-lu made a motion to it. Thrice it smelt him and then rose."
+     }
+    ]
+   }
+  ]
+ },
+ "sourcing": "sourced"
+}

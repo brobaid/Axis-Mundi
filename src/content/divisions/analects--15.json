@@ -1,0 +1,360 @@
+{
+ "id": "analects--15",
+ "work": "analects",
+ "n": 15,
+ "slug": "15",
+ "parallel": {
+  "note": "Legge's chapter divisions differ from the received Chinese text in this book; each column follows its own numbering.",
+  "columns": [
+   {
+    "lang": "zh",
+    "numbering": "zh",
+    "label": "The received text, by saying",
+    "unit": "saying",
+    "entries": [
+     {
+      "n": 1,
+      "text": "卫灵公问陈于孔子，孔子对曰：“俎豆之事，则尝闻之矣；军旅之事，未之学也。”明日遂行。"
+     },
+     {
+      "n": 2,
+      "text": "在陈绝粮，从者病莫能兴。子路愠见曰：“君子亦有穷乎？”子曰：“君子固穷，小人穷斯滥矣。”"
+     },
+     {
+      "n": 3,
+      "text": "子曰：“赐也，女以予为多学而识之者与？”对曰：“然，非与？”曰：“非也，予一以贯之。”"
+     },
+     {
+      "n": 4,
+      "text": "子曰：“由，知德者鲜矣。”"
+     },
+     {
+      "n": 5,
+      "text": "子曰：“无为而治者其舜也与！夫何为哉？恭己正南面而已矣。”"
+     },
+     {
+      "n": 6,
+      "text": "子张问行，子曰：“言忠信，行笃敬，虽蛮貊之邦行矣；言不忠信，行不笃敬，虽州里行乎哉？立则见其参于前也；在舆则见其倚于衡也，夫然后行。”子张书诸绅。"
+     },
+     {
+      "n": 7,
+      "text": "子曰：“直哉史鱼！邦有道如矢，邦无道如矢。君子哉蘧伯玉！邦有道则仕，邦无道则可卷而怀之。”"
+     },
+     {
+      "n": 8,
+      "text": "子曰：“可与言而不与之言，失人；不可与言而与之言，失言。知者不失人亦不失言。”"
+     },
+     {
+      "n": 9,
+      "text": "子曰：“志士仁人无求生以害仁，有杀身以成仁。”"
+     },
+     {
+      "n": 10,
+      "text": "子贡问为仁，子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。”"
+     },
+     {
+      "n": 11,
+      "text": "颜渊问为邦，子曰：“行夏之时，乘殷之辂，服周之冕，乐则《韶》、《舞》；放郑声，远佞人。郑声淫，佞人殆。”"
+     },
+     {
+      "n": 12,
+      "text": "子曰：“人无远虑，必有近忧。”"
+     },
+     {
+      "n": 13,
+      "text": "子曰：“已矣乎！吾未见好德如好色者也。”"
+     },
+     {
+      "n": 14,
+      "text": "子曰：“臧文仲其窃位者与！知柳下惠之贤而不与立也。”"
+     },
+     {
+      "n": 15,
+      "text": "子曰：“躬自厚而薄责于人，则远怨矣。”"
+     },
+     {
+      "n": 16,
+      "text": "子曰：“不曰‘如之何、如之何’者，吾末如之何也已矣。”"
+     },
+     {
+      "n": 17,
+      "text": "子曰：“群居终日，言不及义，好行小慧，难矣哉！”"
+     },
+     {
+      "n": 18,
+      "text": "子曰：“君子义以为质，礼以行之，孙以出之，信以成之。君子哉！”"
+     },
+     {
+      "n": 19,
+      "text": "子曰：“君子病无能焉，不病人之不己知也。”"
+     },
+     {
+      "n": 20,
+      "text": "子曰：“君子疾没世而名不称焉。”"
+     },
+     {
+      "n": 21,
+      "text": "子曰：“君子求诸己，小人求诸人。”"
+     },
+     {
+      "n": 22,
+      "text": "子曰：“君子矜而不争，群而不党。”"
+     },
+     {
+      "n": 23,
+      "text": "子曰：“君子不以言举人，不以人废言。”"
+     },
+     {
+      "n": 24,
+      "text": "子贡问曰：“有一言而可以终身行之者乎？”子曰：“其恕乎！己所不欲，勿施于人。”"
+     },
+     {
+      "n": 25,
+      "text": "子曰：“吾之于人也，谁毁谁誉？如有所誉者，其有所试矣。斯民也，三代之所以直道而行也。”"
+     },
+     {
+      "n": 26,
+      "text": "子曰：“吾犹及史之阙文也，有马者借人乘之，今亡矣夫！”"
+     },
+     {
+      "n": 27,
+      "text": "子曰：“巧言乱德，小不忍，则乱大谋。”"
+     },
+     {
+      "n": 28,
+      "text": "子曰：“众恶之，必察焉；众好之，必察焉。”"
+     },
+     {
+      "n": 29,
+      "text": "子曰：“人能弘道，非道弘人。”"
+     },
+     {
+      "n": 30,
+      "text": "子曰：“过而不改，是谓过矣。”"
+     },
+     {
+      "n": 31,
+      "text": "子曰：“吾尝终日不食、终夜不寝以思，无益，不如学也。”"
+     },
+     {
+      "n": 32,
+      "text": "子曰：“君子谋道不谋食。耕也馁在其中矣，学也禄在其中矣。君子忧道不忧贫。”"
+     },
+     {
+      "n": 33,
+      "text": "子曰：“知及之，仁不能守之，虽得之，必失之；知及之，仁能守之，不庄以莅之，则民不敬；知及之，仁能守之，庄以莅之，动之不以礼，未善也。”"
+     },
+     {
+      "n": 34,
+      "text": "子曰：“君子不可小知而可大受也，小人不可大受而可小知也。”"
+     },
+     {
+      "n": 35,
+      "text": "子曰：“民之于仁也，甚于水火。水火，吾见蹈而死者矣，未见蹈仁而死者也。”"
+     },
+     {
+      "n": 36,
+      "text": "子曰：“当仁不让于师。”"
+     },
+     {
+      "n": 37,
+      "text": "子曰：“君子贞而不谅。”"
+     },
+     {
+      "n": 38,
+      "text": "子曰：“事君，敬其事而后其食。”"
+     },
+     {
+      "n": 39,
+      "text": "子曰：“有教无类。”"
+     },
+     {
+      "n": 40,
+      "text": "子曰：“道不同，不相为谋。”"
+     },
+     {
+      "n": 41,
+      "text": "子曰：“辞达而已矣。”"
+     },
+     {
+      "n": 42,
+      "text": "师冕见，及阶，子曰：“阶也。”及席，子曰：“席也。”皆坐，子告之曰：“某在斯，某在斯。”师冕出。子张问曰：“与师言之道与？”子曰：“然，固相师之道也。”"
+     }
+    ]
+   },
+   {
+    "lang": "en",
+    "numbering": "en",
+    "label": "Legge's translation, by his chapters",
+    "unit": "chapter",
+    "entries": [
+     {
+      "n": 1,
+      "text": "1. The Duke Ling of Wei asked Confucius about tactics. Confucius replied, 'I have heard all about sacrificial vessels, but I have not learned military matters.' On this, he took his departure the next day. 2. When he was in Chan, their provisions were exhausted, and his followers became so ill that they were unable to rise. 3. Tsze-lu, with evident dissatisfaction, said, 'Has the superior man likewise to endure in this way?' The Master said, 'The superior man may indeed have to endure want, but the mean man, when he is in want, gives way to unbridled license.'"
+     },
+     {
+      "n": 2,
+      "text": "1. The Master said, 'Ts'ze, you think, I suppose, that I am one who learns many things and keeps them in memory?' 2. Tsze-kung replied, 'Yes,-- but perhaps it is not so?' 3. 'No,' was the answer; 'I seek a unity all-pervading.'"
+     },
+     {
+      "n": 3,
+      "text": "The Master said, 'Yu, those who know virtue are few.'"
+     },
+     {
+      "n": 4,
+      "text": "The Master said, 'May not Shun be instanced as having governed efficiently without exertion? What did he do? He did nothing but gravely and reverently occupy his royal seat.'"
+     },
+     {
+      "n": 5,
+      "text": "1. Tsze-chang asked how a man should conduct himself, so as to be everywhere appreciated. 2. The Master said, 'Let his words be sincere and truthful, and his actions honourable and careful;-- such conduct may be practised among the rude tribes of the South or the North. If his words be not sincere and truthful and his actions not honourable and careful, will he, with such conduct, be appreciated, even in his neighborhood? 3. 'When he is standing, let him see those two things, as it were, fronting him. When he is in a carriage, let him see them attached to the yoke. Then may he subsequently carry them into practice.' 4. Tsze-chang wrote these counsels on the end of his sash."
+     },
+     {
+      "n": 6,
+      "text": "1. The Master said, 'Truly straightforward was the historiographer Yu. When good government prevailed in his State, he was like an arrow. When bad government prevailed, he was like an arrow. 2. A superior man indeed is Chu Po-yu! When good government prevails in his state, he is to be found in office. When bad government prevails, he can roll his principles up, and keep them in his breast.'"
+     },
+     {
+      "n": 7,
+      "text": "The Master said, 'When a man may be spoken with, not to speak to him is to err in reference to the man. When a man may not be spoken with, to speak to him is to err in reference to our words. The wise err neither in regard to their man nor to their words.'"
+     },
+     {
+      "n": 8,
+      "text": "The Master said, 'The determined scholar and the man of virtue will not seek to live at the expense of injuring their virtue. They will even sacrifice their lives to preserve their virtue complete.'"
+     },
+     {
+      "n": 9,
+      "text": "Tsze-kung asked about the practice of virtue. The Master said, 'The mechanic, who wishes to do his work well, must first sharpen his tools. When you are living in any state, take service with the most worthy among its great officers, and make friends of the most virtuous among its scholars.'"
+     },
+     {
+      "n": 10,
+      "text": "1. Yen Yuan asked how the government of a country should be administered. 2. The Master said, 'Follow the seasons of Hsia. 3. 'Ride in the state carriage of Yin. 4. 'Wear the ceremonial cap of Chau. 5. 'Let the music be the Shao with its pantomimes. 6. Banish the songs of Chang, and keep far from specious talkers. The songs of Chang are licentious; specious talkers are dangerous.'"
+     },
+     {
+      "n": 11,
+      "text": "The Master said, 'If a man take no thought about what is distant, he will find sorrow near at hand.'"
+     },
+     {
+      "n": 12,
+      "text": "The Master said, 'It is all over! I have not seen one who loves virtue as he loves beauty.'"
+     },
+     {
+      "n": 13,
+      "text": "The Master said, 'Was not Tsang Wan like one who had stolen his situation? He knew the virtue and the talents of Hui of Liu-hsia, and yet did not procure that he should stand with him in court.'"
+     },
+     {
+      "n": 14,
+      "text": "The Master said, 'He who requires much from himself and little from others, will keep himself from being the object of resentment.'"
+     },
+     {
+      "n": 15,
+      "text": "The Master said, 'When a man is not in the habit of saying-- \"What shall I think of this? What shall I think of this?\" I can indeed do nothing with him!'"
+     },
+     {
+      "n": 16,
+      "text": "The Master said, 'When a number of people are together, for a whole day, without their conversation turning on righteousness, and when they are fond of carrying out the suggestions of a small shrewdness;-- theirs is indeed a hard case.'"
+     },
+     {
+      "n": 17,
+      "text": "The Master said, 'The superior man in everything considers righteousness to be essential. He performs it according to the rules of propriety. He brings it forth in humility. He completes it with sincerity. This is indeed a superior man.'"
+     },
+     {
+      "n": 18,
+      "text": "The Master said, 'The superior man is distressed by his want of ability. He is not distressed by men's not knowing him.'"
+     },
+     {
+      "n": 19,
+      "text": "The Master said, 'The superior man dislikes the thought of his name not being mentioned after his death.'"
+     },
+     {
+      "n": 20,
+      "text": "The Master said, 'What the superior man seeks, is in himself. What the mean man seeks, is in others.'"
+     },
+     {
+      "n": 21,
+      "text": "The Master said, 'The superior man is dignified, but does not wrangle. He is sociable, but not a partizan.'"
+     },
+     {
+      "n": 22,
+      "text": "The Master said, 'The superior man does not promote a man simply on account of his words, nor does he put aside good words because of the man.'"
+     },
+     {
+      "n": 23,
+      "text": "Tsze-kung asked, saying, 'Is there one word which may serve as a rule of practice for all one's life?' The Master said, 'Is not RECIPROCITY such a word? What you do not want done to yourself, do not do to others.'"
+     },
+     {
+      "n": 24,
+      "text": "1. The Master said, 'In my dealings with men, whose evil do I blame, whose goodness do I praise, beyond what is proper? If I do sometimes exceed in praise, there must be ground for it in my examination of the individual. 2. 'This people supplied the ground why the three dynasties pursued the path of straightforwardness.'"
+     },
+     {
+      "n": 25,
+      "text": "The Master said, 'Even in my early days, a historiographer would leave a blank in his text, and he who had a horse would lend him to another to ride. Now, alas! there are no such things.'"
+     },
+     {
+      "n": 26,
+      "text": "The Master said, 'Specious words confound virtue. Want of forbearance in small matters confounds great plans.'"
+     },
+     {
+      "n": 27,
+      "text": "The Master said, 'When the multitude hate a man, it is necessary to examine into the case. When the multitude like a man, it is necessary to examine into the case.'"
+     },
+     {
+      "n": 28,
+      "text": "The Master said, 'A man can enlarge the principles which he follows; those principles do not enlarge the man.'"
+     },
+     {
+      "n": 29,
+      "text": "The Master said, 'To have faults and not to reform them,-- this, indeed, should be pronounced having faults.'"
+     },
+     {
+      "n": 30,
+      "text": "The Master said, 'I have been the whole day without eating, and the whole night without sleeping:-- occupied with thinking. It was of no use. The better plan is to learn.'"
+     },
+     {
+      "n": 31,
+      "text": "The Master said, 'The object of the superior man is truth. Food is not his object. There is plowing;-- even in that there is sometimes want. So with learning;-- emolument may be found in it. The superior man is anxious lest he should not get truth; he is not anxious lest poverty should come upon him.'"
+     },
+     {
+      "n": 32,
+      "text": "1. The Master said, 'When a man's knowledge is sufficient to attain, and his virtue is not sufficient to enable him to hold, whatever he may have gained, he will lose again. 2. 'When his knowledge is sufficient to attain, and he has virtue enough to hold fast, if he cannot govern with dignity, the people will not respect him. 3. 'When his knowledge is sufficient to attain, and he has virtue enough to hold fast; when he governs also with dignity, yet if he try to move the people contrary to the rules of propriety:-- full excellence is not reached.'"
+     },
+     {
+      "n": 33,
+      "text": "The Master said, 'The superior man cannot be known in little matters; but he may be intrusted with great concerns. The small man may not be intrusted with great concerns, but he may be known in little matters.'"
+     },
+     {
+      "n": 34,
+      "text": "The Master said, 'Virtue is more to man than either water or fire. I have seen men die from treading on water and fire, but I have never seen a man die from treading the course of virtue.'"
+     },
+     {
+      "n": 35,
+      "text": "The Master said, 'Let every man consider virtue as what devolves on himself. He may not yield the performance of it even to his teacher.'"
+     },
+     {
+      "n": 36,
+      "text": "The Master said, 'The superior man is correctly firm, and not firm merely.'"
+     },
+     {
+      "n": 37,
+      "text": "The Master said, 'A minister, in serving his prince, reverently discharges his duties, and makes his emolument a secondary consideration.'"
+     },
+     {
+      "n": 38,
+      "text": "The Master said, 'In teaching there should be no distinction of classes.'"
+     },
+     {
+      "n": 39,
+      "text": "The Master said, 'Those whose courses are different cannot lay plans for one another.'"
+     },
+     {
+      "n": 40,
+      "text": "The Master said, 'In language it is simply required that it convey the meaning.'"
+     },
+     {
+      "n": 41,
+      "text": "1. The Music-master, Mien, having called upon him, when they came to the steps, the Master said, 'Here are the steps.' When they came to the mat for the guest to sit upon, he said, 'Here is the mat.' When all were seated, the Master informed him, saying, 'So and so is here; so and so is here.' 2. The Music-master, Mien, having gone out, Tsze-chang asked, saying. 'Is it the rule to tell those things to the Music- master?' 3. The Master said, 'Yes. This is certainly the rule for those who lead the blind.'"
+     }
+    ]
+   }
+  ]
+ },
+ "sourcing": "sourced"
+}
