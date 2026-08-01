@@ -1,10 +1,12 @@
 ---
 import ReaderChrome from './ReaderChrome.astro';
+import DevotionalToggle from './DevotionalToggle.astro';
 import {
   availableModes,
   defaultMode,
   hasEnglish,
   originalLang,
+  prefaceFor,
   verseAnchor,
   verseRef,
   walk,
@@ -14,6 +16,7 @@ import {
   type DivisionIndex,
 } from '../lib/reader-model';
 import { fontFor } from '../lib/scripts';
+import { conventionFor } from '../lib/devotional';
 
 /**
  * The reading page — Phase 5.
@@ -43,6 +46,8 @@ const orig = originalLang(work);
 const english = hasEnglish(work);
 const scriptFont = fontFor(work.script);
 const { prev, next, endsSection } = walk(work, division, chapter);
+const { line: preface, omittedNote } = prefaceFor(work, division, chapter);
+const convention = conventionFor(work.tradition);
 const contentsHref =
   chapter === undefined ? `/read/${work.id}` : `/read/${work.id}/${division.slug}`;
 const contentsLabel =
@@ -105,6 +110,32 @@ const contentsLabel =
   {/* The mode is an attribute on this container, resolved in CSS against the
       modes this work can actually offer, so a stored preference a corpus
       cannot honour falls back to the work's own default. */}
+  <DevotionalToggle tradition={work.tradition} />
+
+  {/*
+    The opening line the canon's own convention puts above verse 1.
+
+    Fidelity, not a preference, so there is no toggle: the mushaf opens every
+    surah but at-Tawba with the basmala, and in all but al-Fatiha it stands
+    above the numbering rather than inside it. Both scripts, lifted from the
+    corpus — surah 1 carries it as its own first verse — so the words and the
+    editions are the ones already named on this page.
+  */}
+  {
+    preface !== undefined && (
+      <p class="rd-preface" data-preface>
+        <span class="rd-preface__orig" lang={orig} dir={work.direction}
+              style={`font-family: ${scriptFont}`}>
+          {preface.text[orig]}
+        </span>
+        {preface.text['en'] !== undefined && (
+          <span class="rd-preface__en">{preface.text['en']}</span>
+        )}
+      </p>
+    )
+  }
+  {omittedNote !== undefined && <p class="caption rd-preface__absent">{omittedNote}</p>}
+
   <div
     class="rd-verses"
     data-modes={modes.join(' ')}
@@ -148,6 +179,30 @@ const contentsLabel =
       ))
     }
   </div>
+
+  {/*
+    The closing formula. Set apart from the verses above it in every way a page
+    can manage — its own block, its own rule, its own label — because it is
+    said after a recitation and is not part of the surah, and a reader must
+    never be able to mistake one for the other.
+
+    Shown only under the Devotional frame, and present in the DOM either way:
+    the frame is a CSS switch, so turning it on cannot alter a word of what is
+    above it.
+  */}
+  {
+    convention.closing !== undefined && (
+      <aside class="dv dv-closing" aria-label="Recitation formula">
+        <p class="dv-closing__text" lang={convention.closing.lang} dir={convention.closing.direction}
+           style={`font-family: ${scriptFont}`}>
+          {convention.closing.text}
+        </p>
+        <p class="caption dv-closing__gloss">
+          {convention.closing.translation}. {convention.closing.note}
+        </p>
+      </aside>
+    )
+  }
 
   <nav class="rd-nav" aria-label={`${heading}, neighbouring pages`}>
     {
@@ -359,6 +414,47 @@ const contentsLabel =
   .rd-verse__gap {
     color: var(--ink-soft);
     margin-top: var(--space-2);
+  }
+
+  /* --- the opening line -------------------------------------------------- */
+
+  /*
+    Set as the mushaf sets it: centred above the numbered text, in the same
+    face as the verses, with no verse number beside it — because it does not
+    have one. The rule beneath separates it from verse 1 without making it a
+    heading, which it is not either.
+  */
+  .rd-preface {
+    text-align: center;
+    padding-bottom: var(--space-4);
+    margin-bottom: var(--space-2);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .rd-preface__orig {
+    display: block;
+    font-family: var(--script-font);
+    font-size: 1.5rem;
+    line-height: 2.15;
+  }
+
+  .rd-preface__en {
+    display: block;
+    font-family: var(--font-prose);
+    font-size: var(--size-small);
+    color: var(--ink-soft);
+    margin-top: var(--space-1);
+  }
+
+  /* Both columns show here whatever the reading mode: the line is one line of
+     two scripts, not a paired verse with an English and an original half. */
+
+  .rd-preface__absent {
+    text-align: center;
+    color: var(--ink-soft);
+    padding-bottom: var(--space-4);
+    margin-bottom: var(--space-2);
+    border-bottom: var(--hairline-width) solid var(--hairline);
   }
 
   /* --- the copy control -------------------------------------------------- */

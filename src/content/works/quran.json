@@ -10,6 +10,19 @@
   "ar": "tanzil-uthmani-hafs",
   "en": "pickthall-1930"
  },
+ "preface": {
+  "text": {
+   "ar": "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ",
+   "en": "In the name of Allah, the Beneficent, the Merciful"
+  },
+  "omitted": [
+   9
+  ],
+  "omitted_note": "At-Tawba is the one surah the mushaf does not open with the basmala.",
+  "inline": [
+   1
+  ]
+ },
  "divisions": [
   {
    "n": 1,

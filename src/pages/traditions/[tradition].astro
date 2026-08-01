@@ -5,8 +5,10 @@ import TraditionSymbols from '../../components/TraditionSymbols.astro';
 import TraditionSymbol from '../../components/TraditionSymbol.astro';
 import GlossaryCard from '../../components/GlossaryCard.astro';
 import MatrixCells from '../../components/MatrixCells.astro';
+import DevotionalToggle from '../../components/DevotionalToggle.astro';
 import { getPublishable, getStructural, includesUnsourced } from '../../lib/content';
 import { renderProse, termsFor } from '../../lib/prose';
+import { applyHonorifics } from '../../lib/devotional';
 import { traditionMeta } from '../../lib/traditions';
 import type { MatrixDimension } from '../../schemas/matrix';
 import { displayDate } from '../../lib/display-date';
@@ -78,7 +80,15 @@ const autoTerms = termsFor(
   [dive.tradition],
   glossary.map((g) => ({ id: g.data.id, term: g.data.term, traditions: g.data.traditions })),
 );
-const prose = (body: string): string => renderProse(body, { available, autoTerms });
+/*
+  Prose, then the devotional marks over it.
+
+  The honorific runs last and over already-escaped HTML, and it only ever wraps
+  — the sentence a scholar sourced is on the page byte for byte with the frame
+  off, because with the frame off the span it added renders nothing.
+*/
+const prose = (body: string): string =>
+  applyHonorifics(renderProse(body, { available, autoTerms }), dive.tradition);
 
 /** A prose block renders only when it has passed a source check. */
 const publishable = <T extends { sourcing: 'sourced' | 'todo' | 'editorial' } | undefined>(
@@ -214,6 +224,8 @@ const showAdherentYear =
       <h1>{dive.name}</h1>
       <p class="dd-mast__sub">{dive.subtitle}</p>
     </header>
+
+    <DevotionalToggle tradition={dive.tradition} />
 
     <!-- §5.1 exhibit-label stat box ------------------------------------ -->
     <dl class="exhibit-label dd-stats">

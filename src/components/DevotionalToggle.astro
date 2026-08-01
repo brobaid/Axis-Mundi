@@ -1,0 +1,118 @@
+---
+import { hasConvention } from '../lib/devotional';
+
+/**
+ * The Devotional frame's switch.
+ *
+ * Off by default and honest about what it does. It is not a "respect" toggle
+ * and not a mode the museum speaks in: the museum's voice is academic in both
+ * settings, and no sourced fact differs between them. It renders the
+ * conventions a tradition's own readers keep, for readers who keep them.
+ *
+ * Absent where the museum has no convention to render. A switch that turns on
+ * nothing is worse than no switch — it implies we have something and are
+ * withholding it.
+ */
+interface Props {
+  tradition: string;
+}
+const { tradition } = Astro.props;
+const offered = hasConvention(tradition);
+---
+
+{
+  offered && (
+    <p class="dv-toggle">
+      <label class="dv-toggle__label">
+        <input type="checkbox" class="dv-toggle__input" data-devotional />
+        <span>Devotional frame</span>
+      </label>
+      <span class="caption dv-toggle__note">
+        Renders each tradition's devotional conventions: honorifics and recitation formulas.
+      </span>
+    </p>
+  )
+}
+
+<script>
+  import '../scripts/devotional';
+</script>
+
+<style is:global>
+  .dv-toggle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-1) var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+
+  .dv-toggle__label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--tap-min);
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    cursor: pointer;
+  }
+
+  .dv-toggle__input {
+    accent-color: var(--brass);
+    width: 1rem;
+    height: 1rem;
+    min-height: 0;
+  }
+
+  .dv-toggle__note {
+    color: var(--ink-soft);
+    max-width: 34rem;
+  }
+
+  /*
+    The frame itself.
+
+    Every devotional mark is in the DOM whether the frame is on or off, and CSS
+    alone decides whether it shows. That is what makes the promise structural
+    rather than a claim: with the frame off there is no code path that could
+    have rewritten the sentence above it, because nothing was rewritten.
+  */
+  .dv {
+    display: none;
+  }
+
+  :root[data-devotional-frame='on'] .dv {
+    display: revert;
+  }
+
+  :root[data-devotional-frame='on'] span.dv-honorific {
+    display: inline;
+  }
+
+  /* --- the closing formula ------------------------------------------------ */
+
+  .dv-closing {
+    margin-top: var(--space-8);
+    padding-top: var(--space-4);
+    border-top: var(--hairline-width) solid var(--hairline);
+    text-align: center;
+  }
+
+  .dv-closing__text {
+    font-size: 1.375rem;
+    line-height: 2;
+    color: var(--brass-ink);
+  }
+
+  .dv-closing__gloss {
+    color: var(--ink-soft);
+    margin-top: var(--space-2);
+  }
+
+  /* Paper keeps the choice the reader made on screen. */
+  @media print {
+    .dv-toggle {
+      display: none;
+    }
+  }
+</style>

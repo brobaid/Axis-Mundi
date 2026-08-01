@@ -63,6 +63,18 @@ interface SectionConfig {
   name_original?: string;
 }
 
+interface PrefaceConfig {
+  /**
+   * Where the opening line's own words already sit in the corpus, as
+   * `[division, verse]`. Lifted, never authored: the mushaf's basmala is
+   * surah 1's first verse, in both columns, in the editions already named.
+   */
+  from: [number, number];
+  /** Divisions whose convention omits it. The owner's ruling, not a guess. */
+  omitted: number[];
+  omitted_note: string;
+}
+
 interface Config {
   file: string;
   tradition: string;
@@ -76,6 +88,8 @@ interface Config {
   direction: 'ltr' | 'rtl';
   /** Stated on every page of the work; for anything a reader must be told. */
   note?: string;
+  /** An unnumbered opening line the canon's own convention puts above verse 1. */
+  preface?: PrefaceConfig;
   /** The delivery's own section name mapped to how the canon names it. */
   sections?: Record<string, SectionConfig>;
   /**
@@ -116,6 +130,20 @@ const CONFIGS: Record<string, Config> = {
     division_label_plural: 'surahs',
     script: 'arabic',
     direction: 'rtl',
+    /*
+      The basmala. Every surah of the mushaf opens with it but at-Tawba, and
+      in every surah but al-Fatiha it stands above the numbering rather than
+      inside it — which is why the corpus carries it exactly once, as surah
+      1's first verse, and why a page that renders only numbered verses was
+      showing 112 surahs without their opening line.
+
+      Taken from where it already is. The omission is the owner's ruling.
+    */
+    preface: {
+      from: [1, 1],
+      omitted: [9],
+      omitted_note: 'At-Tawba is the one surah the mushaf does not open with the basmala.',
+    },
   },
   tanakh: {
     file: 'docs/corpora/tanakh/tanakh-paired-v2.json',
@@ -376,6 +404,36 @@ function ingest(name: string, config: Config): void {
           .filter((s) => Number.isFinite(s.from))
           .sort((a, b) => a.from - b.from);
 
+  /* The preface's words come from the corpus, so it is built after the
+     divisions are normalised and from the same rows the pages will render. */
+  let preface: Record<string, unknown> | undefined;
+  if (config.preface !== undefined) {
+    const [dn, vn] = config.preface.from;
+    const source = divisions.find((d) => d.n === dn)?.all.find((v) => v['v'] === vn);
+    if (source === undefined) {
+      throw new Error(`preface: no verse ${dn}:${vn} to lift the opening line from`);
+    }
+    const text = Object.fromEntries(
+      Object.entries(source).filter(([k, v]) => k !== 'v' && k !== 'c' && typeof v === 'string'),
+    );
+    /* Where the line is already a numbered verse it must not also be printed
+       above itself: al-Fatiha opens with the basmala as its own verse 1. */
+    const inline = divisions
+      .filter((d) => {
+        const first = d.all[0];
+        return first !== undefined && Object.entries(text).every(([k, v]) => first[k] === v);
+      })
+      .map((d) => d.n);
+    preface = {
+      text,
+      omitted: config.preface.omitted,
+      omitted_note: config.preface.omitted_note,
+      inline,
+    };
+    console.log(`    preface       lifted from ${dn}:${vn}; already a verse in ${inline.join(', ')}; ` +
+      `omitted from ${config.preface.omitted.join(', ')}`);
+  }
+
   const workBytes = write(join(WORKS, `${src.work}.json`), {
     id: src.work,
     tradition: config.tradition,
@@ -388,6 +446,7 @@ function ingest(name: string, config: Config): void {
     direction: config.direction,
     editions: src.editions,
     ...(config.note === undefined ? {} : { note: config.note }),
+    ...(preface === undefined ? {} : { preface }),
     ...(sections === undefined || sections.length === 0 ? {} : { sections }),
     divisions: index,
     total_verses: totalVerses,

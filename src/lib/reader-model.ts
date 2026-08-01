@@ -56,6 +56,12 @@ export interface WorkData {
   readonly editions: Readonly<Record<string, string>>;
   readonly english_pending?: string | undefined;
   readonly note?: string | undefined;
+  readonly preface?: {
+    readonly text: Readonly<Record<string, string>>;
+    readonly omitted: readonly number[];
+    readonly omitted_note?: string | undefined;
+    readonly inline: readonly number[];
+  } | undefined;
   readonly sections: readonly Section[];
   readonly divisions: readonly DivisionIndex[];
   readonly total_verses: number;
@@ -159,6 +165,32 @@ export const verseAnchor = (verse: Pick<VerseRow, 'v'>): string => String(verse.
 export const verseRef = (cite: string, verse: Pick<VerseRow, 'v'>): string =>
   `${cite}:${verse.v}`;
 
+/* ── the opening line ───────────────────────────────────────────────────── */
+
+export interface Preface {
+  readonly text: Readonly<Record<string, string>>;
+}
+
+/**
+ * What, if anything, stands above this division's first verse.
+ *
+ * Three answers, all of them the canon's: the line, nothing-and-here-is-why,
+ * or nothing-because-it-is-already-verse-one. The last needs no note — the
+ * reader is looking straight at it.
+ */
+export function prefaceFor(
+  work: WorkData,
+  division: Pick<DivisionIndex, 'n'>,
+  chapter?: number,
+): { line?: Preface | undefined; omittedNote?: string | undefined } {
+  const p = work.preface;
+  /* Only above the first verse of the division, never on chapter two. */
+  if (p === undefined || (chapter !== undefined && chapter !== 1)) return {};
+  if (p.inline.includes(division.n)) return {};
+  if (p.omitted.includes(division.n)) return { omittedNote: p.omitted_note };
+  return { line: { text: p.text } };
+}
+
 /* ── walking the canon ─────────────────────────────────────────────────── */
 
 export interface Step {
@@ -246,6 +278,12 @@ export interface EditionLine {
   readonly lang: string;
   readonly sourceId: string;
   readonly note?: string | undefined;
+  readonly preface?: {
+    readonly text: Readonly<Record<string, string>>;
+    readonly omitted: readonly number[];
+    readonly omitted_note?: string | undefined;
+    readonly inline: readonly number[];
+  } | undefined;
 }
 
 /**

@@ -97,6 +97,38 @@ export const workSection = z.object({
   to: z.number().int().positive(),
 });
 
+/**
+ * An opening line a canon's own convention puts above its first verse.
+ *
+ * The Quran's mushaf opens every surah but at-Tawba with the basmala, and it
+ * is not a numbered verse of those surahs. It is fidelity, not a preference:
+ * a page that leaves it out is not showing the text as the tradition sets it.
+ *
+ * The words are lifted from the corpus at ingestion — surah 1 carries the
+ * basmala as its own first verse in both columns — so nothing here is
+ * authored, and both editions are the ones already named on the page.
+ */
+export const workPreface = z
+  .object({
+    /** The line, per language column. */
+    text: z.record(languageCode, z.string().min(1)),
+    /** Divisions whose convention omits it, and the one line saying so. */
+    omitted: z.array(z.number().int().positive()).default([]),
+    omitted_note: z.string().min(1).optional(),
+    /** Divisions where it is already the numbered first verse. */
+    inline: z.array(z.number().int().positive()).default([]),
+  })
+  .strict()
+  .superRefine((value, ctx) => {
+    if (value.omitted.length > 0 && value.omitted_note === undefined) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['omitted_note'],
+        message: 'a division that omits the opening line must say so; a silent gap is not fidelity',
+      });
+    }
+  });
+
 export const workSchema = z
   .object({
     /** The corpus file's own `work` field, which is this record's id. */
@@ -126,6 +158,8 @@ export const workSchema = z
     english_pending: z.string().min(1).optional(),
     /** Anything the reader must state on the page, e.g. a survival fraction. */
     note: z.string().min(1).optional(),
+    /** An unnumbered opening line the canon's own convention puts above verse 1. */
+    preface: workPreface.optional(),
     sections: z.array(workSection).default([]),
     divisions: z.array(divisionIndexEntry).min(1),
     /** Totals, computed at ingestion so no page counts them again. */
@@ -232,6 +266,7 @@ export const divisionSchema = z
 
 export type Work = z.infer<typeof workSchema>;
 export type WorkSection = z.infer<typeof workSection>;
+export type WorkPreface = z.infer<typeof workPreface>;
 export type DivisionIndexEntry = z.infer<typeof divisionIndexEntry>;
 export type ChapterIndexEntry = z.infer<typeof chapterIndexEntry>;
 export type DivisionRecord = z.infer<typeof divisionSchema>;
