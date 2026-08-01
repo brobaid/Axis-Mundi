@@ -1,0 +1,347 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DetailPanel from '../components/DetailPanel.astro';
+import LandscapeHint from '../components/LandscapeHint.astro';
+import { getPublishable } from '../lib/content';
+import { TRADITIONS } from '../lib/traditions';
+import type { TraditionId } from '../schemas/primitives';
+import { WHEEL_YEARS, buildWheel, type FestivalRecord } from '../lib/wheel-model';
+import { renderWheel } from '../lib/wheel-render';
+
+/**
+ * The year wheel — Phase 3 delighter A.
+ *
+ * Every sourced festival on one circle. What the wheel will not do is guess:
+ * the schema keeps `date_rule` in words and never as a computed date, and the
+ * museum owns no calendar converter it could honestly cite, so a feast whose
+ * record names only a Hebrew, Hijri or Hindu month is listed under the wheel
+ * with its rule rather than dotted somewhere plausible. Naming the gap is the
+ * exhibit; a plausible dot would be a claim.
+ */
+
+const entries = await getPublishable('festivals');
+const sourceRecords = await getPublishable('sources');
+
+const festivals: FestivalRecord[] = entries
+  .map((e) => e.data as FestivalRecord)
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+/* Rendered for every year at build time, so the first paint is right whatever
+   the cursor says and the island only swaps which one is showing. */
+const wheels = WHEEL_YEARS.map((year) => ({ year, wheel: buildWheel(festivals, year) }));
+const first = wheels.find((w) => w.year === 2026) ?? wheels[0];
+
+const nameOf = new Map(TRADITIONS.map((t) => [t.id, t.name]));
+const titleOf = new Map(sourceRecords.map((s) => [s.data.id, s.data.title]));
+
+/* The unplaced list is stable across years: nothing here has an observed date
+   in any of the four, so it is rendered once. */
+const unplaced = first?.wheel.unplaced ?? [];
+const placedCount = first?.wheel.placed.length ?? 0;
+const onWheel = new Set(first?.wheel.placed.map((p) => p.tradition));
+const missing = TRADITIONS.filter((t) => !onWheel.has(t.id));
+
+/* The card bodies, keyed by festival, so a tap never waits on a fetch. */
+const cards = Object.fromEntries(
+  festivals.map((f) => [
+    f.id,
+    {
+      name: f.name,
+      tradition: nameOf.get((f.traditions[0] ?? '') as TraditionId) ?? (f.traditions[0] ?? ''),
+      calendar: f.calendar,
+      rule: f.date_rule,
+      summary: f.summary ?? '',
+      sources: f.sources.map((s) => titleOf.get(s) ?? s),
+    },
+  ]),
+);
+
+const byYear = Object.fromEntries(
+  wheels.map(({ year, wheel }) => [
+    year,
+    {
+      svg: renderWheel(wheel),
+      placed: Object.fromEntries(wheel.placed.map((p) => [p.festival.id, p.basisNote])),
+    },
+  ]),
+);
+---
+
+<BaseLayout
+  title="Year wheel"
+  description="Every sourced festival of ten traditions on one circle, with the lunar feasts drifting against the solar ones year by year."
+>
+  <section class="shell head">
+    <p class="eyebrow">Room VII · The calendar room</p>
+    <h1 class="display">Every calendar<br />on one circle.</h1>
+    <p class="measure lede">
+      The solar feasts hold their place; the lunar ones walk backwards through the year. Step the
+      years and watch them move against each other.
+    </p>
+    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+  </section>
+
+  <div class="shell">
+    {
+      placedCount === 0 ? (
+        <p class="measure empty">
+          No festival record carries a date this wheel can place. Records arrive with their rule in
+          words; the wheel draws the ones that also carry an observed date.
+        </p>
+      ) : (
+        <section class="wheel" data-wheel aria-label="Festival year wheel">
+          <LandscapeHint room="wheel" line="The circle reads better wide — turn the phone sideways." />
+
+          <div class="wh-years" role="radiogroup" aria-label="Year">
+            {WHEEL_YEARS.map((y) => (
+              <button
+                type="button"
+                class="wh-year-chip"
+                data-wheel-year={y}
+                role="radio"
+                aria-checked={y === first?.year}
+                tabindex={y === first?.year ? 0 : -1}
+              >
+                {y}
+              </button>
+            ))}
+          </div>
+
+          <div class="wh-box" data-wheel-canvas set:html={first === undefined ? '' : renderWheel(first.wheel)} />
+
+          <p class="wh-readout mono caption" data-wheel-readout aria-live="polite">
+            Step the years and watch the lunar feasts drift while the solar ones hold.
+          </p>
+
+          <div class="wh-legend">
+            <p class="eyebrow">Traditions</p>
+            <ul role="list">
+              {TRADITIONS.map((t) => (
+                <li class:list={['wh-key', !onWheel.has(t.id) && 'wh-key--off']}>
+                  <span class="wh-key__swatch" style={`background: var(${t.hueToken})`} aria-hidden="true" />
+                  {t.name}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* §9.2: what the wheel cannot place is said, not hidden. */}
+          <div class="wh-unplaced">
+            <p class="eyebrow">Not on the circle ({unplaced.length})</p>
+            <p class="measure caption">
+              These records give their rule in words and no Gregorian date. A lunar or lunisolar
+              feast needs a calendar conversion this museum does not carry a source for, so it is
+              named here with its own rule rather than placed where it looks about right.
+            </p>
+            <ul role="list">
+              {unplaced.map((u) => (
+                <li>
+                  <button type="button" class="wh-unplaced__btn" data-festival={u.festival.id}>
+                    <span class="wh-key__swatch" style={`background: var(--t-${u.tradition})`} aria-hidden="true" />
+                    <b>{u.festival.name}</b>
+                    <span class="caption">{u.festival.date_rule}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )
+    }
+
+    {
+      missing.length > 0 && (
+        <p class="measure caption wh-gap">
+          {missing.map((t) => t.name).join(' and ')} {missing.length === 1 ? 'has' : 'have'} no
+          festival the wheel can place: every one of{' '}
+          {missing.length === 1 ? 'its' : 'their'} records names a lunar month and none carries an
+          observed date.
+        </p>
+      )
+    }
+  </div>
+
+  <DetailPanel />
+
+  {/* One serialisation, not two: `define:vars` would emit the same payload
+      again beside the assignment. */}
+  <script is:inline set:html={`window.__wheel = ${JSON.stringify({ byYear, cards })};`} />
+  <script>
+    import '../scripts/wheel';
+  </script>
+</BaseLayout>
+
+<style is:global>
+  .wheel {
+    padding-block: var(--space-4) var(--space-12);
+  }
+
+  .wh-years {
+    display: flex;
+    gap: var(--space-2);
+    justify-content: center;
+    margin-bottom: var(--space-4);
+  }
+
+  .wh-year-chip {
+    padding: 0 var(--space-4);
+    border: var(--hairline-width) solid var(--hairline);
+    background: transparent;
+    color: var(--ink-soft);
+    font-family: var(--font-mono);
+    font-size: var(--size-small);
+    cursor: pointer;
+  }
+
+  .wh-year-chip[aria-checked='true'] {
+    border-color: var(--ink);
+    color: var(--ink);
+    background: var(--surface);
+  }
+
+  .wh-box {
+    max-width: 34rem;
+    margin: 0 auto;
+  }
+
+  .wh-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    color: var(--ink);
+  }
+
+  .wh-ring {
+    fill: none;
+    stroke: var(--hairline);
+    stroke-width: 1;
+  }
+
+  .wh-month {
+    font-size: 11px;
+    fill: var(--ink-soft);
+  }
+
+  .wh-year {
+    font-family: var(--font-display);
+    font-size: 40px;
+    fill: var(--ink);
+  }
+
+  .wh-sub {
+    font-size: 11px;
+    fill: var(--ink-soft);
+  }
+
+  /* The scrub duration and the meridian's easing: stepping a year is the same
+     kind of move as scrubbing an era, and should read like it. */
+  .wh-fest {
+    cursor: pointer;
+    transition: transform var(--dur-scrub) var(--ease-meridian);
+  }
+
+  .wh-hit {
+    fill: transparent;
+  }
+
+  .wh-dot {
+    stroke: var(--surface);
+    stroke-width: 1.5;
+  }
+
+  .wh-arc {
+    fill: none;
+    stroke-width: 9;
+    opacity: 0.5;
+    stroke-linecap: round;
+  }
+
+  .wh-fest:focus-visible {
+    outline: none;
+  }
+
+  .wh-fest:focus-visible .wh-hit {
+    fill: none;
+    stroke: var(--focus-ring);
+    stroke-width: 2;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wh-fest {
+      transition: none;
+    }
+  }
+
+  .wh-readout {
+    text-align: center;
+    margin-top: var(--space-3);
+    color: var(--ink-soft);
+  }
+
+  .wh-legend,
+  .wh-unplaced {
+    margin-top: var(--space-8);
+  }
+
+  .wh-legend ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-6);
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-2);
+  }
+
+  .wh-key {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--size-small);
+  }
+
+  .wh-key--off {
+    color: var(--ink-soft);
+    opacity: 0.55;
+  }
+
+  .wh-key__swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex: none;
+  }
+
+  .wh-unplaced ul {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-3);
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  .wh-unplaced__btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+    text-align: left;
+    padding: var(--space-2) 0;
+    background: transparent;
+    border: 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    color: var(--ink);
+    cursor: pointer;
+    font-size: var(--size-small);
+  }
+
+  .wh-unplaced__btn .caption {
+    margin-left: auto;
+    text-align: right;
+    color: var(--ink-soft);
+  }
+
+  .wh-gap {
+    margin-top: var(--space-6);
+    color: var(--ink-soft);
+  }
+</style>
