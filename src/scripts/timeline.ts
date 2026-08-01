@@ -446,6 +446,26 @@ if (root !== null) {
       writeUrl(true);
     }
 
+    /**
+     * Step the span, holding the centre — which is where the meridian stands,
+     * so the cursor keeps its year while the window tightens around it.
+     *
+     * Clamped to the same extents d3-zoom uses, so the buttons and a desktop
+     * pinch can never disagree about how far the timeline goes.
+     */
+    function stepZoom(factor: number): void {
+      const centre = (state.from + state.to) / 2;
+      const total = data.bounds.to - data.bounds.from;
+      const span = Math.min(total, Math.max(MIN_SPAN, (state.to - state.from) * factor));
+      let from = Math.round(centre - span / 2);
+      if (from < data.bounds.from) from = data.bounds.from;
+      if (from + span > data.bounds.to) from = data.bounds.to - span;
+      setView(from, from + span);
+    }
+
+    root?.querySelector('[data-zoom-in]')?.addEventListener('click', () => stepZoom(0.5));
+    root?.querySelector('[data-zoom-out]')?.addEventListener('click', () => stepZoom(2));
+
     /* Keyboard: arrows walk events chronologically, Enter opens, Esc closes
        (design language §10). Left and right move within the ordered set. */
     root?.addEventListener('keydown', (ev) => {
@@ -485,6 +505,14 @@ if (root !== null) {
 
     /* ── wire up d3-zoom ──────────────────────────────────────────────── */
 
+    /* Double-tap detection, matching d3's own thresholds so the two agree on
+       what a pair is. */
+    const DOUBLE_TAP_MS = 500;
+    const DOUBLE_TAP_PX = 30;
+    let lastTouchAt = 0;
+    let lastTouchX = 0;
+    let lastTouchY = 0;
+
     zoomBehaviour = zoom<HTMLElement, unknown>()
       .scaleExtent([1, (data.bounds.to - data.bounds.from) / MIN_SPAN])
       .translateExtent([
@@ -500,6 +528,24 @@ if (root !== null) {
            intent (wheel with a modifier, pinch, or drag on the canvas). */
         if (ev.type === 'wheel') return (ev as WheelEvent).ctrlKey || (ev as WheelEvent).altKey;
         if (ev.type === 'dblclick') return false;
+        /* d3-zoom implements its own double-tap-to-zoom on touch, which is not
+           reached by the `dblclick` line above: it counts touchstarts. On a
+           phone a double tap belongs to the reader and the browser, not to us,
+           and readers double-tap canvases constantly by accident while aiming
+           at a dot. Refusing the second touchstart of a pair keeps d3's tap
+           counter at one; a single-finger drag still pans. */
+        if (ev.type === 'touchstart') {
+          const touch = (ev as TouchEvent).touches[0];
+          const now = performance.now();
+          if (touch !== undefined) {
+            const quick = now - lastTouchAt < DOUBLE_TAP_MS;
+            const near = Math.hypot(touch.clientX - lastTouchX, touch.clientY - lastTouchY) < DOUBLE_TAP_PX;
+            lastTouchAt = now;
+            lastTouchX = touch.clientX;
+            lastTouchY = touch.clientY;
+            if (quick && near) return false;
+          }
+        }
         return !(ev as MouseEvent).button;
       })
       .on('zoom', (ev: D3ZoomEvent<HTMLElement, unknown>) => {

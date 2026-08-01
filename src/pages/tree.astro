@@ -4,7 +4,7 @@ import DetailPanel from '../components/DetailPanel.astro';
 import TraditionSymbols from '../components/TraditionSymbols.astro';
 import { getPublishable, getStructural } from '../lib/content';
 import { TRADITIONS } from '../lib/traditions';
-import { layoutTree, treeDetents, type TreeNodeInput } from '../lib/tree-model';
+import { ROW_HEIGHT, layoutTree, treeDetents, type TreeNodeInput } from '../lib/tree-model';
 import { eraLabel } from '../lib/map-render';
 
 /**
@@ -148,6 +148,20 @@ const bootstrap = {
                 aria-label={`${n.name}, ${n.path.split('/').join(' in ')}${n.contested ? ', contested classification' : ''}${n.foundedDisplay ? `, founded ${n.foundedDisplay}` : ', no founding record'}`}
                 style={`--tradition-hue: var(--t-${n.tradition})`}
               >
+                {/*
+                  The row is the target, not the glyph. A node's own marks are
+                  a 3–5px dot and an 11px line of text; the whole row band is
+                  what a thumb can actually aim at, and the bands are
+                  contiguous, so a tap in the tree always lands on some node
+                  rather than on nothing.
+                */}
+                <rect
+                  class="tree-node__hit"
+                  x={n.x - ROW_HEIGHT / 2}
+                  y={n.y - ROW_HEIGHT / 2}
+                  width={n.name.length * 6.1 + 40}
+                  height={ROW_HEIGHT}
+                />
                 <circle cx={n.x} cy={n.y} r={n.depth === 1 ? 5.5 : n.depth === 2 ? 4 : 3} />
                 <text x={n.x + 10} y={n.y + 4}>
                   {n.name}
@@ -266,8 +280,10 @@ const bootstrap = {
     background: var(--brass);
   }
 
-  .scrub__detent:hover .scrub__tick {
-    border-color: var(--brass);
+  @media (hover: hover) {
+    .scrub__detent:hover .scrub__tick {
+      border-color: var(--brass);
+    }
   }
 
   .scrub__label {
@@ -328,6 +344,11 @@ const bootstrap = {
     cursor: pointer;
   }
 
+  /* Transparent, but it takes the pointer — the glyphs above it do not need to. */
+  .tree-node__hit {
+    fill: transparent;
+  }
+
   .tree-node circle {
     fill: var(--tradition-hue);
     stroke: var(--surface);
@@ -368,9 +389,14 @@ const bootstrap = {
     stroke-width: 1.4;
   }
 
-  .tree-node:hover text,
   .tree-node:focus-within text {
     fill: var(--brass-ink);
+  }
+
+  @media (hover: hover) {
+    .tree-node:hover text {
+      fill: var(--brass-ink);
+    }
   }
 
   /* Dimmed by the era slider: not yet in existence at the chosen year. */

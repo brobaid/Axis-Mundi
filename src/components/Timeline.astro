@@ -80,6 +80,15 @@ const bootstrap = {
       <button type="button" class="tl-btn" data-threads-toggle aria-pressed="false">
         Influence threads
       </button>
+      <!--
+        Explicit zoom, because the gestures that zoom on a desktop do not exist
+        under a thumb: pinch belongs to the browser and double-tap has been
+        given back to it. A phone reader had no way to change the span at all.
+      -->
+      <span class="tl-zoomer" role="group" aria-label="Zoom">
+        <button type="button" class="tl-btn tl-btn--icon" data-zoom-out aria-label="Zoom out, show a longer span">&minus;</button>
+        <button type="button" class="tl-btn tl-btn--icon" data-zoom-in aria-label="Zoom in, show a shorter span">+</button>
+      </span>
       <p class="visually-hidden" data-tl-readout aria-live="polite"></p>
     </div>
   </div>
@@ -103,7 +112,9 @@ const bootstrap = {
   <p class="tl-note caption">
     Dot size encodes importance rank; labels go to the most significant events that fit.
     Open any event without losing your place. Select a tradition to split it into branch lanes.
-    Zoom with <kbd>ctrl</kbd> or <kbd>⌥</kbd> and scroll, or pinch.
+    <span class="tl-note__fine">Zoom with <kbd>ctrl</kbd> or <kbd>⌥</kbd> and scroll.</span>
+    <span class="tl-note__coarse">Drag the canvas sideways to travel; the &minus; and + buttons change the
+    span. Pinch and double tap belong to the page, so they zoom the page.</span>
   </p>
 
   <!-- accessible alternative ----------------------------------------- -->
@@ -173,11 +184,16 @@ const bootstrap = {
     font-weight: 600;
   }
 
+  /* A drill step is a control, not prose: "World" was a 33x21 target. It gets
+     the full tap height and horizontal padding, and inline-flex keeps the label
+     centred so the crumb still reads as one line. */
   .tl-crumb :global(button) {
+    display: inline-flex;
+    align-items: center;
     background: none;
     border: 0;
-    padding: 0;
-    min-height: 0;
+    padding: 0 var(--space-2);
+    min-height: var(--tap-min);
     font: inherit;
     color: var(--brass-ink);
     cursor: pointer;
@@ -200,6 +216,74 @@ const bootstrap = {
     white-space: nowrap;
   }
 
+  .tl-zoomer {
+    display: inline-flex;
+    gap: var(--space-1);
+  }
+
+  .tl-btn--icon {
+    min-width: var(--tap-min);
+    padding: 0;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  /* The note tells the truth for the pointer in the reader's hand: a phone has
+     no ctrl key, and a desktop has no thumb. */
+  .tl-note__coarse {
+    display: none;
+  }
+
+  @media (pointer: coarse) {
+    .tl-note__fine {
+      display: none;
+    }
+
+    .tl-note__coarse {
+      display: inline;
+    }
+
+    /* Thumb zone. The controls sat above the canvas, which meant reaching the
+       top of a phone screen — or scrolling back up to it — every time a reader
+       wanted ghost mode or threads. They dock to the bottom edge instead, where
+       a thumb already rests, and the section reserves the height so nothing is
+       permanently underneath them. */
+    .tl-bar__actions {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: var(--z-sheet);
+      margin-left: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-3);
+      background: var(--surface);
+      border-top: var(--hairline-width) solid var(--hairline-strong);
+      box-shadow: var(--shadow-sheet);
+      /* Clear of the home indicator on a notched phone. */
+      padding-bottom: max(var(--space-2), env(safe-area-inset-bottom));
+    }
+
+    .tl {
+      /* Two rows of controls plus breathing room. */
+      padding-bottom: 108px;
+    }
+
+    /* The zoom label is desktop shorthand; the dock has no room for it and the
+       readout already announces the span. */
+    .tl-zoom {
+      display: none;
+    }
+
+    /* A sheet and a dock must never stack. When the panel is open the dock
+       stands down — the sheet carries its own close. */
+    body:has([data-panel]:not([hidden])) .tl-bar__actions {
+      display: none;
+    }
+  }
+
   .tl-btn {
     border: var(--hairline-width) solid var(--hairline-strong);
     background: var(--surface);
@@ -215,9 +299,11 @@ const bootstrap = {
     transition: border-color var(--dur-micro) var(--ease-out);
   }
 
-  .tl-btn:hover {
-    border-color: var(--brass);
-    color: var(--ink);
+  @media (hover: hover) {
+    .tl-btn:hover {
+      border-color: var(--brass);
+      color: var(--ink);
+    }
   }
 
   .tl-btn[aria-pressed='true'] {
@@ -248,8 +334,10 @@ const bootstrap = {
     transition: border-color var(--dur-micro) var(--ease-out);
   }
 
-  .tl-chip:hover {
-    border-color: var(--brass);
+  @media (hover: hover) {
+    .tl-chip:hover {
+      border-color: var(--brass);
+    }
   }
 
   .tl-chip[aria-pressed='true'] {
@@ -370,10 +458,16 @@ const bootstrap = {
     cursor: pointer;
   }
 
-  .tl-canvas :global(.tl-thread__hit:hover + .tl-thread),
   .tl-canvas :global(.tl-thread__hit:focus-visible + .tl-thread) {
     opacity: 1;
     stroke-width: 2;
+  }
+
+  @media (hover: hover) {
+    .tl-canvas :global(.tl-thread__hit:hover + .tl-thread) {
+      opacity: 1;
+      stroke-width: 2;
+    }
   }
 
   /* One end sits on a cluster rather than a dot, so the thread says so. */
@@ -392,8 +486,10 @@ const bootstrap = {
     border-bottom: 0;
   }
 
-  .tl-canvas :global(.tl-lane:hover) {
-    background: var(--lane-hover);
+  @media (hover: hover) {
+    .tl-canvas :global(.tl-lane:hover) {
+      background: var(--lane-hover);
+    }
   }
 
   .tl-canvas :global(.tl-lane__head) {
@@ -423,10 +519,12 @@ const bootstrap = {
     cursor: pointer;
   }
 
-  .tl-canvas :global(button.tl-lane__head:hover .tl-lane__name) {
-    color: var(--brass-ink);
-    text-decoration: underline;
-    text-underline-offset: 0.18em;
+  @media (hover: hover) {
+    .tl-canvas :global(button.tl-lane__head:hover .tl-lane__name) {
+      color: var(--brass-ink);
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
   }
 
   .tl-canvas :global(.tl-lane__name) {
