@@ -129,8 +129,8 @@ const bootstrap = {
     Dot size encodes importance rank; labels go to the most significant events that fit.
     Open any event without losing your place. Select a tradition to split it into branch lanes.
     <span class="tl-note__fine">Zoom with <kbd>ctrl</kbd> or <kbd>⌥</kbd> and scroll.</span>
-    <span class="tl-note__coarse">Drag the canvas sideways to travel; the &minus; and + buttons change the
-    span. Pinch and double tap belong to the page, so they zoom the page.</span>
+    <span class="tl-note__coarse">Flick the canvas sideways to travel; it carries on and settles. The
+    &minus; and + buttons change the span, and so does a pinch on the canvas.</span>
   </p>
 
   <!--
@@ -145,7 +145,7 @@ const bootstrap = {
     <div class="tl-coach__card" role="dialog" aria-labelledby="coach-title" aria-modal="false">
       <p class="eyebrow" id="coach-title">Reading this room</p>
       <ol role="list">
-        <li>Scroll sideways to travel through time.</li>
+        <li>Flick sideways to travel through time.</li>
         <li>Change the scale with the &minus; and + stepper, or pinch.</li>
         <li>Tap a dot to read the event; tap a ringed count to open that range.</li>
       </ol>
@@ -489,7 +489,9 @@ const bootstrap = {
     background: var(--surface);
     overflow-x: auto;
     scrollbar-width: thin;
-    touch-action: pan-y pinch-zoom;
+    /* The page keeps the vertical. Sideways drags and pinches are this
+       canvas's own, which is also why a pinch here never zooms the page. */
+    touch-action: pan-y;
   }
 
   .tl-canvas :global(.tl-inner) {

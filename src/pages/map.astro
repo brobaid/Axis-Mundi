@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TraditionSymbols from '../components/TraditionSymbols.astro';
+import LandscapeHint from '../components/LandscapeHint.astro';
 import DetailPanel from '../components/DetailPanel.astro';
 import { getPublishable, includesUnsourced } from '../lib/content';
 import { TRADITIONS } from '../lib/traditions';
@@ -126,6 +127,7 @@ const bootstrap = {
         </p>
       ) : (
         <section class="map" data-map aria-label="Historical world map">
+          <LandscapeHint room="map" line="The plate is a world map — turn the phone sideways to see it whole." />
           <p class="map-fixture-note" data-map-awaiting hidden>
             <span class="contested-badge">Not yet researched</span>
             This era has no snapshot. Its boundaries arrive as a sourced research memo from the

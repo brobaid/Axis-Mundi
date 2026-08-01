@@ -1,8 +1,9 @@
 import { scaleLinear } from 'd3-scale';
 import { CURSOR_PARAM, centreOn, readCursor } from '../lib/cursor';
+import { FLICK_MIN_PX_PER_MS, glide, intentOf, velocityFrom, type Intent, type Sample } from '../lib/inertia';
 import { playMorph, snapshotPositions } from '../lib/morph';
 import { select } from 'd3-selection';
-import { zoom, zoomIdentity, type D3ZoomEvent, type ZoomBehavior, type ZoomTransform } from 'd3-zoom';
+import { zoom, zoomIdentity, zoomTransform, type D3ZoomEvent, type ZoomBehavior, type ZoomTransform } from 'd3-zoom';
 
 import {
   buildLanes,
@@ -659,14 +660,6 @@ if (root !== null) {
 
     /* ── wire up d3-zoom ──────────────────────────────────────────────── */
 
-    /* Double-tap detection, matching d3's own thresholds so the two agree on
-       what a pair is. */
-    const DOUBLE_TAP_MS = 500;
-    const DOUBLE_TAP_PX = 30;
-    let lastTouchAt = 0;
-    let lastTouchX = 0;
-    let lastTouchY = 0;
-
     zoomBehaviour = zoom<HTMLElement, unknown>()
       .scaleExtent([1, (data.bounds.to - data.bounds.from) / MIN_SPAN])
       .translateExtent([
@@ -682,24 +675,12 @@ if (root !== null) {
            intent (wheel with a modifier, pinch, or drag on the canvas). */
         if (ev.type === 'wheel') return (ev as WheelEvent).ctrlKey || (ev as WheelEvent).altKey;
         if (ev.type === 'dblclick') return false;
-        /* d3-zoom implements its own double-tap-to-zoom on touch, which is not
-           reached by the `dblclick` line above: it counts touchstarts. On a
-           phone a double tap belongs to the reader and the browser, not to us,
-           and readers double-tap canvases constantly by accident while aiming
-           at a dot. Refusing the second touchstart of a pair keeps d3's tap
-           counter at one; a single-finger drag still pans. */
-        if (ev.type === 'touchstart') {
-          const touch = (ev as TouchEvent).touches[0];
-          const now = performance.now();
-          if (touch !== undefined) {
-            const quick = now - lastTouchAt < DOUBLE_TAP_MS;
-            const near = Math.hypot(touch.clientX - lastTouchX, touch.clientY - lastTouchY) < DOUBLE_TAP_PX;
-            lastTouchAt = now;
-            lastTouchX = touch.clientX;
-            lastTouchY = touch.clientY;
-            if (quick && near) return false;
-          }
-        }
+        /* Two fingers are a pinch and stay d3's. One finger is a pan, and the
+           pointer layer below owns it: d3-zoom's touch path stops the moment a
+           finger lifts, and it counts single touchstarts toward its own
+           double-tap-to-zoom, which readers trigger constantly while aiming at
+           a dot. Refusing every single-touch start settles both. */
+        if (ev.type === 'touchstart') return (ev as TouchEvent).touches.length > 1;
         return !(ev as MouseEvent).button;
       })
       .on('zoom', (ev: D3ZoomEvent<HTMLElement, unknown>) => {
@@ -716,6 +697,105 @@ if (root !== null) {
       });
 
     select(scroller as HTMLElement).call(zoomBehaviour);
+
+    /* ── touch panning, with momentum ─────────────────────────────────── */
+
+    /**
+     * One finger pans; the page keeps the vertical.
+     *
+     * Two things were wrong before. d3-zoom's touch path pans only while the
+     * finger is down, so a flick stopped dead on lift and crossing a
+     * millennium meant a dozen short scrubs. And nobody arbitrated: the frame
+     * declared `touch-action: pan-y pinch-zoom`, so a horizontal drag was
+     * claimed by the compositor after a single move event and the pan advanced
+     * one frame and died.
+     *
+     * So: decide intent in the first few pixels, take the gesture only when it
+     * is ours, and carry the release velocity into a decaying glide.
+     */
+    function panBy(dxScreen: number): boolean {
+      const t = zoomTransform(scroller);
+      const next = zoomIdentity.translate(t.x + dxScreen, t.y).scale(t.k);
+      select(scroller as HTMLElement).call(zoomBehaviour.transform, next);
+      /* Clamped at an extent: the glide has arrived and should stop, not spin. */
+      return zoomTransform(scroller).x !== t.x;
+    }
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const activeTouches = new Set<number>();
+    let intent: Intent = 'undecided';
+    let panPointer: number | null = null;
+    let startX = 0;
+    let startY = 0;
+    let lastX = 0;
+    let samples: Sample[] = [];
+    let stopGlide: (() => void) | null = null;
+
+    const endPan = (): void => {
+      if (panPointer !== null && scroller.hasPointerCapture(panPointer)) {
+        scroller.releasePointerCapture(panPointer);
+      }
+      panPointer = null;
+      intent = 'undecided';
+      samples = [];
+    };
+
+    scroller.addEventListener(
+      'pointerdown',
+      (ev: PointerEvent) => {
+        /* A touch landing on a moving canvas stops it where it stands. */
+        stopGlide?.();
+        stopGlide = null;
+        if (ev.pointerType !== 'touch') return;
+        activeTouches.add(ev.pointerId);
+        /* Two fingers are a pinch, and a pinch is d3's. Whatever this pan had
+           started, it stops now rather than dragging the canvas sideways while
+           the reader changes the scale. */
+        if (activeTouches.size > 1) {
+          endPan();
+          return;
+        }
+        panPointer = ev.pointerId;
+        intent = 'undecided';
+        startX = lastX = ev.clientX;
+        startY = ev.clientY;
+        samples = [{ t: ev.timeStamp, x: ev.clientX }];
+      },
+      { passive: true },
+    );
+
+    scroller.addEventListener('pointermove', (ev: PointerEvent) => {
+      if (ev.pointerId !== panPointer || activeTouches.size > 1) return;
+      if (intent === 'undecided') {
+        intent = intentOf(ev.clientX - startX, ev.clientY - startY);
+        if (intent === 'undecided') return;
+        if (intent === 'vertical') {
+          /* The page's gesture, and it stays the page's for the whole touch. */
+          endPan();
+          return;
+        }
+        scroller.setPointerCapture(ev.pointerId);
+      }
+      if (intent !== 'horizontal') return;
+      /* Ours now, so the compositor must not also scroll with it. */
+      if (ev.cancelable) ev.preventDefault();
+      panBy(ev.clientX - lastX);
+      lastX = ev.clientX;
+      samples.push({ t: ev.timeStamp, x: ev.clientX });
+      if (samples.length > 8) samples.shift();
+    });
+
+    const release = (ev: PointerEvent): void => {
+      activeTouches.delete(ev.pointerId);
+      if (ev.pointerId !== panPointer) return;
+      const wasPanning = intent === 'horizontal';
+      const v = velocityFrom(samples);
+      endPan();
+      if (!wasPanning || Math.abs(v) < FLICK_MIN_PX_PER_MS) return;
+      stopGlide = glide({ velocity: v, step: panBy, reduced: reducedMotion.matches });
+    };
+    scroller.addEventListener('pointerup', release);
+    scroller.addEventListener('pointercancel', release);
 
     /* ── first-visit coach ────────────────────────────────────────────── */
 
