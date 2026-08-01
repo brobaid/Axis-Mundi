@@ -1,44 +1,246 @@
 {
-  "id": "chinese",
-  "tradition": "chinese",
-  "name": "Chinese traditions",
-  "stat_box": {
-    "adherents": {
-      "display": "see note",
-      "source": "pew-grl-2025",
-      "year": 2020,
-      "basis": "No single authoritative figure.",
-      "note": "Formal zongjiao identification in the PRC runs at about 10% across all religions per Pew 2025, while scholarly estimates of folk religious practice run to hundreds of millions. The note stands in place of a point estimate. Taiwan is the one polity Pew records as majority \"other religions\".",
-      "contested": false
-    },
-    "symbol": "taijitu"
+ "id": "chinese",
+ "tradition": "chinese",
+ "name": "Chinese traditions",
+ "stat_box": {
+  "adherents": {
+   "display": "see note",
+   "source": "pew-grl-2025",
+   "year": 2020,
+   "basis": "No single authoritative figure.",
+   "note": "Formal zongjiao identification in the PRC runs at about 10% across all religions per Pew 2025, while scholarly estimates of folk religious practice run to hundreds of millions. The note stands in place of a point estimate. Taiwan is the one polity Pew records as majority \"other religions\".",
+   "contested": false
   },
-  "belief_dimensions": [
-    "divine-concept",
-    "cosmology",
-    "afterlife",
-    "salvation-path",
-    "scripture-authority",
-    "view-of-others"
+  "symbol": "taijitu"
+ },
+ "belief_dimensions": [
+  "divine-concept",
+  "cosmology",
+  "afterlife",
+  "salvation-path",
+  "scripture-authority",
+  "view-of-others"
+ ],
+ "law_dimensions": [
+  "dietary-law",
+  "dress-modesty",
+  "ethical-frame",
+  "conversion-stance",
+  "clergy-leadership",
+  "worship-form",
+  "calendar-system"
+ ],
+ "festivals": [
+  "lunar-new-year",
+  "qingming",
+  "zhongyuan"
+ ],
+ "sites": [
+  "qufu-temple",
+  "mount-tai",
+  "meizhou-mazu"
+ ],
+ "figures": [
+  "confucius-figure",
+  "laozi-figure",
+  "mazu-figure"
+ ],
+ "canon": [
+  {
+   "id": "confucian-classics",
+   "title": "The Five Classics and Four Books",
+   "language": "Classical Chinese",
+   "composition": "Zhou through Song curation",
+   "status": "The Confucian canon; the examination curriculum for six centuries in Zhu Xi's arrangement",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "daozang",
+   "title": "The Daoist Canon (Daozang)",
+   "language": "Classical Chinese",
+   "composition": "surviving compilation printed 1445",
+   "status": "The Taoist scriptural corpus of some 1,400 works; liturgical use runs through the ordained lineages",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "practices": [
+  {
+   "id": "ancestor-veneration",
+   "name": "Ancestor veneration",
+   "kind": "ancestor veneration",
+   "summary": "Offerings, tablets, and grave-sweeping bind the family across death, the ecology's oldest and widest practice.",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "offerings",
+   "name": "Offerings",
+   "kind": "offering",
+   "summary": "Incense, food, and spirit money at temple and home altar, the grammar of exchange with gods and ancestors.",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "divination",
+   "name": "Divination",
+   "kind": "divination",
+   "summary": "From the Yijing to temple oracle lots, asking the pattern of things before acting.",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "cultivation",
+   "name": "Cultivation",
+   "kind": "self-cultivation",
+   "frequency": "Lifelong",
+   "summary": "Confucian study and self-examination, Taoist internal arts, taiji and qigong: the person as lifelong work.",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "temple-festivals",
+   "name": "Temple festivals",
+   "kind": "festival",
+   "summary": "The god's birthday procession and temple fair, where community, commerce, and devotion are one event.",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "rites": [
+  {
+   "id": "birth",
+   "stage": "birth",
+   "name": "Birth",
+   "summary": "The full-month celebration presents the child, red eggs shared, the name entered in the family's line.",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "coming-of-age",
+   "stage": "coming-of-age",
+   "name": "Coming of age",
+   "summary": "The classical capping and hairpin rites marked adulthood; long lapsed, they see deliberate modern revival.",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "marriage",
+   "stage": "marriage",
+   "name": "Marriage",
+   "summary": "The couple serves tea to elders and the ancestors are informed: marriage joins families, not only persons.",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "death",
+   "stage": "death",
+   "name": "Death",
+   "summary": "The ecology's greatest rite: graded mourning, burial or increasingly cremation, and care of the dead continuing through Qingming's grave-sweeping.",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "misconceptions": [
+  {
+   "id": "confucianism-not-religion",
+   "claim": "Confucianism is just an ethical philosophy, not a religion.",
+   "correction": "It has temples, sacrifice, a cult of the sage, and Heaven at its summit; the clean philosophy-religion divide is a modern Western frame the tradition itself never drew.",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "chinese-religion-superstition",
+   "claim": "Folk practice is mere superstition, not real religion.",
+   "correction": "The temple ecology is an organized, textured religious system with clergy, canon, calendar, and theology of reciprocity; \"superstition\" was the label of its twentieth-century suppressors.",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "must-choose-one",
+   "claim": "A person must be Confucian or Taoist or Buddhist.",
+   "correction": "Chinese religious life is non-exclusive by structure; the three teachings frame one life together, which is why this museum counts the cluster rather than its parts.",
+   "sources": [
+    "yao-confucianism-2000",
+    "kohn-daoism-2000"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "further_reading": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "sourcing": "sourced",
+ "overview": {
+  "body": "This museum treats Chinese religion as one ecology with three named streams and a vast common ground: Confucian self-cultivation and social ethics, Taoist alignment with the [[dao|Way]], and the folk religion of temples, ancestors, and local gods in which both are rooted. Membership is not exclusive and never has been: the same family honors its ancestors, consults a temple god, buries with Buddhist rites, and orders its obligations by Confucian norms, which is why this site counts the cluster with a note rather than a single figure. It is among the oldest continuous religious cultures on earth, documented from the oracle bones of the second millennium BCE, suppressed in the twentieth century's middle decades, and visibly reviving since.",
+  "sources": [
+   "yao-confucianism-2000",
+   "kohn-daoism-2000"
   ],
-  "law_dimensions": [
-    "dietary-law",
-    "dress-modesty",
-    "ethical-frame",
-    "conversion-stance",
-    "clergy-leadership",
-    "worship-form",
-    "calendar-system"
-  ],
-  "festivals": [
-    "chinese-new-year"
-  ],
-  "sites": [],
-  "figures": [],
-  "canon": [],
-  "practices": [],
-  "rites": [],
-  "misconceptions": [],
-  "further_reading": [],
   "sourcing": "sourced"
+ },
+ "origins": {
+  "body": "The bedrock is ancestral: the Shang kings divined and sacrificed to their dead, and the Zhou framed rule itself as Heaven's mandate held by virtue. The axial masters gave the ecology its named streams: Confucius taught ritual propriety and humaneness as the repair of a disordered age; the Daodejing, attributed to the legendary Laozi, taught the Way that acts by not forcing. The Han married the Confucian canon to the state, and organized Taoism began with the Celestial Masters in 142 CE; Buddhism's arrival completed the \"three teachings\" that would share the culture for two millennia. Neo-Confucianism under Zhu Xi renewed the first stream and ruled the examinations into 1905; the twentieth century abolished, attacked, and finally half-released the whole inheritance, which now revives on the mainland, and never left Taiwan.",
+  "sources": [
+   "yao-confucianism-2000",
+   "kohn-daoism-2000"
+  ],
+  "sourcing": "sourced"
+ },
+ "core_beliefs": {
+  "body": "Heaven, tian, orders the world morally in the Confucian stream; the [[dao]] precedes and patterns it in the Taoist; and in the temples the two share, the cosmos runs on reciprocity between the living, the ancestors, and the gods, many of them exemplary humans deified. The person is a knot of relations, and virtue is relational: filiality, [[ren|humaneness]], and [[li|ritual propriety]] in the Confucian account; naturalness, simplicity, and [[wu-wei]] in the Taoist. [[qi]] pervades body and world, and cultivation, whether Confucian study, Taoist internal alchemy, or a morning's taiji, tunes the person to the whole. There is no single doctrine of salvation because the ecology never needed one: harmony, longevity, ancestral continuity, and sagehood are its goods.",
+  "sources": [
+   "yao-confucianism-2000",
+   "kohn-daoism-2000"
+  ],
+  "sourcing": "sourced"
+ }
 }

@@ -1,0 +1,24 @@
+{
+ "id": "mazu-figure",
+ "name": "Mazu (Lin Mo)",
+ "traditions": [
+  "chinese"
+ ],
+ "born": {
+  "year": 960,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 987,
+  "precision": "exact"
+ },
+ "dates_note": "traditional",
+ "role": "Goddess of the sea",
+ "summary": "The Fujian woman deified as goddess of the sea, the ecology's clearest case of a human become god.",
+ "events": [],
+ "sources": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,16 @@
+{
+ "id": "lunar-new-year",
+ "name": "Lunar New Year",
+ "traditions": [
+  "chinese"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "First day of the first lunar month",
+ "observed": {},
+ "summary": "The reunion of family, living and dead: ancestors honored, gods welcomed, the year renewed.",
+ "sources": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "sourcing": "sourced"
+}

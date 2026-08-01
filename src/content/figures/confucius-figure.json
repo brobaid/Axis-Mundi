@@ -1,0 +1,23 @@
+{
+ "id": "confucius-figure",
+ "name": "Confucius",
+ "traditions": [
+  "chinese"
+ ],
+ "born": {
+  "year": -551,
+  "precision": "exact"
+ },
+ "died": {
+  "year": -479,
+  "precision": "exact"
+ },
+ "role": "Teacher of humaneness and ritual",
+ "summary": "The teacher of humaneness and ritual whose school became the spine of Chinese ethics and statecraft.",
+ "events": [],
+ "sources": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "sourcing": "sourced"
+}

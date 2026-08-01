@@ -1,0 +1,16 @@
+{
+ "id": "zhongyuan",
+ "name": "Zhongyuan (Ghost Festival)",
+ "traditions": [
+  "chinese"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "15th of the seventh lunar month",
+ "observed": {},
+ "summary": "The month the gates open: offerings feed the wandering dead, mercy extended beyond the family line.",
+ "sources": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "sourcing": "sourced"
+}

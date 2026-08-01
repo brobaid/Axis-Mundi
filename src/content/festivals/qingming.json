@@ -1,0 +1,16 @@
+{
+ "id": "qingming",
+ "name": "Qingming",
+ "traditions": [
+  "chinese"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "15 days after the spring equinox",
+ "observed": {},
+ "summary": "Grave-sweeping day: tombs tended, offerings made, the dead visited.",
+ "sources": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,19 @@
+{
+ "id": "mount-tai",
+ "name": "Mount Tai",
+ "traditions": [
+  "chinese"
+ ],
+ "place": "Shandong",
+ "location": {
+  "lat": 36.254,
+  "lng": 117.1011
+ },
+ "region": "north-china-plain",
+ "significance": "The eastern sacred peak, climbed by emperors and pilgrims for three thousand years.",
+ "sources": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "sourcing": "sourced"
+}

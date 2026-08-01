@@ -1,0 +1,19 @@
+{
+ "id": "qufu-temple",
+ "name": "Temple of Confucius",
+ "traditions": [
+  "chinese"
+ ],
+ "place": "Qufu",
+ "location": {
+  "lat": 35.5966,
+  "lng": 116.991
+ },
+ "region": "north-china-plain",
+ "significance": "The sage's temple, cemetery, and family mansion, imperial Confucianism's holiest ground.",
+ "sources": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,20 @@
+{
+ "id": "laozi-figure",
+ "name": "Laozi",
+ "traditions": [
+  "chinese"
+ ],
+ "born": {
+  "year": -550,
+  "precision": "century"
+ },
+ "dates_note": "traditional",
+ "role": "Legendary author of the Daodejing",
+ "summary": "The legendary author of the Daodejing; scholarship doubts the biography and reveres the book.",
+ "events": [],
+ "sources": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "sourcing": "sourced"
+}

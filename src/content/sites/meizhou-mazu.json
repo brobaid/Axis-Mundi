@@ -1,0 +1,19 @@
+{
+ "id": "meizhou-mazu",
+ "name": "Meizhou Mazu Temple",
+ "traditions": [
+  "chinese"
+ ],
+ "place": "Fujian",
+ "location": {
+  "lat": 25.076,
+  "lng": 119.112
+ },
+ "region": "south-china-coast",
+ "significance": "The mother temple of the sea goddess, whose cult binds the coast, Taiwan, and the diaspora.",
+ "sources": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "sourcing": "sourced"
+}
