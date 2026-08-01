@@ -1,6 +1,7 @@
 import { createPanel, esc } from '../lib/panel';
 import { eraLabel } from '../lib/map-render';
 import { revealDetent, standMeridian } from '../lib/scrubber';
+import { captionAt, dwellFor, stepDuration } from '../lib/tour';
 import { CURSOR_PARAM, readCursor, snapToDetent } from '../lib/cursor';
 import { nearestRealm, realmViewBox } from '../lib/nearest-realm';
 
@@ -108,6 +109,15 @@ if (root !== null) {
       else history.pushState(null, '', url);
     }
 
+    /**
+     * The era whose note is showing, when that is not simply the active one.
+     *
+     * Null outside the tour. During a step it is null while the plate changes
+     * and becomes the era once the crossfade has landed.
+     */
+    let captionFor: number | null = null;
+    let touring = false;
+
     /* ── crossfade ───────────────────────────────────────────────────── */
 
     /**
@@ -149,9 +159,14 @@ if (root !== null) {
       if (awaiting !== null) awaiting.hidden = snapshot !== undefined;
 
       /* The era note belongs to its plate, so it scrubs with it. An era with no
-         note shows none rather than the previous era's. */
+         note shows none rather than the previous era's.
+
+         While the tour runs the note waits for the crossfade to finish: a
+         caption arriving over a plate still dissolving is two things moving at
+         once, and the reader watches neither. */
+      const captionEra = touring ? captionFor : activeEra;
       for (const note of root!.querySelectorAll<HTMLElement>('[data-era-note]')) {
-        note.hidden = Number(note.dataset['eraNote']) !== activeEra;
+        note.hidden = captionEra === null || Number(note.dataset['eraNote']) !== captionEra;
       }
 
       /* The cartouche is the plate's own label, so it has to follow the scrub —
@@ -172,15 +187,185 @@ if (root !== null) {
       );
     }
 
-    function setEra(era: number, push = true): void {
+    function setEra(era: number, push = true, fromTour = false): void {
       /* Every detent is selectable now that fixtures are gone: choosing an
          undelivered era shows an empty plate that says what it awaits, which is
          more honest than a stop the reader cannot reach and no explanation. */
       if (!data.detents.some((d) => d.era === era)) return;
+      /* A hand on the map outranks the tour, always and instantly. */
+      if (!fromTour) tourYield(era);
       activeEra = era;
       render();
       writeUrl(!push);
     }
+
+    /* ── the grand tour ──────────────────────────────────────────────── */
+
+    /**
+     * The twelve era notes, read in order, as one narrated atlas.
+     *
+     * It writes nothing of its own. Every word it shows was already on the
+     * plate it belongs to; the tour only decides when each is read.
+     *
+     * Never on arrival. A map that starts moving at a reader is a map that
+     * decided for them, so it begins only from its named control.
+     */
+    const tourEl = root.querySelector<HTMLElement>('[data-tour]');
+    const playBtn = root.querySelector<HTMLButtonElement>('[data-tour-play]');
+    const statusEl = root.querySelector<HTMLElement>('[data-tour-status]');
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    /* Only eras that can actually narrate: a plate with no note has nothing to
+       say and would sit in silence for a dwell it did not earn. */
+    const tourEras = data.detents
+      .map((d) => d.era)
+      .filter((era) => noteFor(era) !== '');
+
+    function noteFor(era: number): string {
+      const el = root!.querySelector<HTMLElement>(`[data-era-note="${era}"]`);
+      return el?.querySelector('.measure')?.textContent?.trim() ?? '';
+    }
+
+    let tourIndex = -1;
+    let tourTimers: number[] = [];
+    let paused = false;
+
+    const clearTimers = (): void => {
+      for (const t of tourTimers) window.clearTimeout(t);
+      tourTimers = [];
+    };
+
+    function tourStatus(): void {
+      if (statusEl === null || playBtn === null) return;
+      const label = playBtn.querySelector('span:not(.tour__glyph)') ?? playBtn;
+      if (!touring) {
+        tourEl?.classList.remove('tour--playing');
+        root!.classList.remove('map--touring');
+        playBtn.lastChild!.textContent = ' Play the atlas';
+        playBtn.setAttribute('aria-pressed', 'false');
+        return;
+      }
+      tourEl?.classList.add('tour--playing');
+      root!.classList.add('map--touring');
+      playBtn.lastChild!.textContent = paused ? ' Resume' : ' Pause';
+      playBtn.setAttribute('aria-pressed', String(!paused));
+      void label;
+      statusEl.textContent = paused
+        ? `Paused at plate ${tourIndex + 1} of ${tourEras.length}. Space resumes, escape leaves the tour.`
+        : `Plate ${tourIndex + 1} of ${tourEras.length}. Touch the map and it yields; space pauses, escape leaves.`;
+    }
+
+    /** Runs one plate: change, settle, caption, dwell, then the next. */
+    function tourStep(index: number): void {
+      clearTimers();
+      const era = tourEras[index];
+      if (era === undefined) return;
+      tourIndex = index;
+      captionFor = null;
+      setEra(era, false, true);
+      tourStatus();
+
+      const note = noteFor(era);
+      const isReduced = reduced.matches;
+      tourTimers.push(
+        window.setTimeout(() => {
+          captionFor = era;
+          render();
+        }, captionAt(isReduced)),
+      );
+      tourTimers.push(
+        window.setTimeout(() => {
+          if (index + 1 < tourEras.length) tourStep(index + 1);
+          else tourEnd();
+        }, stepDuration(note, isReduced)),
+      );
+      void dwellFor;
+    }
+
+    /** Leaves the tour with the plate live and the reader where it ended. */
+    function tourEnd(): void {
+      clearTimers();
+      touring = false;
+      paused = false;
+      captionFor = null;
+      render();
+      tourStatus();
+      if (statusEl !== null) {
+        statusEl.textContent =
+          'The twelve era notes, read in order. Touch the map at any moment and it yields.';
+      }
+    }
+
+    /**
+     * A manual touch stops the tour where it stands.
+     *
+     * And it stops at the reader's plate, not the tour's: someone who scrubs to
+     * 1500 mid-tour and presses resume means "carry on from here", not "go back
+     * to where you had got to".
+     */
+    function tourYield(era?: number): void {
+      if (!touring || paused) return;
+      paused = true;
+      clearTimers();
+      if (era !== undefined) {
+        const at = tourEras.indexOf(era);
+        if (at >= 0) tourIndex = at;
+      }
+      captionFor = null;
+      tourStatus();
+    }
+
+    function tourToggle(): void {
+      if (!touring) {
+        touring = true;
+        paused = false;
+        tourStep(0);
+        return;
+      }
+      if (paused) {
+        paused = false;
+        tourStep(tourIndex);
+      } else {
+        paused = true;
+        clearTimers();
+        tourStatus();
+      }
+    }
+
+    playBtn?.addEventListener('click', () => {
+      /* The button's own click must not be read as a hand on the map. */
+      tourToggle();
+    });
+
+    document.addEventListener('keydown', (ev) => {
+      if (!touring) return;
+      const target = ev.target as HTMLElement | null;
+      /* A reader typing in the search field is not steering the tour. */
+      if (target !== null && /^(INPUT|TEXTAREA)$/.test(target.tagName)) return;
+      if (ev.key === ' ' || ev.key === 'Spacebar') {
+        ev.preventDefault();
+        tourToggle();
+      } else if (ev.key === 'Escape') {
+        ev.preventDefault();
+        tourEnd();
+      } else if (ev.key === 'ArrowRight' || ev.key === 'ArrowLeft') {
+        ev.preventDefault();
+        paused = true;
+        clearTimers();
+        const next = Math.min(
+          tourEras.length - 1,
+          Math.max(0, tourIndex + (ev.key === 'ArrowRight' ? 1 : -1)),
+        );
+        tourIndex = next;
+        const era = tourEras[next];
+        if (era !== undefined) {
+          captionFor = era;
+          setEra(era, false, true);
+          render();
+        }
+        tourStatus();
+      }
+    });
 
     /* ── the scrubber ────────────────────────────────────────────────── */
 

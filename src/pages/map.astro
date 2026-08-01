@@ -4,6 +4,7 @@ import TraditionSymbols from '../components/TraditionSymbols.astro';
 import LandscapeHint from '../components/LandscapeHint.astro';
 import DetailPanel from '../components/DetailPanel.astro';
 import { getPublishable, includesUnsourced } from '../lib/content';
+import { roughMinutes, tourLength } from '../lib/tour';
 import { TRADITIONS } from '../lib/traditions';
 import {
   DEFAULT_FRAME,
@@ -190,6 +191,22 @@ const bootstrap = {
             </div>
             <p class="scrub__readout mono caption" data-map-readout aria-live="polite" />
           </div>
+
+          <!-- the grand tour ----------------------------------------- -->
+          {
+            eraNotes.length > 1 && (
+              <div class="tour" data-tour>
+                <button type="button" class="tour__play" data-tour-play>
+                  <span class="tour__glyph" aria-hidden="true" />
+                  Play the atlas
+                </button>
+                <span class="caption tour__hint" data-tour-status>
+                  The twelve era notes, read in order — {roughMinutes(tourLength(eraNotes.map((n) => n.note), false))}.
+                  Touch the map at any moment and it yields.
+                </span>
+              </div>
+            )
+          }
 
           <!-- sacred sites toggle ------------------------------------ -->
           {
@@ -536,6 +553,71 @@ const bootstrap = {
     fill: none;
     stroke: var(--focus-ring);
     stroke-width: 2;
+  }
+
+  /* --- the grand tour (Phase 3 delighter C) ----------------------------- */
+
+  .tour {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+    margin-top: var(--space-6);
+  }
+
+  .tour__play {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 0 var(--space-6);
+    border: var(--hairline-width) solid var(--ink);
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    cursor: pointer;
+  }
+
+  /* A brass triangle, drawn rather than iconified. It becomes two bars while
+     the tour runs, so the control always says what pressing it will do. */
+  .tour__glyph {
+    width: 0;
+    height: 0;
+    flex: none;
+    border-left: 9px solid var(--brass);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+  }
+
+  .tour--playing .tour__glyph {
+    width: 9px;
+    height: 12px;
+    border: 0;
+    background:
+      linear-gradient(var(--brass), var(--brass)) left / 3px 100% no-repeat,
+      linear-gradient(var(--brass), var(--brass)) right / 3px 100% no-repeat;
+  }
+
+  .tour__hint {
+    color: var(--ink-soft);
+    flex: 1 1 18rem;
+  }
+
+  .tour__exit {
+    padding: 0 var(--space-4);
+    border: var(--hairline-width) solid var(--hairline);
+    background: transparent;
+    color: var(--ink-soft);
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    cursor: pointer;
+  }
+
+  /* The caption is the era note the tour is reading, so it takes the room's
+     attention while the tour runs and returns to its own place after. */
+  .map--touring .era-note {
+    border-left: 2px solid var(--brass);
+    padding-left: var(--space-4);
   }
 
   .map-layers {
