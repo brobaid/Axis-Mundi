@@ -10,6 +10,7 @@ import {
   detents,
   renderMap,
   type Geometry,
+  type SiteMark,
   type SnapshotView,
 } from '../lib/map-render';
 
@@ -58,6 +59,23 @@ const eraNotes = entries
   .filter((n): n is { era: number; label: string; note: string } => n.note !== undefined)
   .sort((a, b) => a.era - b.era);
 
+/* Sacred sites — Phase 3 delighter B. Every site record with coordinates,
+   drawn above every era fill and never scrubbed: a place is not a claim about
+   an era. */
+const siteEntries = await getPublishable('sites');
+const sites: SiteMark[] = siteEntries.flatMap((e) =>
+  e.data.location === undefined
+    ? []
+    : [{
+        id: e.data.id,
+        name: e.data.name,
+        place: e.data.place,
+        tradition: e.data.traditions[0] ?? 'unaffiliated',
+        lat: e.data.location.lat,
+        lng: e.data.location.lng,
+      }],
+);
+
 const canvasHtml =
   snapshots.length === 0
     ? ''
@@ -68,6 +86,7 @@ const canvasHtml =
            majority in ten countries and needs its hatch pattern like the rest. */
         traditions: [...TRADITIONS.map((t) => t.id), 'unaffiliated'],
         traditionNames: Object.fromEntries(TRADITIONS.map((t) => [t.id, t.name])),
+        sites,
       });
 
 const sources = await getPublishable('sources');
@@ -98,6 +117,19 @@ const bootstrap = {
   /* Display names for the realm card. The raw id reads "chinese" where the
      tradition is "Chinese traditions". */
   traditionNames: Object.fromEntries(TRADITIONS.map((t) => [t.id, t.name])),
+  /* Site cards, keyed by id, so a tap never waits on a fetch. */
+  sites: Object.fromEntries(
+    siteEntries.map((e) => [
+      e.data.id,
+      {
+        name: e.data.name,
+        place: e.data.place,
+        tradition: e.data.traditions[0] ?? '',
+        significance: e.data.significance,
+        sources: e.data.sources,
+      },
+    ]),
+  ),
 };
 ---
 
@@ -158,6 +190,27 @@ const bootstrap = {
             </div>
             <p class="scrub__readout mono caption" data-map-readout aria-live="polite" />
           </div>
+
+          <!-- sacred sites toggle ------------------------------------ -->
+          {
+            sites.length > 0 && (
+              <p class="map-layers">
+                <button
+                  type="button"
+                  class="map-layer-btn"
+                  data-sites-toggle
+                  aria-pressed="false"
+                >
+                  <span class="map-layer-btn__mark" aria-hidden="true" />
+                  Sacred sites ({sites.length})
+                </button>
+                <span class="caption map-layers__note">
+                  Landmarks, not realms: each stands on every plate, because a place is not a
+                  claim about an era.
+                </span>
+              </p>
+            )
+          }
 
           <!-- era note ----------------------------------------------- -->
           {
@@ -428,6 +481,103 @@ const bootstrap = {
     font-size: 7.5px;
     letter-spacing: 0.18em;
     fill: var(--contested-badge-ink);
+  }
+
+  /* --- sacred sites (Phase 3 delighter B) ------------------------------- */
+
+  /* An engraved settlement mark, not a pin: an open ring with a centre point,
+     the way a plate atlas marks a place that is simply there. */
+  .map-frame :global(.map-site__ring) {
+    fill: var(--surface);
+    stroke-width: 1.4;
+    opacity: 0.95;
+  }
+
+  .map-frame :global(.map-site__hit) {
+    fill: transparent;
+  }
+
+  .map-frame :global(.map-site__count) {
+    font-family: var(--font-mono);
+    font-size: 7px;
+    fill: var(--ink);
+  }
+
+  /* The cluster chooser, in the shared panel. */
+  :global(.map-site-list) {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-3);
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  :global(.map-site-row) {
+    width: 100%;
+    text-align: left;
+    padding: var(--space-2) 0;
+    background: transparent;
+    border: 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    color: var(--ink);
+    font-size: var(--size-small);
+    cursor: pointer;
+  }
+
+  .map-frame :global(.map-site) {
+    cursor: pointer;
+  }
+
+  .map-frame :global(.map-site:focus-visible) {
+    outline: none;
+  }
+
+  .map-frame :global(.map-site:focus-visible .map-site__hit) {
+    fill: none;
+    stroke: var(--focus-ring);
+    stroke-width: 2;
+  }
+
+  .map-layers {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+    margin-top: var(--space-4);
+  }
+
+  .map-layer-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0 var(--space-4);
+    border: var(--hairline-width) solid var(--hairline);
+    background: transparent;
+    color: var(--ink-soft);
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    cursor: pointer;
+  }
+
+  .map-layer-btn[aria-pressed='true'] {
+    border-color: var(--ink);
+    color: var(--ink);
+    background: var(--surface);
+  }
+
+  /* The same mark the plate draws, at button scale. */
+  .map-layer-btn__mark {
+    width: 10px;
+    height: 10px;
+    border: 1.4px solid var(--brass);
+    border-radius: 50%;
+    background: var(--surface);
+    flex: none;
+  }
+
+  .map-layers__note {
+    color: var(--ink-soft);
+    flex: 1 1 16rem;
   }
 
   .map-frame :global(.map-compass__ring),

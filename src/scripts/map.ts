@@ -38,11 +38,20 @@ interface SnapshotData {
   realms: RealmData[];
 }
 
+interface SiteData {
+  name: string;
+  place?: string;
+  tradition: string;
+  significance: string;
+  sources: string[];
+}
+
 interface Bootstrap {
   snapshots: SnapshotData[];
   detents: { era: number; label: string; available: boolean }[];
   sourceTitles: Record<string, string>;
   traditionNames: Record<string, string>;
+  sites: Record<string, SiteData>;
 }
 
 const GRADE_LABEL: Record<'a' | 'b' | 'c', string> = {
@@ -263,6 +272,150 @@ if (root !== null) {
       }
       showChip(group, (ev as MouseEvent).clientX, (ev as MouseEvent).clientY);
     });
+
+    /* ── the sacred sites layer ──────────────────────────────────────── */
+
+    /**
+     * Off by default, and never scrubbed.
+     *
+     * The plate answers "what did this realm practise in this era". A site
+     * answers "where does this tradition stand", which has no era: the Western
+     * Wall is on the 500 BCE plate and the 2020 one. Showing it always is the
+     * honest reading; showing it only after its building would invent a
+     * chronology the site records do not carry.
+     */
+    const sitesLayerEl = canvas.querySelector<SVGGElement>('[data-sites]');
+    const sitesBtn = root.querySelector<HTMLButtonElement>('[data-sites-toggle]');
+
+    /** One site's card. */
+    function siteCard(id: string): string {
+      const site = data.sites[id];
+      if (site === undefined) return '';
+      const tradition = data.traditionNames[site.tradition] ?? site.tradition;
+      const sources =
+        site.sources.length > 0
+          ? site.sources.map((x) => esc(data.sourceTitles[x] ?? x)).join(' · ')
+          : 'Awaiting a source check.';
+      return (
+        `<p class="eyebrow">Sacred site · ${esc(tradition)}</p>` +
+        `<h2>${esc(site.name)}</h2>` +
+        (site.place === undefined ? '' : `<p class="mono caption">${esc(site.place)}</p>`) +
+        `<p>${esc(site.significance)}</p>` +
+        `<p class="caption">Source: ${sources}</p>` +
+        `<p><a class="tap" href="/traditions/${esc(site.tradition)}">` +
+        `Open the ${esc(tradition)} dive &rarr;</a></p>`
+      );
+    }
+
+    /**
+     * A mark that stands for several sites opens the list, not a guess.
+     *
+     * Jerusalem carries four of these within a few hundred metres. Picking one
+     * for the reader would make the other three unreachable, which is exactly
+     * what stacking them did.
+     */
+    function openSite(group: SVGGElement): void {
+      if (panel === null) return;
+      const ids = (group.dataset['site'] ?? '').split(',').filter((x) => x !== '');
+      const first = ids[0];
+      if (first === undefined) return;
+      if (ids.length === 1) {
+        panel.open(siteCard(first), group as unknown as HTMLElement);
+        return;
+      }
+      const rows = ids
+        .map((id) => {
+          const s = data.sites[id];
+          if (s === undefined) return '';
+          return (
+            `<li><button type="button" class="map-site-row" data-site-pick="${esc(id)}">` +
+            `<b>${esc(s.name)}</b>` +
+            (s.place === undefined ? '' : `<span class="caption"> · ${esc(s.place)}</span>`) +
+            `</button></li>`
+          );
+        })
+        .join('');
+      /* Only name a place all of them share. Masada is an hour from Jerusalem
+         and half a plate unit away; heading its card "Jerusalem" would be the
+         map inventing a geography to tidy its own clustering. */
+      const places = new Set(ids.map((id) => data.sites[id]?.place).filter((x) => x !== undefined));
+      const heading = places.size === 1 ? [...places][0] : 'Too close to draw apart';
+      panel.open(
+        `<p class="eyebrow">${ids.length} sacred sites here</p>` +
+          `<h2>${esc(heading ?? '')}</h2>` +
+          `<p class="caption">The plate cannot separate them at this scale; each is its own record.</p>` +
+          `<ul class="map-site-list" role="list">${rows}</ul>`,
+        group as unknown as HTMLElement,
+      );
+    }
+
+    /* Choosing a site from the cluster list swaps the card in place. */
+    document.addEventListener('click', (ev) => {
+      const pick = (ev.target as Element).closest<HTMLElement>('[data-site-pick]');
+      if (pick === null || panel === null) return;
+      panel.open(siteCard(pick.dataset['sitePick'] ?? ''), null);
+    });
+
+    if (sitesLayerEl !== null && sitesBtn !== null) {
+      sitesBtn.addEventListener('click', () => {
+        const on = sitesBtn.getAttribute('aria-pressed') === 'true';
+        sitesBtn.setAttribute('aria-pressed', String(!on));
+        /* SVGGElement has no `hidden` IDL property; the attribute still works. */
+        if (on) sitesLayerEl.setAttribute('hidden', '');
+        else sitesLayerEl.removeAttribute('hidden');
+        /* Hidden marks must leave the tab order, not merely the eye. */
+        for (const g of sitesLayerEl.querySelectorAll<SVGGElement>('[data-site]')) {
+          g.tabIndex = on ? -1 : 0;
+        }
+      });
+
+      /**
+       * The nearest mark to a tap that missed.
+       *
+       * At 390px the whole plate is 358px wide, so a site ring is under four
+       * pixels across — smaller than any fingertip and smaller than the realms
+       * the map already resolves by proximity. Same rule as the realms and the
+       * year wheel: within 44px, the reader meant it.
+       */
+      const NEAR_PX = 44;
+      function nearestSite(cx: number, cy: number): SVGGElement | null {
+        let best: SVGGElement | null = null;
+        let bestD = Infinity;
+        for (const g of sitesLayerEl!.querySelectorAll<SVGGElement>('[data-site]')) {
+          const r = g.querySelector('.map-site__ring')?.getBoundingClientRect();
+          if (r === undefined) continue;
+          const d = Math.hypot(cx - (r.left + r.width / 2), cy - (r.top + r.height / 2));
+          if (d < bestD) {
+            bestD = d;
+            best = g;
+          }
+        }
+        return bestD <= NEAR_PX ? best : null;
+      }
+
+      /* Sites sit above the realms, so their taps are caught first and never
+         reach the realm handler's nearest-realm search. */
+      canvas.addEventListener(
+        'click',
+        (ev) => {
+          if (sitesLayerEl.hasAttribute('hidden')) return;
+          const direct = (ev.target as Element).closest<SVGGElement>('[data-site]');
+          const g = direct ?? nearestSite((ev as MouseEvent).clientX, (ev as MouseEvent).clientY);
+          if (g === null) return;
+          ev.stopPropagation();
+          openSite(g);
+        },
+        true,
+      );
+      sitesLayerEl.addEventListener('keydown', (ev) => {
+        const key = (ev as KeyboardEvent).key;
+        if (key !== 'Enter' && key !== ' ') return;
+        const g = (ev.target as Element).closest<SVGGElement>('[data-site]');
+        if (g === null) return;
+        ev.preventDefault();
+        openSite(g);
+      });
+    }
 
     /* ── the confirm chip ────────────────────────────────────────────── */
 

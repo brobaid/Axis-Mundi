@@ -280,6 +280,90 @@ export interface CanvasOptions {
   readonly traditions: readonly string[];
   /** Display names by id. The label must say what the card says. */
   readonly traditionNames: Readonly<Record<string, string>>;
+  /** Sacred sites, drawn above every era fill. */
+  readonly sites?: readonly SiteMark[] | undefined;
+}
+
+/** One sacred site on the plate — Phase 3 delighter B. */
+export interface SiteMark {
+  readonly id: string;
+  readonly name: string;
+  readonly place?: string | undefined;
+  readonly tradition: string;
+  readonly lat: number;
+  readonly lng: number;
+}
+
+/**
+ * The sites layer.
+ *
+ * Drawn once, above every snapshot, and never scrubbed. A site is a place, not
+ * a claim about an era: the Western Wall stands on the 500 BCE plate and on the
+ * 2020 one, and hiding it at eras before its building would be the map
+ * pretending to a chronology the site records do not carry.
+ *
+ * The vocabulary is the plate's own: an engraved open ring with a centre point,
+ * in the tradition's hue, drawn the way an atlas marks a settlement — never a
+ * pin, which belongs to a different kind of map entirely.
+ */
+/**
+ * Sites nearer than this on the plate are one mark.
+ *
+ * At world scale a degree of longitude is under three plate units, and the
+ * Western Wall, Al-Aqsa, the Holy Sepulchre and the Mount of Olives sit within
+ * two hundredths of a degree of one another: drawn separately they stack
+ * exactly, and four of them become untappable. One mark carrying a count is
+ * both truer to the plate and the only way each record stays reachable.
+ */
+const CLUSTER_UNITS = 7;
+
+interface SiteCluster {
+  readonly x: number;
+  readonly y: number;
+  readonly members: SiteMark[];
+}
+
+export function clusterSites(sites: readonly SiteMark[], f: Frame): SiteCluster[] {
+  const out: { x: number; y: number; members: SiteMark[] }[] = [];
+  for (const s of sites) {
+    const [px, py] = project(s.lng, s.lat, f);
+    const near = out.find((c) => Math.hypot(c.x - px, c.y - py) <= CLUSTER_UNITS);
+    if (near === undefined) out.push({ x: px, y: py, members: [s] });
+    else near.members.push(s);
+  }
+  return out;
+}
+
+function sitesLayer(sites: readonly SiteMark[], f: Frame): string {
+  if (sites.length === 0) return '';
+  const marks = clusterSites(sites, f)
+    .map((c) => {
+      const first = c.members[0];
+      if (first === undefined) return '';
+      const x = c.x.toFixed(1);
+      const y = c.y.toFixed(1);
+      const many = c.members.length > 1;
+      /* A cluster takes the hue of its first member and says how many it holds;
+         claiming one tradition for a shared city would be the worse lie. */
+      const hue = `var(--t-${first.tradition})`;
+      const label = many
+        ? `${c.members.length} sacred sites: ${c.members.map((m) => m.name).join(', ')}`
+        : `Sacred site: ${first.name}${first.place === undefined ? '' : `, ${first.place}`}`;
+      return (
+        `<g class="map-site${many ? ' map-site--many' : ''}" ` +
+        `data-site="${esc(c.members.map((m) => m.id).join(','))}" tabindex="-1" role="button" ` +
+        `aria-label="${esc(label)}">` +
+        `<circle class="map-site__hit" cx="${x}" cy="${y}" r="14"/>` +
+        `<circle class="map-site__ring" cx="${x}" cy="${y}" r="${many ? 7 : 5}" stroke="${hue}"/>` +
+        (many
+          ? `<text class="map-site__count" x="${x}" y="${(c.y + 2.6).toFixed(1)}" ` +
+            `text-anchor="middle">${c.members.length}</text>`
+          : `<circle class="map-site__pip" cx="${x}" cy="${y}" r="1.6" fill="${hue}"/>`) +
+        `</g>`
+      );
+    })
+    .join('');
+  return `<g class="map-sites" data-sites hidden>${marks}</g>`;
 }
 
 /**
@@ -333,6 +417,8 @@ export function renderMap(
       .map((s) => renderSnapshot(s, f, s.era === options.activeEra, options.traditionNames))
       .join('') +
     `</g>` +
+    /* Above the fills, below the plate furniture: a landmark, not a realm. */
+    sitesLayer(options.sites ?? [], f) +
     cartouche(options.title, awaiting ? eraLabel(options.activeEra) : (active?.label ?? ''), awaiting) +
     compass(f) +
     /* The engraved frame sits on top, so nothing bleeds past the plate edge. */
