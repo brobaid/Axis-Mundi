@@ -3,9 +3,10 @@
   "tradition": "chinese",
   "title": "The Daodejing and the Analects",
   "order": 3,
-  "original": "Classical Chinese",
-  "english": "James Legge's translation, public domain",
-  "status": "Acquiring. Two works rather than a canon, and the Chinese dive's canon table is wider than both.",
+  "original": "The received texts, in their standard divisions",
+  "english": "James Legge's translations, public domain",
+  "status": "Partly here. Both works are on the shelves, and they open the shelf without closing a canon that was never single: the Confucian Five Classics and Four Books stand behind the Analects, the some fourteen hundred works of the Daozang behind the Daodejing, and the Chinese dive's canon table is wider than both.",
+  "partly_live": ["daodejing", "analects"],
   "canon_ids": ["confucian-classics", "daozang"],
   "sourcing": "editorial"
 }

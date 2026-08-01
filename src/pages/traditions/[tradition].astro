@@ -193,7 +193,7 @@ const readable = new Set(works.map((w) => w.data.id));
 const planned = new Map<string, { id: string; partly: boolean }>(
   shelfRows.flatMap((r) =>
     r.data.canon_ids.map(
-      (id) => [id, { id: r.data.id, partly: r.data.partly_live !== undefined }] as const,
+      (id) => [id, { id: r.data.id, partly: r.data.partly_live.length > 0 }] as const,
     ),
   ),
 );

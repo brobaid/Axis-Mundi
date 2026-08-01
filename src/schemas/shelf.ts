@@ -37,14 +37,18 @@ export const shelfSchema = z
     /** What the room is waiting on, and anything a reader must know first. */
     status: z.string().min(1),
     /**
-     * A work already on the shelves that this row is the rest of.
+     * Works already on the shelves that this row is the rest of.
      *
      * A shelf can be partly live. The Dhammapada is one book of the Khuddaka
      * Nikaya and it is here; the rest of the Pali Canon is not. A row that
      * said only "being acquired" would be false, and deleting the row because
      * something arrived would hide everything that has not.
+     *
+     * A list rather than one id, because a row is not always one text short of
+     * whole: the Chinese row covers two canons at once and the Daodejing and
+     * the Analects arrived together, one from each.
      */
-    partly_live: slug.optional(),
+    partly_live: z.array(slug).default([]),
     /**
      * Deep-dive canon rows that point at this shelf row.
      *

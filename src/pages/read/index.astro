@@ -42,11 +42,21 @@ const waiting = coming
   .map((r) => ({
     ...r,
     traditionName: nameOf.get(r.tradition) ?? r.tradition,
-    /* A shelf can be partly live: the part that has arrived links to itself. */
-    live: r.partly_live === undefined ? undefined : onShelf.get(r.partly_live),
+    /* A shelf can be partly live: the parts that have arrived link to
+       themselves. The Chinese row is short of two canons and holds two works. */
+    live: r.partly_live.flatMap((id) => {
+      const work = onShelf.get(id);
+      return work === undefined ? [] : [work];
+    }),
   }));
 
-const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
+/* The room's tally counts verses, so it counts the canons that have them. The
+   Daodejing's eighty-one chapters are not eighty-one verses and adding them
+   here would inflate a number whose whole use is comparison. */
+const verses = shelf.reduce(
+  (n, s) => n + (s.work.versified === false ? 0 : s.work.total_verses),
+  0,
+);
 ---
 
 <BaseLayout
@@ -102,8 +112,12 @@ const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
                   )}
                 </span>
                 <span class="caption rd-shelf__meta">
-                  {s.tradition} · {s.work.divisions.length} {s.work.division_label_plural} ·{' '}
-                  {s.work.total_verses.toLocaleString('en')} verses
+                  {s.tradition} · {s.work.divisions.length} {s.work.division_label_plural}
+                  {/* A canon with no verse level stops at its divisions: the
+                      Daodejing is eighty-one chapters, and eighty-one verses
+                      is a division it does not make. */}
+                  {s.work.versified !== false &&
+                    ` · ${s.work.total_verses.toLocaleString('en')} verses`}
                   {!hasEnglish(s.work) && ' · original only'}
                 </span>
                 {/* What a canon must state about itself, stated where a reader
@@ -159,11 +173,13 @@ const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
                   </div>
                 </dl>
                 <p class="rd-waiting__status">{r.status}</p>
-                {r.live !== undefined && (
+                {r.live.length > 0 && (
                   <p class="rd-waiting__live">
-                    <a class="tap" href={`/read/${r.live.id}`}>
-                      Read {r.live.title} →
-                    </a>
+                    {r.live.map((w) => (
+                      <a class="tap" href={`/read/${w.id}`}>
+                        Read {w.title} →
+                      </a>
+                    ))}
                   </p>
                 )}
               </li>
@@ -354,7 +370,13 @@ const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
   }
 
   /* The part of this shelf that has arrived. */
+  /* One row can be short of more than one canon, so this holds a list. The
+     links wrap rather than crowd: on a phone they stack, and each keeps its
+     own tap target. */
   .rd-waiting__live {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--space-6);
     font-size: var(--size-small);
     margin-top: var(--space-2);
   }

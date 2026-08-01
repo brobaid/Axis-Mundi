@@ -5,8 +5,8 @@
   "order": 2,
   "original": "The Mahasangiti Pali text, as segmented by SuttaCentral",
   "english": "Bhikkhu Sujato's translation, CC0 and modern",
-  "status": "Partly here. The Dhammapada is on the shelves \u2014 one book of the Khuddaka Nikaya, and the shelf it opens. Further nikayas arrive from the same CC0 corpus in later deliveries.",
-  "partly_live": "dhammapada",
+  "status": "Partly here. The Dhammapada is on the shelves — one book of the Khuddaka Nikaya, and the shelf it opens. Further nikayas arrive from the same CC0 corpus in later deliveries.",
+  "partly_live": ["dhammapada"],
   "canon_ids": ["pali-canon"],
   "sourcing": "editorial"
 }
