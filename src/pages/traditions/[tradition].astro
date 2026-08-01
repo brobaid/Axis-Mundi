@@ -122,7 +122,7 @@ const keyFigures = dive.figures
   .filter((f): f is NonNullable<typeof f> => f !== undefined);
 
 /* §5.8 — rites, in the life arc's own order rather than the record order. */
-const RITE_ORDER = ['birth', 'coming-of-age', 'marriage', 'death'] as const;
+const RITE_ORDER = ['birth', 'childhood', 'coming-of-age', 'marriage', 'death'] as const;
 const rites = [...dive.rites]
   .filter((r) => includesUnsourced || r.sourcing !== 'todo')
   .sort((a, b) => RITE_ORDER.indexOf(a.stage) - RITE_ORDER.indexOf(b.stage));
@@ -419,7 +419,7 @@ const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.
           <ul class="dd-list" role="list">
             {rites.map((r) => (
               <li>
-                <b>{r.name}</b> <span class="caption">· {r.stage.replace('-', ' ')}</span>
+                <b>{r.name}</b> <span class="caption">· {r.stage.replaceAll('-', ' ')}</span>
                 <p>{r.summary}</p>
               </li>
             ))}
@@ -458,6 +458,7 @@ const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.
             {sacredSites.map((s) => (
               <li>
                 <b>{s.name}</b>
+                {s.place && <span class="caption">· {s.place}</span>}
                 <p>{s.significance}</p>
               </li>
             ))}
@@ -477,12 +478,15 @@ const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.
             {keyFigures.map((f) => (
               <li>
                 <b>{f.name}</b>
-                {f.born && f.died && (
+                {f.born && (
                   <span class="caption mono">
                     {' · '}
                     {displayDate({ year_start: f.born.year, precision: f.born.precision })}
-                    {' – '}
-                    {displayDate({ year_start: f.died.year, precision: f.died.precision })}
+                    {f.died && ' – '}
+                    {f.died && displayDate({ year_start: f.died.year, precision: f.died.precision })}
+                    {/* A date the tradition gives and scholarship does not is
+                        never rendered as if the museum were asserting it. */}
+                    {f.dates_note && ` (${f.dates_note})`}
                   </span>
                 )}
                 <p>{f.summary}</p>

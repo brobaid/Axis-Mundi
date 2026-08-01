@@ -1,0 +1,15 @@
+{
+ "id": "rosh-hashanah",
+ "name": "Rosh Hashanah",
+ "traditions": [
+  "judaism"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "1-2 Tishrei",
+ "observed": {},
+ "summary": "The new year and the beginning of the days of awe; the shofar is sounded.",
+ "sources": [
+  "ej2-2007"
+ ],
+ "sourcing": "sourced"
+}

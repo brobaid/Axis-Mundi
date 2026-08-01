@@ -173,7 +173,11 @@ export const deepDiveSchema = z
       .array(
         z.object({
           id: slug,
-          stage: z.enum(['birth', 'coming-of-age', 'marriage', 'death']),
+          /* The life arc. `childhood` sits between birth and coming-of-age for
+             the rites that belong to neither: circumcision in Islam and Judaism,
+             tonsure, first communion — observances of a child rather than of an
+             infant or an adolescent, and often without a fixed age at all. */
+          stage: z.enum(['birth', 'childhood', 'coming-of-age', 'marriage', 'death']),
           name: z.string().min(1),
           summary: z.string().min(1),
           sources: z.array(sourceRef).default([]),
@@ -251,6 +255,8 @@ export const siteSchema = z
     name: z.string().min(1),
     original: originalScript.optional(),
     traditions: z.array(traditionId).min(1),
+    /** The city or place as a reader knows it, for display beside the name. */
+    place: z.string().min(1).optional(),
     location: location.optional(),
     region: slug.optional(),
     significance: z.string().min(1),
@@ -268,6 +274,16 @@ export const figureSchema = z
     traditions: z.array(traditionId).min(1),
     born: z.object({ year, precision }).optional(),
     died: z.object({ year, precision }).optional(),
+    /**
+     * A qualifier on the dates themselves, e.g. "traditional".
+     *
+     * `precision` says how finely a date is known; it cannot say who is doing
+     * the knowing. Moses is dated to the 13th century BCE by tradition and by
+     * no scholarly consensus, and rendering that as a bare century would put
+     * the museum's own voice behind a claim the tradition makes. Spec §9.1:
+     * attribution is uniform and never dropped.
+     */
+    dates_note: z.string().min(1).optional(),
     role: z.string().min(1),
     summary: z.string().min(1),
     /** Related event ids. */

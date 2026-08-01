@@ -1,0 +1,22 @@
+{
+ "id": "maimonides-figure",
+ "name": "Maimonides",
+ "traditions": [
+  "judaism"
+ ],
+ "born": {
+  "year": 1138,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1204,
+  "precision": "exact"
+ },
+ "role": "Codifier and philosopher",
+ "summary": "Codifier and philosopher; the Mishneh Torah and the Guide of the Perplexed crown medieval Jewish thought.",
+ "events": [],
+ "sources": [
+  "ej2-2007"
+ ],
+ "sourcing": "sourced"
+}

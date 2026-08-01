@@ -1,18 +1,21 @@
 {
-  "id": "ramadan-begins",
-  "name": "Ramadan begins",
-  "traditions": [
-    "islam"
-  ],
-  "calendar": "lunar",
-  "date_rule": "Set by the lunar calendar, so it moves about eleven days earlier each Gregorian year.",
-  "observed": {
-    "2024": "03-11",
-    "2025": "03-01",
-    "2026": "02-18",
-    "2027": "02-08"
-  },
-  "span_days": 29,
-  "sources": [],
-  "sourcing": "todo"
+ "id": "ramadan-begins",
+ "name": "Ramadan begins",
+ "traditions": [
+  "islam"
+ ],
+ "calendar": "lunar",
+ "date_rule": "Set by the lunar calendar, so it moves about eleven days earlier each Gregorian year.",
+ "observed": {
+  "2024": "03-11",
+  "2025": "03-01",
+  "2026": "02-18",
+  "2027": "02-08"
+ },
+ "span_days": 29,
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "sourcing": "sourced"
 }

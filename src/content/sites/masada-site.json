@@ -1,0 +1,18 @@
+{
+ "id": "masada-site",
+ "name": "Masada",
+ "traditions": [
+  "judaism"
+ ],
+ "place": "Judean Desert",
+ "location": {
+  "lat": 31.3156,
+  "lng": 35.3537
+ },
+ "region": "levant",
+ "significance": "The fortress of the revolt's last stand, a modern site of memory and identity.",
+ "sources": [
+  "ej2-2007"
+ ],
+ "sourcing": "sourced"
+}

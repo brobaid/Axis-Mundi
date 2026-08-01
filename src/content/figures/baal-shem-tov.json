@@ -1,0 +1,22 @@
+{
+ "id": "baal-shem-tov",
+ "name": "The Baal Shem Tov",
+ "traditions": [
+  "judaism"
+ ],
+ "born": {
+  "year": 1700,
+  "precision": "year"
+ },
+ "died": {
+  "year": 1760,
+  "precision": "exact"
+ },
+ "role": "Founder of Hasidism",
+ "summary": "Founder of Hasidism, teaching the presence of God in ordinary life and joy as worship.",
+ "events": [],
+ "sources": [
+  "ej2-2007"
+ ],
+ "sourcing": "sourced"
+}

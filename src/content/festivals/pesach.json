@@ -1,0 +1,15 @@
+{
+ "id": "pesach",
+ "name": "Pesach",
+ "traditions": [
+  "judaism"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "15-22 Nisan",
+ "observed": {},
+ "summary": "Passover: the seder retells the Exodus, and leaven leaves the house for the week.",
+ "sources": [
+  "ej2-2007"
+ ],
+ "sourcing": "sourced"
+}

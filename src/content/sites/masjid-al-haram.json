@@ -4,6 +4,12 @@
  "traditions": [
   "islam"
  ],
+ "place": "Mecca",
+ "location": {
+  "lat": 21.4225,
+  "lng": 39.8262
+ },
+ "region": "arabia",
  "significance": "The sanctuary at Islam's center: the direction of every prayer and the destination of the hajj.",
  "sources": [
   "nchi-2010",

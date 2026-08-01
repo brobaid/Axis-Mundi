@@ -1,44 +1,234 @@
 {
-  "id": "judaism",
-  "tradition": "judaism",
-  "name": "Judaism",
-  "stat_box": {
-    "adherents": {
-      "display": "14.8 m (Pew, 2020)",
-      "estimate": 14800000,
-      "source": "pew-grl-2025",
-      "year": 2020,
-      "basis": "Enumerated by Pew. 0.2% of world population; the report carries definitional notes on Israel versus diaspora counting.",
-      "contested": false
-    },
-    "symbol": "star-of-david"
+ "id": "judaism",
+ "tradition": "judaism",
+ "name": "Judaism",
+ "stat_box": {
+  "adherents": {
+   "display": "14.8 m (Pew, 2020)",
+   "estimate": 14800000,
+   "source": "pew-grl-2025",
+   "year": 2020,
+   "basis": "Enumerated by Pew. 0.2% of world population; the report carries definitional notes on Israel versus diaspora counting.",
+   "contested": false
   },
-  "belief_dimensions": [
-    "divine-concept",
-    "cosmology",
-    "afterlife",
-    "salvation-path",
-    "scripture-authority",
-    "view-of-others"
+  "symbol": "star-of-david"
+ },
+ "belief_dimensions": [
+  "divine-concept",
+  "cosmology",
+  "afterlife",
+  "salvation-path",
+  "scripture-authority",
+  "view-of-others"
+ ],
+ "law_dimensions": [
+  "dietary-law",
+  "dress-modesty",
+  "ethical-frame",
+  "conversion-stance",
+  "clergy-leadership",
+  "worship-form",
+  "calendar-system"
+ ],
+ "festivals": [
+  "rosh-hashanah",
+  "yom-kippur",
+  "pesach",
+  "hanukkah"
+ ],
+ "sites": [
+  "western-wall",
+  "masada-site",
+  "mount-of-olives"
+ ],
+ "figures": [
+  "moses",
+  "hillel",
+  "maimonides-figure",
+  "baal-shem-tov"
+ ],
+ "canon": [
+  {
+   "id": "tanakh",
+   "title": "Tanakh (Hebrew Bible)",
+   "language": "Hebrew, with Aramaic portions",
+   "composition": "c. 10th-2nd c. BCE; canon closed by c. 2nd c. CE",
+   "status": "Canonical in all streams",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "talmud",
+   "title": "Talmud",
+   "language": "Hebrew and Aramaic",
+   "composition": "Mishnah c. 200 CE; Babylonian Gemara sealed c. 500 CE",
+   "status": "Authoritative in rabbinic Judaism; Karaites accept scripture alone",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "practices": [
+  {
+   "id": "prayer",
+   "name": "Prayer",
+   "kind": "prayer",
+   "frequency": "Three services daily",
+   "summary": "The three daily services, with a quorum of ten for full communal prayer; the Shema and the Amidah at their core.",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "shabbat",
+   "name": "Shabbat",
+   "kind": "sabbath",
+   "frequency": "Weekly",
+   "summary": "The seventh day, from Friday sunset to Saturday nightfall: work ceases, candles are lit, and the day is honored with meals, rest, and Torah.",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "kashrut",
+   "name": "Kashrut",
+   "kind": "dietary",
+   "summary": "The dietary laws: permitted species, ritual slaughter, and the separation of meat and milk, sanctifying the table.",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "study",
+   "name": "Torah study",
+   "kind": "study",
+   "frequency": "Lifelong, to a daily page",
+   "summary": "Torah study as worship in its own right, lifelong and communal, from the weekly portion to the daily Talmud page.",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "tzedakah",
+   "name": "Tzedakah",
+   "kind": "almsgiving",
+   "summary": "Obligatory righteous giving, owed to the poor as justice rather than offered as charity.",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "rites": [
+  {
+   "id": "birth",
+   "stage": "birth",
+   "name": "Birth",
+   "summary": "Boys enter the covenant through brit milah, circumcision on the eighth day; naming ceremonies welcome daughters.",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "coming-of-age",
+   "stage": "coming-of-age",
+   "name": "Coming of age",
+   "summary": "At thirteen (twelve for girls in many communities) a child becomes bar or bat mitzvah, obligated in the commandments, and is called to the Torah.",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "marriage",
+   "stage": "marriage",
+   "name": "Marriage",
+   "summary": "Under the chuppah, with the ketubah contract and the breaking of the glass in memory of the Temple.",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "death",
+   "stage": "death",
+   "name": "Death",
+   "summary": "Burial as soon as possible, the mourner's Kaddish, and the seven days of shiva in which the community sustains the bereaved.",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "misconceptions": [
+  {
+   "id": "judaism-is-old-testament",
+   "claim": "Judaism is simply the religion of the Old Testament.",
+   "correction": "Rabbinic Judaism reads scripture through the oral Torah, the Talmud and its tradition of interpretation; it is as postbiblical a religion as Christianity is.",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "judaism-is-only-ethnicity",
+   "claim": "Judaism is an ethnicity, not a religion (or the reverse).",
+   "correction": "It is a covenantal peoplehood: born Jews and converts stand equally within it, and the tradition refuses the modern division between religion and people.",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "chosen-means-superior",
+   "claim": "\"Chosen people\" means Jews claim superiority.",
+   "correction": "In the tradition's own reading, election is obligation, a yoke of commandments, not privilege; the righteous of all nations share in the world to come.",
+   "sources": [
+    "ej2-2007"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "further_reading": [
+  "ej2-2007",
+  "chj"
+ ],
+ "sourcing": "sourced",
+ "overview": {
+  "body": "Judaism is the covenantal religion of the Jewish people: the conviction that the one God, creator of all, entered into a binding relationship with Israel at Sinai, given form in the [[torah|Torah]] and lived through the commandments, the [[mitzvah|mitzvot]]. It is at once a faith, a law, a people, and a civilization, and it resists the division of those things. Its center of gravity is practice more than creed: the sanctification of time through [[shabbat|Shabbat]] and the festivals, of the table through the dietary laws, and of life's passages through its rites. The oldest of the living monotheisms and the smallest of the major world religions, with some fifteen million adherents, Judaism has shaped civilizations far beyond its numbers, above all through the two faiths, Christianity and Islam, that arose in conversation with it.",
+  "sources": [
+   "ej2-2007"
   ],
-  "law_dimensions": [
-    "dietary-law",
-    "dress-modesty",
-    "ethical-frame",
-    "conversion-stance",
-    "clergy-leadership",
-    "worship-form",
-    "calendar-system"
-  ],
-  "festivals": [
-    "yom-kippur"
-  ],
-  "sites": [],
-  "figures": [],
-  "canon": [],
-  "practices": [],
-  "rites": [],
-  "misconceptions": [],
-  "further_reading": [],
   "sourcing": "sourced"
+ },
+ "origins": {
+  "body": "According to the biblical account, the story begins with Abraham, called out of Mesopotamia into covenant, and continues through Egypt and the Exodus to Sinai, where Israel receives the Torah; the tradition dates itself from these narratives, while scholarship can trace Israelite religion securely from the early first millennium BCE. Two catastrophes forged what the narratives began. The Babylonian destruction of the First Temple in 586 BCE and the exile that followed turned a temple-and-land religion into a portable covenant of text and practice; the Roman destruction of the Second Temple in 70 CE completed the turn, as the sages of Yavneh rebuilt Judaism around study, prayer, and law. The [[talmud|Talmud]], sealed in Babylonia around 500 CE, became the curriculum of a people who would live the next fifteen centuries dispersed among the nations, from Baghdad to Cordoba to the Rhineland to Vilna, carrying the same calendar and the same texts.",
+  "sources": [
+   "ej2-2007",
+   "chj"
+  ],
+  "sourcing": "sourced"
+ },
+ "core_beliefs": {
+  "body": "God is one: the Shema, recited morning and evening, is as close to a creed as Judaism keeps. God is creator, revealer, and redeemer; the covenant obligates Israel to the commandments, and the commandments sanctify ordinary life, food, time, speech, and commerce alike. Righteousness is measured in deeds, and the tradition's weight falls on this world: repairing it, pursuing justice, and honoring the image of God in every person. On last things Judaism speaks with many voices; belief in a messianic age and in the world to come is classical, but the tradition tolerates a wide range of conviction about both, and its communities have always divided more over practice than over doctrine. Righteous people of all nations, the tradition holds, have a share in the world to come; the covenant is Israel's obligation, not humanity's entrance requirement.",
+  "sources": [
+   "ej2-2007"
+  ],
+  "sourcing": "sourced"
+ }
 }

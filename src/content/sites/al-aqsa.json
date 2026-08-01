@@ -4,6 +4,12 @@
  "traditions": [
   "islam"
  ],
+ "place": "Jerusalem",
+ "location": {
+  "lat": 31.7761,
+  "lng": 35.2358
+ },
+ "region": "levant",
  "significance": "The noble sanctuary, third of the holy places, associated with the Prophet's night journey according to tradition.",
  "sources": [
   "nchi-2010",

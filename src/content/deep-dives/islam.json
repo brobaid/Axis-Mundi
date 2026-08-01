@@ -173,6 +173,17 @@
    "sourcing": "sourced"
   },
   {
+   "id": "circumcision",
+   "stage": "childhood",
+   "name": "Circumcision",
+   "summary": "Male circumcision is near-universal practice, its timing varying by region and school.",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced"
+  },
+  {
    "id": "marriage",
    "stage": "marriage",
    "name": "Marriage",

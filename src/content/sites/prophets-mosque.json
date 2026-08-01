@@ -4,6 +4,12 @@
  "traditions": [
   "islam"
  ],
+ "place": "Medina",
+ "location": {
+  "lat": 24.4672,
+  "lng": 39.6111
+ },
+ "region": "arabia",
  "significance": "Muhammad's mosque and burial place, the second sanctuary.",
  "sources": [
   "nchi-2010",

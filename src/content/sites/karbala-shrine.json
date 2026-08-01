@@ -4,6 +4,12 @@
  "traditions": [
   "islam"
  ],
+ "place": "Karbala",
+ "location": {
+  "lat": 32.616,
+  "lng": 44.0324
+ },
+ "region": "mesopotamia",
  "significance": "The burial place of the Prophet's grandson, the great pilgrimage center of Shia devotion.",
  "sources": [
   "nchi-2010",

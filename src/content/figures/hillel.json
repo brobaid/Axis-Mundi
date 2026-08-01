@@ -1,0 +1,18 @@
+{
+ "id": "hillel",
+ "name": "Hillel the Elder",
+ "traditions": [
+  "judaism"
+ ],
+ "born": {
+  "year": -50,
+  "precision": "century"
+ },
+ "role": "Sage of the Second Temple period",
+ "summary": "The sage whose school's rulings became the norm; his summary: what is hateful to you, do not do to another.",
+ "events": [],
+ "sources": [
+  "ej2-2007"
+ ],
+ "sourcing": "sourced"
+}

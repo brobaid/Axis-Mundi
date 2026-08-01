@@ -1,0 +1,19 @@
+{
+ "id": "moses",
+ "name": "Moses",
+ "traditions": [
+  "judaism"
+ ],
+ "born": {
+  "year": -1250,
+  "precision": "century"
+ },
+ "dates_note": "traditional",
+ "role": "Prophet and lawgiver in Jewish tradition",
+ "summary": "According to tradition, the prophet who led the Exodus and received the Torah at Sinai; the tradition's teacher without peer.",
+ "events": [],
+ "sources": [
+  "ej2-2007"
+ ],
+ "sourcing": "sourced"
+}

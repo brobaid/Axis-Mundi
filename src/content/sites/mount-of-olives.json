@@ -1,0 +1,18 @@
+{
+ "id": "mount-of-olives",
+ "name": "Mount of Olives cemetery",
+ "traditions": [
+  "judaism"
+ ],
+ "place": "Jerusalem",
+ "location": {
+  "lat": 31.778,
+  "lng": 35.2454
+ },
+ "region": "levant",
+ "significance": "The oldest continually used Jewish cemetery, facing the Temple Mount in expectation.",
+ "sources": [
+  "ej2-2007"
+ ],
+ "sourcing": "sourced"
+}

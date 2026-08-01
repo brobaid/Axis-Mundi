@@ -1,0 +1,15 @@
+{
+ "id": "hanukkah",
+ "name": "Hanukkah",
+ "traditions": [
+  "judaism"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "25 Kislev, eight days",
+ "observed": {},
+ "summary": "The festival of lights commemorating the Temple's rededication in 164 BCE.",
+ "sources": [
+  "ej2-2007"
+ ],
+ "sourcing": "sourced"
+}

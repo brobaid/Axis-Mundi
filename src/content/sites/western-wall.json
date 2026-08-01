@@ -1,0 +1,18 @@
+{
+ "id": "western-wall",
+ "name": "The Western Wall",
+ "traditions": [
+  "judaism"
+ ],
+ "place": "Jerusalem",
+ "location": {
+  "lat": 31.7767,
+  "lng": 35.2345
+ },
+ "region": "levant",
+ "significance": "The surviving retaining wall of the Second Temple's mount, Judaism's foremost place of prayer.",
+ "sources": [
+  "ej2-2007"
+ ],
+ "sourcing": "sourced"
+}
