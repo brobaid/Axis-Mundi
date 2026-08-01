@@ -1,0 +1,961 @@
+{
+ "id": "avesta",
+ "tradition": "zoroastrianism",
+ "title": "The Avesta",
+ "division_label": "division",
+ "division_label_plural": "divisions",
+ "chapter_label": "chapter",
+ "script": "latin",
+ "direction": "ltr",
+ "editions": {
+  "en": "sbe-avesta"
+ },
+ "versified": false,
+ "original_pending": "The Avestan text is not yet available from a public-domain source; this room is English-only for now.",
+ "note": "Roughly a quarter of the Sasanian Avesta survives; this room is a remnant by history, not by editing.",
+ "divisions": [
+  {
+   "n": 1,
+   "slug": "yasna",
+   "name": "Yasna",
+   "verses": 693,
+   "chapters": [
+    {
+     "c": 1,
+     "verses": 23,
+     "preview": "1. I announce (and) carry out (this Yasna) for the creator Ahura Mazda, the…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 2,
+     "verses": 18,
+     "preview": "1. I desire the libations for this Yasna; I desire the Baresman for this…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 3,
+     "verses": 21,
+     "preview": "1. With a Baresman brought to its appointed place accompanied with the…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 4,
+     "verses": 26,
+     "preview": "1. These good thoughts, good words, and good deeds, these Haomas…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 5,
+     "verses": 1,
+     "preview": "(This chapter is identical with Yasna 37. )",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 6,
+     "verses": 21,
+     "preview": "1. We worship the Creator Ahura Mazda with our sacrifice, and the Bountiful…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 7,
+     "verses": 26,
+     "preview": "1. With a complete and sacred offering I offer and I give this…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 8,
+     "verses": 10,
+     "preview": "1. A blessing is Righteousness (called) the Best. It is weal; it is weal to…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 9,
+     "verses": 31,
+     "preview": "1. At the hour of Havani. Haoma came to Zarathushtra, as he served the…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 10,
+     "verses": 21,
+     "preview": "1. Let the Demon-gods and Goddesses fly far away from hence, and let the…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 11,
+     "verses": 13,
+     "preview": "1. Three clean creatures (full of blessings) curse betimes while yet…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 12,
+     "verses": 11,
+     "preview": "[Translation by J. H. Peterson, 1996. This creed probably dates to the…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 13,
+     "verses": 10,
+     "preview": "[Translated by L. H. Mills (From Sacred Books of the East, American…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 14,
+     "verses": 4,
+     "preview": "1. I will come to You, O Ye Bountiful Immortals! as a praiser and a priest…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 15,
+     "verses": 4,
+     "preview": "1. With precept, praise, and with delight produced by grace, I call upon…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 16,
+     "verses": 8,
+     "preview": "1. We worship Ahura Mazda, the holy lord of the ritual order, who disposes…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 17,
+     "verses": 7,
+     "preview": "1-10. (See Y6, which is nearly identical with verses 1-10.)",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 18,
+     "verses": 1,
+     "preview": "1. Grant me, Thou who art maker of the Kine, plants and waters…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 19,
+     "verses": 18,
+     "preview": "(As the Ahu is excellent, so (is) the Ratu (one who rules) from the…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 20,
+     "verses": 5,
+     "preview": "1. A blessing is Righteousness (called) the best; there is weal, there is…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 21,
+     "verses": 2,
+     "preview": "(The Yenhe. (To that one) of beings do we offer, whose superior (fidelity)…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 22,
+     "verses": 3,
+     "preview": "1. With the Baresman brought hither together with the Zaothra, for the…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 23,
+     "verses": 2,
+     "preview": "1. I desire to approach with my praise those Fravashis which have existed…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 24,
+     "verses": 7,
+     "preview": "1. (And having approached these Haomas with our worship), we present them…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 25,
+     "verses": 5,
+     "preview": "1. And we worship the Bountiful Immortals with our sacrifice, who rule…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 26,
+     "verses": 7,
+     "preview": "1. I praise, invoke, and weave my hymn to the good, heroic, and bountiful…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 27,
+     "verses": 7,
+     "preview": "1. This is to render Him who is of all the greatest, our lord and master…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 28,
+     "verses": 11,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. With outspread hands in petition for that help, O Mazda, I will pray for…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 29,
+     "verses": 11,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. Unto you wailed the Ox-soul, \"For whom did ye fashion me? Who created…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 30,
+     "verses": 11,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. Now I will proclaim to those who will hear the things that the…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 31,
+     "verses": 22,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. Mindful of your commands, we proclaim words unpleasant for them to hear…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 32,
+     "verses": 16,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. (Zarathushtra) -- And his blessedness, even that of Ahura Mazda, shall…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 33,
+     "verses": 14,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. According as it is with the laws that belong to the present life, so…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 34,
+     "verses": 16,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. The action, the word, and the worship for which Thou, O Mazda, shalt…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 35,
+     "verses": 8,
+     "preview": "1. We sacrifice to Ahura Mazda, the holy Lord of the ritual order, and to…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 36,
+     "verses": 3,
+     "preview": "1. We would approach You two, O (Ye) primeval ones in the house of this Thy…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 37,
+     "verses": 3,
+     "preview": "1. Thus therefore do we worship Ahura Mazda, who made the Kine (the living…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 38,
+     "verses": 1,
+     "preview": "1. And now we worship this earth which bears us, together with Thy wives, O…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 39,
+     "verses": 4,
+     "preview": "1. And now we sacrifice to the Kine's soul, and to her created body, and we…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 40,
+     "verses": 3,
+     "preview": "1. And now in these Thy dispensations, O Ahura Mazda! do Thou wisely act…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 41,
+     "verses": 3,
+     "preview": "1. Praises, and songs, and adorations do we offer to Ahura Mazda, and to…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 42,
+     "verses": 5,
+     "preview": "1. We worship You, O Ye Bountiful Immortals! the entire collection of this…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 43,
+     "verses": 16,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. To each several man, to whom Mazda Ahura ruling at his will grant after…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 44,
+     "verses": 20,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. This I ask Thee, tell me truly, Ahura - as to prayer, how it should be…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 45,
+     "verses": 11,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. I will speak forth: hear now and hearken now, ye from near and ye from…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 46,
+     "verses": 20,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. To what land shall I go to flee, whither to flee? From nobles and from…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 47,
+     "verses": 6,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. For his holy Spirit and for Best Thought, deed, and word, in accordance…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 48,
+     "verses": 12,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. When at the Recompensings the Right shall smite the Liar, so that what…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 49,
+     "verses": 12,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. Ever has Bendva been for me the greatest obstacle, I who desire to give…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 50,
+     "verses": 12,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. (Zarathushtra:) Can my soul count on any one for help? Who is there…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 51,
+     "verses": 23,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "[Translation by Bartholomae, from I.J.S. Taraporewala, The Divine Songs of…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 52,
+     "verses": 3,
+     "preview": "[Translated by L. H. Mills (From Sacred Books of the East, American…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 53,
+     "verses": 9,
+     "badge": {
+      "label": "Gatha",
+      "title": "the oldest stratum, attributed to Zarathustra"
+     },
+     "preview": "1. (Zarathushtra) - The best possession known is of Zarathushtra Spitama…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 54,
+     "verses": 3,
+     "preview": "[Translated by L. H. Mills (From Sacred Books of the East, American…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 55,
+     "verses": 5,
+     "preview": "1. We present hereby and we make known, as our offering to the bountiful…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 56,
+     "verses": 4,
+     "preview": "1. Let Sraosha (the listening Obedience) be present here for the worship of…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 57,
+     "verses": 34,
+     "preview": "1. A blessing is Righteousness (called) the Best, &c. Propitiation be to…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 58,
+     "verses": 5,
+     "preview": "1. (Introduction.) (To the increase of our homage and praise of God) we…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 59,
+     "verses": 5,
+     "preview": "1-17. (See Y17.1-17.) 18-27. (See Y26.1-1O.)",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 60,
+     "verses": 6,
+     "preview": "1. Thus that better than the good may he approach, who shows to us straight…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 61,
+     "verses": 2,
+     "preview": "1. Let us peal forth the Ahuna-vairya in our liturgy between the heaven and…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 62,
+     "verses": 3,
+     "preview": "1. I offer my sacrifice and homage to thee, the Fire, as a good offering…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 63,
+     "verses": 1,
+     "preview": "(See Y15.2; Y66.2; Y38.3.)",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 64,
+     "verses": 1,
+     "preview": "(See Y46.3; Y50.6-11.)",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 65,
+     "verses": 7,
+     "preview": "1. I will praise the water Ardvi Sura Anahita, the efficacious against the…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 66,
+     "verses": 3,
+     "preview": "1. I am now offering this Zaothra here with sanctity, together with the…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 67,
+     "verses": 1,
+     "preview": "1-4. (See Y23.1-4, replacing 'I desire to approach with sanctity' by 'I…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 68,
+     "verses": 10,
+     "preview": "1. We offer this to thee, O Ahurian (daughter) of Ahura! as a help (?) for…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 69,
+     "verses": 1,
+     "preview": "(This chapter is composed of fragments: see Y15.2 and Y51.1 and 22.)",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 70,
+     "verses": 4,
+     "preview": "1. I would worship these (the Bountiful Immortals) with my sacrifice, those…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 71,
+     "verses": 10,
+     "preview": "1. Frashaoshtra, the holy, asked the saintly Zarathushtra: Answer me, O…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 72,
+     "verses": 1,
+     "preview": "(See Y61.)",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    }
+   ],
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 2,
+   "slug": "vendidad",
+   "name": "Vendidad",
+   "verses": 239,
+   "chapters": [
+    {
+     "c": 1,
+     "verses": 6,
+     "preview": "Sixteen perfect lands created by Ahura Mazda, and as many plagues created…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 2,
+     "verses": 5,
+     "preview": "Myths of Yima",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 3,
+     "verses": 3,
+     "preview": "The Earth",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 4,
+     "verses": 8,
+     "preview": "Contracts and offenses I. 1. He that does not restore a loan to the man who…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 5,
+     "verses": 14,
+     "preview": "Purity laws",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 6,
+     "verses": 6,
+     "preview": "Purity laws",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 7,
+     "verses": 65,
+     "preview": "Purity laws",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 8,
+     "verses": 26,
+     "preview": "Purity laws",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 9,
+     "verses": 9,
+     "preview": "The Nine Nights' Barashnum.",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 10,
+     "verses": 10,
+     "preview": "Formulas recited during the process of cleansing",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 11,
+     "verses": 5,
+     "preview": "Special formulas for cleansing several objects",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 12,
+     "verses": 5,
+     "preview": "The Upaman: how long it lasts for different relatives",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 13,
+     "verses": 18,
+     "preview": "The Dog.",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 14,
+     "verses": 6,
+     "preview": "Atoning for the murder of a water-dog",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 15,
+     "verses": 6,
+     "preview": "Regarding certain sins and obligations",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 16,
+     "verses": 8,
+     "preview": "Purity laws regarding menstruation",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 17,
+     "verses": 3,
+     "preview": "Hair and nails",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 18,
+     "verses": 5,
+     "preview": "I. 1. 'There is many a one, O holy Zarathushtra!' said Ahura Mazda, 'Who…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 19,
+     "verses": 13,
+     "preview": "I. 1. From the region of the north, from the regions of the north, forth…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 20,
+     "verses": 4,
+     "preview": "Thrita, the First Healer.",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 21,
+     "verses": 7,
+     "preview": "I. 1. Hail, bounteous bull! Hail to thee, beneficent bull! Hail to thee…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    },
+    {
+     "c": 22,
+     "verses": 7,
+     "preview": "Angra Mainyu creates 99,999 diseases; Ahura Mazda counters with the Holy…",
+     "preview_lang": "en",
+     "english_gaps": 0,
+     "original_gaps": 0,
+     "blank": 0
+    }
+   ],
+   "chapter_label": "fargard",
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  }
+ ],
+ "total_verses": 932,
+ "total_chapters": 94,
+ "english_gaps": 0,
+ "original_gaps": 0,
+ "blank": 0,
+ "sourcing": "sourced"
+}
