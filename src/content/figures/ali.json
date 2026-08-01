@@ -1,0 +1,23 @@
+{
+ "id": "ali",
+ "name": "Ali ibn Abi Talib",
+ "traditions": [
+  "islam"
+ ],
+ "born": {
+  "year": 600,
+  "precision": "year"
+ },
+ "died": {
+  "year": 661,
+  "precision": "exact"
+ },
+ "role": "Fourth caliph to Sunni Islam, first Imam to Shia Islam",
+ "summary": "Cousin and son-in-law of the Prophet, fourth caliph to Sunni Islam and first Imam to Shia Islam; both traditions revere him.",
+ "events": [],
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "sourcing": "sourced"
+}

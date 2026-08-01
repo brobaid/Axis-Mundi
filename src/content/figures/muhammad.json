@@ -1,0 +1,23 @@
+{
+ "id": "muhammad",
+ "name": "Muhammad",
+ "traditions": [
+  "islam"
+ ],
+ "born": {
+  "year": 570,
+  "precision": "year"
+ },
+ "died": {
+  "year": 632,
+  "precision": "exact"
+ },
+ "role": "Messenger of God, seal of the prophets",
+ "summary": "The messenger of God in Islamic belief, seal of the prophets; his conduct, the Sunna, is the model of Muslim life.",
+ "events": [],
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "sourcing": "sourced"
+}

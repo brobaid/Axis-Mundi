@@ -31,7 +31,7 @@ export const getStaticPaths = (async () => {
 const { dive } = Astro.props;
 const meta = traditionMeta(dive.tradition);
 
-const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, sources, events, texts] = await Promise.all([
+const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, siteRecords, figureRecords, sources, events, texts] = await Promise.all([
   getPublishable('glossary'),
   /* The branch tree renders names and contested flags — spec §2.3 structure. */
   getStructural('taxonomy'),
@@ -39,6 +39,8 @@ const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, sources, ev
   getPublishable('taxonomy'),
   getPublishable('matrix'),
   getPublishable('festivals'),
+  getPublishable('sites'),
+  getPublishable('figures'),
   getPublishable('sources'),
   getPublishable('events'),
   getPublishable('texts'),
@@ -107,6 +109,23 @@ const lawCells = cellsFor(dive.law_dimensions);
 const holyDays = dive.festivals
   .map((id) => festivals.find((f) => f.data.id === id)?.data)
   .filter((f): f is NonNullable<typeof f> => f !== undefined);
+
+/* §5.10 and §5.11 — the dive names its sites and figures by id; the records
+   themselves live in their own collections, which the map layer and the
+   influence network will read too. Both gate on their own sourcing. */
+const sacredSites = dive.sites
+  .map((id) => siteRecords.find((s) => s.data.id === id)?.data)
+  .filter((s): s is NonNullable<typeof s> => s !== undefined);
+
+const keyFigures = dive.figures
+  .map((id) => figureRecords.find((f) => f.data.id === id)?.data)
+  .filter((f): f is NonNullable<typeof f> => f !== undefined);
+
+/* §5.8 — rites, in the life arc's own order rather than the record order. */
+const RITE_ORDER = ['birth', 'coming-of-age', 'marriage', 'death'] as const;
+const rites = [...dive.rites]
+  .filter((r) => includesUnsourced || r.sourcing !== 'todo')
+  .sort((a, b) => RITE_ORDER.indexOf(a.stage) - RITE_ORDER.indexOf(b.stage));
 
 /* §5.2 — events for the period marker, and the pre-filtered timeline link. */
 const traditionEvents = events
@@ -393,7 +412,20 @@ const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.
     <!-- 8 ------------------------------------------------------------- -->
     <section id="rites" class="dd-section">
       <h2>Rites of passage</h2>
-      <p class="dd-pending">Life-arc records land in Phase 3.</p>
+      {
+        rites.length === 0 ? (
+          <p class="dd-pending">Life-arc records land in Phase 3.</p>
+        ) : (
+          <ul class="dd-list" role="list">
+            {rites.map((r) => (
+              <li>
+                <b>{r.name}</b> <span class="caption">· {r.stage.replace('-', ' ')}</span>
+                <p>{r.summary}</p>
+              </li>
+            ))}
+          </ul>
+        )
+      }
     </section>
 
     <!-- 9 ------------------------------------------------------------- -->
@@ -418,13 +450,47 @@ const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.
     <!-- 10 ------------------------------------------------------------ -->
     <section id="sites" class="dd-section">
       <h2>Sacred sites</h2>
-      <p class="dd-pending">Site records land with the map, in Phase 2.</p>
+      {
+        sacredSites.length === 0 ? (
+          <p class="dd-pending">Site records land with the map, in Phase 2.</p>
+        ) : (
+          <ul class="dd-list" role="list">
+            {sacredSites.map((s) => (
+              <li>
+                <b>{s.name}</b>
+                <p>{s.significance}</p>
+              </li>
+            ))}
+          </ul>
+        )
+      }
     </section>
 
     <!-- 11 ------------------------------------------------------------ -->
     <section id="figures" class="dd-section">
       <h2>Key figures</h2>
-      <p class="dd-pending">Figure records land with the influence network, in Phase 4.</p>
+      {
+        keyFigures.length === 0 ? (
+          <p class="dd-pending">Figure records land with the influence network, in Phase 4.</p>
+        ) : (
+          <ul class="dd-list" role="list">
+            {keyFigures.map((f) => (
+              <li>
+                <b>{f.name}</b>
+                {f.born && f.died && (
+                  <span class="caption mono">
+                    {' · '}
+                    {displayDate({ year_start: f.born.year, precision: f.born.precision })}
+                    {' – '}
+                    {displayDate({ year_start: f.died.year, precision: f.died.precision })}
+                  </span>
+                )}
+                <p>{f.summary}</p>
+              </li>
+            ))}
+          </ul>
+        )
+      }
     </section>
 
     <!-- 12 ------------------------------------------------------------ -->

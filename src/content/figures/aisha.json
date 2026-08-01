@@ -1,0 +1,23 @@
+{
+ "id": "aisha",
+ "name": "Aisha bint Abi Bakr",
+ "traditions": [
+  "islam"
+ ],
+ "born": {
+  "year": 614,
+  "precision": "year"
+ },
+ "died": {
+  "year": 678,
+  "precision": "exact"
+ },
+ "role": "Wife of the Prophet and transmitter of hadith",
+ "summary": "Wife of the Prophet and major transmitter of hadith; a central figure of early Islamic memory.",
+ "events": [],
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "sourcing": "sourced"
+}

@@ -1,92 +1,263 @@
 {
-  "id": "islam",
-  "tradition": "islam",
-  "name": "Islam",
-  "original": {
-    "text": "الإسلام",
-    "script": "arabic",
-    "transliteration": "al-Islām",
-    "lang": "ar"
+ "id": "islam",
+ "tradition": "islam",
+ "name": "Islam",
+ "original": {
+  "text": "الإسلام",
+  "script": "arabic",
+  "transliteration": "al-Islām",
+  "lang": "ar"
+ },
+ "subtitle": "Submission to the one God, in the tradition of the prophets",
+ "stat_box": {
+  "adherents": {
+   "display": "2.0 bn (Pew, 2020)",
+   "estimate": 2000000000,
+   "source": "pew-grl-2025",
+   "year": 2020,
+   "basis": "Enumerated by Pew. 25.6% of world population. Supersedes the v5 stat box figure of 1.9 bn.",
+   "contested": false
   },
-  "subtitle": "Submission to the one God, in the tradition of the prophets",
-  "stat_box": {
-    "adherents": {
-      "display": "2.0 bn (Pew, 2020)",
-      "estimate": 2000000000,
-      "source": "pew-grl-2025",
-      "year": 2020,
-      "basis": "Enumerated by Pew. 25.6% of world population. Supersedes the v5 stat box figure of 1.9 bn.",
-      "contested": false
-    },
-    "origin_region": "arabia",
-    "symbol": "crescent-and-star"
-  },
-  "overview": {
-    "body": "Islam holds that God is one, without partner or likeness, and that the [[quran|Quran]] is God's final revelation, delivered through Muhammad, the last in a line of prophets that includes Abraham, Moses, and Jesus. The believer's life is structured by five obligatory practices, from daily prayer to the pilgrimage at Mecca.",
-    "sources": [],
-    "sourcing": "todo"
-  },
-  "origins_period": {
-    "from": 610,
-    "to": 632,
-    "precision": "exact"
-  },
-  "origins": {
-    "body": "According to Islamic tradition, revelation began in 610 CE in a cave outside Mecca and continued for twenty-three years. The community's migration to Medina in 622, the [[hijra|Hijra]], marks year one of the Islamic calendar. By Muhammad's death in 632, most of the Arabian Peninsula had entered the new polity.",
-    "sources": [],
-    "sourcing": "todo"
-  },
-  "core_beliefs": {
-    "body": "At the center is [[tawhid]], the absolute oneness of God. Faith is classically summarized in six articles: God, the angels, the revealed books, the prophets, the Day of Judgment, and divine decree.",
-    "sources": [],
-    "sourcing": "todo"
-  },
-  "belief_dimensions": [
-    "divine-concept",
-    "afterlife"
-  ],
-  "canon": [
-    {
-      "id": "quran",
-      "title": "Quran",
-      "original": {
-        "text": "القرآن",
-        "script": "arabic",
-        "transliteration": "al-Qurʾān",
-        "lang": "ar"
-      },
-      "language": "Classical Arabic",
-      "composition": "610–632 CE; codified c. 650",
-      "status": "Canonical in all branches",
-      "sources": [],
-      "sourcing": "todo",
-      "contested": false
-    }
-  ],
-  "practices": [],
-  "law_dimensions": [
-    "dietary-law",
-    "calendar-system"
-  ],
-  "rites": [],
-  "festivals": [
-    "ramadan-begins"
-  ],
-  "sites": [],
-  "figures": [],
-  "misconceptions": [
-    {
-      "id": "muslims-worship-muhammad",
-      "claim": "Muslims worship Muhammad.",
-      "correction": "In Islamic teaching, worship is directed to God alone. Muhammad is revered as the final prophet and moral exemplar, and is not held to be divine; venerating him as such would contradict tawhid itself.",
-      "sources": [
-        "esposito-straight-path"
-      ],
-      "sourcing": "sourced"
-    }
-  ],
-  "further_reading": [
-    "esposito-straight-path"
+  "origin_region": "arabia",
+  "symbol": "crescent-and-star"
+ },
+ "overview": {
+  "body": "Islam holds that God is one, without partner, likeness, or need, and that the [[quran|Quran]] is God's final revelation, delivered through Muhammad, the seal of a line of prophets that includes Adam, Noah, Abraham, Moses, and Jesus. The word islam means submission: the fitting response of the creature to the Creator, and the religion's name for itself describes an act rather than a founder. A Muslim's life is structured by five obligatory practices, from the profession of faith to the pilgrimage at Mecca, and by a moral law understood to cover all of life. From one city in seventh-century Arabia, Islam grew within a century into a civilization reaching from the Atlantic to the Indus; today its two billion adherents make it the world's second-largest religion and its fastest-growing, with its demographic heart in South and Southeast Asia rather than the Arab lands of its birth.",
+  "sources": [
+   "nchi-2010",
+   "esposito-straight-path"
   ],
   "sourcing": "sourced"
+ },
+ "origins_period": {
+  "from": 610,
+  "to": 632,
+  "precision": "exact"
+ },
+ "origins": {
+  "body": "According to Islamic tradition, revelation began in 610 CE when Muhammad, a forty-year-old merchant of Mecca in retreat on Mount Hira, was commanded by the angel Gabriel to recite. The revelations continued for twenty-three years, and their gathered text is the Quran. Mecca's ruling clans met the message of one God and a coming judgment with escalating hostility, and in 622 the small community migrated north to Yathrib, thereafter Medina: the [[hijra|Hijra]], from which the Islamic calendar counts. In Medina the community became a polity, and the decade that followed brought the battles, treaties, and conversions through which Mecca itself entered Islam without a sack in 630. By Muhammad's death in 632 most of Arabia had joined the new order, and the question his death left open, who rightly leads the community, became in time the deepest division within it: those who held that leadership passed to the community's chosen caliphs became the Sunni majority, and those who held that it belonged to the Prophet's house through Ali became the Shia.",
+  "sources": [
+   "nchi-2010",
+   "esposito-straight-path"
+  ],
+  "sourcing": "sourced"
+ },
+ "core_beliefs": {
+  "body": "At the center is [[tawhid]], the absolute oneness of God: the sin Islam calls unforgivable if unrepented is shirk, associating partners with God, and the tradition's art, law, and mysticism are all shaped by that refusal. Faith is classically summarized in six articles: God; the angels; the revealed books, of which the Quran is the final and protected form; the prophets, culminating in Muhammad; the Day of Judgment, when every soul is weighed; and the divine decree, God's encompassing knowledge and will. The human being is not fallen but forgetful, and revelation is a reminder; each person is born capable of submission and answerable for their own deeds, with no intermediary between the worshipper and God. Paradise and fire are described with concrete vividness according to the Quran, and God's mercy is repeatedly declared to outrun his wrath.",
+  "sources": [
+   "nchi-2010",
+   "esposito-straight-path"
+  ],
+  "sourcing": "sourced"
+ },
+ "belief_dimensions": [
+  "divine-concept",
+  "afterlife"
+ ],
+ "canon": [
+  {
+   "id": "quran",
+   "title": "Quran",
+   "original": {
+    "text": "القرآن",
+    "script": "arabic",
+    "transliteration": "al-Qurʾān",
+    "lang": "ar"
+   },
+   "language": "Classical Arabic",
+   "composition": "610–632 CE; codified c. 650",
+   "status": "Canonical in all branches",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path",
+    "ei3"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "hadith-collections",
+   "title": "The hadith collections",
+   "language": "Arabic",
+   "composition": "compiled 9th-10th c. CE",
+   "status": "Sunni Islam holds six collections canonical, with Bukhari and Muslim preeminent; Shia Islam relies on its own Four Books; status differs by branch and school",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path",
+    "ei3"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "practices": [
+  {
+   "id": "shahada",
+   "name": "Shahada",
+   "kind": "profession",
+   "summary": "The profession of faith: there is no god but God, and Muhammad is the messenger of God. Saying it with intent is how one enters Islam.",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "salat",
+   "name": "Salat",
+   "kind": "prayer",
+   "frequency": "Five times daily",
+   "summary": "The five daily prayers facing Mecca, from dawn to night, in prescribed words and movements; Friday's midday prayer is congregational.",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "zakat",
+   "name": "Zakat",
+   "kind": "almsgiving",
+   "frequency": "Annual",
+   "summary": "The obligatory alms, classically a fortieth of qualifying wealth each year, owed to the poor and other named categories.",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "sawm",
+   "name": "Sawm",
+   "kind": "fasting",
+   "frequency": "The month of Ramadan",
+   "summary": "The dawn-to-dusk fast of [[ramadan]], abstaining from food, drink, and marital relations, commemorating the Quran's first descent.",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "hajj",
+   "name": "Hajj",
+   "kind": "pilgrimage",
+   "frequency": "Once in a lifetime, for those able",
+   "summary": "The pilgrimage to Mecca in the sacred month, obligatory once for every Muslim able to perform it, ending in the feast of sacrifice.",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "law_dimensions": [
+  "dietary-law",
+  "calendar-system"
+ ],
+ "rites": [
+  {
+   "id": "birth",
+   "stage": "birth",
+   "name": "Birth",
+   "summary": "The call to prayer is whispered into the newborn's ear; on the seventh day many families name the child and offer the aqiqah sacrifice.",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "marriage",
+   "stage": "marriage",
+   "name": "Marriage",
+   "summary": "The nikah is a contract before witnesses with an agreed gift to the bride; it is a solemn covenant but not a sacrament.",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "funeral",
+   "stage": "death",
+   "name": "Funeral",
+   "summary": "The dead are washed, shrouded, prayed over in the janazah prayer, and buried facing Mecca, ideally before the day ends; mourning is restrained and cremation is prohibited.",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "festivals": [
+  "ramadan-begins",
+  "eid-al-fitr",
+  "eid-al-adha",
+  "ashura"
+ ],
+ "sites": [
+  "masjid-al-haram",
+  "prophets-mosque",
+  "al-aqsa",
+  "karbala-shrine"
+ ],
+ "figures": [
+  "muhammad",
+  "ali",
+  "aisha",
+  "al-ghazali-figure"
+ ],
+ "misconceptions": [
+  {
+   "id": "muslims-worship-muhammad",
+   "claim": "Muslims worship Muhammad.",
+   "correction": "In Islamic teaching, worship is directed to God alone. Muhammad is revered as the final prophet and moral exemplar, and is not held to be divine; venerating him as such would contradict tawhid itself.",
+   "sources": [
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "jihad-means-holy-war",
+   "claim": "\"Jihad\" simply means holy war.",
+   "correction": "The word means striving. It covers the moral struggle of the self and, in law, regulated armed conflict with strict limits; equating it with indiscriminate war is rejected by mainstream scholarship in every school.",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "all-muslims-are-arabs",
+   "claim": "Muslims are Arabs and Islam is an Arab religion.",
+   "correction": "Arabs are roughly a fifth of Muslims. The largest Muslim populations are in Indonesia, Pakistan, India, and Bangladesh, and Islam's demographic center is South and Southeast Asia.",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "islam-is-monolithic",
+   "claim": "Islam is one undifferentiated bloc.",
+   "correction": "Islam contains branches, law schools, theological traditions, and currents, Sunni, Shia, and Ibadi, four Sunni law schools, Sufi orders, and modern movements, that differ as consequentially as the branches of any world religion.",
+   "sources": [
+    "nchi-2010",
+    "esposito-straight-path"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "further_reading": [
+  "esposito-straight-path",
+  "nchi-2010",
+  "ei3"
+ ],
+ "sourcing": "sourced"
 }

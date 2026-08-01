@@ -1,0 +1,16 @@
+{
+ "id": "eid-al-fitr",
+ "name": "Eid al-Fitr",
+ "traditions": [
+  "islam"
+ ],
+ "calendar": "lunar",
+ "date_rule": "1 Shawwal",
+ "observed": {},
+ "summary": "The feast ending Ramadan: communal prayer, charity owed before it, and celebration.",
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "sourcing": "sourced"
+}

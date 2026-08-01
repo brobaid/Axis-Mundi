@@ -1,0 +1,16 @@
+{
+ "id": "eid-al-adha",
+ "name": "Eid al-Adha",
+ "traditions": [
+  "islam"
+ ],
+ "calendar": "lunar",
+ "date_rule": "10 Dhu al-Hijja",
+ "observed": {},
+ "summary": "The feast of sacrifice during the hajj, commemorating Abraham's obedience; the meat is shared with the poor.",
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "sourcing": "sourced"
+}

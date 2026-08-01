@@ -1,0 +1,16 @@
+{
+ "id": "ashura",
+ "name": "Ashura",
+ "traditions": [
+  "islam"
+ ],
+ "calendar": "lunar",
+ "date_rule": "10 Muharram",
+ "observed": {},
+ "summary": "A fast day in Sunni practice; for Shia Muslims, the mourning of Husayn's death at Karbala, observed with processions and lament.",
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "sourcing": "sourced"
+}

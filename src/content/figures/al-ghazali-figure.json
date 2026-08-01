@@ -1,0 +1,23 @@
+{
+ "id": "al-ghazali-figure",
+ "name": "Al-Ghazali",
+ "traditions": [
+  "islam"
+ ],
+ "born": {
+  "year": 1058,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1111,
+  "precision": "exact"
+ },
+ "role": "Theologian",
+ "summary": "The theologian whose synthesis of law, theology, and Sufi piety defines the Sunni mainstream.",
+ "events": [],
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "sourcing": "sourced"
+}
