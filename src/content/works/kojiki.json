@@ -1,0 +1,1567 @@
+{
+ "id": "kojiki",
+ "tradition": "shinto",
+ "title": "The Kojiki",
+ "division_label": "section",
+ "division_label_plural": "sections",
+ "script": "latin",
+ "direction": "ltr",
+ "editions": {
+  "en": "chamberlain-1882"
+ },
+ "versified": false,
+ "original_pending": "The Old Japanese text is not yet available from a public-domain source; this room is English-only for now.",
+ "note": "A chronicle revered, not a scripture revealed.",
+ "absent": {
+  "divisions": [
+   15,
+   18,
+   61,
+   122,
+   136,
+   140,
+   141,
+   152,
+   159,
+   174
+  ],
+  "note": "These sections are absent from the source digitisation: gaps in the source, not in the work."
+ },
+ "divisions": [
+  {
+   "n": 1,
+   "slug": "1",
+   "name": "The Beginning Of Heaven And Earth",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 2,
+   "slug": "2",
+   "name": "The Seven Divine Generations",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 3,
+   "slug": "3",
+   "name": "The Island Of Onogoro",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 4,
+   "slug": "4",
+   "name": "Courtship Of The Deities The Male-Who-Invites And The Female Who-Invites",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 5,
+   "slug": "5",
+   "name": "Birth Of The Eight Islands",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 6,
+   "slug": "6",
+   "name": "Birth Of The Various Deities",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 7,
+   "slug": "7",
+   "name": "Retirement Of Her Augustness The Princess-Who-Invites",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 8,
+   "slug": "8",
+   "name": "The Slaying Of The Fire-Deity",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 9,
+   "slug": "9",
+   "name": "The Land Of Hades",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 10,
+   "slug": "10",
+   "name": "The Purification Of The August Person",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 11,
+   "slug": "11",
+   "name": "Investiture Of The Three Deities; The Illustrious August Children",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 12,
+   "slug": "12",
+   "name": "The Crying And Weeping Of His Impetuous-Male-Augustness",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 13,
+   "slug": "13",
+   "name": "The August Oath",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 14,
+   "slug": "14",
+   "name": "The August Declaration Of The Division Of The August Male Children And The August Female Children",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 16,
+   "slug": "16",
+   "name": "The Door Of The Heavenly Rock-Dwelling",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 17,
+   "slug": "17",
+   "name": "The August Expulsion Of His-Impetuous-Male-Augustness",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 19,
+   "slug": "19",
+   "name": "The Palace Of Suga",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 20,
+   "slug": "20",
+   "name": "The August Ancestors Of The Deity-Master-Of-The-Great Land",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 21,
+   "slug": "21",
+   "name": "The White Hare Of Inaba",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 22,
+   "slug": "22",
+   "name": "Mount Tema",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 23,
+   "slug": "23",
+   "name": "The Nether-Distant-Land",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 24,
+   "slug": "24",
+   "name": "The Wooing Of The Deity-Of-Eight-Thousand-Spears",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 25,
+   "slug": "25",
+   "name": "The Cup Pledge",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 26,
+   "slug": "26",
+   "name": "The Deities The August Descendants Of The Deity Master-Of-The-Great-Land",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 27,
+   "slug": "27",
+   "name": "The Little-Prince-The-Renowned-Deity",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 28,
+   "slug": "28",
+   "name": "The August-Luck-Spirit-The-August-Wondrous-Spirit",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 29,
+   "slug": "29",
+   "name": "The August Children Of The Great-Harvest-Deity And Of The Swift-Mountain-Deity",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 30,
+   "slug": "30",
+   "name": "The August Deliberation For Pacifying The Land",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 31,
+   "slug": "31",
+   "name": "The Heavenly-Young-Prince",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 32,
+   "slug": "32",
+   "name": "Abdication Of The Deity Master-Of-The-Great-Land",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 33,
+   "slug": "33",
+   "name": "The August Descent From Heaven Of His Augustness The August Grandchild",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 34,
+   "slug": "34",
+   "name": "The August Reign In Himuka Of His Augustness Prince Rice-Ear-Ruddy-Plenty",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 35,
+   "slug": "35",
+   "name": "The Duchess Of Saru",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 36,
+   "slug": "36",
+   "name": "The Deity Prince Of Saruta At Azaka",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 37,
+   "slug": "37",
+   "name": "The Curse Of The Deity Great-Mountain-Possessor",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 38,
+   "slug": "38",
+   "name": "The August Child-Bearing Of Princess-Blossoming Brilliantly-Like-The-Flowers-Of-The-Trees",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 39,
+   "slug": "39",
+   "name": "The August Exchange Of Luck",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 40,
+   "slug": "40",
+   "name": "The Palace Of The Ocean-Possessor",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 41,
+   "slug": "41",
+   "name": "Submission Of His Augustness Fire-Shine",
+   "verses": 7,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 42,
+   "slug": "42",
+   "name": "The Parturition-House Of Cormorants' Feathers",
+   "verses": 11,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 43,
+   "slug": "43",
+   "name": "The August Children Of His Augustness Cormorant-Thatch-Meeting-Incompletely",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 44,
+   "slug": "44",
+   "name": "Reign Of The Emperor Jim-Mu",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 45,
+   "slug": "45",
+   "name": "Emperor Jim-Mu (Part Ii.—The Cross-Sword Sent Down From Heaven)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 46,
+   "slug": "46",
+   "name": "Emperor Jim-Mu (Part Iii.—The Gigantic Crow And Gods With Tails)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 47,
+   "slug": "47",
+   "name": "Emperor Jim-Mu (",
+   "verses": 7,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 48,
+   "slug": "48",
+   "name": "Emperor Jim-Mu (Part V.—The Earth-Spider Of The Cave Of Osaka)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 49,
+   "slug": "49",
+   "name": "Emperor Jim-Mu (Part. Vi.—The Prince Of Tomi And The Shiki Brethren)",
+   "verses": 7,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 50,
+   "slug": "50",
+   "name": "Emperor Jim-Mu (Part Vii.—The Empire Pacified)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 51,
+   "slug": "51",
+   "name": "Emperor Jim-Mu (Part. Viii.—He Weds",
+   "verses": 16,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 52,
+   "slug": "52",
+   "name": "Emperor Jim-Mu (Part. Ix—Troubles Which Followed His Decease)",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 53,
+   "slug": "53",
+   "name": "Emperor Jim-Mu (Part X.—Genealogies)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 54,
+   "slug": "54",
+   "name": "Emperor Jim-Mu (Part Xi.—His Age And Place Of Burial)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 55,
+   "slug": "55",
+   "name": "Emperor Sui-Zei",
+   "verses": 8,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 56,
+   "slug": "56",
+   "name": "Emperor An-Nei",
+   "verses": 9,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 57,
+   "slug": "57",
+   "name": "Emperor I-Toku",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 58,
+   "slug": "58",
+   "name": "Emperor Ko-Sho",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 59,
+   "slug": "59",
+   "name": "Emperor Koan",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 60,
+   "slug": "60",
+   "name": "Emperor Kō-Rei",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 62,
+   "slug": "62",
+   "name": "Emperor Kai-Kuwa",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 63,
+   "slug": "63",
+   "name": "Emperor Sū-Jin (Part I.—Genealogies)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 64,
+   "slug": "64",
+   "name": "Emperor Sū-Jin (Part Ii.—A Pestilence Is Staid By Oho-Tata-Ne-Ko)",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 65,
+   "slug": "65",
+   "name": "Emperor Sū-Jin (Part Iii: Story Of Oho-Tata-Ne-Ko'S Birth)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 66,
+   "slug": "66",
+   "name": "Emperor Sū-Jin (Part Iv.—War With King Take-Hani-Yasu)",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 67,
+   "slug": "67",
+   "name": "Emperor Sū-Jin (Part V.—Peace Restored And Tribute Levied)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 68,
+   "slug": "68",
+   "name": "Emperor Sū-Jin (Part Vi.—His Age And Place Of Burial)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 69,
+   "slug": "69",
+   "name": "Emperor Sui-Nin (Part I.—Genealogies)",
+   "verses": 7,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 70,
+   "slug": "70",
+   "name": "Emperor Sui-Nin (Part Ii. Conspiracy Of King Saho-Biko And The Empress Saho-Bime)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 71,
+   "slug": "71",
+   "name": "Emperor Sui-Nin (Part Iii.—Birth Of Prince Homu-Chi-Wake And Death Of The Conspirators)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 72,
+   "slug": "72",
+   "name": "Emperor Sui-Nin (Part Iv.—The Dumb Prince Homu-Chi-Wake)",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 73,
+   "slug": "73",
+   "name": "Emperor Sui-Nin (Part. V.—His Later Wives.)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 74,
+   "slug": "74",
+   "name": "Emperor Sui-Nin (Part Vi.—Taji-Mori Brings Back The Orange From The Eternal Land.)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 75,
+   "slug": "75",
+   "name": "Emperor Sui-Nin (Part Vii.—His Death And That Of The Empress Hibasu.)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 76,
+   "slug": "76",
+   "name": "Empress Kei-Ko (Part I,—Genealogies)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 77,
+   "slug": "77",
+   "name": "Emperor Kei-Kō (Part Ii.—The Maidens Ye-Hime And Oto-Hime)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 78,
+   "slug": "78",
+   "name": "Emperor Kei-Kō (Part Iii. Various Deeds.)",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 79,
+   "slug": "79",
+   "name": "Emperor Kei-Kō (Part Iv.—Yamato-Take Slays His Elder Brother)",
+   "verses": 8,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 80,
+   "slug": "80",
+   "name": "Emperor Kei-Kō (Part V.—Yamato-Take Slays The Kumaso Bravoes)",
+   "verses": 7,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 81,
+   "slug": "81",
+   "name": "Emperor Kei-Kō (Part Vi.—Yamato-Take Slays The Idzumo Bravo)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 82,
+   "slug": "82",
+   "name": "Emperor Kei-Kō (Part Vii.—Yamato-Take Is Sent To Subdue The East, And Visits His Aunt At Ise)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 83,
+   "slug": "83",
+   "name": "Emperor Kei-Kō (Part Viii.—Yamato-Take Slays The Rulers Of Sagamu.)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 84,
+   "slug": "84",
+   "name": "Emperor Kei-Kō (Part Ix.—Yamato-Take'S Empress Stills The Waves.)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 85,
+   "slug": "85",
+   "name": "Emperor Kei-Kō (Part X.—Yamato-Take Slays The Deity Of The Ashigara Pass.)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 86,
+   "slug": "86",
+   "name": "Emperor Kei-Kō (Part Xi.—Yamato-Take Dwells In The Palace Of Sakawori.)",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 87,
+   "slug": "87",
+   "name": "Emperor Kei-Kō (Part Xii.—Yamato-Take Wooes Princess Miyazu)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 88,
+   "slug": "88",
+   "name": "Emperor Kei-Kō (Part Xiii.—Yamato-Take Meets The Deity Of Mount Ibuki)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 89,
+   "slug": "89",
+   "name": "Emperor Kei-Kō (Part Xiv.—The Death Of Yamato-Take)",
+   "verses": 8,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 90,
+   "slug": "90",
+   "name": "Emperor Kei-Kō (Part Xv.—Yamato-Take Turns Into A White Bird)",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 91,
+   "slug": "91",
+   "name": "Emperor Kei-Kō (Part Xvi.—Yamato-Take'S Butler)",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 92,
+   "slug": "92",
+   "name": "Emperor Kei-Kō (Part Xvii.—Yamato-Take'S Descendants)",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 93,
+   "slug": "93",
+   "name": "Emperor Kei-Kō (Part Xviii. His Age And Place Of Burial)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 94,
+   "slug": "94",
+   "name": "Emperor Sei-Mu",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 95,
+   "slug": "95",
+   "name": "Emperor Chiū-Ai (Part I.—Genealogies)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 96,
+   "slug": "96",
+   "name": "Emperor Chiū-Ai (Part Ii.—The Possession Of Korea Divinely Promised)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 97,
+   "slug": "97",
+   "name": "Emperor Chiū-Ai (Part Iii. Preparations For The Conquest Of Korea)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 98,
+   "slug": "98",
+   "name": "Emperor Chiū-Ai (Part Iv.—The Empress Jin-Gō Conquers Korea)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 99,
+   "slug": "99",
+   "name": "Emperor Chiū-Ai (Part V.—The Empress Jin-Gō Fishes In Tsukushi)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 100,
+   "slug": "100",
+   "name": "Emperor Chiū-Ai (Part Vi.—The Empress Jin-Gō Subdues Yamato)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 101,
+   "slug": "101",
+   "name": "Emperor Chiū-Ai (Part Viii.—The Heir Apparent Exchanges Names With The Great Deity Izasa-Wake)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 102,
+   "slug": "102",
+   "name": "Emperor Chiū-Ai (Part Viii.—The Empress Jin-Gō Presents Liquor To The Heir Apparent)",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 103,
+   "slug": "103",
+   "name": "Emperor Chiū-Ai (Part Ix.—His Death And That Of The Empress Jin-Gō)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 104,
+   "slug": "104",
+   "name": "Emperor Ō-Jin",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 105,
+   "slug": "105",
+   "name": "Emperor Ō-Jin (Part Ii.—He Divides The Inheritance Between His Three Sons)",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 106,
+   "slug": "106",
+   "name": "Emperor Ō-Jin (Part Iii.—He Wooes Princess Miya-Nushi-Ya-Kaha-Ye)",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 107,
+   "slug": "107",
+   "name": "Emperor Ō-Jin (Part Iv.—He Grants Princess Kaminaga To His Son Oho-Sazaki)",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 108,
+   "slug": "108",
+   "name": "Emperor Ō-Jin (Part V.—Songs Of The Territorial Owners Of Yeshinu)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 109,
+   "slug": "109",
+   "name": "Emperor Ō-Jin (Part Vi.—Various Deeds)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 110,
+   "slug": "110",
+   "name": "Emperor Ō-Jin (Part Viii.—Tribute From Korea)",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 111,
+   "slug": "111",
+   "name": "Emperor Ō-Jin (Part Viii.—The Emperor Intoxicated)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 112,
+   "slug": "112",
+   "name": "Emperor Ō-Jin (Part Ix.—Troubles Which Followed His Decease)",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 113,
+   "slug": "113",
+   "name": "Emperor Ō-Jin (Part X.—Princes Oho-Sazaki And Uji-No-Waki-Iratsuko Cede The Empire To Each Other)",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 114,
+   "slug": "114",
+   "name": "Emperor Ō-Jin (Part Xi.—Ama-No-Hi-Boko Crosses Over To Japan)",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 115,
+   "slug": "115",
+   "name": "Emperor Ō-Jin (Part Xii.—Descendants Of Ama-No-Hi-Boko, And Treasures Brought By Him.)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 116,
+   "slug": "116",
+   "name": "Emperor Ō-Jin (Part Xiii.—The Youth-Of-The-Glow-On-The-Autumn-Mountains And The Youth-Of-The-Haze-On-The-Spring-Mountains)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 117,
+   "slug": "117",
+   "name": "Emperor Ō-Jin (Part Xvi.—Genealogies)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 118,
+   "slug": "118",
+   "name": "Emperor Ō-Jin (Part Xv.—His Age And Place Of Burial)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 119,
+   "slug": "119",
+   "name": "Emperor Nin-Toku (Part I.—Genealogies)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 120,
+   "slug": "120",
+   "name": ": Emperor Nin-Toku (Part Ii.—Various Deeds)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 121,
+   "slug": "121",
+   "name": "Emperor Nin-Toku [Part Iii.—He Remits The Taxes)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 123,
+   "slug": "123",
+   "name": "Emperor Nin-Toku Part V.—The Empress Retires To Yamashiro)",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 124,
+   "slug": "124",
+   "name": "Emperor Nin-Toku (Part Vi.—He Follows The Empress Into Yamashiro)",
+   "verses": 9,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 125,
+   "slug": "125",
+   "name": "Emperor Nin-Toku (Part Viii.—He Loves Yata-No-Waki-Iratsume)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 126,
+   "slug": "126",
+   "name": "Emperor Nin-Toku (Part Viii.—Death Of King Hayabusa-Wake And Queen Medori)",
+   "verses": 9,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 127,
+   "slug": "127",
+   "name": "Emperor Nin-Toku (Part Viii.—Queen Medori'S Armlet)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 128,
+   "slug": "128",
+   "name": "Emperor Nin-Toku (Part Ix.—A Wild-Goose Lays An Egg)",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 129,
+   "slug": "129",
+   "name": ":—Emperor Nin-Toku (Part X.—A Vessel Is Made Into A Lute)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 130,
+   "slug": "130",
+   "name": "Emperor Nin-Toku (Part Xi.—His Age And Place Of Burial)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 131,
+   "slug": "131",
+   "name": "Emperor Ri-Chiu (Part I.—Genealogies)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 132,
+   "slug": "132",
+   "name": "Emperor Ri-Chiu (Part Ii.—He Is Taken To Iso-No-Kami)",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 133,
+   "slug": "133",
+   "name": "Emperor.—Ri-Chiu (Part Iii.—His Rebellious Brother And The Latter'S Retainer Sobakari Are Slain)",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 134,
+   "slug": "134",
+   "name": "Emperor Ri-Chiu (Part Iv.—Various Deeds)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 135,
+   "slug": "135",
+   "name": "Emperor Han-Zei",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 137,
+   "slug": "137",
+   "name": "Emperor In-Giyō",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 138,
+   "slug": "138",
+   "name": "Emperor In-Giyō (Part Ii.—His Sickness Is Cured By A Korean Physician)",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 139,
+   "slug": "139",
+   "name": "Emperor In-Giyō (Part Iii. He Rectifies The People'S Names)",
+   "verses": 8,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 142,
+   "slug": "142",
+   "name": "Emperor In-Giyō (Part Vi.—War Between Prince Karu And Prince Anaho)",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 143,
+   "slug": "143",
+   "name": "Emperor In-Giyō (Part Vii.—Death Of Prince Karu And Princess So-Tohoshi)",
+   "verses": 8,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 144,
+   "slug": "144",
+   "name": "Emperor An-Kō (Part I.—He Slays King Oho-Kusaka)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 145,
+   "slug": "145",
+   "name": "Emperor An-Kō (Part Ii.—He Is Slain By King Ma-Yowa)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 146,
+   "slug": "146",
+   "name": "Emperor An-Kō (Part Iii.—Prince Oho Hatsuse Slays Princes Kuro-Biko And Shiro-Biro)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 147,
+   "slug": "147",
+   "name": "Emperor",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 148,
+   "slug": "148",
+   "name": "Emperor An-Kō (Part V:—Prince Oho-Hatsuse Slays Prince Oshiha)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 149,
+   "slug": "149",
+   "name": "Emperor An-Kō (Part Vi.—Flight Of Princes Ohoke And Woke)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 150,
+   "slug": "150",
+   "name": "Emperor Yū-Riyaku, (I.—Genealogies)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 151,
+   "slug": "151",
+   "name": "Emperor Yū-Riyaku (Part Ii.—Various Deeds)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 153,
+   "slug": "153",
+   "name": "Emperor Yū-Riyaku (Part Iv.—He Wooes Princess Waka-Kusaka-Be)",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 154,
+   "slug": "154",
+   "name": "Emperor Yū-Riyaku (Part V.—Story Of The Woman Akawi-Ko)",
+   "verses": 8,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 155,
+   "slug": "155",
+   "name": "Emperor Yū-Riyaku (Part Vi.—He Makes A Progress To Yeshinu)",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 156,
+   "slug": "156",
+   "name": "Emperor Yū-Riyaku (Part Vii.—The Horse-Fly And The Dragon-Fly)",
+   "verses": 6,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 157,
+   "slug": "157",
+   "name": "Emperor Yū-Riyaku (Part Vii.—Adventure With A Wild Boar)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 158,
+   "slug": "158",
+   "name": "Emperor Yū-Riyaku (Part Ix.—Revelation Of The Great Deity Of Kadzuraki, Lord Of One Word)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 160,
+   "slug": "160",
+   "name": "Emperor Yū-Riyaku (Part Xi.—The Leaf In The Cup)",
+   "verses": 10,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 161,
+   "slug": "161",
+   "name": "Emperor Yū-Riyaku (Part Xii.—Songs By The Emperor And Princess Wodo)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 162,
+   "slug": "162",
+   "name": "Emperor Yū-Riyaku (Part Xiii.—His Age And Place Of Burial)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 163,
+   "slug": "163",
+   "name": "Emperor Sei-Nei (Part I.—Search For A Successor To Him)",
+   "verses": 4,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 164,
+   "slug": "164",
+   "name": "Emperor Sei-Nei (Part Ii.—Princes Ohoke And Woke Are Discovered)",
+   "verses": 7,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 165,
+   "slug": "165",
+   "name": "Emperor Sei-Nei (",
+   "verses": 12,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 166,
+   "slug": "166",
+   "name": "Emperor Sei-Nei (Part Iv.—Prince Ohoke Cedes The Empire To Prince Woke)",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 167,
+   "slug": "167",
+   "name": "Emperor Ken-Zō (Part I.—The Old Woman Oki-Me)",
+   "verses": 5,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 168,
+   "slug": "168",
+   "name": "Emperor Ken-Zō (Part Ii.—He Slays The Boar-Herd)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 169,
+   "slug": "169",
+   "name": "Emperor Ken-Zō (Part Iii.—The Emperor Yū-Riyaku'S Mausoleum Is Disfigured)",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 170,
+   "slug": "170",
+   "name": "Emperor Ken-Zō (Part Iv.—His Age And Place Of Burial)",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 171,
+   "slug": "171",
+   "name": "Emperor Nin-Ken",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 172,
+   "slug": "172",
+   "name": "Emperor Mu-Retsu",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 173,
+   "slug": "173",
+   "name": "Emperor Kei-Tai",
+   "verses": 2,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 175,
+   "slug": "175",
+   "name": "Emperor Sen-Kuwa",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 176,
+   "slug": "176",
+   "name": "Emperor Kim-Mei",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 177,
+   "slug": "177",
+   "name": "Emperor Bi-Datsu",
+   "verses": 3,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 178,
+   "slug": "178",
+   "name": "Emperor Yōmei",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 179,
+   "slug": "179",
+   "name": "Emperor Su-Jun",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 180,
+   "slug": "180",
+   "name": "Empress Sui-Ko",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  }
+ ],
+ "total_verses": 619,
+ "english_gaps": 0,
+ "original_gaps": 0,
+ "blank": 0,
+ "sourcing": "sourced"
+}

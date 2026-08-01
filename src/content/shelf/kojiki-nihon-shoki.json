@@ -1,0 +1,12 @@
+{
+  "id": "kojiki-nihon-shoki",
+  "tradition": "shinto",
+  "title": "The Kojiki and the Nihon Shoki",
+  "order": 5,
+  "original": "Old Japanese",
+  "english": "Basil Hall Chamberlain's 1882 translation, public domain",
+  "status": "Partly here. The Kojiki is on the shelves, a chronicle revered rather than a scripture revealed. The Nihon Shoki, the other of the two chronicles the Shinto dive's canon row covers, has not been acquired.",
+  "partly_live": ["kojiki"],
+  "canon_ids": ["kojiki-nihon-shoki"],
+  "sourcing": "editorial"
+}
