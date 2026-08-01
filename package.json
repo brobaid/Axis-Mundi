@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
-  "description": "Axis Mundi — an interactive comparative reference for ten religious traditions.",
+  "description": "Axis Mundi \u2014 an interactive comparative reference for ten religious traditions.",
   "engines": {
     "node": ">=20.11.0"
   },
@@ -19,9 +19,10 @@
     "validate:timeline": "tsx scripts/check-timeline.ts",
     "validate": "pnpm validate:content && pnpm validate:tokens && pnpm validate:timeline",
     "lint": "eslint . && astro check",
-    "check": "pnpm validate && pnpm lint && pnpm build && pnpm validate:links",
+    "check": "pnpm validate && pnpm lint && pnpm build && pnpm validate:links && pnpm validate:reader",
     "validate:links": "tsx scripts/check-links.ts",
-    "ingest:corpus": "tsx scripts/ingest-corpus.ts"
+    "ingest:corpus": "tsx scripts/ingest-corpus.ts",
+    "validate:reader": "tsx scripts/check-reader.ts"
   },
   "dependencies": {
     "astro": "^5.14.1",
