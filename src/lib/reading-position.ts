@@ -14,7 +14,7 @@
 export const POSITION_KEY = 'axis-mundi-reading-position';
 
 export interface Position {
-  /** Route segment of the division, not its number: books have names. */
+  /** The path below /read/<work>: "exodus/20", or "2" where there are no chapters. */
   readonly division: string;
   /** The verse's fragment, `255` or `20-3`. */
   readonly anchor: string;
@@ -60,6 +60,5 @@ export const withPosition = (all: Positions, work: string, position: Position): 
   [work]: position,
 });
 
-/** The verse's fragment as it is cited: `20-3` under Exodus is "Exodus 20:3". */
-export const refFor = (heading: string, anchor: string): string =>
-  `${heading} ${anchor.replace('-', ':')}`;
+/** The verse's fragment as it is cited: `3` under "Exodus 20" is "Exodus 20:3". */
+export const refFor = (cite: string, anchor: string): string => `${cite}:${anchor}`;

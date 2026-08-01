@@ -1,0 +1,85 @@
+{
+ "id": "tanakh--psalms--48",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 48,
+ "verses": [
+  {
+   "v": 1,
+   "he": "שִׁ֥יר מִ֝זְמוֹר לִבְנֵי־קֹֽרַח׃",
+   "en": "A Song; a Psalm of the sons of Korah."
+  },
+  {
+   "v": 2,
+   "he": "גָּ֘ד֤וֹל יְהוָ֣ה וּמְהֻלָּ֣ל מְאֹ֑ד בְּעִ֥יר אֱ֝לֹהֵ֗ינוּ הַר־קָדְשֽׁוֹ׃",
+   "en": "Great is the LORD, and highly to be praised, In the city of our God, His holy mountain,"
+  },
+  {
+   "v": 3,
+   "he": "יְפֵ֥ה נוֹף֮ מְשׂ֪וֹשׂ כָּל־הָ֫אָ֥רֶץ הַר־צִ֭יּוֹן יַרְכְּתֵ֣י צָפ֑וֹן קִ֝רְיַ֗ת מֶ֣לֶךְ רָֽב׃",
+   "en": "Fair in situation, the joy of the whole earth; Even mount Zion, the uttermost parts of the north, The city of the great King."
+  },
+  {
+   "v": 4,
+   "he": "אֱלֹהִ֥ים בְּאַרְמְנוֹתֶ֗יהָ נוֹדַ֥ע לְמִשְׂגָּֽב׃",
+   "en": "God in her palaces Hath made Himself known for a stronghold."
+  },
+  {
+   "v": 5,
+   "he": "כִּֽי־הִנֵּ֣ה הַ֭מְּלָכִים נֽוֹעֲד֑וּ עָבְר֥וּ יַחְדָּֽו׃",
+   "en": "For, lo, the kings assembled themselves, They came onward together."
+  },
+  {
+   "v": 6,
+   "he": "הֵ֣מָּה רָ֭אוּ כֵּ֣ן תָּמָ֑הוּ נִבְהֲל֥וּ נֶחְפָּֽזוּ׃",
+   "en": "They saw, straightway they were amazed; They were affrighted, they hasted away."
+  },
+  {
+   "v": 7,
+   "he": "רְ֭עָדָה אֲחָזָ֣תַם שָׁ֑ם חִ֝֗יל כַּיּוֹלֵֽדָה׃",
+   "en": "Trembling took hold of them there, Pangs, as of a woman in travail."
+  },
+  {
+   "v": 8,
+   "he": "בְּר֥וּחַ קָדִ֑ים תְּ֝שַׁבֵּ֗ר אֳנִיּ֥וֹת תַּרְשִֽׁישׁ׃",
+   "en": "With the east wind Thou breakest the ships of Tarshish."
+  },
+  {
+   "v": 9,
+   "he": "כַּאֲשֶׁ֤ר שָׁמַ֨עְנוּ׀ כֵּ֤ן רָאִ֗ינוּ בְּעִיר־יְהוָ֣ה צְ֭בָאוֹת בְּעִ֣יר אֱלֹהֵ֑ינוּ אֱלֹ֘הִ֤ים יְכוֹנְנֶ֖הָ עַד־עוֹלָ֣ם סֶֽלָה׃",
+   "en": "As we have heard, so have we seen In the city of the LORD of hosts, in the city of our God— God establish it for ever. Selah"
+  },
+  {
+   "v": 10,
+   "he": "דִּמִּ֣ינוּ אֱלֹהִ֣ים חַסְדֶּ֑ךָ בְּ֝קֶ֗רֶב הֵיכָלֶֽךָ׃",
+   "en": "We have thought on Thy lovingkindness, O God, In the midst of Thy temple."
+  },
+  {
+   "v": 11,
+   "he": "כְּשִׁמְךָ֤ אֱלֹהִ֗ים כֵּ֣ן תְּ֭הִלָּתְךָ עַל־קַצְוֵי־אֶ֑רֶץ צֶ֝֗דֶק מָלְאָ֥ה יְמִינֶֽךָ׃",
+   "en": "As is Thy name, O God, So is Thy praise unto the ends of the earth; Thy right hand is full of righteousness."
+  },
+  {
+   "v": 12,
+   "he": "יִשְׂמַ֤ח׀ הַר־צִיּ֗וֹן תָּ֭גֵלְנָה בְּנ֣וֹת יְהוּדָ֑ה לְ֝מַ֗עַן מִשְׁפָּטֶֽיךָ׃",
+   "en": "Let mount Zion be glad, Let the daughters of Judah rejoice, Because of Thy judgments."
+  },
+  {
+   "v": 13,
+   "he": "סֹ֣בּוּ צִ֭יּוֹן וְהַקִּיפ֑וּהָ סִ֝פְר֗וּ מִגְדָּלֶֽיהָ׃",
+   "en": "Walk about Zion, and go round about her; Count the towers thereof."
+  },
+  {
+   "v": 14,
+   "he": "שִׁ֤יתוּ לִבְּכֶ֨ם׀ לְֽחֵילָ֗ה פַּסְּג֥וּ אַרְמְנוֹתֶ֑יהָ לְמַ֥עַן תְּ֝סַפְּר֗וּ לְד֣וֹר אַחֲרֽוֹן׃",
+   "en": "Mark ye well her ramparts, Traverse her palaces; That ye may tell it to the generation following. ."
+  },
+  {
+   "v": 15,
+   "he": "כִּ֤י זֶ֨ה׀ אֱלֹהִ֣ים אֱ֭לֹהֵינוּ עוֹלָ֣ם וָעֶ֑ד ה֖וּא יְנַהֲגֵ֣נוּ עַל־מֽוּת׃",
+   "en": "For such is God, our God, for ever and ever; He will guide us eternally."
+  }
+ ],
+ "sourcing": "sourced"
+}

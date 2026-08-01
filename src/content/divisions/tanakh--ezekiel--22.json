@@ -1,0 +1,165 @@
+{
+ "id": "tanakh--ezekiel--22",
+ "work": "tanakh",
+ "n": 14,
+ "slug": "ezekiel",
+ "c": 22,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וַיְהִ֥י דְבַר־יְהוָ֖ה אֵלַ֥י לֵאמֹֽר׃",
+   "en": "Moreover the word of the LORD came unto me, saying:"
+  },
+  {
+   "v": 2,
+   "he": "וְאַתָּ֣ה בֶן־אָדָ֔ם הֲתִשְׁפֹּ֥ט הֲתִשְׁפֹּ֖ט אֶת־עִ֣יר הַדָּמִ֑ים וְה֣וֹדַעְתָּ֔הּ אֵ֖ת כָּל־תּוֹעֲבוֹתֶֽיהָ׃",
+   "en": "’Now, thou, son of man, wilt thou judge, wilt thou judge the bloody city? then cause her to know all her abominations."
+  },
+  {
+   "v": 3,
+   "he": "וְאָמַרְתָּ֗ כֹּ֤ה אָמַר֙ אֲדֹנָ֣י יְהוִ֔ה עִ֣יר שֹׁפֶ֥כֶת דָּ֛ם בְּתוֹכָ֖הּ לָב֣וֹא עִתָּ֑הּ וְעָשְׂתָ֧ה גִלּוּלִ֛ים עָלֶ֖יהָ לְטָמְאָֽה׃",
+   "en": "And thou shalt say: Thus saith the Lord GOD: O city that sheddest blood in the midst of thee, that thy time may come, and that makest idols unto thyself to defile thee;"
+  },
+  {
+   "v": 4,
+   "he": "בְּדָמֵ֨ךְ אֲשֶׁר־שָׁפַ֜כְתְּ אָשַׁ֗מְתְּ וּבְגִלּוּלַ֤יִךְ אֲשֶׁר־עָשִׂית֙ טָמֵ֔את וַתַּקְרִ֣יבִי יָמַ֔יִךְ וַתָּב֖וֹא עַד־שְׁנוֹתָ֑יִךְ עַל־כֵּ֗ן נְתַתִּ֤יךְ חֶרְפָּה֙ לַגּוֹיִ֔ם וְקַלָּסָ֖ה לְכָל־הָאֲרָצֽוֹת׃",
+   "en": "thou art become guilty in thy blood that thou hast shed, and art defiled in thine idols which thou hast made; and thou hast caused thy days to draw near, and art come even unto thy years; therefore have I made thee a reproach unto the nations, and a mocking to all the countries!"
+  },
+  {
+   "v": 5,
+   "he": "הַקְּרֹב֛וֹת וְהָרְחֹק֥וֹת מִמֵּ֖ךְ יִתְקַלְּסוּ־בָ֑ךְ טְמֵאַ֣ת הַשֵּׁ֔ם רַבַּ֖ת הַמְּהוּמָֽה׃",
+   "en": "Those that are near, and those that are far from thee, shall mock thee, thou defiled of name and full of tumult."
+  },
+  {
+   "v": 6,
+   "he": "הִנֵּה֙ נְשִׂיאֵ֣י יִשְׂרָאֵ֔ל אִ֥ישׁ לִזְרֹע֖וֹ הָ֣יוּ בָ֑ךְ לְמַ֖עַן שְׁפָךְ־דָּֽם׃",
+   "en": "Behold, the princes of Israel, every one according to his might, have been in thee to shed blood."
+  },
+  {
+   "v": 7,
+   "he": "אָ֤ב וָאֵם֙ הֵקַ֣לּוּ בָ֔ךְ לַגֵּ֛ר עָשׂ֥וּ בַעֹ֖שֶׁק בְּתוֹכֵ֑ךְ יָת֥וֹם וְאַלְמָנָ֖ה ה֥וֹנוּ בָֽךְ׃",
+   "en": "In thee have they made light of father and mother; in the midst of thee have they dealt by oppression with the stranger; in thee have they wronged the fatherless and the widow."
+  },
+  {
+   "v": 8,
+   "he": "קָדָשַׁ֖י בָּזִ֑ית וְאֶת־שַׁבְּתֹתַ֖י חִלָּֽלְתְּ׃",
+   "en": "Thou hast despised My holy things, and hast profaned My sabbaths."
+  },
+  {
+   "v": 9,
+   "he": "אַנְשֵׁ֥י רָכִ֛יל הָ֥יוּ בָ֖ךְ לְמַ֣עַן שְׁפָךְ־דָּ֑ם וְאֶל־הֶֽהָרִים֙ אָ֣כְלוּ בָ֔ךְ זִמָּ֖ה עָשׂ֥וּ בְתוֹכֵֽךְ׃",
+   "en": "In thee have been talebearers to shed blood; and in thee they have eaten upon the mountains; in the midst of thee they have committed lewdness."
+  },
+  {
+   "v": 10,
+   "he": "עֶרְוַת־אָ֖ב גִּלָּה־בָ֑ךְ טְמֵאַ֥ת הַנִּדָּ֖ה עִנּוּ־בָֽךְ׃",
+   "en": "In thee have they uncovered their fathers’nakedness; in thee have they humbled her that was unclean in her impurity."
+  },
+  {
+   "v": 11,
+   "he": "וְאִ֣ישׁ׀ אֶת־אֵ֣שֶׁת רֵעֵ֗הוּ עָשָׂה֙ תּֽוֹעֵבָ֔ה וְאִ֥ישׁ אֶת־כַּלָּת֖וֹ טִמֵּ֣א בְזִמָּ֑ה וְאִ֛ישׁ אֶת־אֲחֹת֥וֹ בַת־אָבִ֖יו עִנָּה־בָֽךְ׃",
+   "en": "And each hath committed abomination with his neighbour’s wife; and each hath lewdly defiled his daughter-in-law; and each in thee hath humbled his sister, his father’s daughter."
+  },
+  {
+   "v": 12,
+   "he": "שֹׁ֥חַד לָֽקְחוּ־בָ֖ךְ לְמַ֣עַן שְׁפָךְ־דָּ֑ם נֶ֧שֶׁךְ וְתַרְבִּ֣ית לָקַ֗חַתְּ וַתְּבַצְּעִ֤י רֵעַ֙יִךְ֙ בַּעֹ֔שֶׁק וְאֹתִ֣י שָׁכַ֔חַתְּ נְאֻ֖ם אֲדֹנָ֥י יְהוִֽה׃",
+   "en": "In thee have they taken gifts to shed blood; thou hast taken interest and increase, and thou hast greedily gained of thy neighbours by oppression, and hast forgotten Me, saith the Lord GOD."
+  },
+  {
+   "v": 13,
+   "he": "וְהִנֵּה֙ הִכֵּ֣יתִי כַפִּ֔י אֶל־בִּצְעֵ֖ךְ אֲשֶׁ֣ר עָשִׂ֑ית וְעַ֨ל־דָּמֵ֔ךְ אֲשֶׁ֥ר הָי֖וּ בְּתוֹכֵֽךְ׃",
+   "en": "Behold, therefore, I have smitten My hand at thy dishonest gain which thou hast made, and at thy blood which hath been in the midst of thee."
+  },
+  {
+   "v": 14,
+   "he": "הֲיַעֲמֹ֤ד לִבֵּךְ֙ אִם־תֶּחֱזַ֣קְנָה יָדַ֔יִךְ לַיָּמִ֕ים אֲשֶׁ֥ר אֲנִ֖י עֹשֶׂ֣ה אוֹתָ֑ךְ אֲנִ֥י יְהוָ֖ה דִּבַּ֥רְתִּי וְעָשִֽׂיתִי׃",
+   "en": "Can thy heart endure, or can thy hands be strong, in the days that I shall deal with thee? I the LORD have spoken it, and will do it."
+  },
+  {
+   "v": 15,
+   "he": "וַהֲפִיצוֹתִ֤י אוֹתָךְ֙ בַּגּוֹיִ֔ם וְזֵרִיתִ֖יךְ בָּאֲרָצ֑וֹת וַהֲתִמֹּתִ֥י טֻמְאָתֵ֖ךְ מִמֵּֽךְ׃",
+   "en": "And I will scatter thee among the nations, and disperse thee through the countries; and I will consume thy filthiness out of thee."
+  },
+  {
+   "v": 16,
+   "he": "וְנִחַ֥לְתְּ בָּ֖ךְ לְעֵינֵ֣י גוֹיִ֑ם וְיָדַ֖עַתְּ כִּֽי־אֲנִ֥י יְהוָֽה׃",
+   "en": "And thou shalt be profaned in thyself, in the sight of the nations; and thou shalt know that I am the LORD.’"
+  },
+  {
+   "v": 17,
+   "he": "וַיְהִ֥י דְבַר־יְהוָ֖ה אֵלַ֥י לֵאמֹֽר׃",
+   "en": "And the word of the LORD came unto me, saying:"
+  },
+  {
+   "v": 18,
+   "he": "בֶּן־אָדָ֕ם הָיוּ־לִ֥י בֵֽית־יִשְׂרָאֵ֖ל לסוג [לְסִ֑יג] כֻּלָּ֡ם נְ֠חֹשֶׁת וּבְדִ֨יל וּבַרְזֶ֤ל וְעוֹפֶ֙רֶת֙ בְּת֣וֹךְ כּ֔וּר סִגִ֥ים כֶּ֖סֶף הָיֽוּ׃",
+   "en": "’Son of man, the house of Israel is become dross unto Me; all of them are brass and tin and iron and lead, in the midst of the furnace; they are the dross of silver."
+  },
+  {
+   "v": 19,
+   "he": "לָכֵ֗ן כֹּ֤ה אָמַר֙ אֲדֹנָ֣י יְהוִ֔ה יַ֛עַן הֱי֥וֹת כֻּלְּכֶ֖ם לְסִגִ֑ים לָכֵן֙ הִנְנִ֣י קֹבֵ֣ץ אֶתְכֶ֔ם אֶל־תּ֖וֹךְ יְרוּשָׁלָ‍ִֽם׃",
+   "en": "Therefore thus saith the Lord GOD: Because ye are all become dross, therefore, behold, I will gather you into the midst of Jerusalem."
+  },
+  {
+   "v": 20,
+   "he": "קְבֻ֣צַת כֶּ֡סֶף וּ֠נְחֹשֶׁת וּבַרְזֶ֨ל וְעוֹפֶ֤רֶת וּבְדִיל֙ אֶל־תּ֣וֹךְ כּ֔וּר לָפַֽחַת־עָלָ֥יו אֵ֖שׁ לְהַנְתִּ֑יךְ כֵּ֤ן אֶקְבֹּץ֙ בְּאַפִּ֣י וּבַחֲמָתִ֔י וְהִנַּחְתִּ֥י וְהִתַּכְתִּ֖י אֶתְכֶֽם׃",
+   "en": "As they gather silver and brass and iron and lead and tin into the midst of the furnace, to blow the fire upon it, to melt it; so will I gather you in Mine anger and in My fury, and I will cast you in, and melt you."
+  },
+  {
+   "v": 21,
+   "he": "וְכִנַּסְתִּ֣י אֶתְכֶ֔ם וְנָפַחְתִּ֥י עֲלֵיכֶ֖ם בְּאֵ֣שׁ עֶבְרָתִ֑י וְנִתַּכְתֶּ֖ם בְּתוֹכָֽהּ׃",
+   "en": "Yea, I will gather you, and blow upon you with the fire of My wrath, and ye shall be melted in the midst thereof."
+  },
+  {
+   "v": 22,
+   "he": "כְּהִתּ֥וּךְ כֶּ֙סֶף֙ בְּת֣וֹךְ כּ֔וּר כֵּ֖ן תֻּתְּכ֣וּ בְתוֹכָ֑הּ וִֽידַעְתֶּם֙ כִּֽי־אֲנִ֣י יְהוָ֔ה שָׁפַ֥כְתִּי חֲמָתִ֖י עֲלֵיכֶֽם׃",
+   "en": "As silver is melted in the midst of the furnace, so shall ye be melted in the midst thereof; and ye shall know that I the LORD have poured out My fury upon you.’"
+  },
+  {
+   "v": 23,
+   "he": "וַיְהִ֥י דְבַר־יְהוָ֖ה אֵלַ֥י לֵאמֹֽר׃",
+   "en": "And the word of the LORD came unto me, saying:"
+  },
+  {
+   "v": 24,
+   "he": "בֶּן־אָדָ֕ם אֱמָר־לָ֕הּ אַ֣תְּ אֶ֔רֶץ לֹ֥א מְטֹהָרָ֖ה הִ֑יא לֹ֥א גֻשְׁמָ֖הּ בְּי֥וֹם זָֽעַם׃",
+   "en": "’Son of man, say unto her: Thou art a land that is not cleansed, nor rained upon in the day of indignation."
+  },
+  {
+   "v": 25,
+   "he": "קֶ֤שֶׁר נְבִיאֶ֙יהָ֙ בְּתוֹכָ֔הּ כַּאֲרִ֥י שׁוֹאֵ֖ג טֹ֣רֵֽף טָ֑רֶף נֶ֣פֶשׁ אָכָ֗לוּ חֹ֤סֶן וִיקָר֙ יִקָּ֔חוּ אַלְמְנוֹתֶ֖יהָ הִרְבּ֥וּ בְתוֹכָֽהּ׃",
+   "en": "There is a conspiracy of her prophets in the midst thereof, like a roaring lion ravening the prey; they have devoured souls, they take treasure and precious things, they have made her widows many in the midst thereof."
+  },
+  {
+   "v": 26,
+   "he": "כֹּהֲנֶ֜יהָ חָמְס֣וּ תוֹרָתִי֮ וַיְחַלְּל֣וּ קָדָשַׁי֒ בֵּֽין־קֹ֤דֶשׁ לְחֹל֙ לֹ֣א הִבְדִּ֔ילוּ וּבֵין־הַטָּמֵ֥א לְטָה֖וֹר לֹ֣א הוֹדִ֑יעוּ וּמִשַׁבְּתוֹתַי֙ הֶעְלִ֣ימוּ עֵֽינֵיהֶ֔ם וָאֵחַ֖ל בְּתוֹכָֽם׃",
+   "en": "Her priests have done violence to My law, and have profaned My holy things; they have put no difference between the holy and the common, neither have they taught difference between the unclean and the clean, and have hid their eyes from My sabbaths, and I am profaned among them."
+  },
+  {
+   "v": 27,
+   "he": "שָׂרֶ֣יהָ בְקִרְבָּ֔הּ כִּזְאֵבִ֖ים טֹ֣רְפֵי טָ֑רֶף לִשְׁפָּךְ־דָּם֙ לְאַבֵּ֣ד נְפָשׁ֔וֹת לְמַ֖עַן בְּצֹ֥עַ בָּֽצַע׃",
+   "en": "Her princes in the midst thereof are like wolves ravening the prey: to shed blood, and to destroy souls, so as to get dishonest gain."
+  },
+  {
+   "v": 28,
+   "he": "וּנְבִיאֶ֗יהָ טָח֤וּ לָהֶם֙ תָּפֵ֔ל חֹזִ֣ים שָׁ֔וְא וְקֹסְמִ֥ים לָהֶ֖ם כָּזָ֑ב אֹמְרִ֗ים כֹּ֤ה אָמַר֙ אֲדֹנָ֣י יְהוִ֔ה וַֽיהוָ֖ה לֹ֥א דִבֵּֽר׃",
+   "en": "And her prophets have daubed for them with whited plaster, seeing falsehood, and divining lies unto them, saying: Thus saith the Lord GOD, when the LORD hath not spoken."
+  },
+  {
+   "v": 29,
+   "he": "עַ֤ם הָאָ֙רֶץ֙ עָ֣שְׁקוּ עֹ֔שֶׁק וְגָזְל֖וּ גָּזֵ֑ל וְעָנִ֤י וְאֶבְיוֹן֙ הוֹנ֔וּ וְאֶת־הַגֵּ֥ר עָשְׁק֖וּ בְּלֹ֥א מִשְׁפָּֽט׃",
+   "en": "The people of the land have used oppression, and exercised robbery, and have wronged the poor and needy, and have oppressed the stranger unlawfully."
+  },
+  {
+   "v": 30,
+   "he": "וָאֲבַקֵּ֣שׁ מֵהֶ֡ם אִ֣ישׁ גֹּֽדֵר־גָּדֵר֩ וְעֹמֵ֨ד בַּפֶּ֧רֶץ לְפָנַ֛י בְּעַ֥ד הָאָ֖רֶץ לְבִלְתִּ֣י שַׁחֲתָ֑הּ וְלֹ֖א מָצָֽאתִי׃",
+   "en": "And I sought for a man among them, that should make up the hedge, and stand in the breach before Me for the land, that I should not destroy it; but I found none."
+  },
+  {
+   "v": 31,
+   "he": "וָאֶשְׁפֹּ֤ךְ עֲלֵיהֶם֙ זַעְמִ֔י בְּאֵ֥שׁ עֶבְרָתִ֖י כִּלִּיתִ֑ים דַּרְכָּם֙ בְּרֹאשָׁ֣ם נָתַ֔תִּי נְאֻ֖ם אֲדֹנָ֥י יְהֹוִֽה׃",
+   "en": "Therefore have I poured out Mine indignation upon them; I have consumed them with the fire of My wrath; their own way have I brought upon their heads, saith the Lord GOD.’"
+  }
+ ],
+ "sourcing": "sourced"
+}

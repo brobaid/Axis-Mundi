@@ -1,0 +1,40 @@
+{
+ "id": "tanakh--psalms--23",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 23,
+ "verses": [
+  {
+   "v": 1,
+   "he": "מִזְמ֥וֹר לְדָוִ֑ד יְהוָ֥ה רֹ֝עִ֗י לֹ֣א אֶחְסָֽר׃",
+   "en": "A Psalm of David. The LORD is my shepherd; I shall not want."
+  },
+  {
+   "v": 2,
+   "he": "בִּנְא֣וֹת דֶּ֭שֶׁא יַרְבִּיצֵ֑נִי עַל־מֵ֖י מְנֻח֣וֹת יְנַהֲלֵֽנִי׃",
+   "en": "He maketh me to lie down in green pastures; He leadeth me beside the still waters."
+  },
+  {
+   "v": 3,
+   "he": "נַפְשִׁ֥י יְשׁוֹבֵ֑ב יַֽנְחֵ֥נִי בְמַעְגְּלֵי־צֶ֝֗דֶק לְמַ֣עַן שְׁמֽוֹ׃",
+   "en": "He restoreth my soul; He guideth me in straight paths for His name's sake."
+  },
+  {
+   "v": 4,
+   "he": "גַּ֤ם כִּֽי־אֵלֵ֨ךְ בְּגֵ֪יא צַלְמָ֡וֶת לֹא־אִ֘ירָ֤א רָ֗ע כִּי־אַתָּ֥ה עִמָּדִ֑י שִׁבְטְךָ֥ וּ֝מִשְׁעַנְתֶּ֗ךָ הֵ֣מָּה יְנַֽחֲמֻֽנִי׃",
+   "en": "Yea, though I walk through the valley of the shadow of death, I will fear no evil, for Thou art with me; Thy rod and Thy staff, they comfort me."
+  },
+  {
+   "v": 5,
+   "he": "תַּעֲרֹ֬ךְ לְפָנַ֨י׀ שֻׁלְחָ֗ן נֶ֥גֶד צֹרְרָ֑י דִּשַּׁ֖נְתָּ בַשֶּׁ֥מֶן רֹ֝אשִׁ֗י כּוֹסִ֥י רְוָיָֽה׃",
+   "en": "Thou preparest a table before me in the presence of mine enemies; Thou hast anointed my head with oil; my cup runneth over."
+  },
+  {
+   "v": 6,
+   "he": "אַ֤ךְ׀ ט֤וֹב וָחֶ֣סֶד יִ֭רְדְּפוּנִי כָּל־יְמֵ֣י חַיָּ֑י וְשַׁבְתִּ֥י בְּבֵית־יְ֝הוָ֗ה לְאֹ֣רֶךְ יָמִֽים׃",
+   "en": "Surely goodness and mercy shall follow me all the days of my life; And I shall dwell in the house of the LORD for ever."
+  }
+ ],
+ "sourcing": "sourced"
+}

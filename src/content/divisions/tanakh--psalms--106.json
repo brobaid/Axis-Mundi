@@ -1,0 +1,250 @@
+{
+ "id": "tanakh--psalms--106",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 106,
+ "verses": [
+  {
+   "v": 1,
+   "he": "הַֽלְלוּיָ֨הּ׀ הוֹד֣וּ לַיהוָ֣ה כִּי־ט֑וֹב כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+   "en": "Hallelujah. O give thanks unto the LORD; for He is good; For His mercy endureth for ever."
+  },
+  {
+   "v": 2,
+   "he": "מִ֗י יְ֭מַלֵּל גְּבוּר֣וֹת יְהוָ֑ה יַ֝שְׁמִ֗יעַ כָּל־תְּהִלָּתֽוֹ׃",
+   "en": "Who can express the mighty acts of the LORD, Or make all His praise to be heard?"
+  },
+  {
+   "v": 3,
+   "he": "אַ֭שְׁרֵי שֹׁמְרֵ֣י מִשְׁפָּ֑ט עֹשֵׂ֖ה צְדָקָ֣ה בְכָל־עֵֽת׃",
+   "en": "Happy are they that keep justice, That do righteousness at all times."
+  },
+  {
+   "v": 4,
+   "he": "זָכְרֵ֣נִי יְ֭הוָה בִּרְצ֣וֹן עַמֶּ֑ךָ פָּ֝קְדֵ֗נִי בִּישׁוּעָתֶֽךָ׃",
+   "en": "Remember me, O LORD, when Thou favourest Thy people; O think of me at Thy salvation;"
+  },
+  {
+   "v": 5,
+   "he": "לִרְא֤וֹת׀ בְּט֘וֹבַ֤ת בְּחִירֶ֗יךָ לִ֭שְׂמֹחַ בְּשִׂמְחַ֣ת גּוֹיֶ֑ךָ לְ֝הִתְהַלֵּ֗ל עִם־נַחֲלָתֶֽךָ׃",
+   "en": "That I may behold the prosperity of Thy chosen, That I may rejoice in the gladness of Thy nation, That I may glory with Thine inheritance."
+  },
+  {
+   "v": 6,
+   "he": "חָטָ֥אנוּ עִם־אֲבוֹתֵ֗ינוּ הֶעֱוִ֥ינוּ הִרְשָֽׁעְנוּ׃",
+   "en": "We have sinned with our fathers, We have done iniquitously, we have dealt wickedly."
+  },
+  {
+   "v": 7,
+   "he": "אֲב֘וֹתֵ֤ינוּ בְמִצְרַ֨יִם׀ לֹא־הִשְׂכִּ֬ילוּ נִפְלְאוֹתֶ֗יךָ לֹ֣א זָ֭כְרוּ אֶת־רֹ֣ב חֲסָדֶ֑יךָ וַיַּמְר֖וּ עַל־יָ֣ם בְּיַם־סֽוּף׃",
+   "en": "Our fathers in Egypt gave no heed unto Thy wonders; They remembered not the multitude of Thy mercies; But were rebellious at the sea, even at the Red Sea."
+  },
+  {
+   "v": 8,
+   "he": "וַֽ֭יּוֹשִׁיעֵם לְמַ֣עַן שְׁמ֑וֹ לְ֝הוֹדִ֗יעַ אֶת־גְּבוּרָתֽוֹ׃",
+   "en": "Nevertheless He saved them for His name's sake, That He might make His mighty power to be known."
+  },
+  {
+   "v": 9,
+   "he": "וַיִּגְעַ֣ר בְּיַם־ס֭וּף וַֽיֶּחֱרָ֑ב וַיּוֹלִיכֵ֥ם בַּ֝תְּהֹמ֗וֹת כַּמִּדְבָּֽר׃",
+   "en": "And He rebuked the Red Sea, and it was dried up; And He led them through the depths, as through a wilderness."
+  },
+  {
+   "v": 10,
+   "he": "וַֽ֭יּוֹשִׁיעֵם מִיַּ֣ד שׂוֹנֵ֑א וַ֝יִּגְאָלֵ֗ם מִיַּ֥ד אוֹיֵֽב׃",
+   "en": "And He saved them from the hand of him that hated them, And redeemed them from the hand of the enemy."
+  },
+  {
+   "v": 11,
+   "he": "וַיְכַסּוּ־מַ֥יִם צָרֵיהֶ֑ם אֶחָ֥ד מֵ֝הֶ֗ם לֹ֣א נוֹתָֽר׃",
+   "en": "And the waters covered their adversaries; There was not one of them left."
+  },
+  {
+   "v": 12,
+   "he": "וַיַּאֲמִ֥ינוּ בִדְבָרָ֑יו יָ֝שִׁ֗ירוּ תְּהִלָּתֽוֹ׃",
+   "en": "Then believed they His words; They sang His praise."
+  },
+  {
+   "v": 13,
+   "he": "מִֽ֭הֲרוּ שָׁכְח֣וּ מַעֲשָׂ֑יו לֹֽא־חִ֝כּ֗וּ לַעֲצָתֽוֹ׃",
+   "en": "They soon forgot His works; They waited not for His counsel;"
+  },
+  {
+   "v": 14,
+   "he": "וַיִּתְאַוּ֣וּ תַ֭אֲוָה בַּמִּדְבָּ֑ר וַיְנַסּוּ־אֵ֝֗ל בִּֽישִׁימֽוֹן׃",
+   "en": "But lusted exceedingly in the wilderness, And tried God in the desert."
+  },
+  {
+   "v": 15,
+   "he": "וַיִּתֵּ֣ן לָ֭הֶם שֶׁאֱלָתָ֑ם וַיְשַׁלַּ֖ח רָז֣וֹן בְּנַפְשָֽׁם׃",
+   "en": "And He gave them their request; But sent leanness into their soul."
+  },
+  {
+   "v": 16,
+   "he": "וַיְקַנְא֣וּ לְ֭מֹשֶׁה בַּֽמַּחֲנֶ֑ה לְ֝אַהֲרֹ֗ן קְד֣וֹשׁ יְהוָֽה׃",
+   "en": "They were jealous also of Moses in the camp, And of Aaron the holy one of the LORD."
+  },
+  {
+   "v": 17,
+   "he": "תִּפְתַּח־אֶ֭רֶץ וַתִּבְלַ֣ע דָּתָ֑ן וַ֝תְּכַ֗ס עַל־עֲדַ֥ת אֲבִירָֽם׃",
+   "en": "The earth opened and swallowed up Dathan, And covered the company of Abiram."
+  },
+  {
+   "v": 18,
+   "he": "וַתִּבְעַר־אֵ֥שׁ בַּעֲדָתָ֑ם לֶ֝הָבָ֗ה תְּלַהֵ֥ט רְשָׁעִֽים׃",
+   "en": "And a fire was kindled in their company; The flame burned up the wicked."
+  },
+  {
+   "v": 19,
+   "he": "יַעֲשׂוּ־עֵ֥גֶל בְּחֹרֵ֑ב וַ֝יִּשְׁתַּחֲו֗וּ לְמַסֵּכָֽה׃",
+   "en": "They made a calf in Horeb, And worshipped a molten image."
+  },
+  {
+   "v": 20,
+   "he": "וַיָּמִ֥ירוּ אֶת־כְּבוֹדָ֑ם בְּתַבְנִ֥ית שׁ֝֗וֹר אֹכֵ֥ל עֵֽשֶׂב׃",
+   "en": "Thus they exchanged their glory For the likeness of an ox that eateth grass."
+  },
+  {
+   "v": 21,
+   "he": "שָׁ֭כְחוּ אֵ֣ל מוֹשִׁיעָ֑ם עֹשֶׂ֖ה גְדֹל֣וֹת בְּמִצְרָֽיִם׃",
+   "en": "They forgot God their saviour, Who had done great things in Egypt;"
+  },
+  {
+   "v": 22,
+   "he": "נִ֭פְלָאוֹת בְּאֶ֣רֶץ חָ֑ם נ֝וֹרָא֗וֹת עַל־יַם־סֽוּף׃",
+   "en": "Wondrous works in the land of Ham, Terrible things by the Red Sea."
+  },
+  {
+   "v": 23,
+   "he": "וַיֹּ֗אמֶר לְֽהַשְׁמִ֫ידָ֥ם לוּלֵ֡י מֹ֘שֶׁ֤ה בְחִיר֗וֹ עָמַ֣ד בַּפֶּ֣רֶץ לְפָנָ֑יו לְהָשִׁ֥יב חֲ֝מָת֗וֹ מֵֽהַשְׁחִֽית׃",
+   "en": "Therefore He said that He would destroy them, Had not Moses His chosen stood before Him in the breach, To turn back His wrath, lest He should destroy them."
+  },
+  {
+   "v": 24,
+   "he": "וַֽ֭יִּמְאֲסוּ בְּאֶ֣רֶץ חֶמְדָּ֑ה לֹֽא־הֶ֝אֱמִ֗ינוּ לִדְבָרֽוֹ׃",
+   "en": "Moreover, they scorned the desirable land, They believed not His word;"
+  },
+  {
+   "v": 25,
+   "he": "וַיֵּרָגְנ֥וּ בְאָהֳלֵיהֶ֑ם לֹ֥א שָׁ֝מְע֗וּ בְּק֣וֹל יְהוָֽה׃",
+   "en": "And they murmured in their tents, They hearkened not unto the voice of the LORD."
+  },
+  {
+   "v": 26,
+   "he": "וַיִּשָּׂ֣א יָד֣וֹ לָהֶ֑ם לְהַפִּ֥יל א֝וֹתָ֗ם בַּמִּדְבָּֽר׃",
+   "en": "Therefore He swore concerning them, That He would overthrow them in the wilderness;"
+  },
+  {
+   "v": 27,
+   "he": "וּלְהַפִּ֣יל זַ֭רְעָם בַּגּוֹיִ֑ם וּ֝לְזָרוֹתָ֗ם בָּאֲרָצֽוֹת׃",
+   "en": "And that He would cast out their seed among the nations, And scatter them in the lands."
+  },
+  {
+   "v": 28,
+   "he": "וַ֭יִּצָּ֣מְדוּ לְבַ֣עַל פְּע֑וֹר וַ֝יֹּאכְל֗וּ זִבְחֵ֥י מֵתִֽים׃",
+   "en": "They joined themselves also unto Baal of Peor, And ate the sacrifices of the dead."
+  },
+  {
+   "v": 29,
+   "he": "וַ֭יַּכְעִיסוּ בְּמַֽעַלְלֵיהֶ֑ם וַתִּפְרָץ־בָּ֝֗ם מַגֵּפָֽה׃",
+   "en": "Thus they provoked Him with their doings, And the plague broke in upon them."
+  },
+  {
+   "v": 30,
+   "he": "וַיַּעֲמֹ֣ד פִּֽ֭ינְחָס וַיְפַלֵּ֑ל וַ֝תֵּעָצַ֗ר הַמַּגֵּפָֽה׃",
+   "en": "Then stood up Phinehas, and wrought judgment, And so the plague was stayed."
+  },
+  {
+   "v": 31,
+   "he": "וַתֵּחָ֣שֶׁב ל֭וֹ לִצְדָקָ֑ה לְדֹ֥ר וָ֝דֹ֗ר עַד־עוֹלָֽם׃",
+   "en": "And that was counted unto him for righteousness, Unto all generations for ever."
+  },
+  {
+   "v": 32,
+   "he": "וַ֭יַּקְצִיפוּ עַל־מֵ֥י מְרִיבָ֑ה וַיֵּ֥רַע לְ֝מֹשֶׁ֗ה בַּעֲבוּרָֽם׃",
+   "en": "They angered Him also at the waters of Meribah, And it went ill with Moses because of them;"
+  },
+  {
+   "v": 33,
+   "he": "כִּֽי־הִמְר֥וּ אֶת־רוּח֑וֹ וַ֝יְבַטֵּ֗א בִּשְׂפָתָֽיו׃",
+   "en": "For they embittered his spirit, And he spoke rashly with his lips."
+  },
+  {
+   "v": 34,
+   "he": "לֹֽא־הִ֭שְׁמִידוּ אֶת־הָֽעַמִּ֑ים אֲשֶׁ֤ר אָמַ֖ר יְהוָ֣ה לָהֶֽם׃",
+   "en": "They did not destroy the peoples, As the LORD commanded them;"
+  },
+  {
+   "v": 35,
+   "he": "וַיִּתְעָרְב֥וּ בַגּוֹיִ֑ם וַֽ֝יִּלְמְד֗וּ מַֽעֲשֵׂיהֶֽם׃",
+   "en": "But mingled themselves with the nations, And learned their works;"
+  },
+  {
+   "v": 36,
+   "he": "וַיַּעַבְד֥וּ אֶת־עֲצַבֵּיהֶ֑ם וַיִּהְי֖וּ לָהֶ֣ם לְמוֹקֵֽשׁ׃",
+   "en": "And they served their idols, Which became a snare unto them;"
+  },
+  {
+   "v": 37,
+   "he": "וַיִּזְבְּח֣וּ אֶת־בְּ֭נֵיהֶם וְאֶת־בְּנֽוֹתֵיהֶ֗ם לַשֵּֽׁדִים׃",
+   "en": "Yea, they sacrificed their sons and their daughters unto demons,"
+  },
+  {
+   "v": 38,
+   "he": "וַיִּֽשְׁפְּכ֨וּ דָ֪ם נָקִ֡י דַּם־בְּנֵ֘יהֶ֤ם וּֽבְנוֹתֵיהֶ֗ם אֲשֶׁ֣ר זִ֭בְּחוּ לַעֲצַבֵּ֣י כְנָ֑עַן וַתֶּחֱנַ֥ף הָ֝אָ֗רֶץ בַּדָּמִֽים׃",
+   "en": "And shed innocent blood, even the blood of their sons and of their daughters, Whom they sacrificed unto the idols of Canaan; And the land was polluted with blood."
+  },
+  {
+   "v": 39,
+   "he": "וַיִּטְמְא֥וּ בְמַעֲשֵׂיהֶ֑ם וַ֝יִּזְ֗נוּ בְּמַֽעַלְלֵיהֶֽם׃",
+   "en": "Thus were they defiled with their works, And went astray in their doings."
+  },
+  {
+   "v": 40,
+   "he": "וַיִּֽחַר־אַ֣ף יְהוָ֣ה בְּעַמּ֑וֹ וַ֝יְתָעֵ֗ב אֶת־נַחֲלָתֽוֹ׃",
+   "en": "Therefore was the wrath of the LORD kindled against His people, And He abhorred His inheritance."
+  },
+  {
+   "v": 41,
+   "he": "וַיִּתְּנֵ֥ם בְּיַד־גּוֹיִ֑ם וַֽיִּמְשְׁל֥וּ בָ֝הֶ֗ם שֹׂנְאֵיהֶֽם׃",
+   "en": "And He gave them into the hand of the nations; And they that hated them ruled over them."
+  },
+  {
+   "v": 42,
+   "he": "וַיִּלְחָצ֥וּם אוֹיְבֵיהֶ֑ם וַ֝יִּכָּנְע֗וּ תַּ֣חַת יָדָֽם׃",
+   "en": "Their enemies also oppressed them, And they were subdued under their hand."
+  },
+  {
+   "v": 43,
+   "he": "פְּעָמִ֥ים רַבּ֗וֹת יַצִּ֫ילֵ֥ם וְ֭הֵמָּה יַמְר֣וּ בַעֲצָתָ֑ם וַ֝יָּמֹ֗כּוּ בַּעֲו‍ֹנָֽם׃",
+   "en": "Many times did He deliver them; But they were rebellious in their counsel, And sank low through their iniquity."
+  },
+  {
+   "v": 44,
+   "he": "וַ֭יַּרְא בַּצַּ֣ר לָהֶ֑ם בְּ֝שָׁמְע֗וֹ אֶת־רִנָּתָֽם׃",
+   "en": "Nevertheless He looked upon their distress, When He heard their cry;"
+  },
+  {
+   "v": 45,
+   "he": "וַיִּזְכֹּ֣ר לָהֶ֣ם בְּרִית֑וֹ וַ֝יִּנָּחֵ֗ם כְּרֹ֣ב חסדו [חֲסָדָֽיו]׃",
+   "en": "And He remembered for them His covenant, And repented according to the multitude of His mercies."
+  },
+  {
+   "v": 46,
+   "he": "וַיִּתֵּ֣ן אוֹתָ֣ם לְרַחֲמִ֑ים לִ֝פְנֵ֛י כָּל־שׁוֹבֵיהֶֽם׃",
+   "en": "He made them also to be pitied Of all those that carried them captive."
+  },
+  {
+   "v": 47,
+   "he": "הוֹשִׁיעֵ֨נוּ׀ יְה֘וָ֤ה אֱלֹהֵ֗ינוּ וְקַבְּצֵנוּ֮ מִֽן־הַגּ֫וֹיִ֥ם לְ֭הֹדוֹת לְשֵׁ֣ם קָדְשֶׁ֑ךָ לְ֝הִשְׁתַּבֵּ֗חַ בִּתְהִלָּתֶֽךָ׃",
+   "en": "Save us, O LORD our God, And gather us from among the nations, That we may give thanks unto Thy holy name, That we may triumph in Thy praise."
+  },
+  {
+   "v": 48,
+   "he": "בָּר֤וּךְ־יְהוָ֨ה אֱלֹהֵ֪י יִשְׂרָאֵ֡ל מִן־הָ֤עוֹלָ֨ם׀ וְעַ֬ד הָעוֹלָ֗ם וְאָמַ֖ר כָּל־הָעָ֥ם אָמֵ֗ן הַֽלְלוּ־יָֽהּ׃",
+   "en": "Blessed be the LORD, the God of Israel, From everlasting even to everlasting, And let all the people say: 'Amen.' Hallelujah."
+  }
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,80 @@
+{
+ "id": "tanakh--psalms--140",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 140,
+ "verses": [
+  {
+   "v": 1,
+   "he": "לַמְנַצֵּ֗חַ מִזְמ֥וֹר לְדָוִֽד׃",
+   "en": "For the Leader. A Psalm of David."
+  },
+  {
+   "v": 2,
+   "he": "חַלְּצֵ֣נִי יְ֭הוָה מֵאָדָ֣ם רָ֑ע מֵאִ֖ישׁ חֲמָסִ֣ים תִּנְצְרֵֽנִי׃",
+   "en": "Deliver me, O LORD, from the evil man; Preserve me from the violent man;"
+  },
+  {
+   "v": 3,
+   "he": "אֲשֶׁ֤ר חָשְׁב֣וּ רָע֣וֹת בְּלֵ֑ב כָּל־י֝֗וֹם יָג֥וּרוּ מִלְחָמֽוֹת׃",
+   "en": "Who devise evil things in their heart; Every day do they stir up wars."
+  },
+  {
+   "v": 4,
+   "he": "שָֽׁנֲנ֣וּ לְשׁוֹנָם֮ כְּֽמוֹ־נָ֫חָ֥שׁ חֲמַ֥ת עַכְשׁ֑וּב תַּ֖חַת שְׂפָתֵ֣ימוֹ סֶֽלָה׃",
+   "en": "They have sharpened their tongue like a serpent; Vipers' venom is under their lips. Selah"
+  },
+  {
+   "v": 5,
+   "he": "שָׁמְרֵ֤נִי יְהוָ֨ה׀ מִ֘ידֵ֤י רָשָׁ֗ע מֵאִ֣ישׁ חֲמָסִ֣ים תִּנְצְרֵ֑נִי אֲשֶׁ֥ר חָ֝שְׁב֗וּ לִדְח֥וֹת פְּעָמָֽי׃",
+   "en": "Keep me, O LORD, from the hands of the wicked; Preserve me from the violent man; Who have purposed to make my steps slip."
+  },
+  {
+   "v": 6,
+   "he": "טָֽמְנֽוּ־גֵאִ֨ים׀ פַּ֡ח לִ֗י וַחֲבָלִ֗ים פָּ֣רְשׂוּ רֶ֭שֶׁת לְיַד־מַעְגָּ֑ל מֹקְשִׁ֖ים שָֽׁתוּ־לִ֣י סֶֽלָה׃",
+   "en": "The proud have hid a snare for me, and cords; They have spread a net by the wayside; They have set gins for me. Selah"
+  },
+  {
+   "v": 7,
+   "he": "אָמַ֣רְתִּי לַ֭יהוָה אֵ֣לִי אָ֑תָּה הַאֲזִ֥ינָה יְ֝הוָ֗ה ק֣וֹל תַּחֲנוּנָֽי׃",
+   "en": "I have said unto the LORD: 'Thou art my God'; Give ear, O LORD, unto the voice of my supplications."
+  },
+  {
+   "v": 8,
+   "he": "יְהֹוִ֣ה אֲ֭דֹנָי עֹ֣ז יְשׁוּעָתִ֑י סַכֹּ֥תָה לְ֝רֹאשִׁ֗י בְּי֣וֹם נָֽשֶׁק׃",
+   "en": "O GOD the Lord, the strength of my salvation, Who hast screened my head in the day of battle,"
+  },
+  {
+   "v": 9,
+   "he": "אַל־תִּתֵּ֣ן יְ֭הוָה מַאֲוַיֵּ֣י רָשָׁ֑ע זְמָמ֥וֹ אַל־תָּ֝פֵ֗ק יָר֥וּמוּ סֶֽלָה׃",
+   "en": "Grant not, O LORD, the desires of the wicked; Further not his evil device, so that they exalt themselves. Selah"
+  },
+  {
+   "v": 10,
+   "he": "רֹ֥אשׁ מְסִבָּ֑י עֲמַ֖ל שְׂפָתֵ֣ימוֹ יכסומו [יְכַסֵּֽמוֹ]׃",
+   "en": "As for the head of those that compass me about, Let the mischief of their own lips cover them."
+  },
+  {
+   "v": 11,
+   "he": "ימיטו [יִמּ֥וֹטוּ] עֲלֵיהֶ֗ם גֶּֽחָ֫לִ֥ים בָּאֵ֥שׁ יַפִּלֵ֑ם בְּ֝מַהֲמֹר֗וֹת בַּֽל־יָקֽוּמוּ׃",
+   "en": "Let burning coals fall upon them; Let them be cast into the fire, Into deep pits, that they rise not up again."
+  },
+  {
+   "v": 12,
+   "he": "אִ֥ישׁ לָשׁוֹן֮ בַּל־יִכּ֪וֹן בָּ֫אָ֥רֶץ אִישׁ־חָמָ֥ס רָ֑ע יְ֝צוּדֶ֗נּוּ לְמַדְחֵפֹֽת׃",
+   "en": "A slanderer shall not be established in the earth; The violent and evil man shall be hunted with thrust upon thrust."
+  },
+  {
+   "v": 13,
+   "he": "ידעת [יָדַ֗עְתִּי] כִּֽי־יַעֲשֶׂ֣ה יְ֭הוָה דִּ֣ין עָנִ֑י מִ֝שְׁפַּ֗ט אֶבְיֹנִֽים׃",
+   "en": "I know that the LORD will maintain the cause of the poor, And the right of the needy."
+  },
+  {
+   "v": 14,
+   "he": "אַ֣ךְ צַ֭דִּיקִים יוֹד֣וּ לִשְׁמֶ֑ךָ יֵשְׁב֥וּ יְ֝שָׁרִ֗ים אֶת־פָּנֶֽיךָ׃",
+   "en": "Surely the righteous shall give thanks unto Thy name; The upright shall dwell in Thy presence."
+  }
+ ],
+ "sourcing": "sourced"
+}

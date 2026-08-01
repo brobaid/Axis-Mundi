@@ -1,0 +1,145 @@
+{
+ "id": "tanakh--job--5",
+ "work": "tanakh",
+ "n": 29,
+ "slug": "job",
+ "c": 5,
+ "verses": [
+  {
+   "v": 1,
+   "he": "קְֽרָא־נָ֭א הֲיֵ֣שׁ עוֹנֶ֑ךָּ וְאֶל־מִ֖י מִקְּדֹשִׁ֣ים תִּפְנֶֽה׃",
+   "en": "Call now; is there any that will answer thee? And to which of the holy ones wilt thou turn?"
+  },
+  {
+   "v": 2,
+   "he": "כִּֽי־לֶֽ֭אֱוִיל יַהֲרָג־כָּ֑עַשׂ וּ֝פֹתֶ֗ה תָּמִ֥ית קִנְאָֽה׃",
+   "en": "For anger killeth the foolish man, And envy slayeth the silly one."
+  },
+  {
+   "v": 3,
+   "he": "אֲ‍ֽנִי־רָ֭אִיתִי אֱוִ֣יל מַשְׁרִ֑ישׁ וָאֶקּ֖וֹב נָוֵ֣הוּ פִתְאֹֽם׃",
+   "en": "I have seen the foolish taking root; But suddenly I beheld his habitation cursed."
+  },
+  {
+   "v": 4,
+   "he": "יִרְחֲק֣וּ בָנָ֣יו מִיֶּ֑שַׁע וְיִֽדַּכְּא֥וּ בַ֝שַּׁ֗עַר וְאֵ֣ין מַצִּֽיל׃",
+   "en": "His children are far from safety, And are crushed in the gate, with none to deliver them."
+  },
+  {
+   "v": 5,
+   "he": "אֲשֶׁ֤ר קְצִיר֨וֹ׀ רָ֘עֵ֤ב יֹאכֵ֗ל וְאֶֽל־מִצִּנִּ֥ים יִקָּחֵ֑הוּ וְשָׁאַ֖ף צַמִּ֣ים חֵילָֽם׃",
+   "en": "Whose harvest the hungry eateth up, And taketh it even out of the thorns, and the snare gapeth for their substance."
+  },
+  {
+   "v": 6,
+   "he": "כִּ֤י׀ לֹא־יֵצֵ֣א מֵעָפָ֣ר אָ֑וֶן וּ֝מֵאֲדָמָ֗ה לֹא־יִצְמַ֥ח עָמָֽל׃",
+   "en": "For affliction cometh not forth from the dust, Neither doth trouble spring out of the ground;"
+  },
+  {
+   "v": 7,
+   "he": "כִּֽי־אָ֭דָם לְעָמָ֣ל יוּלָּ֑ד וּבְנֵי־רֶ֝֗שֶׁף יַגְבִּ֥יהוּ עֽוּף׃",
+   "en": "But man is born unto trouble, As the sparks fly upward."
+  },
+  {
+   "v": 8,
+   "he": "אוּלָ֗ם אֲ֭נִי אֶדְרֹ֣שׁ אֶל־אֵ֑ל וְאֶל־אֱ֝לֹהִ֗ים אָשִׂ֥ים דִּבְרָתִֽי׃",
+   "en": "But as for me, I would seek unto God, And unto God would I commit my cause;"
+  },
+  {
+   "v": 9,
+   "he": "עֹשֶׂ֣ה גְ֭דֹלוֹת וְאֵ֣ין חֵ֑קֶר נִ֝פְלָא֗וֹת עַד־אֵ֥ין מִסְפָּֽר׃",
+   "en": "Who doeth great things and unsearchable, Marvellous things without number;"
+  },
+  {
+   "v": 10,
+   "he": "הַנֹּתֵ֣ן מָ֭טָר עַל־פְּנֵי־אָ֑רֶץ וְשֹׁ֥לֵֽחַ מַ֝יִם עַל־פְּנֵ֥י חוּצֽוֹת׃",
+   "en": "Who giveth rain upon the earth, And sendeth waters upon the fields;"
+  },
+  {
+   "v": 11,
+   "he": "לָשׂ֣וּם שְׁפָלִ֣ים לְמָר֑וֹם וְ֝קֹדְרִ֗ים שָׂ֣גְבוּ יֶֽשַׁע׃",
+   "en": "So that He setteth up on high those that are low, And those that mourn are exalted to safety."
+  },
+  {
+   "v": 12,
+   "he": "מֵ֭פֵר מַחְשְׁב֣וֹת עֲרוּמִ֑ים וְֽלֹא־תַעֲשֶׂ֥ינָה יְ֝דֵיהֶ֗ם תּוּשִׁיָּֽה׃",
+   "en": "He frustrateth the devices of the crafty, So that their hands can perform nothing substantial."
+  },
+  {
+   "v": 13,
+   "he": "לֹכֵ֣ד חֲכָמִ֣ים בְּעָרְמָ֑ם וַעֲצַ֖ת נִפְתָּלִ֣ים נִמְהָֽרָה׃",
+   "en": "He taketh the wise in their own craftiness; And the counsel of the wily is carried headlong."
+  },
+  {
+   "v": 14,
+   "he": "יוֹמָ֥ם יְפַגְּשׁוּ־חֹ֑שֶׁךְ וְ֝כַלַּ֗יְלָה יְֽמַשְׁשׁ֥וּ בַֽצָּהֳרָֽיִם׃",
+   "en": "They meet with darkness in the day-time, And grope at noonday as in the night. ."
+  },
+  {
+   "v": 15,
+   "he": "וַיֹּ֣שַׁע מֵ֭חֶרֶב מִפִּיהֶ֑ם וּמִיַּ֖ד חָזָ֣ק אֶבְיֽוֹן׃",
+   "en": "But He saveth from the sword of their mouth, Even the needy from the hand of the mighty."
+  },
+  {
+   "v": 16,
+   "he": "וַתְּהִ֣י לַדַּ֣ל תִּקְוָ֑ה וְ֝עֹלָ֗תָה קָ֣פְצָה פִּֽיהָ׃",
+   "en": "So the poor hath hope, And iniquity stoppeth her mouth."
+  },
+  {
+   "v": 17,
+   "he": "הִנֵּ֤ה אַשְׁרֵ֣י אֱ֭נוֹשׁ יוֹכִחֶ֣נּֽוּ אֱל֑וֹהַּ וּמוּסַ֥ר שַׁ֝דַּ֗י אַל־תִּמְאָֽס׃",
+   "en": "Behold, happy is the man whom God correcteth; Therefore despise not thou the chastening of the Almighty."
+  },
+  {
+   "v": 18,
+   "he": "כִּ֤י ה֣וּא יַכְאִ֣יב וְיֶחְבָּ֑שׁ יִ֝מְחַ֗ץ וידו [וְיָדָ֥יו] תִּרְפֶּֽינָה׃",
+   "en": "For He maketh sore, and bindeth up; He woundeth, and His hands make whole."
+  },
+  {
+   "v": 19,
+   "he": "בְּשֵׁ֣שׁ צָ֭רוֹת יַצִּילֶ֑ךָּ וּבְשֶׁ֓בַע׀ לֹא־יִגַּ֖ע בְּךָ֣ רָֽע׃",
+   "en": "He will deliver thee in six troubles; Yea, in seven there shall no evil touch thee."
+  },
+  {
+   "v": 20,
+   "he": "בְּ֭רָעָב פָּֽדְךָ֣ מִמָּ֑וֶת וּ֝בְמִלְחָמָ֗ה מִ֣ידֵי חָֽרֶב׃",
+   "en": "In famine He will redeem thee from death; And in war from the power of the sword."
+  },
+  {
+   "v": 21,
+   "he": "בְּשׁ֣וֹט לָ֭שׁוֹן תֵּחָבֵ֑א וְֽלֹא־תִירָ֥א מִ֝שֹּׁ֗ד כִּ֣י יָבֽוֹא׃",
+   "en": "Thou shalt be hid from the scourge of the tongue; Neither shalt thou be afraid of destruction when it cometh."
+  },
+  {
+   "v": 22,
+   "he": "לְשֹׁ֣ד וּלְכָפָ֣ן תִּשְׂחָ֑ק וּֽמֵחַיַּ֥ת הָ֝אָ֗רֶץ אַל־תִּירָֽא׃",
+   "en": "At destruction and famine thou shalt laugh; Neither shalt thou be afraid of the beasts of the earth."
+  },
+  {
+   "v": 23,
+   "he": "כִּ֤י עִם־אַבְנֵ֣י הַשָּׂדֶ֣ה בְרִיתֶ֑ךָ וְחַיַּ֥ת הַ֝שָּׂדֶ֗ה הָשְׁלְמָה־לָֽךְ׃",
+   "en": "For thou shalt be in league with the stones of the field; And the beasts of the field shall be at peace with thee."
+  },
+  {
+   "v": 24,
+   "he": "וְֽ֭יָדַעְתָּ כִּי־שָׁל֣וֹם אָהֳלֶ֑ךָ וּֽפָקַדְתָּ֥ נָ֝וְךָ וְלֹ֣א תֶחֱטָֽא׃",
+   "en": "And thou shalt know that thy tent is in peace; And thou shalt visit thy habitation, and shalt miss nothing."
+  },
+  {
+   "v": 25,
+   "he": "וְֽ֭יָדַעְתָּ כִּי־רַ֣ב זַרְעֶ֑ךָ וְ֝צֶאֱצָאֶ֗יךָ כְּעֵ֣שֶׂב הָאָֽרֶץ׃",
+   "en": "Thou shalt know also that thy seed shall be great, And thine offspring as the grass of the earth."
+  },
+  {
+   "v": 26,
+   "he": "תָּב֣וֹא בְכֶ֣לַח אֱלֵי־קָ֑בֶר כַּעֲל֖וֹת גָּדִ֣ישׁ בְּעִתּֽוֹ׃",
+   "en": "Thou shalt come to thy grave in a ripe age, Like as a shock of corn cometh in in its season."
+  },
+  {
+   "v": 27,
+   "he": "הִנֵּה־זֹ֭את חֲקַרְנ֥וּהָ כֶּֽן־הִ֑יא שְׁ֝מָעֶ֗נָּה וְאַתָּ֥ה דַֽע־לָֽךְ׃",
+   "en": "Lo this, we have searched it, So it is; hear it, and know thou it for thy good."
+  }
+ ],
+ "sourcing": "sourced"
+}

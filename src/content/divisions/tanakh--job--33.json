@@ -1,0 +1,175 @@
+{
+ "id": "tanakh--job--33",
+ "work": "tanakh",
+ "n": 29,
+ "slug": "job",
+ "c": 33,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וְֽאוּלָ֗ם שְׁמַֽע־נָ֣א אִיּ֣וֹב מִלָּ֑י וְֽכָל־דְּבָרַ֥י הַאֲזִֽינָה׃",
+   "en": "Howbeit, Job, I pray thee, hear my speech, And hearken to all my words."
+  },
+  {
+   "v": 2,
+   "he": "הִנֵּה־נָ֭א פָּתַ֣חְתִּי פִ֑י דִּבְּרָ֖ה לְשׁוֹנִ֣י בְחִכִּֽי׃",
+   "en": "Behold now, I have opened my mouth, My tongue hath spoken in my mouth."
+  },
+  {
+   "v": 3,
+   "he": "יֹֽשֶׁר־לִבִּ֥י אֲמָרָ֑י וְדַ֥עַת שְׂ֝פָתַ֗י בָּר֥וּר מִלֵּֽלוּ׃",
+   "en": "My words shall utter the uprightness of my heart; And that which my lips know they shall speak sincerely."
+  },
+  {
+   "v": 4,
+   "he": "רֽוּחַ־אֵ֥ל עָשָׂ֑תְנִי וְנִשְׁמַ֖ת שַׁדַּ֣י תְּחַיֵּֽנִי׃",
+   "en": "The spirit of God hath made me, And the breath of the Almighty given me life."
+  },
+  {
+   "v": 5,
+   "he": "אִם־תּוּכַ֥ל הֲשִׁיבֵ֑נִי עֶרְכָ֥ה לְ֝פָנַ֗י הִתְיַצָּֽבָה׃",
+   "en": "If thou canst, answer thou me, Set thy words in order before me, stand forth."
+  },
+  {
+   "v": 6,
+   "he": "הֵן־אֲנִ֣י כְפִ֣יךָ לָאֵ֑ל מֵ֝חֹ֗מֶר קֹרַ֥צְתִּי גַם־אָֽנִי׃",
+   "en": "Behold, I am toward God even as thou art; I also am formed out of the clay."
+  },
+  {
+   "v": 7,
+   "he": "הִנֵּ֣ה אֵ֭מָתִי לֹ֣א תְבַעֲתֶ֑ךָּ וְ֝אַכְפִּ֗י עָלֶ֥יךָ לֹא־יִכְבָּֽד׃",
+   "en": "Behold, my terror shall not make thee afraid, Neither shall my pressure be heavy upon thee."
+  },
+  {
+   "v": 8,
+   "he": "אַ֭ךְ אָמַ֣רְתָּ בְאָזְנָ֑י וְק֖וֹל מִלִּ֣ין אֶשְׁמָֽע׃",
+   "en": "Surely thou hast spoken in my hearing, And I have heard the voice of thy words;"
+  },
+  {
+   "v": 9,
+   "he": "זַ֥ךְ אֲנִ֗י בְּֽלִ֫י פָ֥שַׁע חַ֥ף אָנֹכִ֑י וְלֹ֖א עָו‍ֹ֣ן לִֽי׃",
+   "en": "’I am clean, without transgression, I am innocent, neither is there iniquity in me;"
+  },
+  {
+   "v": 10,
+   "he": "הֵ֣ן תְּ֭נוּאוֹת עָלַ֣י יִמְצָ֑א יַחְשְׁבֵ֖נִי לְאוֹיֵ֣ב לֽוֹ׃",
+   "en": "Behold, He findeth occasions against me, He counteth me for His enemy;"
+  },
+  {
+   "v": 11,
+   "he": "יָשֵׂ֣ם בַּסַּ֣ד רַגְלָ֑י יִ֝שְׁמֹ֗ר כָּל־אָרְחֹתָֽי׃",
+   "en": "He putteth my feet in the stocks, He marketh all my paths.’ ."
+  },
+  {
+   "v": 12,
+   "he": "הֶן־זֹ֣את לֹא־צָדַ֣קְתָּ אֶעֱנֶ֑ךָּ כִּֽי־יִרְבֶּ֥ה אֱ֝ל֗וֹהַ מֵאֱנֽוֹשׁ׃",
+   "en": "Behold, I answer thee: In this thou art not right, That God is too great for man;"
+  },
+  {
+   "v": 13,
+   "he": "מַ֭דּוּעַ אֵלָ֣יו רִיב֑וֹתָ כִּ֥י כָל־דְּ֝בָרָ֗יו לֹ֣א־יַעֲנֶֽה׃",
+   "en": "Why hast thou striven against Him? Seeing that He will not answer any of his words."
+  },
+  {
+   "v": 14,
+   "he": "כִּֽי־בְאַחַ֥ת יְדַבֶּר־אֵ֑ל וּ֝בִשְׁתַּ֗יִם לֹ֣א יְשׁוּרֶֽנָּה׃",
+   "en": "For God speaketh in one way, Yea in two, though man perceiveth it not."
+  },
+  {
+   "v": 15,
+   "he": "בַּחֲל֤וֹם׀ חֶזְי֬וֹן לַ֗יְלָה בִּנְפֹ֣ל תַּ֭רְדֵּמָה עַל־אֲנָשִׁ֑ים בִּ֝תְנוּמ֗וֹת עֲלֵ֣י מִשְׁכָּֽב׃",
+   "en": "In a dream, in a vision of the night, When deep sleep falleth upon men, In slumberings upon the bed;"
+  },
+  {
+   "v": 16,
+   "he": "אָ֣ז יִ֭גְלֶה אֹ֣זֶן אֲנָשִׁ֑ים וּבְמֹ֖סָרָ֣ם יַחְתֹּֽם׃",
+   "en": "Then He openeth the ears of men, And by their chastisement sealeth the decree,"
+  },
+  {
+   "v": 17,
+   "he": "לְ֭הָסִיר אָדָ֣ם מַעֲשֶׂ֑ה וְגֵוָ֖ה מִגֶּ֣בֶר יְכַסֶּֽה׃",
+   "en": "That men may put away their purpose, And that He may hide pride from man;"
+  },
+  {
+   "v": 18,
+   "he": "יַחְשֹׂ֣ךְ נַ֭פְשׁוֹ מִנִּי־שָׁ֑חַת וְ֝חַיָּת֗וֹ מֵעֲבֹ֥ר בַּשָּֽׁלַח׃",
+   "en": "That He may keep back his soul from the pit, And his life from perishing by the sword."
+  },
+  {
+   "v": 19,
+   "he": "וְהוּכַ֣ח בְּ֭מַכְאוֹב עַל־מִשְׁכָּב֑וֹ וריב [וְר֖וֹב] עֲצָמָ֣יו אֵתָֽן׃",
+   "en": "He is chastened also with pain upon his bed, And all his bones grow stiff;"
+  },
+  {
+   "v": 20,
+   "he": "וְזִֽהֲמַ֣תּוּ חַיָּת֣וֹ לָ֑חֶם וְ֝נַפְשׁ֗וֹ מַאֲכַ֥ל תַּאֲוָֽה׃",
+   "en": "So that his life maketh him to abhor bread, And his soul dainty food."
+  },
+  {
+   "v": 21,
+   "he": "יִ֣כֶל בְּשָׂר֣וֹ מֵרֹ֑אִי ושפי [וְשֻׁפּ֥וּ] עַ֝צְמוֹתָ֗יו לֹ֣א רֻאּֽוּ׃",
+   "en": "His flesh is consumed away, that it cannot be seen; And his bones corrode to unsightliness."
+  },
+  {
+   "v": 22,
+   "he": "וַתִּקְרַ֣ב לַשַּׁ֣חַת נַפְשׁ֑וֹ וְ֝חַיָּת֗וֹ לַֽמְמִתִֽים׃",
+   "en": "Yea, his soul draweth near unto the pit, And his life to the destroyers."
+  },
+  {
+   "v": 23,
+   "he": "אִם־יֵ֤שׁ עָלָ֨יו׀ מַלְאָ֗ךְ מֵלִ֗יץ אֶחָ֥ד מִנִּי־אָ֑לֶף לְהַגִּ֖יד לְאָדָ֣ם יָשְׁרֽוֹ׃",
+   "en": "If there be for him an angel, An intercessor, one among a thousand, To vouch for a man’s uprightness;"
+  },
+  {
+   "v": 24,
+   "he": "וַיְחֻנֶּ֗נּוּ וַיֹּ֗אמֶר פְּ֭דָעֵהוּ מֵרֶ֥דֶת שָׁ֗חַת מָצָ֥אתִי כֹֽפֶר׃",
+   "en": "Then He is gracious unto him, and saith: ‘Deliver him from going down to the pit, I have found a ransom.’"
+  },
+  {
+   "v": 25,
+   "he": "רֻֽטֲפַ֣שׁ בְּשָׂר֣וֹ מִנֹּ֑עַר יָ֝שׁ֗וּב לִימֵ֥י עֲלוּמָֽיו׃",
+   "en": "His flesh is tenderer than a child’s; He returneth to the days of his youth;"
+  },
+  {
+   "v": 26,
+   "he": "יֶעְתַּ֤ר אֶל־אֱל֨וֹהַּ׀ וַיִּרְצֵ֗הוּ וַיַּ֣רְא פָּ֭נָיו בִּתְרוּעָ֑ה וַיָּ֥שֶׁב לֶ֝אֱנ֗וֹשׁ צִדְקָתֽוֹ׃",
+   "en": "He prayeth unto God, and He is favourable unto him; So that he seeth His face with joy; And He restoreth unto man his righteousness."
+  },
+  {
+   "v": 27,
+   "he": "יָשֹׁ֤ר׀ עַל־אֲנָשִׁ֗ים וַיֹּ֗אמֶר חָ֭טָאתִי וְיָשָׁ֥ר הֶעֱוֵ֗יתִי וְלֹא־שָׁ֥וָה לִֽי׃",
+   "en": "He cometh before men, and saith: ‘I have sinned, and perverted that which was right, And it profited me not.’"
+  },
+  {
+   "v": 28,
+   "he": "פָּדָ֣ה נפשי [נַ֭פְשׁוֹ] מֵעֲבֹ֣ר בַּשָּׁ֑חַת וחיתי [וְ֝חַיָּתוֹ] בָּא֥וֹר תִּרְאֶֽה׃",
+   "en": "So He redeemeth his soul from going into the pit, And his life beholdeth the light."
+  },
+  {
+   "v": 29,
+   "he": "הֶן־כָּל־אֵ֭לֶּה יִפְעַל־אֵ֑ל פַּעֲמַ֖יִם שָׁל֣וֹשׁ עִם־גָּֽבֶר׃",
+   "en": "Lo, all these things doth God work, Twice, yea thrice, with a man,"
+  },
+  {
+   "v": 30,
+   "he": "לְהָשִׁ֣יב נַ֭פְשׁוֹ מִנִּי־שָׁ֑חַת לֵ֝א֗וֹר בְּא֣וֹר הַֽחַיִּים׃",
+   "en": "To bring back his soul from the pit, That he may be enlightened with the light of the living."
+  },
+  {
+   "v": 31,
+   "he": "הַקְשֵׁ֖ב אִיּ֥וֹב שְֽׁמַֽע־לִ֑י הַ֝חֲרֵ֗שׁ וְאָנֹכִ֥י אֲדַבֵּֽר׃",
+   "en": "Mark well, O Job, hearken unto me; Hold thy peace, and I will speak."
+  },
+  {
+   "v": 32,
+   "he": "אִם־יֵשׁ־מִלִּ֥ין הֲשִׁיבֵ֑נִי דַּ֝בֵּ֗ר כִּֽי־חָפַ֥צְתִּי צַדְּקֶֽךָּ׃",
+   "en": "If thou hast any thing to say, answer me; Speak, for I desire to justify thee."
+  },
+  {
+   "v": 33,
+   "he": "אִם־אַ֭יִן אַתָּ֥ה שְֽׁמַֽע־לִ֑י הַ֝חֲרֵ֗שׁ וַאֲאַלֶּפְךָ֥ חָכְמָֽה׃",
+   "en": "If not, hearken thou unto me; Hold thy peace, and I will teach thee wisdom."
+  }
+ ],
+ "sourcing": "sourced"
+}

@@ -12,6 +12,15 @@ export interface VerseRow {
   readonly [lang: string]: number | string | undefined;
 }
 
+export interface ChapterIndex {
+  readonly c: number;
+  readonly verses: number;
+  readonly preview?: string | undefined;
+  readonly preview_lang?: string | undefined;
+  readonly english_gaps: number;
+  readonly original_gaps: number;
+}
+
 export interface DivisionIndex {
   readonly n: number;
   readonly slug: string;
@@ -19,9 +28,11 @@ export interface DivisionIndex {
   readonly name_original?: string | undefined;
   readonly transliteration?: string | undefined;
   readonly verses: number;
-  readonly chapters?: number | undefined;
+  /** Present means the division is a contents page and its text is a level down. */
+  readonly chapters?: readonly ChapterIndex[] | undefined;
   readonly section?: string | undefined;
   readonly english_gaps: number;
+  readonly original_gaps: number;
 }
 
 export interface Section {
@@ -39,6 +50,7 @@ export interface WorkData {
   readonly title_original?: string | undefined;
   readonly division_label: string;
   readonly division_label_plural: string;
+  readonly chapter_label?: string | undefined;
   readonly script: string;
   readonly direction: 'ltr' | 'rtl';
   readonly editions: Readonly<Record<string, string>>;
@@ -49,6 +61,7 @@ export interface WorkData {
   readonly total_verses: number;
   readonly total_chapters?: number | undefined;
   readonly english_gaps: number;
+  readonly original_gaps: number;
 }
 
 /**
@@ -119,83 +132,112 @@ export function grouped(work: WorkData): { section?: Section | undefined; divisi
   }));
 }
 
-export interface Neighbours {
-  readonly prev?: DivisionIndex | undefined;
-  readonly next?: DivisionIndex | undefined;
-}
-
-/**
- * The divisions either side, within the section when the work has them.
- *
- * Deuteronomy's next is Joshua, but the Torah ends at Deuteronomy: prev/next
- * carries a reader across book boundaries and stops at the section's edge,
- * because a section is the canon's own unit and walking out of it silently
- * would flatten a structure the canon insists on.
- */
-export function neighbours(work: WorkData, n: number): Neighbours {
-  const section = sectionOf(work, n);
-  const within =
-    section === undefined
-      ? work.divisions
-      : work.divisions.filter((d) => d.n >= section.from && d.n <= section.to);
-  const i = within.findIndex((d) => d.n === n);
-  return {
-    prev: i > 0 ? within[i - 1] : undefined,
-    next: i >= 0 && i < within.length - 1 ? within[i + 1] : undefined,
-  };
-}
-
 /* ── verses ─────────────────────────────────────────────────────────────── */
 
 /**
- * A verse's anchor: `255` where a canon runs straight to its verses,
- * `20-3` where it divides into chapters first.
+ * A verse's anchor: its own number, because the page is one chapter.
  *
- * A colon would read better and is legal in a fragment, but a hyphen costs the
- * reader nothing and keeps the anchor free of characters that have to be
- * escaped everywhere they are used.
+ * It was `20-3` while a page was a whole book. The chapter moved into the
+ * route, so the fragment no longer has to carry it, and `/read/tanakh/exodus/20#3`
+ * says the same thing as the old `/read/tanakh/exodus#20-3` with the part a
+ * reader would read aloud in the address rather than the fragment.
  *
- * Both forms start with a digit, which HTML allows for an id and CSS does not
- * allow for an identifier: `#20-3` is a parse error, and any lookup for one of
- * these must use `getElementById` or an `[id="…"]` attribute selector. That is
- * the price of an anchor a person can type, and it is paid once, here.
+ * It starts with a digit, which HTML allows for an id and CSS does not allow
+ * for an identifier: `#3` is a parse error as a selector, and any lookup must
+ * use `getElementById` or an `[id="…"]` attribute selector. That is the price
+ * of an anchor a person can type, and it is paid once, here.
  */
-export const verseAnchor = (verse: Pick<VerseRow, 'v' | 'c'>): string =>
-  verse.c === undefined ? String(verse.v) : `${verse.c}-${verse.v}`;
-
-/** How a verse is cited in prose and in the copy-link: "Exodus 20:3". */
-export const verseRef = (division: string, verse: Pick<VerseRow, 'v' | 'c'>): string =>
-  verse.c === undefined ? `${division} ${verse.v}` : `${division} ${verse.c}:${verse.v}`;
-
-export interface Chapter {
-  /** Absent for a canon that runs straight from division to verse. */
-  readonly c?: number | undefined;
-  readonly verses: readonly VerseRow[];
-}
+export const verseAnchor = (verse: Pick<VerseRow, 'v'>): string => String(verse.v);
 
 /**
- * A division's verses grouped by chapter, in the file's own order.
+ * How a verse is cited in prose and in the copy-link: "Exodus 20:3".
  *
- * Grouping rather than marking boundaries, because the chapter is the unit a
- * long book is read and rendered in: Psalms is a hundred and fifty of these,
- * and the browser can skip the ones nobody has scrolled to only if each is an
- * element of its own.
- *
- * A canon with no chapter level yields one group carrying every verse.
+ * `cite` is the page's own name for itself down to the level above the verse —
+ * "Exodus 20" for a chapter, "Surah 2" for a canon with no chapter level — so
+ * this joins the last colon and knows nothing about either canon's shape.
  */
-export function byChapter(verses: readonly VerseRow[]): Chapter[] {
-  const out: Chapter[] = [];
-  let current: VerseRow[] = [];
-  let last: number | undefined;
-  for (const verse of verses) {
-    if (out.length === 0 || verse.c !== last) {
-      current = [];
-      out.push({ c: verse.c, verses: current });
-      last = verse.c;
-    }
-    current.push(verse);
+export const verseRef = (cite: string, verse: Pick<VerseRow, 'v'>): string =>
+  `${cite}:${verse.v}`;
+
+/* ── walking the canon ─────────────────────────────────────────────────── */
+
+export interface Step {
+  /** Where the step lands. */
+  readonly href: string;
+  /** How it is named on the control: "Exodus 20", "Joshua". */
+  readonly label: string;
+}
+
+export interface Walk {
+  readonly prev?: Step | undefined;
+  readonly next?: Step | undefined;
+  /** Set when the step stops because the canon's own section stops. */
+  readonly endsSection?: Section | undefined;
+}
+
+const divisionsIn = (work: WorkData, section: Section | undefined): readonly DivisionIndex[] =>
+  section === undefined
+    ? work.divisions
+    : work.divisions.filter((d) => d.n >= section.from && d.n <= section.to);
+
+const stepTo = (work: WorkData, division: DivisionIndex, c?: number): Step => ({
+  href:
+    c === undefined
+      ? `/read/${work.id}/${division.slug}`
+      : `/read/${work.id}/${division.slug}/${c}`,
+  label:
+    c === undefined
+      ? divisionHeading(work, division)
+      : `${divisionHeading(work, division)} ${c}`,
+});
+
+/**
+ * The pages either side of this one, at whatever level it sits.
+ *
+ * Reading runs on: the last chapter of Genesis steps to the first of Exodus,
+ * because that is how the book is read. It stops at the section's edge —
+ * Deuteronomy 34 does not step to Joshua 1 — because a section is the canon's
+ * own unit and walking out of one silently would flatten a structure the canon
+ * insists on. Where a work has no sections there is nothing to stop at.
+ */
+export function walk(work: WorkData, division: DivisionIndex, c?: number): Walk {
+  const section = sectionOf(work, division.n);
+  const siblings = divisionsIn(work, section);
+  const at = siblings.findIndex((d) => d.n === division.n);
+  const before = at > 0 ? siblings[at - 1] : undefined;
+  const after = at >= 0 && at < siblings.length - 1 ? siblings[at + 1] : undefined;
+
+  /* No chapter level: the step is division to division. */
+  if (c === undefined) {
+    return {
+      prev: before === undefined ? undefined : stepTo(work, before),
+      next: after === undefined ? undefined : stepTo(work, after),
+      ...(after === undefined && section !== undefined ? { endsSection: section } : {}),
+    };
   }
-  return out;
+
+  const chapters = division.chapters ?? [];
+  const last = chapters.length;
+
+  const prev =
+    c > 1
+      ? stepTo(work, division, c - 1)
+      : before === undefined
+        ? undefined
+        : stepTo(work, before, (before.chapters?.length ?? 1));
+
+  const next =
+    c < last
+      ? stepTo(work, division, c + 1)
+      : after === undefined
+        ? undefined
+        : stepTo(work, after, 1);
+
+  return {
+    prev,
+    next,
+    ...(next === undefined && section !== undefined ? { endsSection: section } : {}),
+  };
 }
 
 /* ── the edition line ───────────────────────────────────────────────────── */

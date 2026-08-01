@@ -29,6 +29,19 @@ const scriptFont = fontFor(work.script);
 
 const verses = work.total_verses.toLocaleString('en');
 const count = `${work.divisions.length} ${work.division_label_plural}, ${verses} verses`;
+
+/* The single-sided verses, named where they live. Two versifications that
+   disagree leave a verse on one side only; that is a fact about the editions,
+   so the page states it and says which books to expect it in rather than
+   letting a reader meet it cold. */
+const oneSided = work.english_gaps + work.original_gaps;
+const oneSidedIn = work.divisions
+  .filter((d) => d.english_gaps + d.original_gaps > 0)
+  .map((d) => divisionHeading(work, d));
+const listed =
+  oneSidedIn.length <= 1
+    ? oneSidedIn.join('')
+    : `${oneSidedIn.slice(0, -1).join(', ')} and ${oneSidedIn[oneSidedIn.length - 1]}`;
 ---
 
 <BaseLayout
@@ -73,11 +86,11 @@ const count = `${work.divisions.length} ${work.division_label_plural}, ${verses}
       {
         /* The pairing is the claim, so where it is incomplete the page says so
            here rather than leaving a reader to find the holes one book at a
-           time. The count is measured at ingestion, never asserted. */
-        work.english_gaps > 0 && (
+           time. Both the count and the books are measured at ingestion. */
+        oneSided > 0 && (
           <span class="rd-contents__gaps">
-            {work.english_gaps} {work.english_gaps === 1 ? 'verse carries' : 'verses carry'} the
-            original with no English at that verse number in this edition; each is marked where it
+            {oneSided} {oneSided === 1 ? 'verse stands' : 'verses stand'} on one side only, where
+            the two editions number a passage differently — in {listed}. Each is marked where it
             falls.
           </span>
         )
@@ -89,7 +102,22 @@ const count = `${work.divisions.length} ${work.division_label_plural}, ${verses}
         <section class="rd-contents__block">
           {section !== undefined && (
             <h2 class="rd-contents__section" id={section.id}>
-              {section.name}
+              <span>
+                {section.name}
+                {/* The canon's own name for the section, beside the one this
+                    page can pronounce. Both, because the transliteration is
+                    how it is spoken here and the Hebrew is what it is. */}
+                {section.name_original !== undefined && (
+                  <span
+                    class="rd-contents__section-original"
+                    lang={orig}
+                    dir={work.direction}
+                    style={`font-family: ${scriptFont}`}
+                  >
+                    {section.name_original}
+                  </span>
+                )}
+              </span>
               <span class="caption rd-contents__section-count">
                 {divisions.length} {work.division_label_plural}
               </span>
@@ -113,7 +141,11 @@ const count = `${work.divisions.length} ${work.division_label_plural}, ${verses}
                       </span>
                     )}
                   </span>
-                  <span class="caption rd-contents__count">{d.verses}</span>
+                  <span class="caption rd-contents__count">
+                    {d.chapters === undefined
+                      ? `${d.verses}`
+                      : `${d.chapters.length} ch · ${d.verses}`}
+                  </span>
                 </a>
               </li>
             ))}
@@ -193,6 +225,11 @@ const count = `${work.divisions.length} ${work.division_label_plural}, ${verses}
     flex: none;
   }
 
+  .rd-contents__section-original {
+    margin-left: var(--space-3);
+    color: var(--ink-soft);
+  }
+
   .rd-contents__list {
     list-style: none;
     padding: 0;
@@ -229,6 +266,7 @@ const count = `${work.divisions.length} ${work.division_label_plural}, ${verses}
   .rd-contents__n {
     flex: none;
     width: 2.5em;
+    font-variant-numeric: tabular-nums;
     color: var(--ink-soft);
     text-align: right;
   }

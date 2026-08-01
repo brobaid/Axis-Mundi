@@ -36,10 +36,34 @@ export const verseEntry = z
   .catchall(z.string());
 
 /**
+ * A chapter's entry in its division's index: identity, size and a first line.
+ *
+ * The chapter is the leaf a reader is sent to, so it is the unit that has to be
+ * small: a page is one chapter of one book, and no page anywhere in the room is
+ * allowed past a hundred kilobytes. The preview is the chapter's own opening
+ * words, lifted at ingestion, so a contents page of a hundred and fifty psalms
+ * is navigable by what they say rather than by their numbers alone.
+ */
+export const chapterIndexEntry = z.object({
+  c: z.number().int().positive(),
+  verses: z.number().int().nonnegative(),
+  /** The opening words, truncated at ingestion. Never authored here. */
+  preview: z.string().min(1).optional(),
+  /** Which language the preview is in, since a chapter may open English-only. */
+  preview_lang: z.string().min(1).optional(),
+  english_gaps: z.number().int().nonnegative().default(0),
+  original_gaps: z.number().int().nonnegative().default(0),
+});
+
+/**
  * A division's entry in its work's index: identity and size, never text.
  *
  * `slug` is the route segment. Numbers alone were enough for surahs; books
  * want names, so a division carries both and the route uses the slug.
+ *
+ * `chapters` present means the division is a contents page and its text lives
+ * one level down, a record per chapter. Absent means the division *is* the
+ * leaf — a surah runs straight to its ayat and has nothing to list.
  */
 export const divisionIndexEntry = z.object({
   n: z.number().int().positive(),
@@ -49,11 +73,13 @@ export const divisionIndexEntry = z.object({
   name_original: z.string().min(1).optional(),
   transliteration: z.string().min(1).optional(),
   verses: z.number().int().nonnegative(),
-  chapters: z.number().int().positive().optional(),
+  chapters: z.array(chapterIndexEntry).optional(),
   /** Which of the work's sections this division belongs to. */
   section: slug.optional(),
   /** Verses whose English column is empty, counted at ingestion. */
   english_gaps: z.number().int().nonnegative().default(0),
+  /** Verses whose original-language column is empty. The reverse happens too. */
+  original_gaps: z.number().int().nonnegative().default(0),
 });
 
 /**
@@ -82,6 +108,8 @@ export const workSchema = z
     /** What one division is called here: surah, book, chapter, nikaya. */
     division_label: z.string().min(1),
     division_label_plural: z.string().min(1),
+    /** What one chapter is called, where the canon has that level. */
+    chapter_label: z.string().min(1).optional(),
     /** The script the original is set in, for the font stack and `lang`. */
     script: z.enum(['arabic', 'hebrew', 'devanagari', 'gurmukhi', 'han', 'latin', 'japanese']),
     /** Right-to-left originals need the whole verse block reversed, not just the text. */
@@ -105,6 +133,8 @@ export const workSchema = z
     total_chapters: z.number().int().positive().optional(),
     /** Verses across the whole work whose English column is empty. */
     english_gaps: z.number().int().nonnegative().default(0),
+    /** And whose original column is empty — a versification can diverge either way. */
+    original_gaps: z.number().int().nonnegative().default(0),
     sourcing: sourcingStatus,
   })
   .strict()
@@ -174,13 +204,18 @@ export const workSchema = z
  * without knowing anything but its route parameters.
  */
 /**
- * `<work>--<division>`, with a double hyphen so the two slugs stay separable
- * when either contains a hyphen of its own — "tanakh--song-of-solomon",
+ * `<work>--<division>`, or `<work>--<division>--<chapter>` where a canon has a
+ * chapter level. Double hyphens so the parts stay separable when any of them
+ * contains a hyphen of its own — "tanakh--song-of-songs--3",
  * "guru-granth-sahib--1".
  */
+const segment = '[a-z0-9]+(?:-[a-z0-9]+)*';
 const divisionId = z
   .string()
-  .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*--[a-z0-9]+(?:-[a-z0-9]+)*$/, 'must be <work>--<division>');
+  .regex(
+    new RegExp(`^${segment}--${segment}(?:--${segment})?$`),
+    'must be <work>--<division> or <work>--<division>--<chapter>',
+  );
 
 export const divisionSchema = z
   .object({
@@ -188,6 +223,8 @@ export const divisionSchema = z
     work: slug,
     n: z.number().int().positive(),
     slug,
+    /** Present when this record is one chapter of a division rather than all of it. */
+    c: z.number().int().positive().optional(),
     verses: z.array(verseEntry).min(1),
     sourcing: sourcingStatus,
   })
@@ -196,5 +233,6 @@ export const divisionSchema = z
 export type Work = z.infer<typeof workSchema>;
 export type WorkSection = z.infer<typeof workSection>;
 export type DivisionIndexEntry = z.infer<typeof divisionIndexEntry>;
+export type ChapterIndexEntry = z.infer<typeof chapterIndexEntry>;
 export type DivisionRecord = z.infer<typeof divisionSchema>;
 export type VerseEntry = z.infer<typeof verseEntry>;

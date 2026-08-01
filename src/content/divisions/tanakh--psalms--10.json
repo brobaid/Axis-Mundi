@@ -1,0 +1,100 @@
+{
+ "id": "tanakh--psalms--10",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 10,
+ "verses": [
+  {
+   "v": 1,
+   "he": "לָמָ֣ה יְ֭הוָה תַּעֲמֹ֣ד בְּרָח֑וֹק תַּ֝עְלִ֗ים לְעִתּ֥וֹת בַּצָּרָֽה׃",
+   "en": "Why standest Thou afar off, O LORD? Why hidest Thou Thyself in times of trouble?"
+  },
+  {
+   "v": 2,
+   "he": "בְּגַאֲוַ֣ת רָ֭שָׁע יִדְלַ֣ק עָנִ֑י יִתָּפְשׂ֓וּ׀ בִּמְזִמּ֖וֹת ז֣וּ חָשָֽׁבוּ׃",
+   "en": "Through the pride of the wicked the poor is hotly pursued, They are taken in the devices that they have imagined."
+  },
+  {
+   "v": 3,
+   "he": "כִּֽי־הִלֵּ֣ל רָ֭שָׁע עַל־תַּאֲוַ֣ת נַפְשׁ֑וֹ וּבֹצֵ֥עַ בֵּ֝רֵ֗ךְ נִ֘אֵ֥ץ׀ יְהוָֽה׃",
+   "en": "For the wicked boasteth of his heart's desire, And the covetous vaunteth himself, though he contemn the LORD."
+  },
+  {
+   "v": 4,
+   "he": "רָשָׁ֗ע כְּגֹ֣בַהּ אַ֭פּוֹ בַּל־יִדְרֹ֑שׁ אֵ֥ין אֱ֝לֹהִ֗ים כָּל־מְזִמּוֹתָֽיו׃",
+   "en": "The wicked, in the pride of his countenance [, saith]: 'He will not require'; All his thoughts are: 'There is no God.'"
+  },
+  {
+   "v": 5,
+   "he": "יָ֘חִ֤ילוּ דרכו [דְרָכָ֨יו׀] בְּכָל־עֵ֗ת מָר֣וֹם מִ֭שְׁפָּטֶיךָ מִנֶּגְדּ֑וֹ כָּל־צ֝וֹרְרָ֗יו יָפִ֥יחַ בָּהֶֽם׃",
+   "en": "His ways prosper at all times; Thy judgments are far above out of his sight; As for all his adversaries, he puffeth at them."
+  },
+  {
+   "v": 6,
+   "he": "אָמַ֣ר בְּ֭לִבּוֹ בַּל־אֶמּ֑וֹט לְדֹ֥ר וָ֝דֹ֗ר אֲשֶׁ֣ר לֹֽא־בְרָֽע׃",
+   "en": "He saith in his heart: 'I shall not be moved, I who to all generations shall not be in adversity.'"
+  },
+  {
+   "v": 7,
+   "he": "אָלָ֤ה פִּ֣יהוּ מָ֭לֵא וּמִרְמ֣וֹת וָתֹ֑ךְ תַּ֥חַת לְ֝שׁוֹנ֗וֹ עָמָ֥ל וָאָֽוֶן׃",
+   "en": "His mouth is full of cursing and deceit and oppression; Under his tongue is mischief and iniquity."
+  },
+  {
+   "v": 8,
+   "he": "יֵשֵׁ֤ב׀ בְּמַאְרַ֬ב חֲצֵרִ֗ים בַּֽ֭מִּסְתָּרִים יַהֲרֹ֣ג נָקִ֑י עֵ֝ינָ֗יו לְֽחֵלְכָ֥ה יִצְפֹּֽנוּ׃",
+   "en": "He sitteth in the lurking-places of the villages; In secret places doth he slay the innocent; His eyes are on the watch for the helpless."
+  },
+  {
+   "v": 9,
+   "he": "יֶאֱרֹ֬ב בַּמִּסְתָּ֨ר׀ כְּאַרְיֵ֬ה בְסֻכֹּ֗ה יֶ֭אֱרֹב לַחֲט֣וֹף עָנִ֑י יַחְטֹ֥ף עָ֝נִ֗י בְּמָשְׁכ֥וֹ בְרִשְׁתּֽוֹ׃",
+   "en": "He lieth in wait in a secret place as a lion in his lair, He lieth in wait to catch the poor; He doth catch the poor, when he draweth him up in his net."
+  },
+  {
+   "v": 10,
+   "he": "ודכה [יִדְכֶּ֥ה] יָשֹׁ֑חַ וְנָפַ֥ל בַּ֝עֲצוּמָ֗יו חלכאים [חֵ֣יל כָּאִֽים]׃",
+   "en": "He croucheth, he boweth down, And the helpless fall into his mighty claws."
+  },
+  {
+   "v": 11,
+   "he": "אָמַ֣ר בְּ֭לִבּוֹ שָׁ֣כַֽח אֵ֑ל הִסְתִּ֥יר פָּ֝נָ֗יו בַּל־רָאָ֥ה לָנֶֽצַח׃",
+   "en": "He hath said in his heart: 'God hath forgotten; He hideth His face; He will never see.'"
+  },
+  {
+   "v": 12,
+   "he": "קוּמָ֤ה יְהוָ֗ה אֵ֭ל נְשָׂ֣א יָדֶ֑ךָ אַל־תִּשְׁכַּ֥ח עניים [עֲנָוִֽים]׃",
+   "en": "Arise, O LORD; O God, lift up Thy hand; Forget not the humble."
+  },
+  {
+   "v": 13,
+   "he": "עַל־מֶ֤ה׀ נִאֵ֖ץ רָשָׁ֥ע׀ אֱלֹהִ֑ים אָמַ֥ר בְּ֝לִבּ֗וֹ לֹ֣א תִּדְרֹֽשׁ׃",
+   "en": "Wherefore doth the wicked contemn God, And say in his heart: 'Thou wilt not require'?"
+  },
+  {
+   "v": 14,
+   "he": "רָאִ֡תָה כִּֽי־אַתָּ֤ה׀ עָ֘מָ֤ל וָכַ֨עַס׀ תַּבִּיט֮ לָתֵ֪ת בְּיָ֫דֶ֥ךָ עָ֭לֶיךָ יַעֲזֹ֣ב חֵלֶ֑כָה יָ֝ת֗וֹם אַתָּ֤ה׀ הָיִ֬יתָ עוֹזֵֽר׃",
+   "en": "Thou hast seen; for Thou beholdest trouble and vexation, to requite them with Thy hand; Unto Thee the helpless committeth himself; Thou hast been the helper of the fatherless."
+  },
+  {
+   "v": 15,
+   "he": "שְׁ֭בֹר זְר֣וֹעַ רָשָׁ֑ע וָ֝רָ֗ע תִּֽדְרוֹשׁ־רִשְׁע֥וֹ בַל־תִּמְצָֽא׃",
+   "en": "Break Thou the arm of the wicked; And as for the evil man, search out his wickedness, till none be found."
+  },
+  {
+   "v": 16,
+   "he": "יְהוָ֣ה מֶ֭לֶךְ עוֹלָ֣ם וָעֶ֑ד אָבְד֥וּ ג֝וֹיִ֗ם מֵֽאַרְצֽוֹ׃",
+   "en": "The LORD is King for ever and ever; The nations are perished out of His land."
+  },
+  {
+   "v": 17,
+   "he": "תַּאֲוַ֬ת עֲנָוִ֣ים שָׁמַ֣עְתָּ יְהוָ֑ה תָּכִ֥ין לִ֝בָּ֗ם תַּקְשִׁ֥יב אָזְנֶֽךָ׃",
+   "en": "LORD, Thou hast heard the desire of the humble: Thou wilt direct their heart, Thou wilt cause Thine ear to attend;"
+  },
+  {
+   "v": 18,
+   "he": "לִשְׁפֹּ֥ט יָת֗וֹם וָ֫דָ֥ךְ בַּל־יוֹסִ֥יף ע֑וֹד לַעֲרֹ֥ץ אֱ֝נ֗וֹשׁ מִן־הָאָֽרֶץ׃",
+   "en": "To right the fatherless and the oppressed, That man who is of the earth may be terrible no more."
+  }
+ ],
+ "sourcing": "sourced"
+}

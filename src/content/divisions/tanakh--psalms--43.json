@@ -1,0 +1,35 @@
+{
+ "id": "tanakh--psalms--43",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 43,
+ "verses": [
+  {
+   "v": 1,
+   "he": "שָׁפְטֵ֤נִי אֱלֹהִ֨ים׀ וְרִ֘יבָ֤ה רִיבִ֗י מִגּ֥וֹי לֹא־חָסִ֑יד מֵ֤אִישׁ־מִרְמָ֖ה וְעַוְלָ֣ה תְפַלְּטֵֽנִי׃",
+   "en": "Be Thou my judge, O God, and plead my cause against an ungodly nation; O deliver me from the deceitful and unjust man."
+  },
+  {
+   "v": 2,
+   "he": "כִּֽי־אַתָּ֤ה׀ אֱלֹהֵ֣י מָֽעוּזִּי֮ לָמָ֪ה זְנַ֫חְתָּ֥נִי לָֽמָּה־קֹדֵ֥ר אֶתְהַלֵּ֗ךְ בְּלַ֣חַץ אוֹיֵֽב׃",
+   "en": "For Thou art the God of my strength; why hast Thou cast me off? Why go I mourning under the oppression of the enemy?"
+  },
+  {
+   "v": 3,
+   "he": "שְׁלַח־אוֹרְךָ֣ וַ֭אֲמִתְּךָ הֵ֣מָּה יַנְח֑וּנִי יְבִיא֥וּנִי אֶל־הַֽר־קָ֝דְשְׁךָ֗ וְאֶל־מִשְׁכְּנוֹתֶֽיךָ׃",
+   "en": "O send out Thy light and Thy truth; let them lead me; Let them bring me unto Thy holy mountain, and to Thy dwelling-places."
+  },
+  {
+   "v": 4,
+   "he": "וְאָב֤וֹאָה׀ אֶל־מִזְבַּ֬ח אֱלֹהִ֗ים אֶל־אֵל֮ שִׂמְחַ֪ת גִּ֫ילִ֥י וְאוֹדְךָ֥ בְכִנּ֗וֹר אֱלֹהִ֥ים אֱלֹהָֽי׃",
+   "en": "Then will I go unto the altar of God, unto God, my exceeding joy; And praise Thee upon the harp, O God, my God."
+  },
+  {
+   "v": 5,
+   "he": "מַה־תִּשְׁתּ֬וֹחֲחִ֨י׀ נַפְשִׁי֮ וּֽמַה־תֶּהֱמִ֪י עָ֫לָ֥י הוֹחִ֣ילִי לֵֽ֭אלֹהִים כִּי־ע֣וֹד אוֹדֶ֑נּוּ יְשׁוּעֹ֥ת פָּ֝נַ֗י וֵֽאלֹהָֽי׃",
+   "en": "Why art thou cast down, O my soul? And why moanest thou within me? Hope thou in God; for I shall yet praise Him, The salvation of my countenance, and my God."
+  }
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,105 @@
+{
+ "id": "tanakh--ecclesiastes--5",
+ "work": "tanakh",
+ "n": 33,
+ "slug": "ecclesiastes",
+ "c": 5,
+ "verses": [
+  {
+   "v": 1,
+   "he": "אַל־תְּבַהֵ֨ל עַל־פִּ֜יךָ וְלִבְּךָ֧ אַל־יְמַהֵ֛ר לְהוֹצִ֥יא דָבָ֖ר לִפְנֵ֣י הָאֱלֹהִ֑ים כִּ֣י הָאֱלֹהִ֤ים בַּשָּׁמַ֙יִם֙ וְאַתָּ֣ה עַל־הָאָ֔רֶץ עַֽל־כֵּ֛ן יִהְי֥וּ דְבָרֶ֖יךָ מְעַטִּֽים׃",
+   "en": "Be not rash with thy mouth, and let not thy heart be hasty to utter a word before God; for God is in heaven, and thou upon earth; therefore let thy words be few."
+  },
+  {
+   "v": 2,
+   "he": "כִּ֛י בָּ֥א הַחֲל֖וֹם בְּרֹ֣ב עִנְיָ֑ן וְק֥וֹל כְּסִ֖יל בְּרֹ֥ב דְּבָרִֽים׃",
+   "en": "For a dream cometh through a multitude of business; And a fool’s voice through a multitude of words."
+  },
+  {
+   "v": 3,
+   "he": "כַּאֲשֶׁר֩ תִּדֹּ֨ר נֶ֜דֶר לֵֽאלֹהִ֗ים אַל־תְּאַחֵר֙ לְשַׁלְּמ֔וֹ כִּ֛י אֵ֥ין חֵ֖פֶץ בַּכְּסִילִ֑ים אֵ֥ת אֲשֶׁר־תִּדֹּ֖ר שַׁלֵּֽם׃",
+   "en": "When thou vowest a vow unto God, defer not to pay it; for He hath no pleasure in fools; pay that which thou vowest."
+  },
+  {
+   "v": 4,
+   "he": "ט֖וֹב אֲשֶׁ֣ר לֹֽא־תִדֹּ֑ר מִשֶּׁתִּדּ֖וֹר וְלֹ֥א תְשַׁלֵּֽם׃",
+   "en": "Better is it that thou shouldest not vow, than that thou shouldest vow and not pay."
+  },
+  {
+   "v": 5,
+   "he": "אַל־תִּתֵּ֤ן אֶת־פִּ֙יךָ֙ לַחֲטִ֣יא אֶת־בְּשָׂרֶ֔ךָ וְאַל־תֹּאמַר֙ לִפְנֵ֣י הַמַּלְאָ֔ךְ כִּ֥י שְׁגָגָ֖ה הִ֑יא לָ֣מָּה יִקְצֹ֤ף הָֽאֱלֹהִים֙ עַל־קוֹלֶ֔ךָ וְחִבֵּ֖ל אֶת־מַעֲשֵׂ֥ה יָדֶֽיךָ׃",
+   "en": "Suffer not thy mouth to bring thy flesh into guilt, neither say thou before the messenger, that it was an error; wherefore should God be angry at thy voice, and destroy the work of thy hands?"
+  },
+  {
+   "v": 6,
+   "he": "כִּ֣י בְרֹ֤ב חֲלֹמוֹת֙ וַהֲבָלִ֔ים וּדְבָרִ֖ים הַרְבֵּ֑ה כִּ֥י אֶת־הָאֱלֹהִ֖ים יְרָֽא׃",
+   "en": "For through the multitude of dreams and vanities there are also many words; but fear thou God."
+  },
+  {
+   "v": 7,
+   "he": "אִם־עֹ֣שֶׁק רָ֠שׁ וְגֵ֨זֶל מִשְׁפָּ֤ט וָצֶ֙דֶק֙ תִּרְאֶ֣ה בַמְּדִינָ֔ה אַל־תִּתְמַ֖הּ עַל־הַחֵ֑פֶץ כִּ֣י גָבֹ֜הַּ מֵעַ֤ל גָּבֹ֙הַּ֙ שֹׁמֵ֔ר וּגְבֹהִ֖ים עֲלֵיהֶֽם׃",
+   "en": "If thou seest the oppression of the poor, and the violent perverting of justice and righteousness in the state, marvel not at the matter; for one higher than the high watcheth, and there are higher than they."
+  },
+  {
+   "v": 8,
+   "he": "וְיִתְר֥וֹן אֶ֖רֶץ בַּכֹּ֣ל היא [ה֑וּא] מֶ֥לֶךְ לְשָׂדֶ֖ה נֶעֱבָֽד׃",
+   "en": "But the profit of a land every way is a king that maketh himself servant to the field."
+  },
+  {
+   "v": 9,
+   "he": "אֹהֵ֥ב כֶּ֙סֶף֙ לֹא־יִשְׂבַּ֣ע כֶּ֔סֶף וּמִֽי־אֹהֵ֥ב בֶּהָמ֖וֹן לֹ֣א תְבוּאָ֑ה גַּם־זֶ֖ה הָֽבֶל׃",
+   "en": "He that loveth silver shall not be satisfied with silver; nor he that loveth abundance, with increase; this also is vanity."
+  },
+  {
+   "v": 10,
+   "he": "בִּרְבוֹת֙ הַטּוֹבָ֔ה רַבּ֖וּ אוֹכְלֶ֑יהָ וּמַה־כִּשְׁרוֹן֙ לִבְעָלֶ֔יהָ כִּ֖י אִם־ראית [רְא֥וּת] עֵינָֽיו׃",
+   "en": "When goods increase, they are increased that eat them; and what advantage is there to the owner thereof, saving the beholding of them with his eyes?"
+  },
+  {
+   "v": 11,
+   "he": "מְתוּקָה֙ שְׁנַ֣ת הָעֹבֵ֔ד אִם־מְעַ֥ט וְאִם־הַרְבֵּ֖ה יֹאכֵ֑ל וְהַשָּׂבָע֙ לֶֽעָשִׁ֔יר אֵינֶ֛נּוּ מַנִּ֥יחַֽ ל֖וֹ לִישֽׁוֹן׃",
+   "en": "Sweet is the sleep of a labouring man, whether he eat little or much; but the satiety of the rich will not suffer him to sleep."
+  },
+  {
+   "v": 12,
+   "he": "יֵ֚שׁ רָעָ֣ה חוֹלָ֔ה רָאִ֖יתִי תַּ֣חַת הַשָּׁ֑מֶשׁ עֹ֛שֶׁר שָׁמ֥וּר לִבְעָלָ֖יו לְרָעָתֽוֹ׃",
+   "en": "There is a grievous evil which I have seen under the sun, namely, riches kept by the owner thereof to his hurt;"
+  },
+  {
+   "v": 13,
+   "he": "וְאָבַ֛ד הָעֹ֥שֶׁר הַה֖וּא בְּעִנְיַ֣ן רָ֑ע וְהוֹלִ֣יד בֵּ֔ן וְאֵ֥ין בְּיָד֖וֹ מְאֽוּמָה׃",
+   "en": "and those riches perish by evil adventure; and if he hath begotten a son, there is nothing in his hand."
+  },
+  {
+   "v": 14,
+   "he": "כַּאֲשֶׁ֤ר יָצָא֙ מִבֶּ֣טֶן אִמּ֔וֹ עָר֛וֹם יָשׁ֥וּב לָלֶ֖כֶת כְּשֶׁבָּ֑א וּמְא֙וּמָה֙ לֹא־יִשָּׂ֣א בַעֲמָל֔וֹ שֶׁיֹּלֵ֖ךְ בְּיָדֽוֹ׃",
+   "en": "As he came forth of his mother’s womb, naked shall he go back as he came, and shall take nothing for his labour, which he may carry away in his hand."
+  },
+  {
+   "v": 15,
+   "he": "וְגַם־זֹה֙ רָעָ֣ה חוֹלָ֔ה כָּל־עֻמַּ֥ת שֶׁבָּ֖א כֵּ֣ן יֵלֵ֑ךְ וּמַה־יִּתְר֣וֹן ל֔וֹ שֶֽׁיַּעֲמֹ֖ל לָרֽוּחַ׃",
+   "en": "And this also is a grievous evil, that in all points as he came, so shall he go; and what profit hath he that he laboureth for the wind?"
+  },
+  {
+   "v": 16,
+   "he": "גַּ֥ם כָּל־יָמָ֖יו בַּחֹ֣שֶׁךְ יֹאכֵ֑ל וְכָעַ֥ס הַרְבֵּ֖ה וְחָלְי֥וֹ וָקָֽצֶף׃",
+   "en": "All his days also he eateth in darkness, and he hath much vexation and sickness and wrath. ."
+  },
+  {
+   "v": 17,
+   "he": "הִנֵּ֞ה אֲשֶׁר־רָאִ֣יתִי אָ֗נִי ט֣וֹב אֲשֶׁר־יָפֶ֣ה לֶֽאֶכוֹל־וְ֠לִשְׁתּוֹת וְלִרְא֨וֹת טוֹבָ֜ה בְּכָל־עֲמָל֣וֹ׀ שֶׁיַּעֲמֹ֣ל תַּֽחַת־הַשֶּׁ֗מֶשׁ מִסְפַּ֧ר יְמֵי־חיו [חַיָּ֛יו] אֲשֶׁר־נָֽתַן־ל֥וֹ הָאֱלֹהִ֖ים כִּי־ה֥וּא חֶלְקֽוֹ׃",
+   "en": "Behold that which I have seen: it is good, yea, it is comely for one to eat and to drink, and to enjoy pleasure for all his labour, wherein he laboureth under the sun, all the days of his life which God hath given him; for this is his portion."
+  },
+  {
+   "v": 18,
+   "he": "גַּ֣ם כָּֽל־הָאָדָ֡ם אֲשֶׁ֣ר נָֽתַן־ל֣וֹ הָאֱלֹהִים֩ עֹ֨שֶׁר וּנְכָסִ֜ים וְהִשְׁלִיט֨וֹ לֶאֱכֹ֤ל מִמֶּ֙נּוּ֙ וְלָשֵׂ֣את אֶת־חֶלְק֔וֹ וְלִשְׂמֹ֖חַ בַּעֲמָל֑וֹ זֹ֕ה מַתַּ֥ת אֱלֹהִ֖ים הִֽיא׃",
+   "en": "Every man also to whom God hath given riches and wealth, and hath given him power to eat thereof, and to take his portion, and to rejoice in his labour—this is the gift of God."
+  },
+  {
+   "v": 19,
+   "he": "כִּ֚י לֹ֣א הַרְבֵּ֔ה יִזְכֹּ֖ר אֶת־יְמֵ֣י חַיָּ֑יו כִּ֧י הָאֱלֹהִ֛ים מַעֲנֶ֖ה בְּשִׂמְחַ֥ת לִבּֽוֹ׃",
+   "en": "For let him remember the days of his life that they are not many; for God answereth him in the joy of his heart."
+  }
+ ],
+ "sourcing": "sourced"
+}

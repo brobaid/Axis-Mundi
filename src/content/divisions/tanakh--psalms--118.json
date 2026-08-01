@@ -1,0 +1,155 @@
+{
+ "id": "tanakh--psalms--118",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 118,
+ "verses": [
+  {
+   "v": 1,
+   "he": "הוֹד֣וּ לַיהוָ֣ה כִּי־ט֑וֹב כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+   "en": "'O give thanks unto the LORD, for He is good, For His mercy endureth for ever."
+  },
+  {
+   "v": 2,
+   "he": "יֹֽאמַר־נָ֥א יִשְׂרָאֵ֑ל כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+   "en": "So let Israel now say, For His mercy endureth for ever,"
+  },
+  {
+   "v": 3,
+   "he": "יֹֽאמְרוּ־נָ֥א בֵֽית־אַהֲרֹ֑ן כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+   "en": "So let the house of Aaron now say, For His mercy endureth for ever."
+  },
+  {
+   "v": 4,
+   "he": "יֹֽאמְרוּ־נָ֭א יִרְאֵ֣י יְהוָ֑ה כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+   "en": "So let them now that fear the LORD say, For His mercy endureth for ever."
+  },
+  {
+   "v": 5,
+   "he": "מִֽן־הַ֭מֵּצַ֥ר קָרָ֣אתִי יָּ֑הּ עָנָ֖נִי בַמֶּרְחָ֣ב יָֽהּ׃",
+   "en": "Out of my straits I called upon the LORD; He answered me with great enlargement."
+  },
+  {
+   "v": 6,
+   "he": "יְהוָ֣ה לִ֭י לֹ֣א אִירָ֑א מַה־יַּעֲשֶׂ֖ה לִ֣י אָדָֽם׃",
+   "en": "The LORD is for me; I will not fear; What can man do unto me?"
+  },
+  {
+   "v": 7,
+   "he": "יְהוָ֣ה לִ֭י בְּעֹזְרָ֑י וַ֝אֲנִ֗י אֶרְאֶ֥ה בְשֹׂנְאָֽי׃",
+   "en": "The LORD is for me as my helper; And I shall gaze upon them that hate me."
+  },
+  {
+   "v": 8,
+   "he": "ט֗וֹב לַחֲס֥וֹת בַּיהוָ֑ה מִ֝בְּטֹ֗חַ בָּאָדָֽם׃",
+   "en": "It is better to take refuge in the LORD Than to trust in man."
+  },
+  {
+   "v": 9,
+   "he": "ט֗וֹב לַחֲס֥וֹת בַּיהוָ֑ה מִ֝בְּטֹ֗חַ בִּנְדִיבִֽים׃",
+   "en": "It is better to take refuge in the LORD Than to trust in princes."
+  },
+  {
+   "v": 10,
+   "he": "כָּל־גּוֹיִ֥ם סְבָב֑וּנִי בְּשֵׁ֥ם יְ֝הוָ֗ה כִּ֣י אֲמִילַֽם׃",
+   "en": "All nations compass me about; Verily, in the name of the LORD I will cut them off."
+  },
+  {
+   "v": 11,
+   "he": "סַבּ֥וּנִי גַם־סְבָב֑וּנִי בְּשֵׁ֥ם יְ֝הוָ֗ה כִּ֣י אֲמִילַֽם׃",
+   "en": "They compass me about, yea, they compass me about; Verily, in the name of the LORD I will cut them off."
+  },
+  {
+   "v": 12,
+   "he": "סַבּ֤וּנִי כִדְבוֹרִ֗ים דֹּ֭עֲכוּ כְּאֵ֣שׁ קוֹצִ֑ים בְּשֵׁ֥ם יְ֝הוָ֗ה כִּ֣י אֲמִילַֽם׃",
+   "en": "They compass me about like bees; They are quenched as the fire of thorns; Verily, in the name of the LORD I will cut them off."
+  },
+  {
+   "v": 13,
+   "he": "דַּחֹ֣ה דְחִיתַ֣נִי לִנְפֹּ֑ל וַ֖יהוָ֣ה עֲזָרָֽנִי׃",
+   "en": "Thou didst thrust sore at me that I might fall; But the LORD helped me."
+  },
+  {
+   "v": 14,
+   "he": "עָזִּ֣י וְזִמְרָ֣ת יָ֑הּ וַֽיְהִי־לִ֝֗י לִֽישׁוּעָֽה׃",
+   "en": "The LORD is my strength and song; And He is become my salvation."
+  },
+  {
+   "v": 15,
+   "he": "ק֤וֹל׀ רִנָּ֬ה וִֽישׁוּעָ֗ה בְּאָהֳלֵ֥י צַדִּיקִ֑ים יְמִ֥ין יְ֝הוָה עֹ֣שָׂה חָֽיִל׃",
+   "en": "The voice of rejoicing and salvation is in the tents of the righteous; The right hand of the LORD doeth valiantly."
+  },
+  {
+   "v": 16,
+   "he": "יְמִ֣ין יְ֭הוָה רוֹמֵמָ֑ה יְמִ֥ין יְ֝הוָה עֹ֣שָׂה חָֽיִל׃",
+   "en": "The right hand of the LORD is exalted; The right hand of the LORD doeth valiantly."
+  },
+  {
+   "v": 17,
+   "he": "לֹֽא אָמ֥וּת כִּי־אֶֽחְיֶ֑ה וַ֝אֲסַפֵּ֗ר מַֽעֲשֵׂ֥י יָֽהּ׃",
+   "en": "I shall not die, but live, And declare the works of the LORD."
+  },
+  {
+   "v": 18,
+   "he": "יַסֹּ֣ר יִסְּרַ֣נִּי יָּ֑הּ וְ֝לַמָּ֗וֶת לֹ֣א נְתָנָֽנִי׃",
+   "en": "The LORD hath chastened me sore; But He hath not given me over unto death."
+  },
+  {
+   "v": 19,
+   "he": "פִּתְחוּ־לִ֥י שַׁעֲרֵי־צֶ֑דֶק אָֽבֹא־בָ֝ם אוֹדֶ֥ה יָֽהּ׃",
+   "en": "Open to me the gates of righteousness; I will enter into them, I will give thanks unto the LORD."
+  },
+  {
+   "v": 20,
+   "he": "זֶֽה־הַשַּׁ֥עַר לַיהוָ֑ה צַ֝דִּיקִ֗ים יָבֹ֥אוּ בֽוֹ׃",
+   "en": "This is the gate of the LORD; The righteous shall enter into it."
+  },
+  {
+   "v": 21,
+   "he": "א֭וֹדְךָ כִּ֣י עֲנִיתָ֑נִי וַתְּהִי־לִ֝֗י לִֽישׁוּעָֽה׃",
+   "en": "I will give thanks unto Thee, for Thou hast answered me, And art become my salvation."
+  },
+  {
+   "v": 22,
+   "he": "אֶ֭בֶן מָאֲס֣וּ הַבּוֹנִ֑ים הָ֝יְתָ֗ה לְרֹ֣אשׁ פִּנָּֽה׃",
+   "en": "The stone which the builders rejected Is become the chief corner-stone."
+  },
+  {
+   "v": 23,
+   "he": "מֵאֵ֣ת יְ֭הוָה הָ֣יְתָה זֹּ֑את הִ֖יא נִפְלָ֣את בְּעֵינֵֽינוּ׃",
+   "en": "This is the LORD’S doing; It is marvellous in our eyes."
+  },
+  {
+   "v": 24,
+   "he": "זֶה־הַ֭יּוֹם עָשָׂ֣ה יְהוָ֑ה נָגִ֖ילָה וְנִשְׂמְחָ֣ה בֽוֹ׃",
+   "en": "This is the day which the LORD hath made; We will rejoice and be glad in it."
+  },
+  {
+   "v": 25,
+   "he": "אָנָּ֣א יְ֭הוָה הוֹשִׁ֘יעָ֥ה נָּ֑א אָֽנָּ֥א יְ֝הוָ֗ה הַצְלִ֘יחָ֥ה נָּֽא׃",
+   "en": "We beseech Thee, O LORD, save now! We beseech Thee, O LORD, make us now to prosper!"
+  },
+  {
+   "v": 26,
+   "he": "בָּר֣וּךְ הַ֭בָּא בְּשֵׁ֣ם יְהוָ֑ה בֵּ֝רַֽכְנוּכֶ֗ם מִבֵּ֥ית יְהוָֽה׃",
+   "en": "Blessed be he that cometh in the name of the LORD; We bless you out of the house of the LORD."
+  },
+  {
+   "v": 27,
+   "he": "אֵ֤ל׀ יְהוָה֮ וַיָּ֪אֶר לָ֥נוּ אִסְרוּ־חַ֥ג בַּעֲבֹתִ֑ים עַד־קַ֝רְנ֗וֹת הַמִּזְבֵּֽחַ׃",
+   "en": "The LORD is God, and hath given us light; Order the festival procession with boughs, even unto the horns of the altar."
+  },
+  {
+   "v": 28,
+   "he": "אֵלִ֣י אַתָּ֣ה וְאוֹדֶ֑ךָּ אֱ֝לֹהַ֗י אֲרוֹמְמֶֽךָּ׃",
+   "en": "Thou art my God, and I will give thanks unto Thee; Thou art my God, I will exalt Thee."
+  },
+  {
+   "v": 29,
+   "he": "הוֹד֣וּ לַיהוָ֣ה כִּי־ט֑וֹב כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+   "en": "O give thanks unto the LORD, for He is good, For His mercy endureth for ever."
+  }
+ ],
+ "sourcing": "sourced"
+}

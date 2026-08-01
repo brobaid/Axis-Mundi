@@ -1,0 +1,120 @@
+{
+ "id": "tanakh--isaiah--2",
+ "work": "tanakh",
+ "n": 12,
+ "slug": "isaiah",
+ "c": 2,
+ "verses": [
+  {
+   "v": 1,
+   "he": "הַדָּבָר֙ אֲשֶׁ֣ר חָזָ֔ה יְשַֽׁעְיָ֖הוּ בֶּן־אָמ֑וֹץ עַל־יְהוּדָ֖ה וִירוּשָׁלָ‍ִֽם׃",
+   "en": "The word that Isaiah the son of Amoz saw concerning Judah and Jerusalem."
+  },
+  {
+   "v": 2,
+   "he": "וְהָיָ֣ה׀ בְּאַחֲרִ֣ית הַיָּמִ֗ים נָכ֨וֹן יִֽהְיֶ֜ה הַ֤ר בֵּית־יְהוָה֙ בְּרֹ֣אשׁ הֶהָרִ֔ים וְנִשָּׂ֖א מִגְּבָע֑וֹת וְנָהֲר֥וּ אֵלָ֖יו כָּל־הַגּוֹיִֽם׃",
+   "en": "And it shall come to pass in the end of days, That the mountain of the LORD’S house Shall be established as the top of the mountains, And shall be exalted above the hills; And all nations shall flow unto it."
+  },
+  {
+   "v": 3,
+   "he": "וְֽהָלְכ֞וּ עַמִּ֣ים רַבִּ֗ים וְאָמְרוּ֙ לְכ֣וּ׀ וְנַעֲלֶ֣ה אֶל־הַר־יְהוָ֗ה אֶל־בֵּית֙ אֱלֹהֵ֣י יַעֲקֹ֔ב וְיֹרֵ֙נוּ֙ מִדְּרָכָ֔יו וְנֵלְכָ֖ה בְּאֹרְחֹתָ֑יו כִּ֤י מִצִּיּוֹן֙ תֵּצֵ֣א תוֹרָ֔ה וּדְבַר־יְהוָ֖ה מִירוּשָׁלָ‍ִֽם׃",
+   "en": "And many peoples shall go and say: ‘Come ye, and let us go up to the mountain of the LORD, To the house of the God of Jacob; And He will teach us of His ways, And we will walk in His paths.’ For out of Zion shall go forth the law, And the word of the LORD from Jerusalem."
+  },
+  {
+   "v": 4,
+   "he": "וְשָׁפַט֙ בֵּ֣ין הַגּוֹיִ֔ם וְהוֹכִ֖יחַ לְעַמִּ֣ים רַבִּ֑ים וְכִתְּת֨וּ חַרְבוֹתָ֜ם לְאִתִּ֗ים וַחֲנִיתֽוֹתֵיהֶם֙ לְמַזְמֵר֔וֹת לֹא־יִשָּׂ֨א ג֤וֹי אֶל־גּוֹי֙ חֶ֔רֶב וְלֹא־יִלְמְד֥וּ ע֖וֹד מִלְחָמָֽה׃",
+   "en": "And He shall judge between the nations, And shall decide for many peoples; And they shall beat their swords into plowshares, And their spears into pruninghooks; Nation shall not lift up sword against nation, Neither shall they learn war any more."
+  },
+  {
+   "v": 5,
+   "he": "בֵּ֖ית יַעֲקֹ֑ב לְכ֥וּ וְנֵלְכָ֖ה בְּא֥וֹר יְהוָֽה׃",
+   "en": "O house of Jacob, come ye, and let us walk In the light of the LORD."
+  },
+  {
+   "v": 6,
+   "he": "כִּ֣י נָטַ֗שְׁתָּה עַמְּךָ֙ בֵּ֣ית יַעֲקֹ֔ב כִּ֤י מָלְאוּ֙ מִקֶּ֔דֶם וְעֹֽנְנִ֖ים כַּפְּלִשְׁתִּ֑ים וּבְיַלְדֵ֥י נָכְרִ֖ים יַשְׂפִּֽיקוּ׃",
+   "en": "For Thou hast forsaken Thy people the house of Jacob; For they are replenished from the east, And with soothsayers like the Philistines, And they please themselves in the brood of aliens."
+  },
+  {
+   "v": 7,
+   "he": "וַתִּמָּלֵ֤א אַרְצוֹ֙ כֶּ֣סֶף וְזָהָ֔ב וְאֵ֥ין קֵ֖צֶה לְאֹצְרֹתָ֑יו וַתִּמָּלֵ֤א אַרְצוֹ֙ סוּסִ֔ים וְאֵ֥ין קֵ֖צֶה לְמַרְכְּבֹתָֽיו׃",
+   "en": "Their land also is full of silver and gold, Neither is there any end of their treasures; Their land also is full of horses, Neither is there any end of their chariots."
+  },
+  {
+   "v": 8,
+   "he": "וַתִּמָּלֵ֥א אַרְצ֖וֹ אֱלִילִ֑ים לְמַעֲשֵׂ֤ה יָדָיו֙ יִֽשְׁתַּחֲו֔וּ לַאֲשֶׁ֥ר עָשׂ֖וּ אֶצְבְּעֹתָֽיו׃",
+   "en": "Their land also is full of idols; Every one worshippeth the work of his own hands, That which his own fingers have made."
+  },
+  {
+   "v": 9,
+   "he": "וַיִּשַּׁ֥ח אָדָ֖ם וַיִּשְׁפַּל־אִ֑ישׁ וְאַל־תִּשָּׂ֖א לָהֶֽם׃",
+   "en": "And man boweth down, And man lowereth himself; And Thou canst not bear with them."
+  },
+  {
+   "v": 10,
+   "he": "בּ֣וֹא בַצּ֔וּר וְהִטָּמֵ֖ן בֶּֽעָפָ֑ר מִפְּנֵי֙ פַּ֣חַד יְהוָ֔ה וּמֵהֲדַ֖ר גְּאֹנֽוֹ׃",
+   "en": "Enter into the rock, And hide thee in the dust, From before the terror of the LORD, And from the glory of His majesty."
+  },
+  {
+   "v": 11,
+   "he": "עֵינֵ֞י גַּבְה֤וּת אָדָם֙ שָׁפֵ֔ל וְשַׁ֖ח ר֣וּם אֲנָשִׁ֑ים וְנִשְׂגַּ֧ב יְהוָ֛ה לְבַדּ֖וֹ בַּיּ֥וֹם הַהֽוּא׃",
+   "en": "The lofty looks of man shall be brought low, And the haughtiness of men shall be bowed down, And the LORD alone shall be exalted in that day."
+  },
+  {
+   "v": 12,
+   "he": "כִּ֣י י֞וֹם לַיהוָ֧ה צְבָא֛וֹת עַ֥ל כָּל־גֵּאֶ֖ה וָרָ֑ם וְעַ֖ל כָּל־נִשָּׂ֥א וְשָׁפֵֽל׃",
+   "en": "For the LORD of hosts hath a day Upon all that is proud and lofty, And upon all that is lifted up, and it shall be brought low;"
+  },
+  {
+   "v": 13,
+   "he": "וְעַל֙ כָּל־אַרְזֵ֣י הַלְּבָנ֔וֹן הָרָמִ֖ים וְהַנִּשָּׂאִ֑ים וְעַ֖ל כָּל־אַלּוֹנֵ֥י הַבָּשָֽׁן׃",
+   "en": "And upon all the cedars of Lebanon That are high and lifted up, And upon all the oaks of Bashan;"
+  },
+  {
+   "v": 14,
+   "he": "וְעַ֖ל כָּל־הֶהָרִ֣ים הָרָמִ֑ים וְעַ֖ל כָּל־הַגְּבָע֥וֹת הַנִּשָּׂאֽוֹת׃",
+   "en": "And upon all the high mountains, And upon all the hills that are lifted up;"
+  },
+  {
+   "v": 15,
+   "he": "וְעַ֖ל כָּל־מִגְדָּ֣ל גָּבֹ֑הַ וְעַ֖ל כָּל־חוֹמָ֥ה בְצוּרָֽה׃",
+   "en": "And upon every lofty tower, And upon every fortified wall;"
+  },
+  {
+   "v": 16,
+   "he": "וְעַ֖ל כָּל־אֳנִיּ֣וֹת תַּרְשִׁ֑ישׁ וְעַ֖ל כָּל־שְׂכִיּ֥וֹת הַחֶמְדָּֽה׃",
+   "en": "And upon all the ships of Tarshish, And upon all delightful imagery."
+  },
+  {
+   "v": 17,
+   "he": "וְשַׁח֙ גַּבְה֣וּת הָאָדָ֔ם וְשָׁפֵ֖ל ר֣וּם אֲנָשִׁ֑ים וְנִשְׂגַּ֧ב יְהוָ֛ה לְבַדּ֖וֹ בַּיּ֥וֹם הַהֽוּא׃",
+   "en": "And the loftiness of man shall be bowed down, And the haughtiness of men shall be brought low; And the LORD alone shall be exalted in that day."
+  },
+  {
+   "v": 18,
+   "he": "וְהָאֱלִילִ֖ים כָּלִ֥יל יַחֲלֹֽף׃",
+   "en": "And the idols shall utterly pass away."
+  },
+  {
+   "v": 19,
+   "he": "וּבָ֙אוּ֙ בִּמְעָר֣וֹת צֻרִ֔ים וּבִמְחִלּ֖וֹת עָפָ֑ר מִפְּנֵ֞י פַּ֤חַד יְהוָה֙ וּמֵהֲדַ֣ר גְּאוֹנ֔וֹ בְּקוּמ֖וֹ לַעֲרֹ֥ץ הָאָֽרֶץ׃",
+   "en": "And men shall go into the caves of the rocks, And into the holes of the earth, From before the terror of the LORD, And from the glory of His majesty, When He ariseth to shake mightily the earth."
+  },
+  {
+   "v": 20,
+   "he": "בַּיּ֤וֹם הַהוּא֙ יַשְׁלִ֣יךְ הָאָדָ֔ם אֵ֚ת אֱלִילֵ֣י כַסְפּ֔וֹ וְאֵ֖ת אֱלִילֵ֣י זְהָב֑וֹ אֲשֶׁ֤ר עָֽשׂוּ־לוֹ֙ לְהִֽשְׁתַּחֲו‍ֹ֔ת לַחְפֹּ֥ר פֵּר֖וֹת וְלָעֲטַלֵּפִֽים׃",
+   "en": "In that day a man shall cast away His idols of silver, and his idols of gold, Which they made for themselves to worship, To the moles and to the bats;"
+  },
+  {
+   "v": 21,
+   "he": "לָבוֹא֙ בְּנִקְר֣וֹת הַצֻּרִ֔ים וּבִסְעִפֵ֖י הַסְּלָעִ֑ים מִפְּנֵ֞י פַּ֤חַד יְהוָה֙ וּמֵהֲדַ֣ר גְּאוֹנ֔וֹ בְּקוּמ֖וֹ לַעֲרֹ֥ץ הָאָֽרֶץ׃",
+   "en": "To go into the clefts of the rocks, And into the crevices of the crags, From before the terror of the LORD, And from the glory of His majesty, When he ariseth to shake mightily the earth."
+  },
+  {
+   "v": 22,
+   "he": "חִדְל֤וּ לָכֶם֙ מִן־הָ֣אָדָ֔ם אֲשֶׁ֥ר נְשָׁמָ֖ה בְּאַפּ֑וֹ כִּֽי־בַמֶּ֥ה נֶחְשָׁ֖ב הֽוּא׃",
+   "en": "Cease ye from man, in whose nostrils is a breath; For how little is he to be accounted!"
+  }
+ ],
+ "sourcing": "sourced"
+}

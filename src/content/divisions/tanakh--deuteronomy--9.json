@@ -1,0 +1,155 @@
+{
+ "id": "tanakh--deuteronomy--9",
+ "work": "tanakh",
+ "n": 5,
+ "slug": "deuteronomy",
+ "c": 9,
+ "verses": [
+  {
+   "v": 1,
+   "he": "שְׁמַ֣ע יִשְׂרָאֵ֗ל אַתָּ֨ה עֹבֵ֤ר הַיּוֹם֙ אֶת־הַיַּרְדֵּ֔ן לָבֹא֙ לָרֶ֣שֶׁת גּוֹיִ֔ם גְּדֹלִ֥ים וַעֲצֻמִ֖ים מִמֶּ֑ךָּ עָרִ֛ים גְּדֹלֹ֥ת וּבְצֻרֹ֖ת בַּשָּׁמָֽיִם׃",
+   "en": "Hear, O Israel: thou art to pass over the Jordan this day, to go in to dispossess nations greater and mightier than thyself, cities great and fortified up to heaven,"
+  },
+  {
+   "v": 2,
+   "he": "עַֽם־גָּד֥וֹל וָרָ֖ם בְּנֵ֣י עֲנָקִ֑ים אֲשֶׁ֨ר אַתָּ֤ה יָדַ֙עְתָּ֙ וְאַתָּ֣ה שָׁמַ֔עְתָּ מִ֣י יִתְיַצֵּ֔ב לִפְנֵ֖י בְּנֵ֥י עֲנָֽק׃",
+   "en": "a people great and tall, the sons of the Anakim, whom thou knowest, and of whom thou hast heard say: ‘Who can stand before the sons of Anak?’"
+  },
+  {
+   "v": 3,
+   "he": "וְיָדַעְתָּ֣ הַיּ֗וֹם כִּי֩ יְהוָ֨ה אֱלֹהֶ֜יךָ הֽוּא־הָעֹבֵ֤ר לְפָנֶ֙יךָ֙ אֵ֣שׁ אֹֽכְלָ֔ה ה֧וּא יַשְׁמִידֵ֛ם וְה֥וּא יַכְנִיעֵ֖ם לְפָנֶ֑יךָ וְהֽוֹרַשְׁתָּ֤ם וְהַֽאַבַדְתָּם֙ מַהֵ֔ר כַּאֲשֶׁ֛ר דִּבֶּ֥ר יְהוָ֖ה לָֽךְ׃",
+   "en": "Know therefore this day, that the LORD thy God is He who goeth over before thee as a devouring fire; He will destroy them, and He will bring them down before thee; so shalt thou drive them out, and make them to perish quickly, as the LORD hath spoken unto thee."
+  },
+  {
+   "v": 4,
+   "he": "אַל־תֹּאמַ֣ר בִּלְבָבְךָ֗ בַּהֲדֹ֣ף יְהוָה֩ אֱלֹהֶ֨יךָ אֹתָ֥ם׀ מִלְּפָנֶיךָ֮ לֵאמֹר֒ בְּצִדְקָתִי֙ הֱבִיאַ֣נִי יְהוָ֔ה לָרֶ֖שֶׁת אֶת־הָאָ֣רֶץ הַזֹּ֑את וּבְרִשְׁעַת֙ הַגּוֹיִ֣ם הָאֵ֔לֶּה יְהוָ֖ה מוֹרִישָׁ֥ם מִפָּנֶֽיךָ׃",
+   "en": "Speak not thou in thy heart, after that the LORD thy God hath thrust them out from before thee, saying: ‘For my righteousness the LORD hath brought me in to possess this land’; whereas for the wickedness of these nations the LORD doth drive them out from before thee."
+  },
+  {
+   "v": 5,
+   "he": "לֹ֣א בְצִדְקָתְךָ֗ וּבְיֹ֙שֶׁר֙ לְבָ֣בְךָ֔ אַתָּ֥ה בָ֖א לָרֶ֣שֶׁת אֶת־אַרְצָ֑ם כִּ֞י בְּרִשְׁעַ֣ת׀ הַגּוֹיִ֣ם הָאֵ֗לֶּה יְהוָ֤ה אֱלֹהֶ֙יךָ֙ מוֹרִישָׁ֣ם מִפָּנֶ֔יךָ וּלְמַ֜עַן הָקִ֣ים אֶת־הַדָּבָ֗ר אֲשֶׁ֨ר נִשְׁבַּ֤ע יְהוָה֙ לַאֲבֹתֶ֔יךָ לְאַבְרָהָ֥ם לְיִצְחָ֖ק וּֽלְיַעֲקֹֽב׃",
+   "en": "Not for thy righteousness, or for the uprightness of thy heart, dost thou go in to possess their land; but for the wickedness of these nations the LORD thy God doth drive them out from before thee, and that He may establish the word which the LORD swore unto thy fathers, to Abraham, to Isaac, and to Jacob."
+  },
+  {
+   "v": 6,
+   "he": "וְיָדַעְתָּ֗ כִּ֠י לֹ֤א בְצִדְקָֽתְךָ֙ יְהוָ֣ה אֱ֠לֹהֶיךָ נֹתֵ֨ן לְךָ֜ אֶת־הָאָ֧רֶץ הַטּוֹבָ֛ה הַזֹּ֖את לְרִשְׁתָּ֑הּ כִּ֥י עַם־קְשֵׁה־עֹ֖רֶף אָֽתָּה׃",
+   "en": "Know therefore that it is not for thy righteousness that the LORD thy God giveth thee this good land to possess it; for thou art a stiffnecked people."
+  },
+  {
+   "v": 7,
+   "he": "זְכֹר֙ אַל־תִּשְׁכַּ֔ח אֵ֧ת אֲשֶׁר־הִקְצַ֛פְתָּ אֶת־יְהוָ֥ה אֱלֹהֶ֖יךָ בַּמִּדְבָּ֑ר לְמִן־הַיּ֞וֹם אֲשֶׁר־יָצָ֣אתָ׀ מֵאֶ֣רֶץ מִצְרַ֗יִם עַד־בֹּֽאֲכֶם֙ עַד־הַמָּק֣וֹם הַזֶּ֔ה מַמְרִ֥ים הֱיִיתֶ֖ם עִם־יְהוָֽה׃",
+   "en": "Remember, forget thou not, how thou didst make the LORD thy God wroth in the wilderness; from the day that thou didst go forth out of the land of Egypt, until ye came unto this place, ye have been rebellious against the LORD."
+  },
+  {
+   "v": 8,
+   "he": "וּבְחֹרֵ֥ב הִקְצַפְתֶּ֖ם אֶת־יְהוָ֑ה וַיִּתְאַנַּ֧ף יְהוָ֛ה בָּכֶ֖ם לְהַשְׁמִ֥יד אֶתְכֶֽם׃",
+   "en": "Also in Horeb ye made the LORD wroth, and the LORD was angered with you to have destroyed you."
+  },
+  {
+   "v": 9,
+   "he": "בַּעֲלֹתִ֣י הָהָ֗רָה לָקַ֜חַת לוּחֹ֤ת הָֽאֲבָנִים֙ לוּחֹ֣ת הַבְּרִ֔ית אֲשֶׁר־כָּרַ֥ת יְהוָ֖ה עִמָּכֶ֑ם וָאֵשֵׁ֣ב בָּהָ֗ר אַרְבָּעִ֥ים יוֹם֙ וְאַרְבָּעִ֣ים לַ֔יְלָה לֶ֚חֶם לֹ֣א אָכַ֔לְתִּי וּמַ֖יִם לֹ֥א שָׁתִֽיתִי׃",
+   "en": "When I was gone up into the mount to receive the tables of stone, even the tables of the covenant which the LORD made with you, then I abode in the mount forty days and forty nights; I did neither eat bread nor drink water."
+  },
+  {
+   "v": 10,
+   "he": "וַיִּתֵּ֨ן יְהוָ֜ה אֵלַ֗י אֶת־שְׁנֵי֙ לוּחֹ֣ת הָֽאֲבָנִ֔ים כְּתֻבִ֖ים בְּאֶצְבַּ֣ע אֱלֹהִ֑ים וַעֲלֵיהֶ֗ם כְּֽכָל־הַדְּבָרִ֡ים אֲשֶׁ֣ר דִּבֶּר֩ יְהוָ֨ה עִמָּכֶ֥ם בָּהָ֛ר מִתּ֥וֹךְ הָאֵ֖שׁ בְּי֥וֹם הַקָּהָֽל׃",
+   "en": "And the LORD delivered unto me the two tables of stone written with the finger of God; and on them was written according to all the words, which the LORD spoke with you in the mount out of the midst of the fire in the day of the assembly."
+  },
+  {
+   "v": 11,
+   "he": "וַיְהִ֗י מִקֵּץ֙ אַרְבָּעִ֣ים י֔וֹם וְאַרְבָּעִ֖ים לָ֑יְלָה נָתַ֨ן יְהוָ֜ה אֵלַ֗י אֶת־שְׁנֵ֛י לֻחֹ֥ת הָאֲבָנִ֖ים לֻח֥וֹת הַבְּרִֽית׃",
+   "en": "And it came to pass at the end of forty days and forty nights, that the LORD gave me the two tables of stone, even the tables of the covenant."
+  },
+  {
+   "v": 12,
+   "he": "וַיֹּ֨אמֶר יְהוָ֜ה אֵלַ֗י ק֣וּם רֵ֤ד מַהֵר֙ מִזֶּ֔ה כִּ֚י שִׁחֵ֣ת עַמְּךָ֔ אֲשֶׁ֥ר הוֹצֵ֖אתָ מִמִּצְרָ֑יִם סָ֣רוּ מַהֵ֗ר מִן־הַדֶּ֙רֶךְ֙ אֲשֶׁ֣ר צִוִּיתִ֔ם עָשׂ֥וּ לָהֶ֖ם מַסֵּכָֽה׃",
+   "en": "And the LORD said unto me: ‘Arise, get thee down quickly from hence; for thy people that thou hast brought forth out of Egypt have dealt corruptly; they are quickly turned aside out of the way which I commanded them; they have made them a molten image.’"
+  },
+  {
+   "v": 13,
+   "he": "וַיֹּ֥אמֶר יְהוָ֖ה אֵלַ֣י לֵאמֹ֑ר רָאִ֙יתִי֙ אֶת־הָעָ֣ם הַזֶּ֔ה וְהִנֵּ֥ה עַם־קְשֵׁה־עֹ֖רֶף הֽוּא׃",
+   "en": "Furthermore the LORD spoke unto me, saying: ‘I have seen this people, and, behold, it is a stiffnecked people;"
+  },
+  {
+   "v": 14,
+   "he": "הֶ֤רֶף מִמֶּ֙נִּי֙ וְאַשְׁמִידֵ֔ם וְאֶמְחֶ֣ה אֶת־שְׁמָ֔ם מִתַּ֖חַת הַשָּׁמָ֑יִם וְאֶֽעֱשֶׂה֙ אֽוֹתְךָ֔ לְגוֹי־עָצ֥וּם וָרָ֖ב מִמֶּֽנּוּ׃",
+   "en": "let Me alone, that I may destroy them, and blot out their name from under heaven; and I will make of thee a nation mightier and greater than they.’"
+  },
+  {
+   "v": 15,
+   "he": "וָאֵ֗פֶן וָֽאֵרֵד֙ מִן־הָהָ֔ר וְהָהָ֖ר בֹּעֵ֣ר בָּאֵ֑שׁ וּשְׁנֵי֙ לֻחֹ֣ת הַבְּרִ֔ית עַ֖ל שְׁתֵּ֥י יָדָֽי׃",
+   "en": "So I turned and came down from the mount, and the mount burned with fire; and the two tables of the covenant were in my two hands."
+  },
+  {
+   "v": 16,
+   "he": "וָאֵ֗רֶא וְהִנֵּ֤ה חֲטָאתֶם֙ לַיהוָ֣ה אֱלֹֽהֵיכֶ֔ם עֲשִׂיתֶ֣ם לָכֶ֔ם עֵ֖גֶל מַסֵּכָ֑ה סַרְתֶּ֣ם מַהֵ֔ר מִן־הַדֶּ֕רֶךְ אֲשֶׁר־צִוָּ֥ה יְהוָ֖ה אֶתְכֶֽם׃",
+   "en": "And I looked, and, behold, ye had sinned against the LORD your God; ye had made you a molten calf; ye had turned aside quickly out of the way which the LORD had commanded you."
+  },
+  {
+   "v": 17,
+   "he": "וָאֶתְפֹּשׂ֙ בִּשְׁנֵ֣י הַלֻּחֹ֔ת וָֽאַשְׁלִכֵ֔ם מֵעַ֖ל שְׁתֵּ֣י יָדָ֑י וָאֲשַׁבְּרֵ֖ם לְעֵינֵיכֶֽם׃",
+   "en": "And I took hold of the two tables, and cast them out of my two hands, and broke them before your eyes."
+  },
+  {
+   "v": 18,
+   "he": "וָֽאֶתְנַפַּל֩ לִפְנֵ֨י יְהוָ֜ה כָּרִאשֹׁנָ֗ה אַרְבָּעִ֥ים יוֹם֙ וְאַרְבָּעִ֣ים לַ֔יְלָה לֶ֚חֶם לֹ֣א אָכַ֔לְתִּי וּמַ֖יִם לֹ֣א שָׁתִ֑יתִי עַ֤ל כָּל־חַטַּאתְכֶם֙ אֲשֶׁ֣ר חֲטָאתֶ֔ם לַעֲשׂ֥וֹת הָרַ֛ע בְּעֵינֵ֥י יְהוָ֖ה לְהַכְעִיסֽוֹ׃",
+   "en": "And I fell down before the LORD, as at the first, forty days and forty nights; I did neither eat bread nor drink water; because of all your sin which ye sinned, in doing that which was evil in the sight of the LORD, to provoke Him."
+  },
+  {
+   "v": 19,
+   "he": "כִּ֣י יָגֹ֗רְתִּי מִפְּנֵ֤י הָאַף֙ וְהַ֣חֵמָ֔ה אֲשֶׁ֨ר קָצַ֧ף יְהוָ֛ה עֲלֵיכֶ֖ם לְהַשְׁמִ֣יד אֶתְכֶ֑ם וַיִּשְׁמַ֤ע יְהוָה֙ אֵלַ֔י גַּ֖ם בַּפַּ֥עַם הַהִֽוא׃",
+   "en": "For I was in dread of the anger and hot displeasure, wherewith the LORD was wroth against you to destroy you. But the LORD hearkened unto me that time also."
+  },
+  {
+   "v": 20,
+   "he": "וּֽבְאַהֲרֹ֗ן הִתְאַנַּ֧ף יְהוָ֛ה מְאֹ֖ד לְהַשְׁמִיד֑וֹ וָֽאֶתְפַּלֵּ֛ל גַּם־בְּעַ֥ד אַהֲרֹ֖ן בָּעֵ֥ת הַהִֽוא׃",
+   "en": "Moreover the LORD was very angry with Aaron to have destroyed him; and I prayed for Aaron also the same time."
+  },
+  {
+   "v": 21,
+   "he": "וְֽאֶת־חַטַּאתְכֶ֞ם אֲשֶׁר־עֲשִׂיתֶ֣ם אֶת־הָעֵ֗גֶל לָקַחְתִּי֮ וָאֶשְׂרֹ֣ף אֹת֣וֹ׀ בָּאֵשׁ֒ וָאֶכֹּ֨ת אֹת֤וֹ טָחוֹן֙ הֵיטֵ֔ב עַ֥ד אֲשֶׁר־דַּ֖ק לְעָפָ֑ר וָֽאַשְׁלִךְ֙ אֶת־עֲפָר֔וֹ אֶל־הַנַּ֖חַל הַיֹּרֵ֥ד מִן־הָהָֽר׃",
+   "en": "And I took your sin, the calf which ye had made, and burnt it with fire, and beat it in pieces, grinding it very small, until it was as fine as dust; and I cast the dust thereof into the brook that descended out of the mount.—"
+  },
+  {
+   "v": 22,
+   "he": "וּבְתַבְעֵרָה֙ וּבְמַסָּ֔ה וּבְקִבְרֹ֖ת הַֽתַּאֲוָ֑ה מַקְצִפִ֥ים הֱיִיתֶ֖ם אֶת־יְהוָֽה׃",
+   "en": "And at Taberah, and at Massah, and at Kibroth-hattaavah, ye made the LORD wroth."
+  },
+  {
+   "v": 23,
+   "he": "וּבִשְׁלֹ֨חַ יְהוָ֜ה אֶתְכֶ֗ם מִקָּדֵ֤שׁ בַּרְנֵ֙עַ֙ לֵאמֹ֔ר עֲלוּ֙ וּרְשׁ֣וּ אֶת־הָאָ֔רֶץ אֲשֶׁ֥ר נָתַ֖תִּי לָכֶ֑ם וַתַּמְר֗וּ אֶת־פִּ֤י יְהוָה֙ אֱלֹ֣הֵיכֶ֔ם וְלֹ֤א הֶֽאֱמַנְתֶּם֙ ל֔וֹ וְלֹ֥א שְׁמַעְתֶּ֖ם בְּקֹלֽוֹ׃",
+   "en": "And when the LORD sent you from Kadesh-barnea, saying: ‘Go up and possess the land which I have given you’; then ye rebelled against the commandment of the LORD your God, and ye believed Him not, nor hearkened to His voice."
+  },
+  {
+   "v": 24,
+   "he": "מַמְרִ֥ים הֱיִיתֶ֖ם עִם־יְהוָ֑ה מִיּ֖וֹם דַּעְתִּ֥י אֶתְכֶֽם׃",
+   "en": "Ye have been rebellious against the LORD from the day that I knew you.—"
+  },
+  {
+   "v": 25,
+   "he": "וָֽאֶתְנַפַּ֞ל לִפְנֵ֣י יְהוָ֗ה אֵ֣ת אַרְבָּעִ֥ים הַיּ֛וֹם וְאֶת־אַרְבָּעִ֥ים הַלַּ֖יְלָה אֲשֶׁ֣ר הִתְנַפָּ֑לְתִּי כִּֽי־אָמַ֥ר יְהוָ֖ה לְהַשְׁמִ֥יד אֶתְכֶֽם׃",
+   "en": "So I fell down before the LORD the forty days and forty nights that I fell down; because the LORD had said He would destroy you."
+  },
+  {
+   "v": 26,
+   "he": "וָאֶתְפַּלֵּ֣ל אֶל־יְהוָה֮ וָאֹמַר֒ אֲדֹנָ֣י יְהוִ֗ה אַל־תַּשְׁחֵ֤ת עַמְּךָ֙ וְנַחֲלָ֣תְךָ֔ אֲשֶׁ֥ר פָּדִ֖יתָ בְּגָדְלֶ֑ךָ אֲשֶׁר־הוֹצֵ֥אתָ מִמִּצְרַ֖יִם בְּיָ֥ד חֲזָקָֽה׃",
+   "en": "And I prayed unto the LORD, and said: ‘O Lord GOD, destroy not Thy people and Thine inheritance, that Thou hast redeemed through Thy greatness, that Thou hast brought forth out of Egypt with a mighty hand."
+  },
+  {
+   "v": 27,
+   "he": "זְכֹר֙ לַעֲבָדֶ֔יךָ לְאַבְרָהָ֥ם לְיִצְחָ֖ק וּֽלְיַעֲקֹ֑ב אַל־תֵּ֗פֶן אֶל־קְשִׁי֙ הָעָ֣ם הַזֶּ֔ה וְאֶל־רִשְׁע֖וֹ וְאֶל־חַטָּאתֽוֹ׃",
+   "en": "Remember Thy servants, Abraham, Isaac, and Jacob; look not unto the stubbornness of this people, nor to their wickedness, nor to their sin;"
+  },
+  {
+   "v": 28,
+   "he": "פֶּן־יֹאמְר֗וּ הָאָרֶץ֮ אֲשֶׁ֣ר הוֹצֵאתָ֣נוּ מִשָּׁם֒ מִבְּלִי֙ יְכֹ֣לֶת יְהוָ֔ה לַהֲבִיאָ֕ם אֶל־הָאָ֖רֶץ אֲשֶׁר־דִּבֶּ֣ר לָהֶ֑ם וּמִשִּׂנְאָת֣וֹ אוֹתָ֔ם הוֹצִיאָ֖ם לַהֲמִתָ֥ם בַּמִּדְבָּֽר׃",
+   "en": "lest the land whence Thou broughtest us out say: Because the LORD was not able to bring them into the land which He promised unto them, and because He hated them, He hath brought them out to slay them in the wilderness."
+  },
+  {
+   "v": 29,
+   "he": "וְהֵ֥ם עַמְּךָ֖ וְנַחֲלָתֶ֑ךָ אֲשֶׁ֤ר הוֹצֵ֙אתָ֙ בְּכֹחֲךָ֣ הַגָּדֹ֔ל וּבִֽזְרֹעֲךָ֖ הַנְּטוּיָֽה׃",
+   "en": "Yet they are Thy people and Thine inheritance, that Thou didst bring out by Thy great power and by Thy outstretched arm.’"
+  }
+ ],
+ "sourcing": "sourced"
+}

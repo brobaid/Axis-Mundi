@@ -27,13 +27,29 @@ if (!existsSync(DIST)) {
   process.exit(1);
 }
 
+interface ChapterIndex {
+  c: number;
+  verses: number;
+  preview?: string;
+  english_gaps: number;
+  original_gaps: number;
+}
+
 interface WorkIndex {
   id: string;
   title: string;
   editions: Record<string, string>;
-  divisions: { n: number; slug: string; verses: number; english_gaps: number }[];
+  divisions: {
+    n: number;
+    slug: string;
+    verses: number;
+    chapters?: ChapterIndex[];
+    english_gaps: number;
+    original_gaps: number;
+  }[];
   total_verses: number;
   english_gaps: number;
+  original_gaps: number;
 }
 
 const problems: string[] = [];
@@ -52,6 +68,24 @@ const works = readdirSync(worksDir)
 let pages = 0;
 let versesOnPages = 0;
 
+/*
+  The page budget.
+
+  A hundred kilobytes, on the artefact rather than on the wire, because that is
+  the number the owner set and gzip's help varies by script. It is enforced
+  where it can be met: a canon with a chapter level can always be cut to one,
+  so a chapter page over budget is a bug in this build. A canon whose division
+  IS its leaf — a surah runs straight to its ayat — is as small as the canon
+  allows, and cutting it further would mean inventing an address the tradition
+  does not cite. Those are reported at every run and never silently.
+*/
+const BUDGET = 100_000;
+const overBudget: { route: string; bytes: number; splittable: boolean }[] = [];
+const weigh = (route: string, path: string, splittable: boolean): void => {
+  const bytes = statSync(path).size;
+  if (bytes > BUDGET) overBudget.push({ route, bytes, splittable });
+};
+
 for (const work of works) {
   /* The contents page must offer every division, or a book is unreachable by
      any route a reader can find. */
@@ -67,42 +101,71 @@ for (const work of works) {
     }
   }
 
-  for (const division of work.divisions) {
-    const path = join(DIST, 'read', work.id, division.slug, 'index.html');
+  /* Every page names its editions — the memo's rule, and the reason a text
+     page counts as sourced content at all. */
+  const editionTitles = Object.values(work.editions).map(
+    (id) => (JSON.parse(read(join(CONTENT, 'sources', `${id}.json`))) as { title: string }).title,
+  );
+  const namesEditions = (where: string, html: string): void => {
+    for (const title of editionTitles) {
+      if (!html.includes(title)) fail(where, `does not name its edition "${title}"`);
+    }
+  };
+
+  const chaptered = work.divisions.some((d) => d.chapters !== undefined);
+
+  /** A text page: exactly the verses claimed, and every one-sided verse marked. */
+  const checkText = (where: string, path: string, verses: number, gaps: number): void => {
     if (!existsSync(path)) {
-      fail(`/read/${work.id}/${division.slug}`, 'no page was built');
-      continue;
+      fail(where, 'no page was built');
+      return;
     }
     const html = read(path);
     pages += 1;
+    weigh(where, path, chaptered);
 
     /* The assertion that would have caught the empty books. */
     const rendered = count(html, 'class="rd-verse"');
-    if (rendered !== division.verses) {
-      fail(
-        `/read/${work.id}/${division.slug}`,
-        `index says ${division.verses} verses, the page renders ${rendered}`,
-      );
+    if (rendered !== verses) {
+      fail(where, `index says ${verses} verses, the page renders ${rendered}`);
     }
     versesOnPages += rendered;
+    namesEditions(where, html);
 
-    /* Every edition named on every page — the memo's rule, and the reason a
-       text page counts as sourced content at all. */
-    for (const sourceId of Object.values(work.editions)) {
-      const source = join(CONTENT, 'sources', `${sourceId}.json`);
-      const title = (JSON.parse(read(source)) as { title: string }).title;
-      if (!html.includes(title)) {
-        fail(`/read/${work.id}/${division.slug}`, `does not name its edition "${title}"`);
-      }
+    const gapNotes = count(html, 'rd-verse__gap ');
+    if (gapNotes !== gaps) {
+      fail(where, `${gaps} verses stand on one side only, ${gapNotes} say so on the page`);
+    }
+  };
+
+  for (const division of work.divisions) {
+    const at = `/read/${work.id}/${division.slug}`;
+
+    if (division.chapters === undefined) {
+      checkText(at, join(DIST, 'read', work.id, division.slug, 'index.html'),
+        division.verses, division.english_gaps + division.original_gaps);
+      continue;
     }
 
-    /* A verse with no English says so, once per gap and never otherwise. */
-    const gapNotes = count(html, 'rd-verse__gap');
-    if (gapNotes !== division.english_gaps) {
-      fail(
-        `/read/${work.id}/${division.slug}`,
-        `${division.english_gaps} verses lack English, ${gapNotes} say so on the page`,
-      );
+    /* A chaptered division is a contents page: it must list every chapter and
+       carry no verses of its own. */
+    const path = join(DIST, 'read', work.id, division.slug, 'index.html');
+    if (!existsSync(path)) {
+      fail(at, 'no contents page was built');
+      continue;
+    }
+    const html = read(path);
+    weigh(at, path, true);
+    namesEditions(at, html);
+    if (count(html, 'class="rd-verse"') > 0) {
+      fail(at, 'a chaptered division must be a contents page, not a text page');
+    }
+    for (const chapter of division.chapters) {
+      if (!html.includes(`${at}/${chapter.c}"`)) {
+        fail(at, `contents page does not link to chapter ${chapter.c}`);
+      }
+      checkText(`${at}/${chapter.c}`, join(DIST, 'read', work.id, division.slug, String(chapter.c), 'index.html'),
+        chapter.verses, chapter.english_gaps + chapter.original_gaps);
     }
   }
 }
@@ -136,12 +199,29 @@ for (const file of walk(DIST)) {
   }
 }
 
+for (const { route, bytes, splittable } of overBudget) {
+  if (splittable) {
+    fail(route, `${bytes.toLocaleString('en')} bytes, past the ${BUDGET.toLocaleString('en')}-byte budget`);
+  }
+}
+
 if (problems.length > 0) {
   console.error('\n  Reading Room check FAILED\n');
   for (const p of problems.slice(0, 40)) console.error(`  ${p}`);
   if (problems.length > 40) console.error(`\n  …and ${problems.length - 40} more.`);
   console.error(`\n  ${problems.length} problem${problems.length === 1 ? '' : 's'}.\n`);
   process.exit(1);
+}
+
+const unsplittable = overBudget.filter((o) => !o.splittable);
+if (unsplittable.length > 0) {
+  console.log(
+    `\n  ${unsplittable.length} route${unsplittable.length === 1 ? '' : 's'} past the ` +
+      `${(BUDGET / 1000).toFixed(0)} KB budget, in a canon with no level below the one it ships:`,
+  );
+  for (const { route, bytes } of unsplittable.sort((a, b) => b.bytes - a.bytes)) {
+    console.log(`      ${route.padEnd(24)} ${bytes.toLocaleString('en').padStart(9)} B`);
+  }
 }
 
 console.log(

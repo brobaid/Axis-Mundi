@@ -1,0 +1,75 @@
+{
+ "id": "tanakh--psalms--84",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 84,
+ "verses": [
+  {
+   "v": 1,
+   "he": "לַמְנַצֵּ֥חַ עַֽל־הַגִּתִּ֑ית לִבְנֵי־קֹ֥רַח מִזְמֽוֹר׃",
+   "en": "For the Leader; upon the Gittith. A Psalm of the sons of Korah."
+  },
+  {
+   "v": 2,
+   "he": "מַה־יְּדִיד֥וֹת מִשְׁכְּנוֹתֶ֗יךָ יְהוָ֥ה צְבָאֽוֹת׃",
+   "en": "How lovely are Thy tabernacles, O LORD of hosts!"
+  },
+  {
+   "v": 3,
+   "he": "נִכְסְפָ֬ה וְגַם־כָּלְתָ֨ה׀ נַפְשִׁי֮ לְחַצְר֪וֹת יְה֫וָ֥ה לִבִּ֥י וּבְשָׂרִ֑י יְ֝רַנְּנ֗וּ אֶ֣ל אֵֽל־חָֽי׃",
+   "en": "My soul yearneth, yea, even pineth for the courts of the LORD; My heart and my flesh sing for joy unto the living God."
+  },
+  {
+   "v": 4,
+   "he": "גַּם־צִפּ֨וֹר׀ מָ֪צְאָה בַ֡יִת וּדְר֤וֹר׀ קֵ֥ן לָהּ֮ אֲשֶׁר־שָׁ֪תָה אֶפְרֹ֫חֶ֥יהָ אֶֽת־מִ֭זְבְּחוֹתֶיךָ יְהוָ֣ה צְבָא֑וֹת מַ֝לְכִּ֗י וֵאלֹהָֽי׃",
+   "en": "Yea, the sparrow hath found a house, and the swallow a nest for herself, Where she may lay her young; Thine altars, O LORD of hosts, My King, and my God—"
+  },
+  {
+   "v": 5,
+   "he": "אַ֭שְׁרֵי יוֹשְׁבֵ֣י בֵיתֶ֑ךָ ע֝֗וֹד יְֽהַלְל֥וּךָ סֶּֽלָה׃",
+   "en": "Happy are they that dwell in Thy house, They are ever praising Thee. Selah"
+  },
+  {
+   "v": 6,
+   "he": "אַשְׁרֵ֣י אָ֭דָם עֽוֹז־ל֥וֹ בָ֑ךְ מְ֝סִלּ֗וֹת בִּלְבָבָֽם׃",
+   "en": "Happy is the man whose strength is in Thee; In whose heart are the highways."
+  },
+  {
+   "v": 7,
+   "he": "עֹבְרֵ֤י׀ בְּעֵ֣מֶק הַ֭בָּכָא מַעְיָ֣ן יְשִׁית֑וּהוּ גַּם־בְּ֝רָכ֗וֹת יַעְטֶ֥ה מוֹרֶֽה׃",
+   "en": "Passing through the valley of Baca they make it a place of springs; Yea, the early rain clotheth it with blessings."
+  },
+  {
+   "v": 8,
+   "he": "יֵ֭לְכוּ מֵחַ֣יִל אֶל־חָ֑יִל יֵרָאֶ֖ה אֶל־אֱלֹהִ֣ים בְּצִיּֽוֹן׃",
+   "en": "They go from strength to strength, Every one of them appeareth before God in Zion."
+  },
+  {
+   "v": 9,
+   "he": "יְה֘וָ֤ה אֱלֹהִ֣ים צְ֭בָאוֹת שִׁמְעָ֣ה תְפִלָּתִ֑י הַאֲזִ֨ינָה אֱלֹהֵ֖י יַעֲקֹ֣ב סֶֽלָה׃",
+   "en": "O LORD God of hosts, hear my prayer; Give ear, O God of Jacob. Selah"
+  },
+  {
+   "v": 10,
+   "he": "מָ֭גִנֵּנוּ רְאֵ֣ה אֱלֹהִ֑ים וְ֝הַבֵּ֗ט פְּנֵ֣י מְשִׁיחֶֽךָ׃",
+   "en": "Behold, O God our shield, And look upon the face of Thine anointed."
+  },
+  {
+   "v": 11,
+   "he": "כִּ֤י טֽוֹב־י֥וֹם בַּחֲצֵרֶ֗יךָ מֵ֫אָ֥לֶף בָּחַ֗רְתִּי הִ֭סְתּוֹפֵף בְּבֵ֣ית אֱלֹהַ֑י מִ֝דּ֗וּר בְּאָהֳלֵי־רֶֽשַׁע׃",
+   "en": "For a day in Thy courts is better than a thousand; I had rather stand at the threshold of the house of my God, Than to dwell in the tents of wickedness."
+  },
+  {
+   "v": 12,
+   "he": "כִּ֤י שֶׁ֨מֶשׁ׀ וּמָגֵן֮ יְהוָ֪ה אֱלֹ֫הִ֥ים חֵ֣ן וְ֭כָבוֹד יִתֵּ֣ן יְהוָ֑ה לֹ֥א יִמְנַע־ט֝֗וֹב לַֽהֹלְכִ֥ים בְּתָמִֽים׃",
+   "en": "For the LORD God is a sun and a shield; The LORD giveth grace and glory; No good thing will He withhold from them that walk uprightly."
+  },
+  {
+   "v": 13,
+   "he": "יְהוָ֥ה צְבָא֑וֹת אַֽשְׁרֵ֥י אָ֝דָ֗ם בֹּטֵ֥חַ בָּֽךְ׃",
+   "en": "O LORD of hosts, Happy is the man that trusteth in Thee."
+  }
+ ],
+ "sourcing": "sourced"
+}

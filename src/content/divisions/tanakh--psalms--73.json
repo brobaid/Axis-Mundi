@@ -1,0 +1,150 @@
+{
+ "id": "tanakh--psalms--73",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 73,
+ "verses": [
+  {
+   "v": 1,
+   "he": "מִזְמ֗וֹר לְאָ֫סָ֥ף אַ֤ךְ ט֭וֹב לְיִשְׂרָאֵ֥ל אֱלֹהִ֗ים לְבָרֵ֥י לֵבָֽב׃",
+   "en": "A Psalm of Asaph. Surely God is good to Israel, Even to such as are pure in heart."
+  },
+  {
+   "v": 2,
+   "he": "וַאֲנִ֗י כִּ֭מְעַט נטוי [נָטָ֣יוּ] רַגְלָ֑י כְּ֝אַ֗יִן שפכה [שֻׁפְּכ֥וּ] אֲשֻׁרָֽי׃",
+   "en": "But as for me, my feet were almost gone; My steps had well nigh slipped."
+  },
+  {
+   "v": 3,
+   "he": "כִּֽי־קִ֭נֵּאתִי בַּֽהוֹלְלִ֑ים שְׁל֖וֹם רְשָׁעִ֣ים אֶרְאֶֽה׃",
+   "en": "For I was envious at the arrogant, When I saw the prosperity of the wicked."
+  },
+  {
+   "v": 4,
+   "he": "כִּ֤י אֵ֖ין חַרְצֻבּ֥וֹת לְמוֹתָ֗ם וּבָרִ֥יא אוּלָֽם׃",
+   "en": "For there are no pangs at their death, And their body is sound."
+  },
+  {
+   "v": 5,
+   "he": "בַּעֲמַ֣ל אֱנ֣וֹשׁ אֵינֵ֑מוֹ וְעִם־אָ֝דָ֗ם לֹ֣א יְנֻגָּֽעוּ׃",
+   "en": "In the trouble of man they are not; Neither are they plagued like men."
+  },
+  {
+   "v": 6,
+   "he": "לָ֭כֵן עֲנָקַ֣תְמוֹ גַאֲוָ֑ה יַעֲטָף־שִׁ֝֗ית חָמָ֥ס לָֽמוֹ׃",
+   "en": "Therefore pride is as a chain about their neck; Violence covereth them as a garment."
+  },
+  {
+   "v": 7,
+   "he": "יָ֭צָא מֵחֵ֣לֶב עֵינֵ֑מוֹ עָ֝בְר֗וּ מַשְׂכִּיּ֥וֹת לֵבָֽב׃",
+   "en": "Their eyes stand forth from fatness; They are gone beyond the imaginations of their heart."
+  },
+  {
+   "v": 8,
+   "he": "יָמִ֤יקוּ׀ וִידַבְּר֣וּ בְרָ֣ע עֹ֑שֶׁק מִמָּר֥וֹם יְדַבֵּֽרוּ׃",
+   "en": "They scoff, and in wickedness utter oppression; They speak as if there were none on high."
+  },
+  {
+   "v": 9,
+   "he": "שַׁתּ֣וּ בַשָּׁמַ֣יִם פִּיהֶ֑ם וּ֝לְשׁוֹנָ֗ם תִּֽהֲלַ֥ךְ בָּאָֽרֶץ׃",
+   "en": "They have set their mouth against the heavens, And their tongue walketh through the earth."
+  },
+  {
+   "v": 10,
+   "he": "לָכֵ֤ן׀ ישיב [יָשׁ֣וּב] עַמּ֣וֹ הֲלֹ֑ם וּמֵ֥י מָ֝לֵ֗א יִמָּ֥צוּ לָֽמוֹ׃",
+   "en": "Therefore His people return hither; And waters of fullness are drained out by them."
+  },
+  {
+   "v": 11,
+   "he": "וְֽאָמְר֗וּ אֵיכָ֥ה יָדַֽע־אֵ֑ל וְיֵ֖שׁ דֵּעָ֣ה בְעֶלְיֽוֹן׃",
+   "en": "And they say: 'How doth God know? And is there knowledge in the Most High?'"
+  },
+  {
+   "v": 12,
+   "he": "הִנֵּה־אֵ֥לֶּה רְשָׁעִ֑ים וְשַׁלְוֵ֥י ע֝וֹלָ֗ם הִשְׂגּוּ־חָֽיִל׃",
+   "en": "Behold, such are the wicked; And they that are always at ease increase riches."
+  },
+  {
+   "v": 13,
+   "he": "אַךְ־רִ֭יק זִכִּ֣יתִי לְבָבִ֑י וָאֶרְחַ֖ץ בְּנִקָּי֣וֹן כַּפָּֽי׃",
+   "en": "Surely in vain have I cleansed my heart, And washed my hands in innocency;"
+  },
+  {
+   "v": 14,
+   "he": "וָאֱהִ֣י נָ֭גוּעַ כָּל־הַיּ֑וֹם וְ֝תוֹכַחְתִּ֗י לַבְּקָרִֽים׃",
+   "en": "For all the day have I been plagued, And my chastisement came every morning."
+  },
+  {
+   "v": 15,
+   "he": "אִם־אָ֭מַרְתִּי אֲסַפְּרָ֥ה כְמ֑וֹ הִנֵּ֤ה ד֭וֹר בָּנֶ֣יךָ בָגָֽדְתִּי׃",
+   "en": "If I had said: 'I will speak thus', Behold, I had been faithless to the generation of Thy children."
+  },
+  {
+   "v": 16,
+   "he": "וָֽ֭אֲחַשְּׁבָה לָדַ֣עַת זֹ֑את עָמָ֖ל היא [ה֣וּא] בְעֵינָֽי׃",
+   "en": "And when I pondered how I might know this, It was wearisome in mine eyes;"
+  },
+  {
+   "v": 17,
+   "he": "עַד־אָ֭בוֹא אֶל־מִקְדְּשֵׁי־אֵ֑ל אָ֝בִ֗ינָה לְאַחֲרִיתָֽם׃",
+   "en": "Until I entered into the sanctuary of God, And considered their end."
+  },
+  {
+   "v": 18,
+   "he": "אַ֣ךְ בַּ֭חֲלָקוֹת תָּשִׁ֣ית לָ֑מוֹ הִ֝פַּלְתָּ֗ם לְמַשּׁוּאֽוֹת׃",
+   "en": "Surely Thou settest them in slippery places; Thou hurlest them down to utter ruin."
+  },
+  {
+   "v": 19,
+   "he": "אֵ֤יךְ הָי֣וּ לְשַׁמָּ֣ה כְרָ֑גַע סָ֥פוּ תַ֝֗מּוּ מִן־בַּלָּהֽוֹת׃",
+   "en": "How are they become a desolation in a moment! They are wholly consumed by terrors."
+  },
+  {
+   "v": 20,
+   "he": "כַּחֲל֥וֹם מֵהָקִ֑יץ אֲ֝דֹנָי בָּעִ֤יר׀ צַלְמָ֬ם תִּבְזֶֽה׃",
+   "en": "As a dream when one awaketh, So, O Lord, when Thou arousest Thyself, Thou wilt despise their semblance."
+  },
+  {
+   "v": 21,
+   "he": "כִּ֭י יִתְחַמֵּ֣ץ לְבָבִ֑י וְ֝כִלְיוֹתַ֗י אֶשְׁתּוֹנָֽן׃",
+   "en": "For my heart was in a ferment, And I was pricked in my reins. ."
+  },
+  {
+   "v": 22,
+   "he": "וַאֲנִי־בַ֭עַר וְלֹ֣א אֵדָ֑ע בְּ֝הֵמ֗וֹת הָיִ֥יתִי עִמָּֽךְ׃",
+   "en": "But I was brutish, and ignorant; I was as a beast before Thee."
+  },
+  {
+   "v": 23,
+   "he": "וַאֲנִ֣י תָמִ֣יד עִמָּ֑ךְ אָ֝חַ֗זְתָּ בְּיַד־יְמִינִֽי׃",
+   "en": "Nevertheless I am continually with Thee; Thou holdest my right hand."
+  },
+  {
+   "v": 24,
+   "he": "בַּעֲצָתְךָ֥ תַנְחֵ֑נִי וְ֝אַחַ֗ר כָּב֥וֹד תִּקָּחֵֽנִי׃",
+   "en": "Thou wilt guide me with Thy counsel, And afterward receive me with glory."
+  },
+  {
+   "v": 25,
+   "he": "מִי־לִ֥י בַשָּׁמָ֑יִם וְ֝עִמְּךָ֗ לֹא־חָפַ֥צְתִּי בָאָֽרֶץ׃",
+   "en": "Whom have I in heaven but Thee? And beside Thee I desire none upon earth."
+  },
+  {
+   "v": 26,
+   "he": "כָּלָ֥ה שְׁאֵרִ֗י וּלְבָ֫בִ֥י צוּר־לְבָבִ֥י וְחֶלְקִ֗י אֱלֹהִ֥ים לְעוֹלָֽם׃",
+   "en": "My flesh and my heart faileth; But God is the rock of my heart and my portion for ever."
+  },
+  {
+   "v": 27,
+   "he": "כִּֽי־הִנֵּ֣ה רְחֵקֶ֣יךָ יֹאבֵ֑דוּ הִ֝צְמַ֗תָּה כָּל־זוֹנֶ֥ה מִמֶּֽךָּ׃",
+   "en": "For, lo, they that go far from Thee shall perish; Thou dost destroy all them that go astray from Thee."
+  },
+  {
+   "v": 28,
+   "he": "וַאֲנִ֤י׀ קִֽרֲבַ֥ת אֱלֹהִ֗ים לִ֫י־ט֥וֹב שַׁתִּ֤י׀ בַּאדֹנָ֣י יְהֹוִ֣ה מַחְסִ֑י לְ֝סַפֵּ֗ר כָּל־מַלְאֲכוֹתֶֽיךָ׃",
+   "en": "But as for me, the nearness of God is my good; I have made the Lord GOD my refuge, That I may tell of all Thy works."
+  }
+ ],
+ "sourcing": "sourced"
+}

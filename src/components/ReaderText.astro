@@ -1,0 +1,614 @@
+---
+import ReaderChrome from './ReaderChrome.astro';
+import {
+  availableModes,
+  defaultMode,
+  hasEnglish,
+  originalLang,
+  verseAnchor,
+  verseRef,
+  walk,
+  type EditionLine,
+  type VerseRow,
+  type WorkData,
+  type DivisionIndex,
+} from '../lib/reader-model';
+import { fontFor } from '../lib/scripts';
+
+/**
+ * The reading page — Phase 5.
+ *
+ * One component for both leaf routes, because they are the same page: a surah
+ * runs straight to its ayat and a chapter of a book is one level further down,
+ * but what a reader gets is a numbered text in one or two columns either way.
+ * Two copies of this markup would be two chances for the two canons to drift.
+ */
+interface Props {
+  work: WorkData;
+  division: DivisionIndex;
+  /** Absent where the division is itself the leaf. */
+  chapter?: number | undefined;
+  verses: readonly VerseRow[];
+  /** What the page calls itself: "Genesis 1", "Surah 2". */
+  heading: string;
+  /** The trail above the heading, innermost last. */
+  crumbs: readonly { href: string; label: string }[];
+  editions: readonly (EditionLine & { title: string; author?: string | undefined })[];
+}
+const { work, division, chapter, verses, heading, crumbs, editions } = Astro.props;
+
+const modes = availableModes(work);
+const mode = defaultMode(work);
+const orig = originalLang(work);
+const english = hasEnglish(work);
+const scriptFont = fontFor(work.script);
+const { prev, next, endsSection } = walk(work, division, chapter);
+const contentsHref =
+  chapter === undefined ? `/read/${work.id}` : `/read/${work.id}/${division.slug}`;
+const contentsLabel =
+  chapter === undefined
+    ? `All ${work.divisions.length} ${work.division_label_plural}`
+    : `All ${division.chapters?.length ?? 0} ${work.chapter_label ?? 'chapter'}s of ${
+        division.name ?? division.slug
+      }`;
+---
+
+<article
+  class="shell rd"
+  data-reader
+  data-work={work.id}
+  data-division={chapter === undefined ? division.slug : `${division.slug}/${chapter}`}
+  data-heading={heading}
+>
+  <header class="rd__head">
+    <p class="eyebrow">
+      {
+        crumbs.map((crumb, i) => (
+          <>
+            {i > 0 && <span aria-hidden="true"> · </span>}
+            <a class="tap" href={crumb.href}>
+              {crumb.label}
+            </a>
+          </>
+        ))
+      }
+    </p>
+    <h1 class="rd__title">
+      {heading}
+      {
+        chapter === undefined && division.name_original !== undefined && (
+          <span
+            class="rd__title-original"
+            lang={orig}
+            dir={work.direction}
+            style={`font-family: ${scriptFont}`}
+          >
+            {division.name_original}
+          </span>
+        )
+      }
+    </h1>
+    <p class="caption rd__count">
+      {verses.length} verses
+      {division.transliteration !== undefined && ` · ${division.transliteration}`}
+    </p>
+  </header>
+
+  <ReaderChrome
+    modes={modes}
+    mode={mode}
+    editions={editions}
+    englishPending={work.english_pending}
+    note={work.note}
+  />
+
+  {/* The mode is an attribute on this container, resolved in CSS against the
+      modes this work can actually offer, so a stored preference a corpus
+      cannot honour falls back to the work's own default. */}
+  <div
+    class="rd-verses"
+    data-modes={modes.join(' ')}
+    data-default={mode}
+    data-script={work.script}
+    data-direction={work.direction}
+    style={`--script-font: ${scriptFont}`}
+  >
+    {
+      verses.map((verse) => (
+        <div class="rd-verse" id={verseAnchor(verse)}>
+          <a
+            class="rd-verse__n"
+            href={`#${verseAnchor(verse)}`}
+            aria-label={`Verse ${verseRef(heading, verse)}`}
+          >
+            {verse.v}
+          </a>
+          {english && verse['en'] !== undefined && <p class="rd-verse__en">{verse['en']}</p>}
+          {/* A versification can diverge in either direction, and this canon
+              does both. The fact is stated where it falls; the reason is the
+              owner's to write, not this page's to guess. */}
+          {english && verse['en'] === undefined && (
+            <p class="rd-verse__gap caption">No English at this verse number in this edition.</p>
+          )}
+          {/* dir and lang live in the markup, never in CSS: the direction a
+              paragraph is set in decides where its punctuation lands, and that
+              must not depend on which column is showing. */}
+          {verse[orig] !== undefined && (
+            <p class="rd-verse__orig" lang={orig} dir={work.direction}>
+              {verse[orig]}
+            </p>
+          )}
+          {verse[orig] === undefined && (
+            <p class="rd-verse__gap rd-verse__gap--orig caption" lang="en">
+              No verse at this number in the original edition.
+            </p>
+          )}
+          {!english && <p class="rd-verse__pending caption">{work.english_pending}</p>}
+        </div>
+      ))
+    }
+  </div>
+
+  <nav class="rd-nav" aria-label={`${heading}, neighbouring pages`}>
+    {
+      prev === undefined ? (
+        <span />
+      ) : (
+        <a class="rd-nav__link" href={prev.href} rel="prev">
+          <span aria-hidden="true">←</span> {prev.label}
+        </a>
+      )
+    }
+
+    <label class="rd-jump">
+      <span class="visually-hidden">Jump to a {work.chapter_label ?? work.division_label}</span>
+      <select class="rd-jump__select" data-reader-jump>
+        {
+          chapter === undefined
+            ? work.divisions.map((d) => (
+                <option value={`/read/${work.id}/${d.slug}`} selected={d.slug === division.slug}>
+                  {d.name ?? `${work.division_label} ${d.n}`}
+                </option>
+              ))
+            : (division.chapters ?? []).map((ch) => (
+                <option
+                  value={`/read/${work.id}/${division.slug}/${ch.c}`}
+                  selected={ch.c === chapter}
+                >
+                  {heading.replace(/ \d+$/, '')} {ch.c}
+                </option>
+              ))
+        }
+      </select>
+    </label>
+
+    {
+      next === undefined ? (
+        <span />
+      ) : (
+        <a class="rd-nav__link rd-nav__link--next" href={next.href} rel="next">
+          {next.label} <span aria-hidden="true">→</span>
+        </a>
+      )
+    }
+  </nav>
+
+  {
+    endsSection !== undefined && (
+      <p class="caption rd__section-end">
+        {heading} ends {endsSection.name}. The {work.division_label_plural} of the next section are
+        on the <a class="tap" href={`/read/${work.id}`}>contents page</a>.
+      </p>
+    )
+  }
+
+  <p class="caption rd__contents-link">
+    <a class="tap" href={contentsHref}>
+      {contentsLabel}
+    </a>
+  </p>
+
+  {/* Paper carries no edition line at the head of every sheet, and a printed
+      page of scripture with nothing naming its editions is an unsourced page.
+      Screen readers get it too — it is the same claim, not decoration. */}
+  <footer class="rd-print-footer">
+    {work.title} · {heading} ·{' '}
+    {editions.map((e) => (e.author === undefined ? e.title : `${e.title}, ${e.author}`)).join(' · ')}
+  </footer>
+</article>
+
+<script>
+  import '../scripts/reader';
+</script>
+
+<style is:global>
+  .rd {
+    padding-block: var(--space-12) var(--space-16);
+    max-width: 46rem;
+  }
+
+  .rd__head {
+    margin-bottom: var(--space-6);
+  }
+
+  .rd__title {
+    font-family: var(--font-display);
+    font-size: var(--size-h1);
+    line-height: 1.15;
+  }
+
+  .rd__title-original {
+    margin-left: var(--space-4);
+    color: var(--ink-soft);
+  }
+
+  .rd__count {
+    color: var(--ink-soft);
+    margin-top: var(--space-2);
+  }
+
+  /* --- chapters ---------------------------------------------------------- */
+
+  .rd-chapter {
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: var(--space-8);
+    padding-top: var(--space-4);
+    border-top: var(--hairline-width) solid var(--hairline);
+    scroll-margin-top: 9rem;
+  }
+
+  .rd-chapter-group:first-child .rd-chapter {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .rd-chapter__label {
+    color: var(--ink-soft);
+  }
+
+  /* --- the text ---------------------------------------------------------- */
+
+  /*
+    A grid rather than a flex row around a wrapper div. The wrapper was one
+    element per verse and this canon has twenty-three thousand of them, so it
+    was worth removing: the numeral takes the first column and every part of
+    the verse's body stacks in the second.
+  */
+  .rd-verse {
+    display: grid;
+    grid-template-columns: 3ch 1fr;
+    column-gap: var(--space-4);
+    padding-block: var(--space-4);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    /* An anchored verse must clear the sticky header; the global
+       scroll-padding-top handles the page, this handles the element. */
+    scroll-margin-top: 9rem;
+  }
+
+  .rd-verse > * {
+    grid-column: 2;
+  }
+
+  .rd-verse:target {
+    background: var(--surface);
+    /* The brass rule marks where a shared link landed, and nothing else. */
+    box-shadow: inset 3px 0 0 var(--brass);
+    padding-left: var(--space-3);
+    margin-left: calc(-1 * var(--space-3));
+  }
+
+  /* The numeral is small by design and its target is not: the link stretches
+     to the verse's own height, which on a one-line verse is the difference
+     between a 29px target and a reachable one. */
+  .rd-verse__n {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    min-height: var(--tap-min);
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding-top: 0.35em;
+  }
+
+  .rd-verse__n:hover {
+    color: var(--brass-ink);
+  }
+
+  /* Reading measure and leading, tuned for the Latin column. */
+  .rd-verse__en {
+    font-family: var(--font-prose);
+    font-size: 1.0625rem;
+    line-height: 1.72;
+    max-width: 36rem;
+  }
+
+  /*
+    The original is tuned independently, because it has to be. Naskh sets small
+    against Latin at the same nominal size and carries diacritics above and
+    below the line, so it wants both more size and more leading — matching the
+    Latin numbers would give a cramped, unreadable block.
+  */
+  .rd-verse__orig {
+    font-family: var(--script-font);
+    font-size: 1.5rem;
+    line-height: 2.15;
+    max-width: 36rem;
+    margin-top: var(--space-3);
+  }
+
+  /*
+    Hebrew is pointed on both sides of the line here: cantillation above,
+    vowel points below, sometimes three deep. The Masoretic text needs the
+    leading more than it needs the size — Noto Serif Hebrew sets larger than
+    Naskh at the same nominal size — so this takes size down and leading up.
+  */
+  .rd-verses[data-script='hebrew'] .rd-verse__orig {
+    font-size: 1.375rem;
+    line-height: 2.35;
+  }
+
+  .rd-verse__pending,
+  .rd-verse__gap {
+    color: var(--ink-soft);
+    margin-top: var(--space-2);
+  }
+
+  /* --- the copy control -------------------------------------------------- */
+
+  /*
+    Present only in the verse the fragment names, which is the verse whose
+    numeral was just clicked. It sits under the text rather than beside it so
+    it never competes with the verse for the reading edge, and it never moves
+    the text when it appears.
+  */
+  .rd-copy {
+    justify-self: start;
+    margin-top: var(--space-3);
+    min-height: var(--tap-min);
+    padding: 0 var(--space-3);
+    border: var(--hairline-width) solid var(--hairline-strong);
+    background: transparent;
+    color: var(--ink-soft);
+    font-family: var(--font-ui);
+    font-size: var(--size-caption);
+    cursor: pointer;
+  }
+
+  .rd-copy:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+
+  .rd-copy[data-state='done'] {
+    color: var(--brass-ink);
+    border-color: var(--brass);
+  }
+
+  /* --- where the reader left off ----------------------------------------- */
+
+  /*
+    A previous visit's position, not a live one — the scrollbar is already the
+    live one.
+
+    Dotted where :target is solid, in the same brass and the same place: one is
+    where a link landed, the other is where a reader stopped, and a rule that
+    said neither would be decoration. Measured first in --brass-wash, which on
+    the gallery canvas differs by five values out of 255 — a marker nobody can
+    see is not quiet, it is absent.
+  */
+  .rd-verse--mark {
+    border-left: 3px dotted var(--brass);
+    padding-left: var(--space-3);
+    margin-left: calc(-1 * var(--space-3) - 3px);
+  }
+
+  .rd-verse__mark {
+    color: var(--brass-ink);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: var(--font-ui);
+    margin-bottom: var(--space-2);
+  }
+
+  /* --- the three modes, resolved against what this work offers ----------- */
+
+  .rd-verses[data-default='english'] .rd-verse__orig,
+  .rd-verses[data-default='original'] .rd-verse__en {
+    display: none;
+  }
+
+  :root[data-reading-mode='english'] .rd-verses[data-modes~='english'] .rd-verse__en,
+  :root[data-reading-mode='both'] .rd-verses[data-modes~='both'] .rd-verse__en,
+  :root[data-reading-mode='original'] .rd-verses[data-modes~='original'] .rd-verse__orig,
+  :root[data-reading-mode='both'] .rd-verses[data-modes~='both'] .rd-verse__orig {
+    display: block;
+  }
+
+  :root[data-reading-mode='english'] .rd-verses[data-modes~='english'] .rd-verse__orig,
+  :root[data-reading-mode='original'] .rd-verses[data-modes~='original'] .rd-verse__en {
+    display: none;
+  }
+
+  /* The gap note stands in for an English column, so it hides with one. */
+  .rd-verses[data-default='original'] .rd-verse__gap,
+  :root[data-reading-mode='original'] .rd-verses[data-modes~='original'] .rd-verse__gap {
+    display: none;
+  }
+
+  /* Original alone: the numeral belongs at the reading edge, which for an RTL
+     script is the right. The text's own direction is in the markup and never
+     moves; this is column order, not bidi. */
+  :root[data-reading-mode='original'] .rd-verses[data-modes~='original'][data-direction='rtl'] .rd-verse,
+  .rd-verses[data-default='original'][data-direction='rtl'] .rd-verse {
+    grid-template-columns: 1fr 3ch;
+  }
+
+  :root[data-reading-mode='original'] .rd-verses[data-modes~='original'][data-direction='rtl'] .rd-verse > *,
+  .rd-verses[data-default='original'][data-direction='rtl'] .rd-verse > * {
+    grid-column: 1;
+  }
+
+  :root[data-reading-mode='original'] .rd-verses[data-modes~='original'][data-direction='rtl'] .rd-verse__n,
+  .rd-verses[data-default='original'][data-direction='rtl'] .rd-verse__n {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  :root[data-reading-mode='original'] .rd-verses[data-modes~='original'] .rd-verse__orig,
+  .rd-verses[data-default='original'] .rd-verse__orig {
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  /* --- navigation -------------------------------------------------------- */
+
+  .rd-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+    padding-top: var(--space-4);
+    border-top: var(--hairline-width) solid var(--hairline);
+  }
+
+  .rd-nav__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--tap-min);
+    color: var(--ink);
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    text-decoration: none;
+  }
+
+  .rd-nav__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* Deuteronomy has no next; Joshua begins a section rather than continuing
+     one. The empty half of the row keeps the jump control centred. */
+  .rd-nav__link--next {
+    text-align: right;
+  }
+
+  .rd-jump__select {
+    max-width: 12rem;
+    min-height: var(--tap-min);
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    color: var(--ink);
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--hairline);
+    padding: 0 var(--space-2);
+  }
+
+  .rd__section-end,
+  .rd__contents-link {
+    margin-top: var(--space-4);
+    color: var(--ink-soft);
+  }
+
+  /* --- print ------------------------------------------------------------- */
+
+  /*
+    The edition footer is the printed page's version of the edition line. On
+    screen the line at the top of the page already names the editions, so this
+    would be saying it twice; it is not hidden, because a screen reader
+    reaching the end of a book should be told what it just read.
+  */
+  .rd-print-footer {
+    margin-top: var(--space-12);
+    padding-top: var(--space-4);
+    border-top: var(--hairline-width) solid var(--hairline);
+    color: var(--ink-soft);
+    font-size: var(--size-caption);
+    max-width: 42rem;
+  }
+
+  /*
+    Scripture is the likeliest thing here to be printed, so the page is set for
+    paper rather than merely surviving it: the site chrome goes, the measure
+    widens to the sheet, and a verse never breaks across a page.
+  */
+  @media print {
+    .rd {
+      max-width: none;
+      padding: 0;
+    }
+
+    /* A control that copies a link is meaningless on paper, and so is the
+       mark saying where a reader stopped in the browser. */
+    .rd-copy,
+    .rd-verse__mark {
+      display: none;
+    }
+
+    .rd-verse--mark {
+      border-left: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    /*
+      Repeated at the foot of every sheet, not once at the end. A printout is
+      read as loose pages, and page four naming no edition is page four
+      claiming scripture from nowhere.
+    */
+    .rd-print-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: none;
+      margin: 0;
+      padding-top: var(--space-2);
+      border-top: var(--hairline-width) solid var(--ink);
+      background: var(--canvas);
+    }
+
+    .rd-verse {
+      break-inside: avoid;
+      border-bottom: none;
+      padding-block: var(--space-2);
+    }
+
+    .rd-chapter {
+      break-after: avoid;
+    }
+
+    .rd-verse:target {
+      background: none;
+      box-shadow: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    .rd-verse__en,
+    .rd-verse__orig {
+      max-width: none;
+    }
+
+    .rd-nav,
+    .rd__contents-link,
+    .rd__section-end {
+      display: none;
+    }
+
+    /* The edition line is the one piece of chrome that must survive: a printed
+       page of scripture with no edition named is an unsourced page. */
+    .rd-edition {
+      border-bottom: var(--hairline-width) solid var(--ink);
+    }
+  }
+</style>

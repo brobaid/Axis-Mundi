@@ -1,0 +1,125 @@
+{
+ "id": "tanakh--exodus--5",
+ "work": "tanakh",
+ "n": 2,
+ "slug": "exodus",
+ "c": 5,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וְאַחַ֗ר בָּ֚אוּ מֹשֶׁ֣ה וְאַהֲרֹ֔ן וַיֹּאמְר֖וּ אֶל־פַּרְעֹ֑ה כֹּֽה־אָמַ֤ר יְהוָה֙ אֱלֹהֵ֣י יִשְׂרָאֵ֔ל שַׁלַּח֙ אֶת־עַמִּ֔י וְיָחֹ֥גּוּ לִ֖י בַּמִּדְבָּֽר׃",
+   "en": "And afterward Moses and Aaron came, and said to Pharaoh: ‘Thus says the LORD, the God of Israel: Let My people go, that they may hold a feast unto Me in the wilderness.’"
+  },
+  {
+   "v": 2,
+   "he": "וַיֹּ֣אמֶר פַּרְעֹ֔ה מִ֤י יְהוָה֙ אֲשֶׁ֣ר אֶשְׁמַ֣ע בְּקֹל֔וֹ לְשַׁלַּ֖ח אֶת־יִשְׂרָאֵ֑ל לֹ֤א יָדַ֙עְתִּי֙ אֶת־יְהוָ֔ה וְגַ֥ם אֶת־יִשְׂרָאֵ֖ל לֹ֥א אֲשַׁלֵּֽחַ׃",
+   "en": "And Pharaoh said: ‘Who is the LORD, that I should hearken unto His voice to let Israel go? I know not the LORD, and moreover I will not let Israel go.’"
+  },
+  {
+   "v": 3,
+   "he": "וַיֹּ֣אמְר֔וּ אֱלֹהֵ֥י הָעִבְרִ֖ים נִקְרָ֣א עָלֵ֑ינוּ נֵ֣לֲכָה-נָּ֡א דֶּרֶךְ֩ שְׁלֹ֨שֶׁת יָמִ֜ים בַּמִּדְבָּ֗ר וְנִזְבְּחָה֙ לַֽיהוָ֣ה אֱלֹהֵ֔ינוּ פֶּ֨ן־יִפְגָּעֵ֔נוּ בַּדֶּ֖בֶר א֥וֹ בֶחָֽרֶב׃",
+   "en": "And they said: ‘The God of the Hebrews hath met with us. Let us go, we pray thee, three days’journey into the wilderness, and sacrifice unto the LORD our God; lest He fall upon us with pestilence, or with the sword.’"
+  },
+  {
+   "v": 4,
+   "he": "וַיֹּ֤אמֶר אֲלֵהֶם֙ מֶ֣לֶךְ מִצְרַ֔יִם לָ֚מָּה מֹשֶׁ֣ה וְאַהֲרֹ֔ן תַּפְרִ֥יעוּ אֶת־הָעָ֖ם מִמַּֽעֲשָׂ֑יו לְכ֖וּ לְסִבְלֹתֵיכֶֽם׃",
+   "en": "And the king of Egypt said unto them: ‘Wherefore do ye, Moses and Aaron, cause the people to break loose from their work? get you unto your burdens.’"
+  },
+  {
+   "v": 5,
+   "he": "וַיֹּ֣אמֶר פַּרְעֹ֔ה הֵן־רַבִּ֥ים עַתָּ֖ה עַ֣ם-הָאָ֑רֶץ וְהִשְׁבַּתֶּ֥ם אֹתָ֖ם מִסִּבְלֹתָֽם׃",
+   "en": "And Pharaoh said: ‘Behold, the people of the land are now many, and will ye make them rest from their burdens?’"
+  },
+  {
+   "v": 6,
+   "he": "וַיְצַ֥ו פַּרְעֹ֖ה בַּיּ֣וֹם הַה֑וּא אֶת־הַנֹּגְשִׂ֣ים בָּעָ֔ם וְאֶת־שֹׁטְרָ֖יו לֵאמֹֽר׃",
+   "en": "And the same day Pharaoh commanded the taskmasters of the people, and their officers, saying:"
+  },
+  {
+   "v": 7,
+   "he": "לֹ֣א תֹאסִפ֞וּן לָתֵ֨ת תֶּ֧בֶן לָעָ֛ם לִלְבֹּ֥ן הַלְּבֵנִ֖ים כִּתְמ֣וֹל שִׁלְשֹׁ֑ם הֵ֚ם יֵֽלְכ֔וּ וְקֹשְׁשׁ֥וּ לָהֶ֖ם תֶּֽבֶן׃",
+   "en": "’Ye shall no more give the people straw to make brick, as heretofore. Let them go and gather straw for themselves."
+  },
+  {
+   "v": 8,
+   "he": "וְאֶת־מַתְכֹּ֨נֶת הַלְּבֵנִ֜ים אֲשֶׁ֣ר הֵם֩ עֹשִׂ֨ים תְּמ֤וֹל שִׁלְשֹׁם֙ תָּשִׂ֣ימוּ עֲלֵיהֶ֔ם לֹ֥א תִגְרְע֖וּ מִמֶּ֑נּוּ כִּֽי־נִרְפִּ֣ים הֵ֔ם עַל־כֵּ֗ן הֵ֤ם צֹֽעֲקִים֙ לֵאמֹ֔ר נֵלְכָ֖ה נִזְבְּחָ֥ה לֵאלֹהֵֽינוּ׃",
+   "en": "And the tale of the bricks, which they did make heretofore, ye shall lay upon them; ye shall not diminish aught thereof; for they are idle; therefore they cry, saying: Let us go and sacrifice to our God."
+  },
+  {
+   "v": 9,
+   "he": "תִּכְבַּ֧ד הָעֲבֹדָ֛ה עַל־הָאֲנָשִׁ֖ים וְיַעֲשׂוּ־בָ֑הּ וְאַל־יִשְׁע֖וּ בְּדִבְרֵי־שָֽׁקֶר׃",
+   "en": "Let heavier work be laid upon the men, that they may labour therein; and let them not regard lying words.’"
+  },
+  {
+   "v": 10,
+   "he": "וַיֵּ֨צְא֜וּ נֹגְשֵׂ֤י הָעָם֙ וְשֹׁ֣טְרָ֔יו וַיֹּאמְר֥וּ אֶל־הָעָ֖ם לֵאמֹ֑ר כֹּ֚ה אָמַ֣ר פַּרְעֹ֔ה אֵינֶ֛נִּי נֹתֵ֥ן לָכֶ֖ם תֶּֽבֶן׃",
+   "en": "And the taskmasters of the people went out, and their officers, and they spoke to the people, saying: ‘Thus saith Pharaoh: I will not give you straw."
+  },
+  {
+   "v": 11,
+   "he": "אַתֶּ֗ם לְכ֨וּ קְח֤וּ לָכֶם֙ תֶּ֔בֶן מֵאֲשֶׁ֖ר תִּמְצָ֑אוּ כִּ֣י אֵ֥ין נִגְרָ֛ע מֵעֲבֹדַתְכֶ֖ם דָּבָֽר׃",
+   "en": "Go yourselves, get you straw where ye can find it; for nought of your work shall be diminished.’"
+  },
+  {
+   "v": 12,
+   "he": "וַיָּ֥פֶץ הָעָ֖ם בְּכָל־אֶ֣רֶץ מִצְרָ֑יִם לְקֹשֵׁ֥שׁ קַ֖שׁ לַתֶּֽבֶן׃",
+   "en": "So the people were scattered abroad throughout all the land of Egypt to gather stubble for straw."
+  },
+  {
+   "v": 13,
+   "he": "וְהַנֹּגְשִׂ֖ים אָצִ֣ים לֵאמֹ֑ר כַּלּ֤וּ מַעֲשֵׂיכֶם֙ דְּבַר־י֣וֹם בְּיוֹמ֔וֹ כַּאֲשֶׁ֖ר בִּהְי֥וֹת הַתֶּֽבֶן׃",
+   "en": "And the taskmasters were urgent, saying: ‘Fulfil your work, your daily task, as when there was straw.’"
+  },
+  {
+   "v": 14,
+   "he": "וַיֻּכּ֗וּ שֹֽׁטְרֵי֙ בְּנֵ֣י יִשְׂרָאֵ֔ל אֲשֶׁר־שָׂ֣מוּ עֲלֵהֶ֔ם נֹגְשֵׂ֥י פַרְעֹ֖ה לֵאמֹ֑ר מַדּ֡וּעַ לֹא֩ כִלִּיתֶ֨ם חָקְכֶ֤ם לִלְבֹּן֙ כִּתְמ֣וֹל שִׁלְשֹׁ֔ם גַּם־תְּמ֖וֹל גַּם־הַיּֽוֹם׃",
+   "en": "And the officers of the children of Israel, whom Pharaoh’s taskmasters had set over them, were beaten, saying: ‘Wherefore have ye not fulfilled your appointed task in making brick both yesterday and today as heretofore?’"
+  },
+  {
+   "v": 15,
+   "he": "וַיָּבֹ֗אוּ שֹֽׁטְרֵי֙ בְּנֵ֣י יִשְׂרָאֵ֔ל וַיִּצְעֲק֥וּ אֶל־פַּרְעֹ֖ה לֵאמֹ֑ר לָ֧מָּה תַעֲשֶׂ֦ה כֹ֖ה לַעֲבָדֶֽיךָ׃",
+   "en": "Then the officers of the children of Israel came and cried unto Pharaoh, saying: ‘Wherefore dealest thou thus with thy servants?"
+  },
+  {
+   "v": 16,
+   "he": "תֶּ֗בֶן אֵ֤ין נִתָּן֙ לַעֲבָדֶ֔יךָ וּלְבֵנִ֛ים אֹמְרִ֥ים לָ֖נוּ עֲשׂ֑וּ וְהִנֵּ֧ה עֲבָדֶ֛יךָ מֻכִּ֖ים וְחָטָ֥את עַמֶּֽךָ׃",
+   "en": "There is no straw given unto thy servants, and they say to us: Make brick; and, behold, thy servants are beaten, but the fault is in thine own people.’"
+  },
+  {
+   "v": 17,
+   "he": "וַיֹּ֛אמֶר נִרְפִּ֥ים אַתֶּ֖ם נִרְפִּ֑ים עַל־כֵּן֙ אַתֶּ֣ם אֹֽמְרִ֔ים נֵלְכָ֖ה נִזְבְּחָ֥ה לַֽיהוָֽה׃",
+   "en": "But he said: ‘Ye are idle, ye are idle; therefore ye say: Let us go and sacrifice to the LORD."
+  },
+  {
+   "v": 18,
+   "he": "וְעַתָּה֙ לְכ֣וּ עִבְד֔וּ וְתֶ֖בֶן לֹא־יִנָּתֵ֣ן לָכֶ֑ם וְתֹ֥כֶן לְבֵנִ֖ים תִּתֵּֽנּוּ׃",
+   "en": "Go therefore now, and work; for there shall no straw be given you, yet shall ye deliver the tale of bricks.’"
+  },
+  {
+   "v": 19,
+   "he": "וַיִּרְא֞וּ שֹֽׁטְרֵ֧י בְנֵֽי־יִשְׂרָאֵ֛ל אֹתָ֖ם בְּרָ֣ע לֵאמֹ֑ר לֹא־תִגְרְע֥וּ מִלִּבְנֵיכֶ֖ם דְּבַר־י֥וֹם בְּיוֹמֽוֹ׃",
+   "en": "And the officers of the children of Israel did see that they were set on mischief, when they said: ‘Ye shall not diminish aught from your bricks, your daily task.’"
+  },
+  {
+   "v": 20,
+   "he": "וַֽיִּפְגְּעוּ֙ אֶת־מֹשֶׁ֣ה וְאֶֽת־אַהֲרֹ֔ן נִצָּבִ֖ים לִקְרָאתָ֑ם בְּצֵאתָ֖ם מֵאֵ֥ת פַּרְעֹֽה׃",
+   "en": "And they met Moses and Aaron, who stood in the way, as they came forth from Pharaoh;"
+  },
+  {
+   "v": 21,
+   "he": "וַיֹּאמְר֣וּ אֲלֵהֶ֔ם יֵ֧רֶא יְהוָ֛ה עֲלֵיכֶ֖ם וְיִשְׁפֹּ֑ט אֲשֶׁ֧ר הִבְאַשְׁתֶּ֣ם אֶת־רֵיחֵ֗נוּ בְּעֵינֵ֤י פַרְעֹה֙ וּבְעֵינֵ֣י עֲבָדָ֔יו לָֽתֶת־חֶ֥רֶב בְּיָדָ֖ם לְהָרְגֵֽנוּ׃",
+   "en": "and they said unto them: ‘The LORD look upon you, and judge; because ye have made our savour to be abhorred in the eyes of Pharaoh, and in the eyes of his servants, to put a sword in their hand to slay us.’"
+  },
+  {
+   "v": 22,
+   "he": "וַיָּ֧שָׁב מֹשֶׁ֛ה אֶל־יְהוָ֖ה וַיֹּאמַ֑ר אֲדֹנָ֗י לָמָ֤ה הֲרֵעֹ֙תָה֙ לָעָ֣ם הַזֶּ֔ה לָ֥מָּה זֶּ֖ה שְׁלַחְתָּֽנִי׃",
+   "en": "And Moses returned unto the LORD, and said: ‘Lord, wherefore hast Thou dealt ill with this people? why is it that Thou hast sent me?"
+  },
+  {
+   "v": 23,
+   "he": "וּמֵאָ֞ז בָּ֤אתִי אֶל־פַּרְעֹה֙ לְדַבֵּ֣ר בִּשְׁמֶ֔ךָ הֵרַ֖ע לָעָ֣ם הַזֶּ֑ה וְהַצֵּ֥ל לֹא־הִצַּ֖לְתָּ אֶת־עַמֶּֽךָ׃",
+   "en": "For since I came to Pharaoh to speak in Thy name, he hath dealt ill with this people; neither hast Thou delivered Thy people at all.’"
+  }
+ ],
+ "sourcing": "sourced"
+}

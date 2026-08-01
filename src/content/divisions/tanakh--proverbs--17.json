@@ -1,0 +1,150 @@
+{
+ "id": "tanakh--proverbs--17",
+ "work": "tanakh",
+ "n": 28,
+ "slug": "proverbs",
+ "c": 17,
+ "verses": [
+  {
+   "v": 1,
+   "he": "ט֤וֹב פַּ֣ת חֲ֭רֵבָה וְשַׁלְוָה־בָ֑הּ מִ֝בַּ֗יִת מָלֵ֥א זִבְחֵי־רִֽיב׃",
+   "en": "Better is a dry morsel and quietness therewith, Than a house full of feasting with strife."
+  },
+  {
+   "v": 2,
+   "he": "עֶֽבֶד־מַשְׂכִּ֗יל יִ֭מְשֹׁל בְּבֵ֣ן מֵבִ֑ישׁ וּבְת֥וֹךְ אַ֝חִ֗ים יַחֲלֹ֥ק נַחֲלָֽה׃",
+   "en": "A servant that dealeth wisely shall have rule over a son that dealeth shamefully, And shall have part of the inheritance among the brethren."
+  },
+  {
+   "v": 3,
+   "he": "מַצְרֵ֣ף לַ֭כֶּסֶף וְכ֣וּר לַזָּהָ֑ב וּבֹחֵ֖ן לִבּ֣וֹת יְהוָֽה׃",
+   "en": "The refining pot is for silver, and the furnace for gold; But the LORD trieth the hearts. ."
+  },
+  {
+   "v": 4,
+   "he": "מֵ֭רַע מַקְשִׁ֣יב עַל־שְׂפַת־אָ֑וֶן שֶׁ֥קֶר מֵ֝זִין עַל־לְשׁ֥וֹן הַוֹּֽת׃",
+   "en": "A evil-doer giveth heed to wicked lips; And a liar giveth ear to a mischievous tongue."
+  },
+  {
+   "v": 5,
+   "he": "לֹעֵ֣ג לָ֭רָשׁ חֵרֵ֣ף עֹשֵׂ֑הוּ שָׂמֵ֥חַ לְ֝אֵ֗יד לֹ֣א יִנָּקֶֽה׃",
+   "en": "Whoso mocketh the poor blasphemeth his Maker; And he that is glad at calamity shall not be unpunished."
+  },
+  {
+   "v": 6,
+   "he": "עֲטֶ֣רֶת זְ֭קֵנִים בְּנֵ֣י בָנִ֑ים וְתִפְאֶ֖רֶת בָּנִ֣ים אֲבוֹתָֽם׃",
+   "en": "Children’s children are the crown of old men; And the glory of children are their fathers."
+  },
+  {
+   "v": 7,
+   "he": "לֹא־נָאוָ֣ה לְנָבָ֣ל שְׂפַת־יֶ֑תֶר אַ֝֗ף כִּֽי־לְנָדִ֥יב שְׂפַת־שָֽׁקֶר׃",
+   "en": "Overbearing speech becometh not a churl; Much less do lying lips a prince."
+  },
+  {
+   "v": 8,
+   "he": "אֶֽבֶן־חֵ֣ן הַ֭שֹּׁחַד בְּעֵינֵ֣י בְעָלָ֑יו אֶֽל־כָּל־אֲשֶׁ֖ר יִפְנֶ֣ה יַשְׂכִּֽיל׃",
+   "en": "A gift is as a precious stone in the eyes of him that hath it; Whithersoever he turneth, he prospereth."
+  },
+  {
+   "v": 9,
+   "he": "מְֽכַסֶּה־פֶּ֭שַׁע מְבַקֵּ֣שׁ אַהֲבָ֑ה וְשֹׁנֶ֥ה בְ֝דָבָ֗ר מַפְרִ֥יד אַלּֽוּף׃",
+   "en": "He that covereth a transgression seeketh love; But he that harpeth on a matter estrangeth a familiar friend."
+  },
+  {
+   "v": 10,
+   "he": "תֵּ֣חַת גְּעָרָ֣ה בְמֵבִ֑ין מֵהַכּ֖וֹת כְּסִ֣יל מֵאָֽה׃",
+   "en": "A rebuke entereth deeper into a man of understanding Than a hundred stripes into a fool."
+  },
+  {
+   "v": 11,
+   "he": "אַךְ־מְרִ֥י יְבַקֶּשׁ־רָ֑ע וּמַלְאָ֥ךְ אַ֝כְזָרִ֗י יְשֻׁלַּח־בּֽוֹ׃",
+   "en": "A rebellious man seeketh only evil; Therefore a cruel messenger shall be sent against him."
+  },
+  {
+   "v": 12,
+   "he": "פָּג֬וֹשׁ דֹּ֣ב שַׁכּ֣וּל בְּאִ֑ישׁ וְאַל־כְּ֝סִ֗יל בְּאִוַּלְתּֽוֹ׃",
+   "en": "Let a bear robbed of her whelps meet a man, Rather than a fool in his folly."
+  },
+  {
+   "v": 13,
+   "he": "מֵשִׁ֣יב רָ֭עָה תַּ֣חַת טוֹבָ֑ה לֹא־תמיש [תָמ֥וּשׁ] רָ֝עָ֗ה מִבֵּיתֽוֹ׃",
+   "en": "Whoso rewardeth evil for good, Evil shall not depart from his house."
+  },
+  {
+   "v": 14,
+   "he": "פּ֣וֹטֵֽר מַ֭יִם רֵאשִׁ֣ית מָד֑וֹן וְלִפְנֵ֥י הִ֝תְגַּלַּ֗ע הָרִ֥יב נְטֽוֹשׁ׃",
+   "en": "The beginning of strife is as when one letteth out water; Therefore leave off contention, before the quarrel break out."
+  },
+  {
+   "v": 15,
+   "he": "מַצְדִּ֣יק רָ֭שָׁע וּמַרְשִׁ֣יעַ צַדִּ֑יק תּוֹעֲבַ֥ת יְ֝הוָ֗ה גַּם־שְׁנֵיהֶֽם׃",
+   "en": "He that justifieth the wicked, and he that condemneth the righteous, Even they both are an abomination to the LORD."
+  },
+  {
+   "v": 16,
+   "he": "לָמָּה־זֶּ֣ה מְחִ֣יר בְּיַד־כְּסִ֑יל לִקְנ֖וֹת חָכְמָ֣ה וְלֶב־אָֽיִן׃",
+   "en": "Wherefore is there a price in the hand of a fool To buy wisdom, seeing he hath no understanding?"
+  },
+  {
+   "v": 17,
+   "he": "בְּכָל־עֵ֭ת אֹהֵ֣ב הָרֵ֑עַ וְאָ֥ח לְ֝צָרָ֗ה יִוָּלֵֽד׃",
+   "en": "A friend loveth at all times, And a brother is born for adversity."
+  },
+  {
+   "v": 18,
+   "he": "אָדָ֣ם חֲסַר־לֵ֭ב תּוֹקֵ֣עַ כָּ֑ף עֹרֵ֥ב עֲ֝רֻבָּ֗ה לִפְנֵ֥י רֵעֵֽהוּ׃",
+   "en": "A man void of understanding is he that striketh hands, And becometh surety in the presence of his neighbour."
+  },
+  {
+   "v": 19,
+   "he": "אֹ֣הֵֽב פֶּ֭שַׁע אֹהֵ֣ב מַצָּ֑ה מַגְבִּ֥יהַּ פִּ֝תְח֗וֹ מְבַקֶּשׁ־שָֽׁבֶר׃",
+   "en": "He loveth transgression that loveth strife; He that exalteth his gate seeketh destruction."
+  },
+  {
+   "v": 20,
+   "he": "עִקֶּשׁ־לֵ֭ב לֹ֣א יִמְצָא־ט֑וֹב וְנֶהְפָּ֥ךְ בִּ֝לְשׁוֹנ֗וֹ יִפּ֥וֹל בְּרָעָֽה׃",
+   "en": "He that hath a froward heart findeth no good; And he that hath a perverse tongue falleth into evil."
+  },
+  {
+   "v": 21,
+   "he": "יֹלֵ֣ד כְּ֭סִיל לְת֣וּגָה ל֑וֹ וְלֹֽא־יִ֝שְׂמַ֗ח אֲבִ֣י נָבָֽל׃",
+   "en": "He that begetteth a fool doeth it to his sorrow; And the father of a churl hath no joy."
+  },
+  {
+   "v": 22,
+   "he": "לֵ֣ב שָׂ֭מֵחַ יֵיטִ֣ב גֵּהָ֑ה וְר֥וּחַ נְ֝כֵאָ֗ה תְּיַבֶּשׁ־גָּֽרֶם׃",
+   "en": "A merry heart is a good medicine; But a broken spirit drieth the bones."
+  },
+  {
+   "v": 23,
+   "he": "שֹׁ֣חַד מֵ֭חֵיק רָשָׁ֣ע יִקָּ֑ח לְ֝הַטּ֗וֹת אָרְח֥וֹת מִשְׁפָּֽט׃",
+   "en": "A wicked man taketh a gift out of the bosom, To pervert the ways of justice."
+  },
+  {
+   "v": 24,
+   "he": "אֶת־פְּנֵ֣י מֵבִ֣ין חָכְמָ֑ה וְעֵינֵ֥י כְ֝סִ֗יל בִּקְצֵה־אָֽרֶץ׃",
+   "en": "Wisdom is before him that hath understanding; But the eyes of a fool are in the ends of the earth."
+  },
+  {
+   "v": 25,
+   "he": "כַּ֣עַס לְ֭אָבִיו בֵּ֣ן כְּסִ֑יל וּ֝מֶ֗מֶר לְיוֹלַדְתּֽוֹ׃",
+   "en": "A foolish son is vexation to his father, And bitterness to her that bore him."
+  },
+  {
+   "v": 26,
+   "he": "גַּ֤ם עֲנ֣וֹשׁ לַצַּדִּ֣יק לֹא־ט֑וֹב לְהַכּ֖וֹת נְדִיבִ֣ים עַל־יֹֽשֶׁר׃",
+   "en": "To punish also the righteous is not good, Nor to strike the noble for their uprightness."
+  },
+  {
+   "v": 27,
+   "he": "חוֹשֵׂ֣ךְ אֲ֭מָרָיו יוֹדֵ֣עַ דָּ֑עַת וקר [יְקַר]־ר֝֗וּחַ אִ֣ישׁ תְּבוּנָֽה׃",
+   "en": "He that spareth his words hath knowledge; And he that husbandeth his spirit is a man of discernment."
+  },
+  {
+   "v": 28,
+   "he": "גַּ֤ם אֱוִ֣יל מַ֭חֲרִישׁ חָכָ֣ם יֵחָשֵׁ֑ב אֹטֵ֖ם שְׂפָתָ֣יו נָבֽוֹן׃",
+   "en": "Even a fool, when he holdeth his peace, is counted wise; And he that shutteth his lips is esteemed as a man of understanding."
+  }
+ ],
+ "sourcing": "sourced"
+}

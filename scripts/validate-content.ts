@@ -389,17 +389,49 @@ for (const id of LAUNCH_TEN) {
   an empty book once already, and an orphaned one is a route nobody can reach
   holding text nobody reads.
 */
+type IndexedChapter = { c: number; verses: number };
+type IndexedDivision = { slug: string; verses: number; chapters?: IndexedChapter[] };
+
 for (const { file, data } of parsed.works.values()) {
-  for (const division of data.divisions as { slug: string; verses: number }[]) {
-    const id = `${data.id}--${division.slug}`;
-    const record = parsed.divisions.get(id);
-    if (record === undefined) {
-      note(file, `divisions.${division.slug}`, `no division record ${id}.json`);
-    } else if (record.data.verses.length !== division.verses) {
+  for (const division of data.divisions as IndexedDivision[]) {
+    const expect = (id: string, verses: number, path: string): void => {
+      const record = parsed.divisions.get(id);
+      if (record === undefined) {
+        note(file, path, `no text record ${id}.json`);
+      } else if (record.data.verses.length !== verses) {
+        note(
+          file,
+          path,
+          `index says ${verses} verses, ${id}.json holds ${record.data.verses.length}`,
+        );
+      }
+    };
+
+    if (division.chapters === undefined) {
+      expect(`${data.id}--${division.slug}`, division.verses, `divisions.${division.slug}`);
+      continue;
+    }
+
+    /* A chaptered division stores no text of its own; each chapter does, and
+       the numbers must run 1..n without a hole, because a missing chapter is
+       a route a reader reaches from the contents page and finds nothing at. */
+    let sum = 0;
+    for (const [i, chapter] of division.chapters.entries()) {
+      if (chapter.c !== i + 1) {
+        note(file, `divisions.${division.slug}.chapters`, `chapter ${chapter.c} is at position ${i + 1}`);
+      }
+      sum += chapter.verses;
+      expect(
+        `${data.id}--${division.slug}--${chapter.c}`,
+        chapter.verses,
+        `divisions.${division.slug}.${chapter.c}`,
+      );
+    }
+    if (sum !== division.verses) {
       note(
         file,
         `divisions.${division.slug}`,
-        `index says ${division.verses} verses, ${id}.json holds ${record.data.verses.length}`,
+        `chapters hold ${sum} verses, the division claims ${division.verses}`,
       );
     }
   }
@@ -408,8 +440,15 @@ for (const { file, data } of parsed.divisions.values()) {
   const work = parsed.works.get(data.work);
   if (work === undefined) {
     note(file, 'work', `no work record "${data.work}"`);
-  } else if (!work.data.divisions.some((d: { slug: string }) => d.slug === data.slug)) {
+    continue;
+  }
+  const division = work.data.divisions.find((d: IndexedDivision) => d.slug === data.slug);
+  if (division === undefined) {
     note(file, 'slug', `"${data.work}" does not list a division "${data.slug}"`);
+  } else if (data.c === undefined && division.chapters !== undefined) {
+    note(file, 'c', `"${data.slug}" is chaptered; its text belongs in per-chapter records`);
+  } else if (data.c !== undefined && division.chapters === undefined) {
+    note(file, 'c', `"${data.slug}" has no chapter level`);
   }
 }
 

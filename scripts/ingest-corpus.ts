@@ -1,23 +1,28 @@
 /**
  * Axis Mundi — Reading Room corpus ingestion.
  *
- * Turns an owner-delivered corpus under /docs into content records: one work
- * index carrying no text, and one record per division carrying only its own.
+ * Turns an owner-delivered corpus under /docs into content records: a work
+ * index carrying no text, and one record per *chapter* carrying only its own.
  *
- * The delivery format is the owner's and is never the build's working set: the
- * Tanakh arrives as nine megabytes in a single file, and nothing downstream of
- * this script ever holds it whole. Run it, then run validate:content — the
- * schema, not this file, decides whether what came out is publishable.
+ * The chapter is the leaf because it is the unit a canon is cited in and the
+ * only unit small enough to ship. A book route is a contents page; nothing
+ * anywhere in the room is allowed past a hundred kilobytes, which a book of
+ * Psalms is by a factor of eleven and a chapter of it never is. Where a canon
+ * has no chapter level — a surah runs straight to its ayat — the division is
+ * itself the leaf and nothing changes.
+ *
+ * The delivered file is the owner's format and is never the build's working
+ * set: the Tanakh arrives as nine megabytes in one file and nothing downstream
+ * of this script ever holds it whole.
  *
  *   pnpm ingest:corpus tanakh
  *   pnpm ingest:corpus            # every configured corpus
  *
- * Deliveries have not arrived in one shape and will not: the Quran came as a
- * flat verse list keyed by surah and ayah, the Tanakh as books of chapters of
- * verses. Both normalise here, which is the point of having one entry.
+ * Run it, then run validate:content — the schema, not this file, decides
+ * whether what came out is publishable.
  */
 
-import { mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -33,11 +38,15 @@ interface DeliveredVerse {
   a?: number;
   /** Verse number, in the nested shape. */
   v?: number;
-  [lang: string]: number | string | undefined;
+  [lang: string]: number | string | null | undefined;
 }
 
 interface DeliveredBook {
   book: string;
+  /** The book's title in its own script, where the delivery carries one. */
+  book_he?: string;
+  /** The canon's own grouping, where the delivery states it per book. */
+  section?: string;
   chapters: DeliveredVerse[][];
 }
 
@@ -48,11 +57,10 @@ interface Delivered {
   verses?: DeliveredVerse[];
 }
 
-interface Section {
+interface SectionConfig {
   id: string;
   name: string;
-  from: number;
-  to: number;
+  name_original?: string;
 }
 
 interface Config {
@@ -62,14 +70,42 @@ interface Config {
   title_original?: string;
   division_label: string;
   division_label_plural: string;
+  /** What one chapter is called, where the canon has that level. */
+  chapter_label?: string;
   script: string;
   direction: 'ltr' | 'rtl';
   /** Stated on every page of the work; for anything a reader must be told. */
   note?: string;
-  sections?: Section[];
+  /** The delivery's own section name mapped to how the canon names it. */
+  sections?: Record<string, SectionConfig>;
+  /**
+   * The order divisions are read in, where the delivery does not carry it.
+   * Named, never inferred: a canon's order is the canon's, not this script's.
+   */
+  order?: string[];
 }
 
 /* ── the corpora ────────────────────────────────────────────────────────── */
+
+/*
+  The Tanakh's book order.
+
+  Taken verbatim from the v1 delivery, whose memo stated it as "the Tanakh's
+  own": the v2 file re-sorted its books alphabetically inside each section, and
+  alphabetical is not an order this canon has ever been read in. "Song of
+  Solomon" is v2's "Song of Songs"; that rename is the only difference between
+  this list and the one v1 shipped.
+*/
+const TANAKH_ORDER = [
+  'Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy',
+  'Joshua', 'Judges', 'I Samuel', 'II Samuel', 'I Kings', 'II Kings',
+  'Isaiah', 'Jeremiah', 'Ezekiel',
+  'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah',
+  'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi',
+  'Psalms', 'Proverbs', 'Job', 'Song of Songs', 'Ruth', 'Lamentations',
+  'Ecclesiastes', 'Esther', 'Daniel', 'Ezra', 'Nehemiah',
+  'I Chronicles', 'II Chronicles',
+];
 
 const CONFIGS: Record<string, Config> = {
   quran: {
@@ -82,27 +118,23 @@ const CONFIGS: Record<string, Config> = {
     direction: 'rtl',
   },
   tanakh: {
-    file: 'docs/corpora/tanakh/tanakh-paired.json',
+    file: 'docs/corpora/tanakh/tanakh-paired-v2.json',
     tradition: 'judaism',
     title: 'Tanakh',
     division_label: 'book',
     division_label_plural: 'books',
+    chapter_label: 'chapter',
     script: 'hebrew',
     direction: 'rtl',
-    /* Measured across all 23,194 English verses, not asserted: HaShem in
-       5,545, G-d in 2,345, L-rd in 442, and no unhyphenated God, Lord or LORD
-       anywhere. The page names an edition, so it says how the text it actually
-       shows differs from what that name alone would imply. */
-    note:
-      "The books stand in the Tanakh's own order, under its own three divisions, " +
-      'not the Christian Old Testament\'s. In this English text as delivered the ' +
-      'divine name is written HaShem, and God and Lord appear as G-d and L-rd.',
-    /* The canon's own grouping, by the delivered file's own book order. */
-    sections: [
-      { id: 'torah', name: 'Torah', from: 1, to: 5 },
-      { id: 'neviim', name: "Nevi'im", from: 6, to: 26 },
-      { id: 'ketuvim', name: 'Ketuvim', from: 27, to: 39 },
-    ],
+    note: "The books stand in the Tanakh's own order, under its own three divisions, not the Christian Old Testament's.",
+    /* The delivery names its sections in English; the canon names them in
+       Hebrew and the note transliterates them. Both go on the page. */
+    sections: {
+      Torah: { id: 'torah', name: 'Torah', name_original: 'תורה' },
+      Prophets: { id: 'neviim', name: "Nevi'im", name_original: 'נביאים' },
+      Writings: { id: 'ketuvim', name: 'Ketuvim', name_original: 'כתובים' },
+    },
+    order: TANAKH_ORDER,
   },
 };
 
@@ -124,41 +156,89 @@ export function slugify(name: string): string {
     .replace(/^-|-$/g, '');
 }
 
-interface NormalisedDivision {
+/**
+ * A chapter's opening words, for its line on a contents page.
+ *
+ * Cut at a word boundary and never mid-word, because a preview is a quotation
+ * and a quotation broken mid-word reads as a rendering fault rather than as an
+ * ellipsis. Long enough to recognise a psalm by, short enough for a phone.
+ */
+export function preview(text: string, limit = 76): string {
+  const clean = text.replace(/\s+/g, ' ').trim();
+  if (clean.length <= limit) return clean;
+  const cut = clean.slice(0, limit);
+  const space = cut.lastIndexOf(' ');
+  return `${(space > limit * 0.6 ? cut.slice(0, space) : cut).replace(/[,;:.\s]+$/, '')}…`;
+}
+
+type Verse = Record<string, number | string>;
+
+interface Chapter {
+  c: number;
+  verses: Verse[];
+}
+
+interface Division {
   n: number;
   slug: string;
   name?: string;
-  verses: Record<string, number | string>[];
-  chapters?: number;
+  name_original?: string;
+  section?: string;
+  /** Absent where the division runs straight to its verses. */
+  chapters?: Chapter[];
+  /** Every verse of the division, whatever level they are stored at. */
+  all: Verse[];
 }
 
 /** Both delivered shapes, flattened to the same thing. */
-function normalise(src: Delivered): NormalisedDivision[] {
+function normalise(src: Delivered, config: Config): Division[] {
   const langs = Object.keys(src.editions);
+  /* An empty column is an absent column, whether the delivery writes it as ""
+     or as null. A verse with no English is a fact the page states, not an
+     empty string it renders. */
   const columns = (v: DeliveredVerse): Record<string, string> => {
     const out: Record<string, string> = {};
     for (const lang of langs) {
       const text = v[lang];
-      /* An empty column is an absent column: a verse with no English is a fact
-         the page states, not an empty string it renders. */
-      if (typeof text === 'string' && text !== '') out[lang] = text;
+      if (typeof text === 'string' && text.trim() !== '') out[lang] = text;
     }
     return out;
   };
 
   if (src.books !== undefined) {
-    return src.books.map((book, i) => ({
-      n: i + 1,
-      slug: slugify(book.book),
-      name: book.book,
-      chapters: book.chapters.length,
-      verses: book.chapters.flatMap((chapter, ci) =>
-        chapter.map((v) => ({ c: ci + 1, v: v.v as number, ...columns(v) })),
-      ),
-    }));
+    const order = config.order;
+    const books = [...src.books];
+    if (order !== undefined) {
+      const rank = new Map(order.map((name, i) => [name, i]));
+      const unknown = books.filter((b) => !rank.has(b.book)).map((b) => b.book);
+      if (unknown.length > 0) {
+        throw new Error(
+          `the delivery has books the configured order does not name: ${unknown.join(', ')}. ` +
+            "A canon's order is the canon's — add them to the order rather than letting the " +
+            'file\'s sequence decide.',
+        );
+      }
+      books.sort((a, b) => (rank.get(a.book) ?? 0) - (rank.get(b.book) ?? 0));
+    }
+
+    return books.map((book, i) => {
+      const chapters = book.chapters.map((chapter, ci) => ({
+        c: ci + 1,
+        verses: chapter.map((v) => ({ v: v.v as number, ...columns(v) })),
+      }));
+      return {
+        n: i + 1,
+        slug: slugify(book.book),
+        name: book.book,
+        ...(book.book_he === undefined ? {} : { name_original: book.book_he }),
+        ...(book.section === undefined ? {} : { section: book.section }),
+        chapters,
+        all: chapters.flatMap((c) => c.verses.map((v) => ({ c: c.c, ...v }))),
+      };
+    });
   }
 
-  const byDivision = new Map<number, Record<string, number | string>[]>();
+  const byDivision = new Map<number, Verse[]>();
   for (const v of src.verses ?? []) {
     const n = v.s as number;
     let rows = byDivision.get(n);
@@ -170,7 +250,7 @@ function normalise(src: Delivered): NormalisedDivision[] {
   }
   return [...byDivision.entries()]
     .sort(([a], [b]) => a - b)
-    .map(([n, verses]) => ({ n, slug: String(n), verses }));
+    .map(([n, verses]) => ({ n, slug: String(n), all: verses }));
 }
 
 function write(path: string, value: unknown): number {
@@ -183,44 +263,118 @@ function write(path: string, value: unknown): number {
 function ingest(name: string, config: Config): void {
   const delivered = join(ROOT, config.file);
   const src = JSON.parse(readFileSync(delivered, 'utf8')) as Delivered;
+  const originalLang = Object.keys(src.editions).find((k) => k !== 'en');
   const hasEnglish = src.editions['en'] !== undefined;
+
+  /* Every record this corpus owns is rewritten, so any left over from a
+     previous delivery is stale — a book v2 renamed would otherwise keep its
+     v1 route alive, serving text no index points at. */
+  for (const file of readdirSync(DIVISIONS)) {
+    if (file.startsWith(`${src.work}--`)) rmSync(join(DIVISIONS, file));
+  }
 
   let totalVerses = 0;
   let totalChapters = 0;
-  let gaps = 0;
-  let divisionBytes = 0;
+  let englishGaps = 0;
+  let originalGaps = 0;
+  let recordBytes = 0;
   let largest = 0;
+  let largestName = '';
 
-  const index = normalise(src).map((d) => {
-    const missing = hasEnglish ? d.verses.filter((r) => r['en'] === undefined).length : 0;
-    totalVerses += d.verses.length;
-    totalChapters += d.chapters ?? 0;
-    gaps += missing;
+  const divisions = normalise(src, config);
 
-    const bytes = write(join(DIVISIONS, `${src.work}--${d.slug}.json`), {
-      id: `${src.work}--${d.slug}`,
-      work: src.work,
-      n: d.n,
-      slug: d.slug,
-      verses: d.verses,
-      sourcing: 'sourced',
-    });
-    divisionBytes += bytes;
-    largest = Math.max(largest, bytes);
+  const index = divisions.map((d) => {
+    const missingEnglish = (rows: Verse[]): number =>
+      hasEnglish ? rows.filter((r) => r['en'] === undefined).length : 0;
+    const missingOriginal = (rows: Verse[]): number =>
+      originalLang === undefined ? 0 : rows.filter((r) => r[originalLang] === undefined).length;
+
+    const emit = (id: string, body: Record<string, unknown>): void => {
+      const bytes = write(join(DIVISIONS, `${id}.json`), { id, work: src.work, ...body });
+      recordBytes += bytes;
+      if (bytes > largest) {
+        largest = bytes;
+        largestName = id;
+      }
+    };
+
+    if (d.chapters === undefined) {
+      emit(`${src.work}--${d.slug}`, {
+        n: d.n,
+        slug: d.slug,
+        verses: d.all,
+        sourcing: 'sourced',
+      });
+    } else {
+      for (const chapter of d.chapters) {
+        emit(`${src.work}--${d.slug}--${chapter.c}`, {
+          n: d.n,
+          slug: d.slug,
+          c: chapter.c,
+          verses: chapter.verses,
+          sourcing: 'sourced',
+        });
+      }
+    }
+
+    totalVerses += d.all.length;
+    totalChapters += d.chapters?.length ?? 0;
+    englishGaps += missingEnglish(d.all);
+    originalGaps += missingOriginal(d.all);
 
     return {
       n: d.n,
       slug: d.slug,
       ...(d.name === undefined ? {} : { name: d.name }),
-      verses: d.verses.length,
-      ...(d.chapters === undefined ? {} : { chapters: d.chapters }),
-      ...(() => {
-        const section = config.sections?.find((s) => d.n >= s.from && d.n <= s.to);
-        return section === undefined ? {} : { section: section.id };
-      })(),
-      english_gaps: missing,
+      ...(d.name_original === undefined ? {} : { name_original: d.name_original }),
+      verses: d.all.length,
+      ...(d.chapters === undefined
+        ? {}
+        : {
+            chapters: d.chapters.map((chapter) => {
+              const first = chapter.verses[0];
+              /* The preview is whichever column the chapter actually opens in.
+                 Four of this canon's chapters open on a verse the Hebrew does
+                 not carry, and one on a verse the English does not. */
+              const lang =
+                first === undefined ? undefined
+                : typeof first['en'] === 'string' ? 'en'
+                : originalLang !== undefined && typeof first[originalLang] === 'string' ? originalLang
+                : undefined;
+              const text = lang === undefined || first === undefined ? undefined : first[lang];
+              return {
+                c: chapter.c,
+                verses: chapter.verses.length,
+                ...(typeof text === 'string' ? { preview: preview(text), preview_lang: lang } : {}),
+                english_gaps: missingEnglish(chapter.verses),
+                original_gaps: missingOriginal(chapter.verses),
+              };
+            }),
+          }),
+      ...(d.section === undefined || config.sections === undefined
+        ? {}
+        : { section: config.sections[d.section]?.id ?? slugify(d.section) }),
+      english_gaps: missingEnglish(d.all),
+      original_gaps: missingOriginal(d.all),
     };
   });
+
+  /* Section spans are derived from where the ordered divisions actually fall,
+     so a section can never claim a book the index does not put in it. */
+  const sections =
+    config.sections === undefined
+      ? undefined
+      : Object.entries(config.sections)
+          .map(([delivered, section]) => {
+            const members = divisions.filter((d) => d.section === delivered).map((d) => d.n);
+            return {
+              ...section,
+              from: Math.min(...members),
+              to: Math.max(...members),
+            };
+          })
+          .filter((s) => Number.isFinite(s.from))
+          .sort((a, b) => a.from - b.from);
 
   const workBytes = write(join(WORKS, `${src.work}.json`), {
     id: src.work,
@@ -229,26 +383,30 @@ function ingest(name: string, config: Config): void {
     ...(config.title_original === undefined ? {} : { title_original: config.title_original }),
     division_label: config.division_label,
     division_label_plural: config.division_label_plural,
+    ...(config.chapter_label === undefined ? {} : { chapter_label: config.chapter_label }),
     script: config.script,
     direction: config.direction,
     editions: src.editions,
     ...(config.note === undefined ? {} : { note: config.note }),
-    ...(config.sections === undefined ? {} : { sections: config.sections }),
+    ...(sections === undefined || sections.length === 0 ? {} : { sections }),
     divisions: index,
     total_verses: totalVerses,
     ...(totalChapters === 0 ? {} : { total_chapters: totalChapters }),
-    english_gaps: gaps,
+    english_gaps: englishGaps,
+    original_gaps: originalGaps,
     sourcing: 'sourced',
   });
 
   const kb = (n: number): string => `${(n / 1024).toFixed(0)} KB`;
+  const leaves = totalChapters === 0 ? index.length : totalChapters;
   console.log(`\n  ${name} — ${index.length} divisions, ${totalVerses.toLocaleString('en')} verses`);
-  console.log(`    delivered        ${kb(statSync(delivered).size).padStart(9)}  (stays in /docs)`);
-  console.log(`    work index       ${kb(workBytes).padStart(9)}  (no text)`);
-  console.log(`    divisions        ${kb(divisionBytes).padStart(9)}  across ${index.length} files`);
-  console.log(`    largest division ${kb(largest).padStart(9)}`);
-  if (gaps > 0) {
-    console.log(`    english gaps     ${String(gaps).padStart(9)}  verses with no English column`);
+  console.log(`    delivered      ${kb(statSync(delivered).size).padStart(9)}  (stays in /docs)`);
+  console.log(`    work index     ${kb(workBytes).padStart(9)}  (no text)`);
+  console.log(`    text records   ${kb(recordBytes).padStart(9)}  across ${leaves} files`);
+  console.log(`    largest        ${kb(largest).padStart(9)}  ${largestName}`);
+  if (englishGaps > 0 || originalGaps > 0) {
+    console.log(`    single-sided   ${String(englishGaps + originalGaps).padStart(9)}  ` +
+      `(${originalGaps} with no original, ${englishGaps} with no English)`);
   }
 }
 

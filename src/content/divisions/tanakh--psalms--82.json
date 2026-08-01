@@ -1,0 +1,50 @@
+{
+ "id": "tanakh--psalms--82",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 82,
+ "verses": [
+  {
+   "v": 1,
+   "he": "מִזְמ֗וֹר לְאָ֫סָ֥ף אֱ‍ֽלֹהִ֗ים נִצָּ֥ב בַּעֲדַת־אֵ֑ל בְּקֶ֖רֶב אֱלֹהִ֣ים יִשְׁפֹּֽט׃",
+   "en": "A Psalm of Asaph. God standeth in the congregation of God; In the midst of the judges He judgeth:"
+  },
+  {
+   "v": 2,
+   "he": "עַד־מָתַ֥י תִּשְׁפְּטוּ־עָ֑וֶל וּפְנֵ֥י רְ֝שָׁעִ֗ים תִּשְׂאוּ־סֶֽלָה׃",
+   "en": "'How long will ye judge unjustly, And respect the persons of the wicked? Selah"
+  },
+  {
+   "v": 3,
+   "he": "שִׁפְטוּ־דַ֥ל וְיָת֑וֹם עָנִ֖י וָרָ֣שׁ הַצְדִּֽיקוּ׃",
+   "en": "Judge the poor and fatherless; Do justice to the afflicted and destitute."
+  },
+  {
+   "v": 4,
+   "he": "פַּלְּטוּ־דַ֥ל וְאֶבְי֑וֹן מִיַּ֖ד רְשָׁעִ֣ים הַצִּֽילוּ׃",
+   "en": "Rescue the poor and needy; Deliver them out of the hand of the wicked."
+  },
+  {
+   "v": 5,
+   "he": "לֹ֤א יָֽדְע֨וּ׀ וְלֹ֥א יָבִ֗ינוּ בַּחֲשֵׁכָ֥ה יִתְהַלָּ֑כוּ יִ֝מּ֗וֹטוּ כָּל־מ֥וֹסְדֵי אָֽרֶץ׃",
+   "en": "They know not, neither do they understand; They go about in darkness; All the foundations of the earth are moved."
+  },
+  {
+   "v": 6,
+   "he": "אֲ‍ֽנִי־אָ֭מַרְתִּי אֱלֹהִ֣ים אַתֶּ֑ם וּבְנֵ֖י עֶלְי֣וֹן כֻּלְּכֶֽם׃",
+   "en": "I said: Ye are godlike beings, And all of you sons of the Most High."
+  },
+  {
+   "v": 7,
+   "he": "אָ֭כֵן כְּאָדָ֣ם תְּמוּת֑וּן וּכְאַחַ֖ד הַשָּׂרִ֣ים תִּפֹּֽלוּ׃",
+   "en": "Nevertheless ye shall die like men, And fall like one of the princes.'"
+  },
+  {
+   "v": 8,
+   "he": "קוּמָ֣ה אֱ֭לֹהִים שָׁפְטָ֣ה הָאָ֑רֶץ כִּֽי־אַתָּ֥ה תִ֝נְחַ֗ל בְּכָל־הַגּוֹיִֽם׃",
+   "en": "Arise, O God, judge the earth; For Thou shalt possess all the nations."
+  }
+ ],
+ "sourcing": "sourced"
+}

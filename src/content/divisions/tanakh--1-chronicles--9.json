@@ -1,0 +1,230 @@
+{
+ "id": "tanakh--1-chronicles--9",
+ "work": "tanakh",
+ "n": 38,
+ "slug": "1-chronicles",
+ "c": 9,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וְכָל־יִשְׂרָאֵל֙ הִתְיַחְשׂ֔וּ וְהִנָּ֣ם כְּתוּבִ֔ים עַל־סֵ֖פֶר מַלְכֵ֣י יִשְׂרָאֵ֑ל וִיהוּדָ֛ה הָגְל֥וּ לְבָבֶ֖ל בְּמַעֲלָֽם׃",
+   "en": "So all Israel were reckoned by genealogies; and, behold, they are written in the book of the kings of Israel; and Judah was carried away captive to Babylon because of their transgression."
+  },
+  {
+   "v": 2,
+   "he": "וְהַיּוֹשְׁבִים֙ הָרִ֣אשֹׁנִ֔ים אֲשֶׁ֥ר בַּאֲחֻזָּתָ֖ם בְּעָרֵיהֶ֑ם יִשְׂרָאֵל֙ הַכֹּ֣הֲנִ֔ים הַלְוִיִּ֖ם וְהַנְּתִינִֽים׃",
+   "en": "Now the first inhabitants that dwelt in their possessions in their cities were, Israelites, the priests, the Levites, and the Nethinim."
+  },
+  {
+   "v": 3,
+   "he": "וּבִירוּשָׁלַ‍ִ֙ם֙ יָשְׁב֔וּ מִן־בְּנֵ֥י יְהוּדָ֖ה וּמִן־בְּנֵ֣י בִנְיָמִ֑ן וּמִן־בְּנֵ֥י אֶפְרַ֖יִם וּמְנַשֶּֽׁה׃",
+   "en": "And in Jerusalem dwelt of the children of Judah, and of the children of Benjamin, and of the children of Ephraim and Manasseh:"
+  },
+  {
+   "v": 4,
+   "he": "עוּתַ֨י בֶּן־עַמִּיה֤וּד בֶּן־עָמְרִי֙ בֶּן־אִמְרִ֣י בֶן־בנימן [בָּנִ֔י מִן]־בְּנֵי־פֶ֖רֶץ בֶּן־יְהוּדָֽה׃",
+   "en": "Uthai the son of Ammihud, the son of Omri, the son of Imri, the son of Bani, of the children of Perez the son of Judah."
+  },
+  {
+   "v": 5,
+   "he": "וּמִן־הַשִּׁ֣ילוֹנִ֔י עֲשָׂיָ֥ה הַבְּכ֖וֹר וּבָנָֽיו׃",
+   "en": "And of the Shilonites: Asaiah the first-born and his sons."
+  },
+  {
+   "v": 6,
+   "he": "וּמִן־בְּנֵי־זֶ֖רַח יְעוּאֵ֑ל וַאֲחֵיהֶ֖ם שֵׁשׁ־מֵא֥וֹת וְתִשְׁעִֽים׃",
+   "en": "And of the sons of Zerah: Jeuel, and their brethren, six hundred and ninety."
+  },
+  {
+   "v": 7,
+   "he": "וּמִן־בְּנֵ֖י בִּנְיָמִ֑ן סַלּוּא֙ בֶּן־מְשֻׁלָּ֔ם בֶּן־הוֹדַוְיָ֖ה בֶּן־הַסְּנֻאָֽה׃",
+   "en": "And of the sons of Benjamin: Sallu the son of Meshullam, the son of Hodaviah, the son of Hassenuah,"
+  },
+  {
+   "v": 8,
+   "he": "וְיִבְנְיָה֙ בֶּן־יְרֹחָ֔ם וְאֵלָ֥ה בֶן־עֻזִּ֖י בֶּן־מִכְרִ֑י וּמְשֻׁלָּם֙ בֶּן־שְׁפַטְיָ֔ה בֶּן־רְעוּאֵ֖ל בֶּן־יִבְנִיָּֽה׃",
+   "en": "and Ibneiah the son of Jeroham, and Elah the son of Uzzi, the son of Michri, and Meshullam the son of Shephatiah, the son of Reuel, the son of Ibneiah;"
+  },
+  {
+   "v": 9,
+   "he": "וַאֲחֵיהֶם֙ לְתֹ֣לְדוֹתָ֔ם תְּשַׁ֥ע מֵא֖וֹת וַחֲמִשִּׁ֣ים וְשִׁשָּׁ֑ה כָּל־אֵ֣לֶּה אֲנָשִׁ֔ים רָאשֵׁ֥י אָב֖וֹת לְבֵ֥ית אֲבֹתֵיהֶֽם׃",
+   "en": "and their brethren, according to their generations, nine hundred and fifty and six. All these men were heads of fathers’houses by their fathers’houses."
+  },
+  {
+   "v": 10,
+   "he": "וּמִן־הַֽכֹּהֲנִ֑ים יְדַֽעְיָ֥ה וִיהוֹיָרִ֖יב וְיָכִֽין׃",
+   "en": "And of the priests: Jedaiah, and Jehoiarib, and Jachin;"
+  },
+  {
+   "v": 11,
+   "he": "וַעֲזַרְיָ֨ה בֶן־חִלְקִיָּ֜ה בֶּן־מְשֻׁלָּ֣ם בֶּן־צָד֗וֹק בֶּן־מְרָיוֹת֙ בֶּן־אֲחִיט֔וּב נְגִ֖יד בֵּ֥ית הָאֱלֹהִֽים׃",
+   "en": "and Azariah the son of Hilkiah, the son of Meshullam, the son of Zadok, the son of Meraioth, the son of Ahitub, the ruler of the house of God;"
+  },
+  {
+   "v": 12,
+   "he": "וַעֲדָיָה֙ בֶּן־יְרֹחָ֔ם בֶּן־פַּשְׁח֖וּר בֶּן־מַלְכִּיָּ֑ה וּמַעְשַׂ֨י בֶּן־עֲדִיאֵ֧ל בֶּן־יַחְזֵ֛רָה בֶּן־מְשֻׁלָּ֥ם בֶּן־מְשִׁלֵּמִ֖ית בֶּן־אִמֵּֽר׃",
+   "en": "and Adaiah the son of Jeroham, the son of Pashhur, the son of Malchijah, and Maasai the son of Adiel, the son of Jahzerah, the son of Meshullam, the son of Meshillemith, the son of Immer;"
+  },
+  {
+   "v": 13,
+   "he": "וַאֲחֵיהֶ֗ם רָאשִׁים֙ לְבֵ֣ית אֲבוֹתָ֔ם אֶ֕לֶף וּשְׁבַ֥ע מֵא֖וֹת וְשִׁשִּׁ֑ים גִּבּ֣וֹרֵי חֵ֔יל מְלֶ֖אכֶת עֲבוֹדַ֥ת בֵּית־הָאֱלֹהִֽים׃",
+   "en": "and their brethren, heads of their fathers’houses, a thousand and seven hundred and threescore; very able men for the work of the service of the house of God."
+  },
+  {
+   "v": 14,
+   "he": "וּמִֽן־הַלְוִיִּ֑ם שְׁמַֽעְיָ֧ה בֶן־חַשּׁ֛וּב בֶּן־עַזְרִיקָ֥ם בֶּן־חֲשַׁבְיָ֖ה מִן־בְּנֵ֥י מְרָרִֽי׃",
+   "en": "And of the Levites: Shemaiah the son of Hasshub, the son of Azrikam, the son of Hashabiah, of the sons of Merari;"
+  },
+  {
+   "v": 15,
+   "he": "וּבַקְבַּקַּ֥ר חֶ֖רֶשׁ וְגָלָ֑ל וּמַתַּנְיָה֙ בֶּן־מִיכָ֔א בֶּן־זִכְרִ֖י בֶּן־אָסָֽף׃",
+   "en": "and Bakbakkar, Heresh, and Galal, and Mattaniah the son of Mica, the son of Zichri, the son of Asaph;"
+  },
+  {
+   "v": 16,
+   "he": "וְעֹבַדְיָה֙ בֶּֽן־שְׁמַֽעְיָ֔ה בֶּן־גָּלָ֖ל בֶּן־יְדוּת֑וּן וּבֶרֶכְיָ֤ה בֶן־אָסָא֙ בֶּן־אֶלְקָנָ֔ה הַיּוֹשֵׁ֖ב בְּחַצְרֵ֥י נְטוֹפָתִֽי׃",
+   "en": "and Obadiah the son of Shemaiah, the son of Galal, the son of Jeduthun, and Berechiah the son of Asa, the son of Elkanah, that dwelt in the villages of the Netophathites. ."
+  },
+  {
+   "v": 17,
+   "he": "וְהַשֹּׁעֲרִים֙ שַׁלּ֣וּם וְעַקּ֔וּב וְטַלְמֹ֖ן וַאֲחִימָ֑ן וַאֲחִיהֶ֥ם שַׁלּ֖וּם הָרֹֽאשׁ׃",
+   "en": "And the porters: Shallum, and Akkub, and Talmon, and Ahiman, and their brother Shallum the chief;"
+  },
+  {
+   "v": 18,
+   "he": "וְֽעַד־הֵ֔נָּה בְּשַׁ֥עַר הַמֶּ֖לֶךְ מִזְרָ֑חָה הֵ֚מָּה הַשֹּׁ֣עֲרִ֔ים לְמַחֲנ֖וֹת בְּנֵ֥י לֵוִֽי׃",
+   "en": "who hitherto waited in the king’s gate eastward; they were the porters for the camp of the children of Levi."
+  },
+  {
+   "v": 19,
+   "he": "וְשַׁלּ֣וּם בֶּן־ק֠וֹרֵא בֶּן־אֶבְיָסָ֨ף בֶּן־קֹ֜רַח וְֽאֶחָ֧יו לְבֵית־אָבִ֣יו הַקָּרְחִ֗ים עַ֚ל מְלֶ֣אכֶת הָעֲבוֹדָ֔ה שֹׁמְרֵ֥י הַסִּפִּ֖ים לָאֹ֑הֶל וַאֲבֹֽתֵיהֶם֙ עַל־מַחֲנֵ֣ה יְהוָ֔ה שֹׁמְרֵ֖י הַמָּבֽוֹא׃",
+   "en": "And Shallum the son of Kore, the son of Ebiasaph, the son of Korah, and his brethren, of his father’s house, the Korahites, were over the work of the service, keepers of the gates of the Tent; and their fathers had been over the camp of the LORD, keepers of the entry;"
+  },
+  {
+   "v": 20,
+   "he": "וּפִֽינְחָ֣ס בֶּן־אֶלְעָזָ֗ר נָגִ֨יד הָיָ֧ה עֲלֵיהֶ֛ם לְפָנִ֖ים יְהוָ֥ה׀ עִמּֽוֹ׃",
+   "en": "and Phinehas the son of Eleazar was ruler over them in time past, the LORD being with him."
+  },
+  {
+   "v": 21,
+   "he": "זְכַרְיָה֙ בֶּ֣ן מְשֶֽׁלֶמְיָ֔ה שֹׁעֵ֥ר פֶּ֖תַח לְאֹ֥הֶל מוֹעֵֽד׃",
+   "en": "Zechariah the son of Meshelemiah was porter of the door of the tent of meeting."
+  },
+  {
+   "v": 22,
+   "he": "כֻּלָּ֤ם הַבְּרוּרִים֙ לְשֹׁעֲרִ֣ים בַּסִּפִּ֔ים מָאתַ֖יִם וּשְׁנֵ֣ים עָשָׂ֑ר הֵ֤מָּה בְחַצְרֵיהֶם֙ הִתְיַחְשָׂ֔ם הֵ֣מָּה יִסַּ֥ד דָּוִ֛יד וּשְׁמוּאֵ֥ל הָרֹאֶ֖ה בֶּאֱמוּנָתָֽם׃",
+   "en": "All these that were chosen to be porters in the gates were two hundred and twelve. These were reckoned by genealogy in their villages, whom David and Samuel the seer did ordain in their set office."
+  },
+  {
+   "v": 23,
+   "he": "וְהֵ֨ם וּבְנֵיהֶ֜ם עַל־הַשְּׁעָרִ֧ים לְבֵית־יְהוָ֛ה לְבֵ֥ית־הָאֹ֖הֶל לְמִשְׁמָרֽוֹת׃",
+   "en": "So they and their children had the oversight of the gates of the house of the LORD, even the house of the Tent, by wards."
+  },
+  {
+   "v": 24,
+   "he": "לְאַרְבַּ֣ע רוּח֔וֹת יִהְי֖וּ הַשֹּׁעֲרִ֑ים מִזְרָ֥ח יָ֖מָּה צָפ֥וֹנָה וָנֶֽגְבָּה׃",
+   "en": "On the four sides were the porters, toward the east, west, north, and south."
+  },
+  {
+   "v": 25,
+   "he": "וַאֲחֵיהֶ֨ם בְּחַצְרֵיהֶ֜ם לָב֨וֹא לְשִׁבְעַ֧ת הַיָּמִ֛ים מֵעֵ֥ת אֶל־עֵ֖ת עִם־אֵֽלֶּה׃",
+   "en": "And their brethren, in their villages, were to come in every seven days from time to time to be with them;"
+  },
+  {
+   "v": 26,
+   "he": "כִּ֣י בֶאֱמוּנָ֞ה הֵ֗מָּה אַרְבַּ֙עַת֙ גִּבֹּרֵ֣י הַשֹּׁעֲרִ֔ים הֵ֖ם הַלְוִיִּ֑ם וְהָיוּ֙ עַל־הַלְּשָׁכ֔וֹת וְעַ֥ל הָאֹצְר֖וֹת בֵּ֥ית הָאֱלֹהִֽים׃",
+   "en": "for the four chief porters were in a set office. These were the Levites. They were also over the chambers and over the treasuries in the house of God."
+  },
+  {
+   "v": 27,
+   "he": "וּסְבִיב֥וֹת בֵּית־הָאֱלֹהִ֖ים יָלִ֑ינוּ כִּֽי־עֲלֵיהֶ֣ם מִשְׁמֶ֔רֶת וְהֵ֥ם עַל־הַמַּפְתֵּ֖חַ וְלַבֹּ֥קֶר לַבֹּֽקֶר׃",
+   "en": "And they lodged round about the house of God, because the charge thereof was upon them, and to them pertained the opening thereof morning by morning."
+  },
+  {
+   "v": 28,
+   "he": "וּמֵהֶ֖ם עַל־כְּלֵ֣י הָעֲבוֹדָ֑ה כִּֽי־בְמִסְפָּ֣ר יְבִיא֔וּם וּבְמִסְפָּ֖ר יוֹצִיאֽוּם׃",
+   "en": "And certain of them had charge of the vessels of service; for by tale were they brought in and by tale were they taken out."
+  },
+  {
+   "v": 29,
+   "he": "וּמֵהֶ֗ם מְמֻנִּים֙ עַל־הַכֵּלִ֔ים וְעַ֖ל כָּל־כְּלֵ֣י הַקֹּ֑דֶשׁ וְעַל־הַסֹּ֙לֶת֙ וְהַיַּ֣יִן וְהַשֶּׁ֔מֶן וְהַלְּבוֹנָ֖ה וְהַבְּשָׂמִֽים׃",
+   "en": "Some of them also were appointed over the furniture, and over all the holy vessels, and over the fine flour, and the wine, and the oil, and the frankincense, and the spices."
+  },
+  {
+   "v": 30,
+   "he": "וּמִן־בְּנֵי֙ הַכֹּ֣הֲנִ֔ים רֹקְחֵ֥י הַמִּרְקַ֖חַת לַבְּשָׂמִֽים׃",
+   "en": "And some of the sons of the priests prepared the confection of the spices."
+  },
+  {
+   "v": 31,
+   "he": "וּמַתִּתְיָה֙ מִן־הַלְוִיִּ֔ם ה֥וּא הַבְּכ֖וֹר לְשַׁלֻּ֣ם הַקָּרְחִ֑י בֶּאֱמוּנָ֕ה עַ֖ל מַעֲשֵׂ֥ה הַחֲבִתִּֽים׃",
+   "en": "And Mattithiah, one of the Levites, who was the firstborn of Shallum the Korahite, had the set office over the things that were baked on griddles."
+  },
+  {
+   "v": 32,
+   "he": "וּמִן־בְּנֵ֧י הַקְּהָתִ֛י מִן־אֲחֵיהֶ֖ם עַל־לֶ֣חֶם הַֽמַּעֲרָ֑כֶת לְהָכִ֖ין שַׁבַּ֥ת שַׁבָּֽת׃",
+   "en": "And some of their brethren, of the sons of the Kohathites, were over the showbread, to prepare it every sabbath."
+  },
+  {
+   "v": 33,
+   "he": "וְאֵ֣לֶּה הַ֠מְשֹׁרְרִים רָאשֵׁ֨י אָב֧וֹת לַלְוִיִּ֛ם בַּלְּשָׁכֹ֖ת פטירים [פְּטוּרִ֑ים] כִּֽי־יוֹמָ֥ם וָלַ֛יְלָה עֲלֵיהֶ֖ם בַּמְּלָאכָֽה׃",
+   "en": "And these are the singers, heads of fathers’houses of the Levites, who dwelt in the chambers and were free from other service; for they were employed in their work day and night."
+  },
+  {
+   "v": 34,
+   "he": "אֵלֶּה֩ רָאשֵׁ֨י הָאָב֧וֹת לַלְוִיִּ֛ם לְתֹלְדוֹתָ֖ם רָאשִׁ֑ים אֵ֖לֶּה יָשְׁב֥וּ בִירוּשָׁלָ‍ִֽם׃",
+   "en": "These were heads of fathers’houses of the Levites, by their generations, chief men; these dwelt at Jerusalem."
+  },
+  {
+   "v": 35,
+   "he": "וּבְגִבְע֛וֹן יָשְׁב֥וּ אֲבִֽי־גִבְע֖וֹן יעואל [יְעִיאֵ֑ל] וְשֵׁ֥ם אִשְׁתּ֖וֹ מַעֲכָֽה׃",
+   "en": "And in Gibeon there dwelt the father of Gibeon, Jeiel, whose wife’s name was Maacah;"
+  },
+  {
+   "v": 36,
+   "he": "וּבְנ֥וֹ הַבְּכ֖וֹר עַבְדּ֑וֹן וְצ֣וּר וְקִ֔ישׁ וּבַ֥עַל וְנֵ֖ר וְנָדָֽב׃",
+   "en": "and his first-born son Abdon, and Zur, and Kish, and Baal, and Ner, and Nadab;"
+  },
+  {
+   "v": 37,
+   "he": "וּגְד֣וֹר וְאַחְי֔וֹ וּזְכַרְיָ֖ה וּמִקְלֽוֹת׃",
+   "en": "and Gedor, and Ahio, and Zechariah, and Mikloth."
+  },
+  {
+   "v": 38,
+   "he": "וּמִקְל֖וֹת הוֹלִ֣יד אֶת־שִׁמְאָ֑ם וְאַף־הֵ֗ם נֶ֧גֶד אֲחֵיהֶ֛ם יָשְׁב֥וּ בִירֽוּשָׁלַ֖‍ִם עִם־אֲחֵיהֶֽם׃",
+   "en": "And Mikloth begot Shimeam. And they also dwelt with their brethren in Jerusalem, over against their brethren. ."
+  },
+  {
+   "v": 39,
+   "he": "וְנֵר֙ הוֹלִ֣יד אֶת־קִ֔ישׁ וְקִ֖ישׁ הוֹלִ֣יד אֶת־שָׁא֑וּל וְשָׁא֗וּל הוֹלִ֤יד אֶת־יְהֽוֹנָתָן֙ וְאֶת־מַלְכִּי־שׁ֔וּעַ וְאֶת־אֲבִינָדָ֖ב וְאֶת־אֶשְׁבָּֽעַל׃",
+   "en": "And Ner begot Kish; and Kish begot Saul; and Saul begot Jonathan, and Malchi-shua, and Abinadab, and Eshbaal."
+  },
+  {
+   "v": 40,
+   "he": "וּבֶן־יְהוֹנָתָ֖ן מְרִ֣יב בָּ֑עַל וּמְרִי־בַ֖עַל הוֹלִ֥יד אֶת־מִיכָֽה׃",
+   "en": "And the son of Jonathan was Merib-baal; and Merib-baal begot Micah."
+  },
+  {
+   "v": 41,
+   "he": "וּבְנֵ֖י מִיכָ֑ה פִּית֥וֹן וָמֶ֖לֶךְ וְתַחְרֵֽעַ׃",
+   "en": "And the sons of Micah: Pithon, and Melech, and Taharea[,band Ahaz]."
+  },
+  {
+   "v": 42,
+   "he": "וְאָחָז֙ הוֹלִ֣יד אֶת־יַעְרָ֔ה וְיַעְרָ֗ה הוֹלִ֛יד אֶת־עָלֶ֥מֶת וְאֶת־עַזְמָ֖וֶת וְאֶת־זִמְרִ֑י וְזִמְרִ֖י הוֹלִ֥יד אֶת־מוֹצָֽא׃",
+   "en": "And Ahaz begot Jarah; and Jarah begot Alemeth, and Azmaveth, and Zimri; and Zimri begot Moza."
+  },
+  {
+   "v": 43,
+   "he": "וּמוֹצָ֖א הוֹלִ֣יד אֶת־בִּנְעָ֑א וּרְפָיָ֥ה בְנ֛וֹ אֶלְעָשָׂ֥ה בְנ֖וֹ אָצֵ֥ל בְּנֽוֹ׃",
+   "en": "And Moza begot Binea; and Rephaiah his son, Eleasah his son, Azel his son."
+  },
+  {
+   "v": 44,
+   "he": "וּלְאָצֵל֮ שִׁשָּׁ֣ה בָנִים֒ וְאֵ֣לֶּה שְׁמוֹתָ֗ם עַזְרִיקָ֥ם׀ בֹּ֙כְרוּ֙ וְיִשְׁמָעֵ֣אל וּשְׁעַרְיָ֔ה וְעֹבַדְיָ֖ה וְחָנָ֑ן אֵ֖לֶּה בְּנֵ֥י אָצַֽל׃",
+   "en": "And Azel had six sons, whose names are these: Azrikam, Bocru, and Ishmael, and Sheariah, and Obadiah, and Hanan; these were the sons of Azel."
+  }
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,94 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ReaderText from '../../../../components/ReaderText.astro';
+import ChapterContents from '../../../../components/ChapterContents.astro';
+import { getPublishable } from '../../../../lib/content';
+import {
+  divisionHeading,
+  editionLines,
+  type DivisionIndex,
+  type VerseRow,
+  type WorkData,
+} from '../../../../lib/reader-model';
+
+/**
+ * A division — the text itself, or the way into it.
+ *
+ * Which of the two depends on the canon, not on this file. A surah runs
+ * straight to its ayat and this route renders them; a book of the Tanakh
+ * divides into chapters first and this route lists them, because a book is
+ * eleven times the weight any page here is allowed to be and the chapter is
+ * what the canon is cited in anyway.
+ */
+export const getStaticPaths = (async () => {
+  const works = await getPublishable('works');
+  return works.flatMap((entry) => {
+    const work = entry.data as unknown as WorkData;
+    return work.divisions.map((division) => ({
+      params: { work: work.id, division: division.slug },
+      props: { work, division },
+    }));
+  });
+}) satisfies GetStaticPaths;
+
+interface Props {
+  work: WorkData;
+  division: DivisionIndex;
+}
+const { work, division } = Astro.props as Props;
+const heading = divisionHeading(work, division);
+
+const sources = await getPublishable('sources');
+const sourceById = new Map(sources.map((s) => [s.data.id, s.data]));
+const notes = Object.fromEntries(
+  sources.flatMap((s) => (s.data.note === undefined ? [] : [[s.data.id, s.data.note]])),
+);
+const editions = editionLines(work, notes).map((e) => {
+  const record = sourceById.get(e.sourceId);
+  return {
+    ...e,
+    title: record?.title ?? e.sourceId,
+    ...(record?.author === undefined ? {} : { author: record.author }),
+  };
+});
+
+/* Only a leaf division loads text, and only its own. */
+const record =
+  division.chapters === undefined
+    ? await getEntry('divisions', `${work.id}--${division.slug}`)
+    : undefined;
+const verses = (record?.data.verses ?? []) as unknown as VerseRow[];
+if (division.chapters === undefined && verses.length === 0) {
+  /* A text page with no text is not a page. The only way here is a work index
+     naming a division whose record is missing, which is a build-time fact and
+     must stop the build rather than ship an empty room. */
+  throw new Error(`no division record for ${work.id}--${division.slug}`);
+}
+
+const description =
+  division.chapters === undefined
+    ? `${heading} of ${work.title}, ${division.verses} verses, in editions named on the page.`
+    : `${heading}: ${division.chapters.length} chapters, ${division.verses} verses, in ${work.title}.`;
+---
+
+<BaseLayout title={`${heading} — ${work.title}`} description={description}>
+  {
+    division.chapters === undefined ? (
+      <ReaderText
+        work={work}
+        division={division}
+        verses={verses}
+        heading={heading}
+        crumbs={[
+          { href: '/read', label: 'Reading Room' },
+          { href: `/read/${work.id}`, label: work.title },
+        ]}
+        editions={editions}
+      />
+    ) : (
+      <ChapterContents work={work} division={division} editions={editions} />
+    )
+  }
+</BaseLayout>

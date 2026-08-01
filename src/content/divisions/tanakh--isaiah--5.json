@@ -1,0 +1,160 @@
+{
+ "id": "tanakh--isaiah--5",
+ "work": "tanakh",
+ "n": 12,
+ "slug": "isaiah",
+ "c": 5,
+ "verses": [
+  {
+   "v": 1,
+   "he": "אָשִׁ֤ירָה נָּא֙ לִֽידִידִ֔י שִׁירַ֥ת דּוֹדִ֖י לְכַרְמ֑וֹ כֶּ֛רֶם הָיָ֥ה לִֽידִידִ֖י בְּקֶ֥רֶן בֶּן־שָֽׁמֶן׃",
+   "en": "Let me sing of my well-beloved, A song of my beloved touching his vineyard. My well-beloved had a vineyard In a very fruitful hill;"
+  },
+  {
+   "v": 2,
+   "he": "וַֽיְעַזְּקֵ֣הוּ וַֽיְסַקְּלֵ֗הוּ וַיִּטָּעֵ֙הוּ֙ שֹׂרֵ֔ק וַיִּ֤בֶן מִגְדָּל֙ בְּתוֹכ֔וֹ וְגַם־יֶ֖קֶב חָצֵ֣ב בּ֑וֹ וַיְקַ֛ו לַעֲשׂ֥וֹת עֲנָבִ֖ים וַיַּ֥עַשׂ בְּאֻשִֽׁים׃",
+   "en": "And he digged it, and cleared it of stones, And planted it with the choicest vine, And built a tower in the midst of it, And also hewed out a vat therein; And he looked that it should bring forth grapes, And it brought forth wild grapes. ."
+  },
+  {
+   "v": 3,
+   "he": "וְעַתָּ֛ה יוֹשֵׁ֥ב יְרוּשָׁלַ֖‍ִם וְאִ֣ישׁ יְהוּדָ֑ה שִׁפְטוּ־נָ֕א בֵּינִ֖י וּבֵ֥ין כַּרְמִֽי׃",
+   "en": "And now, O inhabitants of Jerusalem and men of Judah, Judge, I pray you, betwixt me and my vineyard."
+  },
+  {
+   "v": 4,
+   "he": "מַה־לַּעֲשׂ֥וֹת עוֹד֙ לְכַרְמִ֔י וְלֹ֥א עָשִׂ֖יתִי בּ֑וֹ מַדּ֧וּעַ קִוֵּ֛יתִי לַעֲשׂ֥וֹת עֲנָבִ֖ים וַיַּ֥עַשׂ בְּאֻשִֽׁים׃",
+   "en": "What could have been done more to my vineyard, That I have not done in it? Wherefore, when I looked that it should bring forth grapes, Brought it forth wild grapes?"
+  },
+  {
+   "v": 5,
+   "he": "וְעַתָּה֙ אוֹדִֽיעָה־נָּ֣א אֶתְכֶ֔ם אֵ֛ת אֲשֶׁר־אֲנִ֥י עֹשֶׂ֖ה לְכַרְמִ֑י הָסֵ֤ר מְשׂוּכָּתוֹ֙ וְהָיָ֣ה לְבָעֵ֔ר פָּרֹ֥ץ גְּדֵר֖וֹ וְהָיָ֥ה לְמִרְמָֽס׃",
+   "en": "And now come, I will tell you What I will do to my vineyard: I will take away the hedge thereof, And it shall be eaten up; I will break down the fence thereof, And it shall be trodden down;"
+  },
+  {
+   "v": 6,
+   "he": "וַאֲשִׁיתֵ֣הוּ בָתָ֗ה לֹ֤א יִזָּמֵר֙ וְלֹ֣א יֵעָדֵ֔ר וְעָלָ֥ה שָׁמִ֖יר וָשָׁ֑יִת וְעַ֤ל הֶעָבִים֙ אֲצַוֶּ֔ה מֵהַמְטִ֥יר עָלָ֖יו מָטָֽר׃",
+   "en": "And I will lay it waste: It shall not be pruned nor hoed, But there shall come up briers and thorns; I will also command the clouds That they rain no rain upon it."
+  },
+  {
+   "v": 7,
+   "he": "כִּ֣י כֶ֜רֶם יְהוָ֤ה צְבָאוֹת֙ בֵּ֣ית יִשְׂרָאֵ֔ל וְאִ֣ישׁ יְהוּדָ֔ה נְטַ֖ע שַׁעֲשׁוּעָ֑יו וַיְקַ֤ו לְמִשְׁפָּט֙ וְהִנֵּ֣ה מִשְׂפָּ֔ח לִצְדָקָ֖ה וְהִנֵּ֥ה צְעָקָֽה׃",
+   "en": "For the vineyard of the LORD of hosts is the house of Israel, And the men of Judah the plant of His delight; And He looked for justice, but behold violence; For righteousness, but behold a cry."
+  },
+  {
+   "v": 8,
+   "he": "ה֗וֹי מַגִּיעֵ֥י בַ֙יִת֙ בְּבַ֔יִת שָׂדֶ֥ה בְשָׂדֶ֖ה יַקְרִ֑יבוּ עַ֚ד אֶ֣פֶס מָק֔וֹם וְהֽוּשַׁבְתֶּ֥ם לְבַדְּכֶ֖ם בְּקֶ֥רֶב הָאָֽרֶץ׃",
+   "en": "Woe unto them that join house to house, That lay field to field, Till there be no room, and ye be made to dwell Alone in the midst of the land!"
+  },
+  {
+   "v": 9,
+   "he": "בְּאָזְנָ֖י יְהוָ֣ה צְבָא֑וֹת אִם־לֹ֞א בָּתִּ֤ים רַבִּים֙ לְשַׁמָּ֣ה יִֽהְי֔וּ גְּדֹלִ֥ים וְטוֹבִ֖ים מֵאֵ֥ין יוֹשֵֽׁב׃",
+   "en": "In mine ears said the LORD of hosts: Of a truth many houses shall be desolate, Even great and fair, without inhabitant."
+  },
+  {
+   "v": 10,
+   "he": "כִּ֗י עֲשֶׂ֙רֶת֙ צִמְדֵּי־כֶ֔רֶם יַעֲשׂ֖וּ בַּ֣ת אֶחָ֑ת וְזֶ֥רַע חֹ֖מֶר יַעֲשֶׂ֥ה אֵיפָֽה׃",
+   "en": "For ten acres of vineyard shall yield one bath, And the seed of a homer shall yield an ephah."
+  },
+  {
+   "v": 11,
+   "he": "ה֛וֹי מַשְׁכִּימֵ֥י בַבֹּ֖קֶר שֵׁכָ֣ר יִרְדֹּ֑פוּ מְאַחֲרֵ֣י בַנֶּ֔שֶׁף יַ֖יִן יַדְלִיקֵֽם׃",
+   "en": "Woe unto them that rise up early in the morning, That they may follow strong drink; That tarry late into the night, Till wine inflame them!"
+  },
+  {
+   "v": 12,
+   "he": "וְהָיָ֨ה כִנּ֜וֹר וָנֶ֗בֶל תֹּ֧ף וְחָלִ֛יל וָיַ֖יִן מִשְׁתֵּיהֶ֑ם וְאֵ֨ת פֹּ֤עַל יְהוָה֙ לֹ֣א יַבִּ֔יטוּ וּמַעֲשֵׂ֥ה יָדָ֖יו לֹ֥א רָאֽוּ׃",
+   "en": "And the harp and the psaltery, the tabret and the pipe, And wine, are in their feasts; But they regard not the work of the LORD, Neither have they considered the operation of His hands."
+  },
+  {
+   "v": 13,
+   "he": "לָכֵ֛ן גָּלָ֥ה עַמִּ֖י מִבְּלִי־דָ֑עַת וּכְבוֹדוֹ֙ מְתֵ֣י רָעָ֔ב וַהֲמוֹנ֖וֹ צִחֵ֥ה צָמָֽא׃",
+   "en": "Therefore My people are gone into captivity, For want of knowledge; And their honourable men are famished, And their multitude are parched with thirst."
+  },
+  {
+   "v": 14,
+   "he": "לָכֵ֗ן הִרְחִ֤יבָה שְּׁאוֹל֙ נַפְשָׁ֔הּ וּפָעֲרָ֥ה פִ֖יהָ לִבְלִי־חֹ֑ק וְיָרַ֨ד הֲדָרָ֧הּ וַהֲמוֹנָ֛הּ וּשְׁאוֹנָ֖הּ וְעָלֵ֥ז בָּֽהּ׃",
+   "en": "Therefore the nether-world hath enlarged her desire, And opened her mouth without measure; And down goeth their glory, and their tumult, and their uproar, And he that rejoiceth among them."
+  },
+  {
+   "v": 15,
+   "he": "וַיִּשַּׁ֥ח אָדָ֖ם וַיִּשְׁפַּל־אִ֑ישׁ וְעֵינֵ֥י גְבֹהִ֖ים תִּשְׁפַּֽלְנָה׃",
+   "en": "And man is bowed down, And man is humbled, And the eyes of the lofty are humbled; ."
+  },
+  {
+   "v": 16,
+   "he": "וַיִּגְבַּ֛ה יְהוָ֥ה צְבָא֖וֹת בַּמִּשְׁפָּ֑ט וְהָאֵל֙ הַקָּד֔וֹשׁ נִקְדָּ֖שׁ בִּצְדָקָֽה׃",
+   "en": "But the LORD of hosts is exalted through justice, And God the Holy One is sanctified through righteousness."
+  },
+  {
+   "v": 17,
+   "he": "וְרָע֥וּ כְבָשִׂ֖ים כְּדָבְרָ֑ם וְחָרְב֥וֹת מֵחִ֖ים גָּרִ֥ים יֹאכֵֽלוּ׃",
+   "en": "Then shall the lambs feed as in their pasture, And the waste places of the fat ones shall wanderers eat."
+  },
+  {
+   "v": 18,
+   "he": "ה֛וֹי מֹשְׁכֵ֥י הֶֽעָו‍ֹ֖ן בְּחַבְלֵ֣י הַשָּׁ֑וְא וְכַעֲב֥וֹת הָעֲגָלָ֖ה חַטָּאָֽה׃",
+   "en": "Woe unto them that draw iniquity with cords of vanity, And sin as it were with a cart rope,"
+  },
+  {
+   "v": 19,
+   "he": "הָאֹמְרִ֗ים יְמַהֵ֧ר׀ יָחִ֛ישָׁה מַעֲשֵׂ֖הוּ לְמַ֣עַן נִרְאֶ֑ה וְתִקְרַ֣ב וְתָב֗וֹאָה עֲצַ֛ת קְד֥וֹשׁ יִשְׂרָאֵ֖ל וְנֵדָֽעָה׃",
+   "en": "That say: ‘Let Him make speed, let Him hasten His work, That we may see it; And let the counsel of the Holy One of Israel draw nigh and come, That we may know it! ’"
+  },
+  {
+   "v": 20,
+   "he": "ה֣וֹי הָאֹמְרִ֥ים לָרַ֛ע ט֖וֹב וְלַטּ֣וֹב רָ֑ע שָׂמִ֨ים חֹ֤שֶׁךְ לְאוֹר֙ וְא֣וֹר לְחֹ֔שֶׁךְ שָׂמִ֥ים מַ֛ר לְמָת֖וֹק וּמָת֥וֹק לְמָֽר׃",
+   "en": "Woe unto them that call evil good, And good evil; That change darkness into light, And light into darkness; That change bitter into sweet, And sweet into bitter!"
+  },
+  {
+   "v": 21,
+   "he": "ה֖וֹי חֲכָמִ֣ים בְּעֵֽינֵיהֶ֑ם וְנֶ֥גֶד פְּנֵיהֶ֖ם נְבֹנִֽים׃",
+   "en": "Woe unto them that are wise in their own eyes, And prudent in their own sight!"
+  },
+  {
+   "v": 22,
+   "he": "ה֕וֹי גִּבּוֹרִ֖ים לִשְׁתּ֣וֹת יָ֑יִן וְאַנְשֵׁי־חַ֖יִל לִמְסֹ֥ךְ שֵׁכָֽר׃",
+   "en": "Woe unto them that are mighty to drink wine, And men of strength to mingle strong drink;"
+  },
+  {
+   "v": 23,
+   "he": "מַצְדִּיקֵ֥י רָשָׁ֖ע עֵ֣קֶב שֹׁ֑חַד וְצִדְקַ֥ת צַדִּיקִ֖ים יָסִ֥ירוּ מִמֶּֽנּוּ׃",
+   "en": "That justify the wicked for a reward, And take away the righteousness of the righteous from him!"
+  },
+  {
+   "v": 24,
+   "he": "לָכֵן֩ כֶּאֱכֹ֨ל קַ֜שׁ לְשׁ֣וֹן אֵ֗שׁ וַחֲשַׁ֤שׁ לֶֽהָבָה֙ יִרְפֶּ֔ה שָׁרְשָׁם֙ כַּמָּ֣ק יִֽהְיֶ֔ה וּפִרְחָ֖ם כָּאָבָ֣ק יַעֲלֶ֑ה כִּ֣י מָאֲס֗וּ אֵ֚ת תּוֹרַת֙ יְהוָ֣ה צְבָא֔וֹת וְאֵ֛ת אִמְרַ֥ת קְדֽוֹשׁ־יִשְׂרָאֵ֖ל נִאֵֽצוּ׃",
+   "en": "Therefore as the tongue of fire devoureth the stubble, And as the chaff is consumed in the flame, So their root shall be as rottenness, And their blossom shall go up as dust; Because they have rejected the law of the LORD of hosts, And contemned the word of the Holy One of Israel."
+  },
+  {
+   "v": 25,
+   "he": "עַל־כֵּ֡ן חָרָה֩ אַף־יְהוָ֨ה בְּעַמּ֜וֹ וַיֵּ֣ט יָד֧וֹ עָלָ֣יו וַיַּכֵּ֗הוּ וַֽיִּרְגְּזוּ֙ הֶֽהָרִ֔ים וַתְּהִ֧י נִבְלָתָ֛ם כַּסּוּחָ֖ה בְּקֶ֣רֶב חוּצ֑וֹת בְּכָל־זֹאת֙ לֹא־שָׁ֣ב אַפּ֔וֹ וְע֖וֹד יָד֥וֹ נְטוּיָֽה׃",
+   "en": "Therefore is the anger of the LORD kindled against His people, And He hath stretched forth His hand against them, and hath smitten them, And the hills did tremble, And their carcasses were as refuse in the midst of the streets. For all this His anger is not turned away, But His hand is stretched out still."
+  },
+  {
+   "v": 26,
+   "he": "וְנָֽשָׂא־נֵ֤ס לַגּוֹיִם֙ מֵרָח֔וֹק וְשָׁ֥רַק ל֖וֹ מִקְצֵ֣ה הָאָ֑רֶץ וְהִנֵּ֥ה מְהֵרָ֖ה קַ֥ל יָבֽוֹא׃",
+   "en": "And He will lift up an ensign to the nations from far, And will hiss unto them from the end of the earth; And, behold, they shall come with speed swiftly;"
+  },
+  {
+   "v": 27,
+   "he": "אֵין־עָיֵ֤ף וְאֵין־כּוֹשֵׁל֙ בּ֔וֹ לֹ֥א יָנ֖וּם וְלֹ֣א יִישָׁ֑ן וְלֹ֤א נִפְתַּח֙ אֵז֣וֹר חֲלָצָ֔יו וְלֹ֥א נִתַּ֖ק שְׂר֥וֹךְ נְעָלָֽיו׃",
+   "en": "None shall be weary nor stumble among them; None shall slumber nor sleep; Neither shall the girdle of their loins be loosed, Nor the latchet of their shoes be broken;"
+  },
+  {
+   "v": 28,
+   "he": "אֲשֶׁ֤ר חִצָּיו֙ שְׁנוּנִ֔ים וְכָל־קַשְּׁתֹתָ֖יו דְּרֻכ֑וֹת פַּרְס֤וֹת סוּסָיו֙ כַּצַּ֣ר נֶחְשָׁ֔בוּ וְגַלְגִּלָּ֖יו כַּסּוּפָֽה׃",
+   "en": "Whose arrows are sharp, And all their bows bent; Their horses’hoofs shall be counted like flint, And their wheels like a whirlwind;"
+  },
+  {
+   "v": 29,
+   "he": "שְׁאָגָ֥ה ל֖וֹ כַּלָּבִ֑יא ושאג [יִשְׁאַ֨ג] כַּכְּפִירִ֤ים וְיִנְהֹם֙ וְיֹאחֵ֣ז טֶ֔רֶף וְיַפְלִ֖יט וְאֵ֥ין מַצִּֽיל׃",
+   "en": "Their roaring shall be like a lion, They shall roar like young lions, yea, they shall roar, And lay hold of the prey, and carry it away safe, And there shall be none to deliver."
+  },
+  {
+   "v": 30,
+   "he": "וְיִנְהֹ֥ם עָלָ֛יו בַּיּ֥וֹם הַה֖וּא כְּנַהֲמַת־יָ֑ם וְנִבַּ֤ט לָאָ֙רֶץ֙ וְהִנֵּה־חֹ֔שֶׁךְ צַ֣ר וָא֔וֹר חָשַׁ֖ךְ בַּעֲרִיפֶֽיהָ׃",
+   "en": "And they shall roar against them in that day Like the roaring of the sea; And if one look unto the land, Behold darkness and distress, And the light is darkened in the skies thereof."
+  }
+ ],
+ "sourcing": "sourced"
+}

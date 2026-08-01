@@ -48,7 +48,14 @@ export const GET: APIRoute = async ({ site }) => {
     const work = entry.data as unknown as WorkData;
     return [
       [`/read/${work.id}`, '0.6'] as const,
-      ...work.divisions.map((d) => [`/read/${work.id}/${d.slug}`, '0.5'] as const),
+      ...work.divisions.flatMap((d) => [
+        [`/read/${work.id}/${d.slug}`, '0.5'] as const,
+        /* Where a canon has chapters, the chapter is the page a reader lands
+           on and the one worth indexing; the book above it is a contents page. */
+        ...(d.chapters ?? []).map(
+          (c) => [`/read/${work.id}/${d.slug}/${c.c}`, '0.5'] as const,
+        ),
+      ]),
     ];
   });
 

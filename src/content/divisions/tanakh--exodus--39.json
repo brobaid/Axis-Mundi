@@ -1,0 +1,225 @@
+{
+ "id": "tanakh--exodus--39",
+ "work": "tanakh",
+ "n": 2,
+ "slug": "exodus",
+ "c": 39,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וּמִן־הַתְּכֵ֤לֶת וְהָֽאַרְגָּמָן֙ וְתוֹלַ֣עַת הַשָּׁנִ֔י עָשׂ֥וּ בִגְדֵי־שְׂרָ֖ד לְשָׁרֵ֣ת בַּקֹּ֑דֶשׁ וַֽיַּעֲשׂ֞וּ אֶת־בִּגְדֵ֤י הַקֹּ֙דֶשׁ֙ אֲשֶׁ֣ר לְאַהֲרֹ֔ן כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶת־מֹשֶֽׁה׃",
+   "en": "And of the blue, and purple, and scarlet, they made plaited garments, for ministering in the holy place, and made the holy garments for Aaron, as the LORD commanded Moses."
+  },
+  {
+   "v": 2,
+   "he": "וַיַּ֖עַשׂ אֶת־הָאֵפֹ֑ד זָהָ֗ב תְּכֵ֧לֶת וְאַרְגָּמָ֛ן וְתוֹלַ֥עַת שָׁנִ֖י וְשֵׁ֥שׁ מָשְׁזָֽר׃",
+   "en": "And he made the ephod of gold, blue, and purple, and scarlet, and fine twined linen."
+  },
+  {
+   "v": 3,
+   "he": "וַֽיְרַקְּע֞וּ אֶת־פַּחֵ֣י הַזָּהָב֮ וְקִצֵּ֣ץ פְּתִילִם֒ לַעֲשׂ֗וֹת בְּת֤וֹךְ הַתְּכֵ֙לֶת֙ וּבְת֣וֹךְ הָֽאַרְגָּמָ֔ן וּבְת֛וֹךְ תּוֹלַ֥עַת הַשָּׁנִ֖י וּבְת֣וֹךְ הַשֵּׁ֑שׁ מַעֲשֵׂ֖ה חֹשֵֽׁב׃",
+   "en": "And they did beat the gold into thin plates, and cut it into threads, to work it in the blue, and in the purple, and in the scarlet, and in the fine linen, the work of the skilful workman."
+  },
+  {
+   "v": 4,
+   "he": "כְּתֵפֹ֥ת עָֽשׂוּ־ל֖וֹ חֹבְרֹ֑ת עַל־שְׁנֵ֥י קצוותו [קְצוֹתָ֖יו] חֻבָּֽר׃",
+   "en": "They made shoulder-pieces for it, joined together; at the two ends was it joined together."
+  },
+  {
+   "v": 5,
+   "he": "וְחֵ֨שֶׁב אֲפֻדָּת֜וֹ אֲשֶׁ֣ר עָלָ֗יו מִמֶּ֣נּוּ הוּא֮ כְּמַעֲשֵׂהוּ֒ זָהָ֗ב תְּכֵ֧לֶת וְאַרְגָּמָ֛ן וְתוֹלַ֥עַת שָׁנִ֖י וְשֵׁ֣שׁ מָשְׁזָ֑ר כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶת־מֹשֶֽׁה׃",
+   "en": "And the skilfully woven band, that was upon it, wherewith to gird it on, was of the same piece and like the work thereof: of gold, of blue, and purple, and scarlet, and fine twined linen, as the LORD commanded Moses."
+  },
+  {
+   "v": 6,
+   "he": "וַֽיַּעֲשׂוּ֙ אֶת־אַבְנֵ֣י הַשֹּׁ֔הַם מֻֽסַבֹּ֖ת מִשְׁבְּצֹ֣ת זָהָ֑ב מְפֻתָּחֹת֙ פִּתּוּחֵ֣י חוֹתָ֔ם עַל־שְׁמ֖וֹת בְּנֵ֥י יִשְׂרָאֵֽל׃",
+   "en": "And they wrought the onyx stones, inclosed in settings of gold, graven with the engravings of a signet, according to the names of the children of Israel."
+  },
+  {
+   "v": 7,
+   "he": "וַיָּ֣שֶׂם אֹתָ֗ם עַ֚ל כִּתְפֹ֣ת הָאֵפֹ֔ד אַבְנֵ֥י זִכָּר֖וֹן לִבְנֵ֣י יִשְׂרָאֵ֑ל כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶת־מֹשֶֽׁה׃",
+   "en": "And he put them on the shoulder-pieces of the ephod, to be stones of memorial for the children of Israel, as the LORD commanded Moses."
+  },
+  {
+   "v": 8,
+   "he": "וַיַּ֧עַשׂ אֶת־הַחֹ֛שֶׁן מַעֲשֵׂ֥ה חֹשֵׁ֖ב כְּמַעֲשֵׂ֣ה אֵפֹ֑ד זָהָ֗ב תְּכֵ֧לֶת וְאַרְגָּמָ֛ן וְתוֹלַ֥עַת שָׁנִ֖י וְשֵׁ֥שׁ מָשְׁזָֽר׃",
+   "en": "And he made the breastplate, the work of the skilful workman, like the work of the ephod: of gold, of blue, and purple, and scarlet, and fine twined linen."
+  },
+  {
+   "v": 9,
+   "he": "רָב֧וּעַ הָיָ֛ה כָּפ֖וּל עָשׂ֣וּ אֶת־הַחֹ֑שֶׁן זֶ֧רֶת אָרְכּ֛וֹ וְזֶ֥רֶת רָחְבּ֖וֹ כָּפֽוּל׃",
+   "en": "It was four-square; they made the breastplate double; a span was the length thereof, and a span the breadth thereof, being double."
+  },
+  {
+   "v": 10,
+   "he": "וַיְמַלְאוּ־ב֔וֹ אַרְבָּעָ֖ה ט֣וּרֵי אָ֑בֶן ט֗וּר אֹ֤דֶם פִּטְדָה֙ וּבָרֶ֔קֶת הַטּ֖וּר הָאֶחָֽד׃",
+   "en": "And they set in it four rows of stones: a row of carnelian, topaz, and smaragd was the first row."
+  },
+  {
+   "v": 11,
+   "he": "וְהַטּ֖וּר הַשֵּׁנִ֑י נֹ֥פֶךְ סַפִּ֖יר וְיָהֲלֹֽם׃",
+   "en": "And the second row, a carbuncle, a sapphire, and an emerald."
+  },
+  {
+   "v": 12,
+   "he": "וְהַטּ֖וּר הַשְּׁלִישִׁ֑י לֶ֥שֶׁם שְׁב֖וֹ וְאַחְלָֽמָה׃",
+   "en": "And the third row, a jacinth, an agate, and an amethyst."
+  },
+  {
+   "v": 13,
+   "he": "וְהַטּוּר֙ הָֽרְבִיעִ֔י תַּרְשִׁ֥ישׁ שֹׁ֖הַם וְיָשְׁפֵ֑ה מֽוּסַבֹּ֛ת מִשְׁבְּצ֥ת זָהָ֖ב בְּמִלֻּאֹתָֽם׃",
+   "en": "And the fourth row, a beryl, an onyx, and a jasper; they were inclosed in fittings of gold in their settings."
+  },
+  {
+   "v": 14,
+   "he": "וְ֠הָאֲבָנִים עַל־שְׁמֹ֨ת בְּנֵי־יִשְׂרָאֵ֥ל הֵ֛נָּה שְׁתֵּ֥ים עֶשְׂרֵ֖ה עַל־שְׁמֹתָ֑ם פִּתּוּחֵ֤י חֹתָם֙ אִ֣ישׁ עַל־שְׁמ֔וֹ לִשְׁנֵ֥ים עָשָׂ֖ר שָֽׁבֶט׃",
+   "en": "And the stones were according to the names of the children of Israel, twelve, according to their names, like the engravings of a signet, every one according to his name, for the twelve tribes."
+  },
+  {
+   "v": 15,
+   "he": "וַיַּעֲשׂ֧וּ עַל־הַחֹ֛שֶׁן שַׁרְשְׁרֹ֥ת גַּבְלֻ֖ת מַעֲשֵׂ֣ה עֲבֹ֑ת זָהָ֖ב טָהֽוֹר׃",
+   "en": "And they made upon the breastplate plaited chains, of wreathen work of pure gold."
+  },
+  {
+   "v": 16,
+   "he": "וַֽיַּעֲשׂ֗וּ שְׁתֵּי֙ מִשְׁבְּצֹ֣ת זָהָ֔ב וּשְׁתֵּ֖י טַבְּעֹ֣ת זָהָ֑ב וַֽיִּתְּנ֗וּ אֶת־שְׁתֵּי֙ הַטַּבָּעֹ֔ת עַל־שְׁנֵ֖י קְצ֥וֹת הַחֹֽשֶׁן׃",
+   "en": "And they made two settings of gold, and two gold rings; and put the two rings on the two ends of the breastplate."
+  },
+  {
+   "v": 17,
+   "he": "וַֽיִּתְּנ֗וּ שְׁתֵּי֙ הָעֲבֹתֹ֣ת הַזָּהָ֔ב עַל־שְׁתֵּ֖י הַטַּבָּעֹ֑ת עַל־קְצ֖וֹת הַחֹֽשֶׁן׃",
+   "en": "And they put the two wreathen chains of gold on the two rings at the ends of the breastplate."
+  },
+  {
+   "v": 18,
+   "he": "וְאֵ֨ת שְׁתֵּ֤י קְצוֹת֙ שְׁתֵּ֣י הָֽעֲבֹתֹ֔ת נָתְנ֖וּ עַל־שְׁתֵּ֣י הַֽמִּשְׁבְּצֹ֑ת וַֽיִּתְּנֻ֛ם עַל־כִּתְפֹ֥ת הָאֵפֹ֖ד אֶל־מ֥וּל פָּנָֽיו׃",
+   "en": "And the other two ends of the two wreathen chains they put on the two settings, and put them on the shoulder-pieces of the ephod, in the forepart thereof."
+  },
+  {
+   "v": 19,
+   "he": "וַֽיַּעֲשׂ֗וּ שְׁתֵּי֙ טַבְּעֹ֣ת זָהָ֔ב וַיָּשִׂ֕ימוּ עַל־שְׁנֵ֖י קְצ֣וֹת הַחֹ֑שֶׁן עַל־שְׂפָת֕וֹ אֲשֶׁ֛ר אֶל־עֵ֥בֶר הָאֵפֹ֖ד בָּֽיְתָה׃",
+   "en": "And they made two rings of gold, and put them upon the two ends of the breastplate, upon the edge thereof, which was toward the side of the ephod inward."
+  },
+  {
+   "v": 20,
+   "he": "וַֽיַּעֲשׂוּ֮ שְׁתֵּ֣י טַבְּעֹ֣ת זָהָב֒ וַֽיִּתְּנֻ֡ם עַל־שְׁתֵּי֩ כִתְפֹ֨ת הָאֵפֹ֤ד מִלְמַ֙טָּה֙ מִמּ֣וּל פָּנָ֔יו לְעֻמַּ֖ת מֶחְבַּרְתּ֑וֹ מִמַּ֕עַל לְחֵ֖שֶׁב הָאֵפֹֽד׃",
+   "en": "And they made two rings of gold, and put them on the two shoulder-pieces of the ephod underneath, in the forepart thereof, close by the coupling thereof, above the skilfully woven band of the ephod."
+  },
+  {
+   "v": 21,
+   "he": "וַיִּרְכְּס֣וּ אֶת־הַחֹ֡שֶׁן מִטַּבְּעֹתָיו֩ אֶל־טַבְּעֹ֨ת הָאֵפֹ֜ד בִּפְתִ֣יל תְּכֵ֗לֶת לִֽהְיֹת֙ עַל־חֵ֣שֶׁב הָאֵפֹ֔ד וְלֹֽא־יִזַּ֣ח הַחֹ֔שֶׁן מֵעַ֖ל הָאֵפֹ֑ד כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶת־מֹשֶֽׁה׃",
+   "en": "And they did bind the breastplate by the rings thereof unto the rings of the ephod with a thread of blue, that it might be upon the skilfully woven band of the ephod, and that the breastplate might not be loosed from the ephod; as the LORD commanded Moses."
+  },
+  {
+   "v": 22,
+   "he": "וַיַּ֛עַשׂ אֶת־מְעִ֥יל הָאֵפֹ֖ד מַעֲשֵׂ֣ה אֹרֵ֑ג כְּלִ֖יל תְּכֵֽלֶת׃",
+   "en": "And he made the robe of the ephod of woven work, all of blue;"
+  },
+  {
+   "v": 23,
+   "he": "וּפִֽי־הַמְּעִ֥יל בְּתוֹכ֖וֹ כְּפִ֣י תַחְרָ֑א שָׂפָ֥ה לְפִ֛יו סָבִ֖יב לֹ֥א יִקָּרֵֽעַ׃",
+   "en": "and the hole of the robe in the midst thereof, as the hole of a coat of mail, with a binding round about the hole of it, that it should not be rent."
+  },
+  {
+   "v": 24,
+   "he": "וַֽיַּעֲשׂוּ֙ עַל־שׁוּלֵ֣י הַמְּעִ֔יל רִמּוֹנֵ֕י תְּכֵ֥לֶת וְאַרְגָּמָ֖ן וְתוֹלַ֣עַת שָׁנִ֑י מָשְׁזָֽר׃",
+   "en": "And they made upon the skirts of the robe pomegranates of blue, and purple, and scarlet, and twined linen."
+  },
+  {
+   "v": 25,
+   "he": "וַיַּעֲשׂ֥וּ פַעֲמֹנֵ֖י זָהָ֣ב טָה֑וֹר וַיִּתְּנ֨וּ אֶת־הַפַּֽעֲמֹנִ֜ים בְּת֣וֹךְ הָרִמֹּנִ֗ים עַל־שׁוּלֵ֤י הַמְּעִיל֙ סָבִ֔יב בְּת֖וֹךְ הָרִמֹּנִֽים׃",
+   "en": "And they made bells of pure gold, and put the bells between the pomegranates upon the skirts of the robe round about, between the pomegranates:"
+  },
+  {
+   "v": 26,
+   "he": "פַּעֲמֹ֤ן וְרִמֹּן֙ פַּעֲמֹ֣ן וְרִמֹּ֔ן עַל־שׁוּלֵ֥י הַמְּעִ֖יל סָבִ֑יב לְשָׁרֵ֕ת כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶת־מֹשֶֽׁה׃",
+   "en": "a bell and a pomegranate, a bell and a pomegranate, upon the skirts of the robe round about, to minister in; as the LORD commanded Moses."
+  },
+  {
+   "v": 27,
+   "he": "וַֽיַּעֲשׂ֛וּ אֶת־הַכָּתְנֹ֥ת שֵׁ֖שׁ מַעֲשֵׂ֣ה אֹרֵ֑ג לְאַהֲרֹ֖ן וּלְבָנָֽיו׃",
+   "en": "And they made the tunics of fine linen of woven work for Aaron, and for his sons,"
+  },
+  {
+   "v": 28,
+   "he": "וְאֵת֙ הַמִּצְנֶ֣פֶת שֵׁ֔שׁ וְאֶת־פַּאֲרֵ֥י הַמִּגְבָּעֹ֖ת שֵׁ֑שׁ וְאֶת־מִכְנְסֵ֥י הַבָּ֖ד שֵׁ֥שׁ מָשְׁזָֽר׃",
+   "en": "and the mitre of fine linen, and the goodly head-tires of fine linen, and the linen breeches of fine twined linen,"
+  },
+  {
+   "v": 29,
+   "he": "וְֽאֶת־הָאַבְנֵ֞ט שֵׁ֣שׁ מָשְׁזָ֗ר וּתְכֵ֧לֶת וְאַרְגָּמָ֛ן וְתוֹלַ֥עַת שָׁנִ֖י מַעֲשֵׂ֣ה רֹקֵ֑ם כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶת־מֹשֶֽׁה׃",
+   "en": "and the girdle of fine twined linen, and blue, and purple, and scarlet, the work of the weaver in colours; as the LORD commanded Moses."
+  },
+  {
+   "v": 30,
+   "he": "וַֽיַּעֲשׂ֛וּ אֶת־צִ֥יץ נֵֽזֶר־הַקֹּ֖דֶשׁ זָהָ֣ב טָה֑וֹר וַיִּכְתְּב֣וּ עָלָ֗יו מִכְתַּב֙ פִּתּוּחֵ֣י חוֹתָ֔ם קֹ֖דֶשׁ לַיהוָֽה׃",
+   "en": "And they made the plate of the holy crown of pure gold, and wrote upon it a writing, like the engravings of a signet: HOLY TO THE LORD."
+  },
+  {
+   "v": 31,
+   "he": "וַיִּתְּנ֤וּ עָלָיו֙ פְּתִ֣יל תְּכֵ֔לֶת לָתֵ֥ת עַל־הַמִּצְנֶ֖פֶת מִלְמָ֑עְלָה כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶת־מֹשֶֽׁה׃",
+   "en": "And they tied unto it a thread of blue, to fasten it upon the mitre above; as the LORD commanded Moses."
+  },
+  {
+   "v": 32,
+   "he": "וַתֵּ֕כֶל כָּל־עֲבֹדַ֕ת מִשְׁכַּ֖ן אֹ֣הֶל מוֹעֵ֑ד וַֽיַּעֲשׂוּ֙ בְּנֵ֣י יִשְׂרָאֵ֔ל כְּ֠כֹל אֲשֶׁ֨ר צִוָּ֧ה יְהוָ֛ה אֶת־מֹשֶׁ֖ה כֵּ֥ן עָשֽׂוּ׃",
+   "en": "Thus was finished all the work of the tabernacle of the tent of meeting; and the children of Israel did according to all that the LORD commanded Moses, so did they."
+  },
+  {
+   "v": 33,
+   "he": "וַיָּבִ֤יאוּ אֶת־הַמִּשְׁכָּן֙ אֶל־מֹשֶׁ֔ה אֶת־הָאֹ֖הֶל וְאֶת־כָּל־כֵּלָ֑יו קְרָסָ֣יו קְרָשָׁ֔יו בריחו [בְּרִיחָ֖יו] וְעַמֻּדָ֥יו וַאֲדָנָֽיו׃",
+   "en": "And they brought the tabernacle unto Moses, the Tent, and all its furniture, its clasps, its boards, its bars, and its pillars, and its sockets;"
+  },
+  {
+   "v": 34,
+   "he": "וְאֶת־מִכְסֵ֞ה עוֹרֹ֤ת הָֽאֵילִם֙ הַמְאָדָּמִ֔ים וְאֶת־מִכְסֵ֖ה עֹרֹ֣ת הַתְּחָשִׁ֑ים וְאֵ֖ת פָּרֹ֥כֶת הַמָּסָֽךְ׃",
+   "en": "and the covering of rams’skins dyed red, and the covering of sealskins, and the veil of the screen;"
+  },
+  {
+   "v": 35,
+   "he": "אֶת־אֲרֹ֥ן הָעֵדֻ֖ת וְאֶת־בַּדָּ֑יו וְאֵ֖ת הַכַּפֹּֽרֶת׃",
+   "en": "the ark of the testimony, and the staves thereof, and the ark-cover;"
+  },
+  {
+   "v": 36,
+   "he": "אֶת־הַשֻּׁלְחָן֙ אֶת־כָּל־כֵּלָ֔יו וְאֵ֖ת לֶ֥חֶם הַפָּנִֽים׃",
+   "en": "the table, all the vessels thereof, and the showbread;"
+  },
+  {
+   "v": 37,
+   "he": "אֶת־הַמְּנֹרָ֨ה הַטְּהֹרָ֜ה אֶת־נֵרֹתֶ֗יהָ נֵרֹ֛ת הַמַּֽעֲרָכָ֖ה וְאֶת־כָּל־כֵּלֶ֑יהָ וְאֵ֖ת שֶׁ֥מֶן הַמָּאֽוֹר׃",
+   "en": "the pure candlestick, the lamps thereof, even the lamps to be set in order, and all the vessels thereof, and the oil for the light;"
+  },
+  {
+   "v": 38,
+   "he": "וְאֵת֙ מִזְבַּ֣ח הַזָּהָ֔ב וְאֵת֙ שֶׁ֣מֶן הַמִּשְׁחָ֔ה וְאֵ֖ת קְטֹ֣רֶת הַסַּמִּ֑ים וְאֵ֕ת מָסַ֖ךְ פֶּ֥תַח הָאֹֽהֶל׃",
+   "en": "and the golden altar, and the anointing oil, and the sweet incense, and the screen for the door of the Tent;"
+  },
+  {
+   "v": 39,
+   "he": "אֵ֣ת׀ מִזְבַּ֣ח הַנְּחֹ֗שֶׁת וְאֶת־מִכְבַּ֤ר הַנְּחֹ֙שֶׁת֙ אֲשֶׁר־ל֔וֹ אֶת־בַּדָּ֖יו וְאֶת־כָּל־כֵּלָ֑יו אֶת־הַכִּיֹּ֖ר וְאֶת־כַּנּֽוֹ׃",
+   "en": "the brazen altar, and its grating of brass, its staves, and all its vessels, the laver and its base;"
+  },
+  {
+   "v": 40,
+   "he": "אֵת֩ קַלְעֵ֨י הֶחָצֵ֜ר אֶת־עַמֻּדֶ֣יהָ וְאֶת־אֲדָנֶ֗יהָ וְאֶת־הַמָּסָךְ֙ לְשַׁ֣עַר הֶֽחָצֵ֔ר אֶת־מֵיתָרָ֖יו וִיתֵדֹתֶ֑יהָ וְאֵ֗ת כָּל־כְּלֵ֛י עֲבֹדַ֥ת הַמִּשְׁכָּ֖ן לְאֹ֥הֶל מוֹעֵֽד׃",
+   "en": "the hangings of the court, its pillars, and its sockets, and the screen for the gate of the court, the cords thereof, and the pins thereof, and all the instruments of the service of the tabernacle of the tent of meeting;"
+  },
+  {
+   "v": 41,
+   "he": "אֶת־בִּגְדֵ֥י הַשְּׂרָ֖ד לְשָׁרֵ֣ת בַּקֹּ֑דֶשׁ אֶת־בִּגְדֵ֤י הַקֹּ֙דֶשׁ֙ לְאַהֲרֹ֣ן הַכֹּהֵ֔ן וְאֶת־בִּגְדֵ֥י בָנָ֖יו לְכַהֵֽן׃",
+   "en": "the plaited garments for ministering in the holy place; the holy garments for Aaron the priest, and the garments of his sons, to minister in the priest’s office."
+  },
+  {
+   "v": 42,
+   "he": "כְּכֹ֛ל אֲשֶׁר־צִוָּ֥ה יְהוָ֖ה אֶת־מֹשֶׁ֑ה כֵּ֤ן עָשׂוּ֙ בְּנֵ֣י יִשְׂרָאֵ֔ל אֵ֖ת כָּל־הָעֲבֹדָֽה׃",
+   "en": "According to all that the LORD commanded Moses, so the children of Israel did all the work."
+  },
+  {
+   "v": 43,
+   "he": "וַיַּ֨רְא מֹשֶׁ֜ה אֶת־כָּל־הַמְּלָאכָ֗ה וְהִנֵּה֙ עָשׂ֣וּ אֹתָ֔הּ כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה כֵּ֣ן עָשׂ֑וּ וַיְבָ֥רֶךְ אֹתָ֖ם מֹשֶֽׁה׃",
+   "en": "And Moses saw all the work, and, behold, they had done it; as the LORD had commanded, even so had they done it. And Moses blessed them."
+  }
+ ],
+ "sourcing": "sourced"
+}

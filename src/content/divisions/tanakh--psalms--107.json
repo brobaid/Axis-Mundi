@@ -1,0 +1,225 @@
+{
+ "id": "tanakh--psalms--107",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 107,
+ "verses": [
+  {
+   "v": 1,
+   "he": "הֹד֣וּ לַיהוָ֣ה כִּי־ט֑וֹב כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+   "en": "'O give thanks unto the LORD, for He is good, For His mercy endureth for ever.'"
+  },
+  {
+   "v": 2,
+   "he": "יֹ֭אמְרוּ גְּאוּלֵ֣י יְהוָ֑ה אֲשֶׁ֥ר גְּ֝אָלָ֗ם מִיַּד־צָֽר׃",
+   "en": "So let the redeemed of the LORD say, Whom He hath redeemed from the hand of the adversary;"
+  },
+  {
+   "v": 3,
+   "he": "וּֽמֵאֲרָצ֗וֹת קִ֫בְּצָ֥ם מִמִּזְרָ֥ח וּמִֽמַּעֲרָ֑ב מִצָּפ֥וֹן וּמִיָּֽם׃",
+   "en": "And gathered them out of the lands, From the east and from the west, From the north and from the sea."
+  },
+  {
+   "v": 4,
+   "he": "תָּע֣וּ בַ֭מִּדְבָּר בִּישִׁימ֣וֹן דָּ֑רֶךְ עִ֥יר מ֝וֹשָׁ֗ב לֹ֣א מָצָֽאוּ׃",
+   "en": "They wandered in the wilderness in a desert way; They found no city of habitation."
+  },
+  {
+   "v": 5,
+   "he": "רְעֵבִ֥ים גַּם־צְמֵאִ֑ים נַ֝פְשָׁ֗ם בָּהֶ֥ם תִּתְעַטָּֽף׃",
+   "en": "Hungry and thirsty, Their soul fainted in them."
+  },
+  {
+   "v": 6,
+   "he": "וַיִּצְעֲק֣וּ אֶל־יְ֭הוָה בַּצַּ֣ר לָהֶ֑ם מִ֝מְּצֽוּקוֹתֵיהֶ֗ם יַצִּילֵֽם׃",
+   "en": "Then they cried unto the LORD in their trouble, And He delivered them out of their distresses."
+  },
+  {
+   "v": 7,
+   "he": "וַ֭יַּֽדְרִיכֵם בְּדֶ֣רֶךְ יְשָׁרָ֑ה לָ֝לֶ֗כֶת אֶל־עִ֥יר מוֹשָֽׁב׃",
+   "en": "And He led them by a straight way, That they might go to a city of habitation."
+  },
+  {
+   "v": 8,
+   "he": "יוֹד֣וּ לַיהוָ֣ה חַסְדּ֑וֹ וְ֝נִפְלְאוֹתָ֗יו לִבְנֵ֥י אָדָֽם׃",
+   "en": "Let them give thanks unto the LORD for His mercy, And for His wonderful works to the children of men!"
+  },
+  {
+   "v": 9,
+   "he": "כִּי־הִ֭שְׂבִּיעַ נֶ֣פֶשׁ שֹׁקֵקָ֑ה וְנֶ֥פֶשׁ רְ֝עֵבָה מִלֵּא־טֽוֹב׃",
+   "en": "For He hath satisfied the longing soul, And the hungry soul He hath filled with good."
+  },
+  {
+   "v": 10,
+   "he": "יֹ֭שְׁבֵי חֹ֣שֶׁךְ וְצַלְמָ֑וֶת אֲסִירֵ֖י עֳנִ֣י וּבַרְזֶֽל׃",
+   "en": "Such as sat in darkness and in the shadow of death, Being bound in affliction and iron—"
+  },
+  {
+   "v": 11,
+   "he": "כִּֽי־הִמְר֥וּ אִמְרֵי־אֵ֑ל וַעֲצַ֖ת עֶלְי֣וֹן נָאָֽצוּ׃",
+   "en": "Because they rebelled against the words of God, And contemned the counsel of the Most High."
+  },
+  {
+   "v": 12,
+   "he": "וַיַּכְנַ֣ע בֶּעָמָ֣ל לִבָּ֑ם כָּ֝שְׁל֗וּ וְאֵ֣ין עֹזֵֽר׃",
+   "en": "Therefore He humbled their heart with travail, They stumbled, and there was none to help—"
+  },
+  {
+   "v": 13,
+   "he": "וַיִּזְעֲק֣וּ אֶל־יְ֭הוָה בַּצַּ֣ר לָהֶ֑ם מִ֝מְּצֻֽקוֹתֵיהֶ֗ם יוֹשִׁיעֵֽם׃",
+   "en": "They cried unto the LORD in their trouble, And He saved them out of their distresses."
+  },
+  {
+   "v": 14,
+   "he": "יֽ֭וֹצִיאֵם מֵחֹ֣שֶׁךְ וְצַלְמָ֑וֶת וּמוֹסְר֖וֹתֵיהֶ֣ם יְנַתֵּֽק׃",
+   "en": "He brought them out of darkness and the shadow of death, And broke their bands in sunder. ."
+  },
+  {
+   "v": 15,
+   "he": "יוֹד֣וּ לַיהוָ֣ה חַסְדּ֑וֹ וְ֝נִפְלְאוֹתָ֗יו לִבְנֵ֥י אָדָֽם׃",
+   "en": "Let them give thanks unto the LORD for His mercy, And for His wonderful works to the children of men!"
+  },
+  {
+   "v": 16,
+   "he": "כִּֽי־שִׁ֭בַּר דַּלְת֣וֹת נְחֹ֑שֶׁת וּבְרִיחֵ֖י בַרְזֶ֣ל גִּדֵּֽעַ׃",
+   "en": "For He hath broken the gates of brass, And cut the bars of iron in sunder."
+  },
+  {
+   "v": 17,
+   "he": "אֱ֭וִלִים מִדֶּ֣רֶךְ פִּשְׁעָ֑ם וּֽ֝מֵעֲו‍ֹֽנֹתֵיהֶ֗ם יִתְעַנּֽוּ׃",
+   "en": "Crazed because of the way of their transgression, And afflicted because of their iniquities—"
+  },
+  {
+   "v": 18,
+   "he": "כָּל־אֹ֭כֶל תְּתַעֵ֣ב נַפְשָׁ֑ם וַ֝יַּגִּ֗יעוּ עַד־שַׁ֥עֲרֵי מָֽוֶת׃",
+   "en": "Their soul abhorred all manner of food, And they drew near unto the gates of death—"
+  },
+  {
+   "v": 19,
+   "he": "וַיִּזְעֲק֣וּ אֶל־יְ֭הוָה בַּצַּ֣ר לָהֶ֑ם מִ֝מְּצֻֽקוֹתֵיהֶ֗ם יוֹשִׁיעֵֽם׃",
+   "en": "They cried unto the LORD in their trouble, And He saved them out of their distresses;"
+  },
+  {
+   "v": 20,
+   "he": "יִשְׁלַ֣ח דְּ֭בָרוֹ וְיִרְפָּאֵ֑ם וִֽ֝ימַלֵּ֗ט מִשְּׁחִיתוֹתָֽם׃",
+   "en": "He sent His word, and healed them, And delivered them from their graves."
+  },
+  {
+   "v": 21,
+   "he": "יוֹד֣וּ לַיהוָ֣ה חַסְדּ֑וֹ וְ֝נִפְלְאוֹתָ֗יו לִבְנֵ֥י אָדָֽם׃",
+   "en": "Let them give thanks unto the LORD for His mercy, And for His wonderful works to the children of men!"
+  },
+  {
+   "v": 22,
+   "he": "וְ֭יִזְבְּחוּ זִבְחֵ֣י תוֹדָ֑ה וִֽיסַפְּר֖וּ מַעֲשָׂ֣יו בְּרִנָּֽה׃",
+   "en": "And let them offer the sacrifices of thanksgiving, And declare His works with singing."
+  },
+  {
+   "v": 23,
+   "he": "יוֹרְדֵ֣י הַ֭יָּם בָּאֳנִיּ֑וֹת עֹשֵׂ֥י מְ֝לָאכָ֗ה בְּמַ֣יִם רַבִּֽים׃",
+   "en": "They that go down to the sea in ships, That do business in great waters—"
+  },
+  {
+   "v": 24,
+   "he": "הֵ֣מָּה רָ֭אוּ מַעֲשֵׂ֣י יְהוָ֑ה וְ֝נִפְלְאוֹתָ֗יו בִּמְצוּלָֽה׃",
+   "en": "These saw the works of the LORD, And His wonders in the deep;"
+  },
+  {
+   "v": 25,
+   "he": "וַיֹּ֗אמֶר וַֽ֭יַּעֲמֵד ר֣וּחַ סְעָרָ֑ה וַתְּרוֹמֵ֥ם גַּלָּֽיו׃",
+   "en": "For He commanded, and raised the stormy wind, Which lifted up the waves thereof;"
+  },
+  {
+   "v": 26,
+   "he": "יַעֲל֣וּ שָׁ֭מַיִם יֵרְד֣וּ תְהוֹמ֑וֹת נַ֝פְשָׁ֗ם בְּרָעָ֥ה תִתְמוֹגָֽג׃",
+   "en": "They mounted up to the heaven, they went down to the deeps; Their soul melted away because of trouble;"
+  },
+  {
+   "v": 27,
+   "he": "יָח֣וֹגּוּ וְ֭יָנוּעוּ כַּשִּׁכּ֑וֹר וְכָל־חָ֝כְמָתָ֗ם תִּתְבַּלָּֽע׃",
+   "en": "They reeled to and fro, and staggered like a drunken man, And all their wisdom was swallowed up—"
+  },
+  {
+   "v": 28,
+   "he": "וַיִּצְעֲק֣וּ אֶל־יְ֭הוָה בַּצַּ֣ר לָהֶ֑ם וּֽ֝מִמְּצֽוּקֹתֵיהֶ֗ם יוֹצִיאֵֽם׃",
+   "en": "They cried unto the LORD in their trouble, And He brought them out of their distresses."
+  },
+  {
+   "v": 29,
+   "he": "יָקֵ֣ם סְ֭עָרָה לִדְמָמָ֑ה וַ֝יֶּחֱשׁ֗וּ גַּלֵּיהֶֽם׃",
+   "en": "He made the storm a calm, So that the waves thereof were still."
+  },
+  {
+   "v": 30,
+   "he": "וַיִּשְׂמְח֥וּ כִֽי־יִשְׁתֹּ֑קוּ וַ֝יַּנְחֵ֗ם אֶל־מְח֥וֹז חֶפְצָֽם׃",
+   "en": "Then were they glad because they were quiet, And He led them unto their desired haven."
+  },
+  {
+   "v": 31,
+   "he": "יוֹד֣וּ לַיהוָ֣ה חַסְדּ֑וֹ וְ֝נִפְלְאוֹתָ֗יו לִבְנֵ֥י אָדָֽם׃",
+   "en": "Let them give thanks unto the LORD for His mercy, And for His wonderful works to the children of men!"
+  },
+  {
+   "v": 32,
+   "he": "וִֽ֭ירֹמְמוּהוּ בִּקְהַל־עָ֑ם וּבְמוֹשַׁ֖ב זְקֵנִ֣ים יְהַלְלֽוּהוּ׃",
+   "en": "Let them exalt Him also in the assembly of the people, And praise Him in the seat of the elders."
+  },
+  {
+   "v": 33,
+   "he": "יָשֵׂ֣ם נְהָר֣וֹת לְמִדְבָּ֑ר וּמֹצָ֥אֵי מַ֝֗יִם לְצִמָּאֽוֹן׃",
+   "en": "He turneth rivers into a wilderness, And watersprings into a thirsty ground;"
+  },
+  {
+   "v": 34,
+   "he": "אֶ֣רֶץ פְּ֭רִי לִמְלֵחָ֑ה מֵ֝רָעַ֗ת יֹ֣שְׁבֵי בָֽהּ׃",
+   "en": "A fruitful land into a salt waste, For the wickedness of them that dwell therein."
+  },
+  {
+   "v": 35,
+   "he": "יָשֵׂ֣ם מִ֭דְבָּר לַֽאֲגַם־מַ֑יִם וְאֶ֥רֶץ צִ֝יָּ֗ה לְמֹצָ֥אֵי מָֽיִם׃",
+   "en": "He turneth a wilderness into a pool of water, And a dry land into watersprings."
+  },
+  {
+   "v": 36,
+   "he": "וַיּ֣וֹשֶׁב שָׁ֣ם רְעֵבִ֑ים וַ֝יְכוֹנְנ֗וּ עִ֣יר מוֹשָֽׁב׃",
+   "en": "And there He maketh the hungry to dwell, And they establish a city of habitation;"
+  },
+  {
+   "v": 37,
+   "he": "וַיִּזְרְע֣וּ שָׂ֭דוֹת וַיִּטְּע֣וּ כְרָמִ֑ים וַ֝יַּעֲשׂ֗וּ פְּרִ֣י תְבֽוּאָה׃",
+   "en": "And sow fields, and plant vineyards, Which yield fruits of increase."
+  },
+  {
+   "v": 38,
+   "he": "וַיְבָרֲכֵ֣ם וַיִּרְבּ֣וּ מְאֹ֑ד וּ֝בְהֶמְתָּ֗ם לֹ֣א יַמְעִֽיט׃",
+   "en": "He blesseth them also, so that they are multiplied greatly, And suffereth not their cattle to decrease."
+  },
+  {
+   "v": 39,
+   "he": "וַיִּמְעֲט֥וּ וַיָּשֹׁ֑חוּ מֵעֹ֖צֶר רָעָ֣ה וְיָגֽוֹן׃",
+   "en": "Again, they are minished and dwindle away Through oppression of evil and sorrow."
+  },
+  {
+   "v": 40,
+   "he": "שֹׁפֵ֣ךְ בּ֭וּז עַל־נְדִיבִ֑ים וַ֝יַּתְעֵ֗ם בְּתֹ֣הוּ לֹא־דָֽרֶךְ׃",
+   "en": "He poureth contempt upon princes, And causeth them to wander in the waste, where there is no way."
+  },
+  {
+   "v": 41,
+   "he": "וַיְשַׂגֵּ֣ב אֶבְי֣וֹן מֵע֑וֹנִי וַיָּ֥שֶׂם כַּ֝צֹּ֗אן מִשְׁפָּחֽוֹת׃",
+   "en": "Yet setteth He the needy on high from affliction, And maketh his families like a flock."
+  },
+  {
+   "v": 42,
+   "he": "יִרְא֣וּ יְשָׁרִ֣ים וְיִשְׂמָ֑חוּ וְכָל־עַ֝וְלָ֗ה קָ֣פְצָה פִּֽיהָ׃",
+   "en": "The upright see it, and are glad; And all iniquity stoppeth her mouth."
+  },
+  {
+   "v": 43,
+   "he": "מִי־חָכָ֥ם וְיִשְׁמָר־אֵ֑לֶּה וְ֝יִתְבּֽוֹנְנ֗וּ חַֽסְדֵ֥י יְהוָֽה׃",
+   "en": "Whoso is wise, let him observe these things, And let them consider the mercies of the LORD."
+  }
+ ],
+ "sourcing": "sourced"
+}

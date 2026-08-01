@@ -1,0 +1,25 @@
+{
+ "id": "tanakh--psalms--131",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 131,
+ "verses": [
+  {
+   "v": 1,
+   "he": "שִׁ֥יר הַֽמַּֽעֲל֗וֹת לְדָ֫וִ֥ד יְהוָ֤ה׀ לֹא־גָבַ֣הּ לִ֭בִּי וְלֹא־רָמ֣וּ עֵינַ֑י וְלֹֽא־הִלַּ֓כְתִּי׀ בִּגְדֹל֖וֹת וּבְנִפְלָא֣וֹת מִמֶּֽנִּי׃",
+   "en": "A Song of Ascents; of David. LORD, my heart is not haughty, nor mine eyes lofty; Neither do I exercise myself in things too great, or in things too wonderful for me."
+  },
+  {
+   "v": 2,
+   "he": "אִם־לֹ֤א שִׁוִּ֨יתִי׀ וְדוֹמַ֗מְתִּי נַ֫פְשִׁ֥י כְּ֭גָמֻל עֲלֵ֣י אִמּ֑וֹ כַּגָּמֻ֖ל עָלַ֣י נַפְשִֽׁי׃",
+   "en": "Surely I have stilled and quieted my soul; Like a weaned child with his mother; My soul is with me like a weaned child."
+  },
+  {
+   "v": 3,
+   "he": "יַחֵ֣ל יִ֭שְׂרָאֵל אֶל־יְהוָ֑ה מֵֽ֝עַתָּ֗ה וְעַד־עוֹלָֽם׃",
+   "en": "O Israel, hope in the LORD From this time forth and for ever."
+  }
+ ],
+ "sourcing": "sourced"
+}

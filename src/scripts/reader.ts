@@ -86,14 +86,14 @@ if (toggle !== null && verses !== null) {
  *
  * A native select, so it is a real control on every device, and it only ever
  * navigates — the contents page beside it does the same job without any of
- * this, which is why the select can fail silently.
+ * this, which is why the select can fail silently. Each option carries its own
+ * full address, because what it jumps between differs by page: books on a
+ * book, chapters inside one.
  */
 const jump = document.querySelector<HTMLSelectElement>('[data-reader-jump]');
 if (jump !== null) {
   jump.addEventListener('change', () => {
-    const work = jump.dataset['work'];
-    if (work === undefined || jump.value === '') return;
-    location.href = `/read/${work}/${jump.value}`;
+    if (jump.value !== '') location.href = jump.value;
   });
 }
 

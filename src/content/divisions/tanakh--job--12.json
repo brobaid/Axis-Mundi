@@ -1,0 +1,135 @@
+{
+ "id": "tanakh--job--12",
+ "work": "tanakh",
+ "n": 29,
+ "slug": "job",
+ "c": 12,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וַיַּ֥עַן אִיּ֗וֹב וַיֹּאמַֽר׃",
+   "en": "Then Job answered and said:"
+  },
+  {
+   "v": 2,
+   "he": "אָ֭מְנָם כִּ֣י אַתֶּם־עָ֑ם וְ֝עִמָּכֶ֗ם תָּמ֥וּת חָכְמָֽה׃",
+   "en": "No doubt but ye are the people, And wisdom shall die with you."
+  },
+  {
+   "v": 3,
+   "he": "גַּם־לִ֤י לֵבָ֨ב׀ כְּֽמוֹכֶ֗ם לֹא־נֹפֵ֣ל אָנֹכִ֣י מִכֶּ֑ם וְאֶת־מִי־אֵ֥ין כְּמוֹ־אֵֽלֶּה׃",
+   "en": "But I have understanding as well as you; I am not inferior to you; Yea, who knoweth not such things as these?"
+  },
+  {
+   "v": 4,
+   "he": "שְׂחֹ֤ק לְרֵעֵ֨הוּ׀ אֶֽהְיֶ֗ה קֹרֵ֣א לֶ֭אֱלוֹהַּ וַֽיַּעֲנֵ֑הוּ שְׂ֝ח֗וֹק צַדִּ֥יק תָּמִֽים׃",
+   "en": "I am as one that is a laughing-stock to his neighbour, A man that called upon God, And He answered him; The just, the innocent man is a laughing-stock,"
+  },
+  {
+   "v": 5,
+   "he": "לַפִּ֣יד בּ֭וּז לְעַשְׁתּ֣וּת שַׁאֲנָ֑ן נָ֝כ֗וֹן לְמ֣וֹעֲדֵי רָֽגֶל׃",
+   "en": "A contemptible brand in the thought of him that is at ease, A thing ready for them whose foot slippeth."
+  },
+  {
+   "v": 6,
+   "he": "יִשְׁלָ֤יוּ אֹֽהָלִ֨ים׀ לְשֹׁ֥דְדִ֗ים וּֽ֭בַטֻּחוֹת לְמַרְגִּ֣יזֵי אֵ֑ל לַאֲשֶׁ֤ר הֵבִ֖יא אֱל֣וֹהַּ בְּיָדֽוֹ׃",
+   "en": "The tents of robbers prosper, And they that provoke God are secure, In whatsoever God bringeth into their hand."
+  },
+  {
+   "v": 7,
+   "he": "וְֽאוּלָ֗ם שְׁאַל־נָ֣א בְהֵמ֣וֹת וְתֹרֶ֑ךָּ וְע֥וֹף הַ֝שָּׁמַ֗יִם וְיַגֶּד־לָֽךְ׃",
+   "en": "But ask now the beasts, and they shall teach thee; And the fowls of the air, and they shall tell thee;"
+  },
+  {
+   "v": 8,
+   "he": "א֤וֹ שִׂ֣יחַ לָאָ֣רֶץ וְתֹרֶ֑ךָּ וִֽיסַפְּר֥וּ לְ֝ךָ֗ דְּגֵ֣י הַיָּֽם׃",
+   "en": "Or speak to the earth, and it shall teach thee; And the fishes of the sea shall declare unto thee;"
+  },
+  {
+   "v": 9,
+   "he": "מִ֭י לֹא־יָדַ֣ע בְּכָל־אֵ֑לֶּה כִּ֥י יַד־יְ֝הוָה עָ֣שְׂתָה זֹּֽאת׃",
+   "en": "Who knoweth not among all these, That the hand of the LORD hath wrought this?"
+  },
+  {
+   "v": 10,
+   "he": "אֲשֶׁ֣ר בְּ֭יָדוֹ נֶ֣פֶשׁ כָּל־חָ֑י וְ֝ר֗וּחַ כָּל־בְּשַׂר־אִֽישׁ׃",
+   "en": "In whose hand is the soul of every living thing, And the breath of all mankind.—"
+  },
+  {
+   "v": 11,
+   "he": "הֲלֹא־אֹ֭זֶן מִלִּ֣ין תִּבְחָ֑ן וְ֝חֵ֗ךְ אֹ֣כֶל יִטְעַם־לֽוֹ׃",
+   "en": "Doth not the ear try words, Even as the palate tasteth its food?"
+  },
+  {
+   "v": 12,
+   "he": "בִּֽישִׁישִׁ֥ים חָכְמָ֑ה וְאֹ֖רֶךְ יָמִ֣ים תְּבוּנָֽה׃",
+   "en": "Is wisdom with aged men, And understanding in length of days?—"
+  },
+  {
+   "v": 13,
+   "he": "עִ֭מּוֹ חָכְמָ֣ה וּגְבוּרָ֑ה ל֝֗וֹ עֵצָ֥ה וּתְבוּנָֽה׃",
+   "en": "With Him is wisdom and might; He hath counsel and understanding."
+  },
+  {
+   "v": 14,
+   "he": "הֵ֣ן יַ֭הֲרוֹס וְלֹ֣א יִבָּנֶ֑ה יִסְגֹּ֥ר עַל־אִ֝֗ישׁ וְלֹ֣א יִפָּתֵֽחַ׃",
+   "en": "Behold, He breaketh down, and it cannot be built again; He shutteth up a man, and there can be no opening."
+  },
+  {
+   "v": 15,
+   "he": "הֵ֤ן יַעְצֹ֣ר בַּמַּ֣יִם וְיִבָ֑שׁוּ וִֽ֝ישַׁלְּחֵ֗ם וְיַ֖הַפְכוּ אָֽרֶץ׃",
+   "en": "Behold, He withholdeth the waters, and they dry up; Also He sendeth them out, and they overturn the earth."
+  },
+  {
+   "v": 16,
+   "he": "עִ֭מּוֹ עֹ֣ז וְתֽוּשִׁיָּ֑ה ל֝֗וֹ שֹׁגֵ֥ג וּמַשְׁגֶּֽה׃",
+   "en": "With Him is strength and sound wisdom; The deceived and the deceiver are His."
+  },
+  {
+   "v": 17,
+   "he": "מוֹלִ֣יךְ יוֹעֲצִ֣ים שׁוֹלָ֑ל וְֽשֹׁפְטִ֥ים יְהוֹלֵֽל׃",
+   "en": "He leadeth counsellors away stripped, And judges maketh He fools."
+  },
+  {
+   "v": 18,
+   "he": "מוּסַ֣ר מְלָכִ֣ים פִּתֵּ֑חַ וַיֶּאְסֹ֥ר אֵ֝ז֗וֹר בְּמָתְנֵיהֶֽם׃",
+   "en": "He looseth the bond of kings, And bindeth their loins with a girdle."
+  },
+  {
+   "v": 19,
+   "he": "מוֹלִ֣יךְ כֹּהֲנִ֣ים שׁוֹלָ֑ל וְאֵֽתָנִ֣ים יְסַלֵּֽף׃",
+   "en": "He leadeth priests away stripped, And overthroweth the mighty."
+  },
+  {
+   "v": 20,
+   "he": "מֵסִ֣יר שָׂ֭פָה לְנֶאֱמָנִ֑ים וְטַ֖עַם זְקֵנִ֣ים יִקָּֽח׃",
+   "en": "He removeth the speech of men of trust, And taketh away the sense of the elders."
+  },
+  {
+   "v": 21,
+   "he": "שׁוֹפֵ֣ךְ בּ֭וּז עַל־נְדִיבִ֑ים וּמְזִ֖יחַ אֲפִיקִ֣ים רִפָּֽה׃",
+   "en": "He poureth contempt upon princes, And looseth the belt of the strong."
+  },
+  {
+   "v": 22,
+   "he": "מְגַלֶּ֣ה עֲ֭מֻקוֹת מִנִּי־חֹ֑שֶׁךְ וַיֹּצֵ֖א לָא֣וֹר צַלְמָֽוֶת׃",
+   "en": "He uncovereth deep things out of darkness, And bringeth out to light the shadow of death."
+  },
+  {
+   "v": 23,
+   "he": "מַשְׂגִּ֣יא לַ֭גּוֹיִם וַֽיְאַבְּדֵ֑ם שֹׁטֵ֥חַ לַ֝גּוֹיִ֗ם וַיַּנְחֵֽם׃",
+   "en": "He increaseth the nations, and destroyeth them; He enlargeth the nations, and leadeth them away."
+  },
+  {
+   "v": 24,
+   "he": "מֵסִ֗יר לֵ֭ב רָאשֵׁ֣י עַם־הָאָ֑רֶץ וַ֝יַּתְעֵ֗ם בְּתֹ֣הוּ לֹא־דָֽרֶךְ׃",
+   "en": "He taketh away the heart of the chiefs of the people of the land, And causeth them to wander in a wilderness where there is no way."
+  },
+  {
+   "v": 25,
+   "he": "יְמַֽשְׁשׁוּ־חֹ֥שֶׁךְ וְלֹא־א֑וֹר וַ֝יַּתְעֵ֗ם כַּשִּׁכּֽוֹר׃",
+   "en": "They grope in the dark without light, And He maketh them to stagger like a drunken man."
+  }
+ ],
+ "sourcing": "sourced"
+}

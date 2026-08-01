@@ -1,0 +1,135 @@
+{
+ "id": "tanakh--exodus--2",
+ "work": "tanakh",
+ "n": 2,
+ "slug": "exodus",
+ "c": 2,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וַיֵּ֥לֶךְ אִ֖ישׁ מִבֵּ֣ית לֵוִ֑י וַיִּקַּ֖ח אֶת־בַּת־לֵוִֽי׃",
+   "en": "And there went a man of the house of Levi, and took to wife a daughter of Levi."
+  },
+  {
+   "v": 2,
+   "he": "וַתַּ֥הַר הָאִשָּׁ֖ה וַתֵּ֣לֶד בֵּ֑ן וַתֵּ֤רֶא אֹתוֹ֙ כִּי־ט֣וֹב ה֔וּא וַֽתִּצְפְּנֵ֖הוּ שְׁלֹשָׁ֥ה יְרָחִֽים׃",
+   "en": "And the woman conceived, and bore a son; and when she saw him that he was a goodly child, she hid him three months."
+  },
+  {
+   "v": 3,
+   "he": "וְלֹא־יָכְלָ֣ה עוֹד֮ הַצְּפִינוֹ֒ וַתִּֽקַּֽח־לוֹ֙ תֵּ֣בַת גֹּ֔מֶא וַתַּחְמְרָ֥ה בַחֵמָ֖ר וּבַזָּ֑פֶת וַתָּ֤שֶׂם בָּהּ֙ אֶת־הַיֶּ֔לֶד וַתָּ֥שֶׂם בַּסּ֖וּף עַל־שְׂפַ֥ת הַיְאֹֽר׃",
+   "en": "And when she could not longer hide him, she took for him an ark of bulrushes, and daubed it with slime and with pitch; and she put the child therein, and laid it in the flags by the river’s brink."
+  },
+  {
+   "v": 4,
+   "he": "וַתֵּתַצַּ֥ב אֲחֹת֖וֹ מֵרָחֹ֑ק לְדֵעָ֕ה מַה־יֵּעָשֶׂ֖ה לֽוֹ׃",
+   "en": "And his sister stood afar off, to know what would be done to him."
+  },
+  {
+   "v": 5,
+   "he": "וַתֵּ֤רֶד בַּת־פַּרְעֹה֙ לִרְחֹ֣ץ עַל־הַיְאֹ֔ר וְנַעֲרֹתֶ֥יהָ הֹלְכֹ֖ת עַל־יַ֣ד הַיְאֹ֑ר וַתֵּ֤רֶא אֶת־הַתֵּבָה֙ בְּת֣וֹךְ הַסּ֔וּף וַתִּשְׁלַ֥ח אֶת־אֲמָתָ֖הּ וַתִּקָּחֶֽהָ׃",
+   "en": "And the daughter of Pharaoh came down to bathe in the river; and her maidens walked along by the river-side; and she saw the ark among the flags, and sent her handmaid to fetch it."
+  },
+  {
+   "v": 6,
+   "he": "וַתִּפְתַּח֙ וַתִּרְאֵ֣הוּ אֶת־הַיֶּ֔לֶד וְהִנֵּה־נַ֖עַר בֹּכֶ֑ה וַתַּחְמֹ֣ל עָלָ֔יו וַתֹּ֕אמֶר מִיַּלְדֵ֥י הָֽעִבְרִ֖ים זֶֽה׃",
+   "en": "And she opened it, and saw it, even the child; and behold a boy that wept. And she had compassion on him, and said: ‘This is one of the Hebrews’children.’"
+  },
+  {
+   "v": 7,
+   "he": "וַתֹּ֣אמֶר אֲחֹתוֹ֮ אֶל־בַּת־פַּרְעֹה֒ הַאֵלֵ֗ךְ וְקָרָ֤אתִי לָךְ֙ אִשָּׁ֣ה מֵינֶ֔קֶת מִ֖ן הָעִבְרִיֹּ֑ת וְתֵינִ֥ק לָ֖ךְ אֶת־הַיָּֽלֶד׃",
+   "en": "Then said his sister to Pharaoh’s daughter: ‘Shall I go and call thee a nurse of the Hebrew women, that she may nurse the child for thee?’"
+  },
+  {
+   "v": 8,
+   "he": "וַתֹּֽאמֶר־לָ֥הּ בַּת־פַּרְעֹ֖ה לֵ֑כִי וַתֵּ֙לֶךְ֙ הָֽעַלְמָ֔ה וַתִּקְרָ֖א אֶת־אֵ֥ם הַיָּֽלֶד׃",
+   "en": "And Pharaoh’s daughter said to her: ‘Go.’ And the maiden went and called the child’s mother."
+  },
+  {
+   "v": 9,
+   "he": "וַתֹּ֧אמֶר לָ֣הּ בַּת־פַּרְעֹ֗ה הֵילִ֜יכִי אֶת־הַיֶּ֤לֶד הַזֶּה֙ וְהֵינִקִ֣הוּ לִ֔י וַאֲנִ֖י אֶתֵּ֣ן אֶת־שְׂכָרֵ֑ךְ וַתִּקַּ֧ח הָאִשָּׁ֛ה הַיֶּ֖לֶד וַתְּנִיקֵֽהוּ׃",
+   "en": "And Pharaoh’s daughter said unto her: ‘Take this child away, and nurse it for me, and I will give thee thy wages.’ And the woman took the child, and nursed it."
+  },
+  {
+   "v": 10,
+   "he": "וַיִגְדַּ֣ל הַיֶּ֗לֶד וַתְּבִאֵ֙הוּ֙ לְבַת־פַּרְעֹ֔ה וַֽיְהִי־לָ֖הּ לְבֵ֑ן וַתִּקְרָ֤א שְׁמוֹ֙ מֹשֶׁ֔ה וַתֹּ֕אמֶר כִּ֥י מִן־הַמַּ֖יִם מְשִׁיתִֽהוּ׃",
+   "en": "And the child grew, and she brought him unto Pharaoh’s daughter, and he became her son. And she called his name Moses, and said: ‘Because I drew him out of the water.’"
+  },
+  {
+   "v": 11,
+   "he": "וַיְהִ֣י׀ בַּיָּמִ֣ים הָהֵ֗ם וַיִּגְדַּ֤ל מֹשֶׁה֙ וַיֵּצֵ֣א אֶל־אֶחָ֔יו וַיַּ֖רְא בְּסִבְלֹתָ֑ם וַיַּרְא֙ אִ֣ישׁ מִצְרִ֔י מַכֶּ֥ה אִישׁ־עִבְרִ֖י מֵאֶחָֽיו׃",
+   "en": "And it came to pass in those days, when Moses was grown up, that he went out unto his brethren, and looked on their burdens; and he saw an Egyptian smiting a Hebrew, one of his brethren."
+  },
+  {
+   "v": 12,
+   "he": "וַיִּ֤פֶן כֹּה֙ וָכֹ֔ה וַיַּ֖רְא כִּ֣י אֵ֣ין אִ֑ישׁ וַיַּךְ֙ אֶת־הַמִּצְרִ֔י וַֽיִּטְמְנֵ֖הוּ בַּחֽוֹל׃",
+   "en": "And he looked this way and that way, and when he saw that there was no man, he smote the Egyptian, and hid him in the sand."
+  },
+  {
+   "v": 13,
+   "he": "וַיֵּצֵא֙ בַּיּ֣וֹם הַשֵּׁנִ֔י וְהִנֵּ֛ה שְׁנֵֽי־אֲנָשִׁ֥ים עִבְרִ֖ים נִצִּ֑ים וַיֹּ֙אמֶר֙ לָֽרָשָׁ֔ע לָ֥מָּה תַכֶּ֖ה רֵעֶֽךָ׃",
+   "en": "And he went out the second day, and, behold, two men of the Hebrews were striving together; and he said to him that did the wrong: ‘Wherefore smitest thou thy fellow?’"
+  },
+  {
+   "v": 14,
+   "he": "וַ֠יֹּאמֶר מִ֣י שָֽׂמְךָ֞ לְאִ֨ישׁ שַׂ֤ר וְשֹׁפֵט֙ עָלֵ֔ינוּ הַלְהָרְגֵ֙נִי֙ אַתָּ֣ה אֹמֵ֔ר כַּאֲשֶׁ֥ר הָרַ֖גְתָּ אֶת־הַמִּצְרִ֑י וַיִּירָ֤א מֹשֶׁה֙ וַיֹּאמַ֔ר אָכֵ֖ן נוֹדַ֥ע הַדָּבָֽר׃",
+   "en": "And he said: ‘Who made thee a ruler and a judge over us? thinkest thou to kill me, as thou didst kill the Egyptian?’ And Moses feared, and said: ‘Surely the thing is known.’"
+  },
+  {
+   "v": 15,
+   "he": "וַיִּשְׁמַ֤ע פַּרְעֹה֙ אֶת־הַדָּבָ֣ר הַזֶּ֔ה וַיְבַקֵּ֖שׁ לַהֲרֹ֣ג אֶת־מֹשֶׁ֑ה וַיִּבְרַ֤ח מֹשֶׁה֙ מִפְּנֵ֣י פַרְעֹ֔ה וַיֵּ֥שֶׁב בְּאֶֽרֶץ־מִדְיָ֖ן וַיֵּ֥שֶׁב עַֽל־הַבְּאֵֽר׃",
+   "en": "Now when Pharaoh heard this thing, he sought to slay Moses. But Moses fled from the face of Pharaoh, and dwelt in the land of Midian; and he sat down by a well."
+  },
+  {
+   "v": 16,
+   "he": "וּלְכֹהֵ֥ן מִדְיָ֖ן שֶׁ֣בַע בָּנ֑וֹת וַתָּבֹ֣אנָה וַתִּדְלֶ֗נָה וַתְּמַלֶּ֙אנָה֙ אֶת־הָ֣רְהָטִ֔ים לְהַשְׁק֖וֹת צֹ֥אן אֲבִיהֶֽן׃",
+   "en": "Now the priest of Midian had seven daughters; and they came and drew water, and filled the troughs to water their father’s flock."
+  },
+  {
+   "v": 17,
+   "he": "וַיָּבֹ֥אוּ הָרֹעִ֖ים וַיְגָרְשׁ֑וּם וַיָּ֤קָם מֹשֶׁה֙ וַיּ֣וֹשִׁעָ֔ן וַיַּ֖שְׁקְ אֶת־צֹאנָֽם׃",
+   "en": "And the shepherds came and drove them away; but Moses stood up and helped them, and watered their flock."
+  },
+  {
+   "v": 18,
+   "he": "וַתָּבֹ֕אנָה אֶל־רְעוּאֵ֖ל אֲבִיהֶ֑ן וַיֹּ֕אמֶר מַדּ֛וּעַ מִהַרְתֶּ֥ן בֹּ֖א הַיּֽוֹם׃",
+   "en": "And when they came to Reuel their father, he said: ‘How is it that ye are come so soon to-day?’"
+  },
+  {
+   "v": 19,
+   "he": "וַתֹּאמַ֕רְןָ אִ֣ישׁ מִצְרִ֔י הִצִּילָ֖נוּ מִיַּ֣ד הָרֹעִ֑ים וְגַם־דָּלֹ֤ה דָלָה֙ לָ֔נוּ וַיַּ֖שְׁקְ אֶת־הַצֹּֽאן׃",
+   "en": "And they said: ‘An Egyptian delivered us out of the hand of the shepherds, and moreover he drew water for us, and watered the flock.’"
+  },
+  {
+   "v": 20,
+   "he": "וַיֹּ֥אמֶר אֶל־בְּנֹתָ֖יו וְאַיּ֑וֹ לָ֤מָּה זֶּה֙ עֲזַבְתֶּ֣ן אֶת־הָאִ֔ישׁ קִרְאֶ֥ן ל֖וֹ וְיֹ֥אכַל לָֽחֶם׃",
+   "en": "And he said unto his daughters: ‘And where is he? Why is it that ye have left the man? call him, that he may eat bread.’"
+  },
+  {
+   "v": 21,
+   "he": "וַיּ֥וֹאֶל מֹשֶׁ֖ה לָשֶׁ֣בֶת אֶת־הָאִ֑ישׁ וַיִּתֵּ֛ן אֶת־צִפֹּרָ֥ה בִתּ֖וֹ לְמֹשֶֽׁה׃",
+   "en": "And Moses was content to dwell with the man; and he gave Moses Zipporah his daughter."
+  },
+  {
+   "v": 22,
+   "he": "וַתֵּ֣לֶד בֵּ֔ן וַיִּקְרָ֥א אֶת־שְׁמ֖וֹ גֵּרְשֹׁ֑ם כִּ֣י אָמַ֔ר גֵּ֣ר הָיִ֔יתִי בְּאֶ֖רֶץ נָכְרִיָּֽה׃",
+   "en": "And she bore a son, and he called his name Gershom; for he said: ‘I have been aa stranger in a strange land.’"
+  },
+  {
+   "v": 23,
+   "he": "וַיְהִי֩ בַיָּמִ֨ים הָֽרַבִּ֜ים הָהֵ֗ם וַיָּ֙מָת֙ מֶ֣לֶךְ מִצְרַ֔יִם וַיֵּאָנְח֧וּ בְנֵֽי־יִשְׂרָאֵ֛ל מִן־הָעֲבֹדָ֖ה וַיִּזְעָ֑קוּ וַתַּ֧עַל שַׁוְעָתָ֛ם אֶל־הָאֱלֹהִ֖ים מִן־הָעֲבֹדָֽה׃",
+   "en": "And it came to pass in the course of those many days that the king of Egypt died; and the children of Israel sighed by reason of the bondage, and they cried, and their cry came up unto God by reason of the bondage."
+  },
+  {
+   "v": 24,
+   "he": "וַיִּשְׁמַ֥ע אֱלֹהִ֖ים אֶת־נַאֲקָתָ֑ם וַיִּזְכֹּ֤ר אֱלֹהִים֙ אֶת־בְּרִית֔וֹ אֶת־אַבְרָהָ֖ם אֶת־יִצְחָ֥ק וְאֶֽת־יַעֲקֹֽב׃",
+   "en": "And God heard their groaning, and God remembered His covenant with Abraham, with Isaac, and with Jacob."
+  },
+  {
+   "v": 25,
+   "he": "וַיַּ֥רְא אֱלֹהִ֖ים אֶת־בְּנֵ֣י יִשְׂרָאֵ֑ל וַיֵּ֖דַע אֱלֹהִֽים׃",
+   "en": "And God saw the children of Israel, and God took cognizance of them."
+  }
+ ],
+ "sourcing": "sourced"
+}
