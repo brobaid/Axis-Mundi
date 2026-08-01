@@ -263,7 +263,7 @@ export function renderCanvas(
            a transform of its own and the two must compose rather than fight. */
         `<span class="tl-tick" data-morph-key="tick:${year}"` +
         ` style="left:${left.toFixed(3)}%;--tick-align:${align}">` +
-        `${esc(formatTick(year, isEdge))}</span>`
+        `${esc(formatTick(year, isEdge, ticks[i - 1]))}</span>`
       );
     })
     .join('');

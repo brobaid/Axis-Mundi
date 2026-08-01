@@ -274,6 +274,19 @@ export function zoomLevelFrom(span: number, previous: ZoomLevel | null): ZoomLev
 /** Back-compatible name used by the server render and the zoom readout. */
 export const zoomLabel = (span: number): string => zoomLevel(span);
 
+/**
+ * What "Centuries" means, in a sentence.
+ *
+ * The word alone names the granularity to someone who already knows the axis
+ * has one. A first-time reader sees a noun with no verb — this gives it one,
+ * on hover or focus, without putting a permanent paragraph beside a two-word
+ * indicator.
+ */
+export function zoomExplainer(span: number): string {
+  const level = zoomLevel(span).toLowerCase();
+  return `The axis counts in ${level} at this zoom. Fewer, larger events show as you widen it.`;
+}
+
 /** Spec §4: no more than ~8 visible events per lane per viewport width. */
 export const DENSITY_BUDGET = 8;
 
@@ -477,10 +490,71 @@ export function rulerTicks(view: Viewport, target = 7): number[] {
   return ticks;
 }
 
-/** Tick labels stay compact: era only where it changes or at the edges. */
-export function formatTick(year: number, isEdge: boolean): string {
-  if (year === 0) return '1 CE';
+/**
+ * Tick labels.
+ *
+ * Every BCE year says BCE — a bare "1500" on an axis that runs from the
+ * fifteenth century BCE to the twenty-first CE is a coin toss, and it was one:
+ * only the edges used to carry an era, so a reader looking at the middle of the
+ * ruler had nothing to tell them which side of the turn they were on.
+ *
+ * CE is stated at the edges, at the turn, and at the first CE tick after any
+ * BCE tick, which is where the axis actually changes era. Between those it is
+ * dropped, because seven ticks all reading "CE" is noise and the era is not in
+ * question once it has been established to the left.
+ */
+export function formatTick(year: number, isEdge: boolean, previous?: number): string {
+  if (year === 0 || year === 1) return '1 CE';
   const abs = Math.abs(year);
   if (year < 0) return `${abs} BCE`;
-  return isEdge ? `${abs} CE` : String(abs);
+  const crossesEra = previous !== undefined && previous < 0;
+  return isEdge || crossesEra ? `${abs} CE` : String(abs);
+}
+
+/* ── the travel bar ─────────────────────────────────────────────────────── */
+
+/** A stretch of years. The travel bar has no pixels of its own. */
+export type Span = Pick<Viewport, 'from' | 'to'>;
+
+export interface TravelBar {
+  /** Where the visible window starts, as a fraction of the full span. */
+  readonly left: number;
+  /** How much of the full span is visible, as a fraction. */
+  readonly width: number;
+}
+
+/**
+ * The visible window as a fraction of everything there is.
+ *
+ * Pure, so the bar the reader drags and the canvas it drags cannot disagree
+ * about where they are. Clamped rather than trusted: a view can sit slightly
+ * outside bounds mid-gesture, and a thumb that renders at a negative offset
+ * escapes its rail.
+ */
+export function travelBar(view: Span, bounds: Span): TravelBar {
+  const full = bounds.to - bounds.from;
+  if (full <= 0) return { left: 0, width: 1 };
+  const width = Math.min(1, Math.max((view.to - view.from) / full, MIN_THUMB));
+  const left = Math.min(1 - width, Math.max(0, (view.from - bounds.from) / full));
+  return { left, width };
+}
+
+/**
+ * The thumb never shrinks below this share of the rail.
+ *
+ * At the deepest zoom the window is twelve years of five and a half thousand,
+ * which is two parts in a thousand — a thumb nobody can grab and nobody can
+ * see. It stops being to scale before it stops being usable.
+ */
+const MIN_THUMB = 0.04;
+
+/** Where a click at fraction `f` of the rail puts the window's start. */
+export function travelTo(f: number, span: number, bounds: Span): Span {
+  const full = bounds.to - bounds.from;
+  /* The click names the centre, not the edge: a reader aiming at a year wants
+     that year in front of them, not at the left margin. */
+  let from = bounds.from + f * full - span / 2;
+  if (from < bounds.from) from = bounds.from;
+  if (from + span > bounds.to) from = bounds.to - span;
+  return { from, to: from + span };
 }

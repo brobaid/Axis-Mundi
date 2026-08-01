@@ -3,12 +3,14 @@ import TraditionSymbols from './TraditionSymbols.astro';
 import {
   buildLanes,
   layoutTimeline,
+  zoomExplainer,
   zoomLabel,
   type TaxonomyNode,
   type TimelineEvent,
   type Viewport,
 } from '../lib/timeline-model';
 import { renderCanvas } from '../lib/timeline-render';
+import { formatYear } from '../lib/display-date';
 
 /**
  * The timeline canvas (M1).
@@ -115,9 +117,23 @@ const bootstrap = {
     should not have to look away to find out what it is counting in.
   -->
   <p class="tl-scale">
+    {/*
+      The indicator names a granularity; the explainer says what a granularity
+      is. It is a title attribute and a description both — the tooltip for a
+      mouse, the described-by for a screen reader, and a visible line on focus
+      for a keyboard, so no input gets the noun without the verb.
+    */}
     <span class="eyebrow">Scale</span>
-    <b class="mono" data-scale-level>{zoomLabel(to - from)}</b>
+    <b
+      class="mono tl-scale__level"
+      data-scale-level
+      tabindex="0"
+      title={zoomExplainer(to - from)}
+      aria-describedby="scale-explainer">{zoomLabel(to - from)}</b>
     <span class="tl-scale__span mono" data-scale-span></span>
+    <span class="tl-scale__explainer" id="scale-explainer" data-scale-explainer>
+      {zoomExplainer(to - from)}
+    </span>
   </p>
 
   <!-- canvas --------------------------------------------------------- -->
@@ -125,10 +141,45 @@ const bootstrap = {
     <div class="tl-canvas" data-canvas set:html={canvasHtml} />
   </div>
 
+  <!--
+    The travel bar.
+
+    The canvas shows a window; nothing else on the page said how big that
+    window was against everything there is, or which part of it you were
+    looking at. Same vocabulary as the map's era scrubber — a hairline rail
+    with a brass thumb — but continuous rather than detented, because this
+    room's time is continuous and the map's snapshots are not.
+
+    Pointer devices only. A thumb can flick the canvas itself and has the
+    whole width to do it in; a rail three hundred pixels wide would be a
+    worse instrument than the canvas above it.
+  -->
+  <div class="tl-travel" data-tl-travel>
+    <div
+      class="tl-travel__rail"
+      data-tl-rail
+      role="slider"
+      tabindex="0"
+      aria-label="Travel through time"
+      aria-valuemin={boundsFrom}
+      aria-valuemax={boundsTo}
+      aria-valuenow={Math.round((from + to) / 2)}
+      aria-valuetext={`${formatYear(from)} to ${formatYear(to)}`}
+    >
+      <span class="tl-travel__thumb" data-tl-thumb aria-hidden="true"></span>
+    </div>
+    <p class="tl-travel__ends caption" aria-hidden="true">
+      <span>{formatYear(boundsFrom)}</span>
+      <span>{formatYear(boundsTo)}</span>
+    </p>
+  </div>
+
   <p class="tl-note caption">
     Dot size encodes importance rank; labels go to the most significant events that fit.
     Open any event without losing your place. Select a tradition to split it into branch lanes.
-    <span class="tl-note__fine">Zoom with <kbd>ctrl</kbd> or <kbd>⌥</kbd> and scroll.</span>
+    <span class="tl-note__fine">Scroll or drag the canvas sideways to travel, or pull the bar
+    beneath it. Zoom with <kbd>ctrl</kbd> or <kbd>⌘</kbd> and scroll, or the &minus; and +
+    buttons.</span>
     <span class="tl-note__coarse">Flick the canvas sideways to travel; it carries on and settles. The
     &minus; and + buttons change the span, and so does a pinch on the canvas.</span>
   </p>
@@ -145,8 +196,14 @@ const bootstrap = {
     <div class="tl-coach__card" role="dialog" aria-labelledby="coach-title" aria-modal="false">
       <p class="eyebrow" id="coach-title">Reading this room</p>
       <ol role="list">
-        <li>Flick sideways to travel through time.</li>
-        <li>Change the scale with the &minus; and + stepper, or pinch.</li>
+        <li class="tl-coach__coarse">Flick sideways to travel through time.</li>
+        <li class="tl-coach__fine">
+          Travel three ways: scroll the canvas sideways, drag it, or pull the bar beneath it.
+        </li>
+        <li class="tl-coach__coarse">Change the scale with the &minus; and + stepper, or pinch.</li>
+        <li class="tl-coach__fine">
+          Change the scale with the &minus; and + stepper, or hold <kbd>ctrl</kbd> and scroll.
+        </li>
         <li>Tap a dot to read the event; tap a ringed count to open that range.</li>
       </ol>
       <button type="button" class="tl-btn" data-coach-dismiss>Begin</button>
@@ -257,6 +314,111 @@ const bootstrap = {
     gap: var(--space-1);
   }
 
+  /*
+    The explainer is available to every input and permanent for none: shown on
+    hover or focus of the indicator, always readable by a screen reader through
+    aria-describedby. A two-word indicator does not earn a standing sentence
+    beside it, but it does owe one to anyone who asks.
+  */
+  .tl-scale__level {
+    border-bottom: var(--hairline-width) dashed var(--hairline-strong);
+    cursor: help;
+  }
+
+  .tl-scale__explainer {
+    display: block;
+    flex-basis: 100%;
+    color: var(--ink-soft);
+    font-size: var(--size-caption);
+    max-width: 34rem;
+    visibility: hidden;
+  }
+
+  .tl-scale:hover .tl-scale__explainer,
+  .tl-scale__level:focus-visible ~ .tl-scale__explainer {
+    visibility: visible;
+  }
+
+  /* --- the travel bar ---------------------------------------------------- */
+
+  /*
+    Pointer devices only, as the markup comment says. `hover: hover` rather
+    than a width query, because the question is what the reader is pointing
+    with and not how wide their window is — a touch laptop gets the canvas
+    gesture and the bar both, which is right, and a phone gets neither a bar
+    it could not use nor the vertical space it would take.
+  */
+  .tl-travel {
+    display: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .tl-travel {
+      display: block;
+      margin-top: var(--space-3);
+    }
+  }
+
+  .tl-travel__rail {
+    position: relative;
+    height: var(--tap-min);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  /* The rail itself: the museum's hairline, run the full width of the span. */
+  .tl-travel__rail::before {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    height: var(--hairline-width);
+    background: var(--hairline-strong);
+  }
+
+  /*
+    The thumb is the window. Brass, and the same weight as the meridian,
+    because it is the same claim about where in time the reader is standing —
+    but a block rather than a line, since it has a width and the meridian does
+    not.
+  */
+  .tl-travel__thumb {
+    position: absolute;
+    top: 50%;
+    height: 14px;
+    translate: 0 -50%;
+    background: var(--brass-wash);
+    border: var(--hairline-width) solid var(--brass);
+    border-radius: 1px;
+    /* Set by the island; the server-rendered default is the opening window. */
+    left: var(--thumb-left, 0%);
+    width: var(--thumb-width, 100%);
+    transition: left var(--dur-micro) linear;
+  }
+
+  .tl-travel__rail[data-dragging] .tl-travel__thumb,
+  .tl-travel__rail:active .tl-travel__thumb {
+    transition: none;
+  }
+
+  .tl-travel__rail:hover .tl-travel__thumb,
+  .tl-travel__rail:focus-visible .tl-travel__thumb {
+    background: var(--brass);
+  }
+
+  .tl-travel__ends {
+    display: flex;
+    justify-content: space-between;
+    color: var(--ink-soft);
+    margin-top: calc(-1 * var(--space-2));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tl-travel__thumb {
+      transition: none;
+    }
+  }
+
   /* --- first-visit coach ------------------------------------------------- */
 
   .tl-coach {
@@ -342,8 +504,9 @@ const bootstrap = {
   /* The scale bar's label, on the rule above the ruler. */
   .tl-scale {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
-    gap: var(--space-3);
+    gap: var(--space-1) var(--space-3);
     padding: 0 2px var(--space-2);
   }
 
@@ -367,18 +530,25 @@ const bootstrap = {
   }
 
   /* The note tells the truth for the pointer in the reader's hand: a phone has
-     no ctrl key, and a desktop has no thumb. */
-  .tl-note__coarse {
+     no ctrl key, and a desktop has no thumb. The coach says the same, in the
+     same way — three ways to travel on a desktop, a flick under a thumb. */
+  .tl-note__coarse,
+  .tl-coach__coarse {
     display: none;
   }
 
   @media (pointer: coarse) {
-    .tl-note__fine {
+    .tl-note__fine,
+    .tl-coach__fine {
       display: none;
     }
 
     .tl-note__coarse {
       display: inline;
+    }
+
+    .tl-coach__coarse {
+      display: list-item;
     }
 
     /* Thumb zone. The controls sat above the canvas, which meant reaching the
@@ -492,6 +662,31 @@ const bootstrap = {
     /* The page keeps the vertical. Sideways drags and pinches are this
        canvas's own, which is also why a pinch here never zooms the page. */
     touch-action: pan-y;
+  }
+
+  /*
+    The canvas says it is draggable before anyone tries. Nothing about a wall of
+    dots suggests you can take hold of it, which is most of why travelling
+    sideways on a desktop read as broken rather than as undiscovered.
+
+    Only where there is a cursor to change: a coarse pointer has no hover, and a
+    grab cursor it can never see is a rule the browser evaluates for nothing.
+  */
+  @media (hover: hover) and (pointer: fine) {
+    .tl-frame {
+      cursor: grab;
+    }
+
+    .tl-frame[data-dragging] {
+      cursor: grabbing;
+    }
+
+    /* Anything that answers a click keeps its own cursor. */
+    .tl-frame :global(.tl-node),
+    .tl-frame :global(.tl-cluster),
+    .tl-frame :global(.tl-lane__name) {
+      cursor: pointer;
+    }
   }
 
   .tl-canvas :global(.tl-inner) {
