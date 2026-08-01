@@ -225,5 +225,13 @@
    "mcleod-sikhism-1997"
   ],
   "sourcing": "sourced"
+ },
+ "demographics": {
+  "body": "Roughly 26 million adherents (india-census-2011 with projection; add this source). The great majority live in India, concentrated in Punjab, the one Sikh-majority state in the world at the sub-national level. The diaspora, above all in Canada, Britain, and the United States, is proportionally the largest of any Indian-origin tradition and increasingly shapes the community's public life.",
+  "sources": [
+   "pew-grl-2025",
+   "india-census-2011"
+  ],
+  "sourcing": "sourced"
  }
 }

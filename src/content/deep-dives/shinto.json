@@ -213,5 +213,13 @@
    "hardacre-shinto-2017"
   ],
   "sourcing": "sourced"
+ },
+ "demographics": {
+  "body": "Contested by definition, and counted here with a note rather than a number (japan-aca-yearbook; add this source). Japan's Agency for Cultural Affairs tallies some 80 to 90 million shrine parishioners by shrine reporting, while surveys find most Japanese claiming no religion; both are true, because Shinto is practice woven into place and season rather than membership. The 2020 map renders Japan unaffiliated for exactly this reason, and the methodology page carries the explanation.",
+  "sources": [
+   "pew-grl-2025",
+   "japan-aca-yearbook"
+  ],
+  "sourcing": "sourced"
  }
 }

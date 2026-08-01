@@ -226,5 +226,13 @@
    "dundas-jains-2002"
   ],
   "sourcing": "sourced"
+ },
+ "demographics": {
+  "body": "About 4.5 million by India's census, which the community itself considers an undercount (india-census-2011; add this source), concentrated in Gujarat, Rajasthan, Maharashtra, and Karnataka, with a prosperous diaspora in North America, Britain, and East Africa. Among the smallest of the world's old traditions and among the most literate and prosperous communities in India by every census measure.",
+  "sources": [
+   "pew-grl-2025",
+   "india-census-2011"
+  ],
+  "sourcing": "sourced"
  }
 }

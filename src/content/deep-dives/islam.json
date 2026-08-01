@@ -270,5 +270,12 @@
   "nchi-2010",
   "ei3"
  ],
- "sourcing": "sourced"
+ "sourcing": "sourced",
+ "demographics": {
+  "body": "2.0 billion adherents, 25.6 percent of humanity, the second-largest tradition and the fastest-growing over 2010-2020, up 1.8 points of share, driven by the youngest age profile of any major religion. Its demographic heart is not the Arab world: the largest Muslim populations are in Indonesia, Pakistan, India, and Bangladesh, and South and Southeast Asia together far outweigh the Middle East. Sub-Saharan Africa is its fastest-growing region.",
+  "sources": [
+   "pew-grl-2025"
+  ],
+  "sourcing": "sourced"
+ }
 }

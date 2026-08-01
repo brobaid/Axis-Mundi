@@ -225,5 +225,13 @@
    "boyce-zoroastrians"
   ],
   "sourcing": "sourced"
+ },
+ "demographics": {
+  "body": "Roughly 110 to 120 thousand worldwide (fezana-demographics; add this source), the smallest tradition in this museum: the Parsis of India, some 50 to 60 thousand and declining by about a tenth each decade through late marriage, low birthrates, and patrilineal membership rules; Iran's community in the tens of thousands; and a diaspora, led by North America, that now rivals the homelands. Whether to accept converts is the community's most consequential open question, and this museum's matrix carries it as a contested cell.",
+  "sources": [
+   "pew-grl-2025",
+   "fezana-demographics"
+  ],
+  "sourcing": "sourced"
  }
 }
