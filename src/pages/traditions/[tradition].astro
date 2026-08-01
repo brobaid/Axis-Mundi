@@ -190,8 +190,12 @@ const readable = new Set(works.map((w) => w.data.id));
    no link at all — "coming" is information, and so is "no clean English
    exists". A canon nobody has a plan for stays unlinked, because inventing one
    would be the museum promising something it has not undertaken. */
-const planned = new Map<string, string>(
-  shelfRows.flatMap((r) => r.data.canon_ids.map((id) => [id, r.data.id] as const)),
+const planned = new Map<string, { id: string; partly: boolean }>(
+  shelfRows.flatMap((r) =>
+    r.data.canon_ids.map(
+      (id) => [id, { id: r.data.id, partly: r.data.partly_live !== undefined }] as const,
+    ),
+  ),
 );
 const practices = dive.practices.filter((p) => includesUnsourced || p.sourcing !== 'todo');
 const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.sourcing !== 'todo');
@@ -356,9 +360,18 @@ const showAdherentYear =
                           <span class="canon__read-mark caption"> · read</span>
                         </a>
                       ) : planned.has(c.id) ? (
-                        <a class="canon__read canon__read--soon" href={`/read#${planned.get(c.id)}`}>
+                        <a
+                          class="canon__read canon__read--soon"
+                          href={`/read#${planned.get(c.id)!.id}`}
+                        >
                           {c.title}
-                          <span class="canon__read-mark caption"> · being acquired</span>
+                          {/* A shelf can be partly live: the Dhammapada is
+                              here and the rest of the Pali Canon is not, and
+                              "being acquired" would be false of the half a
+                              reader can already open. */}
+                          <span class="canon__read-mark caption">
+                            {planned.get(c.id)!.partly ? ' · partly here' : ' · being acquired'}
+                          </span>
                         </a>
                       ) : (
                         c.title

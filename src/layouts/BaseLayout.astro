@@ -21,6 +21,13 @@ import '@fontsource/ibm-plex-mono/latin-500.css';
    pointed text and a mangled one. */
 import '@fontsource/noto-naskh-arabic/arabic-400.css';
 import '@fontsource/noto-serif-hebrew/hebrew-400.css';
+/* Latin Extended Additional, for romanised Pali.
+
+   Source Serif 4 carries every Pali diacritic but one: ṁ, the niggahita, which
+   is the most common of them — measured, it fell through to whatever serif the
+   reader's machine happens to have, which is the thing self-hosting exists to
+   prevent. This subset is fetched only where a page actually sets it. */
+import '@fontsource/noto-serif/latin-ext-400.css';
 
 import '../styles/tokens.css';
 import '../styles/base.css';

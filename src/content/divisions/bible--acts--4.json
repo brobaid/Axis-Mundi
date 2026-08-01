@@ -1,0 +1,195 @@
+{
+ "id": "bible--acts--4",
+ "work": "bible",
+ "n": 44,
+ "slug": "acts",
+ "c": 4,
+ "verses": [
+  {
+   "v": 1,
+   "en": "As they spoke to the people, the priests and the captain of the temple and the Sadducees came to them,",
+   "gr": "Λαλούντων δὲ αὐτῶν πρὸς τὸν λαὸν ἐπέστησαν αὐτοῖς οἱ ⸀ἱερεῖς καὶ ὁ στρατηγὸς τοῦ ἱεροῦ καὶ οἱ Σαδδουκαῖοι,"
+  },
+  {
+   "v": 2,
+   "en": "being upset because they taught the people and proclaimed in Jesus the resurrection from the dead.",
+   "gr": "διαπονούμενοι διὰ τὸ διδάσκειν αὐτοὺς τὸν λαὸν καὶ καταγγέλλειν ἐν τῷ Ἰησοῦ τὴν ἀνάστασιν ⸂τὴν ἐκ⸃ νεκρῶν,"
+  },
+  {
+   "v": 3,
+   "en": "They laid hands on them, and put them in custody until the next day, for it was now evening.",
+   "gr": "καὶ ἐπέβαλον αὐτοῖς τὰς χεῖρας καὶ ἔθεντο εἰς τήρησιν εἰς τὴν αὔριον, ἦν γὰρ ἑσπέρα ἤδη."
+  },
+  {
+   "v": 4,
+   "en": "But many of those who heard the word believed, and the number of the men came to be about five thousand.",
+   "gr": "πολλοὶ δὲ τῶν ἀκουσάντων τὸν λόγον ἐπίστευσαν, καὶ ἐγενήθη ⸀ὁ ἀριθμὸς τῶν ἀνδρῶν ⸀ὡς χιλιάδες πέντε."
+  },
+  {
+   "v": 5,
+   "en": "In the morning, their rulers, elders, and scribes were gathered together in Jerusalem.",
+   "gr": "Ἐγένετο δὲ ἐπὶ τὴν αὔριον συναχθῆναι αὐτῶν τοὺς ἄρχοντας καὶ ⸀τοὺς πρεσβυτέρους καὶ ⸁τοὺς γραμματεῖς ⸀ἐν Ἰερουσαλήμ"
+  },
+  {
+   "v": 6,
+   "en": "Annas the high priest was there, with Caiaphas, John, Alexander, and as many as were relatives of the high priest.",
+   "gr": "(καὶ ⸂Ἅννας ὁ ἀρχιερεὺς καὶ Καϊάφας καὶ Ἰωάννης καὶ Ἀλέξανδρος⸃ καὶ ὅσοι ἦσαν ἐκ γένους ἀρχιερατικοῦ),"
+  },
+  {
+   "v": 7,
+   "en": "When they had stood Peter and John in the middle of them, they inquired, “By what power, or in what name, have you done this?”",
+   "gr": "καὶ στήσαντες αὐτοὺς ἐν ⸀τῷ μέσῳ ἐπυνθάνοντο· Ἐν ποίᾳ δυνάμει ἢ ἐν ποίῳ ὀνόματι ἐποιήσατε τοῦτο ὑμεῖς;"
+  },
+  {
+   "v": 8,
+   "en": "Then Peter, filled with the Holy Spirit, said to them, “You rulers of the people, and elders of Israel,",
+   "gr": "τότε Πέτρος πλησθεὶς πνεύματος ἁγίου εἶπεν πρὸς αὐτούς· Ἄρχοντες τοῦ λαοῦ καὶ ⸀πρεσβύτεροι,"
+  },
+  {
+   "v": 9,
+   "en": "if we are examined today concerning a good deed done to a crippled man, by what means this man has been healed,",
+   "gr": "εἰ ἡμεῖς σήμερον ἀνακρινόμεθα ἐπὶ εὐεργεσίᾳ ἀνθρώπου ἀσθενοῦς, ἐν τίνι οὗτος σέσωσται,"
+  },
+  {
+   "v": 10,
+   "en": "may it be known to you all, and to all the people of Israel, that in the name of Jesus Christ of Nazareth, whom you crucified, whom God raised from the dead, this man stands here before you whole in him.",
+   "gr": "γνωστὸν ἔστω πᾶσιν ὑμῖν καὶ παντὶ τῷ λαῷ Ἰσραὴλ ὅτι ἐν τῷ ὀνόματι Ἰησοῦ Χριστοῦ τοῦ Ναζωραίου, ὃν ὑμεῖς ἐσταυρώσατε, ὃν ὁ θεὸς ἤγειρεν ἐκ νεκρῶν, ἐν τούτῳ οὗτος παρέστηκεν ἐνώπιον ὑμῶν ὑγιής."
+  },
+  {
+   "v": 11,
+   "en": "He is ‘the stone which was regarded as worthless by you, the builders, which has become the head of the corner.’",
+   "gr": "οὗτός ἐστιν ὁ λίθος ὁ ἐξουθενηθεὶς ὑφʼ ὑμῶν τῶν ⸀οἰκοδόμων, ὁ γενόμενος εἰς κεφαλὴν γωνίας."
+  },
+  {
+   "v": 12,
+   "en": "There is salvation in no one else, for there is no other name under heaven that is given among men, by which we must be saved!”",
+   "gr": "καὶ οὐκ ἔστιν ἐν ἄλλῳ οὐδενὶ ἡ σωτηρία, ⸀οὐδὲ γὰρ ὄνομά ἐστιν ἕτερον ⸂ὑπὸ τὸν οὐρανὸν⸃ τὸ δεδομένον ἐν ἀνθρώποις ἐν ᾧ δεῖ σωθῆναι ἡμᾶς."
+  },
+  {
+   "v": 13,
+   "en": "Now when they saw the boldness of Peter and John, and had perceived that they were unlearned and ignorant men, they marveled. They recognized that they had been with Jesus.",
+   "gr": "Θεωροῦντες δὲ τὴν τοῦ Πέτρου παρρησίαν καὶ Ἰωάννου καὶ καταλαβόμενοι ὅτι ἄνθρωποι ἀγράμματοί εἰσιν καὶ ἰδιῶται, ἐθαύμαζον, ἐπεγίνωσκόν τε αὐτοὺς ὅτι σὺν τῷ Ἰησοῦ ἦσαν,"
+  },
+  {
+   "v": 14,
+   "en": "Seeing the man who was healed standing with them, they could say nothing against it.",
+   "gr": "τόν ⸀τε ἄνθρωπον βλέποντες σὺν αὐτοῖς ἑστῶτα τὸν τεθεραπευμένον οὐδὲν εἶχον ἀντειπεῖν."
+  },
+  {
+   "v": 15,
+   "en": "But when they had commanded them to go aside out of the council, they conferred among themselves,",
+   "gr": "κελεύσαντες δὲ αὐτοὺς ἔξω τοῦ συνεδρίου ἀπελθεῖν συνέβαλλον πρὸς ἀλλήλους"
+  },
+  {
+   "v": 16,
+   "en": "saying, “What shall we do to these men? Because indeed a notable miracle has been done through them, as can be plainly seen by all who dwell in Jerusalem, and we can’t deny it.",
+   "gr": "λέγοντες· Τί ⸀ποιήσωμεν τοῖς ἀνθρώποις τούτοις; ὅτι μὲν γὰρ γνωστὸν σημεῖον γέγονεν διʼ αὐτῶν πᾶσιν τοῖς κατοικοῦσιν Ἰερουσαλὴμ φανερόν, καὶ οὐ δυνάμεθα ⸀ἀρνεῖσθαι·"
+  },
+  {
+   "v": 17,
+   "en": "But so that this spreads no further among the people, let’s threaten them, that from now on they don’t speak to anyone in this name.”",
+   "gr": "ἀλλʼ ἵνα μὴ ἐπὶ πλεῖον διανεμηθῇ εἰς τὸν λαόν, ⸀ἀπειλησώμεθα αὐτοῖς μηκέτι λαλεῖν ἐπὶ τῷ ὀνόματι τούτῳ μηδενὶ ἀνθρώπων."
+  },
+  {
+   "v": 18,
+   "en": "They called them, and commanded them not to speak at all nor teach in the name of Jesus.",
+   "gr": "καὶ καλέσαντες αὐτοὺς παρήγγειλαν ⸀τὸ καθόλου μὴ φθέγγεσθαι μηδὲ διδάσκειν ἐπὶ τῷ ὀνόματι τοῦ Ἰησοῦ."
+  },
+  {
+   "v": 19,
+   "en": "But Peter and John answered them, “Whether it is right in the sight of God to listen to you rather than to God, judge for yourselves,",
+   "gr": "ὁ δὲ Πέτρος καὶ Ἰωάννης ἀποκριθέντες ⸂εἶπον πρὸς αὐτούς⸃· Εἰ δίκαιόν ἐστιν ἐνώπιον τοῦ θεοῦ ὑμῶν ἀκούειν μᾶλλον ἢ τοῦ θεοῦ, κρίνατε,"
+  },
+  {
+   "v": 20,
+   "en": "for we can’t help telling the things which we saw and heard.”",
+   "gr": "οὐ δυνάμεθα γὰρ ἡμεῖς ἃ εἴδαμεν καὶ ἠκούσαμεν μὴ λαλεῖν."
+  },
+  {
+   "v": 21,
+   "en": "When they had further threatened them, they let them go, finding no way to punish them, because of the people; for everyone glorified God for that which was done.",
+   "gr": "οἱ δὲ προσαπειλησάμενοι ἀπέλυσαν αὐτούς, μηδὲν εὑρίσκοντες τὸ πῶς ⸀κολάσωνται αὐτούς, διὰ τὸν λαόν, ὅτι πάντες ἐδόξαζον τὸν θεὸν ἐπὶ τῷ γεγονότι·"
+  },
+  {
+   "v": 22,
+   "en": "For the man on whom this miracle of healing was performed was more than forty years old.",
+   "gr": "ἐτῶν γὰρ ἦν πλειόνων τεσσεράκοντα ὁ ἄνθρωπος ἐφʼ ὃν ⸀γεγόνει τὸ σημεῖον τοῦτο τῆς ἰάσεως."
+  },
+  {
+   "v": 23,
+   "en": "Being let go, they came to their own company and reported all that the chief priests and the elders had said to them.",
+   "gr": "Ἀπολυθέντες δὲ ἦλθον πρὸς τοὺς ἰδίους καὶ ἀπήγγειλαν ὅσα πρὸς αὐτοὺς οἱ ἀρχιερεῖς καὶ οἱ πρεσβύτεροι εἶπαν."
+  },
+  {
+   "v": 24,
+   "en": "When they heard it, they lifted up their voice to God with one accord, and said, “O Lord, you are God, who made the heaven, the earth, the sea, and all that is in them;",
+   "gr": "οἱ δὲ ἀκούσαντες ὁμοθυμαδὸν ἦραν φωνὴν πρὸς τὸν θεὸν καὶ εἶπαν· Δέσποτα, ⸀σὺ ὁ ποιήσας τὸν οὐρανὸν καὶ τὴν γῆν καὶ τὴν θάλασσαν καὶ πάντα τὰ ἐν αὐτοῖς,"
+  },
+  {
+   "v": 25,
+   "en": "who by the mouth of your servant, David, said, ‘Why do the nations rage, and the peoples plot a vain thing?",
+   "gr": "ὁ ⸂τοῦ πατρὸς ἡμῶν⸃ διὰ ⸂πνεύματος ἁγίου⸃ στόματος Δαυὶδ παιδός σου εἰπών· Ἱνατί ἐφρύαξαν ἔθνη καὶ λαοὶ ἐμελέτησαν κενά;"
+  },
+  {
+   "v": 26,
+   "en": "The kings of the earth take a stand, and the rulers take council together, against the Lord, and against his Christ.’",
+   "gr": "παρέστησαν οἱ βασιλεῖς τῆς γῆς καὶ οἱ ἄρχοντες συνήχθησαν ἐπὶ τὸ αὐτὸ κατὰ τοῦ κυρίου καὶ κατὰ τοῦ χριστοῦ αὐτοῦ."
+  },
+  {
+   "v": 27,
+   "en": "“For truly, both Herod and Pontius Pilate, with the Gentiles and the people of Israel, were gathered together against your holy servant, Jesus, whom you anointed,",
+   "gr": "συνήχθησαν γὰρ ἐπʼ ἀληθείας ⸂ἐν τῇ πόλει ταύτῃ⸃ ἐπὶ τὸν ἅγιον παῖδά σου Ἰησοῦν, ὃν ἔχρισας, Ἡρῴδης τε καὶ Πόντιος Πιλᾶτος σὺν ἔθνεσιν καὶ λαοῖς Ἰσραήλ,"
+  },
+  {
+   "v": 28,
+   "en": "to do whatever your hand and your council foreordained to happen.",
+   "gr": "ποιῆσαι ὅσα ἡ χείρ σου καὶ ἡ ⸀βουλὴ προώρισεν γενέσθαι."
+  },
+  {
+   "v": 29,
+   "en": "Now, Lord, look at their threats, and grant to your servants to speak your word with all boldness,",
+   "gr": "καὶ τὰ νῦν, κύριε, ἔπιδε ἐπὶ τὰς ἀπειλὰς αὐτῶν καὶ δὸς τοῖς δούλοις σου μετὰ παρρησίας πάσης λαλεῖν τὸν λόγον σου,"
+  },
+  {
+   "v": 30,
+   "en": "while you stretch out your hand to heal; and that signs and wonders may be done through the name of your holy Servant Jesus.”",
+   "gr": "ἐν τῷ τὴν χεῖρά ⸀σου ἐκτείνειν σε εἰς ἴασιν καὶ σημεῖα καὶ τέρατα γίνεσθαι διὰ τοῦ ὀνόματος τοῦ ἁγίου παιδός σου Ἰησοῦ."
+  },
+  {
+   "v": 31,
+   "en": "When they had prayed, the place was shaken where they were gathered together. They were all filled with the Holy Spirit, and they spoke the word of God with boldness.",
+   "gr": "καὶ δεηθέντων αὐτῶν ἐσαλεύθη ὁ τόπος ἐν ᾧ ἦσαν συνηγμένοι, καὶ ἐπλήσθησαν ἅπαντες ⸂τοῦ ἁγίου πνεύματος⸃, καὶ ἐλάλουν τὸν λόγον τοῦ θεοῦ μετὰ παρρησίας."
+  },
+  {
+   "v": 32,
+   "en": "The multitude of those who believed were of one heart and soul. Not one of them claimed that anything of the things which he possessed was his own, but they had all things in common.",
+   "gr": "Τοῦ δὲ πλήθους τῶν πιστευσάντων ἦν ⸀καρδία καὶ ⸀ψυχὴ μία, καὶ οὐδὲ εἷς τι τῶν ὑπαρχόντων ⸀αὐτῷ ἔλεγεν ἴδιον εἶναι, ἀλλʼ ἦν αὐτοῖς ⸀πάντα κοινά."
+  },
+  {
+   "v": 33,
+   "en": "With great power, the apostles gave their testimony of the resurrection of the Lord Jesus. Great grace was on them all.",
+   "gr": "καὶ ⸂δυνάμει μεγάλῃ⸃ ἀπεδίδουν τὸ μαρτύριον οἱ ἀπόστολοι ⸂τῆς ἀναστάσεως τοῦ κυρίου Ἰησοῦ⸃, χάρις τε μεγάλη ἦν ἐπὶ πάντας αὐτούς."
+  },
+  {
+   "v": 34,
+   "en": "For neither was there among them any who lacked, for as many as were owners of lands or houses sold them, and brought the proceeds of the things that were sold,",
+   "gr": "οὐδὲ γὰρ ἐνδεής τις ⸀ἦν ἐν αὐτοῖς· ὅσοι γὰρ κτήτορες χωρίων ἢ οἰκιῶν ὑπῆρχον, πωλοῦντες ἔφερον τὰς τιμὰς τῶν πιπρασκομένων"
+  },
+  {
+   "v": 35,
+   "en": "and laid them at the apostles’ feet, and distribution was made to each, according as anyone had need.",
+   "gr": "καὶ ἐτίθουν παρὰ τοὺς πόδας τῶν ἀποστόλων· διεδίδετο δὲ ἑκάστῳ καθότι ἄν τις χρείαν εἶχεν."
+  },
+  {
+   "v": 36,
+   "en": "Joses, who by the apostles was also called Barnabas (which is, being interpreted, Son of Encouragement), a Levite, a man of Cyprus by race,",
+   "gr": "⸀Ἰωσὴφ δὲ ὁ ἐπικληθεὶς Βαρναβᾶς ἀπὸ τῶν ἀποστόλων, ὅ ἐστιν μεθερμηνευόμενον υἱὸς παρακλήσεως, Λευίτης, Κύπριος τῷ γένει,"
+  },
+  {
+   "v": 37,
+   "en": "having a field, sold it and brought the money and laid it at the apostles’ feet.",
+   "gr": "ὑπάρχοντος αὐτῷ ἀγροῦ πωλήσας ἤνεγκεν τὸ χρῆμα καὶ ἔθηκεν ⸀παρὰ τοὺς πόδας τῶν ἀποστόλων."
+  }
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,305 @@
+{
+ "id": "bible--john--8",
+ "work": "bible",
+ "n": 43,
+ "slug": "john",
+ "c": 8,
+ "verses": [
+  {
+   "v": 1,
+   "en": "but Jesus went to the Mount of Olives.",
+   "gr": "Ἰησοῦς δὲ ἐπορεύθη εἰς τὸ ὄρος τῶν Ἐλαιῶν."
+  },
+  {
+   "v": 2,
+   "en": "Now very early in the morning, he came again into the temple, and all the people came to him. He sat down and taught them.",
+   "gr": "Ὄρθρου δὲ πάλιν παρεγένετο εἰς τὸ ἱερόν, καὶ πᾶς ὁ λαὸς ἤρχετο· καὶ καθίσας ἐδίδασκεν αὐτούς."
+  },
+  {
+   "v": 3,
+   "en": "The scribes and the Pharisees brought a woman taken in adultery. Having set her in the middle,",
+   "gr": "ἄγουσιν δὲ οἱ γραμματεῖς καὶ οἱ Φαρισαῖοι πρὸς αὐτὸν γυναῖκα ἐν μοιχείᾳ καταλήφθεισαν· καὶ στήσαντες αὐτὴν ἐν μέσῳ,"
+  },
+  {
+   "v": 4,
+   "en": "they told him, “Teacher, we found this woman in adultery, in the very act.",
+   "gr": "λέγουσιν αὐτῷ, πειράζοντες· Διδάσκαλε, αὕτη ἡ γυνὴ κατελήφθη ἐπʼ αὐτοφόρῳ μοιχευομένη."
+  },
+  {
+   "v": 5,
+   "en": "Now in our law, Moses commanded us to stone such women. What then do you say about her?”",
+   "gr": "ἐν δὲ τῷ νόμῳ Μωσῆς ἡμῖν ἐνετείλατο τὰς τοιαύτας λιθοβολεῖσθαι· σὺ οὖν τί λέγεις;"
+  },
+  {
+   "v": 6,
+   "en": "They said this testing him, that they might have something to accuse him of. But Jesus stooped down and wrote on the ground with his finger.",
+   "gr": "τοῦτο δὲ ἔλεγον πειράζοντες αὐτόν, ἵνα ἔχωσιν κατηγορεῖν αὐτοῦ. ὁ δὲ Ἰησοῦς κάτω κύψας, τῷ δακτύλῳ ἔγραφεν εἰς τὴν γῆν, μὴ προσποιούμενος."
+  },
+  {
+   "v": 7,
+   "en": "But when they continued asking him, he looked up and said to them, “He who is without sin among you, let him throw the first stone at her.”",
+   "gr": "ὡς δὲ ἐπέμενον ἐρωτῶντες αὐτόν, ἀνακύψας εἶπεν πρὸς αὐτούς· Ὁ ἀναμάρτητος ὑμῶν, πρῶτον ἐπʼ αὐτὴν τὸν λίθον βαλέτω."
+  },
+  {
+   "v": 8,
+   "en": "Again he stooped down and wrote on the ground with his finger.",
+   "gr": "καὶ πάλιν κάτω κύψας ἔγραφεν εἰς τὴν γῆν."
+  },
+  {
+   "v": 9,
+   "en": "They, when they heard it, being convicted by their conscience, went out one by one, beginning from the oldest, even to the last. Jesus was left alone with the woman where she was, in the middle.",
+   "gr": "οἱ δέ, ἀκούσαντες, καὶ ὑπὸ τῆς συνειδήσεως ἐλεγχόμενοι, ἐξήρχοντο εἷς καθʼ εἷς, ἀρξάμενοι ἀπὸ τῶν πρεσβυτέρων· καὶ κατελείφθη μόνος ὁ Ἰησοῦς, καὶ ἡ γυνὴ ἐν μέσῳ οὖσα."
+  },
+  {
+   "v": 10,
+   "en": "Jesus, standing up, saw her and said, “Woman, where are your accusers? Did no one condemn you?”",
+   "gr": "ἀνακύψας δὲ ὁ Ἰησοῦς, καὶ μηδένα θεασάμενος πλὴν τὴς γυναικός, εἶπεν αὐτῇ· Ποῦ εἰσιν ἐκεῖνοι οἱ κατήγοροί σου; Οὐδείς σε κατέκρινεν;"
+  },
+  {
+   "v": 11,
+   "en": "She said, “No one, Lord.” Jesus said, “Neither do I condemn you. Go your way. From now on, sin no more.”",
+   "gr": "ἡ δὲ εἶπεν· Οὐδείς, κύριε. εἶπεν δὲ ὁ Ἰησοῦς· Οὐδὲ ἐγώ σε κρίνω· πορεύου καὶ μηκέτι ἁμάρτανε.⟧"
+  },
+  {
+   "v": 12,
+   "en": "Again, therefore, Jesus spoke to them, saying, “I am the light of the world. He who follows me will not walk in the darkness, but will have the light of life.”",
+   "gr": "Πάλιν οὖν αὐτοῖς ⸂ἐλάλησεν ὁ Ἰησοῦς⸃ λέγων· Ἐγώ εἰμι τὸ φῶς τοῦ κόσμου· ὁ ἀκολουθῶν ⸀ἐμοὶ οὐ μὴ περιπατήσῃ ἐν τῇ σκοτίᾳ, ἀλλʼ ἕξει τὸ φῶς τῆς ζωῆς."
+  },
+  {
+   "v": 13,
+   "en": "The Pharisees therefore said to him, “You testify about yourself. Your testimony is not valid.”",
+   "gr": "εἶπον οὖν αὐτῷ οἱ Φαρισαῖοι· Σὺ περὶ σεαυτοῦ μαρτυρεῖς· ἡ μαρτυρία σου οὐκ ἔστιν ἀληθής."
+  },
+  {
+   "v": 14,
+   "en": "Jesus answered them, “Even if I testify about myself, my testimony is true, for I know where I came from, and where I am going; but you don’t know where I came from, or where I am going.",
+   "gr": "ἀπεκρίθη Ἰησοῦς καὶ εἶπεν αὐτοῖς· Κἂν ἐγὼ μαρτυρῶ περὶ ἐμαυτοῦ, ἀληθής ἐστιν ἡ μαρτυρία μου, ὅτι οἶδα πόθεν ἦλθον καὶ ποῦ ὑπάγω· ὑμεῖς δὲ οὐκ οἴδατε πόθεν ἔρχομαι ⸀ἢ ποῦ ὑπάγω."
+  },
+  {
+   "v": 15,
+   "en": "You judge according to the flesh. I judge no one.",
+   "gr": "ὑμεῖς κατὰ τὴν σάρκα κρίνετε, ἐγὼ οὐ κρίνω οὐδένα."
+  },
+  {
+   "v": 16,
+   "en": "Even if I do judge, my judgment is true, for I am not alone, but I am with the Father who sent me.",
+   "gr": "καὶ ἐὰν κρίνω δὲ ἐγώ, ἡ κρίσις ἡ ἐμὴ ⸀ἀληθινή ἐστιν, ὅτι μόνος οὐκ εἰμί, ἀλλʼ ἐγὼ καὶ ὁ πέμψας με πατήρ."
+  },
+  {
+   "v": 17,
+   "en": "It’s also written in your law that the testimony of two people is valid.",
+   "gr": "καὶ ἐν τῷ νόμῳ δὲ τῷ ὑμετέρῳ γέγραπται ὅτι δύο ἀνθρώπων ἡ μαρτυρία ἀληθής ἐστιν."
+  },
+  {
+   "v": 18,
+   "en": "I am one who testifies about myself, and the Father who sent me testifies about me.”",
+   "gr": "ἐγώ εἰμι ὁ μαρτυρῶν περὶ ἐμαυτοῦ καὶ μαρτυρεῖ περὶ ἐμοῦ ὁ πέμψας με πατήρ."
+  },
+  {
+   "v": 19,
+   "en": "They said therefore to him, “Where is your Father?” Jesus answered, “You know neither me nor my Father. If you knew me, you would know my Father also.”",
+   "gr": "ἔλεγον οὖν αὐτῷ· Ποῦ ἐστιν ὁ πατήρ σου; ἀπεκρίθη Ἰησοῦς· Οὔτε ἐμὲ οἴδατε οὔτε τὸν πατέρα μου· εἰ ἐμὲ ᾔδειτε, καὶ τὸν πατέρα μου ⸂ἂν ᾔδειτε⸃."
+  },
+  {
+   "v": 20,
+   "en": "Jesus spoke these words in the treasury, as he taught in the temple. Yet no one arrested him, because his hour had not yet come.",
+   "gr": "ταῦτα τὰ ῥήματα ⸀ἐλάλησεν ἐν τῷ γαζοφυλακίῳ διδάσκων ἐν τῷ ἱερῷ· καὶ οὐδεὶς ἐπίασεν αὐτόν, ὅτι οὔπω ἐληλύθει ἡ ὥρα αὐτοῦ."
+  },
+  {
+   "v": 21,
+   "en": "Jesus said therefore again to them, “I am going away, and you will seek me, and you will die in your sins. Where I go, you can’t come.”",
+   "gr": "Εἶπεν οὖν πάλιν ⸀αὐτοῖς· Ἐγὼ ὑπάγω καὶ ζητήσετέ με, καὶ ἐν τῇ ἁμαρτίᾳ ὑμῶν ἀποθανεῖσθε· ὅπου ἐγὼ ὑπάγω ὑμεῖς οὐ δύνασθε ἐλθεῖν."
+  },
+  {
+   "v": 22,
+   "en": "The Jews therefore said, “Will he kill himself, because he says, ‘Where I am going, you can’t come’?”",
+   "gr": "ἔλεγον οὖν οἱ Ἰουδαῖοι· Μήτι ἀποκτενεῖ ἑαυτὸν ὅτι λέγει· Ὅπου ἐγὼ ὑπάγω ὑμεῖς οὐ δύνασθε ἐλθεῖν;"
+  },
+  {
+   "v": 23,
+   "en": "He said to them, “You are from beneath. I am from above. You are of this world. I am not of this world.",
+   "gr": "καὶ ⸀ἔλεγεν αὐτοῖς· Ὑμεῖς ἐκ τῶν κάτω ἐστέ, ἐγὼ ἐκ τῶν ἄνω εἰμί· ὑμεῖς ἐκ ⸂τούτου τοῦ κόσμου⸃ ἐστέ, ἐγὼ οὐκ εἰμὶ ἐκ τοῦ κόσμου τούτου."
+  },
+  {
+   "v": 24,
+   "en": "I said therefore to you that you will die in your sins; for unless you believe that I am he, you will die in your sins.”",
+   "gr": "εἶπον οὖν ὑμῖν ὅτι ἀποθανεῖσθε ἐν ταῖς ἁμαρτίαις ὑμῶν· ἐὰν γὰρ μὴ πιστεύσητε ὅτι ἐγώ εἰμι, ἀποθανεῖσθε ἐν ταῖς ἁμαρτίαις ὑμῶν."
+  },
+  {
+   "v": 25,
+   "en": "They said therefore to him, “Who are you?” Jesus said to them, “Just what I have been saying to you from the beginning.",
+   "gr": "ἔλεγον οὖν αὐτῷ· Σὺ τίς εἶ; ⸀εἶπεν αὐτοῖς ὁ Ἰησοῦς· Τὴν ἀρχὴν ⸂ὅ τι⸃ καὶ λαλῶ ὑμῖν;"
+  },
+  {
+   "v": 26,
+   "en": "I have many things to speak and to judge concerning you. However he who sent me is true; and the things which I heard from him, these I say to the world.”",
+   "gr": "πολλὰ ἔχω περὶ ὑμῶν λαλεῖν καὶ κρίνειν· ἀλλʼ ὁ πέμψας με ἀληθής ἐστιν, κἀγὼ ἃ ἤκουσα παρʼ αὐτοῦ ταῦτα ⸀λαλῶ εἰς τὸν κόσμον."
+  },
+  {
+   "v": 27,
+   "en": "They didn’t understand that he spoke to them about the Father.",
+   "gr": "οὐκ ἔγνωσαν ὅτι τὸν πατέρα αὐτοῖς ἔλεγεν."
+  },
+  {
+   "v": 28,
+   "en": "Jesus therefore said to them, “When you have lifted up the Son of Man, then you will know that I am he, and I do nothing of myself, but as my Father taught me, I say these things.",
+   "gr": "εἶπεν ⸀οὖν ὁ Ἰησοῦς· Ὅταν ὑψώσητε τὸν υἱὸν τοῦ ἀνθρώπου, τότε γνώσεσθε ὅτι ἐγώ εἰμι, καὶ ἀπʼ ἐμαυτοῦ ποιῶ οὐδέν, ἀλλὰ καθὼς ἐδίδαξέν με ὁ ⸀πατὴρ ταῦτα λαλῶ."
+  },
+  {
+   "v": 29,
+   "en": "He who sent me is with me. The Father hasn’t left me alone, for I always do the things that are pleasing to him.”",
+   "gr": "καὶ ὁ πέμψας με μετʼ ἐμοῦ ἐστιν· οὐκ ἀφῆκέν με ⸀μόνον, ὅτι ἐγὼ τὰ ἀρεστὰ αὐτῷ ποιῶ πάντοτε."
+  },
+  {
+   "v": 30,
+   "en": "As he spoke these things, many believed in him.",
+   "gr": "ταῦτα αὐτοῦ λαλοῦντος πολλοὶ ἐπίστευσαν εἰς αὐτόν."
+  },
+  {
+   "v": 31,
+   "en": "Jesus therefore said to those Jews who had believed him, “If you remain in my word, then you are truly my disciples.",
+   "gr": "Ἔλεγεν οὖν ὁ Ἰησοῦς πρὸς τοὺς πεπιστευκότας αὐτῷ Ἰουδαίους· Ἐὰν ὑμεῖς μείνητε ἐν τῷ λόγῳ τῷ ἐμῷ, ἀληθῶς μαθηταί μού ἐστε,"
+  },
+  {
+   "v": 32,
+   "en": "You will know the truth, and the truth will make you free.”",
+   "gr": "καὶ γνώσεσθε τὴν ἀλήθειαν, καὶ ἡ ἀλήθεια ἐλευθερώσει ὑμᾶς."
+  },
+  {
+   "v": 33,
+   "en": "They answered him, “We are Abraham’s offspring, and have never been in bondage to anyone. How do you say, ‘You will be made free’?”",
+   "gr": "ἀπεκρίθησαν ⸂πρὸς αὐτόν⸃· Σπέρμα Ἀβραάμ ἐσμεν καὶ οὐδενὶ δεδουλεύκαμεν πώποτε· πῶς σὺ λέγεις ὅτι Ἐλεύθεροι γενήσεσθε;"
+  },
+  {
+   "v": 34,
+   "en": "Jesus answered them, “Most certainly I tell you, everyone who commits sin is the bondservant of sin.",
+   "gr": "Ἀπεκρίθη αὐτοῖς ὁ Ἰησοῦς· Ἀμὴν ἀμὴν λέγω ὑμῖν ὅτι πᾶς ὁ ποιῶν τὴν ἁμαρτίαν δοῦλός ἐστιν τῆς ἁμαρτίας·"
+  },
+  {
+   "v": 35,
+   "en": "A bondservant doesn’t live in the house forever. A son remains forever.",
+   "gr": "ὁ δὲ δοῦλος οὐ μένει ἐν τῇ οἰκίᾳ εἰς τὸν αἰῶνα· ⸀ὁ υἱὸς μένει εἰς τὸν αἰῶνα."
+  },
+  {
+   "v": 36,
+   "en": "If therefore the Son makes you free, you will be free indeed.",
+   "gr": "ἐὰν οὖν ὁ υἱὸς ὑμᾶς ἐλευθερώσῃ, ὄντως ἐλεύθεροι ἔσεσθε."
+  },
+  {
+   "v": 37,
+   "en": "I know that you are Abraham’s offspring, yet you seek to kill me, because my word finds no place in you.",
+   "gr": "οἶδα ὅτι σπέρμα Ἀβραάμ ἐστε· ἀλλὰ ζητεῖτέ με ἀποκτεῖναι, ὅτι ὁ λόγος ὁ ἐμὸς οὐ χωρεῖ ἐν ὑμῖν."
+  },
+  {
+   "v": 38,
+   "en": "I say the things which I have seen with my Father; and you also do the things which you have seen with your father.”",
+   "gr": "⸂ἃ ἐγὼ⸃ ἑώρακα παρὰ τῷ ⸀πατρὶ λαλῶ· καὶ ὑμεῖς οὖν ⸂ἃ ἠκούσατε⸃ παρὰ ⸂τοῦ πατρὸς⸃ ποιεῖτε."
+  },
+  {
+   "v": 39,
+   "en": "They answered him, “Our father is Abraham.” Jesus said to them, “If you were Abraham’s children, you would do the works of Abraham.",
+   "gr": "Ἀπεκρίθησαν καὶ εἶπαν αὐτῷ· Ὁ πατὴρ ἡμῶν Ἀβραάμ ἐστιν. λέγει αὐτοῖς ὁ Ἰησοῦς· Εἰ τέκνα τοῦ Ἀβραάμ ⸀ἐστε, τὰ ἔργα τοῦ Ἀβραὰμ ⸀ἐποιεῖτε·"
+  },
+  {
+   "v": 40,
+   "en": "But now you seek to kill me, a man who has told you the truth which I heard from God. Abraham didn’t do this.",
+   "gr": "νῦν δὲ ζητεῖτέ με ἀποκτεῖναι, ἄνθρωπον ὃς τὴν ἀλήθειαν ὑμῖν λελάληκα ἣν ἤκουσα παρὰ τοῦ θεοῦ· τοῦτο Ἀβραὰμ οὐκ ἐποίησεν."
+  },
+  {
+   "v": 41,
+   "en": "You do the works of your father.” They said to him, “We were not born of sexual immorality. We have one Father, God.”",
+   "gr": "ὑμεῖς ποιεῖτε τὰ ἔργα τοῦ πατρὸς ὑμῶν. ⸀εἶπαν αὐτῷ· Ἡμεῖς ἐκ πορνείας ⸂οὐ γεγεννήμεθα⸃· ἕνα πατέρα ἔχομεν τὸν θεόν."
+  },
+  {
+   "v": 42,
+   "en": "Therefore Jesus said to them, “If God were your father, you would love me, for I came out and have come from God. For I haven’t come of myself, but he sent me.",
+   "gr": "⸀εἶπεν αὐτοῖς ὁ Ἰησοῦς· Εἰ ὁ θεὸς πατὴρ ὑμῶν ἦν ἠγαπᾶτε ἂν ἐμέ, ἐγὼ γὰρ ἐκ τοῦ θεοῦ ἐξῆλθον καὶ ἥκω· οὐδὲ γὰρ ἀπʼ ἐμαυτοῦ ἐλήλυθα, ἀλλʼ ἐκεῖνός με ἀπέστειλεν."
+  },
+  {
+   "v": 43,
+   "en": "Why don’t you understand my speech? Because you can’t hear my word.",
+   "gr": "διὰ τί τὴν λαλιὰν τὴν ἐμὴν οὐ γινώσκετε; ὅτι οὐ δύνασθε ἀκούειν τὸν λόγον τὸν ἐμόν."
+  },
+  {
+   "v": 44,
+   "en": "You are of your father, the devil, and you want to do the desires of your father. He was a murderer from the beginning, and doesn’t stand in the truth, because there is no truth in him. When he speaks a lie, he speaks on his own; for he is a liar, and the father of lies.",
+   "gr": "ὑμεῖς ἐκ τοῦ πατρὸς τοῦ διαβόλου ἐστὲ καὶ τὰς ἐπιθυμίας τοῦ πατρὸς ὑμῶν θέλετε ποιεῖν. ἐκεῖνος ἀνθρωποκτόνος ἦν ἀπʼ ἀρχῆς, καὶ ἐν τῇ ἀληθείᾳ ⸂οὐκ ἔστηκεν⸃, ὅτι οὐκ ἔστιν ἀλήθεια ἐν αὐτῷ. ὅταν λαλῇ τὸ ψεῦδος, ἐκ τῶν ἰδίων λαλεῖ, ὅτι ψεύστης ἐστὶν καὶ ὁ πατὴρ αὐτοῦ."
+  },
+  {
+   "v": 45,
+   "en": "But because I tell the truth, you don’t believe me.",
+   "gr": "ἐγὼ δὲ ὅτι τὴν ἀλήθειαν λέγω, οὐ πιστεύετέ μοι."
+  },
+  {
+   "v": 46,
+   "en": "Which of you convicts me of sin? If I tell the truth, why do you not believe me?",
+   "gr": "τίς ἐξ ὑμῶν ἐλέγχει με περὶ ἁμαρτίας; ⸀εἰ ἀλήθειαν λέγω, διὰ τί ὑμεῖς οὐ πιστεύετέ μοι;"
+  },
+  {
+   "v": 47,
+   "en": "He who is of God hears the words of God. For this cause you don’t hear, because you are not of God.”",
+   "gr": "ὁ ὢν ἐκ τοῦ θεοῦ τὰ ῥήματα τοῦ θεοῦ ἀκούει· διὰ τοῦτο ὑμεῖς οὐκ ἀκούετε ὅτι ἐκ τοῦ θεοῦ οὐκ ἐστέ."
+  },
+  {
+   "v": 48,
+   "en": "Then the Jews answered him, “Don’t we say well that you are a Samaritan, and have a demon?”",
+   "gr": "⸀Ἀπεκρίθησαν οἱ Ἰουδαῖοι καὶ εἶπαν αὐτῷ· Οὐ καλῶς λέγομεν ἡμεῖς ὅτι Σαμαρίτης εἶ σὺ καὶ δαιμόνιον ἔχεις;"
+  },
+  {
+   "v": 49,
+   "en": "Jesus answered, “I don’t have a demon, but I honor my Father and you dishonor me.",
+   "gr": "ἀπεκρίθη Ἰησοῦς· Ἐγὼ δαιμόνιον οὐκ ἔχω, ἀλλὰ τιμῶ τὸν πατέρα μου, καὶ ὑμεῖς ἀτιμάζετέ με."
+  },
+  {
+   "v": 50,
+   "en": "But I don’t seek my own glory. There is one who seeks and judges.",
+   "gr": "ἐγὼ δὲ οὐ ζητῶ τὴν δόξαν μου· ἔστιν ὁ ζητῶν καὶ κρίνων."
+  },
+  {
+   "v": 51,
+   "en": "Most certainly, I tell you, if a person keeps my word, he will never see death.”",
+   "gr": "ἀμὴν ἀμὴν λέγω ὑμῖν, ἐάν τις τὸν ⸂ἐμὸν λόγον⸃ τηρήσῃ, θάνατον οὐ μὴ θεωρήσῃ εἰς τὸν αἰῶνα."
+  },
+  {
+   "v": 52,
+   "en": "Then the Jews said to him, “Now we know that you have a demon. Abraham died, as did the prophets; and you say, ‘If a man keeps my word, he will never taste of death.’",
+   "gr": "⸀εἶπον αὐτῷ οἱ Ἰουδαῖοι· Νῦν ἐγνώκαμεν ὅτι δαιμόνιον ἔχεις. Ἀβραὰμ ἀπέθανεν καὶ οἱ προφῆται, καὶ σὺ λέγεις· Ἐάν τις τὸν λόγον μου τηρήσῃ, οὐ μὴ γεύσηται θανάτου εἰς τὸν αἰῶνα·"
+  },
+  {
+   "v": 53,
+   "en": "Are you greater than our father, Abraham, who died? The prophets died. Who do you make yourself out to be?”",
+   "gr": "μὴ σὺ μείζων εἶ τοῦ πατρὸς ἡμῶν Ἀβραάμ, ὅστις ἀπέθανεν; καὶ οἱ προφῆται ἀπέθανον· τίνα ⸀σεαυτὸν ποιεῖς;"
+  },
+  {
+   "v": 54,
+   "en": "Jesus answered, “If I glorify myself, my glory is nothing. It is my Father who glorifies me, of whom you say that he is our God.",
+   "gr": "ἀπεκρίθη Ἰησοῦς· Ἐὰν ἐγὼ ⸀δοξάσω ἐμαυτόν, ἡ δόξα μου οὐδέν ἐστιν· ἔστιν ὁ πατήρ μου ὁ δοξάζων με, ὃν ὑμεῖς λέγετε ὅτι θεὸς ⸀ἡμῶν ἐστιν,"
+  },
+  {
+   "v": 55,
+   "en": "You have not known him, but I know him. If I said, ‘I don’t know him,’ I would be like you, a liar. But I know him and keep his word.",
+   "gr": "καὶ οὐκ ἐγνώκατε αὐτόν, ἐγὼ δὲ οἶδα αὐτόν· κἂν εἴπω ὅτι οὐκ οἶδα αὐτόν, ἔσομαι ὅμοιος ⸀ὑμῖν ψεύστης· ἀλλὰ οἶδα αὐτὸν καὶ τὸν λόγον αὐτοῦ τηρῶ."
+  },
+  {
+   "v": 56,
+   "en": "Your father Abraham rejoiced to see my day. He saw it, and was glad.”",
+   "gr": "Ἀβραὰμ ὁ πατὴρ ὑμῶν ἠγαλλιάσατο ἵνα ἴδῃ τὴν ἡμέραν τὴν ἐμήν, καὶ εἶδεν καὶ ἐχάρη."
+  },
+  {
+   "v": 57,
+   "en": "The Jews therefore said to him, “You are not yet fifty years old! Have you seen Abraham?”",
+   "gr": "εἶπον οὖν οἱ Ἰουδαῖοι πρὸς αὐτόν· Πεντήκοντα ἔτη οὔπω ἔχεις καὶ Ἀβραὰμ ἑώρακας;"
+  },
+  {
+   "v": 58,
+   "en": "Jesus said to them, “Most certainly, I tell you, before Abraham came into existence, I AM.”",
+   "gr": "εἶπεν ⸀αὐτοῖς Ἰησοῦς· Ἀμὴν ἀμὴν λέγω ὑμῖν, πρὶν Ἀβραὰμ γενέσθαι ἐγὼ εἰμί."
+  },
+  {
+   "v": 59,
+   "en": "Therefore they took up stones to throw at him, but Jesus was hidden, and went out of the temple, having gone through the middle of them, and so passed by.",
+   "gr": "ἦραν οὖν λίθους ἵνα βάλωσιν ἐπʼ αὐτόν· Ἰησοῦς δὲ ἐκρύβη καὶ ἐξῆλθεν ἐκ τοῦ ⸀ἱεροῦ."
+  }
+ ],
+ "sourcing": "sourced"
+}

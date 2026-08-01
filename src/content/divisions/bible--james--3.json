@@ -1,0 +1,100 @@
+{
+ "id": "bible--james--3",
+ "work": "bible",
+ "n": 59,
+ "slug": "james",
+ "c": 3,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Let not many of you be teachers, my brothers, knowing that we will receive heavier judgment.",
+   "gr": "Μὴ πολλοὶ διδάσκαλοι γίνεσθε, ἀδελφοί μου, εἰδότες ὅτι μεῖζον κρίμα λημψόμεθα·"
+  },
+  {
+   "v": 2,
+   "en": "For we all stumble in many things. Anyone who doesn’t stumble in word is a perfect person, able to bridle the whole body also.",
+   "gr": "πολλὰ γὰρ πταίομεν ἅπαντες. εἴ τις ἐν λόγῳ οὐ πταίει, οὗτος τέλειος ἀνήρ, δυνατὸς χαλιναγωγῆσαι καὶ ὅλον τὸ σῶμα."
+  },
+  {
+   "v": 3,
+   "en": "Indeed, we put bits into the horses’ mouths so that they may obey us, and we guide their whole body.",
+   "gr": "⸂εἰ δὲ⸃ τῶν ἵππων τοὺς χαλινοὺς εἰς τὰ στόματα βάλλομεν ⸀εἰς τὸ πείθεσθαι αὐτοὺς ἡμῖν, καὶ ὅλον τὸ σῶμα αὐτῶν μετάγομεν."
+  },
+  {
+   "v": 4,
+   "en": "Behold, the ships also, though they are so big and are driven by fierce winds, are yet guided by a very small rudder, wherever the pilot desires.",
+   "gr": "ἰδοὺ καὶ τὰ πλοῖα, τηλικαῦτα ὄντα καὶ ὑπὸ ⸂ἀνέμων σκληρῶν⸃ ἐλαυνόμενα, μετάγεται ὑπὸ ἐλαχίστου πηδαλίου ὅπου ⸂ἡ ὁρμὴ τοῦ εὐθύνοντος βούλεται⸃·"
+  },
+  {
+   "v": 5,
+   "en": "So the tongue is also a little member, and boasts great things. See how a small fire can spread to a large forest!",
+   "gr": "οὕτως καὶ ἡ γλῶσσα μικρὸν μέλος ἐστὶν καὶ ⸂μεγάλα αὐχεῖ⸃. Ἰδοὺ ⸀ἡλίκον πῦρ ἡλίκην ὕλην ἀνάπτει·"
+  },
+  {
+   "v": 6,
+   "en": "And the tongue is a fire. The world of iniquity among our members is the tongue, which defiles the whole body, and sets on fire the course of nature, and is set on fire by Gehenna.",
+   "gr": "καὶ ἡ γλῶσσα πῦρ, ὁ κόσμος τῆς ⸀ἀδικίας ἡ γλῶσσα καθίσταται ἐν τοῖς μέλεσιν ἡμῶν, ἡ σπιλοῦσα ὅλον τὸ σῶμα καὶ φλογίζουσα τὸν τροχὸν τῆς γενέσεως καὶ φλογιζομένη ὑπὸ τῆς γεέννης."
+  },
+  {
+   "v": 7,
+   "en": "For every kind of animal, bird, creeping thing, and sea creature, is tamed, and has been tamed by mankind;",
+   "gr": "πᾶσα γὰρ φύσις θηρίων τε καὶ πετεινῶν ἑρπετῶν τε καὶ ἐναλίων δαμάζεται καὶ δεδάμασται τῇ φύσει τῇ ἀνθρωπίνῃ·"
+  },
+  {
+   "v": 8,
+   "en": "but nobody can tame the tongue. It is a restless evil, full of deadly poison.",
+   "gr": "τὴν δὲ γλῶσσαν οὐδεὶς ⸂δαμάσαι δύναται ἀνθρώπων⸃· ⸀ἀκατάστατον κακόν, μεστὴ ἰοῦ θανατηφόρου."
+  },
+  {
+   "v": 9,
+   "en": "With it we bless our God and Father, and with it we curse men who are made in the image of God.",
+   "gr": "ἐν αὐτῇ εὐλογοῦμεν τὸν ⸀κύριον καὶ πατέρα, καὶ ἐν αὐτῇ καταρώμεθα τοὺς ἀνθρώπους τοὺς καθʼ ὁμοίωσιν θεοῦ γεγονότας·"
+  },
+  {
+   "v": 10,
+   "en": "Out of the same mouth comes blessing and cursing. My brothers, these things ought not to be so.",
+   "gr": "ἐκ τοῦ αὐτοῦ στόματος ἐξέρχεται εὐλογία καὶ κατάρα. οὐ χρή, ἀδελφοί μου, ταῦτα οὕτως γίνεσθαι."
+  },
+  {
+   "v": 11,
+   "en": "Does a spring send out from the same opening fresh and bitter water?",
+   "gr": "μήτι ἡ πηγὴ ἐκ τῆς αὐτῆς ὀπῆς βρύει τὸ γλυκὺ καὶ τὸ πικρόν;"
+  },
+  {
+   "v": 12,
+   "en": "Can a fig tree, my brothers, yield olives, or a vine figs? Thus no spring yields both salt water and fresh water.",
+   "gr": "μὴ δύναται, ἀδελφοί μου, συκῆ ἐλαίας ποιῆσαι ἢ ἄμπελος σῦκα; ⸂οὔτε ἁλυκὸν⸃ γλυκὺ ποιῆσαι ὕδωρ."
+  },
+  {
+   "v": 13,
+   "en": "Who is wise and understanding among you? Let him show by his good conduct that his deeds are done in gentleness of wisdom.",
+   "gr": "Τίς σοφὸς καὶ ἐπιστήμων ἐν ὑμῖν; δειξάτω ἐκ τῆς καλῆς ἀναστροφῆς τὰ ἔργα αὐτοῦ ἐν πραΰτητι σοφίας."
+  },
+  {
+   "v": 14,
+   "en": "But if you have bitter jealousy and selfish ambition in your heart, don’t boast and don’t lie against the truth.",
+   "gr": "εἰ δὲ ζῆλον πικρὸν ἔχετε καὶ ἐριθείαν ἐν τῇ καρδίᾳ ὑμῶν, μὴ κατακαυχᾶσθε καὶ ψεύδεσθε κατὰ τῆς ἀληθείας."
+  },
+  {
+   "v": 15,
+   "en": "This wisdom is not that which comes down from above, but is earthly, sensual, and demonic.",
+   "gr": "οὐκ ἔστιν αὕτη ἡ σοφία ἄνωθεν κατερχομένη, ἀλλὰ ἐπίγειος, ψυχική, δαιμονιώδης·"
+  },
+  {
+   "v": 16,
+   "en": "For where jealousy and selfish ambition are, there is confusion and every evil deed.",
+   "gr": "ὅπου γὰρ ζῆλος καὶ ἐριθεία, ἐκεῖ ἀκαταστασία καὶ πᾶν φαῦλον πρᾶγμα."
+  },
+  {
+   "v": 17,
+   "en": "But the wisdom that is from above is first pure, then peaceful, gentle, reasonable, full of mercy and good fruits, without partiality, and without hypocrisy.",
+   "gr": "ἡ δὲ ἄνωθεν σοφία πρῶτον μὲν ἁγνή ἐστιν, ἔπειτα εἰρηνική, ἐπιεικής, εὐπειθής, μεστὴ ἐλέους καὶ καρπῶν ἀγαθῶν, ⸀ἀδιάκριτος, ἀνυπόκριτος·"
+  },
+  {
+   "v": 18,
+   "en": "Now the fruit of righteousness is sown in peace by those who make peace.",
+   "gr": "καρπὸς ⸀δὲ δικαιοσύνης ἐν εἰρήνῃ σπείρεται τοῖς ποιοῦσιν εἰρήνην."
+  }
+ ],
+ "sourcing": "sourced"
+}

@@ -5,6 +5,8 @@ import { getPublishable } from '../../../lib/content';
 import {
   divisionHeading,
   grouped,
+  langTag,
+  verseRange,
   hasEnglish,
   originalLang,
   type WorkData,
@@ -34,7 +36,9 @@ const count = `${work.divisions.length} ${work.division_label_plural}, ${verses}
    disagree leave a verse on one side only; that is a fact about the editions,
    so the page states it and says which books to expect it in rather than
    letting a reader meet it cold. */
-const oneSided = work.english_gaps + work.original_gaps;
+/* A verse missing from both editions is counted in both totals and is one
+   verse, not two. */
+const oneSided = work.english_gaps + work.original_gaps - work.blank;
 const oneSidedIn = work.divisions
   .filter((d) => d.english_gaps + d.original_gaps > 0)
   .map((d) => divisionHeading(work, d));
@@ -55,7 +59,7 @@ const listed =
     <h1 class="display">{work.title}</h1>
     {
       work.title_original !== undefined && (
-        <p class="rd-work__original" lang={orig} dir={work.direction} style={`font-family: ${scriptFont}`}>
+        <p class="rd-work__original" lang={langTag(work, orig)} dir={work.direction} style={`font-family: ${scriptFont}`}>
           {work.title_original}
         </p>
       )
@@ -87,11 +91,14 @@ const listed =
         /* The pairing is the claim, so where it is incomplete the page says so
            here rather than leaving a reader to find the holes one book at a
            time. Both the count and the books are measured at ingestion. */
+        /* Why differs by canon — two versifications disagreeing in one, a
+           critical edition declining a verse in another — so the summary
+           states the fact and the count, and each verse says its own why
+           where it falls. */
         oneSided > 0 && (
           <span class="rd-contents__gaps">
-            {oneSided} {oneSided === 1 ? 'verse stands' : 'verses stand'} on one side only, where
-            the two editions number a passage differently — in {listed}. Each is marked where it
-            falls.
+            {oneSided} {oneSided === 1 ? 'verse stands' : 'verses stand'} on one side only, in{' '}
+            {listed}. Each says so where it falls.
           </span>
         )
       }
@@ -110,7 +117,7 @@ const listed =
                 {section.name_original !== undefined && (
                   <span
                     class="rd-contents__section-original"
-                    lang={orig}
+                    lang={langTag(work, orig)}
                     dir={work.direction}
                     style={`font-family: ${scriptFont}`}
                   >
@@ -133,18 +140,27 @@ const listed =
                     {d.name_original !== undefined && (
                       <span
                         class="rd-contents__original"
-                        lang={orig}
+                        lang={langTag(work, orig)}
                         dir={work.direction}
                         style={`font-family: ${scriptFont}`}
                       >
                         {d.name_original}
                       </span>
                     )}
+                    {/* What the division's own name means, where the delivery
+                        gave us a rendering of it. */}
+                    {d.name_gloss !== undefined && (
+                      <span class="rd-contents__gloss">{d.name_gloss}</span>
+                    )}
                   </span>
                   <span class="caption rd-contents__count">
-                    {d.chapters === undefined
-                      ? `${d.verses}`
-                      : `${d.chapters.length} ch · ${d.verses}`}
+                    {/* Where a canon numbers continuously, the range is the
+                        thing a reader is scanning for: Dhp 183 is in whichever
+                        vagga holds it, and nothing else on this page says so. */}
+                    {verseRange(d) ??
+                      (d.chapters === undefined
+                        ? `${d.verses}`
+                        : `${d.chapters.length} ch · ${d.verses}`)}
                   </span>
                 </a>
               </li>
@@ -278,6 +294,14 @@ const listed =
   .rd-contents__original {
     margin-left: var(--space-2);
     color: var(--ink-soft);
+  }
+
+  .rd-contents__gloss {
+    color: var(--ink-soft);
+  }
+
+  .rd-contents__gloss::before {
+    content: ' / ';
   }
 
   .rd-contents__count {

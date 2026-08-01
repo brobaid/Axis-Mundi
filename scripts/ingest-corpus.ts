@@ -45,22 +45,40 @@ interface DeliveredBook {
   book: string;
   /** The book's title in its own script, where the delivery carries one. */
   book_he?: string;
-  /** The canon's own grouping, where the delivery states it per book. */
+  /** A route segment the delivery has already chosen. Preferred over ours. */
+  slug?: string;
+  /** The canon's own grouping, however the delivery names the field. */
   section?: string;
+  testament?: string;
   chapters: DeliveredVerse[][];
+}
+
+/** A division delivered flat, with its verses and its own two names. */
+interface DeliveredChapter {
+  n: number;
+  name_pli?: string;
+  name_en?: string;
+  range?: string;
+  verses: DeliveredVerse[];
 }
 
 interface Delivered {
   work: string;
   editions: Record<string, string>;
+  /** Books of chapters of verses — the Tanakh and the Bible. */
   books?: DeliveredBook[];
+  /** A flat verse list keyed by division and verse — the Quran. */
   verses?: DeliveredVerse[];
+  /** Divisions of verses, named — the Dhammapada, and the nikayas after it. */
+  chapters?: DeliveredChapter[];
 }
 
 interface SectionConfig {
   id: string;
   name: string;
   name_original?: string;
+  /** A line every page inside the section carries. */
+  note?: string;
 }
 
 interface PrefaceConfig {
@@ -90,6 +108,16 @@ interface Config {
   note?: string;
   /** An unnumbered opening line the canon's own convention puts above verse 1. */
   preface?: PrefaceConfig;
+  /**
+   * Source-record ids for the editions, where the delivery's own key is not
+   * the id the museum files it under. The delivered file is the owner's and is
+   * never edited; the mapping lives here, in the open.
+   */
+  edition_sources?: Record<string, string>;
+  /** What a one-sided verse means in this canon, where the generic line is not it. */
+  gap_notes?: { original?: string; english?: string };
+  /** BCP-47 tags, where a column's key is not one. */
+  lang_tags?: Record<string, string>;
   /** The delivery's own section name mapped to how the canon names it. */
   sections?: Record<string, SectionConfig>;
   /**
@@ -144,6 +172,55 @@ const CONFIGS: Record<string, Config> = {
       omitted: [9],
       omitted_note: 'At-Tawba is the one surah the mushaf does not open with the basmala.',
     },
+  },
+  bible: {
+    file: 'docs/corpora/bible/bible-paired.json',
+    tradition: 'christianity',
+    title: 'The Bible',
+    division_label: 'book',
+    division_label_plural: 'books',
+    chapter_label: 'chapter',
+    /* The Greek is the paired original; the Old Testament stands English-only
+       here by ruling and its section says why on every page. */
+    script: 'greek',
+    direction: 'ltr',
+    note:
+      'Sixty-six books in the Protestant canon and order. The deuterocanonical ' +
+      'books are a later delivery and are not here yet.',
+    /* The memo names the record `web-bible`; the delivery keys it `web`. The
+       file is the owner's and is not edited, so the mapping is stated here. */
+    edition_sources: { en: 'web-bible' },
+    /* The delivery keys the Greek `gr`, which is not a language tag; the New
+       Testament here is Koine, which is `grc`. */
+    lang_tags: { gr: 'grc' },
+    gap_notes: {
+      original:
+        'This verse appears in the traditional text; the critical Greek edition does not carry it.',
+    },
+    sections: {
+      OT: {
+        id: 'old-testament',
+        name: 'Old Testament',
+        note:
+          'English only here. The Hebrew of these books is in the Tanakh reading room, ' +
+          "in the Tanakh's own Masoretic order.",
+      },
+      NT: { id: 'new-testament', name: 'New Testament' },
+    },
+  },
+  dhammapada: {
+    file: 'docs/corpora/dhammapada/dhammapada-paired.json',
+    tradition: 'buddhism',
+    title: 'The Dhammapada',
+    /* Keyed `pli`; BCP-47 asks for the shortest code, which for Pali is `pi`. */
+    lang_tags: { pli: 'pi' },
+    division_label: 'vagga',
+    division_label_plural: 'vaggas',
+    script: 'pali',
+    direction: 'ltr',
+    note:
+      'One book of the Khuddaka Nikaya, numbered continuously: a verse is cited as ' +
+      'Dhp 1 to Dhp 423 whatever vagga it falls in.',
   },
   tanakh: {
     file: 'docs/corpora/tanakh/tanakh-paired-v2.json',
@@ -211,6 +288,9 @@ interface Division {
   slug: string;
   name?: string;
   name_original?: string;
+  name_gloss?: string;
+  verse_from?: number;
+  verse_to?: number;
   section?: string;
   /** Absent where the division runs straight to its verses. */
   chapters?: Chapter[];
@@ -233,6 +313,32 @@ function normalise(src: Delivered, config: Config): Division[] {
     return out;
   };
 
+  /* Divisions delivered flat, each with its own names and its own verses. */
+  if (src.chapters !== undefined) {
+    return src.chapters.map((chapter) => {
+      const verses = chapter.verses.map((v) => ({ v: v.v as number, ...columns(v) }));
+      /* The delivery states the range and the verses carry it; if the two ever
+         disagree, the file is telling us two different things and one of them
+         is wrong, so neither gets published. */
+      const from = verses[0]?.['v'] as number | undefined;
+      const to = verses[verses.length - 1]?.['v'] as number | undefined;
+      if (chapter.range !== undefined && `${from}-${to}` !== chapter.range) {
+        throw new Error(
+          `division ${chapter.n}: delivered range "${chapter.range}" but the verses run ${from}-${to}`,
+        );
+      }
+      return {
+        n: chapter.n,
+        slug: String(chapter.n),
+        ...(chapter.name_pli === undefined ? {} : { name: chapter.name_pli }),
+        ...(chapter.name_en === undefined ? {} : { name_gloss: chapter.name_en }),
+        ...(from === undefined ? {} : { verse_from: from }),
+        ...(to === undefined ? {} : { verse_to: to }),
+        all: verses,
+      };
+    });
+  }
+
   if (src.books !== undefined) {
     const order = config.order;
     const books = [...src.books];
@@ -254,12 +360,15 @@ function normalise(src: Delivered, config: Config): Division[] {
         c: ci + 1,
         verses: chapter.map((v) => ({ v: v.v as number, ...columns(v) })),
       }));
+      const section = book.section ?? book.testament;
       return {
         n: i + 1,
-        slug: slugify(book.book),
+        /* The delivery's own slug wins: it chose the address, and a route it
+           picked is one it can link to from anywhere else it publishes. */
+        slug: book.slug ?? slugify(book.book),
         name: book.book,
         ...(book.book_he === undefined ? {} : { name_original: book.book_he }),
-        ...(book.section === undefined ? {} : { section: book.section }),
+        ...(section === undefined ? {} : { section }),
         chapters,
         all: chapters.flatMap((c) => c.verses.map((v) => ({ c: c.c, ...v }))),
       };
@@ -305,6 +414,7 @@ function ingest(name: string, config: Config): void {
   let totalChapters = 0;
   let englishGaps = 0;
   let originalGaps = 0;
+  let blankVerses = 0;
   let recordBytes = 0;
   let largest = 0;
   let largestName = '';
@@ -312,10 +422,37 @@ function ingest(name: string, config: Config): void {
   const divisions = normalise(src, config);
 
   const index = divisions.map((d) => {
+    /*
+      A gap is a hole in a column this division otherwise carries.
+
+      The Bible's Old Testament has no Greek at all — by ruling, because its
+      Hebrew is in the Tanakh room — and calling twenty-three thousand verses
+      "single-sided" would be counting a decision as damage. A New Testament
+      book that carries Greek everywhere but eight verses has eight gaps, and
+      those are the ones worth naming.
+    */
+    const carries = (rows: Verse[], lang: string): boolean =>
+      rows.some((r) => r[lang] !== undefined);
+    const holes = (rows: Verse[], all: Verse[], lang: string | undefined): number =>
+      lang === undefined || !carries(all, lang)
+        ? 0
+        : rows.filter((r) => r[lang] === undefined).length;
     const missingEnglish = (rows: Verse[]): number =>
-      hasEnglish ? rows.filter((r) => r['en'] === undefined).length : 0;
-    const missingOriginal = (rows: Verse[]): number =>
-      originalLang === undefined ? 0 : rows.filter((r) => r[originalLang] === undefined).length;
+      hasEnglish ? holes(rows, d.all, 'en') : 0;
+    const missingOriginal = (rows: Verse[]): number => holes(rows, d.all, originalLang);
+    /* A verse the numbering has and no edition carries. In both totals, and
+       counted here too, because the page states it once and a check that
+       expected two notes would fail on a page that is right. */
+    const blank = (rows: Verse[]): number =>
+      originalLang === undefined || !hasEnglish
+        ? 0
+        : rows.filter(
+            (r) =>
+              r['en'] === undefined &&
+              r[originalLang] === undefined &&
+              carries(d.all, 'en') &&
+              carries(d.all, originalLang),
+          ).length;
 
     const emit = (id: string, body: Record<string, unknown>): void => {
       const bytes = write(join(DIVISIONS, `${id}.json`), { id, work: src.work, ...body });
@@ -349,12 +486,16 @@ function ingest(name: string, config: Config): void {
     totalChapters += d.chapters?.length ?? 0;
     englishGaps += missingEnglish(d.all);
     originalGaps += missingOriginal(d.all);
+    blankVerses += blank(d.all);
 
     return {
       n: d.n,
       slug: d.slug,
       ...(d.name === undefined ? {} : { name: d.name }),
       ...(d.name_original === undefined ? {} : { name_original: d.name_original }),
+      ...(d.name_gloss === undefined ? {} : { name_gloss: d.name_gloss }),
+      ...(d.verse_from === undefined ? {} : { verse_from: d.verse_from }),
+      ...(d.verse_to === undefined ? {} : { verse_to: d.verse_to }),
       verses: d.all.length,
       ...(d.chapters === undefined
         ? {}
@@ -376,6 +517,7 @@ function ingest(name: string, config: Config): void {
                 ...(typeof text === 'string' ? { preview: preview(text), preview_lang: lang } : {}),
                 english_gaps: missingEnglish(chapter.verses),
                 original_gaps: missingOriginal(chapter.verses),
+                blank: blank(chapter.verses),
               };
             }),
           }),
@@ -384,6 +526,7 @@ function ingest(name: string, config: Config): void {
         : { section: config.sections[d.section]?.id ?? slugify(d.section) }),
       english_gaps: missingEnglish(d.all),
       original_gaps: missingOriginal(d.all),
+      blank: blank(d.all),
     };
   });
 
@@ -434,6 +577,11 @@ function ingest(name: string, config: Config): void {
       `omitted from ${config.preface.omitted.join(', ')}`);
   }
 
+  /* The delivery's edition keys map to the ids the museum files them under. */
+  const editions = Object.fromEntries(
+    Object.entries(src.editions).map(([lang, id]) => [lang, config.edition_sources?.[lang] ?? id]),
+  );
+
   const workBytes = write(join(WORKS, `${src.work}.json`), {
     id: src.work,
     tradition: config.tradition,
@@ -444,15 +592,18 @@ function ingest(name: string, config: Config): void {
     ...(config.chapter_label === undefined ? {} : { chapter_label: config.chapter_label }),
     script: config.script,
     direction: config.direction,
-    editions: src.editions,
+    editions,
+    ...(config.lang_tags === undefined ? {} : { lang_tags: config.lang_tags }),
     ...(config.note === undefined ? {} : { note: config.note }),
     ...(preface === undefined ? {} : { preface }),
+    ...(config.gap_notes === undefined ? {} : { gap_notes: config.gap_notes }),
     ...(sections === undefined || sections.length === 0 ? {} : { sections }),
     divisions: index,
     total_verses: totalVerses,
     ...(totalChapters === 0 ? {} : { total_chapters: totalChapters }),
     english_gaps: englishGaps,
     original_gaps: originalGaps,
+    blank: blankVerses,
     sourcing: 'sourced',
   });
 
@@ -464,8 +615,11 @@ function ingest(name: string, config: Config): void {
   console.log(`    text records   ${kb(recordBytes).padStart(9)}  across ${leaves} files`);
   console.log(`    largest        ${kb(largest).padStart(9)}  ${largestName}`);
   if (englishGaps > 0 || originalGaps > 0) {
-    console.log(`    single-sided   ${String(englishGaps + originalGaps).padStart(9)}  ` +
-      `(${originalGaps} with no original, ${englishGaps} with no English)`);
+    console.log(
+      `    single-sided   ${String(englishGaps + originalGaps - blankVerses).padStart(9)}  ` +
+        `(${originalGaps - blankVerses} with no original, ${englishGaps - blankVerses} with no ` +
+        `English, ${blankVerses} with neither)`,
+    );
   }
 }
 

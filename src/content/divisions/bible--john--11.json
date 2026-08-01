@@ -1,0 +1,295 @@
+{
+ "id": "bible--john--11",
+ "work": "bible",
+ "n": 43,
+ "slug": "john",
+ "c": 11,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Now a certain man was sick, Lazarus from Bethany, of the village of Mary and her sister, Martha.",
+   "gr": "Ἦν δέ τις ἀσθενῶν, Λάζαρος ἀπὸ Βηθανίας ἐκ τῆς κώμης Μαρίας καὶ Μάρθας τῆς ἀδελφῆς αὐτῆς."
+  },
+  {
+   "v": 2,
+   "en": "It was that Mary who had anointed the Lord with ointment and wiped his feet with her hair, whose brother, Lazarus, was sick.",
+   "gr": "ἦν δὲ ⸀Μαριὰμ ἡ ἀλείψασα τὸν κύριον μύρῳ καὶ ἐκμάξασα τοὺς πόδας αὐτοῦ ταῖς θριξὶν αὐτῆς, ἧς ὁ ἀδελφὸς Λάζαρος ἠσθένει."
+  },
+  {
+   "v": 3,
+   "en": "The sisters therefore sent to him, saying, “Lord, behold, he for whom you have great affection is sick.”",
+   "gr": "ἀπέστειλαν οὖν αἱ ἀδελφαὶ πρὸς αὐτὸν λέγουσαι· Κύριε, ἴδε ὃν φιλεῖς ἀσθενεῖ."
+  },
+  {
+   "v": 4,
+   "en": "But when Jesus heard it, he said, “This sickness is not to death, but for the glory of God, that God’s Son may be glorified by it.”",
+   "gr": "ἀκούσας δὲ ὁ Ἰησοῦς εἶπεν· Αὕτη ἡ ἀσθένεια οὐκ ἔστιν πρὸς θάνατον ἀλλʼ ὑπὲρ τῆς δόξης τοῦ θεοῦ ἵνα δοξασθῇ ὁ υἱὸς τοῦ θεοῦ διʼ αὐτῆς."
+  },
+  {
+   "v": 5,
+   "en": "Now Jesus loved Martha, and her sister, and Lazarus.",
+   "gr": "ἠγάπα δὲ ὁ Ἰησοῦς τὴν Μάρθαν καὶ τὴν ἀδελφὴν αὐτῆς καὶ τὸν Λάζαρον."
+  },
+  {
+   "v": 6,
+   "en": "When therefore he heard that he was sick, he stayed two days in the place where he was.",
+   "gr": "ὡς οὖν ἤκουσεν ὅτι ἀσθενεῖ, τότε μὲν ἔμεινεν ἐν ᾧ ἦν τόπῳ δύο ἡμέρας·"
+  },
+  {
+   "v": 7,
+   "en": "Then after this he said to the disciples, “Let’s go into Judea again.”",
+   "gr": "ἔπειτα μετὰ τοῦτο λέγει τοῖς μαθηταῖς· Ἄγωμεν εἰς τὴν Ἰουδαίαν πάλιν."
+  },
+  {
+   "v": 8,
+   "en": "The disciples asked him, “Rabbi, the Jews were just trying to stone you. Are you going there again?”",
+   "gr": "λέγουσιν αὐτῷ οἱ μαθηταί· Ῥαββί, νῦν ἐζήτουν σε λιθάσαι οἱ Ἰουδαῖοι, καὶ πάλιν ὑπάγεις ἐκεῖ;"
+  },
+  {
+   "v": 9,
+   "en": "Jesus answered, “Aren’t there twelve hours of daylight? If a man walks in the day, he doesn’t stumble, because he sees the light of this world.",
+   "gr": "ἀπεκρίθη Ἰησοῦς· Οὐχὶ δώδεκα ⸂ὧραί εἰσιν⸃ τῆς ἡμέρας; ἐάν τις περιπατῇ ἐν τῇ ἡμέρᾳ, οὐ προσκόπτει, ὅτι τὸ φῶς τοῦ κόσμου τούτου βλέπει·"
+  },
+  {
+   "v": 10,
+   "en": "But if a man walks in the night, he stumbles, because the light isn’t in him.”",
+   "gr": "ἐὰν δέ τις περιπατῇ ἐν τῇ νυκτί, προσκόπτει, ὅτι τὸ φῶς οὐκ ἔστιν ἐν αὐτῷ."
+  },
+  {
+   "v": 11,
+   "en": "He said these things, and after that, he said to them, “Our friend, Lazarus, has fallen asleep, but I am going so that I may awake him out of sleep.”",
+   "gr": "ταῦτα εἶπεν, καὶ μετὰ τοῦτο λέγει αὐτοῖς· Λάζαρος ὁ φίλος ἡμῶν κεκοίμηται, ἀλλὰ πορεύομαι ἵνα ἐξυπνίσω αὐτόν."
+  },
+  {
+   "v": 12,
+   "en": "The disciples therefore said, “Lord, if he has fallen asleep, he will recover.”",
+   "gr": "εἶπαν οὖν οἱ μαθηταὶ ⸀αὐτῷ· Κύριε, εἰ κεκοίμηται σωθήσεται."
+  },
+  {
+   "v": 13,
+   "en": "Now Jesus had spoken of his death, but they thought that he spoke of taking rest in sleep.",
+   "gr": "εἰρήκει δὲ ὁ Ἰησοῦς περὶ τοῦ θανάτου αὐτοῦ. ἐκεῖνοι δὲ ἔδοξαν ὅτι περὶ τῆς κοιμήσεως τοῦ ὕπνου λέγει."
+  },
+  {
+   "v": 14,
+   "en": "So Jesus said to them plainly then, “Lazarus is dead.",
+   "gr": "τότε οὖν εἶπεν αὐτοῖς ὁ Ἰησοῦς παρρησίᾳ· Λάζαρος ἀπέθανεν,"
+  },
+  {
+   "v": 15,
+   "en": "I am glad for your sakes that I was not there, so that you may believe. Nevertheless, let’s go to him.”",
+   "gr": "καὶ χαίρω διʼ ὑμᾶς, ἵνα πιστεύσητε, ὅτι οὐκ ἤμην ἐκεῖ· ἀλλὰ ἄγωμεν πρὸς αὐτόν."
+  },
+  {
+   "v": 16,
+   "en": "Thomas therefore, who is called Didymus, said to his fellow disciples, “Let’s go also, that we may die with him.”",
+   "gr": "εἶπεν οὖν Θωμᾶς ὁ λεγόμενος Δίδυμος τοῖς συμμαθηταῖς· Ἄγωμεν καὶ ἡμεῖς ἵνα ἀποθάνωμεν μετʼ αὐτοῦ."
+  },
+  {
+   "v": 17,
+   "en": "So when Jesus came, he found that he had been in the tomb four days already.",
+   "gr": "Ἐλθὼν οὖν ὁ Ἰησοῦς εὗρεν αὐτὸν τέσσαρας ⸂ἤδη ἡμέρας⸃ ἔχοντα ἐν τῷ μνημείῳ."
+  },
+  {
+   "v": 18,
+   "en": "Now Bethany was near Jerusalem, about fifteen stadia away.",
+   "gr": "ἦν δὲ ⸀ἡ Βηθανία ἐγγὺς τῶν Ἱεροσολύμων ὡς ἀπὸ σταδίων δεκαπέντε."
+  },
+  {
+   "v": 19,
+   "en": "Many of the Jews had joined the women around Martha and Mary, to console them concerning their brother.",
+   "gr": "⸂πολλοὶ δὲ⸃ ἐκ τῶν Ἰουδαίων ἐληλύθεισαν πρὸς ⸀τὴν Μάρθαν καὶ ⸀Μαριὰμ ἵνα παραμυθήσωνται αὐτὰς περὶ τοῦ ⸀ἀδελφοῦ."
+  },
+  {
+   "v": 20,
+   "en": "Then when Martha heard that Jesus was coming, she went and met him, but Mary stayed in the house.",
+   "gr": "ἡ οὖν Μάρθα ὡς ἤκουσεν ὅτι Ἰησοῦς ἔρχεται ὑπήντησεν αὐτῷ· ⸀Μαρία δὲ ἐν τῷ οἴκῳ ἐκαθέζετο."
+  },
+  {
+   "v": 21,
+   "en": "Therefore Martha said to Jesus, “Lord, if you would have been here, my brother wouldn’t have died.",
+   "gr": "εἶπεν οὖν ⸀ἡ Μάρθα πρὸς ⸀τὸν Ἰησοῦν· Κύριε, εἰ ἦς ὧδε ⸂οὐκ ἂν ἀπέθανεν ὁ ἀδελφός μου⸃·"
+  },
+  {
+   "v": 22,
+   "en": "Even now I know that whatever you ask of God, God will give you.”",
+   "gr": "⸀καὶ νῦν οἶδα ὅτι ὅσα ἂν αἰτήσῃ τὸν θεὸν δώσει σοι ὁ θεός."
+  },
+  {
+   "v": 23,
+   "en": "Jesus said to her, “Your brother will rise again.”",
+   "gr": "λέγει αὐτῇ ὁ Ἰησοῦς· Ἀναστήσεται ὁ ἀδελφός σου."
+  },
+  {
+   "v": 24,
+   "en": "Martha said to him, “I know that he will rise again in the resurrection at the last day.”",
+   "gr": "λέγει αὐτῷ ⸀ἡ Μάρθα· Οἶδα ὅτι ἀναστήσεται ἐν τῇ ἀναστάσει ἐν τῇ ἐσχάτῃ ἡμέρᾳ."
+  },
+  {
+   "v": 25,
+   "en": "Jesus said to her, “I am the resurrection and the life. He who believes in me will still live, even if he dies.",
+   "gr": "εἶπεν αὐτῇ ὁ Ἰησοῦς· Ἐγώ εἰμι ἡ ἀνάστασις καὶ ἡ ζωή· ὁ πιστεύων εἰς ἐμὲ κἂν ἀποθάνῃ ζήσεται,"
+  },
+  {
+   "v": 26,
+   "en": "Whoever lives and believes in me will never die. Do you believe this?”",
+   "gr": "καὶ πᾶς ὁ ζῶν καὶ πιστεύων εἰς ἐμὲ οὐ μὴ ἀποθάνῃ εἰς τὸν αἰῶνα· πιστεύεις τοῦτο;"
+  },
+  {
+   "v": 27,
+   "en": "She said to him, “Yes, Lord. I have come to believe that you are the Christ, God’s Son, he who comes into the world.”",
+   "gr": "λέγει αὐτῷ· Ναί, κύριε· ἐγὼ πεπίστευκα ὅτι σὺ εἶ ὁ χριστὸς ὁ υἱὸς τοῦ θεοῦ ὁ εἰς τὸν κόσμον ἐρχόμενος."
+  },
+  {
+   "v": 28,
+   "en": "When she had said this, she went away and called Mary, her sister, secretly, saying, “The Teacher is here and is calling you.”",
+   "gr": "Καὶ ⸀τοῦτο εἰποῦσα ἀπῆλθεν καὶ ἐφώνησεν ⸀Μαριὰμ τὴν ἀδελφὴν αὐτῆς λάθρᾳ εἰποῦσα· Ὁ διδάσκαλος πάρεστιν καὶ φωνεῖ σε."
+  },
+  {
+   "v": 29,
+   "en": "When she heard this, she arose quickly and went to him.",
+   "gr": "ἐκείνη ⸀δὲ ὡς ἤκουσεν ⸀ἠγέρθη ταχὺ καὶ ⸀ἤρχετο πρὸς αὐτόν·"
+  },
+  {
+   "v": 30,
+   "en": "Now Jesus had not yet come into the village, but was in the place where Martha met him.",
+   "gr": "οὔπω δὲ ἐληλύθει ὁ Ἰησοῦς εἰς τὴν κώμην, ἀλλʼ ἦν ⸀ἔτι ἐν τῷ τόπῳ ὅπου ὑπήντησεν αὐτῷ ἡ Μάρθα."
+  },
+  {
+   "v": 31,
+   "en": "Then the Jews who were with her in the house and were consoling her, when they saw Mary, that she rose up quickly and went out, followed her, saying, “She is going to the tomb to weep there.”",
+   "gr": "οἱ οὖν Ἰουδαῖοι οἱ ὄντες μετʼ αὐτῆς ἐν τῇ οἰκίᾳ καὶ παραμυθούμενοι αὐτήν, ἰδόντες τὴν ⸀Μαριὰμ ὅτι ταχέως ἀνέστη καὶ ἐξῆλθεν, ἠκολούθησαν αὐτῇ ⸀δόξαντες ὅτι ὑπάγει εἰς τὸ μνημεῖον ἵνα κλαύσῃ ἐκεῖ."
+  },
+  {
+   "v": 32,
+   "en": "Therefore when Mary came to where Jesus was and saw him, she fell down at his feet, saying to him, “Lord, if you would have been here, my brother wouldn’t have died.”",
+   "gr": "ἡ οὖν ⸀Μαριὰμ ὡς ἦλθεν ὅπου ⸀ἦν Ἰησοῦς ἰδοῦσα αὐτὸν ἔπεσεν αὐτοῦ ⸀πρὸς τοὺς πόδας, λέγουσα αὐτῷ· Κύριε, εἰ ἦς ὧδε οὐκ ἄν ⸂μου ἀπέθανεν⸃ ὁ ἀδελφός."
+  },
+  {
+   "v": 33,
+   "en": "When Jesus therefore saw her weeping, and the Jews weeping who came with her, he groaned in the spirit, and was troubled,",
+   "gr": "Ἰησοῦς οὖν ὡς εἶδεν αὐτὴν κλαίουσαν καὶ τοὺς συνελθόντας αὐτῇ Ἰουδαίους κλαίοντας ἐνεβριμήσατο τῷ πνεύματι καὶ ἐτάραξεν ἑαυτόν,"
+  },
+  {
+   "v": 34,
+   "en": "and said, “Where have you laid him?” They told him, “Lord, come and see.”",
+   "gr": "καὶ εἶπεν· Ποῦ τεθείκατε αὐτόν; λέγουσιν αὐτῷ· Κύριε, ἔρχου καὶ ἴδε."
+  },
+  {
+   "v": 35,
+   "en": "Jesus wept.",
+   "gr": "ἐδάκρυσεν ὁ Ἰησοῦς."
+  },
+  {
+   "v": 36,
+   "en": "The Jews therefore said, “See how much affection he had for him!”",
+   "gr": "ἔλεγον οὖν οἱ Ἰουδαῖοι· Ἴδε πῶς ἐφίλει αὐτόν."
+  },
+  {
+   "v": 37,
+   "en": "Some of them said, “Couldn’t this man, who opened the eyes of him who was blind, have also kept this man from dying?”",
+   "gr": "τινὲς δὲ ἐξ αὐτῶν εἶπαν· Οὐκ ἐδύνατο οὗτος ὁ ἀνοίξας τοὺς ὀφθαλμοὺς τοῦ τυφλοῦ ποιῆσαι ἵνα καὶ οὗτος μὴ ἀποθάνῃ;"
+  },
+  {
+   "v": 38,
+   "en": "Jesus therefore, again groaning in himself, came to the tomb. Now it was a cave, and a stone lay against it.",
+   "gr": "Ἰησοῦς οὖν πάλιν ἐμβριμώμενος ἐν ἑαυτῷ ἔρχεται εἰς τὸ μνημεῖον· ἦν δὲ σπήλαιον, καὶ λίθος ἐπέκειτο ἐπʼ αὐτῷ."
+  },
+  {
+   "v": 39,
+   "en": "Jesus said, “Take away the stone.” Martha, the sister of him who was dead, said to him, “Lord, by this time there is a stench, for he has been dead four days.”",
+   "gr": "λέγει ὁ Ἰησοῦς· Ἄρατε τὸν λίθον. λέγει αὐτῷ ἡ ἀδελφὴ τοῦ ⸀τετελευτηκότος Μάρθα· Κύριε, ἤδη ὄζει, τεταρταῖος γάρ ἐστιν."
+  },
+  {
+   "v": 40,
+   "en": "Jesus said to her, “Didn’t I tell you that if you believed, you would see God’s glory?”",
+   "gr": "λέγει αὐτῇ ὁ Ἰησοῦς· Οὐκ εἶπόν σοι ὅτι ἐὰν πιστεύσῃς ⸀ὄψῃ τὴν δόξαν τοῦ θεοῦ;"
+  },
+  {
+   "v": 41,
+   "en": "So they took away the stone from the place where the dead man was lying. Jesus lifted up his eyes, and said, “Father, I thank you that you listened to me.",
+   "gr": "ἦραν οὖν τὸν ⸀λίθον. ὁ δὲ Ἰησοῦς ἦρεν τοὺς ὀφθαλμοὺς ἄνω καὶ εἶπεν· Πάτερ, εὐχαριστῶ σοι ὅτι ἤκουσάς μου,"
+  },
+  {
+   "v": 42,
+   "en": "I know that you always listen to me, but because of the multitude standing around I said this, that they may believe that you sent me.”",
+   "gr": "ἐγὼ δὲ ᾔδειν ὅτι πάντοτέ μου ἀκούεις· ἀλλὰ διὰ τὸν ὄχλον τὸν περιεστῶτα εἶπον, ἵνα πιστεύσωσιν ὅτι σύ με ἀπέστειλας."
+  },
+  {
+   "v": 43,
+   "en": "When he had said this, he cried with a loud voice, “Lazarus, come out!”",
+   "gr": "καὶ ταῦτα εἰπὼν φωνῇ μεγάλῃ ἐκραύγασεν· Λάζαρε, δεῦρο ἔξω."
+  },
+  {
+   "v": 44,
+   "en": "He who was dead came out, bound hand and foot with wrappings, and his face was wrapped around with a cloth. Jesus said to them, “Free him, and let him go.”",
+   "gr": "⸀ἐξῆλθεν ὁ τεθνηκὼς δεδεμένος τοὺς πόδας καὶ τὰς χεῖρας κειρίαις, καὶ ἡ ὄψις αὐτοῦ σουδαρίῳ περιεδέδετο. λέγει ⸂αὐτοῖς ὁ Ἰησοῦς⸃· Λύσατε αὐτὸν καὶ ἄφετε ⸀αὐτὸν ὑπάγειν."
+  },
+  {
+   "v": 45,
+   "en": "Therefore many of the Jews who came to Mary and saw what Jesus did believed in him.",
+   "gr": "Πολλοὶ οὖν ἐκ τῶν Ἰουδαίων, οἱ ἐλθόντες πρὸς τὴν ⸀Μαριὰμ καὶ θεασάμενοι ⸀ἃ ⸀ἐποίησεν, ἐπίστευσαν εἰς αὐτόν·"
+  },
+  {
+   "v": 46,
+   "en": "But some of them went away to the Pharisees and told them the things which Jesus had done.",
+   "gr": "τινὲς δὲ ἐξ αὐτῶν ἀπῆλθον πρὸς τοὺς Φαρισαίους καὶ εἶπαν αὐτοῖς ἃ ⸀ἐποίησεν Ἰησοῦς."
+  },
+  {
+   "v": 47,
+   "en": "The chief priests therefore and the Pharisees gathered a council, and said, “What are we doing? For this man does many signs.",
+   "gr": "συνήγαγον οὖν οἱ ἀρχιερεῖς καὶ οἱ Φαρισαῖοι συνέδριον, καὶ ἔλεγον· Τί ποιοῦμεν ὅτι οὗτος ὁ ἄνθρωπος πολλὰ ⸂ποιεῖ σημεῖα⸃;"
+  },
+  {
+   "v": 48,
+   "en": "If we leave him alone like this, everyone will believe in him, and the Romans will come and take away both our place and our nation.”",
+   "gr": "ἐὰν ἀφῶμεν αὐτὸν οὕτως, πάντες πιστεύσουσιν εἰς αὐτόν, καὶ ἐλεύσονται οἱ Ῥωμαῖοι καὶ ἀροῦσιν ἡμῶν καὶ τὸν τόπον καὶ τὸ ἔθνος."
+  },
+  {
+   "v": 49,
+   "en": "But a certain one of them, Caiaphas, being high priest that year, said to them, “You know nothing at all,",
+   "gr": "εἷς δέ τις ἐξ αὐτῶν Καϊάφας, ἀρχιερεὺς ὢν τοῦ ἐνιαυτοῦ ἐκείνου, εἶπεν αὐτοῖς· Ὑμεῖς οὐκ οἴδατε οὐδέν,"
+  },
+  {
+   "v": 50,
+   "en": "nor do you consider that it is advantageous for us that one man should die for the people, and that the whole nation not perish.”",
+   "gr": "οὐδὲ ⸀λογίζεσθε ὅτι συμφέρει ⸀ὑμῖν ἵνα εἷς ἄνθρωπος ἀποθάνῃ ὑπὲρ τοῦ λαοῦ καὶ μὴ ὅλον τὸ ἔθνος ἀπόληται."
+  },
+  {
+   "v": 51,
+   "en": "Now he didn’t say this of himself, but being high priest that year, he prophesied that Jesus would die for the nation,",
+   "gr": "τοῦτο δὲ ἀφʼ ἑαυτοῦ οὐκ εἶπεν, ἀλλὰ ἀρχιερεὺς ὢν τοῦ ἐνιαυτοῦ ἐκείνου ἐπροφήτευσεν ὅτι ἔμελλεν Ἰησοῦς ἀποθνῄσκειν ὑπὲρ τοῦ ἔθνους,"
+  },
+  {
+   "v": 52,
+   "en": "and not for the nation only, but that he might also gather together into one the children of God who are scattered abroad.",
+   "gr": "καὶ οὐχ ὑπὲρ τοῦ ἔθνους μόνον, ἀλλʼ ἵνα καὶ τὰ τέκνα τοῦ θεοῦ τὰ διεσκορπισμένα συναγάγῃ εἰς ἕν."
+  },
+  {
+   "v": 53,
+   "en": "So from that day forward they took counsel that they might put him to death.",
+   "gr": "ἀπʼ ἐκείνης οὖν τῆς ἡμέρας ⸀ἐβουλεύσαντο ἵνα ἀποκτείνωσιν αὐτόν."
+  },
+  {
+   "v": 54,
+   "en": "Jesus therefore walked no more openly among the Jews, but departed from there into the country near the wilderness, to a city called Ephraim. He stayed there with his disciples.",
+   "gr": "⸂Ὁ οὖν Ἰησοῦς⸃ οὐκέτι παρρησίᾳ περιεπάτει ἐν τοῖς Ἰουδαίοις, ἀλλὰ ἀπῆλθεν ἐκεῖθεν εἰς τὴν χώραν ἐγγὺς τῆς ἐρήμου, εἰς Ἐφραὶμ λεγομένην πόλιν, κἀκεῖ ⸀ἔμεινεν μετὰ τῶν ⸀μαθητῶν."
+  },
+  {
+   "v": 55,
+   "en": "Now the Passover of the Jews was at hand. Many went up from the country to Jerusalem before the Passover, to purify themselves.",
+   "gr": "Ἦν δὲ ἐγγὺς τὸ πάσχα τῶν Ἰουδαίων, καὶ ἀνέβησαν πολλοὶ εἰς Ἱεροσόλυμα ἐκ τῆς χώρας πρὸ τοῦ πάσχα ἵνα ἁγνίσωσιν ἑαυτούς."
+  },
+  {
+   "v": 56,
+   "en": "Then they sought for Jesus and spoke with one another as they stood in the temple, “What do you think—that he isn’t coming to the feast at all?”",
+   "gr": "ἐζήτουν οὖν τὸν Ἰησοῦν καὶ ἔλεγον μετʼ ἀλλήλων ἐν τῷ ἱερῷ ἑστηκότες· Τί δοκεῖ ὑμῖν; ὅτι οὐ μὴ ἔλθῃ εἰς τὴν ἑορτήν;"
+  },
+  {
+   "v": 57,
+   "en": "Now the chief priests and the Pharisees had commanded that if anyone knew where he was, he should report it, that they might seize him.",
+   "gr": "δεδώκεισαν ⸀δὲ οἱ ἀρχιερεῖς καὶ οἱ Φαρισαῖοι ⸀ἐντολὰς ἵνα ἐάν τις γνῷ ποῦ ἐστιν μηνύσῃ, ὅπως πιάσωσιν αὐτόν."
+  }
+ ],
+ "sourcing": "sourced"
+}

@@ -14,6 +14,12 @@ export const SCRIPT_FONT: Readonly<Record<string, string>> = {
   gurmukhi: 'var(--font-gurmukhi)',
   han: 'var(--font-sc)',
   japanese: 'var(--font-jp)',
+  /* Polytonic Greek: Source Serif 4 carries the full polytonic range with
+     its breathings and accents, so the prose face is the right face and not
+     a fallback. */
+  greek: 'var(--font-prose)',
+  /* Romanised Pali and anything else in Latin Extended Additional. */
+  pali: 'var(--font-pali)',
   latin: 'var(--font-prose)',
 };
 

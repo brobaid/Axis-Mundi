@@ -1,0 +1,220 @@
+{
+ "id": "bible--matthew--10",
+ "work": "bible",
+ "n": 40,
+ "slug": "matthew",
+ "c": 10,
+ "verses": [
+  {
+   "v": 1,
+   "en": "He called to himself his twelve disciples, and gave them authority over unclean spirits, to cast them out, and to heal every disease and every sickness.",
+   "gr": "Καὶ προσκαλεσάμενος τοὺς δώδεκα μαθητὰς αὐτοῦ ἔδωκεν αὐτοῖς ἐξουσίαν πνευμάτων ἀκαθάρτων ὥστε ἐκβάλλειν αὐτὰ καὶ θεραπεύειν πᾶσαν νόσον καὶ πᾶσαν μαλακίαν."
+  },
+  {
+   "v": 2,
+   "en": "Now the names of the twelve apostles are these. The first, Simon, who is called Peter; Andrew, his brother; James the son of Zebedee; John, his brother;",
+   "gr": "τῶν δὲ δώδεκα ἀποστόλων τὰ ὀνόματά ἐστιν ταῦτα· πρῶτος Σίμων ὁ λεγόμενος Πέτρος καὶ Ἀνδρέας ὁ ἀδελφὸς ⸀αὐτοῦ, Ἰάκωβος ὁ τοῦ Ζεβεδαίου καὶ Ἰωάννης ὁ ἀδελφὸς αὐτοῦ,"
+  },
+  {
+   "v": 3,
+   "en": "Philip; Bartholomew; Thomas; Matthew the tax collector; James the son of Alphaeus; Lebbaeus, who was also called Thaddaeus;",
+   "gr": "Φίλιππος καὶ Βαρθολομαῖος, Θωμᾶς καὶ Μαθθαῖος ὁ τελώνης, Ἰάκωβος ὁ τοῦ Ἁλφαίου καὶ ⸀Θαδδαῖος,"
+  },
+  {
+   "v": 4,
+   "en": "Simon the Zealot; and Judas Iscariot, who also betrayed him.",
+   "gr": "Σίμων ὁ ⸀Καναναῖος καὶ Ἰούδας ⸀ὁ Ἰσκαριώτης ὁ καὶ παραδοὺς αὐτόν."
+  },
+  {
+   "v": 5,
+   "en": "Jesus sent these twelve out, and commanded them, saying, “Don’t go among the Gentiles, and don’t enter into any city of the Samaritans.",
+   "gr": "Τούτους τοὺς δώδεκα ἀπέστειλεν ὁ Ἰησοῦς παραγγείλας αὐτοῖς λέγων· Εἰς ὁδὸν ἐθνῶν μὴ ἀπέλθητε καὶ εἰς πόλιν Σαμαριτῶν μὴ εἰσέλθητε·"
+  },
+  {
+   "v": 6,
+   "en": "Rather, go to the lost sheep of the house of Israel.",
+   "gr": "πορεύεσθε δὲ μᾶλλον πρὸς τὰ πρόβατα τὰ ἀπολωλότα οἴκου Ἰσραήλ."
+  },
+  {
+   "v": 7,
+   "en": "As you go, preach, saying, ‘The Kingdom of Heaven is at hand!’",
+   "gr": "πορευόμενοι δὲ κηρύσσετε λέγοντες ὅτι Ἤγγικεν ἡ βασιλεία τῶν οὐρανῶν."
+  },
+  {
+   "v": 8,
+   "en": "Heal the sick, cleanse the lepers, and cast out demons. Freely you received, so freely give.",
+   "gr": "ἀσθενοῦντας θεραπεύετε, ⸂νεκροὺς ἐγείρετε⸃, λεπροὺς καθαρίζετε, δαιμόνια ἐκβάλλετε· δωρεὰν ἐλάβετε, δωρεὰν δότε."
+  },
+  {
+   "v": 9,
+   "en": "Don’t take any gold, silver, or brass in your money belts.",
+   "gr": "μὴ κτήσησθε χρυσὸν μηδὲ ἄργυρον μηδὲ χαλκὸν εἰς τὰς ζώνας ὑμῶν,"
+  },
+  {
+   "v": 10,
+   "en": "Take no bag for your journey, neither two coats, nor sandals, nor staff: for the laborer is worthy of his food.",
+   "gr": "μὴ πήραν εἰς ὁδὸν μηδὲ δύο χιτῶνας μηδὲ ὑποδήματα μηδὲ ⸀ῥάβδον· ἄξιος γὰρ ὁ ἐργάτης τῆς τροφῆς ⸀αὐτοῦ."
+  },
+  {
+   "v": 11,
+   "en": "Into whatever city or village you enter, find out who in it is worthy; and stay there until you go on.",
+   "gr": "εἰς ἣν δʼ ἂν πόλιν ἢ κώμην εἰσέλθητε, ἐξετάσατε τίς ἐν αὐτῇ ἄξιός ἐστιν· κἀκεῖ μείνατε ἕως ἂν ἐξέλθητε."
+  },
+  {
+   "v": 12,
+   "en": "As you enter into the household, greet it.",
+   "gr": "εἰσερχόμενοι δὲ εἰς τὴν οἰκίαν ἀσπάσασθε αὐτήν·"
+  },
+  {
+   "v": 13,
+   "en": "If the household is worthy, let your peace come on it, but if it isn’t worthy, let your peace return to you.",
+   "gr": "καὶ ἐὰν μὲν ᾖ ἡ οἰκία ἀξία, ἐλθάτω ἡ εἰρήνη ὑμῶν ἐπʼ αὐτήν· ἐὰν δὲ μὴ ᾖ ἀξία, ἡ εἰρήνη ὑμῶν ⸀πρὸς ὑμᾶς ἐπιστραφήτω."
+  },
+  {
+   "v": 14,
+   "en": "Whoever doesn’t receive you, nor hear your words, as you go out of that house or that city, shake the dust off your feet.",
+   "gr": "καὶ ὃς ⸀ἂν μὴ δέξηται ὑμᾶς μηδὲ ἀκούσῃ τοὺς λόγους ὑμῶν, ἐξερχόμενοι ⸀ἔξω τῆς οἰκίας ἢ τῆς πόλεως ἐκείνης ἐκτινάξατε τὸν κονιορτὸν τῶν ποδῶν ὑμῶν."
+  },
+  {
+   "v": 15,
+   "en": "Most certainly I tell you, it will be more tolerable for the land of Sodom and Gomorrah in the day of judgment than for that city.",
+   "gr": "ἀμὴν λέγω ὑμῖν, ἀνεκτότερον ἔσται γῇ Σοδόμων καὶ Γομόρρων ἐν ἡμέρᾳ κρίσεως ἢ τῇ πόλει ἐκείνῃ."
+  },
+  {
+   "v": 16,
+   "en": "“Behold, I send you out as sheep among wolves. Therefore be wise as serpents, and harmless as doves.",
+   "gr": "Ἰδοὺ ἐγὼ ἀποστέλλω ὑμᾶς ὡς πρόβατα ἐν μέσῳ λύκων· γίνεσθε οὖν φρόνιμοι ὡς οἱ ὄφεις καὶ ἀκέραιοι ὡς αἱ περιστεραί."
+  },
+  {
+   "v": 17,
+   "en": "But beware of men: for they will deliver you up to councils, and in their synagogues they will scourge you.",
+   "gr": "προσέχετε δὲ ἀπὸ τῶν ἀνθρώπων· παραδώσουσιν γὰρ ὑμᾶς εἰς συνέδρια, καὶ ἐν ταῖς συναγωγαῖς αὐτῶν μαστιγώσουσιν ὑμᾶς·"
+  },
+  {
+   "v": 18,
+   "en": "Yes, and you will be brought before governors and kings for my sake, for a testimony to them and to the nations.",
+   "gr": "καὶ ἐπὶ ἡγεμόνας δὲ καὶ βασιλεῖς ἀχθήσεσθε ἕνεκεν ἐμοῦ εἰς μαρτύριον αὐτοῖς καὶ τοῖς ἔθνεσιν."
+  },
+  {
+   "v": 19,
+   "en": "But when they deliver you up, don’t be anxious how or what you will say, for it will be given you in that hour what you will say.",
+   "gr": "ὅταν δὲ ⸀παραδῶσιν ὑμᾶς, μὴ μεριμνήσητε πῶς ἢ τί λαλήσητε· δοθήσεται γὰρ ὑμῖν ἐν ἐκείνῃ τῇ ὥρᾳ τί ⸀λαλήσητε·"
+  },
+  {
+   "v": 20,
+   "en": "For it is not you who speak, but the Spirit of your Father who speaks in you.",
+   "gr": "οὐ γὰρ ὑμεῖς ἐστε οἱ λαλοῦντες ἀλλὰ τὸ πνεῦμα τοῦ πατρὸς ὑμῶν τὸ λαλοῦν ἐν ὑμῖν."
+  },
+  {
+   "v": 21,
+   "en": "“Brother will deliver up brother to death, and the father his child. Children will rise up against parents, and cause them to be put to death.",
+   "gr": "παραδώσει δὲ ἀδελφὸς ἀδελφὸν εἰς θάνατον καὶ πατὴρ τέκνον, καὶ ἐπαναστήσονται τέκνα ἐπὶ γονεῖς καὶ θανατώσουσιν αὐτούς."
+  },
+  {
+   "v": 22,
+   "en": "You will be hated by all men for my name’s sake, but he who endures to the end will be saved.",
+   "gr": "καὶ ἔσεσθε μισούμενοι ὑπὸ πάντων διὰ τὸ ὄνομά μου· ὁ δὲ ὑπομείνας εἰς τέλος οὗτος σωθήσεται."
+  },
+  {
+   "v": 23,
+   "en": "But when they persecute you in this city, flee into the next, for most certainly I tell you, you will not have gone through the cities of Israel until the Son of Man has come.",
+   "gr": "ὅταν δὲ διώκωσιν ὑμᾶς ἐν τῇ πόλει ταύτῃ, φεύγετε εἰς τὴν ⸀ἑτέραν· ἀμὴν γὰρ λέγω ὑμῖν, οὐ μὴ τελέσητε τὰς πόλεις ⸀τοῦ Ἰσραὴλ ἕως ⸀ἂν ἔλθῃ ὁ υἱὸς τοῦ ἀνθρώπου."
+  },
+  {
+   "v": 24,
+   "en": "“A disciple is not above his teacher, nor a servant above his lord.",
+   "gr": "Οὐκ ἔστιν μαθητὴς ὑπὲρ τὸν διδάσκαλον οὐδὲ δοῦλος ὑπὲρ τὸν κύριον αὐτοῦ."
+  },
+  {
+   "v": 25,
+   "en": "It is enough for the disciple that he be like his teacher, and the servant like his lord. If they have called the master of the house Beelzebul, how much more those of his household!",
+   "gr": "ἀρκετὸν τῷ μαθητῇ ἵνα γένηται ὡς ὁ διδάσκαλος αὐτοῦ, καὶ ὁ δοῦλος ὡς ὁ κύριος αὐτοῦ. εἰ τὸν οἰκοδεσπότην Βεελζεβοὺλ ⸀ἐπεκάλεσαν, πόσῳ μᾶλλον τοὺς οἰκιακοὺς αὐτοῦ."
+  },
+  {
+   "v": 26,
+   "en": "Therefore don’t be afraid of them, for there is nothing covered that will not be revealed; and hidden that will not be known.",
+   "gr": "Μὴ οὖν φοβηθῆτε αὐτούς· οὐδὲν γάρ ἐστιν κεκαλυμμένον ὃ οὐκ ἀποκαλυφθήσεται, καὶ κρυπτὸν ὃ οὐ γνωσθήσεται."
+  },
+  {
+   "v": 27,
+   "en": "What I tell you in the darkness, speak in the light; and what you hear whispered in the ear, proclaim on the housetops.",
+   "gr": "ὃ λέγω ὑμῖν ἐν τῇ σκοτίᾳ, εἴπατε ἐν τῷ φωτί· καὶ ὃ εἰς τὸ οὖς ἀκούετε, κηρύξατε ἐπὶ τῶν δωμάτων."
+  },
+  {
+   "v": 28,
+   "en": "Don’t be afraid of those who kill the body, but are not able to kill the soul. Rather, fear him who is able to destroy both soul and body in Gehenna.",
+   "gr": "καὶ μὴ ⸀φοβεῖσθε ἀπὸ τῶν ἀποκτεννόντων τὸ σῶμα τὴν δὲ ψυχὴν μὴ δυναμένων ἀποκτεῖναι· ⸁φοβεῖσθε δὲ μᾶλλον τὸν δυνάμενον ⸀καὶ ψυχὴν ⸁καὶ σῶμα ἀπολέσαι ἐν γεέννῃ."
+  },
+  {
+   "v": 29,
+   "en": "“Aren’t two sparrows sold for an assarion coin? Not one of them falls on the ground apart from your Father’s will,",
+   "gr": "οὐχὶ δύο στρουθία ἀσσαρίου πωλεῖται; καὶ ἓν ἐξ αὐτῶν οὐ πεσεῖται ἐπὶ τὴν γῆν ἄνευ τοῦ πατρὸς ὑμῶν."
+  },
+  {
+   "v": 30,
+   "en": "but the very hairs of your head are all numbered.",
+   "gr": "ὑμῶν δὲ καὶ αἱ τρίχες τῆς κεφαλῆς πᾶσαι ἠριθμημέναι εἰσίν."
+  },
+  {
+   "v": 31,
+   "en": "Therefore don’t be afraid. You are of more value than many sparrows.",
+   "gr": "μὴ οὖν ⸀φοβεῖσθε· πολλῶν στρουθίων διαφέρετε ὑμεῖς."
+  },
+  {
+   "v": 32,
+   "en": "Everyone therefore who confesses me before men, I will also confess him before my Father who is in heaven.",
+   "gr": "Πᾶς οὖν ὅστις ὁμολογήσει ἐν ἐμοὶ ἔμπροσθεν τῶν ἀνθρώπων, ὁμολογήσω κἀγὼ ἐν αὐτῷ ἔμπροσθεν τοῦ πατρός μου τοῦ ⸀ἐν οὐρανοῖς·"
+  },
+  {
+   "v": 33,
+   "en": "But whoever denies me before men, I will also deny him before my Father who is in heaven.",
+   "gr": "ὅστις ⸂δʼ ἂν⸃ ἀρνήσηταί με ἔμπροσθεν τῶν ἀνθρώπων, ἀρνήσομαι ⸂κἀγὼ αὐτὸν⸃ ἔμπροσθεν τοῦ πατρός μου τοῦ ⸀ἐν οὐρανοῖς."
+  },
+  {
+   "v": 34,
+   "en": "“Don’t think that I came to send peace on the earth. I didn’t come to send peace, but a sword.",
+   "gr": "Μὴ νομίσητε ὅτι ἦλθον βαλεῖν εἰρήνην ἐπὶ τὴν γῆν· οὐκ ἦλθον βαλεῖν εἰρήνην ἀλλὰ μάχαιραν."
+  },
+  {
+   "v": 35,
+   "en": "For I came to set a man at odds against his father, and a daughter against her mother, and a daughter-in-law against her mother-in-law.",
+   "gr": "ἦλθον γὰρ διχάσαι ἄνθρωπον κατὰ τοῦ πατρὸς αὐτοῦ καὶ θυγατέρα κατὰ τῆς μητρὸς αὐτῆς καὶ νύμφην κατὰ τῆς πενθερᾶς αὐτῆς,"
+  },
+  {
+   "v": 36,
+   "en": "A man’s foes will be those of his own household.",
+   "gr": "καὶ ἐχθροὶ τοῦ ἀνθρώπου οἱ οἰκιακοὶ αὐτοῦ."
+  },
+  {
+   "v": 37,
+   "en": "He who loves father or mother more than me is not worthy of me; and he who loves son or daughter more than me isn’t worthy of me.",
+   "gr": "ὁ φιλῶν πατέρα ἢ μητέρα ὑπὲρ ἐμὲ οὐκ ἔστιν μου ἄξιος· καὶ ὁ φιλῶν υἱὸν ἢ θυγατέρα ὑπὲρ ἐμὲ οὐκ ἔστιν μου ἄξιος·"
+  },
+  {
+   "v": 38,
+   "en": "He who doesn’t take his cross and follow after me, isn’t worthy of me.",
+   "gr": "καὶ ὃς οὐ λαμβάνει τὸν σταυρὸν αὐτοῦ καὶ ἀκολουθεῖ ὀπίσω μου, οὐκ ἔστιν μου ἄξιος."
+  },
+  {
+   "v": 39,
+   "en": "He who seeks his life will lose it; and he who loses his life for my sake will find it.",
+   "gr": "ὁ εὑρὼν τὴν ψυχὴν αὐτοῦ ἀπολέσει αὐτήν, καὶ ὁ ἀπολέσας τὴν ψυχὴν αὐτοῦ ἕνεκεν ἐμοῦ εὑρήσει αὐτήν."
+  },
+  {
+   "v": 40,
+   "en": "He who receives you receives me, and he who receives me receives him who sent me.",
+   "gr": "Ὁ δεχόμενος ὑμᾶς ἐμὲ δέχεται, καὶ ὁ ἐμὲ δεχόμενος δέχεται τὸν ἀποστείλαντά με."
+  },
+  {
+   "v": 41,
+   "en": "He who receives a prophet in the name of a prophet will receive a prophet’s reward. He who receives a righteous man in the name of a righteous man will receive a righteous man’s reward.",
+   "gr": "ὁ δεχόμενος προφήτην εἰς ὄνομα προφήτου μισθὸν προφήτου λήμψεται, καὶ ὁ δεχόμενος δίκαιον εἰς ὄνομα δικαίου μισθὸν δικαίου λήμψεται."
+  },
+  {
+   "v": 42,
+   "en": "Whoever gives one of these little ones just a cup of cold water to drink in the name of a disciple, most certainly I tell you he will in no way lose his reward.”",
+   "gr": "καὶ ὃς ⸀ἂν ποτίσῃ ἕνα τῶν μικρῶν τούτων ποτήριον ψυχροῦ μόνον εἰς ὄνομα μαθητοῦ, ἀμὴν λέγω ὑμῖν, οὐ μὴ ἀπολέσῃ τὸν μισθὸν αὐτοῦ."
+  }
+ ],
+ "sourcing": "sourced"
+}

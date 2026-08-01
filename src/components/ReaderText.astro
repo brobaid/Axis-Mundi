@@ -2,12 +2,19 @@
 import ReaderChrome from './ReaderChrome.astro';
 import DevotionalToggle from './DevotionalToggle.astro';
 import {
-  availableModes,
+  carries,
   defaultMode,
   hasEnglish,
+  divisionGloss,
+  gapNote,
+  langTag,
   originalLang,
+  pageModes,
   prefaceFor,
+  sectionOf,
+  sidesOf,
   verseAnchor,
+  verseRange,
   verseRef,
   walk,
   type EditionLine,
@@ -40,13 +47,21 @@ interface Props {
 }
 const { work, division, chapter, verses, heading, crumbs, editions } = Astro.props;
 
-const modes = availableModes(work);
-const mode = defaultMode(work);
 const orig = originalLang(work);
-const english = hasEnglish(work);
+/*
+  What this page can show, not what the work can. An Old Testament page carries
+  no Greek — its Hebrew is in the Tanakh room — so it offers English alone
+  rather than a toggle onto an empty column.
+*/
+const modes = pageModes(work, verses);
+const mode = modes.includes(defaultMode(work)) ? defaultMode(work) : (modes[0] ?? 'english');
+/* A missing original is a gap only where the page otherwise has one. */
+const english = hasEnglish(work) && carries(verses, 'en');
+const hasOriginal = orig !== '' && carries(verses, orig);
 const scriptFont = fontFor(work.script);
 const { prev, next, endsSection } = walk(work, division, chapter);
 const { line: preface, omittedNote } = prefaceFor(work, division, chapter);
+const section = sectionOf(work, division.n);
 const convention = conventionFor(work.tradition);
 const contentsHref =
   chapter === undefined ? `/read/${work.id}` : `/read/${work.id}/${division.slug}`;
@@ -84,7 +99,7 @@ const contentsLabel =
         chapter === undefined && division.name_original !== undefined && (
           <span
             class="rd__title-original"
-            lang={orig}
+            lang={langTag(work, orig)}
             dir={work.direction}
             style={`font-family: ${scriptFont}`}
           >
@@ -92,9 +107,16 @@ const contentsLabel =
           </span>
         )
       }
+      {/* The canon's name leads; what it means follows it. */}
+      {
+        chapter === undefined && divisionGloss(division) !== undefined && (
+          <span class="rd__title-gloss">{divisionGloss(division)}</span>
+        )
+      }
     </h1>
     <p class="caption rd__count">
       {verses.length} verses
+      {chapter === undefined && verseRange(division) !== undefined && ` · ${verseRange(division)}`}
       {division.transliteration !== undefined && ` · ${division.transliteration}`}
     </p>
   </header>
@@ -106,6 +128,10 @@ const contentsLabel =
     englishPending={work.english_pending}
     note={work.note}
   />
+
+  {/* A fact that is true of every page in a section belongs on every page in
+      it, not only on a contents page nobody has to pass through. */}
+  {section?.note !== undefined && <p class="caption rd__section-note">{section.note}</p>}
 
   {/* The mode is an attribute on this container, resolved in CSS against the
       modes this work can actually offer, so a stored preference a corpus
@@ -124,7 +150,7 @@ const contentsLabel =
   {
     preface !== undefined && (
       <p class="rd-preface" data-preface>
-        <span class="rd-preface__orig" lang={orig} dir={work.direction}
+        <span class="rd-preface__orig" lang={langTag(work, orig)} dir={work.direction}
               style={`font-family: ${scriptFont}`}>
           {preface.text[orig]}
         </span>
@@ -145,38 +171,55 @@ const contentsLabel =
     style={`--script-font: ${scriptFont}`}
   >
     {
-      verses.map((verse) => (
-        <div class="rd-verse" id={verseAnchor(verse)}>
-          <a
-            class="rd-verse__n"
-            href={`#${verseAnchor(verse)}`}
-            aria-label={`Verse ${verseRef(heading, verse)}`}
-          >
-            {verse.v}
-          </a>
-          {english && verse['en'] !== undefined && <p class="rd-verse__en">{verse['en']}</p>}
-          {/* A versification can diverge in either direction, and this canon
-              does both. The fact is stated where it falls; the reason is the
-              owner's to write, not this page's to guess. */}
-          {english && verse['en'] === undefined && (
-            <p class="rd-verse__gap caption">No English at this verse number in this edition.</p>
-          )}
-          {/* dir and lang live in the markup, never in CSS: the direction a
-              paragraph is set in decides where its punctuation lands, and that
-              must not depend on which column is showing. */}
-          {verse[orig] !== undefined && (
-            <p class="rd-verse__orig" lang={orig} dir={work.direction}>
-              {verse[orig]}
-            </p>
-          )}
-          {verse[orig] === undefined && (
-            <p class="rd-verse__gap rd-verse__gap--orig caption" lang="en">
-              No verse at this number in the original edition.
-            </p>
-          )}
-          {!english && <p class="rd-verse__pending caption">{work.english_pending}</p>}
-        </div>
-      ))
+      verses.map((verse) => {
+        /*
+          A verse stands on both sides, on one, or on none. All three happen in
+          this room: the Tanakh's versification diverges either way, the New
+          Testament's critical Greek omits verses the traditional text carries,
+          and five of those the English omits too — a number in the numbering
+          with no words behind it in any edition here.
+        */
+        const sides = hasOriginal ? sidesOf(verse, orig, english) : 'both';
+        const note = gapNote(work, sides);
+        return (
+          <div class="rd-verse" id={verseAnchor(verse)}>
+            <a
+              class="rd-verse__n"
+              href={`#${verseAnchor(verse)}`}
+              aria-label={`Verse ${verseRef(heading, verse)}`}
+            >
+              {verse.v}
+            </a>
+            {sides === 'neither' ? (
+              /* One line, not two: a row that said "no English" and "no
+                 original" under each other would be reporting one absence
+                 twice and reading as a fault rather than as a fact. */
+              <p class="rd-verse__gap rd-verse__gap--neither caption">{note}</p>
+            ) : (
+              <>
+                {english && verse['en'] !== undefined && (
+                  <p class="rd-verse__en">{verse['en']}</p>
+                )}
+                {sides === 'original-only' && <p class="rd-verse__gap caption">{note}</p>}
+                {/* dir and lang live in the markup, never in CSS: the direction
+                    a paragraph is set in decides where its punctuation lands,
+                    and that must not depend on which column is showing. */}
+                {verse[orig] !== undefined && (
+                  <p class="rd-verse__orig" lang={langTag(work, orig)} dir={work.direction}>
+                    {verse[orig]}
+                  </p>
+                )}
+                {sides === 'english-only' && (
+                  <p class="rd-verse__gap rd-verse__gap--orig caption" lang="en">
+                    {note}
+                  </p>
+                )}
+                {!english && <p class="rd-verse__pending caption">{work.english_pending}</p>}
+              </>
+            )}
+          </div>
+        );
+      })
     }
   </div>
 
@@ -297,6 +340,26 @@ const contentsLabel =
     color: var(--ink-soft);
   }
 
+  /*
+    Set apart by a slash and a lighter ink, at the same size: it is half of the
+    heading, not a subtitle under it. "Yamakavagga / Pairs" is how the chapter
+    is named, and neither half is the caption of the other.
+  */
+  .rd__title-gloss {
+    color: var(--ink-soft);
+  }
+
+  .rd__title-gloss::before {
+    content: ' / ';
+  }
+
+  .rd__section-note {
+    color: var(--ink-soft);
+    max-width: 42rem;
+    margin-top: calc(-1 * var(--space-4));
+    margin-bottom: var(--space-6);
+  }
+
   .rd__count {
     color: var(--ink-soft);
     margin-top: var(--space-2);
@@ -408,6 +471,27 @@ const contentsLabel =
   .rd-verses[data-script='hebrew'] .rd-verse__orig {
     font-size: 1.375rem;
     line-height: 2.35;
+  }
+
+  /*
+    A Latin-script original is set at the Latin measure, because it is Latin:
+    romanised Pali and polytonic Greek have the x-height and the counters the
+    English column has, and the size above exists to compensate for scripts
+    that do not. At 1.5rem beside a 1.0625rem translation they read as the
+    headline of their own verse.
+
+    Greek keeps a little more leading than English: the polytonic accents and
+    breathings sit above the line and the Latin column's 1.72 crowds them.
+  */
+  .rd-verses[data-script='pali'] .rd-verse__orig,
+  .rd-verses[data-script='latin'] .rd-verse__orig {
+    font-size: 1.0625rem;
+    line-height: 1.72;
+  }
+
+  .rd-verses[data-script='greek'] .rd-verse__orig {
+    font-size: 1.0625rem;
+    line-height: 1.9;
   }
 
   .rd-verse__pending,

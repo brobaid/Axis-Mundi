@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getPublishable } from '../../lib/content';
 import { TRADITIONS } from '../../lib/traditions';
-import { hasEnglish, originalLang, type WorkData } from '../../lib/reader-model';
+import { hasEnglish, langTag, originalLang, type WorkData } from '../../lib/reader-model';
 import { fontFor } from '../../lib/scripts';
 
 /**
@@ -35,10 +35,16 @@ const shelf = entries
     tradition: nameOf.get(w.tradition) ?? w.tradition,
   }));
 
+const onShelf = new Map(shelf.map((s) => [s.work.id, s.work]));
 const waiting = coming
   .map((e) => e.data)
   .sort((a, b) => a.order - b.order)
-  .map((r) => ({ ...r, traditionName: nameOf.get(r.tradition) ?? r.tradition }));
+  .map((r) => ({
+    ...r,
+    traditionName: nameOf.get(r.tradition) ?? r.tradition,
+    /* A shelf can be partly live: the part that has arrived links to itself. */
+    live: r.partly_live === undefined ? undefined : onShelf.get(r.partly_live),
+  }));
 
 const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
 ---
@@ -87,7 +93,7 @@ const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
                   {s.work.title_original !== undefined && (
                     <span
                       class="rd-shelf__original"
-                      lang={originalLang(s.work)}
+                      lang={langTag(s.work, originalLang(s.work))}
                       dir={s.work.direction}
                       style={`font-family: ${fontFor(s.work.script)}`}
                     >
@@ -100,6 +106,12 @@ const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
                   {s.work.total_verses.toLocaleString('en')} verses
                   {!hasEnglish(s.work) && ' · original only'}
                 </span>
+                {/* What a canon must state about itself, stated where a reader
+                    first meets it — the shape of its canon, what it does not
+                    carry — rather than only once they are inside it. */}
+                {s.work.note !== undefined && (
+                  <span class="caption rd-shelf__note-line">{s.work.note}</span>
+                )}
               </a>
               {/* Filled in by the island only where there is a position to
                   resume from; an offer that goes nowhere is worse than none. */}
@@ -147,6 +159,13 @@ const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
                   </div>
                 </dl>
                 <p class="rd-waiting__status">{r.status}</p>
+                {r.live !== undefined && (
+                  <p class="rd-waiting__live">
+                    <a class="tap" href={`/read/${r.live.id}`}>
+                      Read {r.live.title} →
+                    </a>
+                  </p>
+                )}
               </li>
             ))}
           </ul>
@@ -332,6 +351,19 @@ const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
     font-size: var(--size-small);
     color: var(--ink-soft);
     max-width: 36rem;
+  }
+
+  /* The part of this shelf that has arrived. */
+  .rd-waiting__live {
+    font-size: var(--size-small);
+    margin-top: var(--space-2);
+  }
+
+  .rd-shelf__note-line {
+    display: block;
+    color: var(--ink-soft);
+    margin-top: var(--space-1);
+    max-width: 40rem;
   }
 
   .rd-shelf__note {

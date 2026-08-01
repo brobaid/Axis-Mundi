@@ -1,0 +1,130 @@
+{
+ "id": "bible--2corinthians--1",
+ "work": "bible",
+ "n": 47,
+ "slug": "2corinthians",
+ "c": 1,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Paul, an apostle of Christ Jesus through the will of God, and Timothy our brother, to the assembly of God which is at Corinth, with all the saints who are in the whole of Achaia:",
+   "gr": "Παῦλος ἀπόστολος ⸂Χριστοῦ Ἰησοῦ⸃ διὰ θελήματος θεοῦ καὶ Τιμόθεος ὁ ἀδελφὸς τῇ ἐκκλησίᾳ τοῦ θεοῦ τῇ οὔσῃ ἐν Κορίνθῳ, σὺν τοῖς ἁγίοις πᾶσιν τοῖς οὖσιν ἐν ὅλῃ τῇ Ἀχαΐᾳ·"
+  },
+  {
+   "v": 2,
+   "en": "Grace to you and peace from God our Father and the Lord Jesus Christ.",
+   "gr": "χάρις ὑμῖν καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς ἡμῶν καὶ κυρίου Ἰησοῦ Χριστοῦ."
+  },
+  {
+   "v": 3,
+   "en": "Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and God of all comfort;",
+   "gr": "Εὐλογητὸς ὁ θεὸς καὶ πατὴρ τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ, ὁ πατὴρ τῶν οἰκτιρμῶν καὶ θεὸς πάσης παρακλήσεως,"
+  },
+  {
+   "v": 4,
+   "en": "who comforts us in all our affliction, that we may be able to comfort those who are in any affliction, through the comfort with which we ourselves are comforted by God.",
+   "gr": "ὁ παρακαλῶν ἡμᾶς ἐπὶ πάσῃ τῇ θλίψει ἡμῶν, εἰς τὸ δύνασθαι ἡμᾶς παρακαλεῖν τοὺς ἐν πάσῃ θλίψει διὰ τῆς παρακλήσεως ἧς παρακαλούμεθα αὐτοὶ ὑπὸ τοῦ θεοῦ."
+  },
+  {
+   "v": 5,
+   "en": "For as the sufferings of Christ abound to us, even so our comfort also abounds through Christ.",
+   "gr": "ὅτι καθὼς περισσεύει τὰ παθήματα τοῦ Χριστοῦ εἰς ἡμᾶς, οὕτως διὰ τοῦ Χριστοῦ περισσεύει καὶ ἡ παράκλησις ἡμῶν."
+  },
+  {
+   "v": 6,
+   "en": "But if we are afflicted, it is for your comfort and salvation. If we are comforted, it is for your comfort, which produces in you the patient enduring of the same sufferings which we also suffer.",
+   "gr": "εἴτε δὲ θλιβόμεθα, ὑπὲρ τῆς ὑμῶν παρακλήσεως καὶ σωτηρίας· ⸂εἴτε παρακαλούμεθα, ὑπὲρ τῆς ὑμῶν παρακλήσεως⸃ τῆς ἐνεργουμένης ἐν ὑπομονῇ τῶν αὐτῶν παθημάτων ὧν καὶ ἡμεῖς πάσχομεν,"
+  },
+  {
+   "v": 7,
+   "en": "Our hope for you is steadfast, knowing that, since you are partakers of the sufferings, so you are also of the comfort.",
+   "gr": "καὶ ἡ ἐλπὶς ἡμῶν βεβαία ὑπὲρ ⸀ὑμῶν· εἰδότες ὅτι ⸀ὡς κοινωνοί ἐστε τῶν παθημάτων, οὕτως καὶ τῆς παρακλήσεως."
+  },
+  {
+   "v": 8,
+   "en": "For we don’t desire to have you uninformed, brothers, concerning our affliction which happened to us in Asia, that we were weighed down exceedingly, beyond our power, so much that we despaired even of life.",
+   "gr": "Οὐ γὰρ θέλομεν ὑμᾶς ἀγνοεῖν, ἀδελφοί, ⸀ὑπὲρ τῆς θλίψεως ἡμῶν τῆς ⸀γενομένης ἐν τῇ Ἀσίᾳ, ὅτι καθʼ ὑπερβολὴν ⸂ὑπὲρ δύναμιν ἐβαρήθημεν⸃, ὥστε ἐξαπορηθῆναι ἡμᾶς καὶ τοῦ ζῆν·"
+  },
+  {
+   "v": 9,
+   "en": "Yes, we ourselves have had the sentence of death within ourselves, that we should not trust in ourselves, but in God who raises the dead,",
+   "gr": "ἀλλὰ αὐτοὶ ἐν ἑαυτοῖς τὸ ἀπόκριμα τοῦ θανάτου ἐσχήκαμεν, ἵνα μὴ πεποιθότες ὦμεν ἐφʼ ἑαυτοῖς ἀλλʼ ἐπὶ τῷ θεῷ τῷ ἐγείροντι τοὺς νεκρούς·"
+  },
+  {
+   "v": 10,
+   "en": "who delivered us out of so great a death, and does deliver; on whom we have set our hope that he will also still deliver us;",
+   "gr": "ὃς ἐκ τηλικούτου θανάτου ἐρρύσατο ἡμᾶς καὶ ⸀ῥύσεται, εἰς ὃν ἠλπίκαμεν ὅτι καὶ ἔτι ῥύσεται,"
+  },
+  {
+   "v": 11,
+   "en": "you also helping together on our behalf by your supplication; that, for the gift given to us by means of many, thanks may be given by many persons on your behalf.",
+   "gr": "συνυπουργούντων καὶ ὑμῶν ὑπὲρ ἡμῶν τῇ δεήσει, ἵνα ἐκ πολλῶν προσώπων τὸ εἰς ἡμᾶς χάρισμα διὰ πολλῶν εὐχαριστηθῇ ὑπὲρ ⸀ἡμῶν."
+  },
+  {
+   "v": 12,
+   "en": "For our boasting is this: the testimony of our conscience, that in holiness and sincerity of God, not in fleshly wisdom but in the grace of God we behaved ourselves in the world, and more abundantly toward you.",
+   "gr": "Ἡ γὰρ καύχησις ἡμῶν αὕτη ἐστίν, τὸ μαρτύριον τῆς συνειδήσεως ἡμῶν, ὅτι ἐν ⸀ἁγιότητι καὶ εἰλικρινείᾳ ⸀τοῦ θεοῦ, ⸀οὐκ ἐν σοφίᾳ σαρκικῇ ἀλλʼ ἐν χάριτι θεοῦ, ἀνεστράφημεν ἐν τῷ κόσμῳ, περισσοτέρως δὲ πρὸς ὑμᾶς·"
+  },
+  {
+   "v": 13,
+   "en": "For we write no other things to you than what you read or even acknowledge, and I hope you will acknowledge to the end,",
+   "gr": "οὐ γὰρ ἄλλα γράφομεν ὑμῖν ἀλλʼ ἢ ἃ ἀναγινώσκετε ἢ καὶ ἐπιγινώσκετε, ἐλπίζω δὲ ⸀ὅτι ἕως τέλους ἐπιγνώσεσθε,"
+  },
+  {
+   "v": 14,
+   "en": "as also you acknowledged us in part, that we are your boasting, even as you also are ours, in the day of our Lord Jesus.",
+   "gr": "καθὼς καὶ ἐπέγνωτε ἡμᾶς ἀπὸ μέρους, ὅτι καύχημα ὑμῶν ἐσμεν καθάπερ καὶ ὑμεῖς ἡμῶν ἐν τῇ ἡμέρᾳ τοῦ κυρίου ⸀ἡμῶν Ἰησοῦ."
+  },
+  {
+   "v": 15,
+   "en": "In this confidence, I was determined to come first to you, that you might have a second benefit,",
+   "gr": "Καὶ ταύτῃ τῇ πεποιθήσει ἐβουλόμην ⸂πρότερον πρὸς ὑμᾶς ἐλθεῖν⸃, ἵνα δευτέραν ⸀χάριν ⸀σχῆτε,"
+  },
+  {
+   "v": 16,
+   "en": "and by you to pass into Macedonia, and again from Macedonia to come to you, and to be sent forward by you on my journey to Judea.",
+   "gr": "καὶ διʼ ὑμῶν διελθεῖν εἰς Μακεδονίαν, καὶ πάλιν ἀπὸ Μακεδονίας ἐλθεῖν πρὸς ὑμᾶς καὶ ὑφʼ ὑμῶν προπεμφθῆναι εἰς τὴν Ἰουδαίαν."
+  },
+  {
+   "v": 17,
+   "en": "When I therefore was thus determined, did I show fickleness? Or the things that I purpose, do I purpose according to the flesh, that with me there should be the “Yes, yes” and the “No, no?”",
+   "gr": "τοῦτο οὖν ⸀βουλόμενος μήτι ἄρα τῇ ἐλαφρίᾳ ἐχρησάμην; ἢ ἃ βουλεύομαι κατὰ σάρκα βουλεύομαι, ἵνα ᾖ παρʼ ἐμοὶ τὸ Ναὶ ναὶ καὶ τὸ Οὒ οὔ;"
+  },
+  {
+   "v": 18,
+   "en": "But as God is faithful, our word toward you was not “Yes and no.”",
+   "gr": "πιστὸς δὲ ὁ θεὸς ὅτι ὁ λόγος ἡμῶν ὁ πρὸς ὑμᾶς οὐκ ⸀ἔστιν Ναὶ καὶ Οὔ."
+  },
+  {
+   "v": 19,
+   "en": "For the Son of God, Jesus Christ, who was preached among you by us, by me, Silvanus, and Timothy, was not “Yes and no,” but in him is “Yes.”",
+   "gr": "ὁ ⸂τοῦ θεοῦ γὰρ⸃ υἱὸς ⸂Ἰησοῦς Χριστὸς⸃ ὁ ἐν ὑμῖν διʼ ἡμῶν κηρυχθείς, διʼ ἐμοῦ καὶ Σιλουανοῦ καὶ Τιμοθέου, οὐκ ἐγένετο Ναὶ καὶ Οὒ, ἀλλὰ Ναὶ ἐν αὐτῷ γέγονεν·"
+  },
+  {
+   "v": 20,
+   "en": "For however many are the promises of God, in him is the “Yes.” Therefore also through him is the “Amen”, to the glory of God through us.",
+   "gr": "ὅσαι γὰρ ἐπαγγελίαι θεοῦ, ἐν αὐτῷ τὸ Ναί· ⸀διὸ καὶ ⸂διʼ αὐτοῦ⸃ τὸ Ἀμὴν τῷ θεῷ πρὸς δόξαν διʼ ἡμῶν."
+  },
+  {
+   "v": 21,
+   "en": "Now he who establishes us with you in Christ and anointed us is God,",
+   "gr": "ὁ δὲ βεβαιῶν ἡμᾶς σὺν ὑμῖν εἰς Χριστὸν καὶ χρίσας ἡμᾶς θεός,"
+  },
+  {
+   "v": 22,
+   "en": "who also sealed us, and gave us the down payment of the Spirit in our hearts.",
+   "gr": "ὁ καὶ σφραγισάμενος ἡμᾶς καὶ δοὺς τὸν ἀρραβῶνα τοῦ πνεύματος ἐν ταῖς καρδίαις ἡμῶν."
+  },
+  {
+   "v": 23,
+   "en": "But I call God for a witness to my soul, that I didn’t come to Corinth to spare you.",
+   "gr": "Ἐγὼ δὲ μάρτυρα τὸν θεὸν ἐπικαλοῦμαι ἐπὶ τὴν ἐμὴν ψυχήν, ὅτι φειδόμενος ὑμῶν οὐκέτι ἦλθον εἰς Κόρινθον."
+  },
+  {
+   "v": 24,
+   "en": "We don’t control your faith, but are fellow workers with you for your joy. For you stand firm in faith.",
+   "gr": "οὐχ ὅτι κυριεύομεν ὑμῶν τῆς πίστεως, ἀλλὰ συνεργοί ἐσμεν τῆς χαρᾶς ὑμῶν, τῇ γὰρ πίστει ἑστήκατε."
+  }
+ ],
+ "sourcing": "sourced"
+}

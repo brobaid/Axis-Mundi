@@ -1,0 +1,165 @@
+{
+ "id": "bible--1corinthians--1",
+ "work": "bible",
+ "n": 46,
+ "slug": "1corinthians",
+ "c": 1,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Paul, called to be an apostle of Jesus Christ through the will of God, and our brother Sosthenes,",
+   "gr": "Παῦλος κλητὸς ἀπόστολος ⸂Χριστοῦ Ἰησοῦ⸃ διὰ θελήματος θεοῦ καὶ Σωσθένης ὁ ἀδελφὸς"
+  },
+  {
+   "v": 2,
+   "en": "to the assembly of God which is at Corinth—those who are sanctified in Christ Jesus, called saints, with all who call on the name of our Lord Jesus Christ in every place, both theirs and ours:",
+   "gr": "τῇ ἐκκλησίᾳ τοῦ θεοῦ, ⸂ἡγιασμένοις ἐν Χριστῷ Ἰησοῦ, τῇ οὔσῃ ἐν Κορίνθῳ,⸃ κλητοῖς ἁγίοις, σὺν πᾶσιν τοῖς ἐπικαλουμένοις τὸ ὄνομα τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ ἐν παντὶ τόπῳ ⸀αὐτῶν καὶ ἡμῶν·"
+  },
+  {
+   "v": 3,
+   "en": "Grace to you and peace from God our Father and the Lord Jesus Christ.",
+   "gr": "χάρις ὑμῖν καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς ἡμῶν καὶ κυρίου Ἰησοῦ Χριστοῦ."
+  },
+  {
+   "v": 4,
+   "en": "I always thank my God concerning you, for the grace of God which was given you in Christ Jesus;",
+   "gr": "Εὐχαριστῶ τῷ θεῷ ⸀μου πάντοτε περὶ ὑμῶν ἐπὶ τῇ χάριτι τοῦ θεοῦ τῇ δοθείσῃ ὑμῖν ἐν Χριστῷ Ἰησοῦ,"
+  },
+  {
+   "v": 5,
+   "en": "that in everything you were enriched in him, in all speech and all knowledge;",
+   "gr": "ὅτι ἐν παντὶ ἐπλουτίσθητε ἐν αὐτῷ, ἐν παντὶ λόγῳ καὶ πάσῃ γνώσει,"
+  },
+  {
+   "v": 6,
+   "en": "even as the testimony of Christ was confirmed in you:",
+   "gr": "καθὼς τὸ μαρτύριον τοῦ Χριστοῦ ἐβεβαιώθη ἐν ὑμῖν,"
+  },
+  {
+   "v": 7,
+   "en": "so that you come behind in no gift; waiting for the revelation of our Lord Jesus Christ;",
+   "gr": "ὥστε ὑμᾶς μὴ ὑστερεῖσθαι ἐν μηδενὶ χαρίσματι, ἀπεκδεχομένους τὴν ἀποκάλυψιν τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ·"
+  },
+  {
+   "v": 8,
+   "en": "who will also confirm you until the end, blameless in the day of our Lord Jesus Christ.",
+   "gr": "ὃς καὶ βεβαιώσει ὑμᾶς ἕως τέλους ἀνεγκλήτους ἐν τῇ ἡμέρᾳ τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ."
+  },
+  {
+   "v": 9,
+   "en": "God is faithful, through whom you were called into the fellowship of his Son, Jesus Christ, our Lord.",
+   "gr": "πιστὸς ὁ θεὸς διʼ οὗ ἐκλήθητε εἰς κοινωνίαν τοῦ υἱοῦ αὐτοῦ Ἰησοῦ Χριστοῦ τοῦ κυρίου ἡμῶν."
+  },
+  {
+   "v": 10,
+   "en": "Now I beg you, brothers, through the name of our Lord, Jesus Christ, that you all speak the same thing, and that there be no divisions among you, but that you be perfected together in the same mind and in the same judgment.",
+   "gr": "Παρακαλῶ δὲ ὑμᾶς, ἀδελφοί, διὰ τοῦ ὀνόματος τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ ἵνα τὸ αὐτὸ λέγητε πάντες, καὶ μὴ ᾖ ἐν ὑμῖν σχίσματα, ἦτε δὲ κατηρτισμένοι ἐν τῷ αὐτῷ νοῒ καὶ ἐν τῇ αὐτῇ γνώμῃ."
+  },
+  {
+   "v": 11,
+   "en": "For it has been reported to me concerning you, my brothers, by those who are from Chloe’s household, that there are contentions among you.",
+   "gr": "ἐδηλώθη γάρ μοι περὶ ὑμῶν, ἀδελφοί μου, ὑπὸ τῶν Χλόης ὅτι ἔριδες ἐν ὑμῖν εἰσιν."
+  },
+  {
+   "v": 12,
+   "en": "Now I mean this, that each one of you says, “I follow Paul,” “I follow Apollos,” “I follow Cephas,” and, “I follow Christ.”",
+   "gr": "λέγω δὲ τοῦτο ὅτι ἕκαστος ὑμῶν λέγει· Ἐγὼ μέν εἰμι Παύλου, Ἐγὼ δὲ Ἀπολλῶ, Ἐγὼ δὲ Κηφᾶ, Ἐγὼ δὲ Χριστοῦ."
+  },
+  {
+   "v": 13,
+   "en": "Is Christ divided? Was Paul crucified for you? Or were you baptized into the name of Paul?",
+   "gr": "μεμέρισται ὁ Χριστός; μὴ Παῦλος ἐσταυρώθη ὑπὲρ ὑμῶν, ἢ εἰς τὸ ὄνομα Παύλου ἐβαπτίσθητε;"
+  },
+  {
+   "v": 14,
+   "en": "I thank God that I baptized none of you, except Crispus and Gaius,",
+   "gr": "⸀εὐχαριστῶ ὅτι οὐδένα ὑμῶν ἐβάπτισα εἰ μὴ Κρίσπον καὶ Γάϊον,"
+  },
+  {
+   "v": 15,
+   "en": "so that no one should say that I had baptized you into my own name.",
+   "gr": "ἵνα μή τις εἴπῃ ὅτι εἰς τὸ ἐμὸν ὄνομα ⸀ἐβαπτίσθητε·"
+  },
+  {
+   "v": 16,
+   "en": "(I also baptized the household of Stephanas; besides them, I don’t know whether I baptized any other.)",
+   "gr": "ἐβάπτισα δὲ καὶ τὸν Στεφανᾶ οἶκον· λοιπὸν οὐκ οἶδα εἴ τινα ἄλλον ἐβάπτισα."
+  },
+  {
+   "v": 17,
+   "en": "For Christ sent me not to baptize, but to preach the Good News—not in wisdom of words, so that the cross of Christ wouldn’t be made void.",
+   "gr": "οὐ γὰρ ἀπέστειλέν με Χριστὸς βαπτίζειν ἀλλὰ εὐαγγελίζεσθαι, οὐκ ἐν σοφίᾳ λόγου, ἵνα μὴ κενωθῇ ὁ σταυρὸς τοῦ Χριστοῦ."
+  },
+  {
+   "v": 18,
+   "en": "For the word of the cross is foolishness to those who are dying, but to us who are being saved it is the power of God.",
+   "gr": "Ὁ λόγος γὰρ ὁ τοῦ σταυροῦ τοῖς μὲν ἀπολλυμένοις μωρία ἐστίν, τοῖς δὲ σῳζομένοις ἡμῖν δύναμις θεοῦ ἐστιν."
+  },
+  {
+   "v": 19,
+   "en": "For it is written, “I will destroy the wisdom of the wise. I will bring the discernment of the discerning to nothing.”",
+   "gr": "γέγραπται γάρ· Ἀπολῶ τὴν σοφίαν τῶν σοφῶν, καὶ τὴν σύνεσιν τῶν συνετῶν ἀθετήσω."
+  },
+  {
+   "v": 20,
+   "en": "Where is the wise? Where is the scribe? Where is the lawyer of this world? Hasn’t God made foolish the wisdom of this world?",
+   "gr": "ποῦ σοφός; ποῦ γραμματεύς; ποῦ συζητητὴς τοῦ αἰῶνος τούτου; οὐχὶ ἐμώρανεν ὁ θεὸς τὴν σοφίαν τοῦ ⸀κόσμου;"
+  },
+  {
+   "v": 21,
+   "en": "For seeing that in the wisdom of God, the world through its wisdom didn’t know God, it was God’s good pleasure through the foolishness of the preaching to save those who believe.",
+   "gr": "ἐπειδὴ γὰρ ἐν τῇ σοφίᾳ τοῦ θεοῦ οὐκ ἔγνω ὁ κόσμος διὰ τῆς σοφίας τὸν θεόν, εὐδόκησεν ὁ θεὸς διὰ τῆς μωρίας τοῦ κηρύγματος σῶσαι τοὺς πιστεύοντας."
+  },
+  {
+   "v": 22,
+   "en": "For Jews ask for signs, Greeks seek after wisdom,",
+   "gr": "ἐπειδὴ καὶ Ἰουδαῖοι ⸀σημεῖα αἰτοῦσιν καὶ Ἕλληνες σοφίαν ζητοῦσιν·"
+  },
+  {
+   "v": 23,
+   "en": "but we preach Christ crucified: a stumbling block to Jews, and foolishness to Greeks,",
+   "gr": "ἡμεῖς δὲ κηρύσσομεν Χριστὸν ἐσταυρωμένον, Ἰουδαίοις μὲν σκάνδαλον ⸀ἔθνεσιν δὲ μωρίαν,"
+  },
+  {
+   "v": 24,
+   "en": "but to those who are called, both Jews and Greeks, Christ is the power of God and the wisdom of God;",
+   "gr": "αὐτοῖς δὲ τοῖς κλητοῖς, Ἰουδαίοις τε καὶ Ἕλλησιν, Χριστὸν θεοῦ δύναμιν καὶ θεοῦ σοφίαν."
+  },
+  {
+   "v": 25,
+   "en": "because the foolishness of God is wiser than men, and the weakness of God is stronger than men.",
+   "gr": "ὅτι τὸ μωρὸν τοῦ θεοῦ σοφώτερον τῶν ἀνθρώπων ἐστίν, καὶ τὸ ἀσθενὲς τοῦ θεοῦ ἰσχυρότερον τῶν ⸀ἀνθρώπων."
+  },
+  {
+   "v": 26,
+   "en": "For you see your calling, brothers, that not many are wise according to the flesh, not many mighty, and not many noble;",
+   "gr": "Βλέπετε γὰρ τὴν κλῆσιν ὑμῶν, ἀδελφοί, ὅτι οὐ πολλοὶ σοφοὶ κατὰ σάρκα, οὐ πολλοὶ δυνατοί, οὐ πολλοὶ εὐγενεῖς·"
+  },
+  {
+   "v": 27,
+   "en": "but God chose the foolish things of the world that he might put to shame those who are wise. God chose the weak things of the world that he might put to shame the things that are strong.",
+   "gr": "ἀλλὰ τὰ μωρὰ τοῦ κόσμου ἐξελέξατο ὁ θεός, ἵνα ⸂καταισχύνῃ τοὺς σοφούς⸃, καὶ τὰ ἀσθενῆ τοῦ κόσμου ἐξελέξατο ὁ θεός, ἵνα καταισχύνῃ τὰ ἰσχυρά,"
+  },
+  {
+   "v": 28,
+   "en": "God chose the lowly things of the world, and the things that are despised, and the things that don’t exist, that he might bring to nothing the things that exist,",
+   "gr": "καὶ τὰ ἀγενῆ τοῦ κόσμου καὶ τὰ ἐξουθενημένα ἐξελέξατο ὁ θεός, ⸀τὰ μὴ ὄντα, ἵνα τὰ ὄντα καταργήσῃ,"
+  },
+  {
+   "v": 29,
+   "en": "that no flesh should boast before God.",
+   "gr": "ὅπως μὴ καυχήσηται πᾶσα σὰρξ ἐνώπιον τοῦ θεοῦ."
+  },
+  {
+   "v": 30,
+   "en": "Because of him, you are in Christ Jesus, who was made to us wisdom from God, and righteousness and sanctification, and redemption:",
+   "gr": "ἐξ αὐτοῦ δὲ ὑμεῖς ἐστε ἐν Χριστῷ Ἰησοῦ, ὃς ἐγενήθη ⸂σοφία ἡμῖν⸃ ἀπὸ θεοῦ, δικαιοσύνη τε καὶ ἁγιασμὸς καὶ ἀπολύτρωσις,"
+  },
+  {
+   "v": 31,
+   "en": "that, as it is written, “He who boasts, let him boast in the Lord.”",
+   "gr": "ἵνα καθὼς γέγραπται· Ὁ καυχώμενος ἐν κυρίῳ καυχάσθω."
+  }
+ ],
+ "sourcing": "sourced"
+}

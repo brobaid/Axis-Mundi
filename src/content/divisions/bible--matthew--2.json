@@ -1,0 +1,125 @@
+{
+ "id": "bible--matthew--2",
+ "work": "bible",
+ "n": 40,
+ "slug": "matthew",
+ "c": 2,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Now when Jesus was born in Bethlehem of Judea in the days of King Herod, behold, wise men from the east came to Jerusalem, saying,",
+   "gr": "Τοῦ δὲ Ἰησοῦ γεννηθέντος ἐν Βηθλέεμ τῆς Ἰουδαίας ἐν ἡμέραις Ἡρῴδου τοῦ βασιλέως, ἰδοὺ μάγοι ἀπὸ ἀνατολῶν παρεγένοντο εἰς Ἱεροσόλυμα"
+  },
+  {
+   "v": 2,
+   "en": "“Where is he who is born King of the Jews? For we saw his star in the east, and have come to worship him.”",
+   "gr": "λέγοντες· Ποῦ ἐστιν ὁ τεχθεὶς βασιλεὺς τῶν Ἰουδαίων; εἴδομεν γὰρ αὐτοῦ τὸν ἀστέρα ἐν τῇ ἀνατολῇ καὶ ἤλθομεν προσκυνῆσαι αὐτῷ."
+  },
+  {
+   "v": 3,
+   "en": "When King Herod heard it, he was troubled, and all Jerusalem with him.",
+   "gr": "ἀκούσας δὲ ⸂ὁ βασιλεὺς Ἡρῴδης⸃ ἐταράχθη καὶ πᾶσα Ἱεροσόλυμα μετʼ αὐτοῦ,"
+  },
+  {
+   "v": 4,
+   "en": "Gathering together all the chief priests and scribes of the people, he asked them where the Christ would be born.",
+   "gr": "καὶ συναγαγὼν πάντας τοὺς ἀρχιερεῖς καὶ γραμματεῖς τοῦ λαοῦ ἐπυνθάνετο παρʼ αὐτῶν ποῦ ὁ χριστὸς γεννᾶται."
+  },
+  {
+   "v": 5,
+   "en": "They said to him, “In Bethlehem of Judea, for this is written through the prophet,",
+   "gr": "οἱ δὲ εἶπαν αὐτῷ· Ἐν Βηθλέεμ τῆς Ἰουδαίας· οὕτως γὰρ γέγραπται διὰ τοῦ προφήτου·"
+  },
+  {
+   "v": 6,
+   "en": "‘You Bethlehem, land of Judah, are in no way least among the princes of Judah: for out of you shall come a governor, who shall shepherd my people, Israel.’ ”",
+   "gr": "Καὶ σύ, Βηθλέεμ γῆ Ἰούδα, οὐδαμῶς ἐλαχίστη εἶ ἐν τοῖς ἡγεμόσιν Ἰούδα· ἐκ σοῦ γὰρ ἐξελεύσεται ἡγούμενος, ὅστις ποιμανεῖ τὸν λαόν μου τὸν Ἰσραήλ."
+  },
+  {
+   "v": 7,
+   "en": "Then Herod secretly called the wise men, and learned from them exactly what time the star appeared.",
+   "gr": "Τότε Ἡρῴδης λάθρᾳ καλέσας τοὺς μάγους ἠκρίβωσεν παρʼ αὐτῶν τὸν χρόνον τοῦ φαινομένου ἀστέρος,"
+  },
+  {
+   "v": 8,
+   "en": "He sent them to Bethlehem, and said, “Go and search diligently for the young child. When you have found him, bring me word, so that I also may come and worship him.”",
+   "gr": "καὶ πέμψας αὐτοὺς εἰς Βηθλέεμ εἶπεν· Πορευθέντες ⸂ἐξετάσατε ἀκριβῶς⸃ περὶ τοῦ παιδίου· ἐπὰν δὲ εὕρητε, ἀπαγγείλατέ μοι, ὅπως κἀγὼ ἐλθὼν προσκυνήσω αὐτῷ."
+  },
+  {
+   "v": 9,
+   "en": "They, having heard the king, went their way; and behold, the star, which they saw in the east, went before them, until it came and stood over where the young child was.",
+   "gr": "οἱ δὲ ἀκούσαντες τοῦ βασιλέως ἐπορεύθησαν, καὶ ἰδοὺ ὁ ἀστὴρ ὃν εἶδον ἐν τῇ ἀνατολῇ προῆγεν αὐτούς, ἕως ἐλθὼν ⸀ἐστάθη ἐπάνω οὗ ἦν τὸ παιδίον."
+  },
+  {
+   "v": 10,
+   "en": "When they saw the star, they rejoiced with exceedingly great joy.",
+   "gr": "ἰδόντες δὲ τὸν ἀστέρα ἐχάρησαν χαρὰν μεγάλην σφόδρα."
+  },
+  {
+   "v": 11,
+   "en": "They came into the house and saw the young child with Mary, his mother, and they fell down and worshiped him. Opening their treasures, they offered to him gifts: gold, frankincense, and myrrh.",
+   "gr": "καὶ ἐλθόντες εἰς τὴν οἰκίαν εἶδον τὸ παιδίον μετὰ Μαρίας τῆς μητρὸς αὐτοῦ, καὶ πεσόντες προσεκύνησαν αὐτῷ, καὶ ἀνοίξαντες τοὺς θησαυροὺς αὐτῶν προσήνεγκαν αὐτῷ δῶρα, χρυσὸν καὶ λίβανον καὶ σμύρναν."
+  },
+  {
+   "v": 12,
+   "en": "Being warned in a dream not to return to Herod, they went back to their own country another way.",
+   "gr": "καὶ χρηματισθέντες κατʼ ὄναρ μὴ ἀνακάμψαι πρὸς Ἡρῴδην διʼ ἄλλης ὁδοῦ ἀνεχώρησαν εἰς τὴν χώραν αὐτῶν."
+  },
+  {
+   "v": 13,
+   "en": "Now when they had departed, behold, an angel of the Lord appeared to Joseph in a dream, saying, “Arise and take the young child and his mother, and flee into Egypt, and stay there until I tell you, for Herod will seek the young child to destroy him.”",
+   "gr": "Ἀναχωρησάντων δὲ αὐτῶν ἰδοὺ ἄγγελος κυρίου ⸂φαίνεται κατʼ ὄναρ⸃ τῷ Ἰωσὴφ λέγων· Ἐγερθεὶς παράλαβε τὸ παιδίον καὶ τὴν μητέρα αὐτοῦ καὶ φεῦγε εἰς Αἴγυπτον, καὶ ἴσθι ἐκεῖ ἕως ἂν εἴπω σοι· μέλλει γὰρ Ἡρῴδης ζητεῖν τὸ παιδίον τοῦ ἀπολέσαι αὐτό."
+  },
+  {
+   "v": 14,
+   "en": "He arose and took the young child and his mother by night, and departed into Egypt,",
+   "gr": "ὁ δὲ ἐγερθεὶς παρέλαβε τὸ παιδίον καὶ τὴν μητέρα αὐτοῦ νυκτὸς καὶ ἀνεχώρησεν εἰς Αἴγυπτον,"
+  },
+  {
+   "v": 15,
+   "en": "and was there until the death of Herod; that it might be fulfilled which was spoken by the Lord through the prophet, saying, “Out of Egypt I called my son.”",
+   "gr": "καὶ ἦν ἐκεῖ ἕως τῆς τελευτῆς Ἡρῴδου· ἵνα πληρωθῇ τὸ ῥηθὲν ⸀ὑπὸ κυρίου διὰ τοῦ προφήτου λέγοντος· Ἐξ Αἰγύπτου ἐκάλεσα τὸν υἱόν μου."
+  },
+  {
+   "v": 16,
+   "en": "Then Herod, when he saw that he was mocked by the wise men, was exceedingly angry, and sent out, and killed all the male children who were in Bethlehem and in all the surrounding countryside, from two years old and under, according to the exact time which he had learned from the wise men.",
+   "gr": "Τότε Ἡρῴδης ἰδὼν ὅτι ἐνεπαίχθη ὑπὸ τῶν μάγων ἐθυμώθη λίαν, καὶ ἀποστείλας ἀνεῖλεν πάντας τοὺς παῖδας τοὺς ἐν Βηθλέεμ καὶ ἐν πᾶσι τοῖς ὁρίοις αὐτῆς ἀπὸ διετοῦς καὶ κατωτέρω, κατὰ τὸν χρόνον ὃν ἠκρίβωσεν παρὰ τῶν μάγων."
+  },
+  {
+   "v": 17,
+   "en": "Then that which was spoken by Jeremiah the prophet was fulfilled, saying,",
+   "gr": "τότε ἐπληρώθη τὸ ῥηθὲν ⸀διὰ Ἰερεμίου τοῦ προφήτου λέγοντος·"
+  },
+  {
+   "v": 18,
+   "en": "“A voice was heard in Ramah, lamentation, weeping and great mourning, Rachel weeping for her children; she wouldn’t be comforted, because they are no more.”",
+   "gr": "Φωνὴ ἐν Ῥαμὰ ⸀ἠκούσθη, κλαυθμὸς καὶ ὀδυρμὸς πολύς· Ῥαχὴλ κλαίουσα τὰ τέκνα αὐτῆς, καὶ οὐκ ἤθελεν παρακληθῆναι ὅτι οὐκ εἰσίν."
+  },
+  {
+   "v": 19,
+   "en": "But when Herod was dead, behold, an angel of the Lord appeared in a dream to Joseph in Egypt, saying,",
+   "gr": "Τελευτήσαντος δὲ τοῦ Ἡρῴδου ἰδοὺ ἄγγελος κυρίου ⸂φαίνεται κατʼ ὄναρ⸃ τῷ Ἰωσὴφ ἐν Αἰγύπτῳ"
+  },
+  {
+   "v": 20,
+   "en": "“Arise and take the young child and his mother, and go into the land of Israel, for those who sought the young child’s life are dead.”",
+   "gr": "λέγων· Ἐγερθεὶς παράλαβε τὸ παιδίον καὶ τὴν μητέρα αὐτοῦ καὶ πορεύου εἰς γῆν Ἰσραήλ, τεθνήκασιν γὰρ οἱ ζητοῦντες τὴν ψυχὴν τοῦ παιδίου."
+  },
+  {
+   "v": 21,
+   "en": "He arose and took the young child and his mother, and came into the land of Israel.",
+   "gr": "ὁ δὲ ἐγερθεὶς παρέλαβε τὸ παιδίον καὶ τὴν μητέρα αὐτοῦ καὶ ⸀εἰσῆλθεν εἰς γῆν Ἰσραήλ."
+  },
+  {
+   "v": 22,
+   "en": "But when he heard that Archelaus was reigning over Judea in the place of his father, Herod, he was afraid to go there. Being warned in a dream, he withdrew into the region of Galilee,",
+   "gr": "ἀκούσας δὲ ὅτι Ἀρχέλαος ⸀βασιλεύει τῆς Ἰουδαίας ἀντὶ ⸂τοῦ πατρὸς αὐτοῦ Ἡρῴδου⸃ ἐφοβήθη ἐκεῖ ἀπελθεῖν· χρηματισθεὶς δὲ κατʼ ὄναρ ἀνεχώρησεν εἰς τὰ μέρη τῆς Γαλιλαίας,"
+  },
+  {
+   "v": 23,
+   "en": "and came and lived in a city called Nazareth; that it might be fulfilled which was spoken through the prophets that he will be called a Nazarene.",
+   "gr": "καὶ ἐλθὼν κατῴκησεν εἰς πόλιν λεγομένην Ναζαρέτ, ὅπως πληρωθῇ τὸ ῥηθὲν διὰ τῶν προφητῶν ὅτι Ναζωραῖος κληθήσεται."
+  }
+ ],
+ "sourcing": "sourced"
+}

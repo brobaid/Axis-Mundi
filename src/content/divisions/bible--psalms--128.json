@@ -1,0 +1,34 @@
+{
+ "id": "bible--psalms--128",
+ "work": "bible",
+ "n": 19,
+ "slug": "psalms",
+ "c": 128,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Blessed is everyone who fears Yahweh, who walks in his ways."
+  },
+  {
+   "v": 2,
+   "en": "For you will eat the labor of your hands. You will be happy, and it will be well with you."
+  },
+  {
+   "v": 3,
+   "en": "Your wife will be as a fruitful vine in the innermost parts of your house, your children like olive plants around your table."
+  },
+  {
+   "v": 4,
+   "en": "Behold, thus is the man blessed who fears Yahweh."
+  },
+  {
+   "v": 5,
+   "en": "May Yahweh bless you out of Zion, and may you see the good of Jerusalem all the days of your life."
+  },
+  {
+   "v": 6,
+   "en": "Yes, may you see your children’s children. Peace be upon Israel."
+  }
+ ],
+ "sourcing": "sourced"
+}

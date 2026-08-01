@@ -1,0 +1,305 @@
+{
+ "id": "bible--luke--12",
+ "work": "bible",
+ "n": 42,
+ "slug": "luke",
+ "c": 12,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Meanwhile, when a multitude of many thousands had gathered together, so much so that they trampled on each other, he began to tell his disciples first of all, “Beware of the yeast of the Pharisees, which is hypocrisy.",
+   "gr": "Ἐν οἷς ἐπισυναχθεισῶν τῶν μυριάδων τοῦ ὄχλου, ὥστε καταπατεῖν ἀλλήλους, ἤρξατο λέγειν πρὸς τοὺς μαθητὰς αὐτοῦ πρῶτον· Προσέχετε ἑαυτοῖς ἀπὸ τῆς ζύμης, ⸂ἥτις ἐστὶν ὑπόκρισις, τῶν Φαρισαίων⸃."
+  },
+  {
+   "v": 2,
+   "en": "But there is nothing covered up that will not be revealed, nor hidden that will not be known.",
+   "gr": "οὐδὲν δὲ συγκεκαλυμμένον ἐστὶν ὃ οὐκ ἀποκαλυφθήσεται, καὶ κρυπτὸν ὃ οὐ γνωσθήσεται."
+  },
+  {
+   "v": 3,
+   "en": "Therefore whatever you have said in the darkness will be heard in the light. What you have spoken in the ear in the inner rooms will be proclaimed on the housetops.",
+   "gr": "ἀνθʼ ὧν ὅσα ἐν τῇ σκοτίᾳ εἴπατε ἐν τῷ φωτὶ ἀκουσθήσεται, καὶ ὃ πρὸς τὸ οὖς ἐλαλήσατε ἐν τοῖς ταμείοις κηρυχθήσεται ἐπὶ τῶν δωμάτων."
+  },
+  {
+   "v": 4,
+   "en": "“I tell you, my friends, don’t be afraid of those who kill the body, and after that have no more that they can do.",
+   "gr": "Λέγω δὲ ὑμῖν τοῖς φίλοις μου, μὴ φοβηθῆτε ἀπὸ τῶν ἀποκτεινόντων τὸ σῶμα καὶ μετὰ ταῦτα μὴ ἐχόντων περισσότερόν τι ποιῆσαι."
+  },
+  {
+   "v": 5,
+   "en": "But I will warn you whom you should fear. Fear him who after he has killed, has power to cast into Gehenna. Yes, I tell you, fear him.",
+   "gr": "ὑποδείξω δὲ ὑμῖν τίνα φοβηθῆτε· φοβήθητε τὸν μετὰ τὸ ἀποκτεῖναι ⸂ἔχοντα ἐξουσίαν⸃ ἐμβαλεῖν εἰς τὴν γέενναν· ναί, λέγω ὑμῖν, τοῦτον φοβήθητε."
+  },
+  {
+   "v": 6,
+   "en": "“Aren’t five sparrows sold for two assaria coins? Not one of them is forgotten by God.",
+   "gr": "οὐχὶ πέντε στρουθία ⸀πωλοῦνται ἀσσαρίων δύο; καὶ ἓν ἐξ αὐτῶν οὐκ ἔστιν ἐπιλελησμένον ἐνώπιον τοῦ θεοῦ."
+  },
+  {
+   "v": 7,
+   "en": "But the very hairs of your head are all counted. Therefore don’t be afraid. You are of more value than many sparrows.",
+   "gr": "ἀλλὰ καὶ αἱ τρίχες τῆς κεφαλῆς ὑμῶν πᾶσαι ἠρίθμηνται· ⸀μὴ φοβεῖσθε· πολλῶν στρουθίων διαφέρετε."
+  },
+  {
+   "v": 8,
+   "en": "“I tell you, everyone who confesses me before men, the Son of Man will also confess before the angels of God;",
+   "gr": "Λέγω δὲ ὑμῖν, πᾶς ὃς ἂν ⸀ὁμολογήσῃ ἐν ἐμοὶ ἔμπροσθεν τῶν ἀνθρώπων, καὶ ὁ υἱὸς τοῦ ἀνθρώπου ὁμολογήσει ἐν αὐτῷ ἔμπροσθεν τῶν ἀγγέλων τοῦ θεοῦ·"
+  },
+  {
+   "v": 9,
+   "en": "but he who denies me in the presence of men will be denied in the presence of God’s angels.",
+   "gr": "ὁ δὲ ἀρνησάμενός με ἐνώπιον τῶν ἀνθρώπων ἀπαρνηθήσεται ἐνώπιον τῶν ἀγγέλων τοῦ θεοῦ."
+  },
+  {
+   "v": 10,
+   "en": "Everyone who speaks a word against the Son of Man will be forgiven, but those who blaspheme against the Holy Spirit will not be forgiven.",
+   "gr": "καὶ πᾶς ὃς ἐρεῖ λόγον εἰς τὸν υἱὸν τοῦ ἀνθρώπου, ἀφεθήσεται αὐτῷ τῷ δὲ εἰς τὸ ἅγιον πνεῦμα βλασφημήσαντι οὐκ ἀφεθήσεται."
+  },
+  {
+   "v": 11,
+   "en": "When they bring you before the synagogues, the rulers, and the authorities, don’t be anxious how or what you will answer, or what you will say;",
+   "gr": "ὅταν δὲ ⸀εἰσφέρωσιν ὑμᾶς ἐπὶ τὰς συναγωγὰς καὶ τὰς ἀρχὰς καὶ τὰς ἐξουσίας, μὴ ⸀μεριμνήσητε πῶς ⸂ἢ τί⸃ ἀπολογήσησθε ἢ τί εἴπητε·"
+  },
+  {
+   "v": 12,
+   "en": "for the Holy Spirit will teach you in that same hour what you must say.”",
+   "gr": "τὸ γὰρ ἅγιον πνεῦμα διδάξει ὑμᾶς ἐν αὐτῇ τῇ ὥρᾳ ἃ δεῖ εἰπεῖν."
+  },
+  {
+   "v": 13,
+   "en": "One of the multitude said to him, “Teacher, tell my brother to divide the inheritance with me.”",
+   "gr": "Εἶπεν δέ τις ⸂ἐκ τοῦ ὄχλου αὐτῷ⸃· Διδάσκαλε, εἰπὲ τῷ ἀδελφῷ μου μερίσασθαι μετʼ ἐμοῦ τὴν κληρονομίαν."
+  },
+  {
+   "v": 14,
+   "en": "But he said to him, “Man, who made me a judge or an arbitrator over you?”",
+   "gr": "ὁ δὲ εἶπεν αὐτῷ· Ἄνθρωπε, τίς με κατέστησεν ⸀κριτὴν ἢ μεριστὴν ἐφʼ ὑμᾶς;"
+  },
+  {
+   "v": 15,
+   "en": "He said to them, “Beware! Keep yourselves from covetousness, for a man’s life doesn’t consist of the abundance of the things which he possesses.”",
+   "gr": "εἶπεν δὲ πρὸς αὐτούς· Ὁρᾶτε καὶ φυλάσσεσθε ἀπὸ ⸀πάσης πλεονεξίας, ὅτι οὐκ ἐν τῷ περισσεύειν τινὶ ἡ ζωὴ ⸀αὐτοῦ ἐστιν ἐκ τῶν ὑπαρχόντων ⸀αὐτῷ."
+  },
+  {
+   "v": 16,
+   "en": "He spoke a parable to them, saying, “The ground of a certain rich man produced abundantly.",
+   "gr": "εἶπεν δὲ παραβολὴν πρὸς αὐτοὺς λέγων· Ἀνθρώπου τινὸς πλουσίου εὐφόρησεν ἡ χώρα."
+  },
+  {
+   "v": 17,
+   "en": "He reasoned within himself, saying, ‘What will I do, because I don’t have room to store my crops?’",
+   "gr": "καὶ διελογίζετο ἐν ⸀ἑαυτῷ λέγων· Τί ποιήσω, ὅτι οὐκ ἔχω ποῦ συνάξω τοὺς καρπούς μου;"
+  },
+  {
+   "v": 18,
+   "en": "He said, ‘This is what I will do. I will pull down my barns, build bigger ones, and there I will store all my grain and my goods.",
+   "gr": "καὶ εἶπεν· Τοῦτο ποιήσω· καθελῶ μου τὰς ἀποθήκας καὶ μείζονας οἰκοδομήσω, καὶ συνάξω ἐκεῖ πάντα ⸂τὸν σῖτον⸃ καὶ τὰ ἀγαθά μου,"
+  },
+  {
+   "v": 19,
+   "en": "I will tell my soul, “Soul, you have many goods laid up for many years. Take your ease, eat, drink, and be merry.” ’",
+   "gr": "καὶ ἐρῶ τῇ ψυχῇ μου· Ψυχή, ἔχεις πολλὰ ἀγαθὰ κείμενα εἰς ἔτη πολλά· ἀναπαύου, φάγε, πίε, εὐφραίνου."
+  },
+  {
+   "v": 20,
+   "en": "“But God said to him, ‘You foolish one, tonight your soul is required of you. The things which you have prepared—whose will they be?’",
+   "gr": "εἶπεν δὲ αὐτῷ ὁ θεός· ⸀Ἄφρων, ταύτῃ τῇ νυκτὶ τὴν ψυχήν σου ⸀ἀπαιτοῦσιν ἀπὸ σοῦ· ἃ δὲ ἡτοίμασας, τίνι ἔσται;"
+  },
+  {
+   "v": 21,
+   "en": "So is he who lays up treasure for himself, and is not rich toward God.”",
+   "gr": "οὕτως ὁ θησαυρίζων ⸀ἑαυτῷ καὶ μὴ εἰς θεὸν πλουτῶν."
+  },
+  {
+   "v": 22,
+   "en": "He said to his disciples, “Therefore I tell you, don’t be anxious for your life, what you will eat, nor yet for your body, what you will wear.",
+   "gr": "Εἶπεν δὲ πρὸς τοὺς μαθητὰς αὐτοῦ· Διὰ τοῦτο ⸂λέγω ὑμῖν⸃, μὴ μεριμνᾶτε τῇ ⸀ψυχῇ τί φάγητε, μηδὲ τῷ ⸀σώματι τί ἐνδύσησθε."
+  },
+  {
+   "v": 23,
+   "en": "Life is more than food, and the body is more than clothing.",
+   "gr": "ἡ ⸀γὰρ ψυχὴ πλεῖόν ἐστιν τῆς τροφῆς καὶ τὸ σῶμα τοῦ ἐνδύματος."
+  },
+  {
+   "v": 24,
+   "en": "Consider the ravens: they don’t sow, they don’t reap, they have no warehouse or barn, and God feeds them. How much more valuable are you than birds!",
+   "gr": "κατανοήσατε τοὺς κόρακας ὅτι οὐ σπείρουσιν οὐδὲ θερίζουσιν, οἷς οὐκ ἔστιν ταμεῖον οὐδὲ ἀποθήκη, καὶ ὁ θεὸς τρέφει αὐτούς· πόσῳ μᾶλλον ὑμεῖς διαφέρετε τῶν πετεινῶν."
+  },
+  {
+   "v": 25,
+   "en": "Which of you by being anxious can add a cubit to his height?",
+   "gr": "τίς δὲ ἐξ ὑμῶν μεριμνῶν δύναται ⸂ἐπὶ τὴν ἡλικίαν αὐτοῦ προσθεῖναι⸃ ⸀πῆχυν;"
+  },
+  {
+   "v": 26,
+   "en": "If then you aren’t able to do even the least things, why are you anxious about the rest?",
+   "gr": "εἰ οὖν ⸀οὐδὲ ἐλάχιστον δύνασθε, τί περὶ τῶν λοιπῶν μεριμνᾶτε;"
+  },
+  {
+   "v": 27,
+   "en": "Consider the lilies, how they grow. They don’t toil, neither do they spin; yet I tell you, even Solomon in all his glory was not arrayed like one of these.",
+   "gr": "κατανοήσατε τὰ κρίνα πῶς αὐξάνει· οὐ κοπιᾷ οὐδὲ νήθει· λέγω δὲ ὑμῖν, οὐδὲ Σολομὼν ἐν πάσῃ τῇ δόξῃ αὐτοῦ περιεβάλετο ὡς ἓν τούτων."
+  },
+  {
+   "v": 28,
+   "en": "But if this is how God clothes the grass in the field, which today exists, and tomorrow is cast into the oven, how much more will he clothe you, O you of little faith?",
+   "gr": "εἰ δὲ ⸂ἐν ἀγρῷ τὸν χόρτον ὄντα σήμερον⸃ καὶ αὔριον εἰς κλίβανον βαλλόμενον ὁ θεὸς οὕτως ⸀ἀμφιέζει, πόσῳ μᾶλλον ὑμᾶς, ὀλιγόπιστοι."
+  },
+  {
+   "v": 29,
+   "en": "Don’t seek what you will eat or what you will drink; neither be anxious.",
+   "gr": "καὶ ὑμεῖς μὴ ζητεῖτε τί φάγητε ⸀καὶ τί πίητε, καὶ μὴ μετεωρίζεσθε,"
+  },
+  {
+   "v": 30,
+   "en": "For the nations of the world seek after all of these things, but your Father knows that you need these things.",
+   "gr": "ταῦτα γὰρ πάντα τὰ ἔθνη τοῦ κόσμου ⸀ἐπιζητοῦσιν, ὑμῶν δὲ ὁ πατὴρ οἶδεν ὅτι χρῄζετε τούτων."
+  },
+  {
+   "v": 31,
+   "en": "But seek God’s Kingdom, and all these things will be added to you.",
+   "gr": "πλὴν ζητεῖτε τὴν βασιλείαν ⸀αὐτοῦ, καὶ ⸀ταῦτα προστεθήσεται ὑμῖν."
+  },
+  {
+   "v": 32,
+   "en": "Don’t be afraid, little flock, for it is your Father’s good pleasure to give you the Kingdom.",
+   "gr": "Μὴ φοβοῦ, τὸ μικρὸν ποίμνιον, ὅτι εὐδόκησεν ὁ πατὴρ ὑμῶν δοῦναι ὑμῖν τὴν βασιλείαν."
+  },
+  {
+   "v": 33,
+   "en": "Sell that which you have, and give gifts to the needy. Make for yourselves purses which don’t grow old, a treasure in the heavens that doesn’t fail, where no thief approaches, neither moth destroys.",
+   "gr": "πωλήσατε τὰ ὑπάρχοντα ὑμῶν καὶ δότε ἐλεημοσύνην· ποιήσατε ἑαυτοῖς βαλλάντια μὴ παλαιούμενα, θησαυρὸν ἀνέκλειπτον ἐν τοῖς οὐρανοῖς, ὅπου κλέπτης οὐκ ἐγγίζει οὐδὲ σὴς διαφθείρει·"
+  },
+  {
+   "v": 34,
+   "en": "For where your treasure is, there will your heart be also.",
+   "gr": "ὅπου γάρ ἐστιν ὁ θησαυρὸς ὑμῶν, ἐκεῖ καὶ ἡ καρδία ὑμῶν ἔσται."
+  },
+  {
+   "v": 35,
+   "en": "“Let your waist be dressed and your lamps burning.",
+   "gr": "Ἔστωσαν ὑμῶν αἱ ὀσφύες περιεζωσμέναι καὶ οἱ λύχνοι καιόμενοι,"
+  },
+  {
+   "v": 36,
+   "en": "Be like men watching for their lord, when he returns from the wedding feast; that when he comes and knocks, they may immediately open to him.",
+   "gr": "καὶ ὑμεῖς ὅμοιοι ἀνθρώποις προσδεχομένοις τὸν κύριον ἑαυτῶν πότε ἀναλύσῃ ἐκ τῶν γάμων, ἵνα ἐλθόντος καὶ κρούσαντος εὐθέως ἀνοίξωσιν αὐτῷ."
+  },
+  {
+   "v": 37,
+   "en": "Blessed are those servants, whom the lord will find watching when he comes. Most certainly I tell you that he will dress himself, make them recline, and will come and serve them.",
+   "gr": "μακάριοι οἱ δοῦλοι ἐκεῖνοι, οὓς ἐλθὼν ὁ κύριος εὑρήσει γρηγοροῦντας· ἀμὴν λέγω ὑμῖν ὅτι περιζώσεται καὶ ἀνακλινεῖ αὐτοὺς καὶ παρελθὼν διακονήσει αὐτοῖς."
+  },
+  {
+   "v": 38,
+   "en": "They will be blessed if he comes in the second or third watch, and finds them so.",
+   "gr": "⸂κἂν ἐν τῇ δευτέρᾳ κἂν⸃ ἐν τῇ τρίτῃ φυλακῇ ἔλθῃ καὶ εὕρῃ οὕτως, μακάριοί ⸀εἰσιν ἐκεῖνοι."
+  },
+  {
+   "v": 39,
+   "en": "But know this, that if the master of the house had known in what hour the thief was coming, he would have watched, and not allowed his house to be broken into.",
+   "gr": "Τοῦτο δὲ γινώσκετε ὅτι εἰ ᾔδει ὁ οἰκοδεσπότης ποίᾳ ὥρᾳ ὁ κλέπτης ἔρχεται, ⸂οὐκ ἂν⸃ ἀφῆκεν ⸀διορυχθῆναι τὸν οἶκον αὐτοῦ."
+  },
+  {
+   "v": 40,
+   "en": "Therefore be ready also, for the Son of Man is coming in an hour that you don’t expect him.”",
+   "gr": "καὶ ⸀ὑμεῖς γίνεσθε ἕτοιμοι, ὅτι ᾗ ὥρᾳ οὐ δοκεῖτε ὁ υἱὸς τοῦ ἀνθρώπου ἔρχεται."
+  },
+  {
+   "v": 41,
+   "en": "Peter said to him, “Lord, are you telling this parable to us, or to everybody?”",
+   "gr": "Εἶπεν ⸀δὲ ὁ Πέτρος· Κύριε, πρὸς ἡμᾶς τὴν παραβολὴν ταύτην λέγεις ἢ καὶ πρὸς πάντας;"
+  },
+  {
+   "v": 42,
+   "en": "The Lord said, “Who then is the faithful and wise steward, whom his lord will set over his household, to give them their portion of food at the right times?",
+   "gr": "⸂καὶ εἶπεν⸃ ὁ κύριος· Τίς ἄρα ἐστὶν ὁ πιστὸς οἰκονόμος, ⸀ὁ φρόνιμος, ὃν καταστήσει ὁ κύριος ἐπὶ τῆς θεραπείας αὐτοῦ τοῦ διδόναι ἐν καιρῷ ⸀τὸ σιτομέτριον;"
+  },
+  {
+   "v": 43,
+   "en": "Blessed is that servant whom his lord will find doing so when he comes.",
+   "gr": "μακάριος ὁ δοῦλος ἐκεῖνος, ὃν ἐλθὼν ὁ κύριος αὐτοῦ εὑρήσει ποιοῦντα οὕτως·"
+  },
+  {
+   "v": 44,
+   "en": "Truly I tell you, that he will set him over all that he has.",
+   "gr": "ἀληθῶς λέγω ὑμῖν ὅτι ἐπὶ πᾶσιν τοῖς ὑπάρχουσιν αὐτοῦ καταστήσει αὐτόν."
+  },
+  {
+   "v": 45,
+   "en": "But if that servant says in his heart, ‘My lord delays his coming,’ and begins to beat the menservants and the maidservants, and to eat and drink, and to be drunken,",
+   "gr": "ἐὰν δὲ εἴπῃ ὁ δοῦλος ἐκεῖνος ἐν τῇ καρδίᾳ αὐτοῦ· Χρονίζει ὁ κύριός μου ἔρχεσθαι, καὶ ἄρξηται τύπτειν τοὺς παῖδας καὶ τὰς παιδίσκας, ἐσθίειν τε καὶ πίνειν καὶ μεθύσκεσθαι,"
+  },
+  {
+   "v": 46,
+   "en": "then the lord of that servant will come in a day when he isn’t expecting him, and in an hour that he doesn’t know, and will cut him in two, and place his portion with the unfaithful.",
+   "gr": "ἥξει ὁ κύριος τοῦ δούλου ἐκείνου ἐν ἡμέρᾳ ᾗ οὐ προσδοκᾷ καὶ ἐν ὥρᾳ ᾗ οὐ γινώσκει, καὶ διχοτομήσει αὐτὸν καὶ τὸ μέρος αὐτοῦ μετὰ τῶν ἀπίστων θήσει."
+  },
+  {
+   "v": 47,
+   "en": "That servant, who knew his lord’s will, and didn’t prepare, nor do what he wanted, will be beaten with many stripes,",
+   "gr": "ἐκεῖνος δὲ ὁ δοῦλος ὁ γνοὺς τὸ θέλημα τοῦ κυρίου ⸀αὐτοῦ καὶ μὴ ἑτοιμάσας ⸀ἢ ποιήσας πρὸς τὸ θέλημα αὐτοῦ δαρήσεται πολλάς·"
+  },
+  {
+   "v": 48,
+   "en": "but he who didn’t know, and did things worthy of stripes, will be beaten with few stripes. To whomever much is given, of him will much be required; and to whom much was entrusted, of him more will be asked.",
+   "gr": "ὁ δὲ μὴ γνοὺς ποιήσας δὲ ἄξια πληγῶν δαρήσεται ὀλίγας. παντὶ δὲ ᾧ ἐδόθη πολύ, πολὺ ζητηθήσεται παρʼ αὐτοῦ, καὶ ᾧ παρέθεντο πολύ, περισσότερον αἰτήσουσιν αὐτόν."
+  },
+  {
+   "v": 49,
+   "en": "“I came to throw fire on the earth. I wish it were already kindled.",
+   "gr": "Πῦρ ἦλθον βαλεῖν ⸀ἐπὶ τὴν γῆν, καὶ τί θέλω εἰ ἤδη ἀνήφθη;"
+  },
+  {
+   "v": 50,
+   "en": "But I have a baptism to be baptized with, and how distressed I am until it is accomplished!",
+   "gr": "βάπτισμα δὲ ἔχω βαπτισθῆναι, καὶ πῶς συνέχομαι ἕως ⸀ὅτου τελεσθῇ."
+  },
+  {
+   "v": 51,
+   "en": "Do you think that I have come to give peace in the earth? I tell you, no, but rather division.",
+   "gr": "δοκεῖτε ὅτι εἰρήνην παρεγενόμην δοῦναι ἐν τῇ γῇ; οὐχί, λέγω ὑμῖν, ἀλλʼ ἢ διαμερισμόν."
+  },
+  {
+   "v": 52,
+   "en": "For from now on, there will be five in one house divided, three against two, and two against three.",
+   "gr": "ἔσονται γὰρ ἀπὸ τοῦ νῦν πέντε ἐν ⸂ἑνὶ οἴκῳ⸃ διαμεμερισμένοι, τρεῖς ἐπὶ δυσὶν καὶ δύο ἐπὶ τρισίν,"
+  },
+  {
+   "v": 53,
+   "en": "They will be divided, father against son, and son against father; mother against daughter, and daughter against her mother; mother-in-law against her daughter-in-law, and daughter-in-law against her mother-in-law.”",
+   "gr": "⸀διαμερισθήσονται πατὴρ ἐπὶ υἱῷ καὶ υἱὸς ἐπὶ πατρί, μήτηρ ⸀ἐπὶ ⸀θυγατέρα καὶ θυγάτηρ ἐπὶ ⸂τὴν μητέρα⸃, πενθερὰ ἐπὶ τὴν νύμφην αὐτῆς καὶ νύμφη ἐπὶ τὴν ⸀πενθεράν."
+  },
+  {
+   "v": 54,
+   "en": "He said to the multitudes also, “When you see a cloud rising from the west, immediately you say, ‘A shower is coming,’ and so it happens.",
+   "gr": "Ἔλεγεν δὲ καὶ τοῖς ὄχλοις· Ὅταν ⸀ἴδητε νεφέλην ἀνατέλλουσαν ⸀ἐπὶ δυσμῶν, εὐθέως λέγετε ⸀ὅτι Ὄμβρος ἔρχεται, καὶ γίνεται οὕτως·"
+  },
+  {
+   "v": 55,
+   "en": "When a south wind blows, you say, ‘There will be a scorching heat,’ and it happens.",
+   "gr": "καὶ ὅταν νότον πνέοντα, λέγετε ὅτι Καύσων ἔσται, καὶ γίνεται."
+  },
+  {
+   "v": 56,
+   "en": "You hypocrites! You know how to interpret the appearance of the earth and the sky, but how is it that you don’t interpret this time?",
+   "gr": "ὑποκριταί, τὸ πρόσωπον τῆς γῆς καὶ τοῦ οὐρανοῦ οἴδατε δοκιμάζειν, τὸν ⸂δὲ καιρὸν⸃ τοῦτον πῶς ⸂οὐκ οἴδατε δοκιμάζειν⸃;"
+  },
+  {
+   "v": 57,
+   "en": "Why don’t you judge for yourselves what is right?",
+   "gr": "Τί δὲ καὶ ἀφʼ ἑαυτῶν οὐ κρίνετε τὸ δίκαιον;"
+  },
+  {
+   "v": 58,
+   "en": "For when you are going with your adversary before the magistrate, try diligently on the way to be released from him, lest perhaps he drag you to the judge, and the judge deliver you to the officer, and the officer throw you into prison.",
+   "gr": "ὡς γὰρ ὑπάγεις μετὰ τοῦ ἀντιδίκου σου ἐπʼ ἄρχοντα, ἐν τῇ ὁδῷ δὸς ἐργασίαν ἀπηλλάχθαι ἀπʼ αὐτοῦ, μήποτε κατασύρῃ σε πρὸς τὸν κριτήν, καὶ ὁ κριτής σε ⸀παραδώσει τῷ πράκτορι, καὶ ὁ πράκτωρ σε ⸀βαλεῖ εἰς φυλακήν."
+  },
+  {
+   "v": 59,
+   "en": "I tell you, you will by no means get out of there, until you have paid the very last penny.”",
+   "gr": "λέγω σοι, οὐ μὴ ἐξέλθῃς ἐκεῖθεν ἕως ⸂καὶ τὸ⸃ ἔσχατον λεπτὸν ἀποδῷς."
+  }
+ ],
+ "sourcing": "sourced"
+}

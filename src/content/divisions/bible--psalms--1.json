@@ -1,0 +1,34 @@
+{
+ "id": "bible--psalms--1",
+ "work": "bible",
+ "n": 19,
+ "slug": "psalms",
+ "c": 1,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Blessed is the man who doesn’t walk in the counsel of the wicked, nor stand on the path of sinners, nor sit in the seat of scoffers;"
+  },
+  {
+   "v": 2,
+   "en": "but his delight is in Yahweh’s law. On his law he meditates day and night."
+  },
+  {
+   "v": 3,
+   "en": "He will be like a tree planted by the streams of water, that produces its fruit in its season, whose leaf also does not wither. Whatever he does shall prosper."
+  },
+  {
+   "v": 4,
+   "en": "The wicked are not so, but are like the chaff which the wind drives away."
+  },
+  {
+   "v": 5,
+   "en": "Therefore the wicked shall not stand in the judgment, nor sinners in the congregation of the righteous."
+  },
+  {
+   "v": 6,
+   "en": "For Yahweh knows the way of the righteous, but the way of the wicked shall perish."
+  }
+ ],
+ "sourcing": "sourced"
+}

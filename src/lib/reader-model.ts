@@ -19,6 +19,7 @@ export interface ChapterIndex {
   readonly preview_lang?: string | undefined;
   readonly english_gaps: number;
   readonly original_gaps: number;
+  readonly blank: number;
 }
 
 export interface DivisionIndex {
@@ -26,6 +27,9 @@ export interface DivisionIndex {
   readonly slug: string;
   readonly name?: string | undefined;
   readonly name_original?: string | undefined;
+  readonly name_gloss?: string | undefined;
+  readonly verse_from?: number | undefined;
+  readonly verse_to?: number | undefined;
   readonly transliteration?: string | undefined;
   readonly verses: number;
   /** Present means the division is a contents page and its text is a level down. */
@@ -33,12 +37,15 @@ export interface DivisionIndex {
   readonly section?: string | undefined;
   readonly english_gaps: number;
   readonly original_gaps: number;
+  readonly blank: number;
 }
 
 export interface Section {
   readonly id: string;
   readonly name: string;
   readonly name_original?: string | undefined;
+  /** A line every page inside this section carries. */
+  readonly note?: string | undefined;
   readonly from: number;
   readonly to: number;
 }
@@ -54,6 +61,7 @@ export interface WorkData {
   readonly script: string;
   readonly direction: 'ltr' | 'rtl';
   readonly editions: Readonly<Record<string, string>>;
+  readonly lang_tags?: Readonly<Record<string, string>> | undefined;
   readonly english_pending?: string | undefined;
   readonly note?: string | undefined;
   readonly preface?: {
@@ -68,6 +76,74 @@ export interface WorkData {
   readonly total_chapters?: number | undefined;
   readonly english_gaps: number;
   readonly original_gaps: number;
+  /** Verses no edition carries. Counted in both totals above; stated once. */
+  readonly blank: number;
+  readonly gap_notes?: {
+    readonly original?: string | undefined;
+    readonly english?: string | undefined;
+  } | undefined;
+}
+
+/* ── one-sided verses ───────────────────────────────────────────────────── */
+
+/** Which columns a verse actually carries. */
+export type VerseSides = 'both' | 'english-only' | 'original-only' | 'neither';
+
+export function sidesOf(verse: VerseRow, orig: string, english: boolean): VerseSides {
+  const hasOrig = typeof verse[orig] === 'string';
+  const hasEn = !english || typeof verse['en'] === 'string';
+  if (hasOrig && hasEn) return 'both';
+  if (hasEn) return 'english-only';
+  if (hasOrig) return 'original-only';
+  return 'neither';
+}
+
+/** Whether these verses carry a column at all, as opposed to having holes in it. */
+export const carries = (verses: readonly VerseRow[], lang: string): boolean =>
+  verses.some((v) => typeof v[lang] === 'string');
+
+/**
+ * What a page can actually show, which is not always what the work offers.
+ *
+ * The Bible carries a Greek edition and its Old Testament does not use it: the
+ * Hebrew of those books is in the Tanakh room, by ruling. So an Old Testament
+ * page offers English alone — a toggle promising a column this page has none
+ * of would open on nothing, and the reader would be right to think it broken.
+ */
+export function pageModes(work: Pick<WorkData, 'editions'>, verses: readonly VerseRow[]): Mode[] {
+  const orig = originalLang(work);
+  const hasOrig = orig !== '' && carries(verses, orig);
+  const hasEn = hasEnglish(work) && carries(verses, 'en');
+  if (hasOrig && hasEn) return [...MODES];
+  if (hasOrig) return ['original'];
+  return ['english'];
+}
+
+/**
+ * What to say where a verse stands on one side, or on none.
+ *
+ * The generic lines state the fact and nothing more, because for most canons
+ * that is all anyone can honestly say: two versifications disagree. A canon
+ * whose gaps mean something specific says so instead — a New Testament verse
+ * with no Greek is a verse the critical edition does not carry, which is
+ * text-critical history and worth showing rather than shrugging at.
+ *
+ * A verse with neither column is its own case: the number exists in the
+ * numbering this text is cited by, and no edition here carries words for it.
+ */
+export function gapNote(work: WorkData, sides: VerseSides): string | undefined {
+  switch (sides) {
+    case 'both':
+      return undefined;
+    case 'english-only':
+      return (
+        work.gap_notes?.original ?? 'No verse at this number in the original edition.'
+      );
+    case 'original-only':
+      return work.gap_notes?.english ?? 'No English at this verse number in this edition.';
+    case 'neither':
+      return 'Neither edition carries a verse at this number.';
+  }
 }
 
 /**
@@ -82,6 +158,16 @@ export function originalLang(work: Pick<WorkData, 'editions'>): string {
 
 export const hasEnglish = (work: Pick<WorkData, 'editions'>): boolean =>
   work.editions['en'] !== undefined;
+
+/**
+ * The BCP-47 tag for an edition's column.
+ *
+ * The key the delivery files a column under is not always a language tag —
+ * `gr` is not one at all, and `pli` is not the one BCP-47 asks for. This is
+ * the only place the two are allowed to differ.
+ */
+export const langTag = (work: Pick<WorkData, 'lang_tags'>, column: string): string =>
+  work.lang_tags?.[column] ?? column;
 
 /* ── the reading modes ──────────────────────────────────────────────────── */
 
@@ -124,6 +210,30 @@ export function divisionHeading(
   if (division.name !== undefined) return division.name;
   const label = work.division_label.charAt(0).toUpperCase() + work.division_label.slice(1);
   return `${label} ${division.n}`;
+}
+
+/**
+ * The gloss beside a division's own name — "Yamakavagga / Pairs".
+ *
+ * The canon's name leads and the rendering follows it, because the name is
+ * what the tradition calls the thing and the gloss is what it means. Given by
+ * the delivery, never translated here.
+ */
+export const divisionGloss = (division: Pick<DivisionIndex, 'name_gloss'>): string | undefined =>
+  division.name_gloss;
+
+/**
+ * The verse numbers a division holds, where a canon numbers continuously
+ * across its divisions and a reader has to know which range they are in.
+ *
+ * The Dhammapada is cited as Dhp 1 to Dhp 423 whatever vagga a verse falls in,
+ * so a vagga that did not say "1–20" would be a page whose numbers start at
+ * twenty-one for no reason a reader can see.
+ */
+export function verseRange(division: Pick<DivisionIndex, 'verse_from' | 'verse_to'>): string | undefined {
+  const { verse_from: from, verse_to: to } = division;
+  if (from === undefined || to === undefined) return undefined;
+  return from === to ? String(from) : `${from}–${to}`;
 }
 
 export const sectionOf = (work: WorkData, n: number): Section | undefined =>

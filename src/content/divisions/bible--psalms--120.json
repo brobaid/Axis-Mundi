@@ -1,0 +1,38 @@
+{
+ "id": "bible--psalms--120",
+ "work": "bible",
+ "n": 19,
+ "slug": "psalms",
+ "c": 120,
+ "verses": [
+  {
+   "v": 1,
+   "en": "In my distress, I cried to Yahweh. He answered me."
+  },
+  {
+   "v": 2,
+   "en": "Deliver my soul, Yahweh, from lying lips, from a deceitful tongue."
+  },
+  {
+   "v": 3,
+   "en": "What will be given to you, and what will be done more to you, you deceitful tongue?"
+  },
+  {
+   "v": 4,
+   "en": "Sharp arrows of the mighty, with coals of juniper."
+  },
+  {
+   "v": 5,
+   "en": "Woe is me, that I live in Meshech, that I dwell among the tents of Kedar!"
+  },
+  {
+   "v": 6,
+   "en": "My soul has had her dwelling too long with him who hates peace."
+  },
+  {
+   "v": 7,
+   "en": "I am for peace, but when I speak, they are for war."
+  }
+ ],
+ "sourcing": "sourced"
+}

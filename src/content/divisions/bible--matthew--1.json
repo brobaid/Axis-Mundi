@@ -1,0 +1,135 @@
+{
+ "id": "bible--matthew--1",
+ "work": "bible",
+ "n": 40,
+ "slug": "matthew",
+ "c": 1,
+ "verses": [
+  {
+   "v": 1,
+   "en": "The book of the genealogy of Jesus Christ, the son of David, the son of Abraham.",
+   "gr": "Βίβλος γενέσεως Ἰησοῦ χριστοῦ υἱοῦ Δαυὶδ υἱοῦ Ἀβραάμ."
+  },
+  {
+   "v": 2,
+   "en": "Abraham became the father of Isaac. Isaac became the father of Jacob. Jacob became the father of Judah and his brothers.",
+   "gr": "Ἀβραὰμ ἐγέννησεν τὸν Ἰσαάκ, Ἰσαὰκ δὲ ἐγέννησεν τὸν Ἰακώβ, Ἰακὼβ δὲ ἐγέννησεν τὸν Ἰούδαν καὶ τοὺς ἀδελφοὺς αὐτοῦ,"
+  },
+  {
+   "v": 3,
+   "en": "Judah became the father of Perez and Zerah by Tamar. Perez became the father of Hezron. Hezron became the father of Ram.",
+   "gr": "Ἰούδας δὲ ἐγέννησεν τὸν Φαρὲς καὶ τὸν Ζάρα ἐκ τῆς Θαμάρ, Φαρὲς δὲ ἐγέννησεν τὸν Ἑσρώμ, Ἑσρὼμ δὲ ἐγέννησεν τὸν Ἀράμ,"
+  },
+  {
+   "v": 4,
+   "en": "Ram became the father of Amminadab. Amminadab became the father of Nahshon. Nahshon became the father of Salmon.",
+   "gr": "Ἀρὰμ δὲ ἐγέννησεν τὸν Ἀμιναδάβ, Ἀμιναδὰβ δὲ ἐγέννησεν τὸν Ναασσών, Ναασσὼν δὲ ἐγέννησεν τὸν Σαλμών,"
+  },
+  {
+   "v": 5,
+   "en": "Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse.",
+   "gr": "Σαλμὼν δὲ ἐγέννησεν τὸν ⸂Βόες ἐκ τῆς Ῥαχάβ, Βόες⸃ δὲ ἐγέννησεν τὸν ⸂Ἰωβὴδ ἐκ τῆς Ῥούθ, Ἰωβὴδ⸃ δὲ ἐγέννησεν τὸν Ἰεσσαί,"
+  },
+  {
+   "v": 6,
+   "en": "Jesse became the father of King David. David became the father of Solomon by her who had been Uriah’s wife.",
+   "gr": "Ἰεσσαὶ δὲ ἐγέννησεν τὸν Δαυὶδ τὸν βασιλέα. Δαυὶδ ⸀δὲ ἐγέννησεν τὸν Σολομῶνα ἐκ τῆς τοῦ Οὐρίου,"
+  },
+  {
+   "v": 7,
+   "en": "Solomon became the father of Rehoboam. Rehoboam became the father of Abijah. Abijah became the father of Asa.",
+   "gr": "Σολομὼν δὲ ἐγέννησεν τὸν Ῥοβοάμ, Ῥοβοὰμ δὲ ἐγέννησεν τὸν Ἀβιά, Ἀβιὰ δὲ ἐγέννησεν τὸν ⸂Ἀσάφ,"
+  },
+  {
+   "v": 8,
+   "en": "Asa became the father of Jehoshaphat. Jehoshaphat became the father of Joram. Joram became the father of Uzziah.",
+   "gr": "Ἀσὰφ⸃ δὲ ἐγέννησεν τὸν Ἰωσαφάτ, Ἰωσαφὰτ δὲ ἐγέννησεν τὸν Ἰωράμ, Ἰωρὰμ δὲ ἐγέννησεν τὸν Ὀζίαν,"
+  },
+  {
+   "v": 9,
+   "en": "Uzziah became the father of Jotham. Jotham became the father of Ahaz. Ahaz became the father of Hezekiah.",
+   "gr": "Ὀζίας δὲ ἐγέννησεν τὸν Ἰωαθάμ, Ἰωαθὰμ δὲ ἐγέννησεν τὸν Ἀχάζ, Ἀχὰζ δὲ ἐγέννησεν τὸν Ἑζεκίαν,"
+  },
+  {
+   "v": 10,
+   "en": "Hezekiah became the father of Manasseh. Manasseh became the father of Amon. Amon became the father of Josiah.",
+   "gr": "Ἑζεκίας δὲ ἐγέννησεν τὸν Μανασσῆ, Μανασσῆς δὲ ἐγέννησεν τὸν ⸂Ἀμώς, Ἀμὼς⸃ δὲ ἐγέννησεν τὸν Ἰωσίαν,"
+  },
+  {
+   "v": 11,
+   "en": "Josiah became the father of Jechoniah and his brothers, at the time of the exile to Babylon.",
+   "gr": "Ἰωσίας δὲ ἐγέννησεν τὸν Ἰεχονίαν καὶ τοὺς ἀδελφοὺς αὐτοῦ ἐπὶ τῆς μετοικεσίας Βαβυλῶνος."
+  },
+  {
+   "v": 12,
+   "en": "After the exile to Babylon, Jechoniah became the father of Shealtiel. Shealtiel became the father of Zerubbabel.",
+   "gr": "Μετὰ δὲ τὴν μετοικεσίαν Βαβυλῶνος Ἰεχονίας ἐγέννησεν τὸν Σαλαθιήλ, Σαλαθιὴλ δὲ ἐγέννησεν τὸν Ζοροβαβέλ,"
+  },
+  {
+   "v": 13,
+   "en": "Zerubbabel became the father of Abiud. Abiud became the father of Eliakim. Eliakim became the father of Azor.",
+   "gr": "Ζοροβαβὲλ δὲ ἐγέννησεν τὸν Ἀβιούδ, Ἀβιοὺδ δὲ ἐγέννησεν τὸν Ἐλιακίμ, Ἐλιακὶμ δὲ ἐγέννησεν τὸν Ἀζώρ,"
+  },
+  {
+   "v": 14,
+   "en": "Azor became the father of Zadok. Zadok became the father of Achim. Achim became the father of Eliud.",
+   "gr": "Ἀζὼρ δὲ ἐγέννησεν τὸν Σαδώκ, Σαδὼκ δὲ ἐγέννησεν τὸν Ἀχίμ, Ἀχὶμ δὲ ἐγέννησεν τὸν Ἐλιούδ,"
+  },
+  {
+   "v": 15,
+   "en": "Eliud became the father of Eleazar. Eleazar became the father of Matthan. Matthan became the father of Jacob.",
+   "gr": "Ἐλιοὺδ δὲ ἐγέννησεν τὸν Ἐλεάζαρ, Ἐλεάζαρ δὲ ἐγέννησεν τὸν Ματθάν, Ματθὰν δὲ ἐγέννησεν τὸν Ἰακώβ,"
+  },
+  {
+   "v": 16,
+   "en": "Jacob became the father of Joseph, the husband of Mary, from whom was born Jesus, who is called Christ.",
+   "gr": "Ἰακὼβ δὲ ἐγέννησεν τὸν Ἰωσὴφ τὸν ἄνδρα Μαρίας, ἐξ ἧς ἐγεννήθη Ἰησοῦς ὁ λεγόμενος χριστός."
+  },
+  {
+   "v": 17,
+   "en": "So all the generations from Abraham to David are fourteen generations; from David to the exile to Babylon fourteen generations; and from the carrying away to Babylon to the Christ, fourteen generations.",
+   "gr": "Πᾶσαι οὖν αἱ γενεαὶ ἀπὸ Ἀβραὰμ ἕως Δαυὶδ γενεαὶ δεκατέσσαρες, καὶ ἀπὸ Δαυὶδ ἕως τῆς μετοικεσίας Βαβυλῶνος γενεαὶ δεκατέσσαρες, καὶ ἀπὸ τῆς μετοικεσίας Βαβυλῶνος ἕως τοῦ χριστοῦ γενεαὶ δεκατέσσαρες."
+  },
+  {
+   "v": 18,
+   "en": "Now the birth of Jesus Christ was like this: After his mother, Mary, was engaged to Joseph, before they came together, she was found pregnant by the Holy Spirit.",
+   "gr": "Τοῦ δὲ ⸀Ἰησοῦ χριστοῦ ἡ ⸀γένεσις οὕτως ἦν. ⸀μνηστευθείσης τῆς μητρὸς αὐτοῦ Μαρίας τῷ Ἰωσήφ, πρὶν ἢ συνελθεῖν αὐτοὺς εὑρέθη ἐν γαστρὶ ἔχουσα ἐκ πνεύματος ἁγίου."
+  },
+  {
+   "v": 19,
+   "en": "Joseph, her husband, being a righteous man, and not willing to make her a public example, intended to put her away secretly.",
+   "gr": "Ἰωσὴφ δὲ ὁ ἀνὴρ αὐτῆς, δίκαιος ὢν καὶ μὴ θέλων αὐτὴν ⸀δειγματίσαι, ἐβουλήθη λάθρᾳ ἀπολῦσαι αὐτήν."
+  },
+  {
+   "v": 20,
+   "en": "But when he thought about these things, behold, an angel of the Lord appeared to him in a dream, saying, “Joseph, son of David, don’t be afraid to take to yourself Mary, your wife, for that which is conceived in her is of the Holy Spirit.",
+   "gr": "ταῦτα δὲ αὐτοῦ ἐνθυμηθέντος ἰδοὺ ἄγγελος κυρίου κατʼ ὄναρ ἐφάνη αὐτῷ λέγων· Ἰωσὴφ υἱὸς Δαυίδ, μὴ φοβηθῇς παραλαβεῖν ⸀Μαρίαν τὴν γυναῖκά σου, τὸ γὰρ ἐν αὐτῇ γεννηθὲν ἐκ πνεύματός ἐστιν ἁγίου·"
+  },
+  {
+   "v": 21,
+   "en": "She shall give birth to a son. You shall name him Jesus, for it is he who shall save his people from their sins.”",
+   "gr": "τέξεται δὲ υἱὸν καὶ καλέσεις τὸ ὄνομα αὐτοῦ Ἰησοῦν, αὐτὸς γὰρ σώσει τὸν λαὸν αὐτοῦ ἀπὸ τῶν ἁμαρτιῶν αὐτῶν."
+  },
+  {
+   "v": 22,
+   "en": "Now all this has happened that it might be fulfilled which was spoken by the Lord through the prophet, saying,",
+   "gr": "τοῦτο δὲ ὅλον γέγονεν ἵνα πληρωθῇ τὸ ῥηθὲν ⸀ὑπὸ κυρίου διὰ τοῦ προφήτου λέγοντος·"
+  },
+  {
+   "v": 23,
+   "en": "“Behold, the virgin shall be with child, and shall give birth to a son. They shall call his name Immanuel;” which is, being interpreted, “God with us.”",
+   "gr": "Ἰδοὺ ἡ παρθένος ἐν γαστρὶ ἕξει καὶ τέξεται υἱόν, καὶ καλέσουσιν τὸ ὄνομα αὐτοῦ Ἐμμανουήλ· ὅ ἐστιν μεθερμηνευόμενον Μεθʼ ἡμῶν ὁ θεός."
+  },
+  {
+   "v": 24,
+   "en": "Joseph arose from his sleep, and did as the angel of the Lord commanded him, and took his wife to himself;",
+   "gr": "⸀ἐγερθεὶς δὲ ὁ Ἰωσὴφ ἀπὸ τοῦ ὕπνου ἐποίησεν ὡς προσέταξεν αὐτῷ ὁ ἄγγελος κυρίου καὶ παρέλαβεν τὴν γυναῖκα αὐτοῦ·"
+  },
+  {
+   "v": 25,
+   "en": "and didn’t know her sexually until she had given birth to her firstborn son. He named him Jesus.",
+   "gr": "καὶ οὐκ ἐγίνωσκεν αὐτὴν ἕως οὗ ἔτεκεν ⸀υἱόν· καὶ ἐκάλεσεν τὸ ὄνομα αὐτοῦ Ἰησοῦν."
+  }
+ ],
+ "sourcing": "sourced"
+}

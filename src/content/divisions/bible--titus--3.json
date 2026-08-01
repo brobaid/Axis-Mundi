@@ -1,0 +1,85 @@
+{
+ "id": "bible--titus--3",
+ "work": "bible",
+ "n": 56,
+ "slug": "titus",
+ "c": 3,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Remind them to be in subjection to rulers and to authorities, to be obedient, to be ready for every good work,",
+   "gr": "Ὑπομίμνῃσκε αὐτοὺς ⸀ἀρχαῖς ἐξουσίαις ὑποτάσσεσθαι πειθαρχεῖν, πρὸς πᾶν ἔργον ἀγαθὸν ἑτοίμους εἶναι,"
+  },
+  {
+   "v": 2,
+   "en": "to speak evil of no one, not to be contentious, to be gentle, showing all humility toward all men.",
+   "gr": "μηδένα βλασφημεῖν, ἀμάχους εἶναι, ἐπιεικεῖς, πᾶσαν ἐνδεικνυμένους πραΰτητα πρὸς πάντας ἀνθρώπους."
+  },
+  {
+   "v": 3,
+   "en": "For we were also once foolish, disobedient, deceived, serving various lusts and pleasures, living in malice and envy, hateful, and hating one another.",
+   "gr": "ἦμεν γάρ ποτε καὶ ἡμεῖς ἀνόητοι, ἀπειθεῖς, πλανώμενοι, δουλεύοντες ἐπιθυμίαις καὶ ἡδοναῖς ποικίλαις, ἐν κακίᾳ καὶ φθόνῳ διάγοντες, στυγητοί, μισοῦντες ἀλλήλους."
+  },
+  {
+   "v": 4,
+   "en": "But when the kindness of God our Savior and his love toward mankind appeared,",
+   "gr": "ὅτε δὲ ἡ χρηστότης καὶ ἡ φιλανθρωπία ἐπεφάνη τοῦ σωτῆρος ἡμῶν θεοῦ,"
+  },
+  {
+   "v": 5,
+   "en": "not by works of righteousness which we did ourselves, but according to his mercy, he saved us through the washing of regeneration and renewing by the Holy Spirit,",
+   "gr": "οὐκ ἐξ ἔργων τῶν ἐν δικαιοσύνῃ ⸀ἃ ἐποιήσαμεν ἡμεῖς ἀλλὰ κατὰ ⸂τὸ αὐτοῦ ἔλεος⸃ ἔσωσεν ἡμᾶς διὰ λουτροῦ παλιγγενεσίας καὶ ἀνακαινώσεως πνεύματος ἁγίου,"
+  },
+  {
+   "v": 6,
+   "en": "whom he poured out on us richly, through Jesus Christ our Savior;",
+   "gr": "οὗ ἐξέχεεν ἐφʼ ἡμᾶς πλουσίως διὰ Ἰησοῦ Χριστοῦ τοῦ σωτῆρος ἡμῶν,"
+  },
+  {
+   "v": 7,
+   "en": "that being justified by his grace, we might be made heirs according to the hope of eternal life.",
+   "gr": "ἵνα δικαιωθέντες τῇ ἐκείνου χάριτι κληρονόμοι ⸀γενηθῶμεν κατʼ ἐλπίδα ζωῆς αἰωνίου."
+  },
+  {
+   "v": 8,
+   "en": "This saying is faithful, and concerning these things I desire that you affirm confidently, so that those who have believed God may be careful to maintain good works. These things are good and profitable to men;",
+   "gr": "Πιστὸς ὁ λόγος, καὶ περὶ τούτων βούλομαί σε διαβεβαιοῦσθαι, ἵνα φροντίζωσιν καλῶν ἔργων προΐστασθαι οἱ πεπιστευκότες θεῷ. ταῦτά ⸀ἐστιν καλὰ καὶ ὠφέλιμα τοῖς ἀνθρώποις·"
+  },
+  {
+   "v": 9,
+   "en": "but shun foolish questionings, genealogies, strife, and disputes about the law; for they are unprofitable and vain.",
+   "gr": "μωρὰς δὲ ζητήσεις καὶ γενεαλογίας καὶ ⸀ἔρεις καὶ μάχας νομικὰς περιΐστασο, εἰσὶν γὰρ ἀνωφελεῖς καὶ μάταιοι."
+  },
+  {
+   "v": 10,
+   "en": "Avoid a factious man after a first and second warning,",
+   "gr": "αἱρετικὸν ἄνθρωπον μετὰ μίαν καὶ δευτέραν νουθεσίαν παραιτοῦ,"
+  },
+  {
+   "v": 11,
+   "en": "knowing that such a one is perverted and sins, being self-condemned.",
+   "gr": "εἰδὼς ὅτι ἐξέστραπται ὁ τοιοῦτος καὶ ἁμαρτάνει, ὢν αὐτοκατάκριτος."
+  },
+  {
+   "v": 12,
+   "en": "When I send Artemas to you, or Tychicus, be diligent to come to me to Nicopolis, for I have determined to winter there.",
+   "gr": "Ὅταν πέμψω Ἀρτεμᾶν πρὸς σὲ ἢ Τυχικόν, σπούδασον ἐλθεῖν πρός με εἰς Νικόπολιν, ἐκεῖ γὰρ κέκρικα παραχειμάσαι."
+  },
+  {
+   "v": 13,
+   "en": "Send Zenas, the lawyer, and Apollos on their journey speedily, that nothing may be lacking for them.",
+   "gr": "Ζηνᾶν τὸν νομικὸν καὶ ⸀Ἀπολλῶν σπουδαίως πρόπεμψον, ἵνα μηδὲν αὐτοῖς λείπῃ."
+  },
+  {
+   "v": 14,
+   "en": "Let our people also learn to maintain good works for necessary uses, that they may not be unfruitful.",
+   "gr": "μανθανέτωσαν δὲ καὶ οἱ ἡμέτεροι καλῶν ἔργων προΐστασθαι εἰς τὰς ἀναγκαίας χρείας, ἵνα μὴ ὦσιν ἄκαρποι."
+  },
+  {
+   "v": 15,
+   "en": "All who are with me greet you. Greet those who love us in faith. Grace be with you all. Amen.",
+   "gr": "Ἀσπάζονταί σε οἱ μετʼ ἐμοῦ πάντες. ἄσπασαι τοὺς φιλοῦντας ἡμᾶς ἐν πίστει. ἡ χάρις μετὰ πάντων ⸀ὑμῶν."
+  }
+ ],
+ "sourcing": "sourced"
+}

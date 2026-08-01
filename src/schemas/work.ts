@@ -18,7 +18,14 @@ import { slug, sourceRef, sourcingStatus, traditionId } from './primitives.js';
  */
 
 /** A language column. `en` is the English translation; anything else is an original. */
-const languageCode = z.string().regex(/^[a-z]{2}(-[A-Za-z]{2,4})?$/, 'a BCP-47 language subtag');
+/*
+  Two or three letters: `ar`, `he`, `en` are 639-1, and `pli` is the 639-3 tag
+  for Pali, which has no two-letter form. A corpus arrives in whatever code its
+  deliverer uses and the page sets `lang` from it, so this has to admit both.
+*/
+const languageCode = z
+  .string()
+  .regex(/^[a-z]{2,3}(-[A-Za-z]{2,4})?$/, 'an ISO 639-1 or 639-3 language subtag');
 
 /**
  * One verse.
@@ -53,6 +60,12 @@ export const chapterIndexEntry = z.object({
   preview_lang: z.string().min(1).optional(),
   english_gaps: z.number().int().nonnegative().default(0),
   original_gaps: z.number().int().nonnegative().default(0),
+  /**
+   * Verses carrying no text in any edition — counted in both gap totals above,
+   * because they are missing from both, and named here because the page says
+   * so once rather than twice.
+   */
+  blank: z.number().int().nonnegative().default(0),
 });
 
 /**
@@ -71,6 +84,16 @@ export const divisionIndexEntry = z.object({
   name: z.string().min(1).optional(),
   /** The name in the work's own script, rendered in that script's face. */
   name_original: z.string().min(1).optional(),
+  /**
+   * What the division's own name means, where the canon names it in its own
+   * language and the delivery carries a rendering — Yamakavagga / Pairs. Not a
+   * translation this museum makes; one it was given.
+   */
+  name_gloss: z.string().min(1).optional(),
+  /** First and last verse numbers, where a canon numbers continuously across
+   *  divisions and a reader needs to know which range a division holds. */
+  verse_from: z.number().int().positive().optional(),
+  verse_to: z.number().int().positive().optional(),
   transliteration: z.string().min(1).optional(),
   verses: z.number().int().nonnegative(),
   chapters: z.array(chapterIndexEntry).optional(),
@@ -80,6 +103,12 @@ export const divisionIndexEntry = z.object({
   english_gaps: z.number().int().nonnegative().default(0),
   /** Verses whose original-language column is empty. The reverse happens too. */
   original_gaps: z.number().int().nonnegative().default(0),
+  /**
+   * Verses carrying no text in any edition — counted in both gap totals above,
+   * because they are missing from both, and named here because the page says
+   * so once rather than twice.
+   */
+  blank: z.number().int().nonnegative().default(0),
 });
 
 /**
@@ -92,6 +121,15 @@ export const workSection = z.object({
   id: slug,
   name: z.string().min(1),
   name_original: z.string().min(1).optional(),
+  /**
+   * A line every page inside this section carries.
+   *
+   * The Bible's Old Testament is English-only here by ruling, because its
+   * Hebrew lives in the Tanakh room in Masoretic order — a fact that belongs on
+   * every one of those 929 pages, not only on a contents page nobody has to
+   * pass through.
+   */
+  note: z.string().min(1).optional(),
   /** Inclusive division numbers. */
   from: z.number().int().positive(),
   to: z.number().int().positive(),
@@ -143,9 +181,21 @@ export const workSchema = z
     /** What one chapter is called, where the canon has that level. */
     chapter_label: z.string().min(1).optional(),
     /** The script the original is set in, for the font stack and `lang`. */
-    script: z.enum(['arabic', 'hebrew', 'devanagari', 'gurmukhi', 'han', 'latin', 'japanese']),
+    script: z.enum(['arabic', 'hebrew', 'devanagari', 'gurmukhi', 'han', 'latin', 'japanese', 'greek', 'pali']),
     /** Right-to-left originals need the whole verse block reversed, not just the text. */
     direction: z.enum(['ltr', 'rtl']).default('ltr'),
+    /**
+     * The BCP-47 tag each edition's column is set in, where it differs from
+     * the key the delivery uses.
+     *
+     * A column key is the deliverer's filing name; a `lang` attribute is a
+     * promise to a screen reader and a font stack. The Bible arrives keyed
+     * `gr` and the New Testament is Koine, which is `grc`; the Dhammapada
+     * arrives keyed `pli` and BCP-47 wants the shortest code, `pi`. Both are
+     * invalid as written, and a browser told to speak an invalid tag falls
+     * back to the page's — which reads Greek aloud as English.
+     */
+    lang_tags: z.record(languageCode, z.string().min(2)).optional(),
     editions: z.record(languageCode, sourceRef).refine(
       (e) => Object.keys(e).some((k) => k !== 'en'),
       'a work needs an original-language edition; English alone is not a corpus',
@@ -160,6 +210,19 @@ export const workSchema = z
     note: z.string().min(1).optional(),
     /** An unnumbered opening line the canon's own convention puts above verse 1. */
     preface: workPreface.optional(),
+    /**
+     * What a single-sided verse means in this canon, where the generic line is
+     * not the truth.
+     *
+     * A Tanakh verse with no English is two versifications disagreeing. A New
+     * Testament verse with no Greek is a verse the critical edition does not
+     * carry — text-critical history, which the page should show rather than
+     * hide behind a shrug.
+     */
+    gap_notes: z
+      .object({ original: z.string().min(1).optional(), english: z.string().min(1).optional() })
+      .strict()
+      .optional(),
     sections: z.array(workSection).default([]),
     divisions: z.array(divisionIndexEntry).min(1),
     /** Totals, computed at ingestion so no page counts them again. */
@@ -169,6 +232,8 @@ export const workSchema = z
     english_gaps: z.number().int().nonnegative().default(0),
     /** And whose original column is empty — a versification can diverge either way. */
     original_gaps: z.number().int().nonnegative().default(0),
+    /** Verses no edition here carries. Counted in both totals above. */
+    blank: z.number().int().nonnegative().default(0),
     sourcing: sourcingStatus,
   })
   .strict()

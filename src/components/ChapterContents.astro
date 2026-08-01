@@ -4,6 +4,7 @@ import {
   availableModes,
   defaultMode,
   divisionHeading,
+  langTag,
   originalLang,
   walk,
   type DivisionIndex,
@@ -49,7 +50,7 @@ const gaps = division.english_gaps + division.original_gaps;
         division.name_original !== undefined && (
           <span
             class="rd__title-original"
-            lang={orig}
+            lang={langTag(work, orig)}
             dir={work.direction}
             style={`font-family: ${scriptFont}`}
           >
@@ -89,7 +90,7 @@ const gaps = division.english_gaps + division.original_gaps;
                    being Hebrew rather than by an apology. */
                 <span
                   class="rd-chapters__preview"
-                  lang={chapter.preview_lang}
+                  lang={chapter.preview_lang === undefined ? undefined : langTag(work, chapter.preview_lang)}
                   dir={chapter.preview_lang === 'en' ? 'ltr' : work.direction}
                   style={
                     chapter.preview_lang === 'en' ? undefined : `font-family: ${scriptFont}`

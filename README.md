@@ -5,8 +5,8 @@ an event-driven timeline of four hundred sourced events, an animated historical
 world map of twelve hand-drawn plates, structured deep dives on all ten
 traditions, a belief matrix, a side-by-side compare, a family tree of descent, a
 year wheel of the festival calendar, and a reading room holding two canons —
-29,442 verses of the Quran and the Tanakh, original beside English, in editions
-named on every page. Concept name "the Living Museum"; product name Axis
+60,970 verses of the Quran, the Tanakh, the Bible and the Dhammapada, original
+beside English, in editions named on every page. Concept name "the Living Museum"; product name Axis
 Mundi.
 
 It describes what traditions hold and practise. It does not evaluate them.
@@ -16,7 +16,7 @@ It describes what traditions hold and practise. It does not evaluate them.
 ## Architecture
 
 A static content site — no backend, no database, no CMS, and none is coming.
-Astro 5 with TypeScript at `strictest` builds 1,106 pages from 1,789 JSON
+Astro 5 with TypeScript at `strictest` builds 2,389 pages from 3,009 JSON
 records, each validated against a Zod schema in `src/schemas/` that mirrors the
 Phase 0 spec field for field. The interactive rooms are vanilla TypeScript
 islands over D3, each split so that pure model code (`src/lib/*-model.ts`) and a
@@ -66,11 +66,11 @@ English slot rather than leaving it empty.
 
 | Check | What it enforces |
 | --- | --- |
-| `pnpm validate:content` | Zod-validates all 1,789 records, then the cross-file rules: importance 3+ events need a T1–T3 source, matrix cells need T1 or a labelled T4, contested items must cite both positions, glossary references must resolve. |
+| `pnpm validate:content` | Zod-validates all 3,009 records, then the cross-file rules: importance 3+ events need a T1–T3 source, matrix cells need T1 or a labelled T4, contested items must cite both positions, glossary references must resolve. |
 | `pnpm validate:tokens` | Fails on a raw colour anywhere outside `tokens.css`, on an undefined custom property, and on any of 186 contrast pairs falling below WCAG AA across the light, night and print modes. |
 | `pnpm validate:timeline` | Canvas layout invariants: the timeline's density budget and rank gating across six viewports, and that no two family-tree era labels overlap at any axis width. |
 | `pnpm lint` | `eslint` and `astro check`, at zero errors, zero warnings, zero hints. |
-| `pnpm build` | 1,106 pages. Records marked `sourcing: "todo"` are excluded. |
+| `pnpm build` | 2,389 pages. Records marked `sourcing: "todo"` are excluded. |
 | `pnpm validate:links` | Every internal link resolves against `dist/` under the rules a plain static host applies, and every built route appears in `sitemap.xml`. |
 | `pnpm validate:reader` | Every Reading Room page renders the verse count its record claims, names its editions, and marks every gap. Content validation cannot see a build that resolved every record to nothing; this can. |
 

@@ -33,7 +33,13 @@ interface ChapterIndex {
   preview?: string;
   english_gaps: number;
   original_gaps: number;
+  blank: number;
 }
+
+/* A verse missing from both editions is counted in both totals and stated on
+   the page once, so the note count is the union rather than the sum. */
+const notesFor = (g: { english_gaps: number; original_gaps: number; blank: number }): number =>
+  g.english_gaps + g.original_gaps - g.blank;
 
 interface WorkIndex {
   id: string;
@@ -46,6 +52,7 @@ interface WorkIndex {
     chapters?: ChapterIndex[];
     english_gaps: number;
     original_gaps: number;
+    blank: number;
   }[];
   total_verses: number;
   english_gaps: number;
@@ -143,7 +150,7 @@ for (const work of works) {
 
     if (division.chapters === undefined) {
       checkText(at, join(DIST, 'read', work.id, division.slug, 'index.html'),
-        division.verses, division.english_gaps + division.original_gaps);
+        division.verses, notesFor(division));
       continue;
     }
 
@@ -165,7 +172,7 @@ for (const work of works) {
         fail(at, `contents page does not link to chapter ${chapter.c}`);
       }
       checkText(`${at}/${chapter.c}`, join(DIST, 'read', work.id, division.slug, String(chapter.c), 'index.html'),
-        chapter.verses, chapter.english_gaps + chapter.original_gaps);
+        chapter.verses, notesFor(chapter));
     }
   }
 }

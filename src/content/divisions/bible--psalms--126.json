@@ -1,0 +1,34 @@
+{
+ "id": "bible--psalms--126",
+ "work": "bible",
+ "n": 19,
+ "slug": "psalms",
+ "c": 126,
+ "verses": [
+  {
+   "v": 1,
+   "en": "When Yahweh brought back those who returned to Zion, we were like those who dream."
+  },
+  {
+   "v": 2,
+   "en": "Then our mouth was filled with laughter, and our tongue with singing. Then they said among the nations, “Yahweh has done great things for them.”"
+  },
+  {
+   "v": 3,
+   "en": "Yahweh has done great things for us, and we are glad."
+  },
+  {
+   "v": 4,
+   "en": "Restore our fortunes again, Yahweh, like the streams in the Negev."
+  },
+  {
+   "v": 5,
+   "en": "Those who sow in tears will reap in joy."
+  },
+  {
+   "v": 6,
+   "en": "He who goes out weeping, carrying seed for sowing, will certainly come again with joy, carrying his sheaves."
+  }
+ ],
+ "sourcing": "sourced"
+}
