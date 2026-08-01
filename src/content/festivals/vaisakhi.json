@@ -1,17 +1,20 @@
 {
-  "id": "vaisakhi",
-  "name": "Vaisakhi",
-  "traditions": [
-    "sikhism"
-  ],
-  "calendar": "solar",
-  "date_rule": "Set by the solar calendar, so it holds close to the same Gregorian date each year.",
-  "observed": {
-    "2024": "04-13",
-    "2025": "04-14",
-    "2026": "04-14",
-    "2027": "04-14"
-  },
-  "sources": [],
-  "sourcing": "todo"
+ "id": "vaisakhi",
+ "name": "Vaisakhi",
+ "traditions": [
+  "sikhism"
+ ],
+ "calendar": "solar",
+ "date_rule": "April 13-14",
+ "observed": {
+  "2024": "04-13",
+  "2025": "04-14",
+  "2026": "04-14",
+  "2027": "04-14"
+ },
+ "summary": "The founding of the Khalsa in 1699, the community's central festival.",
+ "sources": [
+  "mcleod-sikhism-1997"
+ ],
+ "sourcing": "sourced"
 }

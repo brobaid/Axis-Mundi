@@ -1,0 +1,18 @@
+{
+ "id": "harmandir-sahib",
+ "name": "Harmandir Sahib",
+ "traditions": [
+  "sikhism"
+ ],
+ "place": "Amritsar",
+ "location": {
+  "lat": 31.62,
+  "lng": 74.8765
+ },
+ "region": "punjab",
+ "significance": "The Golden Temple, open on four sides to all, the tradition's heart.",
+ "sources": [
+  "mcleod-sikhism-1997"
+ ],
+ "sourcing": "sourced"
+}

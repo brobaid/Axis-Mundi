@@ -1,0 +1,22 @@
+{
+ "id": "guru-gobind-singh",
+ "name": "Guru Gobind Singh",
+ "traditions": [
+  "sikhism"
+ ],
+ "born": {
+  "year": 1666,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1708,
+  "precision": "exact"
+ },
+ "role": "Tenth Guru, founder of the Khalsa",
+ "summary": "The tenth Guru, founder of the Khalsa, who sealed guruship in the scripture.",
+ "events": [],
+ "sources": [
+  "mcleod-sikhism-1997"
+ ],
+ "sourcing": "sourced"
+}

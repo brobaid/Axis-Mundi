@@ -1,0 +1,18 @@
+{
+ "id": "anandpur-sahib",
+ "name": "Anandpur Sahib",
+ "traditions": [
+  "sikhism"
+ ],
+ "place": "Punjab",
+ "location": {
+  "lat": 31.2354,
+  "lng": 76.4995
+ },
+ "region": "punjab",
+ "significance": "The birthplace of the Khalsa in 1699.",
+ "sources": [
+  "mcleod-sikhism-1997"
+ ],
+ "sourcing": "sourced"
+}

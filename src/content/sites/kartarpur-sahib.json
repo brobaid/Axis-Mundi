@@ -1,0 +1,18 @@
+{
+ "id": "kartarpur-sahib",
+ "name": "Gurdwara Darbar Sahib Kartarpur",
+ "traditions": [
+  "sikhism"
+ ],
+ "place": "Pakistan Punjab",
+ "location": {
+  "lat": 32.0869,
+  "lng": 74.931
+ },
+ "region": "punjab",
+ "significance": "Where Guru Nanak farmed and taught; reached today through the corridor opened in 2019.",
+ "sources": [
+  "mcleod-sikhism-1997"
+ ],
+ "sourcing": "sourced"
+}

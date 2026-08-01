@@ -1,0 +1,22 @@
+{
+ "id": "guru-nanak-figure",
+ "name": "Guru Nanak",
+ "traditions": [
+  "sikhism"
+ ],
+ "born": {
+  "year": 1469,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1539,
+  "precision": "exact"
+ },
+ "role": "Founder, first of the ten Gurus",
+ "summary": "The founder, whose hymns open the Guru Granth Sahib.",
+ "events": [],
+ "sources": [
+  "mcleod-sikhism-1997"
+ ],
+ "sourcing": "sourced"
+}

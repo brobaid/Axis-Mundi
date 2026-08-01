@@ -1,44 +1,229 @@
 {
-  "id": "sikhism",
-  "tradition": "sikhism",
-  "name": "Sikhism",
-  "stat_box": {
-    "adherents": {
-      "display": "≈26 m (census + estimates)",
-      "estimate": 26000000,
-      "source": "india-census-2011",
-      "year": 2011,
-      "basis": "20.8 m in India per the 2011 census, plus diaspora estimates. Not enumerated by Pew.",
-      "contested": false
-    },
-    "symbol": "khanda"
+ "id": "sikhism",
+ "tradition": "sikhism",
+ "name": "Sikhism",
+ "stat_box": {
+  "adherents": {
+   "display": "≈26 m (census + estimates)",
+   "estimate": 26000000,
+   "source": "india-census-2011",
+   "year": 2011,
+   "basis": "20.8 m in India per the 2011 census, plus diaspora estimates. Not enumerated by Pew.",
+   "contested": false
   },
-  "belief_dimensions": [
-    "divine-concept",
-    "cosmology",
-    "afterlife",
-    "salvation-path",
-    "scripture-authority",
-    "view-of-others"
+  "symbol": "khanda"
+ },
+ "belief_dimensions": [
+  "divine-concept",
+  "cosmology",
+  "afterlife",
+  "salvation-path",
+  "scripture-authority",
+  "view-of-others"
+ ],
+ "law_dimensions": [
+  "dietary-law",
+  "dress-modesty",
+  "ethical-frame",
+  "conversion-stance",
+  "clergy-leadership",
+  "worship-form",
+  "calendar-system"
+ ],
+ "festivals": [
+  "vaisakhi",
+  "gurpurab-nanak",
+  "bandi-chhor-divas"
+ ],
+ "sites": [
+  "harmandir-sahib",
+  "anandpur-sahib",
+  "kartarpur-sahib"
+ ],
+ "figures": [
+  "guru-nanak-figure",
+  "guru-gobind-singh",
+  "mai-bhago"
+ ],
+ "canon": [
+  {
+   "id": "guru-granth-sahib",
+   "title": "Guru Granth Sahib",
+   "language": "Punjabi and other languages in Gurmukhi script",
+   "composition": "compiled 1604; final form 1705",
+   "status": "The living Guru of the community; includes hymns of Hindu and Muslim saints",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "dasam-granth",
+   "title": "Dasam Granth",
+   "language": "Braj, Persian, Punjabi",
+   "composition": "compiled c. 1735",
+   "status": "Compositions attributed to the tenth Guru; revered, with liturgical use and scope varying across the community",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "practices": [
+  {
+   "id": "nam-simran",
+   "name": "Nam simran",
+   "kind": "meditation",
+   "frequency": "Through the day",
+   "summary": "Remembrance of the Name, in meditation and through the day.",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "nitnem",
+   "name": "Nitnem",
+   "kind": "prayer",
+   "frequency": "Daily, morning to night",
+   "summary": "The daily discipline of prescribed prayers, morning to night.",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "kirtan",
+   "name": "Kirtan",
+   "kind": "congregational singing",
+   "summary": "Congregational singing of the Guru Granth Sahib's hymns.",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "seva",
+   "name": "Seva",
+   "kind": "service",
+   "summary": "Selfless service, from the langar kitchen to the shoe stand, worship in the form of work.",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "vand-chhakna",
+   "name": "Vand chhakna",
+   "kind": "almsgiving",
+   "summary": "Sharing one's earnings, the third of Nanak's three pillars with honest work and remembrance.",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "rites": [
+  {
+   "id": "birth",
+   "stage": "birth",
+   "name": "Birth",
+   "summary": "The child is named from the Guru Granth Sahib, opened at random, the first letter of the reading giving the name's initial.",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "coming-of-age",
+   "stage": "coming-of-age",
+   "name": "Coming of age",
+   "summary": "Amrit sanchar, initiation into the Khalsa, taken at any age of readiness; the initiated keep the five articles of faith.",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "marriage",
+   "stage": "marriage",
+   "name": "Marriage",
+   "summary": "Anand karaj, the couple circling the Guru Granth Sahib through the four laavan hymns.",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "death",
+   "stage": "death",
+   "name": "Death",
+   "summary": "Cremation, with the evening prayer of rest; mourning is restrained and the scripture is read in the days after.",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "misconceptions": [
+  {
+   "id": "sikhism-is-a-blend",
+   "claim": "Sikhism is a blend of Hinduism and Islam.",
+   "correction": "The tradition understands itself as founded on Nanak's own revelation, and its theology, scripture, and institutions are its own; kinship with its neighbors is not derivation.",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "turban-confusion",
+   "claim": "The turban marks its wearer as belonging to another faith.",
+   "correction": "The turban is a Sikh article of faith covering unshorn hair; most turban wearers in Western countries are Sikhs.",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "kirpan-is-a-weapon",
+   "claim": "The kirpan is a concealed weapon.",
+   "correction": "It is an article of faith binding its bearer to protect the vulnerable, carried under discipline, not an instrument of aggression.",
+   "sources": [
+    "mcleod-sikhism-1997"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "further_reading": [
+  "mcleod-sikhism-1997"
+ ],
+ "sourcing": "sourced",
+ "overview": {
+  "body": "Sikhism is the path of the One: the formless, timeless God whom Guru Nanak proclaimed at the close of the fifteenth century in Punjab, beyond the labels of Hindu and Muslim. Its roughly twenty-six million adherents make it the youngest of the world's major religions, and its center holds three disciplines Nanak taught together: remembrance of the Name, honest work, and sharing what one earns. The line of ten human Gurus closed in 1708, when guruship passed to the scripture itself: the Guru Granth Sahib, before which every Sikh congregation gathers as equals, and beside which every [[gurdwara]] serves the [[langar]] meal to anyone who comes.",
+  "sources": [
+   "mcleod-sikhism-1997"
   ],
-  "law_dimensions": [
-    "dietary-law",
-    "dress-modesty",
-    "ethical-frame",
-    "conversion-stance",
-    "clergy-leadership",
-    "worship-form",
-    "calendar-system"
-  ],
-  "festivals": [
-    "vaisakhi"
-  ],
-  "sites": [],
-  "figures": [],
-  "canon": [],
-  "practices": [],
-  "rites": [],
-  "misconceptions": [],
-  "further_reading": [],
   "sourcing": "sourced"
+ },
+ "origins": {
+  "body": "Guru Nanak's call came around 1499 at Sultanpur, and his hymns and journeys gathered the first community at Kartarpur. Nine successors built what he founded: Angad gave the Gurmukhi script, Amar Das the institutions, Ram Das the city of Amritsar, and Arjan the Adi Granth and the Harmandir Sahib, before dying in Mughal custody in 1606, the tradition's first martyr. His son Hargobind took up two swords, spiritual and temporal; the ninth Guru, Tegh Bahadur, was executed at Delhi in 1675, in Sikh memory for defending another community's freedom of conscience. In 1699 Guru Gobind Singh founded the [[khalsa]], the initiated order bearing the five articles of faith, and before his death in 1708 sealed the succession forever in the scripture. The community weathered persecution, won an empire under Ranjit Singh, reformed itself under the Singh Sabha, and carried the gurdwara across the world.",
+  "sources": [
+   "mcleod-sikhism-1997"
+  ],
+  "sourcing": "sourced"
+ },
+ "core_beliefs": {
+  "body": "Ik Onkar: there is one God, creator and pervading presence, beyond form, gender, and birth, known through grace and remembrance rather than ritual or renunciation. The world unfolds under hukam, the divine order; the human disease is haumai, self-centeredness, and its cure is nam simran, remembrance of the Name, practiced in a householder's life of honest labor and service, not in withdrawal. All human beings are equal before the One: caste distinctions are rejected in principle and dissolved in practice at the langar line. Liberation is union with God, ending the round of rebirth; the Gurus teach it as the fruit of grace meeting effort, in this life's ordinary duties.",
+  "sources": [
+   "mcleod-sikhism-1997"
+  ],
+  "sourcing": "sourced"
+ }
 }

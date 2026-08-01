@@ -1,0 +1,19 @@
+{
+ "id": "mai-bhago",
+ "name": "Mai Bhago",
+ "traditions": [
+  "sikhism"
+ ],
+ "born": {
+  "year": 1705,
+  "precision": "year"
+ },
+ "dates_note": "floruit",
+ "role": "Warrior",
+ "summary": "The warrior who rallied the forty liberated ones at Muktsar and rode in the Guru's guard.",
+ "events": [],
+ "sources": [
+  "mcleod-sikhism-1997"
+ ],
+ "sourcing": "sourced"
+}
