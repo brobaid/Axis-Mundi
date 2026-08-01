@@ -466,6 +466,21 @@ if (root !== null) {
     root?.querySelector('[data-zoom-in]')?.addEventListener('click', () => stepZoom(0.5));
     root?.querySelector('[data-zoom-out]')?.addEventListener('click', () => stepZoom(2));
 
+    /* The docked controls are fixed, so they float over whatever is at the
+       bottom of the page — the footer, not the timeline, since the footer comes
+       after it. The page reserves exactly the dock's height, measured rather
+       than guessed: the dock is one row undrilled and two rows drilled, so any
+       number written here would be wrong half the time. */
+    const dock = root?.querySelector<HTMLElement>('.tl-bar__actions');
+    if (dock !== null && dock !== undefined && window.matchMedia('(pointer: coarse)').matches) {
+      const reserve = (): void => {
+        const h = dock.getBoundingClientRect().height;
+        document.body.style.paddingBottom = h > 0 ? `${Math.ceil(h)}px` : '';
+      };
+      reserve();
+      new ResizeObserver(reserve).observe(dock);
+    }
+
     /* Keyboard: arrows walk events chronologically, Enter opens, Esc closes
        (design language §10). Left and right move within the ordered set. */
     root?.addEventListener('keydown', (ev) => {
