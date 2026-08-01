@@ -19,10 +19,11 @@
     "validate:timeline": "tsx scripts/check-timeline.ts",
     "validate": "pnpm validate:content && pnpm validate:tokens && pnpm validate:timeline",
     "lint": "eslint . && astro check",
-    "check": "pnpm validate && pnpm lint && pnpm build && pnpm validate:links && pnpm validate:reader",
+    "check": "pnpm validate:install && pnpm validate && pnpm lint && pnpm build && pnpm validate:links && pnpm validate:reader",
     "validate:links": "tsx scripts/check-links.ts",
     "ingest:corpus": "tsx scripts/ingest-corpus.ts",
-    "validate:reader": "tsx scripts/check-reader.ts"
+    "validate:reader": "tsx scripts/check-reader.ts",
+    "validate:install": "tsx scripts/check-install.ts"
   },
   "dependencies": {
     "astro": "^5.14.1",
@@ -32,7 +33,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
-    "@eslint/js": "^10.0.1",
+    "@eslint/js": "^9.18.0",
     "@fontsource-variable/archivo": "^5.2.6",
     "@fontsource-variable/newsreader": "^5.2.6",
     "@fontsource-variable/source-serif-4": "^5.2.6",
