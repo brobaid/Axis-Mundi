@@ -143,6 +143,7 @@ const bootstrap = {
   <section class="shell head">
     <p class="eyebrow">Room III · The Atlas Room</p>
     <h1>The world, one era at a time.</h1>
+    <p class="room-says">Where each tradition was, era by era.</p>
     <p class="lede">
       Twelve snapshots, not an animation. Borders between them are never
       interpolated — an intermediate line would be a claim no source supports.
@@ -173,7 +174,8 @@ const bootstrap = {
           <div class="scrub">
             <div class="scrub__rail" data-scrubber role="radiogroup" aria-label="Era snapshot">
               <div class="scrub__line" aria-hidden="true" />
-              <div class="meridian scrub__meridian" data-map-meridian aria-hidden="true" />
+              <div class="meridian scrub__meridian" data-map-meridian aria-hidden="true"
+                   title="One time cursor shared by every room" />
               {rail.map((d) => (
                 <button
                   type="button"

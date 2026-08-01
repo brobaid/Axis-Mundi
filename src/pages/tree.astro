@@ -97,8 +97,9 @@ const bootstrap = {
   <TraditionSymbols />
 
   <section class="shell head">
-    <p class="eyebrow">Room V · The Genealogy Room</p>
+    <p class="eyebrow">Room VII · The Genealogy Room</p>
     <h1>Descent, branch by branch.</h1>
+    <p class="room-says">Which tradition came from which, and where the branches parted.</p>
     <p class="crumb caption">
       <b>Family tree</b> · {input.length} nodes across {TRADITIONS.length} traditions · {dated} carry a
       founding date
@@ -111,7 +112,8 @@ const bootstrap = {
       <div class="scrub">
         <div class="scrub__rail" data-tree-scrubber role="radiogroup" aria-label="Era">
           <div class="scrub__line" aria-hidden="true"></div>
-          <div class="meridian scrub__meridian" data-tree-meridian aria-hidden="true"></div>
+          <div class="meridian scrub__meridian" data-tree-meridian aria-hidden="true"
+               title="One time cursor shared by every room"></div>
           {
             detents.map((era, i) => (
               <button

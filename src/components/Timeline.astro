@@ -70,15 +70,33 @@ const bootstrap = {
 <section class="tl" data-timeline aria-label="Interactive timeline">
   <!-- controls ------------------------------------------------------- -->
   <div class="tl-bar">
-    <nav class="tl-crumb" data-crumb aria-label="Drill path">
+    <nav class="tl-crumb" data-crumb aria-label="Which branches you are looking at">
       <b>World</b>
     </nav>
     <div class="tl-bar__actions">
       <button type="button" class="tl-btn" data-up hidden>Back up</button>
-      <button type="button" class="tl-btn" data-ghost-toggle aria-pressed="false" hidden>
+      {/*
+        Both names are the museum's own and both stay — they are good names.
+        What they did not have was a sentence saying what they do, which a
+        first-time visitor needs before the name means anything.
+      */}
+      <button
+        type="button"
+        class="tl-btn"
+        data-ghost-toggle
+        aria-pressed="false"
+        title="Also show events from branches outside this view, dimmed"
+        hidden
+      >
         Ghost mode
       </button>
-      <button type="button" class="tl-btn" data-threads-toggle aria-pressed="false">
+      <button
+        type="button"
+        class="tl-btn"
+        data-threads-toggle
+        aria-pressed="false"
+        title="Draw a line between events where one led to another"
+      >
         Influence threads
       </button>
       <!--
@@ -137,7 +155,7 @@ const bootstrap = {
   </p>
 
   <!-- canvas --------------------------------------------------------- -->
-  <div class="tl-frame" data-scroll tabindex="0" role="region" aria-label="Timeline canvas, scrollable">
+  <div class="tl-frame" data-scroll tabindex="0" role="region" aria-label="Timeline canvas. Drag or scroll sideways to travel through time">
     <div class="tl-canvas" data-canvas set:html={canvasHtml} />
   </div>
 

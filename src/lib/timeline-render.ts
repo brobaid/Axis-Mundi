@@ -302,7 +302,8 @@ export function renderCanvas(
           ? ''
           : `<b class="tl-meridian__label">${esc(options.meridianLabel)}</b>`;
       meridian =
-        `<div class="tl-meridian" style="left:calc(${LANE_GUTTER}px + (100% - ${LANE_GUTTER}px) * ${f.toFixed(4)})"` +
+        `<div class="tl-meridian" title="One time cursor shared by every room"` +
+        ` style="left:calc(${LANE_GUTTER}px + (100% - ${LANE_GUTTER}px) * ${f.toFixed(4)})"` +
         ` role="img" aria-label="Time cursor at ${esc(options.meridianLabel ?? String(options.meridianYear))}">` +
         `${label}</div>`;
     }
