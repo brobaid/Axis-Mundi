@@ -283,6 +283,54 @@ if (strays.length > 0) {
 }
 
 /* -------------------------------------------------------------------------- */
+/* 2. Undefined custom properties                                             */
+/* -------------------------------------------------------------------------- */
+
+/*
+ * `var(--space-5)` is not an error anywhere. It is an invalid value at computed
+ * time, so the declaration is simply dropped and the box gets zero padding —
+ * silently, in five places, for as long as nobody looks. The scale runs
+ * 1,2,3,4,6,8,12,16,24 and skipping a rung is an easy thing to do from memory.
+ *
+ * A property counts as defined if tokens.css declares it or if anything in src/
+ * assigns it — islands set --morph-shift and --dot at runtime, and a lane sets
+ * --tradition-hue inline, none of which belong in tokens.css.
+ */
+const VAR_REF = /var\(\s*(--[\w-]+)/g;
+const VAR_DECL = /(--[\w-]+)\s*:/g;
+/* A property an island sets through the CSSOM never appears as a declaration. */
+const VAR_SET = /setProperty\(\s*['"`](--[\w-]+)/g;
+
+const declared = new Set<string>();
+const referenced = new Map<string, string>();
+
+for (const file of walkSrc(resolve(root, 'src'))) {
+  const text = readFileSync(file, 'utf8');
+  for (const m of text.matchAll(VAR_DECL)) declared.add(m[1] as string);
+  for (const m of text.matchAll(VAR_SET)) declared.add(m[1] as string);
+  for (const m of text.matchAll(VAR_REF)) {
+    const name = m[1] as string;
+    if (!referenced.has(name)) {
+      const line = text.slice(0, m.index).split('\n').length;
+      referenced.set(name, `${relative(root, file)}:${line}`);
+    }
+  }
+}
+
+/* `--t-` is the stem of `--t-${tradition}`, built by template literal. */
+const undefinedVars = [...referenced].filter(([name]) => !declared.has(name) && name !== '--t-');
+
+if (undefinedVars.length > 0) {
+  console.error('\n  Custom properties referenced but never defined\n');
+  for (const [name, where] of undefinedVars) console.error(`  ${name}  first used at ${where}`);
+  console.error(
+    '\n  An undefined var() drops its whole declaration at computed-value time,' +
+      '\n  so the property silently falls back to its initial value.\n',
+  );
+  process.exit(1);
+}
+
+/* -------------------------------------------------------------------------- */
 /* 2. Contrast audit                                                          */
 /* -------------------------------------------------------------------------- */
 
