@@ -1,0 +1,11 @@
+{
+  "id": "pali-canon",
+  "tradition": "buddhism",
+  "title": "The Pali Canon",
+  "order": 2,
+  "original": "The Mahasangiti Pali text",
+  "english": "Bhikkhu Sujato's translation, CC0 and modern",
+  "status": "Acquiring from SuttaCentral's data, phased by nikaya: the Dhammapada and the Digha Nikaya first.",
+  "canon_ids": ["pali-canon"],
+  "sourcing": "editorial"
+}

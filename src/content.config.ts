@@ -14,6 +14,7 @@ import {
   siteSchema,
 } from './schemas/deep-dive.js';
 import { divisionSchema, workSchema } from './schemas/work.js';
+import { shelfSchema } from './schemas/shelf.js';
 import { snapshotSchema } from './schemas/snapshot.js';
 import { textSchema } from './schemas/text.js';
 
@@ -69,6 +70,10 @@ const works = defineCollection({ loader: json('works'), schema: workSchema });
    set and never the client's payload. */
 const divisions = defineCollection({ loader: json('divisions'), schema: divisionSchema });
 
+/* The owner's acquisition plan for the canons not yet in the build, so the
+   library's coming rows are content rather than copy in a page. */
+const shelf = defineCollection({ loader: json('shelf'), schema: shelfSchema });
+
 export const collections = {
   events,
   taxonomy,
@@ -84,4 +89,5 @@ export const collections = {
   snapshots,
   works,
   divisions,
+  shelf,
 };

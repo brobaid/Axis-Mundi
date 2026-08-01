@@ -26,6 +26,7 @@ import {
   siteSchema,
 } from '../src/schemas/deep-dive.js';
 import { divisionSchema, workSchema } from '../src/schemas/work.js';
+import { shelfSchema } from '../src/schemas/shelf.js';
 import { snapshotSchema } from '../src/schemas/snapshot.js';
 import { textSchema } from '../src/schemas/text.js';
 import { glossaryRefs } from '../src/lib/prose.js';
@@ -82,6 +83,7 @@ const COLLECTIONS = {
   snapshots: { dir: 'snapshots', schema: snapshotSchema },
   works: { dir: 'works', schema: workSchema },
   divisions: { dir: 'divisions', schema: divisionSchema },
+  shelf: { dir: 'shelf', schema: shelfSchema },
 } satisfies Record<string, Collection<z.ZodTypeAny>>;
 
 type CollectionName = keyof typeof COLLECTIONS;
@@ -102,6 +104,7 @@ const parsed: Record<CollectionName, Map<string, { file: string; data: any }>> =
   snapshots: new Map(),
   works: new Map(),
   divisions: new Map(),
+  shelf: new Map(),
 };
 
 let fileCount = 0;
@@ -373,6 +376,58 @@ for (const id of LAUNCH_TEN) {
     });
   } else if (entry.data.depth !== 1) {
     note(entry.file, 'depth', `launch tradition "${id}" must be a depth-1 node`);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* The Reading Room                                                            */
+/* -------------------------------------------------------------------------- */
+
+/*
+  A work index and its division records are one thing split across many files,
+  and nothing at build time notices when they disagree: a missing record built
+  an empty book once already, and an orphaned one is a route nobody can reach
+  holding text nobody reads.
+*/
+for (const { file, data } of parsed.works.values()) {
+  for (const division of data.divisions as { slug: string; verses: number }[]) {
+    const id = `${data.id}--${division.slug}`;
+    const record = parsed.divisions.get(id);
+    if (record === undefined) {
+      note(file, `divisions.${division.slug}`, `no division record ${id}.json`);
+    } else if (record.data.verses.length !== division.verses) {
+      note(
+        file,
+        `divisions.${division.slug}`,
+        `index says ${division.verses} verses, ${id}.json holds ${record.data.verses.length}`,
+      );
+    }
+  }
+}
+for (const { file, data } of parsed.divisions.values()) {
+  const work = parsed.works.get(data.work);
+  if (work === undefined) {
+    note(file, 'work', `no work record "${data.work}"`);
+  } else if (!work.data.divisions.some((d: { slug: string }) => d.slug === data.slug)) {
+    note(file, 'slug', `"${data.work}" does not list a division "${data.slug}"`);
+  }
+}
+
+/*
+  A shelf row is a promise about a canon that has not arrived. Once it does,
+  the row must go: two places claiming to say whether a text is readable is one
+  too many, and the stale one always wins the reader's attention.
+*/
+const canonIds = new Set<string>();
+for (const { data } of parsed.deepDives.values()) {
+  for (const row of (data.canon ?? []) as { id: string }[]) canonIds.add(row.id);
+}
+for (const { file, data } of parsed.shelf.values()) {
+  if (parsed.works.has(data.id)) {
+    note(file, 'id', `"${data.id}" is already a work; a shelved canon needs no coming row`);
+  }
+  for (const id of data.canon_ids as string[]) {
+    if (!canonIds.has(id)) note(file, 'canon_ids', `no deep-dive canon row "${id}"`);
   }
 }
 

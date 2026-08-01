@@ -62,6 +62,9 @@ const count = `${work.divisions.length} ${work.division_label_plural}, ${verses}
           .map(([, id]) => titleOf.get(id) ?? id)
           .join(' · ')
       }
+      {/* Whatever this canon must state about itself, stated where a reader
+          meets it first rather than only once they are inside a book. */}
+      {work.note !== undefined && <span class="rd-contents__work-note">{work.note}</span>}
       {
         /* The pairing is the claim, so where it is incomplete the page says so
            here rather than leaving a reader to find the holes one book at a
@@ -133,6 +136,7 @@ const count = `${work.divisions.length} ${work.division_label_plural}, ${verses}
     max-width: 42rem;
   }
 
+  .rd-contents__work-note,
   .rd-contents__gaps {
     display: block;
     margin-top: var(--space-2);

@@ -31,7 +31,7 @@ export const getStaticPaths = (async () => {
 const { dive } = Astro.props;
 const meta = traditionMeta(dive.tradition);
 
-const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, siteRecords, figureRecords, sources, events, texts, works] = await Promise.all([
+const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, siteRecords, figureRecords, sources, events, texts, works, shelfRows] = await Promise.all([
   getPublishable('glossary'),
   /* The branch tree renders names and contested flags — spec §2.3 structure. */
   getStructural('taxonomy'),
@@ -46,6 +46,8 @@ const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, siteRecords
   getPublishable('texts'),
   /* A canon row links into the Reading Room when that text is in the build. */
   getPublishable('works'),
+  /* And to its waiting-on row when it is only on the acquisition plan. */
+  getPublishable('shelf'),
 ]);
 
 /* §5.1 stat box: founding and principal text are extracted, never authored
@@ -173,6 +175,14 @@ const demographics = publishable(dive.demographics);
 const canon = dive.canon.filter((c) => includesUnsourced || c.sourcing !== 'todo');
 /* Canon rows whose text has entered the Reading Room, by shared id. */
 const readable = new Set(works.map((w) => w.data.id));
+/* And rows the Reading Room has a plan for but not yet a text: those link to
+   the row that says what it is waiting on, which is a more useful answer than
+   no link at all — "coming" is information, and so is "no clean English
+   exists". A canon nobody has a plan for stays unlinked, because inventing one
+   would be the museum promising something it has not undertaken. */
+const planned = new Map<string, string>(
+  shelfRows.flatMap((r) => r.data.canon_ids.map((id) => [id, r.data.id] as const)),
+);
 const practices = dive.practices.filter((p) => includesUnsourced || p.sourcing !== 'todo');
 const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.sourcing !== 'todo');
 
@@ -325,11 +335,18 @@ const showAdherentYear =
                   <tr>
                     <th scope="row">
                       {/* The row is the claim about the text; the link is the
-                          text itself, and only appears once it is in the build. */}
+                          text itself once it is in the build, and until then
+                          the row in the Reading Room that says what the
+                          museum is waiting on. */}
                       {readable.has(c.id) ? (
                         <a class="canon__read" href={`/read/${c.id}`}>
                           {c.title}
                           <span class="canon__read-mark caption"> · read</span>
+                        </a>
+                      ) : planned.has(c.id) ? (
+                        <a class="canon__read canon__read--soon" href={`/read#${planned.get(c.id)}`}>
+                          {c.title}
+                          <span class="canon__read-mark caption"> · being acquired</span>
                         </a>
                       ) : (
                         c.title
@@ -746,6 +763,12 @@ const showAdherentYear =
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-color: var(--hairline-strong);
+  }
+
+  /* A text that is coming is not a text you can read, so the link is set
+     dashed: the same affordance, visibly provisional. */
+  .canon__read--soon {
+    text-decoration-style: dashed;
   }
 
   .canon__read-mark {

@@ -14,23 +14,33 @@ import { fontFor } from '../../lib/scripts';
  * mostly is not, so these are public-domain and CC0 editions, named on every
  * page, accepting archaic register as the price.
  *
- * Nine more canons are acquired and will land in the same paired shape. Two of
- * them have no public-domain English of any quality, and those will enter
- * original-only with the English slot saying so.
+ * A library is not only what is on its shelves. The canons still being
+ * acquired have rows here too, and the two with no clean English edition say
+ * so in the English slot rather than leaving it blank — named absence, never
+ * filler, which is the same rule the rest of the museum reads by.
  */
 
-const entries = await getPublishable('works');
-const works = entries
-  .map((e) => e.data as unknown as WorkData)
-  .sort((a, b) => a.title.localeCompare(b.title));
+const [entries, coming] = await Promise.all([
+  getPublishable('works'),
+  getPublishable('shelf'),
+]);
 
 const nameOf = new Map<string, string>(TRADITIONS.map((t) => [t.id, t.name]));
-const shelf = works.map((w) => ({
-  work: w,
-  divisions: w.divisions.length,
-  verses: w.total_verses,
-  tradition: nameOf.get(w.tradition) ?? w.tradition,
-}));
+
+const shelf = entries
+  .map((e) => e.data as unknown as WorkData)
+  .sort((a, b) => a.title.localeCompare(b.title))
+  .map((w) => ({
+    work: w,
+    tradition: nameOf.get(w.tradition) ?? w.tradition,
+  }));
+
+const waiting = coming
+  .map((e) => e.data)
+  .sort((a, b) => a.order - b.order)
+  .map((r) => ({ ...r, traditionName: nameOf.get(r.tradition) ?? r.tradition }));
+
+const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
 ---
 
 <BaseLayout
@@ -48,6 +58,18 @@ const shelf = works.map((w) => ({
   </section>
 
   <div class="shell rd-shelf">
+    <h2 class="rd-shelf__heading">
+      On the shelves
+      {
+        shelf.length > 0 && (
+          <span class="caption rd-shelf__tally">
+            {shelf.length} {shelf.length === 1 ? 'canon' : 'canons'} ·{' '}
+            {verses.toLocaleString('en')} verses
+          </span>
+        )
+      }
+    </h2>
+
     {
       shelf.length === 0 ? (
         <p class="measure empty">
@@ -73,14 +95,56 @@ const shelf = works.map((w) => ({
                   )}
                 </span>
                 <span class="caption rd-shelf__meta">
-                  {s.tradition} · {s.divisions} {s.work.division_label_plural} ·{' '}
-                  {s.verses.toLocaleString('en')} verses
+                  {s.tradition} · {s.work.divisions.length} {s.work.division_label_plural} ·{' '}
+                  {s.work.total_verses.toLocaleString('en')} verses
                   {!hasEnglish(s.work) && ' · original only'}
                 </span>
               </a>
             </li>
           ))}
         </ul>
+      )
+    }
+
+    {
+      waiting.length > 0 && (
+        <>
+          <h2 class="rd-shelf__heading rd-shelf__heading--waiting">Being acquired</h2>
+          <p class="measure caption rd-shelf__intro">
+            The canons the owner is bringing in, and the editions they will arrive in. Two of them
+            have no public-domain English of any quality, and those rows say so — a library is
+            honest about its gaps or it is a showroom.
+          </p>
+
+          <ul class="rd-waiting" role="list">
+            {waiting.map((r) => (
+              /* The id is the anchor a deep dive's canon table links to, so a
+                 reader following "the Bible" from Christianity lands on this
+                 row rather than on the top of a page they must then search. */
+              <li class="rd-waiting__row" id={r.id}>
+                <h3 class="rd-waiting__title">
+                  {r.title}
+                  <span class="caption rd-waiting__tradition">{r.traditionName}</span>
+                </h3>
+                <dl class="rd-waiting__editions">
+                  <div>
+                    <dt class="caption">Original</dt>
+                    <dd>{r.original}</dd>
+                  </div>
+                  <div>
+                    <dt class="caption">English</dt>
+                    {r.english === undefined ? (
+                      <dd class="rd-waiting__absent">{r.english_unresolved}</dd>
+                    ) : (
+                      <dd>{r.english}</dd>
+                    )}
+                  </div>
+                </dl>
+                <p class="rd-waiting__status">{r.status}</p>
+              </li>
+            ))}
+          </ul>
+        </>
       )
     }
 
@@ -95,6 +159,34 @@ const shelf = works.map((w) => ({
 <style>
   .rd-shelf {
     padding-bottom: var(--space-16);
+  }
+
+  .rd-shelf__heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+    font-family: var(--font-display);
+    font-size: var(--size-h3);
+    max-width: 42rem;
+    padding-bottom: var(--space-2);
+    margin-bottom: var(--space-4);
+    border-bottom: var(--hairline-width) solid var(--ink);
+  }
+
+  .rd-shelf__heading--waiting {
+    margin-top: var(--space-16);
+  }
+
+  .rd-shelf__tally {
+    color: var(--ink-soft);
+    font-family: var(--font-ui);
+    flex: none;
+  }
+
+  .rd-shelf__intro {
+    color: var(--ink-soft);
+    margin-bottom: var(--space-6);
   }
 
   .rd-shelf__list {
@@ -136,8 +228,89 @@ const shelf = works.map((w) => ({
     text-underline-offset: 4px;
   }
 
+  /* --- being acquired ---------------------------------------------------- */
+
+  /*
+    A waiting row is a card, not a list item: it carries two editions and a
+    paragraph, and set as a flat row it read as though the canon were already
+    readable. The surface says "not yet" before any of the words do.
+  */
+  .rd-waiting {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-4);
+    max-width: 42rem;
+  }
+
+  .rd-waiting__row {
+    padding: var(--space-4);
+    background: var(--surface);
+    border-left: var(--hairline-width) solid var(--hairline);
+    scroll-margin-top: 9rem;
+  }
+
+  /* A reader arriving from a dive's canon table needs to see which row it
+     was, and the brass says so for exactly as long as the fragment holds. */
+  .rd-waiting__row:target {
+    border-left-color: var(--brass);
+    border-left-width: 3px;
+    padding-left: calc(var(--space-4) - 2px);
+  }
+
+  .rd-waiting__title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
+    font-family: var(--font-display);
+    font-size: var(--size-body);
+    margin-bottom: var(--space-3);
+  }
+
+  .rd-waiting__tradition {
+    color: var(--ink-soft);
+    font-family: var(--font-ui);
+    flex: none;
+  }
+
+  .rd-waiting__editions {
+    display: grid;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+  }
+
+  .rd-waiting__editions dt {
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: var(--font-ui);
+  }
+
+  .rd-waiting__editions dd {
+    margin: 0;
+    font-size: var(--size-small);
+  }
+
+  /*
+    The named absence. Set in the same slot and the same size as an edition
+    that exists, because it is the same kind of statement — the museum saying
+    what is there — and shrinking it would read as an apology.
+  */
+  .rd-waiting__absent {
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  .rd-waiting__status {
+    font-size: var(--size-small);
+    color: var(--ink-soft);
+    max-width: 36rem;
+  }
+
   .rd-shelf__note {
-    margin-top: var(--space-8);
+    margin-top: var(--space-12);
     color: var(--ink-soft);
   }
 </style>

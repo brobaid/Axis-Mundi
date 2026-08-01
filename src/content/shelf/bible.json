@@ -1,0 +1,11 @@
+{
+  "id": "bible",
+  "tradition": "christianity",
+  "title": "The Bible",
+  "order": 1,
+  "original": "The SBL Greek New Testament with the Westminster Leningrad Codex",
+  "english": "The World English Bible, modern and public domain",
+  "status": "Acquiring. The deuterocanonical books follow the World English Bible's Apocrypha. The Hebrew scriptures are already on the shelves, in the Tanakh's own Masoretic order rather than the Christian Old Testament's.",
+  "canon_ids": ["bible"],
+  "sourcing": "editorial"
+}

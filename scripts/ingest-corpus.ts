@@ -94,8 +94,9 @@ const CONFIGS: Record<string, Config> = {
        anywhere. The page names an edition, so it says how the text it actually
        shows differs from what that name alone would imply. */
     note:
-      'In this English text as delivered the divine name is written HaShem, ' +
-      'and God and Lord appear as G-d and L-rd.',
+      "The books stand in the Tanakh's own order, under its own three divisions, " +
+      'not the Christian Old Testament\'s. In this English text as delivered the ' +
+      'divine name is written HaShem, and God and Lord appear as G-d and L-rd.',
     /* The canon's own grouping, by the delivered file's own book order. */
     sections: [
       { id: 'torah', name: 'Torah', from: 1, to: 5 },

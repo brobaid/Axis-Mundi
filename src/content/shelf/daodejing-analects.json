@@ -1,0 +1,11 @@
+{
+  "id": "daodejing-analects",
+  "tradition": "chinese",
+  "title": "The Daodejing and the Analects",
+  "order": 3,
+  "original": "Classical Chinese",
+  "english": "James Legge's translation, public domain",
+  "status": "Acquiring. Two works rather than a canon, and the Chinese dive's canon table is wider than both.",
+  "canon_ids": ["confucian-classics", "daozang"],
+  "sourcing": "editorial"
+}
