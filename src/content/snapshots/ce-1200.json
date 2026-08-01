@@ -11,6 +11,10 @@
   "year": 1200,
   "basis": "macro-realms from Natural Earth 110m whole units with one cut geometry (Iberia); scholarly-convention borders"
  },
+ "memo": {
+  "file": "snapshots-batch-memo.md",
+  "delivered": "2026-08-01"
+ },
  "features": [
   {
    "type": "Feature",

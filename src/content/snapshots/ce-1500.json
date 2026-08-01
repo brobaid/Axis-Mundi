@@ -11,6 +11,10 @@
   "year": 1500,
   "basis": "macro-realms from Natural Earth 110m units, whole units only; scholarly-convention borders"
  },
+ "memo": {
+  "file": "snapshot-1500-memo.md",
+  "delivered": "2026-08-01"
+ },
  "features": [
   {
    "type": "Feature",

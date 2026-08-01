@@ -11,6 +11,10 @@
   "basis": "country-level; Pew Global Religious Landscape 2020 (Hackett et al. 2025, doi:10.58094/fj71-ny11); geometry Natural Earth 110m"
  },
  "era_note": "The present plate is the only one drawn from a census rather than a chronicle: every color rests on Pew's 2020 country table, and its honesty cuts both ways. Five of this museum's ten traditions are a majority nowhere on it; Japan renders unaffiliated while its shrines fill at New Year; and the gray that was paganism on the ancient plates is now the unaffiliated, the century's fastest-growing category. The map ends by showing the measure it cites.",
+ "memo": {
+  "file": "snapshot-2020-memo.md",
+  "delivered": "2026-07-31"
+ },
  "features": [
   {
    "type": "Feature",

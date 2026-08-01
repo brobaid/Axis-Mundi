@@ -11,6 +11,10 @@
   "year": 1,
   "basis": "macro-realms composed from Natural Earth 110m units; scholarly-convention borders"
  },
+ "memo": {
+  "file": "snapshot-0001-memo.md",
+  "delivered": "2026-08-01"
+ },
  "features": [
   {
    "type": "Feature",

@@ -11,6 +11,10 @@
   "year": 300,
   "basis": "macro-realms from Natural Earth 110m whole units; scholarly-convention borders"
  },
+ "memo": {
+  "file": "snapshots-batch-memo.md",
+  "delivered": "2026-08-01"
+ },
  "features": [
   {
    "type": "Feature",

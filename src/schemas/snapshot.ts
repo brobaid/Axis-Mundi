@@ -114,6 +114,14 @@ export const snapshotSchema = z
      * that is said in words, since the plate can only say it in absence.
      */
     era_note: z.string().min(1).optional(),
+    /**
+     * The research memo this plate was drawn from, and the day it arrived.
+     *
+     * The colophon lists the twelve plates by their memos, which is the
+     * provenance a reader can actually check: the memo names the rulings, and
+     * the plate is what those rulings drew.
+     */
+    memo: z.object({ file: z.string().min(1), delivered: z.string().regex(/^\d{4}-\d{2}-\d{2}$/) }).optional(),
     features: z.array(realmFeature),
   })
   .superRefine((value, ctx) => {

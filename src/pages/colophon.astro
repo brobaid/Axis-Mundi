@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPublishable, tally } from '../lib/content';
+
+/**
+ * The colophon.
+ *
+ * A colophon is the note at the end of a book saying how it was made. This one
+ * is computed rather than written: the counts, the registry and the plates all
+ * come from the same records the rest of the site renders, so the page cannot
+ * drift from what it describes. Only the opening is authored, and it is the
+ * owner's own words.
+ */
+
+const COLLECTIONS = [
+  ['Events', 'events'],
+  ['Deep dives', 'deepDives'],
+  ['Taxonomy nodes', 'taxonomy'],
+  ['Belief-matrix rows', 'matrix'],
+  ['Glossary terms', 'glossary'],
+  ['Sacred texts', 'texts'],
+  ['Festivals', 'festivals'],
+  ['Sacred sites', 'sites'],
+  ['Figures', 'figures'],
+  ['Era snapshots', 'snapshots'],
+  ['Regions', 'regions'],
+  ['Sources', 'sources'],
+] as const;
+
+const counts = await Promise.all(
+  COLLECTIONS.map(async ([name, key]) => ({ name, ...(await tally(key)) })),
+);
+const totalRecords = counts.reduce((sum, c) => sum + c.total, 0);
+
+const sources = (await getPublishable('sources')).sort(
+  (a, b) => a.data.tier.localeCompare(b.data.tier) || a.data.title.localeCompare(b.data.title),
+);
+
+const snapshots = (await getPublishable('snapshots'))
+  .map((s) => ({
+    label: s.data.label,
+    era: s.data.era,
+    realms: s.data.features.length,
+    memo: s.data.memo,
+  }))
+  .sort((a, b) => a.era - b.era);
+
+const realmTotal = snapshots.reduce((sum, s) => sum + s.realms, 0);
+
+const TIER_LABEL: Record<string, string> = {
+  T1: 'T1 · academic reference',
+  T2: 'T2 · demographic',
+  T3: 'T3 · encyclopaedic',
+  T4: 'T4 · tradition-internal',
+};
+---
+
+<BaseLayout
+  title="Colophon"
+  description="How Axis Mundi was made: the record counts, the source registry with tiers, and the twelve map plates with the memos they were drawn from."
+>
+  <section class="shell head">
+    <p class="eyebrow">Colophon</p>
+    <h1 class="display">How this<br />was made.</h1>
+    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+  </section>
+
+  <div class="shell col">
+    <p class="measure lede">
+      Axis Mundi was built by one person and two machines in the summer of 2026. Every fact on this
+      site traces to a named source through a pipeline that held one rule above all: nothing is
+      asserted that a record does not carry, and what the records cannot say is shown as absence,
+      hatching, or a held row rather than papered over. The typefaces are Newsreader, Source Serif,
+      Archivo, and IBM Plex Mono; the cartography leans on Natural Earth; the adherent figures are
+      Pew Research Center&rsquo;s; the mistakes that remain are the owner&rsquo;s.
+    </p>
+
+    <!-- records ---------------------------------------------------------- -->
+    <section class="col__block" aria-labelledby="col-records">
+      <h2 id="col-records">The records</h2>
+      <p class="measure caption">
+        {totalRecords} JSON files, each validated against a Zod schema mirroring the Phase 0 spec.
+        Counted from this build, not from a note kept by hand.
+      </p>
+      <div class="table-scroll">
+        <table class="col__table">
+          <thead>
+            <tr>
+              <th scope="col">Collection</th>
+              <th scope="col">Records</th>
+              <th scope="col">Source-checked</th>
+              <th scope="col">Held</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              counts.map((c) => (
+                <tr>
+                  <th scope="row">{c.name}</th>
+                  <td class="mono">{c.total}</td>
+                  <td class="mono">{c.sourced}</td>
+                  <td class="mono">{c.todo > 0 ? c.todo : '—'}</td>
+                </tr>
+              ))
+            }
+            <tr class="col__total">
+              <th scope="row">Total</th>
+              <td class="mono">{totalRecords}</td>
+              <td class="mono">{counts.reduce((s, c) => s + c.sourced, 0)}</td>
+              <td class="mono">
+                {counts.reduce((s, c) => s + c.todo, 0) || '—'}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- registry --------------------------------------------------------- -->
+    <section class="col__block" aria-labelledby="col-sources">
+      <h2 id="col-sources">The source registry</h2>
+      <p class="measure caption">
+        Every work any record cites, with the tier it was admitted under. A record may cite only
+        what is on this list.
+      </p>
+      <ul class="col__sources" role="list">
+        {
+          sources.map((s) => (
+            <li>
+              <b>{s.data.title}</b>
+              {s.data.author && <span> — {s.data.author}</span>}
+              {s.data.publisher && <span class="caption"> · {s.data.publisher}</span>}
+              <span class="mono caption col__tier">{TIER_LABEL[s.data.tier] ?? s.data.tier}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <!-- plates ----------------------------------------------------------- -->
+    <section class="col__block" aria-labelledby="col-plates">
+      <h2 id="col-plates">The twelve plates</h2>
+      <p class="measure caption">
+        Each map snapshot is hand-authored geometry drawn from a research memo, never interpolated
+        between frames. {realmTotal} realm features across the twelve.
+      </p>
+      <div class="table-scroll">
+        <table class="col__table">
+          <thead>
+            <tr>
+              <th scope="col">Plate</th>
+              <th scope="col">Realms</th>
+              <th scope="col">Memo</th>
+              <th scope="col">Delivered</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              snapshots.map((s) => (
+                <tr>
+                  <th scope="row" class="mono">{s.label}</th>
+                  <td class="mono">{s.realms}</td>
+                  <td class="mono col__memo">{s.memo?.file ?? '—'}</td>
+                  <td class="mono">{s.memo?.delivered ?? '—'}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="measure caption col__close">
+      The pipeline's current state, including what is still held, is on the{' '}
+      <a class="tap" href="/methodology">methodology page</a>.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .col {
+    padding-bottom: var(--space-16);
+  }
+
+  .col__block {
+    margin-top: var(--space-12);
+  }
+
+  .col__block h2 {
+    margin-bottom: var(--space-2);
+  }
+
+  .col__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--size-small);
+    margin-top: var(--space-4);
+    min-width: 30rem;
+  }
+
+  .col__table th,
+  .col__table td {
+    text-align: left;
+    vertical-align: top;
+    padding: var(--space-2) var(--space-4) var(--space-2) 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .col__table thead th {
+    font-family: var(--font-ui);
+    font-size: var(--size-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .col__total th,
+  .col__total td {
+    border-bottom: 0;
+    border-top: var(--hairline-width) solid var(--ink);
+  }
+
+  .col__memo {
+    color: var(--ink-soft);
+  }
+
+  .col__sources {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-4);
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .col__sources li {
+    font-size: var(--size-small);
+    padding-bottom: var(--space-2);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .col__tier {
+    display: block;
+    color: var(--ink-soft);
+  }
+
+  .col__close {
+    margin-top: var(--space-12);
+  }
+</style>
