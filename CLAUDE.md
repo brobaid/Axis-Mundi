@@ -37,6 +37,16 @@ no CMS, and none should ever be added.
 ## Workflow
 
 - Push directly to `main`. No pull requests, no preview review step.
+- **Work is delivered only when it is on `main`.** A push that lands anywhere else — a
+  working branch a harness assigned, a fork, a tag — is not a delivery, and reporting it
+  as done is a false report. An entire run once landed on a side branch while production
+  served the previous build and the report said "pushed".
+- **Every run ends by verifying delivery.** Fetch `origin/main`, confirm it contains the
+  run's final commit, and state it in the report on its own line: `main head: <sha>,
+  verified`. Anything that did not reach `main` is reported as UNDELIVERED, never as done.
+- If the git relay refuses `main` the way it refuses tag refs and branch deletions —
+  HTTP 403 from the relay, not from GitHub — that is a blocking flag for the owner, not a
+  reason to fall back to a branch.
 - **Local gate before every push, non-negotiable:** `pnpm validate:content`, `pnpm lint` and `pnpm build` must all pass locally. Never push with any of them failing.
 - Conventional commit messages, one concern each.
 - CI runs on every push and is the sourcing gate. It must stay green on `main`. It additionally runs `validate:tokens`, `validate:timeline` and `validate:links`; `pnpm check` runs the whole set locally.
