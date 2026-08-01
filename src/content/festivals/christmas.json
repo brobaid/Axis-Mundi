@@ -1,0 +1,15 @@
+{
+ "id": "christmas",
+ "name": "Christmas",
+ "traditions": [
+  "christianity"
+ ],
+ "calendar": "solar",
+ "date_rule": "December 25; January 7 on the Julian reckoning",
+ "observed": {},
+ "summary": "The nativity of Jesus; the two dates are one feast on two calendars.",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "sourcing": "sourced"
+}

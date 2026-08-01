@@ -1,0 +1,15 @@
+{
+ "id": "pentecost",
+ "name": "Pentecost",
+ "traditions": [
+  "christianity"
+ ],
+ "calendar": "solar",
+ "date_rule": "Fifty days after Easter",
+ "observed": {},
+ "summary": "The Spirit's descent on the apostles, kept as the church's birthday.",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,18 @@
+{
+ "id": "hagia-sophia-site",
+ "name": "Hagia Sophia",
+ "traditions": [
+  "christianity"
+ ],
+ "place": "Istanbul",
+ "location": {
+  "lat": 41.0086,
+  "lng": 28.9802
+ },
+ "region": "anatolia",
+ "significance": "The great church of Byzantium for nine centuries; a mosque, then a museum, now a mosque again, and holy to more than one tradition's memory.",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "sourcing": "sourced"
+}

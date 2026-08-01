@@ -1,44 +1,223 @@
 {
-  "id": "christianity",
-  "tradition": "christianity",
-  "name": "Christianity",
-  "stat_box": {
-    "adherents": {
-      "display": "2.3 bn (Pew, 2020)",
-      "estimate": 2300000000,
-      "source": "pew-grl-2025",
-      "year": 2020,
-      "basis": "Enumerated by Pew. 28.8% of world population.",
-      "contested": false
-    },
-    "symbol": "cross"
+ "id": "christianity",
+ "tradition": "christianity",
+ "name": "Christianity",
+ "stat_box": {
+  "adherents": {
+   "display": "2.3 bn (Pew, 2020)",
+   "estimate": 2300000000,
+   "source": "pew-grl-2025",
+   "year": 2020,
+   "basis": "Enumerated by Pew. 28.8% of world population.",
+   "contested": false
   },
-  "belief_dimensions": [
-    "divine-concept",
-    "cosmology",
-    "afterlife",
-    "salvation-path",
-    "scripture-authority",
-    "view-of-others"
+  "symbol": "cross"
+ },
+ "belief_dimensions": [
+  "divine-concept",
+  "cosmology",
+  "afterlife",
+  "salvation-path",
+  "scripture-authority",
+  "view-of-others"
+ ],
+ "law_dimensions": [
+  "dietary-law",
+  "dress-modesty",
+  "ethical-frame",
+  "conversion-stance",
+  "clergy-leadership",
+  "worship-form",
+  "calendar-system"
+ ],
+ "festivals": [
+  "christmas",
+  "easter",
+  "pentecost"
+ ],
+ "sites": [
+  "holy-sepulchre",
+  "nativity-bethlehem",
+  "st-peters",
+  "hagia-sophia-site"
+ ],
+ "figures": [
+  "jesus",
+  "paul",
+  "augustine-figure",
+  "luther-figure"
+ ],
+ "canon": [
+  {
+   "id": "bible",
+   "title": "The Bible",
+   "language": "Hebrew, Aramaic, Greek",
+   "composition": "Hebrew scriptures by c. 2nd c. BCE; New Testament 1st c. CE, canon listed by 367",
+   "status": "Canonical in all branches; the count differs: 66 books in the Protestant canon, 73 in the Catholic with the deuterocanon, and wider canons in the Orthodox and Ethiopian churches",
+   "sources": [
+    "macculloch-christianity-2009",
+    "oxford-early-christian-studies-2008"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "practices": [
+  {
+   "id": "worship",
+   "name": "Worship",
+   "kind": "worship",
+   "frequency": "Weekly, on Sunday",
+   "summary": "Weekly congregational worship on Sunday, the day of resurrection, eucharistic or preaching-centered by branch, through a liturgical year.",
+   "sources": [
+    "macculloch-christianity-2009"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "eucharist",
+   "name": "Eucharist",
+   "kind": "sacrament",
+   "summary": "The meal of bread and wine instituted at the Last Supper, received as sacrament; its frequency and meaning divide the branches.",
+   "sources": [
+    "macculloch-christianity-2009"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "prayer",
+   "name": "Prayer",
+   "kind": "prayer",
+   "frequency": "Daily offices to free prayer",
+   "summary": "From the Lord's Prayer, taught by Jesus himself, to fixed daily offices and free extemporary prayer.",
+   "sources": [
+    "macculloch-christianity-2009"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "scripture",
+   "name": "Scripture",
+   "kind": "scripture",
+   "summary": "Reading and preaching of the Bible, privately and in assembly; the sermon is central across Protestantism.",
+   "sources": [
+    "macculloch-christianity-2009"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "fasting",
+   "name": "Fasting",
+   "kind": "fasting",
+   "frequency": "Seasonal, Lent above all",
+   "summary": "Seasons of penitence and preparation, Lent above all, kept with differing rigor across the branches.",
+   "sources": [
+    "macculloch-christianity-2009"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "rites": [
+  {
+   "id": "birth",
+   "stage": "birth",
+   "name": "Birth",
+   "summary": "Baptism in water in the threefold name; its timing is a defining division, administered to infants in most branches and reserved for professing believers in the baptist and free-church streams.",
+   "sources": [
+    "macculloch-christianity-2009"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "coming-of-age",
+   "stage": "coming-of-age",
+   "name": "Coming of age",
+   "summary": "Confirmation, or believer's baptism itself, seals mature membership where it is practiced.",
+   "sources": [
+    "macculloch-christianity-2009"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "marriage",
+   "stage": "marriage",
+   "name": "Marriage",
+   "summary": "Vows before God and the congregation; counted a sacrament in Catholic and Orthodox teaching.",
+   "sources": [
+    "macculloch-christianity-2009"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "death",
+   "stage": "death",
+   "name": "Death",
+   "summary": "The funeral commends the dead to God in hope of resurrection; burial and, in most modern branches, cremation are both practiced.",
+   "sources": [
+    "macculloch-christianity-2009"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "misconceptions": [
+  {
+   "id": "bible-decided-at-nicaea",
+   "claim": "The Council of Nicaea decided which books went into the Bible.",
+   "correction": "Nicaea addressed the divinity of Christ, not the canon; the New Testament list crystallized gradually and appears in Athanasius' letter of 367, with no council vote creating it.",
+   "sources": [
+    "macculloch-christianity-2009"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "christianity-is-western",
+   "claim": "Christianity is a Western religion.",
+   "correction": "It began in Roman Judea, its oldest continuous churches are African and Asian, and most Christians today live in the global South.",
+   "sources": [
+    "macculloch-christianity-2009"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "immaculate-conception-confusion",
+   "claim": "The immaculate conception means the virgin birth.",
+   "correction": "The Catholic doctrine concerns Mary's own conception without original sin; the virgin birth of Jesus is a separate teaching.",
+   "sources": [
+    "macculloch-christianity-2009"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "further_reading": [
+  "macculloch-christianity-2009",
+  "oxford-early-christian-studies-2008"
+ ],
+ "sourcing": "sourced",
+ "overview": {
+  "body": "Christianity holds that the one God is [[trinity|Trinity]], Father, Son, and Holy Spirit, and that in Jesus of Nazareth the Son became human, was crucified under Pontius Pilate, and rose from the dead, opening salvation to the world. That confession, elaborated through creeds, sacraments, and scriptures, has become the largest religious tradition on earth: 2.3 billion adherents across a breadth of forms unmatched by any other faith, from the Ethiopian highlands' ancient liturgies to Pentecostal congregations a century old, with its demographic center now in the global South. Its branches divide over authority, sacraments, and [[grace]], and the museum's tree renders those divisions; what unites them is the person at the center and the claim, according to Christian faith, that his resurrection is the hinge of history.",
+  "sources": [
+   "macculloch-christianity-2009"
   ],
-  "law_dimensions": [
-    "dietary-law",
-    "dress-modesty",
-    "ethical-frame",
-    "conversion-stance",
-    "clergy-leadership",
-    "worship-form",
-    "calendar-system"
-  ],
-  "festivals": [
-    "easter-western"
-  ],
-  "sites": [],
-  "figures": [],
-  "canon": [],
-  "practices": [],
-  "rites": [],
-  "misconceptions": [],
-  "further_reading": [],
   "sourcing": "sourced"
+ },
+ "origins": {
+  "body": "Christianity begins as a movement within Judaism. Jesus of Nazareth taught, healed, and proclaimed the kingdom of God in Roman Galilee and Judea until his crucifixion around 30 CE; his followers' conviction that God had raised him became the founding faith. Paul of Tarsus and the first missionaries carried that faith across the Greek-speaking Mediterranean, and the Council of Jerusalem's ruling that gentiles need not keep the whole Mosaic law opened it beyond its first people; over the following century the church and rabbinic Judaism became distinct religions in the long parting of the ways. Three centuries of intermittent persecution ended with Constantine's toleration in 313 and Theodosius' establishment in 380, while the councils from Nicaea onward fixed the creed's language for God as Trinity and Christ as fully divine and fully human. By the time the western empire fell, the church was the ark that carried classical civilization into the Middle Ages.",
+  "sources": [
+   "macculloch-christianity-2009",
+   "oxford-early-christian-studies-2008"
+  ],
+  "sourcing": "sourced"
+ },
+ "core_beliefs": {
+  "body": "God is one being in three persons, and Jesus Christ is the second of them incarnate: truly God and truly human, in the definition of Chalcedon. His death, in Christian teaching, deals with sin, and his resurrection defeats death; salvation is by [[grace]], through the faith and practice whose exact relation is the Reformation's enduring argument. The church gathers believers into one body across time, ministering through word and [[sacrament]], with baptism and the [[eucharist|Eucharist]] held everywhere central and their number and meaning divided by branch. Scripture is God's word, read alone or with tradition's authority depending on the branch. Christian hope is resurrection and a renewed creation, and the ethic given to live toward it is the double command: love of God with all one's being, and of neighbor as oneself.",
+  "sources": [
+   "macculloch-christianity-2009"
+  ],
+  "sourcing": "sourced"
+ }
 }

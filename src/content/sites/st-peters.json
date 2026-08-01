@@ -1,0 +1,18 @@
+{
+ "id": "st-peters",
+ "name": "St. Peter's Basilica",
+ "traditions": [
+  "christianity"
+ ],
+ "place": "Rome",
+ "location": {
+  "lat": 41.9022,
+  "lng": 12.4539
+ },
+ "region": "italian-peninsula",
+ "significance": "The papal basilica over the apostle's traditional tomb, the center of Catholic Christianity.",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "sourcing": "sourced"
+}

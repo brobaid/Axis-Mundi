@@ -1,0 +1,15 @@
+{
+ "id": "easter",
+ "name": "Easter",
+ "traditions": [
+  "christianity"
+ ],
+ "calendar": "solar",
+ "date_rule": "Moveable: the Sunday after the first full moon of spring",
+ "observed": {},
+ "summary": "The resurrection, the year's chief feast; East and West usually keep it on different Sundays.",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "sourcing": "sourced"
+}

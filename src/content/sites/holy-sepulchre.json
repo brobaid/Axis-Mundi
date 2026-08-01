@@ -1,0 +1,18 @@
+{
+ "id": "holy-sepulchre",
+ "name": "Church of the Holy Sepulchre",
+ "traditions": [
+  "christianity"
+ ],
+ "place": "Jerusalem",
+ "location": {
+  "lat": 31.7784,
+  "lng": 35.2296
+ },
+ "region": "levant",
+ "significance": "The traditional site of the crucifixion and the empty tomb, shared by six ancient communions.",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,22 @@
+{
+ "id": "jesus",
+ "name": "Jesus of Nazareth",
+ "traditions": [
+  "christianity"
+ ],
+ "born": {
+  "year": -4,
+  "precision": "year"
+ },
+ "died": {
+  "year": 30,
+  "precision": "year"
+ },
+ "role": "Teacher and healer of Galilee; the incarnate Son of God in Christian belief",
+ "summary": "Teacher and healer of Galilee, crucified under Pilate; in Christian belief the incarnate Son of God, risen from the dead.",
+ "events": [],
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "sourcing": "sourced"
+}

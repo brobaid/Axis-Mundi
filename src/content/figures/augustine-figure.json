@@ -1,0 +1,22 @@
+{
+ "id": "augustine-figure",
+ "name": "Augustine of Hippo",
+ "traditions": [
+  "christianity"
+ ],
+ "born": {
+  "year": 354,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 430,
+  "precision": "exact"
+ },
+ "role": "Bishop and theologian",
+ "summary": "Bishop and theologian of grace, whose Confessions and City of God set the West's theological course.",
+ "events": [],
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "sourcing": "sourced"
+}

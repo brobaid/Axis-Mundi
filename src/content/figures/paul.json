@@ -1,0 +1,22 @@
+{
+ "id": "paul",
+ "name": "Paul of Tarsus",
+ "traditions": [
+  "christianity"
+ ],
+ "born": {
+  "year": 5,
+  "precision": "year"
+ },
+ "died": {
+  "year": 64,
+  "precision": "year"
+ },
+ "role": "Apostle to the gentiles",
+ "summary": "Apostle to the gentiles whose letters are the New Testament's earliest documents and Christian theology's first voice.",
+ "events": [],
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,18 @@
+{
+ "id": "nativity-bethlehem",
+ "name": "Church of the Nativity",
+ "traditions": [
+  "christianity"
+ ],
+ "place": "Bethlehem",
+ "location": {
+  "lat": 31.7042,
+  "lng": 35.2076
+ },
+ "region": "levant",
+ "significance": "The birthplace grotto, among the oldest continuously used churches.",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,22 @@
+{
+ "id": "luther-figure",
+ "name": "Martin Luther",
+ "traditions": [
+  "christianity"
+ ],
+ "born": {
+  "year": 1483,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1546,
+  "precision": "exact"
+ },
+ "role": "Reformer",
+ "summary": "The reformer whose protest at Wittenberg opened Protestantism and reframed the doctrine of grace.",
+ "events": [],
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "sourcing": "sourced"
+}
