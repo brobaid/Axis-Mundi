@@ -13,6 +13,7 @@ import {
   pageModes,
   parallelCounts,
   prefaceFor,
+  unavailableModes,
   sectionOf,
   sidesOf,
   verseAnchor,
@@ -76,6 +77,12 @@ const count = [
 ]
   .filter((part) => part !== '')
   .join(' · ');
+
+/* The stratum this chapter belongs to, where it belongs to one. */
+const badge =
+  chapter === undefined
+    ? undefined
+    : division.chapters?.find((c) => c.c === chapter)?.badge;
 
 const orig = originalLang(work);
 /*
@@ -145,6 +152,16 @@ const contentsLabel =
         )
       }
     </h1>
+    {
+      /* And on the page itself, not only on the contents row a reader may
+         never have passed through: a link into Yasna 28 lands here, and this
+         is where "the oldest stratum" has to be sayable. */
+      badge !== undefined && (
+        <p class="rd__badges">
+          <span class="rd-badge" title={badge.title}>{badge.label}</span>
+        </p>
+      )
+    }
     {count !== '' && <p class="caption rd__count">{count}</p>}
   </header>
 
@@ -153,6 +170,8 @@ const contentsLabel =
     mode={mode}
     editions={editions}
     englishPending={work.english_pending}
+    originalPending={work.original_pending}
+    unavailable={unavailableModes(work)}
     note={work.note}
   />
 
@@ -236,7 +255,22 @@ const contentsLabel =
             ) : (
               <>
                 {english && verse['en'] !== undefined && (
-                  <p class="rd-verse__en">{verse['en']}</p>
+                  <p class="rd-verse__en">
+                    {verse['en']}
+                    {/* Chamberlain's footnote references, set as the references
+                        they are. His notes are not in this digitisation, so they
+                        point at nothing a reader can follow and must not look
+                        like they do — no link, no target, just the marks he
+                        left and a line saying what they are. */}
+                    {Array.isArray(verse['marks']) && verse['marks'].length > 0 && (
+                      <span
+                        class="rd-verse__marks"
+                        title="Footnote references from the translator; his notes are not in this digitisation."
+                      >
+                        {(verse['marks'] as number[]).join(', ')}
+                      </span>
+                    )}
+                  </p>
                 )}
                 {sides === 'original-only' && <p class="rd-verse__gap caption">{note}</p>}
                 {/* dir and lang live in the markup, never in CSS: the direction
@@ -417,6 +451,23 @@ const contentsLabel =
     margin-bottom: var(--space-6);
   }
 
+  .rd__badges {
+    margin-top: var(--space-3);
+  }
+
+  /* The same mark the contents row carries, so the two read as one thing. */
+  .rd-badge {
+    display: inline-block;
+    font-family: var(--font-ui);
+    font-size: var(--size-caption);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--brass-ink);
+    border: var(--hairline-width) solid var(--brass);
+    padding: 0 var(--space-2);
+    cursor: help;
+  }
+
   .rd__count {
     color: var(--ink-soft);
     margin-top: var(--space-2);
@@ -563,6 +614,17 @@ const contentsLabel =
   }
 
   .rd-verse__pending,
+  /* A reference, at reference size, out of the reading line. */
+  .rd-verse__marks {
+    font-family: var(--font-mono);
+    font-size: 0.7em;
+    vertical-align: super;
+    line-height: 0;
+    color: var(--ink-soft);
+    margin-left: 0.35em;
+    white-space: nowrap;
+  }
+
   .rd-verse__gap {
     color: var(--ink-soft);
     margin-top: var(--space-2);

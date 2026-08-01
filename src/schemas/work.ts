@@ -39,6 +39,17 @@ export const verseEntry = z
   .object({
     v: z.number().int().positive(),
     c: z.number().int().positive().optional(),
+    /**
+     * Footnote reference numbers the translator left in this passage.
+     *
+     * Chamberlain annotated the Kojiki heavily and the digitisation carries his
+     * markers but not his notes, so they arrive as bare numerals sitting inside
+     * sentences — "the names of the Deities 1 that were born 2 in the Plain of
+     * High Heaven". Deleting them would quietly edit the source; leaving them
+     * in the sentence makes the sentence unreadable. They travel here instead,
+     * and the page sets them as the references they are.
+     */
+    marks: z.array(z.number().int().positive()).optional(),
   })
   .catchall(z.string());
 
@@ -51,9 +62,25 @@ export const verseEntry = z
  * words, lifted at ingestion, so a contents page of a hundred and fifty psalms
  * is navigable by what they say rather than by their numbers alone.
  */
+/**
+ * A short mark on a chapter, in the house vocabulary.
+ *
+ * For a stratum a reader ought to be told about where they meet it: seventeen
+ * of the Yasna's seventy-two chapters are the Gathas, older than everything
+ * around them and attributed by the tradition to Zarathustra himself. The
+ * badge says which; the title says why, in one line.
+ */
+export const chapterBadge = z
+  .object({
+    label: z.string().min(1),
+    title: z.string().min(1),
+  })
+  .strict();
+
 export const chapterIndexEntry = z.object({
   c: z.number().int().positive(),
   verses: z.number().int().nonnegative(),
+  badge: chapterBadge.optional(),
   /** The opening words, truncated at ingestion. Never authored here. */
   preview: z.string().min(1).optional(),
   /** Which language the preview is in, since a chapter may open English-only. */
@@ -97,6 +124,16 @@ export const divisionIndexEntry = z.object({
   transliteration: z.string().min(1).optional(),
   verses: z.number().int().nonnegative(),
   chapters: z.array(chapterIndexEntry).optional(),
+  /**
+   * What one of this division's chapters is called, where the work's own
+   * `chapter_label` is not it.
+   *
+   * The Avesta's two divisions do not agree: the Yasna divides into chapters
+   * and the Vendidad into fargards, and calling a fargard a chapter on its own
+   * contents page would be the museum overruling the canon for the convenience
+   * of a single field.
+   */
+  chapter_label: z.string().min(1).optional(),
   /** Which of the work's sections this division belongs to. */
   section: slug.optional(),
   /**
@@ -214,16 +251,27 @@ export const workSchema = z
      * back to the page's — which reads Greek aloud as English.
      */
     lang_tags: z.record(languageCode, z.string().min(2)).optional(),
-    editions: z.record(languageCode, sourceRef).refine(
-      (e) => Object.keys(e).some((k) => k !== 'en'),
-      'a work needs an original-language edition; English alone is not a corpus',
-    ),
+    editions: z
+      .record(languageCode, sourceRef)
+      .refine((e) => Object.keys(e).length > 0, 'a work needs at least one edition'),
     /**
      * The English slot's honest waiting-on note, for a canon that arrives
      * original-only. Required exactly when there is no English edition, so the
      * gap is always named rather than silently empty.
      */
     english_pending: z.string().min(1).optional(),
+    /**
+     * And the mirror, for a canon that arrives English-only.
+     *
+     * This slot used to be impossible: the schema refused a work without an
+     * original on the grounds that "English alone is not a corpus". That was a
+     * rule about editorial ambition, enforced as if it were a rule about
+     * reality — and reality is that no public-domain digitisation of the
+     * Avestan text or of Old Japanese exists in reachable sources, so the
+     * choice is an English-only room or no room at all. The gap is named on
+     * every page it affects, exactly as the reverse case is.
+     */
+    original_pending: z.string().min(1).optional(),
     /** Anything the reader must state on the page, e.g. a survival fraction. */
     note: z.string().min(1).optional(),
     /**
@@ -248,6 +296,21 @@ export const workSchema = z
      */
     gap_notes: z
       .object({ original: z.string().min(1).optional(), english: z.string().min(1).optional() })
+      .strict()
+      .optional(),
+    /**
+     * Divisions the canon numbers that this corpus does not carry, and why.
+     *
+     * The Kojiki arrives as 170 of Chamberlain's 180 sections. A contents page
+     * that simply skipped from 14 to 16 would read as a numbering quirk; what
+     * it actually is, is a hole in the digitisation, not in the work — and the
+     * difference is the whole point of saying so. Numbers, and one sentence.
+     */
+    absent: z
+      .object({
+        divisions: z.array(z.number().int().positive()).min(1),
+        note: z.string().min(1),
+      })
       .strict()
       .optional(),
     sections: z.array(workSection).default([]),
@@ -280,6 +343,24 @@ export const workSchema = z
         code: z.ZodIssueCode.custom,
         path: ['english_pending'],
         message: 'english_pending is for works that have no English edition',
+      });
+    }
+
+    const hasOriginal = Object.keys(value.editions).some((k) => k !== 'en');
+    if (!hasOriginal && value.original_pending === undefined) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['original_pending'],
+        message:
+          'a work with no original-language edition must say what its original slot is ' +
+          'waiting on (named absence, never filler)',
+      });
+    }
+    if (hasOriginal && value.original_pending !== undefined) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['original_pending'],
+        message: 'original_pending is for works that have no original-language edition',
       });
     }
 

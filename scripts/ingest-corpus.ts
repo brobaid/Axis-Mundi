@@ -84,15 +84,38 @@ interface DeliveredBookPair {
   en_chapters?: string[];
 }
 
+/** A named division of scanned prose — the Yasna, the Vendidad. */
+interface DeliveredScanDivision {
+  division: string;
+  note?: string;
+  chapters: { n: number; en?: string }[];
+}
+
+/** A flat section of scanned prose, titled — Chamberlain's Kojiki. */
+interface DeliveredSection {
+  n: number;
+  title?: string;
+  en?: string;
+}
+
 interface Delivered {
   work: string;
   editions: Record<string, string>;
+  /**
+   * `"unavailable"` where no public-domain original exists to pair with.
+   * The reason is the config's; the delivery only states the fact.
+   */
+  original?: string;
   /** Books of chapters of verses — the Tanakh and the Bible. */
   books?: DeliveredBook[];
   /** A flat verse list keyed by division and verse — the Quran. */
   verses?: DeliveredVerse[];
   /** Divisions of verses, named — the Dhammapada, and the nikayas after it. */
   chapters?: DeliveredChapter[];
+  /** Named divisions of scanned prose — the Avesta. */
+  divisions?: DeliveredScanDivision[];
+  /** Flat numbered sections of scanned prose — the Kojiki. */
+  sections?: DeliveredSection[];
 }
 
 interface SectionConfig {
@@ -149,6 +172,14 @@ interface Config {
    * Named, never inferred: a canon's order is the canon's, not this script's.
    */
   order?: string[];
+  /** The original slot's honest waiting-on note, for an English-only canon. */
+  original_pending?: string;
+  /** Per-division chapter names, where the work's own is not it: fargard. */
+  chapter_labels?: Record<string, string>;
+  /** A stratum a reader meets inside a division, badged where they meet it. */
+  badges?: Record<string, { chapters: number[]; label: string; title: string }>;
+  /** Divisions the canon numbers and this corpus does not carry. */
+  absent?: { divisions: number[]; note: string };
 }
 
 /* ── the corpora ────────────────────────────────────────────────────────── */
@@ -246,6 +277,56 @@ const CONFIGS: Record<string, Config> = {
       'One book of the Khuddaka Nikaya, numbered continuously: a verse is cited as ' +
       'Dhp 1 to Dhp 423 whatever vagga it falls in.',
   },
+  avesta: {
+    file: 'docs/corpora/avesta/avesta-corpus.json',
+    tradition: 'zoroastrianism',
+    title: 'The Avesta',
+    division_label: 'division',
+    division_label_plural: 'divisions',
+    chapter_label: 'chapter',
+    script: 'latin',
+    direction: 'ltr',
+    /* Passages are numbered in the printing but not reliably enough to anchor;
+       the chapter is the citable unit here. */
+    versified: false,
+    edition_sources: { en: 'sbe-avesta' },
+    original_pending:
+      'The Avestan text is not yet available from a public-domain source; this room is ' +
+      'English-only for now.',
+    note: 'Roughly a quarter of the Sasanian Avesta survives; this room is a remnant by history, not by editing.',
+    /* The Vendidad's divisions are fargards, and the museum does not rename
+       them for the convenience of one field. */
+    chapter_labels: { vendidad: 'fargard' },
+    /* The Gathas, per the corpus's own division note: "chapters 28-34, 43-51
+       and 53 are the Gathas, the oldest stratum, attributed to Zarathustra
+       himself". Listed rather than parsed out of prose, and listed once. */
+    badges: {
+      yasna: {
+        chapters: [28, 29, 30, 31, 32, 33, 34, 43, 44, 45, 46, 47, 48, 49, 50, 51, 53],
+        label: 'Gatha',
+        title: 'the oldest stratum, attributed to Zarathustra',
+      },
+    },
+  },
+  kojiki: {
+    file: 'docs/corpora/kojiki/kojiki-corpus.json',
+    tradition: 'shinto',
+    title: 'The Kojiki',
+    division_label: 'section',
+    division_label_plural: 'sections',
+    script: 'latin',
+    direction: 'ltr',
+    versified: false,
+    edition_sources: { en: 'chamberlain-1882' },
+    original_pending:
+      'The Old Japanese text is not yet available from a public-domain source; this room is ' +
+      'English-only for now.',
+    note: 'A chronicle revered, not a scripture revealed.',
+    absent: {
+      divisions: [15, 18, 61, 122, 136, 140, 141, 152, 159, 174],
+      note: 'These sections are absent from the source digitisation: gaps in the source, not in the work.',
+    },
+  },
   daodejing: {
     file: 'docs/corpora/chinese/daodejing-paired.json',
     tradition: 'chinese',
@@ -328,7 +409,159 @@ export function preview(text: string, limit = 76): string {
   return `${(space > limit * 0.6 ? cut.slice(0, space) : cut).replace(/[,;:.\s]+$/, '')}…`;
 }
 
-type Verse = Record<string, number | string>;
+type Verse = Record<string, number | string | number[]>;
+
+/* ── scanned prose ──────────────────────────────────────────────────────────
+   Two corpora arrive as page scans of nineteenth-century printings rather than
+   as structured text, and they carry the printing along with the words: rules
+   between sections, running page numbers, a stray bracket where a page marker
+   was cut, and — in Chamberlain — footnote reference numerals sitting between
+   blank lines in the middle of sentences.
+
+   The rule for all of it is one rule: never a word. Furniture is dropped,
+   references are kept and carried as references, and everything else is the
+   translator's, spelling and register and parenthetical hedges included. The
+   ingest reports the counts, and `validate:content` re-derives them, so the
+   claim is auditable rather than trusted.
+*/
+
+/** A marker placeholder that cannot occur in the text it passes through. */
+const MARKER = ' ';
+
+interface ScanOptions {
+  /** Chamberlain's footnote references: a numeral alone between blank lines. */
+  footnotes?: boolean;
+  /** A numbered passage that opens a line starts a new paragraph. */
+  numbered?: boolean;
+}
+
+interface ScanParagraph {
+  text: string;
+  marks: number[];
+}
+
+/**
+ * A scanned chapter, as paragraphs.
+ *
+ * Order is the whole trick. A footnote reference sits *between* blank lines but
+ * *inside* a sentence, so it has to be lifted out before the text is split on
+ * blank lines — split first and every sentence it interrupts comes apart into
+ * fragments ("The names of the Deities" / "that were born" / "in the Plain of
+ * High Heaven"). Measured on the delivery: 1,495 of 2,065 references fall
+ * mid-sentence.
+ */
+function scanned(raw: string, options: ScanOptions = {}): { paragraphs: ScanParagraph[]; dropped: Dropped } {
+  const dropped: Dropped = { rules: 0, pages: 0, brackets: 0, marks: 0 };
+  let src = raw.replace(/\r/g, '');
+  /* The tail of a page marker whose head fell off the top of the scan. */
+  if (/^\s*\]/.test(src)) {
+    src = src.replace(/^\s*\]/, '');
+    dropped.brackets += 1;
+  }
+  src = src.replace(/(?:^|\n)[ \t]*p\.\s*\d+[ \t]*(?=\n|$)/gi, () => {
+    dropped.pages += 1;
+    return '\n';
+  });
+  src = src.replace(/(?:^|\n)[ \t]*-{3,}[ \t]*(?=\n|$)/g, () => {
+    dropped.rules += 1;
+    return '\n';
+  });
+  if (options.footnotes === true) {
+    src = src.replace(/\n[ \t]*\n[ \t]*(\d+)[ \t]*\n[ \t]*\n/g, (_m, n: string) => {
+      dropped.marks += 1;
+      return ` ${MARKER}${n}${MARKER} `;
+    });
+  }
+  /* The Avesta's numbered passages break where the printing breaks them. The
+     same numerals also appear mid-line, so they are not trustworthy verse ids
+     and nothing here treats them as ones: this moves no number and claims no
+     anchor, it only starts a paragraph where the page starts one. */
+  if (options.numbered === true) src = src.replace(/\n[ \t]*(\d+\.[ \t])/g, '\n\n$1');
+
+  const out: ScanParagraph[] = [];
+  for (const block of src.split(/\n[ \t]*\n/)) {
+    /* A hard wrap inside a paragraph is where the column ended, not a break. */
+    const flat = block.replace(/\s*\n\s*/g, ' ').replace(/[ \t]{2,}/g, ' ').trim();
+    if (flat === '') continue;
+    const marks = [...flat.matchAll(new RegExp(`${MARKER}(\\d+)${MARKER}`, 'g'))].map((m) =>
+      Number(m[1]),
+    );
+    const text = flat
+      .replace(new RegExp(`\\s*${MARKER}\\d+${MARKER}\\s*`, 'g'), ' ')
+      .replace(/\s{2,}/g, ' ')
+      .trim();
+    if (text === '') continue;
+    out.push({ text, marks });
+  }
+  return { paragraphs: out, dropped };
+}
+
+interface Dropped {
+  rules: number;
+  pages: number;
+  brackets: number;
+  marks: number;
+}
+
+const furniture: Dropped = { rules: 0, pages: 0, brackets: 0, marks: 0 };
+const tallyDropped = (d: Dropped): void => {
+  furniture.rules += d.rules;
+  furniture.pages += d.pages;
+  furniture.brackets += d.brackets;
+  furniture.marks += d.marks;
+};
+
+const FARGARD = /(?:^|\n)-*\s*FARGARD\s+(\d+)\s*\.?\s*\n/gi;
+
+/**
+ * A division whose delivery lost its own segmentation.
+ *
+ * The Avesta's Vendidad arrived with all twenty-two fargards' text inside the
+ * twenty-second, fargards two through twenty-one empty, and fargard one holding
+ * a forty-three-byte fragment. This is a defect in the delivered file and is
+ * flagged as one; it is repaired here rather than in `/docs`, which is the
+ * owner's and is never edited.
+ *
+ * The repair authors nothing. The blob carries `FARGARD n.` headings for all
+ * twenty-two, in order, and the split is on those — the corpus's own statement
+ * of where its divisions begin. Audited: every word of the blob lands in a
+ * fargard except the twenty-two heading words themselves and a seven-word
+ * subtitle fragment that is duplicated inside fargard 22 anyway, and the same
+ * is true of the fragment left in fargard 1.
+ */
+function repairSegmentation(
+  chapters: { n: number; en?: string }[],
+  division: string,
+): { n: number; en?: string }[] {
+  const empty = chapters.filter((c) => (c.en ?? '').trim() === '');
+  if (empty.length === 0) return chapters;
+
+  const carrier = chapters.find((c) => [...(c.en ?? '').matchAll(FARGARD)].length >= chapters.length);
+  if (carrier === undefined) {
+    throw new Error(
+      `${division}: ${empty.length} of ${chapters.length} chapters are empty and no chapter ` +
+        'carries headings for the rest — the delivery cannot be read',
+    );
+  }
+  const blob = carrier.en ?? '';
+  const hits = [...blob.matchAll(FARGARD)];
+  const parts = hits.map((h, i) => ({
+    n: Number(h[1]),
+    en: blob.slice(
+      (h.index ?? 0) + h[0].length,
+      i + 1 < hits.length ? (hits[i + 1]?.index ?? blob.length) : blob.length,
+    ),
+  }));
+  const expected = chapters.map((c) => c.n).join(',');
+  if (parts.map((p) => p.n).join(',') !== expected) {
+    throw new Error(`${division}: recovered ${parts.map((p) => p.n).join(',')}, expected ${expected}`);
+  }
+  console.log(
+    `    repaired           ${parts.length} ${division.toLowerCase()} divisions recovered from ` +
+      `the delivery's chapter ${carrier.n}, which held them all`,
+  );
+  return parts;
+}
 
 interface Chapter {
   c: number;
@@ -425,6 +658,58 @@ function normalise(src: Delivered, config: Config): Division[] {
             side('en', "Legge's translation, by his chapters", 'chapter', book.en_chapters ?? []),
           ],
         },
+      };
+    });
+  }
+
+  /*
+    Named divisions of scanned prose — the Avesta's Yasna and Vendidad.
+
+    Each chapter enters as paragraphs, not verses. The printing numbers its
+    passages and those numbers stay exactly where the printing put them, but
+    they are not offered as anchors: measured across the Yasna, some open a
+    line and some sit mid-sentence, so numbering by them would give Yasna 14
+    the verses 1, 2, 3, 5 with the real 4 buried inside 3. The chapter is the
+    unit, and the unit is honest.
+  */
+  if (src.divisions !== undefined) {
+    return src.divisions.map((division, index) => {
+      const slug = division.division.toLowerCase();
+      const chapters = repairSegmentation(division.chapters, division.division).map((chapter) => {
+        const { paragraphs, dropped } = scanned(chapter.en ?? '', { numbered: true });
+        tallyDropped(dropped);
+        return {
+          c: chapter.n,
+          verses: paragraphs.map((p, i) => ({ v: i + 1, c: chapter.n, en: p.text })),
+        };
+      });
+      return {
+        n: index + 1,
+        slug,
+        name: division.division,
+        ...(division.note === undefined ? {} : { note: division.note }),
+        /* A chaptered division's `all` is its chapters, flattened: the totals
+           and the gap counts are taken from it, not from the chapter list. */
+        all: chapters.flatMap((c) => c.verses),
+        chapters,
+      };
+    });
+  }
+
+  /* Flat numbered sections of scanned prose, titled — the Kojiki. */
+  if (src.sections !== undefined) {
+    return src.sections.map((section) => {
+      const { paragraphs, dropped } = scanned(section.en ?? '', { footnotes: true });
+      tallyDropped(dropped);
+      return {
+        n: section.n,
+        slug: String(section.n),
+        ...(section.title === undefined ? {} : { name: section.title }),
+        all: paragraphs.map((p, i) => ({
+          v: i + 1,
+          en: p.text,
+          ...(p.marks.length === 0 ? {} : { marks: p.marks }),
+        })),
       };
     });
   }
@@ -673,9 +958,14 @@ function ingest(name: string, config: Config): void {
                 : originalLang !== undefined && typeof first[originalLang] === 'string' ? originalLang
                 : undefined;
               const text = lang === undefined || first === undefined ? undefined : first[lang];
+              /* A stratum inside a division, badged where a reader meets it. */
+              const badge = config.badges?.[d.slug];
               return {
                 c: chapter.c,
                 verses: chapter.verses.length,
+                ...(badge !== undefined && badge.chapters.includes(chapter.c)
+                  ? { badge: { label: badge.label, title: badge.title } }
+                  : {}),
                 ...(typeof text === 'string' ? { preview: preview(text), preview_lang: lang } : {}),
                 english_gaps: missingEnglish(chapter.verses),
                 original_gaps: missingOriginal(chapter.verses),
@@ -683,6 +973,9 @@ function ingest(name: string, config: Config): void {
               };
             }),
           }),
+      ...(config.chapter_labels?.[d.slug] === undefined
+        ? {}
+        : { chapter_label: config.chapter_labels[d.slug] }),
       ...(d.section === undefined || config.sections === undefined
         ? {}
         : { section: config.sections[d.section]?.id ?? slugify(d.section) }),
@@ -757,9 +1050,13 @@ function ingest(name: string, config: Config): void {
     editions,
     ...(config.lang_tags === undefined ? {} : { lang_tags: config.lang_tags }),
     ...(config.versified === false ? { versified: false } : {}),
+    ...(config.original_pending === undefined
+      ? {}
+      : { original_pending: config.original_pending }),
     ...(config.note === undefined ? {} : { note: config.note }),
     ...(preface === undefined ? {} : { preface }),
     ...(config.gap_notes === undefined ? {} : { gap_notes: config.gap_notes }),
+    ...(config.absent === undefined ? {} : { absent: config.absent }),
     ...(sections === undefined || sections.length === 0 ? {} : { sections }),
     divisions: index,
     total_verses: totalVerses,
@@ -795,5 +1092,12 @@ for (const name of names) {
     process.exit(1);
   }
   ingest(name, config);
+}
+if (furniture.rules + furniture.pages + furniture.brackets + furniture.marks > 0) {
+  console.log(
+    `\n  Scan furniture: ${furniture.rules} rules, ${furniture.pages} page numbers and ` +
+      `${furniture.brackets} stray brackets dropped; ${furniture.marks} footnote references ` +
+      'kept and carried. No word of any translation was touched.',
+  );
 }
 console.log('\n  Run validate:content next — the schema decides what is publishable.\n');

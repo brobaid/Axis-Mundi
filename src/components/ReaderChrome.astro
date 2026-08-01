@@ -14,28 +14,47 @@ interface Props {
   editions: readonly (EditionLine & { title: string; author?: string | undefined })[];
   /** Named absence for a canon that arrives with no English column. */
   englishPending?: string | undefined;
+  /** Named absence for a canon that arrives with no original column. */
+  originalPending?: string | undefined;
+  /** Modes this canon cannot offer, and the one sentence saying why. */
+  unavailable?: { modes: readonly Mode[]; reason: string } | undefined;
   /** Anything the work must state, e.g. a survival fraction. */
   note?: string | undefined;
 }
-const { modes, mode, editions, englishPending, note } = Astro.props;
+const { modes, mode, editions, englishPending, originalPending, unavailable, note } = Astro.props;
 
 const LABEL: Record<Mode, string> = {
   english: 'English',
   original: 'Original',
   both: 'Both',
 };
+
+/*
+  Every mode the canon has, in the standing order, whether or not it works here.
+
+  A disabled control is information and a missing one is not: the Avesta shows
+  Original and Both greyed with the reason on them, because "there is no
+  public-domain Avestan text to set beside this" is a fact about the world that
+  a reader deserves, and an absent button says only that the page has one
+  column. Disabled rather than hidden, and never clickable.
+*/
+const off = new Set<Mode>(unavailable?.modes ?? []);
+const shown: Mode[] = modes.length > 1 || off.size > 0 ? ['english', 'original', 'both'] : [];
 ---
 
 {
-  modes.length > 1 && (
+  shown.length > 0 && (
     <div class="rd-toggle" role="radiogroup" aria-label="Reading mode" data-reader-toggle>
-      {modes.map((m) => (
+      {shown.map((m) => (
         <button
           type="button"
           class="rd-toggle__btn"
           data-mode={m}
           role="radio"
           aria-checked={m === mode}
+          aria-disabled={off.has(m) ? 'true' : undefined}
+          disabled={off.has(m) || undefined}
+          title={off.has(m) ? unavailable?.reason : undefined}
           tabindex={m === mode ? 0 : -1}
         >
           {LABEL[m]}
@@ -58,6 +77,7 @@ const LABEL: Record<Mode, string> = {
     ))
   }
   {englishPending !== undefined && <span class="rd-edition__pending"> {englishPending}</span>}
+  {originalPending !== undefined && <span class="rd-edition__pending"> {originalPending}</span>}
   {note !== undefined && <span class="rd-edition__work"> {note}</span>}
 </p>
 
@@ -82,6 +102,14 @@ const LABEL: Record<Mode, string> = {
     border-color: var(--ink);
     color: var(--ink);
     background: var(--surface);
+  }
+
+  /* Present, legible, and plainly not for pressing. Kept above the 3:1 the
+     non-text contrast rule asks of a control that still has to be read. */
+  .rd-toggle__btn:disabled {
+    cursor: not-allowed;
+    border-style: dashed;
+    opacity: 0.72;
   }
 
   .rd-edition {

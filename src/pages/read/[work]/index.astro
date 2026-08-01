@@ -39,6 +39,12 @@ const count =
     ? `${work.divisions.length} ${work.division_label_plural}`
     : `${work.divisions.length} ${work.division_label_plural}, ${verses} verses`;
 
+/** "15, 18, 61 and 174" — the canon's own numbers, in a readable list. */
+const listNumbers = (ns: readonly number[]): string =>
+  ns.length <= 1
+    ? ns.join('')
+    : `${ns.slice(0, -1).join(', ')} and ${ns[ns.length - 1]}`;
+
 const scale =
   count +
   (work.total_chapters === undefined
@@ -114,6 +120,18 @@ const listed =
           <span class="rd-contents__gaps">
             {oneSided} {oneSided === 1 ? 'verse stands' : 'verses stand'} on one side only, in{' '}
             {listed}. Each says so where it falls.
+          </span>
+        )
+      }
+      {/* Divisions the canon numbers and this corpus does not carry, by number.
+          A contents page that simply stepped from 14 to 16 would read as a
+          quirk of the numbering; naming them says what it is, which is a hole
+          in the digitisation rather than in the work. */}
+      {
+        work.absent !== undefined && (
+          <span class="rd-contents__absent">
+            {work.absent.divisions.length} {work.division_label_plural} are not here —{' '}
+            {work.division_label} {listNumbers(work.absent.divisions)}. {work.absent.note}
           </span>
         )
       }
@@ -238,6 +256,7 @@ const listed =
   }
 
   .rd-contents__work-note,
+  .rd-contents__absent,
   .rd-contents__gaps {
     display: block;
     margin-top: var(--space-2);

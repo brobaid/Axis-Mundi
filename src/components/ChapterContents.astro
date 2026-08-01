@@ -2,6 +2,7 @@
 import ReaderChrome from './ReaderChrome.astro';
 import {
   availableModes,
+  unavailableModes,
   defaultMode,
   divisionHeading,
   langTag,
@@ -33,7 +34,9 @@ const chapters = division.chapters ?? [];
 const orig = originalLang(work);
 const scriptFont = fontFor(work.script);
 const { prev, next, endsSection } = walk(work, division);
-const label = work.chapter_label ?? 'chapter';
+/* A division may name its own chapters: the Vendidad's are fargards, and the
+   work-level label is the Yasna's. The canon's word wins over the field's. */
+const label = division.chapter_label ?? work.chapter_label ?? 'chapter';
 const gaps = division.english_gaps + division.original_gaps;
 ---
 
@@ -60,7 +63,8 @@ const gaps = division.english_gaps + division.original_gaps;
       }
     </h1>
     <p class="caption rd__count">
-      {chapters.length} {label}s · {division.verses.toLocaleString('en')} verses
+      {chapters.length} {label}s
+      {work.versified !== false && ` · ${division.verses.toLocaleString('en')} verses`}
       {
         gaps > 0 &&
           ` · ${gaps} ${gaps === 1 ? 'verse stands' : 'verses stand'} on one side only`
@@ -73,6 +77,8 @@ const gaps = division.english_gaps + division.original_gaps;
     mode={defaultMode(work)}
     editions={editions}
     englishPending={work.english_pending}
+    originalPending={work.original_pending}
+    unavailable={unavailableModes(work)}
     note={work.note}
   />
 
@@ -100,7 +106,14 @@ const gaps = division.english_gaps + division.original_gaps;
                 </span>
               )}
               <span class="caption rd-chapters__meta">
-                {chapter.verses} verses
+                {/* A stratum, badged where a reader meets it rather than only
+                    in a note further up the page. */}
+                {chapter.badge !== undefined && (
+                  <span class="rd-chapters__badge" title={chapter.badge.title}>
+                    {chapter.badge.label}
+                  </span>
+                )}
+                {work.versified !== false && `${chapter.verses} verses`}
                 {chapter.english_gaps + chapter.original_gaps > 0 && ' · one-sided verse'}
               </span>
             </span>
@@ -196,6 +209,21 @@ const gaps = division.english_gaps + division.original_gaps;
     display: block;
     font-family: var(--font-prose);
     font-size: var(--size-small);
+  }
+
+  /* The house badge: small caps in the UI face, brass hairline, never a pill
+     of colour. Same weight as the contested badge it stands beside elsewhere. */
+  .rd-chapters__badge {
+    display: inline-block;
+    font-family: var(--font-ui);
+    font-size: var(--size-caption);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--brass-ink);
+    border: var(--hairline-width) solid var(--brass);
+    padding: 0 var(--space-2);
+    margin-right: var(--space-3);
+    cursor: help;
   }
 
   .rd-chapters__meta {

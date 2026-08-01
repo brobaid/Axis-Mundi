@@ -9,12 +9,16 @@
 export interface VerseRow {
   readonly v: number;
   readonly c?: number | undefined;
-  readonly [lang: string]: number | string | undefined;
+  /** Footnote references the translator left in this passage; his notes are not here. */
+  readonly marks?: readonly number[] | undefined;
+  readonly [lang: string]: number | string | readonly number[] | undefined;
 }
 
 export interface ChapterIndex {
   readonly c: number;
   readonly verses: number;
+  /** A stratum mark, where this chapter belongs to one. */
+  readonly badge?: { readonly label: string; readonly title: string } | undefined;
   readonly preview?: string | undefined;
   readonly preview_lang?: string | undefined;
   readonly english_gaps: number;
@@ -34,6 +38,8 @@ export interface DivisionIndex {
   readonly verses: number;
   /** Present means the division is a contents page and its text is a level down. */
   readonly chapters?: readonly ChapterIndex[] | undefined;
+  /** What one of this division's chapters is called, where the work's is not it. */
+  readonly chapter_label?: string | undefined;
   /** Present where the editions do not align: one entry per column. */
   readonly parallel?: readonly ParallelCount[] | undefined;
   readonly section?: string | undefined;
@@ -65,6 +71,10 @@ export interface WorkData {
   readonly editions: Readonly<Record<string, string>>;
   readonly lang_tags?: Readonly<Record<string, string>> | undefined;
   readonly english_pending?: string | undefined;
+  /** And the mirror, for a canon with no public-domain original to pair with. */
+  readonly original_pending?: string | undefined;
+  /** Divisions the canon numbers that this corpus does not carry. */
+  readonly absent?: { readonly divisions: readonly number[]; readonly note: string } | undefined;
   /** False where the canon's divisions carry no verse level of their own. */
   readonly versified?: boolean | undefined;
   readonly note?: string | undefined;
@@ -235,7 +245,30 @@ export const defaultMode = (work: Pick<WorkData, 'editions'>): Mode =>
   hasEnglish(work) ? 'english' : 'original';
 
 export function availableModes(work: Pick<WorkData, 'editions'>): Mode[] {
-  return hasEnglish(work) ? [...MODES] : ['original'];
+  if (!hasEnglish(work)) return ['original'];
+  return originalLang(work) === '' ? ['english'] : [...MODES];
+}
+
+/**
+ * The modes this work cannot offer, and the one sentence that says why.
+ *
+ * A room with only one column could simply not draw the toggle, and that is
+ * what it used to do. But a reader who has met the Quran's three buttons and
+ * then opens the Avesta learns nothing from their absence — a control that
+ * vanishes reads as a page that forgot it, not as a canon whose other half
+ * does not exist in any edition anyone may publish. So the buttons stay,
+ * disabled, carrying the reason.
+ */
+export function unavailableModes(
+  work: Pick<WorkData, 'editions' | 'english_pending' | 'original_pending'>,
+): { modes: Mode[]; reason: string } | undefined {
+  if (!hasEnglish(work) && work.english_pending !== undefined) {
+    return { modes: ['english', 'both'], reason: work.english_pending };
+  }
+  if (originalLang(work) === '' && work.original_pending !== undefined) {
+    return { modes: ['original', 'both'], reason: work.original_pending };
+  }
+  return undefined;
 }
 
 /**
