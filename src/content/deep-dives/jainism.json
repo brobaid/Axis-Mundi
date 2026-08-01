@@ -1,44 +1,230 @@
 {
-  "id": "jainism",
-  "tradition": "jainism",
-  "name": "Jainism",
-  "stat_box": {
-    "adherents": {
-      "display": "≈4.5 m (census + estimates)",
-      "estimate": 4500000,
-      "source": "india-census-2011",
-      "year": 2011,
-      "basis": "4.45 m in India per the 2011 census, plus a small diaspora. Not enumerated by Pew.",
-      "contested": false
-    },
-    "symbol": "jain-hand-with-wheel"
+ "id": "jainism",
+ "tradition": "jainism",
+ "name": "Jainism",
+ "stat_box": {
+  "adherents": {
+   "display": "≈4.5 m (census + estimates)",
+   "estimate": 4500000,
+   "source": "india-census-2011",
+   "year": 2011,
+   "basis": "4.45 m in India per the 2011 census, plus a small diaspora. Not enumerated by Pew.",
+   "contested": false
   },
-  "belief_dimensions": [
-    "divine-concept",
-    "cosmology",
-    "afterlife",
-    "salvation-path",
-    "scripture-authority",
-    "view-of-others"
+  "symbol": "jain-hand-with-wheel"
+ },
+ "belief_dimensions": [
+  "divine-concept",
+  "cosmology",
+  "afterlife",
+  "salvation-path",
+  "scripture-authority",
+  "view-of-others"
+ ],
+ "law_dimensions": [
+  "dietary-law",
+  "dress-modesty",
+  "ethical-frame",
+  "conversion-stance",
+  "clergy-leadership",
+  "worship-form",
+  "calendar-system"
+ ],
+ "festivals": [
+  "paryushana",
+  "mahavir-jayanti",
+  "diwali-jain"
+ ],
+ "sites": [
+  "shravanabelagola-site",
+  "palitana",
+  "ranakpur"
+ ],
+ "figures": [
+  "mahavira-figure",
+  "hemachandra-figure",
+  "virchand-gandhi"
+ ],
+ "canon": [
+  {
+   "id": "agamas",
+   "title": "The Agamas",
+   "language": "Ardhamagadhi Prakrit",
+   "composition": "redacted at Valabhi, c. 453 CE",
+   "status": "Canonical for Svetambaras; Digambaras hold the original canon lost and rely on early digests",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "tattvartha-sutra",
+   "title": "Tattvartha Sutra",
+   "language": "Sanskrit",
+   "composition": "c. 350 CE",
+   "status": "Umasvati's compendium, the one text both traditions accept as authoritative",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "practices": [
+  {
+   "id": "ahimsa-in-daily-life",
+   "name": "Ahimsa in daily life",
+   "kind": "nonviolence",
+   "frequency": "Daily",
+   "summary": "Vegetarianism, filtered water, care in walking and work: nonviolence as a day's discipline, not a doctrine.",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "samayika",
+   "name": "Samayika",
+   "kind": "meditation",
+   "frequency": "Daily, forty-eight minutes",
+   "summary": "Forty-eight minutes of equanimity, the layperson's daily meditation in the ascetic's posture.",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "pratikramana",
+   "name": "Pratikramana",
+   "kind": "confession",
+   "frequency": "Daily and annually",
+   "summary": "The confession of harms done, daily and in the great annual reckoning.",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "fasting",
+   "name": "Fasting",
+   "kind": "fasting",
+   "summary": "The tradition's signature austerity, from single-day fasts to Paryushana's culminating observances.",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  },
+  {
+   "id": "worship",
+   "name": "Worship",
+   "kind": "worship",
+   "summary": "Puja before the tirthankara's image among Murtipujaks; the aniconic orders assemble for scripture and reflection instead.",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced",
+   "contested": false
+  }
+ ],
+ "rites": [
+  {
+   "id": "birth",
+   "stage": "birth",
+   "name": "Birth",
+   "summary": "Naming and first outings, kept simply; the tradition's weight falls later in life.",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "coming-of-age",
+   "stage": "coming-of-age",
+   "name": "Coming of age",
+   "summary": "Diksha, renunciation into monastic life, taken at any age of vocation, is the tradition's great threshold; for most laity, adulthood arrives through the vows scaled to household life.",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "marriage",
+   "stage": "marriage",
+   "name": "Marriage",
+   "summary": "A contract solemnized before community and fire, honored and plainly ranked below renunciation.",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "death",
+   "stage": "death",
+   "name": "Death",
+   "summary": "Cremation with restraint and recollection; grief is tempered by the soul's continuing road.",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "misconceptions": [
+  {
+   "id": "jainism-hindu-sect",
+   "claim": "Jainism is a sect of Hinduism.",
+   "correction": "It is an independent tradition of the ancient renunciant world, with its own scriptures, cosmology, and unbroken community, recognized as such in Indian law and scholarship alike.",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "jains-worship-creator",
+   "claim": "Jains worship Mahavira as a creator god.",
+   "correction": "There is no creator in Jain cosmology; the tirthankaras are venerated as liberated teachers, exemplars rather than rulers of the world.",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced"
+  },
+  {
+   "id": "jainism-impractical",
+   "claim": "Jain ethics are too extreme to live.",
+   "correction": "The tradition scales its vows: absolute for ascetics, practicable for householders, who have thrived in commerce and public life for two and a half millennia.",
+   "sources": [
+    "dundas-jains-2002"
+   ],
+   "sourcing": "sourced"
+  }
+ ],
+ "further_reading": [
+  "dundas-jains-2002"
+ ],
+ "sourcing": "sourced",
+ "overview": {
+  "body": "Jainism is the path of the conquerors: the jinas, souls who have overcome the passions and karma that bind all beings, and whose example the tradition follows toward liberation. Its absolute is [[ahimsa]], nonviolence extended to every living thing, practiced by some 4.5 million adherents, by India's census count, through vegetarianism, careful livelihood, and for its monks and nuns an austerity unmatched among the world's religions. The universe, in Jain teaching, is uncreated and eternal, and each soul is on its own long road; the [[tirthankara|tirthankaras]], the twenty-four ford-makers, show the crossing but cannot carry anyone over. Small in numbers, the community's influence on Indian ethics, and through Gandhi on the world, has been out of all proportion to its size.",
+  "sources": [
+   "dundas-jains-2002"
   ],
-  "law_dimensions": [
-    "dietary-law",
-    "dress-modesty",
-    "ethical-frame",
-    "conversion-stance",
-    "clergy-leadership",
-    "worship-form",
-    "calendar-system"
-  ],
-  "festivals": [
-    "mahavir-jayanti"
-  ],
-  "sites": [],
-  "figures": [],
-  "canon": [],
-  "practices": [],
-  "rites": [],
-  "misconceptions": [],
-  "further_reading": [],
   "sourcing": "sourced"
+ },
+ "origins": {
+  "body": "The tradition holds its truth eternal, taught in every cosmic age by twenty-four tirthankaras; many scholars accept a historical Parshva, the twenty-third, around the eighth century BCE. Vardhamana Mahavira, the twenty-fourth, taught across the Gangetic plain in the sixth to fifth centuries BCE, an elder contemporary of the Buddha in the same renunciant world, and organized the fourfold community of monks, nuns, laymen, and laywomen. The great division into Svetambara and Digambara hardened over centuries, the two differing on monastic dress, the canon's survival, and women's liberation. Jainism traveled south with Bhadrabahu's migration and west into Gujarat and Rajasthan, where its temple cities, manuscript libraries, and merchant communities made it a permanent pillar of Indian civilization.",
+  "sources": [
+   "dundas-jains-2002"
+  ],
+  "sourcing": "sourced"
+ },
+ "core_beliefs": {
+  "body": "Every living thing, human, animal, insect, plant, even beings of earth and water, houses a jiva, a soul, alike in nature and worth. [[karma]] here is not metaphor but substance: fine matter drawn to the soul by passion and action, weighing it into rebirth. Liberation comes by stopping the influx and burning off the load, through the three jewels of right faith, right knowledge, and right conduct, and the vows: [[ahimsa]] first, then truthfulness, non-stealing, chastity, and non-possession, absolute for ascetics and scaled for householders. [[anekantavada]], many-sidedness, tempers all claims: truth has more aspects than any single view, and the tradition extends intellectual nonviolence even to its rivals. There is no creator to petition; the liberated dwell at the world's summit, perfected and at rest.",
+  "sources": [
+   "dundas-jains-2002"
+  ],
+  "sourcing": "sourced"
+ }
 }

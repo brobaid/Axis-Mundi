@@ -1,0 +1,23 @@
+{
+ "id": "mahavira-figure",
+ "name": "Mahavira",
+ "traditions": [
+  "jainism"
+ ],
+ "born": {
+  "year": -599,
+  "precision": "exact"
+ },
+ "died": {
+  "year": -527,
+  "precision": "exact"
+ },
+ "dates_note": "traditional",
+ "role": "The twenty-fourth tirthankara",
+ "summary": "The twenty-fourth tirthankara, whose teaching order continues unbroken; scholarship places him in the 6th-5th centuries BCE.",
+ "events": [],
+ "sources": [
+  "dundas-jains-2002"
+ ],
+ "sourcing": "sourced"
+}

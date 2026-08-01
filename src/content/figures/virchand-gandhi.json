@@ -1,0 +1,22 @@
+{
+ "id": "virchand-gandhi",
+ "name": "Virchand Gandhi",
+ "traditions": [
+  "jainism"
+ ],
+ "born": {
+  "year": 1864,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1901,
+  "precision": "exact"
+ },
+ "role": "Lay scholar and emissary",
+ "summary": "The lay scholar who carried Jainism to the World's Parliament of Religions in 1893.",
+ "events": [],
+ "sources": [
+  "dundas-jains-2002"
+ ],
+ "sourcing": "sourced"
+}

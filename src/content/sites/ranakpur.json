@@ -1,0 +1,18 @@
+{
+ "id": "ranakpur",
+ "name": "Ranakpur Temple",
+ "traditions": [
+  "jainism"
+ ],
+ "place": "Rajasthan",
+ "location": {
+  "lat": 25.1162,
+  "lng": 73.4692
+ },
+ "region": "western-india",
+ "significance": "The 1,444-pillared marble temple to Adinatha, no two pillars alike.",
+ "sources": [
+  "dundas-jains-2002"
+ ],
+ "sourcing": "sourced"
+}

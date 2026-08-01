@@ -1,0 +1,18 @@
+{
+ "id": "shravanabelagola-site",
+ "name": "Shravanabelagola",
+ "traditions": [
+  "jainism"
+ ],
+ "place": "Karnataka",
+ "location": {
+  "lat": 12.8577,
+  "lng": 76.4854
+ },
+ "region": "deccan",
+ "significance": "The Bahubali colossus, anointed every twelve years in the great mastakabhisheka.",
+ "sources": [
+  "dundas-jains-2002"
+ ],
+ "sourcing": "sourced"
+}

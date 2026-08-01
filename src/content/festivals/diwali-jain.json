@@ -1,0 +1,15 @@
+{
+ "id": "diwali-jain",
+ "name": "Diwali",
+ "traditions": [
+  "jainism"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "New moon of Kartik",
+ "observed": {},
+ "summary": "For Jains, the night of Mahavira's liberation: lamps for the light of knowledge that remained.",
+ "sources": [
+  "dundas-jains-2002"
+ ],
+ "sourcing": "sourced"
+}

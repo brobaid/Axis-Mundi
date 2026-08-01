@@ -1,0 +1,22 @@
+{
+ "id": "hemachandra-figure",
+ "name": "Hemachandra",
+ "traditions": [
+  "jainism"
+ ],
+ "born": {
+  "year": 1088,
+  "precision": "exact"
+ },
+ "died": {
+  "year": 1173,
+  "precision": "exact"
+ },
+ "role": "Scholar-monk",
+ "summary": "The scholar-monk of the Chaulukya court, \"omniscient of the degenerate age,\" master of every science of his day.",
+ "events": [],
+ "sources": [
+  "dundas-jains-2002"
+ ],
+ "sourcing": "sourced"
+}

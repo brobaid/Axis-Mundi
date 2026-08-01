@@ -1,0 +1,18 @@
+{
+ "id": "palitana",
+ "name": "Shatrunjaya at Palitana",
+ "traditions": [
+  "jainism"
+ ],
+ "place": "Gujarat",
+ "location": {
+  "lat": 21.4854,
+  "lng": 71.8291
+ },
+ "region": "western-india",
+ "significance": "The hill of temples, holiest ground of the Svetambara tradition.",
+ "sources": [
+  "dundas-jains-2002"
+ ],
+ "sourcing": "sourced"
+}

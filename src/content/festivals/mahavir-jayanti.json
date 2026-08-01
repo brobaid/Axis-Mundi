@@ -1,17 +1,20 @@
 {
-  "id": "mahavir-jayanti",
-  "name": "Mahavir Jayanti",
-  "traditions": [
-    "jainism"
-  ],
-  "calendar": "lunisolar",
-  "date_rule": "Set by a lunisolar rule, so it wanders within a window rather than holding a fixed date.",
-  "observed": {
-    "2024": "04-21",
-    "2025": "04-10",
-    "2026": "03-31",
-    "2027": "04-19"
-  },
-  "sources": [],
-  "sourcing": "todo"
+ "id": "mahavir-jayanti",
+ "name": "Mahavir Jayanti",
+ "traditions": [
+  "jainism"
+ ],
+ "calendar": "lunisolar",
+ "date_rule": "13th of bright Chaitra",
+ "observed": {
+  "2024": "04-21",
+  "2025": "04-10",
+  "2026": "03-31",
+  "2027": "04-19"
+ },
+ "summary": "The birth of Mahavira, the community's chief public festival.",
+ "sources": [
+  "dundas-jains-2002"
+ ],
+ "sourcing": "sourced"
 }
