@@ -68,7 +68,7 @@ English slot rather than leaving it empty.
 | --- | --- |
 | `pnpm validate:content` | Zod-validates all 1,789 records, then the cross-file rules: importance 3+ events need a T1–T3 source, matrix cells need T1 or a labelled T4, contested items must cite both positions, glossary references must resolve. |
 | `pnpm validate:tokens` | Fails on a raw colour anywhere outside `tokens.css`, on an undefined custom property, and on any of 186 contrast pairs falling below WCAG AA across the light, night and print modes. |
-| `pnpm validate:timeline` | Timeline layout invariants across six viewports: the density budget, rank gating, and that nothing overlaps. |
+| `pnpm validate:timeline` | Canvas layout invariants: the timeline's density budget and rank gating across six viewports, and that no two family-tree era labels overlap at any axis width. |
 | `pnpm lint` | `eslint` and `astro check`, at zero errors, zero warnings, zero hints. |
 | `pnpm build` | 1,106 pages. Records marked `sourcing: "todo"` are excluded. |
 | `pnpm validate:links` | Every internal link resolves against `dist/` under the rules a plain static host applies, and every built route appears in `sitemap.xml`. |

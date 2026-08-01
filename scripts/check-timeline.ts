@@ -1,5 +1,5 @@
 /**
- * Axis Mundi — timeline layout invariants.
+ * Axis Mundi — canvas layout invariants.
  *
  * The canvas has a handful of rules that are easy to break silently and hard to
  * spot by eye. They are asserted here against the real seeded content, with no
@@ -9,6 +9,11 @@
  *   spec §4        importance rubric, ~8 events per lane per viewport
  *   kickoff M1     near-coincident events dodge or cluster, never overlap
  *   design lang §3.2  branch lanes are stepped tints of the parent, never new hues
+ *
+ * The family tree is here too, and for the same reason. Its era labels overlap
+ * by construction if nothing stops them — the detents are not evenly spaced in
+ * time and the axis is linear, so the last five fall inside the last eighth of
+ * it — and that is exactly a thing you cannot see in a diff.
  */
 
 import { readdirSync, readFileSync, statSync } from 'node:fs';
@@ -27,6 +32,13 @@ import {
   type Viewport,
 } from '../src/lib/timeline-model.js';
 import { displayDate } from '../src/lib/display-date.js';
+import {
+  TICK_ADVANCE,
+  TICK_FONT_SIZE,
+  TICK_ROW_HEIGHT,
+  layoutTicks,
+  tickWidth,
+} from '../src/lib/tree-model.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -228,13 +240,85 @@ for (const { name, drill, view } of SCENARIOS) {
   ok();
 }
 
+/* ── the family tree's axis ─────────────────────────────────────────────── */
+
+/*
+  No two era labels may overlap, at any axis width.
+
+  Asserted across a range of widths rather than the one the page ships, so the
+  invariant belongs to the layout rather than to a lucky number: the labels are
+  centred on their ticks and the ticks crowd as the axis narrows, which is when
+  stacking has to do the most work.
+*/
+{
+  /*
+    First, the assumption the rest of this rests on.
+
+    Everything below computes a label's width from its character count, which
+    is only sound if the reserved advance is at least the face's real one.
+    IBM Plex Mono advances at 0.6em and the fallbacks are all monospaced; the
+    layout reserves 0.62em for slack. Asserting the floor here matters because
+    the overlap checks that follow use tickWidth() on both sides and would stay
+    happily self-consistent while every label on the page overlapped — measured
+    in Chromium, the reserved width is at or above the real ink for all twelve.
+  */
+  if (TICK_ADVANCE < TICK_FONT_SIZE * 0.6) {
+    fail(
+      `tree axis reserves ${(TICK_ADVANCE / TICK_FONT_SIZE).toFixed(3)}em per character, ` +
+        'below the 0.6em the mono face actually advances',
+    );
+  }
+  ok();
+
+  const ERAS = [-500, 1, 300, 600, 750, 1000, 1200, 1500, 1700, 1850, 1950, 2020];
+  const label = (y: number): string => (y < 0 ? `${Math.abs(y)} BCE` : y === 0 ? '1 BCE' : `${y} CE`);
+  for (const datedWidth of [200, 300, 451, 600, 900]) {
+    const ticks = layoutTicks(
+      ERAS.map((era) => ({
+        year: era,
+        x: ((era + 2000) / 4020) * datedWidth,
+        label: label(era),
+      })),
+    );
+    if (ticks.length !== ERAS.length) fail(`tree axis at ${datedWidth}px dropped a label`);
+
+    const byRow = new Map<number, { x: number; label: string }[]>();
+    for (const t of ticks) {
+      const row = byRow.get(t.row) ?? [];
+      row.push(t);
+      byRow.set(t.row, row);
+    }
+    for (const [row, list] of byRow) {
+      list.sort((a, b) => a.x - b.x);
+      for (let i = 1; i < list.length; i++) {
+        const before = list[i - 1] as { x: number; label: string };
+        const here = list[i] as { x: number; label: string };
+        const gap = here.x - tickWidth(here.label) / 2 - (before.x + tickWidth(before.label) / 2);
+        if (gap < 0) {
+          fail(
+            `tree axis at ${datedWidth}px: "${before.label}" and "${here.label}" overlap by ` +
+              `${(-gap).toFixed(1)}px in row ${row}`,
+          );
+        }
+      }
+    }
+    /* A block that needs more rows than the canvas reserves would clip. */
+    const rows = ticks.reduce((max, t) => Math.max(max, t.row + 1), 1);
+    if (rows * TICK_ROW_HEIGHT > 80) {
+      fail(`tree axis at ${datedWidth}px needs ${rows} label rows, which will not fit`);
+    }
+    ok();
+  }
+}
+
 if (failures.length > 0) {
-  console.error('\n  Timeline layout invariants FAILED\n');
+  console.error('\n  Canvas layout invariants FAILED\n');
   for (const f of failures) console.error(`      ${f}`);
   console.error(`\n  ${failures.length} failing.\n`);
   process.exit(1);
 }
 
 console.log(
-  `  Timeline layout invariants passed — ${checks} groups across ${SCENARIOS.length} viewports.`,
+  `  Canvas layout invariants passed — ${checks} groups across ${SCENARIOS.length} viewports, ` +
+    'tree axis labels clear at five widths.',
 );
