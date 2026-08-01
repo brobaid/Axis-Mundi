@@ -9,6 +9,7 @@ import {
   divisionHeading,
   editionLines,
   type DivisionIndex,
+  type ParallelBlock,
   type VerseRow,
   type WorkData,
 } from '../../../../lib/reader-model';
@@ -60,7 +61,9 @@ const record =
     ? await getEntry('divisions', `${work.id}--${division.slug}`)
     : undefined;
 const verses = (record?.data.verses ?? []) as unknown as VerseRow[];
-if (division.chapters === undefined && verses.length === 0) {
+/* A division whose editions do not align holds columns instead of verses. */
+const parallel = record?.data.parallel as unknown as ParallelBlock | undefined;
+if (division.chapters === undefined && parallel === undefined && verses.length === 0) {
   /* A text page with no text is not a page. The only way here is a work index
      naming a division whose record is missing, which is a build-time fact and
      must stop the build rather than ship an empty room. */
@@ -68,9 +71,11 @@ if (division.chapters === undefined && verses.length === 0) {
 }
 
 const description =
-  division.chapters === undefined
-    ? `${heading} of ${work.title}, ${division.verses} verses, in editions named on the page.`
-    : `${heading}: ${division.chapters.length} chapters, ${division.verses} verses, in ${work.title}.`;
+  division.chapters !== undefined
+    ? `${heading}: ${division.chapters.length} chapters, ${division.verses} verses, in ${work.title}.`
+    : parallel !== undefined
+      ? `${heading} of ${work.title}, in two independently numbered columns; the editions do not align here.`
+      : `${heading} of ${work.title}, ${division.verses} verses, in editions named on the page.`;
 ---
 
 <BaseLayout title={`${heading} — ${work.title}`} description={description}>
@@ -80,6 +85,7 @@ const description =
         work={work}
         division={division}
         verses={verses}
+        parallel={parallel}
         heading={heading}
         crumbs={[
           { href: '/read', label: 'Reading Room' },

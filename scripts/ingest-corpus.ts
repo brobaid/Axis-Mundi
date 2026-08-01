@@ -59,7 +59,29 @@ interface DeliveredChapter {
   name_pli?: string;
   name_en?: string;
   range?: string;
-  verses: DeliveredVerse[];
+  verses?: DeliveredVerse[];
+  /** A whole chapter as one block per column, for a text with no verse level. */
+  c?: number;
+  [lang: string]: unknown;
+}
+
+/**
+ * A book whose two editions divide it differently.
+ *
+ * `aligned: false` means exactly what it says, and the delivery then carries
+ * each side's own sequence rather than a paired one. Forcing an index pairing
+ * here would silently mismatch every row after the first divergence.
+ */
+interface DeliveredBookPair {
+  n: number;
+  name_zh?: string;
+  aligned: boolean;
+  note?: string;
+  /** Present when aligned. */
+  chapters?: DeliveredVerse[];
+  /** Present when not. */
+  zh_sayings?: string[];
+  en_chapters?: string[];
 }
 
 interface Delivered {
@@ -118,6 +140,8 @@ interface Config {
   gap_notes?: { original?: string; english?: string };
   /** BCP-47 tags, where a column's key is not one. */
   lang_tags?: Record<string, string>;
+  /** False where the canon's divisions carry no verse level of their own. */
+  versified?: boolean;
   /** The delivery's own section name mapped to how the canon names it. */
   sections?: Record<string, SectionConfig>;
   /**
@@ -222,6 +246,34 @@ const CONFIGS: Record<string, Config> = {
       'One book of the Khuddaka Nikaya, numbered continuously: a verse is cited as ' +
       'Dhp 1 to Dhp 423 whatever vagga it falls in.',
   },
+  daodejing: {
+    file: 'docs/corpora/chinese/daodejing-paired.json',
+    tradition: 'chinese',
+    title: 'The Daodejing',
+    title_original: '道德经',
+    division_label: 'chapter',
+    division_label_plural: 'chapters',
+    script: 'han',
+    direction: 'ltr',
+    /* One block per chapter, and the chapter is what anyone cites. */
+    versified: false,
+    /* Both files key their Chinese `received-text`; they are two different
+       received texts and get two records. */
+    edition_sources: { zh: 'ddj-received-text', en: 'legge-sbe-39' },
+    lang_tags: { zh: 'zh-Hans' },
+  },
+  analects: {
+    file: 'docs/corpora/chinese/analects-paired.json',
+    tradition: 'chinese',
+    title: 'The Analects',
+    title_original: '论语',
+    division_label: 'book',
+    division_label_plural: 'books',
+    script: 'han',
+    direction: 'ltr',
+    edition_sources: { zh: 'analects-received-text', en: 'legge-classics-1' },
+    lang_tags: { zh: 'zh-Hans' },
+  },
   tanakh: {
     file: 'docs/corpora/tanakh/tanakh-paired-v2.json',
     tradition: 'judaism',
@@ -283,6 +335,16 @@ interface Chapter {
   verses: Verse[];
 }
 
+/** One column of a division that does not pair. */
+interface ParallelSide {
+  lang: string;
+  numbering: string;
+  label: string;
+  /** What one entry here is called, singular: "saying", "chapter". */
+  unit: string;
+  entries: { n: number; text: string }[];
+}
+
 interface Division {
   n: number;
   slug: string;
@@ -296,6 +358,8 @@ interface Division {
   chapters?: Chapter[];
   /** Every verse of the division, whatever level they are stored at. */
   all: Verse[];
+  /** Present instead of verses where the editions do not align. */
+  parallel?: { note: string; columns: ParallelSide[] };
 }
 
 /** Both delivered shapes, flattened to the same thing. */
@@ -313,9 +377,76 @@ function normalise(src: Delivered, config: Config): Division[] {
     return out;
   };
 
+  /*
+    Books that pair, and books that do not.
+
+    The Analects is ten of each. Where Legge's chapter divisions match the
+    received text the book renders paired; where they do not — most sharply in
+    Book X, seventeen chapters against twenty-seven sayings — each column keeps
+    its own sequence and its own numbering, and the note says why.
+
+    Detected by the field that states it rather than by a container name: this
+    delivery files its books under `books` exactly as the Tanakh and the Bible
+    do, and only `aligned` tells the three apart.
+  */
+  if (src.books !== undefined && (src.books[0] as unknown as DeliveredBookPair)?.aligned !== undefined) {
+    const books = src.books as unknown as DeliveredBookPair[];
+    const langs = Object.keys(src.editions);
+    const orig = langs.find((k) => k !== 'en') ?? 'zh';
+    return books.map((book) => {
+      const base = {
+        n: book.n,
+        slug: String(book.n),
+        ...(book.name_zh === undefined ? {} : { name: book.name_zh }),
+      };
+      if (book.aligned) {
+        return { ...base, all: (book.chapters ?? []).map((v) => ({ v: v.v as number, ...columns(v) })) };
+      }
+      if (book.note === undefined) {
+        throw new Error(`book ${book.n}: aligned is false and no note says why`);
+      }
+      const side = (lang: string, label: string, unit: string, texts: string[]): ParallelSide => ({
+        lang,
+        /* The anchor names the numbering, so a link says which column it
+           means: #zh-3 is the third saying, #en-3 is Legge's third chapter,
+           and on an unaligned book those are not the same passage. */
+        numbering: lang,
+        label,
+        unit,
+        entries: texts.map((text, i) => ({ n: i + 1, text })),
+      });
+      return {
+        ...base,
+        all: [],
+        parallel: {
+          note: book.note,
+          columns: [
+            side(orig, 'The received text, by saying', 'saying', book.zh_sayings ?? []),
+            side('en', "Legge's translation, by his chapters", 'chapter', book.en_chapters ?? []),
+          ],
+        },
+      };
+    });
+  }
+
   /* Divisions delivered flat, each with its own names and its own verses. */
   if (src.chapters !== undefined) {
     return src.chapters.map((chapter) => {
+      /*
+        A chapter that is itself one block of text, not a list of verses.
+
+        The Daodejing is eighty-one of these: the chapter is the citable unit
+        and there is no level beneath it, so it enters as a single unnumbered
+        block rather than as a verse one that would be numbered "1".
+      */
+      if (chapter.verses === undefined) {
+        const n = chapter.c ?? chapter.n;
+        return {
+          n,
+          slug: String(n),
+          all: [{ v: 1, ...columns(chapter as DeliveredVerse) }],
+        };
+      }
       const verses = chapter.verses.map((v) => ({ v: v.v as number, ...columns(v) }));
       /* The delivery states the range and the verses carry it; if the two ever
          disagree, the file is telling us two different things and one of them
@@ -463,7 +594,14 @@ function ingest(name: string, config: Config): void {
       }
     };
 
-    if (d.chapters === undefined) {
+    if (d.parallel !== undefined) {
+      emit(`${src.work}--${d.slug}`, {
+        n: d.n,
+        slug: d.slug,
+        parallel: d.parallel,
+        sourcing: 'sourced',
+      });
+    } else if (d.chapters === undefined) {
       emit(`${src.work}--${d.slug}`, {
         n: d.n,
         slug: d.slug,
@@ -482,7 +620,23 @@ function ingest(name: string, config: Config): void {
       }
     }
 
-    totalVerses += d.all.length;
+    /*
+      A parallel division counts in the original's own divisions.
+
+      Not the sum of both columns, which would count one book twice and inflate
+      the room's verse tally with a number no edition holds; and not the longer
+      of the two, which is arbitrary. Every other division of the Analects is
+      counted in received-text sayings — an aligned book's paired entries are
+      exactly its sayings — so the unaligned ones are counted the same way, and
+      the work's total stays one unit throughout.
+    */
+    const originalColumn = d.parallel?.columns.find((c) => c.lang === originalLang);
+    if (d.parallel !== undefined && originalColumn === undefined) {
+      throw new Error(
+        `division ${d.slug}: parallel columns carry no ${originalLang ?? 'original'} side to count in`,
+      );
+    }
+    totalVerses += originalColumn === undefined ? d.all.length : originalColumn.entries.length;
     totalChapters += d.chapters?.length ?? 0;
     englishGaps += missingEnglish(d.all);
     originalGaps += missingOriginal(d.all);
@@ -496,7 +650,15 @@ function ingest(name: string, config: Config): void {
       ...(d.name_gloss === undefined ? {} : { name_gloss: d.name_gloss }),
       ...(d.verse_from === undefined ? {} : { verse_from: d.verse_from }),
       ...(d.verse_to === undefined ? {} : { verse_to: d.verse_to }),
-      verses: d.all.length,
+      /* A parallel division has no single verse count, so the index carries
+         both columns' — every page that lists divisions has to say how much
+         text each holds, and here that is two numbers in two units. */
+      ...(d.parallel === undefined
+        ? {}
+        : {
+            parallel: d.parallel.columns.map((c) => ({ unit: c.unit, n: c.entries.length })),
+          }),
+      verses: originalColumn === undefined ? d.all.length : originalColumn.entries.length,
       ...(d.chapters === undefined
         ? {}
         : {
@@ -594,6 +756,7 @@ function ingest(name: string, config: Config): void {
     direction: config.direction,
     editions,
     ...(config.lang_tags === undefined ? {} : { lang_tags: config.lang_tags }),
+    ...(config.versified === false ? { versified: false } : {}),
     ...(config.note === undefined ? {} : { note: config.note }),
     ...(preface === undefined ? {} : { preface }),
     ...(config.gap_notes === undefined ? {} : { gap_notes: config.gap_notes }),

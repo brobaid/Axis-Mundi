@@ -1,5 +1,6 @@
 ---
 import ReaderChrome from './ReaderChrome.astro';
+import ParallelColumns from './ParallelColumns.astro';
 import DevotionalToggle from './DevotionalToggle.astro';
 import {
   carries,
@@ -10,6 +11,7 @@ import {
   langTag,
   originalLang,
   pageModes,
+  parallelCounts,
   prefaceFor,
   sectionOf,
   sidesOf,
@@ -18,6 +20,7 @@ import {
   verseRef,
   walk,
   type EditionLine,
+  type ParallelBlock,
   type VerseRow,
   type WorkData,
   type DivisionIndex,
@@ -39,13 +42,40 @@ interface Props {
   /** Absent where the division is itself the leaf. */
   chapter?: number | undefined;
   verses: readonly VerseRow[];
+  /** Present instead of verses where this division's editions do not align. */
+  parallel?: ParallelBlock | undefined;
   /** What the page calls itself: "Genesis 1", "Surah 2". */
   heading: string;
   /** The trail above the heading, innermost last. */
   crumbs: readonly { href: string; label: string }[];
   editions: readonly (EditionLine & { title: string; author?: string | undefined })[];
 }
-const { work, division, chapter, verses, heading, crumbs, editions } = Astro.props;
+const { work, division, chapter, verses, parallel, heading, crumbs, editions } = Astro.props;
+
+/* An unversified canon's division is one block and the citable unit both:
+   nobody cites Daodejing 12 verse 3, so no numeral is imposed on it. */
+const versified = work.versified !== false;
+
+/*
+  How much text is here, in the unit this division actually has.
+
+  Three shapes, three answers. A versified division counts verses. A parallel
+  one counts twice, in the words each column counts in, because a single number
+  there would be the very claim the columns exist to refuse. An unversified one
+  has no sub-count to give at all — "1 verses" was both ungrammatical and a
+  claim about a division the Daodejing does not make — so the line goes.
+*/
+const count = [
+  division.parallel !== undefined
+    ? parallelCounts(division.parallel)
+    : versified
+      ? `${verses.length} verses`
+      : '',
+  chapter === undefined ? (verseRange(division) ?? '') : '',
+  division.transliteration ?? '',
+]
+  .filter((part) => part !== '')
+  .join(' · ');
 
 const orig = originalLang(work);
 /*
@@ -79,6 +109,7 @@ const contentsLabel =
   data-work={work.id}
   data-division={chapter === undefined ? division.slug : `${division.slug}/${chapter}`}
   data-heading={heading}
+  data-parallel={parallel === undefined ? undefined : 'yes'}
 >
   <header class="rd__head">
     <p class="eyebrow">
@@ -114,11 +145,7 @@ const contentsLabel =
         )
       }
     </h1>
-    <p class="caption rd__count">
-      {verses.length} verses
-      {chapter === undefined && verseRange(division) !== undefined && ` · ${verseRange(division)}`}
-      {division.transliteration !== undefined && ` · ${division.transliteration}`}
-    </p>
+    {count !== '' && <p class="caption rd__count">{count}</p>}
   </header>
 
   <ReaderChrome
@@ -162,12 +189,19 @@ const contentsLabel =
   }
   {omittedNote !== undefined && <p class="caption rd-preface__absent">{omittedNote}</p>}
 
+  {
+    /* A division whose editions do not align renders as columns instead: no
+       verse list, no pairing, and the note above them saying why. */
+    parallel !== undefined ? (
+      <ParallelColumns work={work} block={parallel} heading={heading} />
+    ) : (
   <div
     class="rd-verses"
     data-modes={modes.join(' ')}
     data-default={mode}
     data-script={work.script}
     data-direction={work.direction}
+    data-versified={versified ? 'yes' : 'no'}
     style={`--script-font: ${scriptFont}`}
   >
     {
@@ -183,13 +217,17 @@ const contentsLabel =
         const note = gapNote(work, sides);
         return (
           <div class="rd-verse" id={verseAnchor(verse)}>
-            <a
-              class="rd-verse__n"
-              href={`#${verseAnchor(verse)}`}
-              aria-label={`Verse ${verseRef(heading, verse)}`}
-            >
-              {verse.v}
-            </a>
+            {/* No numeral where the canon has no verse level: the chapter is
+                the citable unit and its own address is the citation. */}
+            {versified && (
+              <a
+                class="rd-verse__n"
+                href={`#${verseAnchor(verse)}`}
+                aria-label={`Verse ${verseRef(heading, verse)}`}
+              >
+                {verse.v}
+              </a>
+            )}
             {sides === 'neither' ? (
               /* One line, not two: a row that said "no English" and "no
                  original" under each other would be reporting one absence
@@ -222,6 +260,8 @@ const contentsLabel =
       })
     }
   </div>
+    )
+  }
 
   {/*
     The closing formula. Set apart from the verses above it in every way a page
@@ -325,6 +365,23 @@ const contentsLabel =
     max-width: 46rem;
   }
 
+  /* 46rem is one column of prose at a readable measure. A parallel division
+     puts two beside each other, and squeezing them into the single-column
+     width gave each about sixteen Han characters per line — a measure narrow
+     enough to break phrases. So the page widens to hold two of them, and only
+     where there are two: everything else keeps the reading measure. */
+  .rd[data-parallel] {
+    max-width: 76rem;
+  }
+
+  /* The head still reads as prose, so it keeps the measure the widened page
+     no longer sets. */
+  .rd[data-parallel] .rd__head,
+  .rd[data-parallel] .rd-edition,
+  .rd[data-parallel] .rd-nav {
+    max-width: 46rem;
+  }
+
   .rd__head {
     margin-bottom: var(--space-6);
   }
@@ -411,6 +468,17 @@ const contentsLabel =
 
   .rd-verse > * {
     grid-column: 2;
+  }
+
+  /* An unversified canon has no numeral column to leave room for. */
+  .rd-verses[data-versified='no'] .rd-verse {
+    grid-template-columns: 1fr;
+    border-bottom: none;
+    padding-block: 0;
+  }
+
+  .rd-verses[data-versified='no'] .rd-verse > * {
+    grid-column: 1;
   }
 
   .rd-verse:target {

@@ -99,6 +99,21 @@ export const divisionIndexEntry = z.object({
   chapters: z.array(chapterIndexEntry).optional(),
   /** Which of the work's sections this division belongs to. */
   section: slug.optional(),
+  /**
+   * Present where this division's editions do not align and it renders as
+   * independently numbered columns rather than as paired verses.
+   *
+   * One entry per column, carrying how many that column holds and what it
+   * calls one of them. The counts live in the index rather than only in the
+   * record because every page that lists divisions has to say how much text
+   * each holds, and for these there is no single true number: Analects X is
+   * twenty-seven sayings and seventeen chapters, and a contents row printing
+   * "27" alone would be the same silent pairing the columns exist to refuse.
+   */
+  parallel: z
+    .array(z.object({ unit: z.string().min(1), n: z.number().int().positive() }))
+    .min(2)
+    .optional(),
   /** Verses whose English column is empty, counted at ingestion. */
   english_gaps: z.number().int().nonnegative().default(0),
   /** Verses whose original-language column is empty. The reverse happens too. */
@@ -181,7 +196,10 @@ export const workSchema = z
     /** What one chapter is called, where the canon has that level. */
     chapter_label: z.string().min(1).optional(),
     /** The script the original is set in, for the font stack and `lang`. */
-    script: z.enum(['arabic', 'hebrew', 'devanagari', 'gurmukhi', 'han', 'latin', 'japanese', 'greek', 'pali']),
+    script: z.enum([
+      'arabic', 'hebrew', 'devanagari', 'gurmukhi', 'han',
+      'latin', 'japanese', 'greek', 'pali',
+    ]),
     /** Right-to-left originals need the whole verse block reversed, not just the text. */
     direction: z.enum(['ltr', 'rtl']).default('ltr'),
     /**
@@ -208,6 +226,15 @@ export const workSchema = z
     english_pending: z.string().min(1).optional(),
     /** Anything the reader must state on the page, e.g. a survival fraction. */
     note: z.string().min(1).optional(),
+    /**
+     * False where a canon's divisions are not numbered internally.
+     *
+     * The Daodejing's chapter is one block of text and the citable unit both:
+     * nobody cites Daodejing 12 verse 3. Numbering a single block "1" would
+     * invent a level the tradition does not have, so the block renders bare
+     * and the chapter's own address is the citation.
+     */
+    versified: z.boolean().default(true),
     /** An unnumbered opening line the canon's own convention puts above verse 1. */
     preface: workPreface.optional(),
     /**
@@ -316,6 +343,42 @@ const divisionId = z
     'must be <work>--<division> or <work>--<division>--<chapter>',
   );
 
+/**
+ * One side of a division that does not pair.
+ *
+ * Where two editions divide a text differently, an index pairing is a lie
+ * dressed as a table: after the first divergence every row is wrong and
+ * nothing on the page says so. So each side keeps its own sequence, its own
+ * numbering, and its own name for that numbering — which is also what the
+ * anchor carries, so a link says which column it means.
+ */
+export const parallelSide = z.object({
+  /** BCP-47 or the delivery's column key; the work maps it if they differ. */
+  lang: languageCode,
+  /** Anchor prefix and the name of this side's numbering: `zh`, `en`. */
+  numbering: slug,
+  /** What this column is, in words: "The received text, by saying". */
+  label: z.string().min(1),
+  /**
+   * What one entry in this column is called, singular.
+   *
+   * The head of the page has to say how much text is here, and a parallel
+   * division has two answers — twenty-seven and seventeen for Analects X. One
+   * number would be a lie by omission and "27 verses" would be a lie about the
+   * unit, so it states both in the words each column counts in.
+   */
+  unit: z.string().min(1),
+  entries: z.array(z.object({ n: z.number().int().positive(), text: z.string().min(1) })).min(1),
+});
+
+export const parallelBlock = z
+  .object({
+    /** Why these columns are not paired. Rendered above them, verbatim. */
+    note: z.string().min(1),
+    columns: z.array(parallelSide).min(2),
+  })
+  .strict();
+
 export const divisionSchema = z
   .object({
     id: divisionId,
@@ -324,10 +387,24 @@ export const divisionSchema = z
     slug,
     /** Present when this record is one chapter of a division rather than all of it. */
     c: z.number().int().positive().optional(),
-    verses: z.array(verseEntry).min(1),
+    verses: z.array(verseEntry).min(1).optional(),
+    /** Present instead of `verses` where the editions do not align. */
+    parallel: parallelBlock.optional(),
     sourcing: sourcingStatus,
   })
-  .strict();
+  .strict()
+  .superRefine((value, ctx) => {
+    const paired = value.verses !== undefined;
+    const parallel = value.parallel !== undefined;
+    if (paired === parallel) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['verses'],
+        message:
+          'a division holds paired verses or parallel columns, never both and never neither',
+      });
+    }
+  });
 
 export type Work = z.infer<typeof workSchema>;
 export type WorkSection = z.infer<typeof workSection>;
@@ -335,4 +412,6 @@ export type WorkPreface = z.infer<typeof workPreface>;
 export type DivisionIndexEntry = z.infer<typeof divisionIndexEntry>;
 export type ChapterIndexEntry = z.infer<typeof chapterIndexEntry>;
 export type DivisionRecord = z.infer<typeof divisionSchema>;
+export type ParallelBlock = z.infer<typeof parallelBlock>;
+export type ParallelSide = z.infer<typeof parallelSide>;
 export type VerseEntry = z.infer<typeof verseEntry>;

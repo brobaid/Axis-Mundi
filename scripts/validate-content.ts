@@ -390,7 +390,12 @@ for (const id of LAUNCH_TEN) {
   holding text nobody reads.
 */
 type IndexedChapter = { c: number; verses: number };
-type IndexedDivision = { slug: string; verses: number; chapters?: IndexedChapter[] };
+type IndexedDivision = {
+  slug: string;
+  verses: number;
+  chapters?: IndexedChapter[];
+  parallel?: { unit: string; n: number }[];
+};
 
 for (const { file, data } of parsed.works.values()) {
   for (const division of data.divisions as IndexedDivision[]) {
@@ -398,6 +403,8 @@ for (const { file, data } of parsed.works.values()) {
       const record = parsed.divisions.get(id);
       if (record === undefined) {
         note(file, path, `no text record ${id}.json`);
+      } else if (record.data.verses === undefined) {
+        note(file, path, `${id}.json holds parallel columns where the index expects verses`);
       } else if (record.data.verses.length !== verses) {
         note(
           file,
@@ -406,6 +413,51 @@ for (const { file, data } of parsed.works.values()) {
         );
       }
     };
+
+    /*
+      A division whose editions do not align holds columns, not verses.
+
+      Two things have to agree with the record and both are checked against it
+      rather than assumed, because the whole point of the shape is that the two
+      sides differ. The index's per-column counts must match the record's
+      columns exactly — a contents page prints them, and a stale number there
+      would misdescribe a text nobody would think to re-count. And the index's
+      `verses`, the one number the work's total is summed from, must be the
+      original-language column's: the unit every other division of the work is
+      counted in.
+    */
+    if (division.parallel !== undefined) {
+      const record = parsed.divisions.get(`${data.id}--${division.slug}`);
+      const orig =
+        Object.keys(data.editions as Record<string, string>).find((k) => k !== 'en') ?? 'en';
+      if (record === undefined) {
+        note(file, `divisions.${division.slug}`, `no text record for a parallel division`);
+      } else if (record.data.parallel === undefined) {
+        note(file, `divisions.${division.slug}`, 'index says parallel, the record holds verses');
+      } else {
+        const columns = record.data.parallel.columns as {
+          lang: string;
+          unit: string;
+          entries: unknown[];
+        }[];
+        const said = division.parallel.map((c) => `${c.n} ${c.unit}`).join(' · ');
+        const held = columns.map((c) => `${c.entries.length} ${c.unit}`).join(' · ');
+        if (said !== held) {
+          note(file, `divisions.${division.slug}`, `index says ${said}, the record holds ${held}`);
+        }
+        const original = columns.find((c) => c.lang === orig);
+        if (original === undefined) {
+          note(file, `divisions.${division.slug}`, `parallel columns carry no ${orig} side`);
+        } else if (original.entries.length !== division.verses) {
+          note(
+            file,
+            `divisions.${division.slug}`,
+            `index counts ${division.verses}, the ${orig} column holds ${original.entries.length}`,
+          );
+        }
+      }
+      continue;
+    }
 
     if (division.chapters === undefined) {
       expect(`${data.id}--${division.slug}`, division.verses, `divisions.${division.slug}`);
@@ -445,6 +497,10 @@ for (const { file, data } of parsed.divisions.values()) {
   const division = work.data.divisions.find((d: IndexedDivision) => d.slug === data.slug);
   if (division === undefined) {
     note(file, 'slug', `"${data.work}" does not list a division "${data.slug}"`);
+  } else if (data.parallel !== undefined || division.parallel !== undefined) {
+    if ((data.parallel !== undefined) !== (division.parallel !== undefined)) {
+      note(file, 'parallel', `record and index disagree about whether "${data.slug}" pairs`);
+    }
   } else if (data.c === undefined && division.chapters !== undefined) {
     note(file, 'c', `"${data.slug}" is chaptered; its text belongs in per-chapter records`);
   } else if (data.c !== undefined && division.chapters === undefined) {

@@ -50,6 +50,8 @@ interface WorkIndex {
     slug: string;
     verses: number;
     chapters?: ChapterIndex[];
+    /** Present where the editions do not align: one entry per column. */
+    parallel?: { unit: string; n: number }[];
     english_gaps: number;
     original_gaps: number;
     blank: number;
@@ -145,8 +147,61 @@ for (const work of works) {
     }
   };
 
+  /**
+   * A division whose editions do not align: columns, not verses.
+   *
+   * Same dumb assertion, one per column — every entry the index claims is an
+   * element on the page, under an anchor that names its own numbering. And
+   * nothing here renders as a paired verse, because a single `.rd-verse` on
+   * this page would be the silent mismatch the whole shape exists to refuse.
+   */
+  const checkParallel = (
+    where: string,
+    path: string,
+    columns: { unit: string; n: number }[],
+  ): void => {
+    if (!existsSync(path)) {
+      fail(where, 'no page was built');
+      return;
+    }
+    const html = read(path);
+    pages += 1;
+    weigh(where, path, chaptered);
+    namesEditions(where, html);
+
+    const rendered = count(html, 'class="pc__entry"');
+    const claimed = columns.reduce((n, c) => n + c.n, 0);
+    if (rendered !== claimed) {
+      fail(where, `index says ${claimed} entries across its columns, the page renders ${rendered}`);
+    }
+    if (count(html, 'class="rd-verse"') > 0) {
+      fail(where, 'columns that do not align must not render as paired verses');
+    }
+    /* Both counts have to be on the page in words, or a reader is left to
+       assume the single number every other page carries. */
+    for (const c of columns) {
+      const said = `${c.n} ${c.unit}${c.n === 1 ? '' : 's'}`;
+      if (!html.includes(said)) fail(where, `does not state "${said}"`);
+    }
+
+    /* Every anchor a reader can copy off this page has to land on it. These
+       are per-column and same-page, so the site-wide fragment check below —
+       which only follows `/read/…#…` links — never sees them. */
+    for (const match of html.matchAll(/href="#([^"]+)"/g)) {
+      const fragment = match[1];
+      if (fragment !== undefined && !html.includes(`id="${fragment}"`)) {
+        fail(where, `links to #${fragment}, which has no such id on the page`);
+      }
+    }
+  };
+
   for (const division of work.divisions) {
     const at = `/read/${work.id}/${division.slug}`;
+
+    if (division.parallel !== undefined) {
+      checkParallel(at, join(DIST, 'read', work.id, division.slug, 'index.html'), division.parallel);
+      continue;
+    }
 
     if (division.chapters === undefined) {
       checkText(at, join(DIST, 'read', work.id, division.slug, 'index.html'),

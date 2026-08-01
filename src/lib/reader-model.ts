@@ -34,6 +34,8 @@ export interface DivisionIndex {
   readonly verses: number;
   /** Present means the division is a contents page and its text is a level down. */
   readonly chapters?: readonly ChapterIndex[] | undefined;
+  /** Present where the editions do not align: one entry per column. */
+  readonly parallel?: readonly ParallelCount[] | undefined;
   readonly section?: string | undefined;
   readonly english_gaps: number;
   readonly original_gaps: number;
@@ -63,6 +65,8 @@ export interface WorkData {
   readonly editions: Readonly<Record<string, string>>;
   readonly lang_tags?: Readonly<Record<string, string>> | undefined;
   readonly english_pending?: string | undefined;
+  /** False where the canon's divisions carry no verse level of their own. */
+  readonly versified?: boolean | undefined;
   readonly note?: string | undefined;
   readonly preface?: {
     readonly text: Readonly<Record<string, string>>;
@@ -83,6 +87,53 @@ export interface WorkData {
     readonly english?: string | undefined;
   } | undefined;
 }
+
+/* ── divisions that do not pair ─────────────────────────────────────────── */
+
+export interface ParallelSide {
+  readonly lang: string;
+  readonly numbering: string;
+  readonly label: string;
+  readonly unit: string;
+  readonly entries: readonly { readonly n: number; readonly text: string }[];
+}
+
+export interface ParallelBlock {
+  readonly note: string;
+  readonly columns: readonly ParallelSide[];
+}
+
+/**
+ * A parallel entry's anchor: the numbering it belongs to, then its number.
+ *
+ * `zh-3` and `en-3` are not the same passage in a book where the two editions
+ * divide differently, and that is exactly when this shape is used — so the
+ * anchor has to say which sequence it counts in. A bare `#3` would be a link
+ * that means two things.
+ */
+export const parallelAnchor = (side: Pick<ParallelSide, 'numbering'>, n: number): string =>
+  `${side.numbering}-${n}`;
+
+/** How a parallel entry is cited: "Analects X · received text 12". */
+export const parallelRef = (heading: string, side: ParallelSide, n: number): string =>
+  `${heading} · ${side.label} ${n}`;
+
+/** One column's size, as the work index carries it. */
+export interface ParallelCount {
+  readonly unit: string;
+  readonly n: number;
+}
+
+/**
+ * How much text a parallel division holds — which is two answers, not one.
+ *
+ * "27 sayings · 17 chapters", never "27 verses" and never one of the two on
+ * its own. The head of every other page states a single count because every
+ * other page has one; this is the one shape where a single number would be
+ * the same claim the columns exist to refuse.
+ */
+export const parallelCounts = (counts: readonly ParallelCount[]): string =>
+  counts.map((c) => `${c.n} ${c.unit}${c.n === 1 ? '' : 's'}`).join(' · ');
 
 /* ── one-sided verses ───────────────────────────────────────────────────── */
 

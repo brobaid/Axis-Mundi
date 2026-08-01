@@ -1,0 +1,194 @@
+---
+import {
+  langTag,
+  parallelAnchor,
+  parallelRef,
+  type ParallelBlock,
+  type WorkData,
+} from '../lib/reader-model';
+import { fontFor } from '../lib/scripts';
+
+/**
+ * A division whose two editions divide it differently.
+ *
+ * Ten of the Analects' twenty books are like this: Legge's chapter divisions
+ * do not follow the received text's sayings, most sharply in Book X where
+ * seventeen chapters stand against twenty-seven sayings. An index pairing
+ * there is a lie dressed as a table — after the first divergence every row is
+ * wrong and nothing on the page says so.
+ *
+ * So neither side is aligned to the other. Each keeps its own sequence, its
+ * own numbering, its own name for that numbering, and its own anchors; the
+ * note above them says why, in the corpus's words. Nothing here draws a line
+ * between an entry on the left and an entry on the right, because the corpus
+ * does not know one.
+ *
+ * Side by side where there is room, and stacked in full sequence where there
+ * is not — never interleaved. Two columns squeezed onto a phone would put
+ * saying 3 beside chapter 3 and imply the pairing this whole shape exists to
+ * refuse.
+ */
+interface Props {
+  work: WorkData;
+  block: ParallelBlock;
+  /** The division's own name, for citations. */
+  heading: string;
+}
+const { work, block, heading } = Astro.props;
+const scriptFont = fontFor(work.script);
+---
+
+<p class="pc-note caption">{block.note}</p>
+
+<div class="pc" data-columns={block.columns.length}>
+  {
+    block.columns.map((side) => (
+      <section class="pc__col" aria-label={side.label}>
+        <h2 class="pc__label eyebrow">
+          {side.label}
+          <span class="pc__count">{side.entries.length}</span>
+        </h2>
+        <ol class="pc__list" role="list">
+          {side.entries.map((entry) => (
+            <li class="pc__entry" id={parallelAnchor(side, entry.n)}>
+              <a
+                class="pc__n"
+                href={`#${parallelAnchor(side, entry.n)}`}
+                aria-label={parallelRef(heading, side, entry.n)}
+              >
+                {entry.n}
+              </a>
+              {/* Each column is set in its own language and its own face; the
+                  Chinese is not a gloss on the English or the reverse. */}
+              <p
+                class="pc__text"
+                lang={langTag(work, side.lang)}
+                style={side.lang === 'en' ? undefined : `font-family: ${scriptFont}`}
+              >
+                {entry.text}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))
+  }
+</div>
+
+<style is:global>
+  .pc-note {
+    color: var(--ink-soft);
+    max-width: 42rem;
+    padding-bottom: var(--space-4);
+    margin-bottom: var(--space-6);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  /*
+    Stacked by default. A phone gets each sequence whole, one after the other,
+    because two narrow columns side by side would align row 3 with row 3 and
+    imply the pairing this shape exists to refuse.
+  */
+  .pc {
+    display: grid;
+    gap: var(--space-12);
+  }
+
+  @media (min-width: 60rem) {
+    .pc {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+      /* Top-aligned, never row-aligned: the two lists run at their own
+         lengths and must be free to end at different heights. */
+      align-items: start;
+    }
+  }
+
+  .pc__label {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding-bottom: var(--space-2);
+    margin-bottom: var(--space-4);
+    border-bottom: var(--hairline-width) solid var(--ink);
+    position: sticky;
+    /* The line the rest of the site treats as "clear of the top bar" — the
+       same 8.5rem base.css scroll-padding lands anchors on. At 7rem the label
+       parked ten pixels under the bar at every width. */
+    top: 8.5rem;
+    background: var(--canvas);
+    z-index: 1;
+  }
+
+  .pc__count {
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+
+  .pc__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pc__entry {
+    display: grid;
+    grid-template-columns: 3ch 1fr;
+    column-gap: var(--space-4);
+    padding-block: var(--space-4);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    /* The same as a paired verse, so a link into a column lands exactly where
+       a link into a verse does. Measured: this stacks on base.css's 8.5rem
+       scroll-padding for 280px of clearance, well past where the column label
+       parks at 159px. */
+    scroll-margin-top: 9rem;
+  }
+
+  .pc__entry:target {
+    background: var(--surface);
+    box-shadow: inset 3px 0 0 var(--brass);
+    padding-left: var(--space-3);
+    margin-left: calc(-1 * var(--space-3));
+  }
+
+  .pc__n {
+    grid-column: 1;
+    min-height: var(--tap-min);
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: var(--size-caption);
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding-top: 0.35em;
+  }
+
+  .pc__n:hover {
+    color: var(--brass-ink);
+  }
+
+  .pc__text {
+    grid-column: 2;
+    font-family: var(--font-prose);
+    font-size: 1.0625rem;
+    line-height: 1.72;
+  }
+
+  /* Han glyphs carry more strokes in the same em; they want the size. */
+  .pc__text[lang^='zh'] {
+    font-size: 1.25rem;
+    line-height: 1.9;
+  }
+
+  /* Paper has no viewport, so both sequences print in full, one after the
+     other, which is also how they read. */
+  @media print {
+    .pc {
+      grid-template-columns: 1fr;
+    }
+
+    .pc__label {
+      position: static;
+    }
+  }
+</style>

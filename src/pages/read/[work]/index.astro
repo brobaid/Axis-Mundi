@@ -6,6 +6,7 @@ import {
   divisionHeading,
   grouped,
   langTag,
+  parallelCounts,
   verseRange,
   hasEnglish,
   originalLang,
@@ -30,7 +31,20 @@ const orig = originalLang(work);
 const scriptFont = fontFor(work.script);
 
 const verses = work.total_verses.toLocaleString('en');
-const count = `${work.divisions.length} ${work.division_label_plural}, ${verses} verses`;
+/* A canon with no verse level has only one number to give: the Daodejing is
+   eighty-one chapters, and "81 chapters, 81 verses" claimed a division it does
+   not make. */
+const count =
+  work.versified === false
+    ? `${work.divisions.length} ${work.division_label_plural}`
+    : `${work.divisions.length} ${work.division_label_plural}, ${verses} verses`;
+
+const scale =
+  count +
+  (work.total_chapters === undefined
+    ? ''
+    : ` in ${work.total_chapters.toLocaleString('en')} chapters`) +
+  '.';
 
 /* The single-sided verses, named where they live. Two versifications that
    disagree leave a verse on one side only; that is a fact about the editions,
@@ -65,8 +79,9 @@ const listed =
       )
     }
     <p class="measure lede">
-      {count}
-      {work.total_chapters !== undefined && ` in ${work.total_chapters.toLocaleString('en')} chapters`}.
+      {/* One string, because JSX puts a space between adjacent expressions and
+          a canon with no chapter level was getting "512 verses ." for it. */}
+      {scale}
       {!hasEnglish(work) && ' This corpus has entered in its own language alone.'}
     </p>
     {/* Filled in by the island when there is somewhere to resume, and empty
@@ -134,7 +149,11 @@ const listed =
             {divisions.map((d) => (
               <li>
                 <a class="rd-contents__item" href={`/read/${work.id}/${d.slug}`}>
-                  <span class="rd-contents__n mono">{d.n}</span>
+                  {/* The numeral — but a division with no name of its own is
+                      headed by its number already, and "1 Chapter 1" is the
+                      same number twice. The cell stays, so the names below it
+                      keep their column. */}
+                  <span class="rd-contents__n mono">{d.name === undefined ? '' : d.n}</span>
                   <span class="rd-contents__name">
                     {divisionHeading(work, d)}
                     {d.name_original !== undefined && (
@@ -156,11 +175,23 @@ const listed =
                   <span class="caption rd-contents__count">
                     {/* Where a canon numbers continuously, the range is the
                         thing a reader is scanning for: Dhp 183 is in whichever
-                        vagga holds it, and nothing else on this page says so. */}
+                        vagga holds it, and nothing else on this page says so.
+
+                        A division whose editions do not align has no single
+                        number and says both, in the words each column counts
+                        in — a bare "27" beside Analects X would quietly stand
+                        for a pairing the book does not have. */}
                     {verseRange(d) ??
-                      (d.chapters === undefined
-                        ? `${d.verses}`
-                        : `${d.chapters.length} ch · ${d.verses}`)}
+                      (d.parallel !== undefined
+                        ? parallelCounts(d.parallel)
+                        : d.chapters !== undefined
+                          ? `${d.chapters.length} ch · ${d.verses}`
+                          : /* An unversified canon's division holds one block,
+                               and a column of "1" down eighty-one rows counts
+                               nothing a reader could want. */
+                            work.versified === false
+                            ? ''
+                            : `${d.verses}`)}
                   </span>
                 </a>
               </li>
