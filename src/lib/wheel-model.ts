@@ -93,7 +93,7 @@ export interface Wheel {
  * month name the owner typed is extraction, not conversion; a Hijri or Hebrew
  * month name is neither, and falls through to unplaced.
  */
-function fromRule(rule: string): { day: number; endDay: number } | null {
+export function fromRule(rule: string): { day: number; endDay: number } | null {
   const m = new RegExp(`\\b(${MONTH_NAMES.join('|')})\\b(?:\\s+(\\d{1,2})(?:\\s*[-–]\\s*(\\d{1,2}))?)?`, 'i').exec(rule);
   if (m === null) return null;
   const monthIndex = MONTH_NAMES.indexOf((m[1] ?? '').toLowerCase());

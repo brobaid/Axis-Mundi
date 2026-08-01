@@ -1,0 +1,126 @@
+---
+import { getPublishable } from '../lib/content';
+import { TRADITIONS } from '../lib/traditions';
+import type { FestivalRecord } from '../lib/wheel-model';
+
+/**
+ * On This Day — Phase 3 delighter D.
+ *
+ * The one thing on this site that has to run in the browser: a static build's
+ * "today" is the day it was built. So the markup ships empty and the island
+ * fills it, or leaves it absent.
+ *
+ * Absent is the point. When no record can answer the date there is no panel,
+ * no "a quiet day in the calendar", no filler — the entrance hall simply has
+ * one fewer thing on it, which is what a museum with nothing to announce does.
+ */
+
+const entries = await getPublishable('festivals');
+const records = entries.map((e) => {
+  const f = e.data as FestivalRecord;
+  return {
+    id: f.id,
+    name: f.name,
+    traditions: f.traditions,
+    date_rule: f.date_rule,
+    observed: f.observed,
+    ...(f.span_days === undefined ? {} : { span_days: f.span_days }),
+  };
+});
+const traditionNames = Object.fromEntries(TRADITIONS.map((t) => [t.id, t.name]));
+---
+
+<section class="otd shell" data-on-this-day aria-label="Today in the calendar" hidden>
+  <ul class="otd__list" role="list" data-otd-list></ul>
+</section>
+
+<script is:inline set:html={`window.__otd = ${JSON.stringify({ records, traditionNames })};`} />
+<script>
+  import { lineFor, occasionsFor } from '../lib/on-this-day';
+  import type { FestivalRecord } from '../lib/wheel-model';
+
+  interface Payload {
+    records: FestivalRecord[];
+    traditionNames: Record<string, string>;
+  }
+
+  const data = (window as unknown as { __otd?: Payload }).__otd;
+  const root = document.querySelector<HTMLElement>('[data-on-this-day]');
+  const list = root?.querySelector<HTMLElement>('[data-otd-list]');
+
+  if (data !== undefined && root !== null && list !== null && list !== undefined) {
+    /* The reader's own calendar day, in their own timezone — a festival is
+       kept where the reader is, not where the server is. */
+    const now = new Date();
+    const occasions = occasionsFor(data.records, {
+      year: now.getFullYear(),
+      month: now.getMonth() + 1,
+      day: now.getDate(),
+    });
+
+    if (occasions.length > 0) {
+      list.innerHTML = occasions
+        .map((o) => {
+          const tradition = data.traditionNames[o.tradition] ?? o.tradition;
+          const line = lineFor(o);
+          return (
+            `<li class="otd__row">` +
+            `<a class="otd__link" href="/wheel">` +
+            `<span class="otd__pip" style="background: var(--t-${o.tradition})" aria-hidden="true"></span>` +
+            `<span class="otd__line">${line}</span>` +
+            `<span class="otd__trad caption">${tradition}</span>` +
+            `</a></li>`
+          );
+        })
+        .join('');
+      root.hidden = false;
+    }
+  }
+</script>
+
+<style>
+  .otd {
+    margin-top: var(--space-8);
+  }
+
+  .otd__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-1);
+    max-width: 34rem;
+  }
+
+  .otd :global(.otd__link) {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: var(--tap-min);
+    padding: var(--space-2) 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .otd :global(.otd__link:hover .otd__line) {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .otd :global(.otd__pip) {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex: none;
+  }
+
+  .otd :global(.otd__line) {
+    font-size: var(--size-small);
+  }
+
+  .otd :global(.otd__trad) {
+    margin-left: auto;
+    color: var(--ink-soft);
+  }
+</style>

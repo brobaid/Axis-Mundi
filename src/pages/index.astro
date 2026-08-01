@@ -4,6 +4,7 @@ import TraditionSymbols from '../components/TraditionSymbols.astro';
 import { TRADITIONS } from '../lib/traditions';
 import { getPublishable } from '../lib/content';
 import { heroLanes, heroWindow, heroYear, position, type HeroEvent } from '../lib/hero-strip';
+import OnThisDay from '../components/OnThisDay.astro';
 
 /**
  * The entrance hall (reference build's home screen).
@@ -159,6 +160,9 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
           ' An empty lane is a tradition whose events are still awaiting a source check, not a tradition without a history.'
       }
     </p>
+
+    <!-- Only when a record can answer today's date. -->
+    <OnThisDay />
   </div>
 
   <!-- The four doors ------------------------------------------------------ -->
