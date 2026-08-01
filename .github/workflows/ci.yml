@@ -9,11 +9,19 @@ permissions:
   contents: read
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  # Never on main. The standing rule is that CI verifies each commit
-  # individually, and cancelling in progress silently defeats it: three pushes
-  # a minute apart leave two commits with a cancelled run and one verified
-  # tree. Elsewhere superseding a run is still the right economy.
+  # On main, every commit gets a group of its own, so main's runs never contend.
+  #
+  # `cancel-in-progress: false` was supposed to be enough and is not. A
+  # concurrency group holds one running job and one *pending* one, and a third
+  # push cancels whichever was waiting — so three per-workstream pushes a minute
+  # apart left two commits on main with a cancelled run and one verified tree,
+  # the exact outcome the setting was there to prevent. Measured before fixing:
+  # six of the last thirty runs on main were cancelled, every one of them in a
+  # rapid-push cluster. A cancelled run is not a green one, and the standing
+  # rule is that CI verifies each commit individually.
+  #
+  # Elsewhere, superseding a run is still the right economy.
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.ref == 'refs/heads/main' && github.sha || 'shared' }}
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 env:
