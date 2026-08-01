@@ -1,0 +1,154 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getPublishable } from '../../../lib/content';
+import { divisionsOf, hasEnglish, originalLang, type WorkData } from '../../../lib/reader-model';
+
+/** A canon's contents: every division, in order, with its verse count. */
+export const getStaticPaths = (async () => {
+  const works = await getPublishable('works');
+  return works.map((entry) => ({
+    params: { work: entry.data.id },
+    props: { work: entry.data as unknown as WorkData },
+  }));
+}) satisfies GetStaticPaths;
+
+const { work } = Astro.props;
+const divisions = divisionsOf(work);
+const sources = await getPublishable('sources');
+const titleOf = new Map(sources.map((s) => [s.data.id, s.data.title]));
+const orig = originalLang(work);
+---
+
+<BaseLayout
+  title={work.title}
+  description={`${work.title}: ${divisions.length} ${work.division_label_plural}, ${work.verses.length.toLocaleString('en')} verses, in editions named on every page.`}
+>
+  <section class="shell head">
+    <p class="eyebrow">
+      <a class="tap" href="/read">Reading Room</a>
+    </p>
+    <h1 class="display">{work.title}</h1>
+    {
+      work.title_original !== undefined && (
+        <p class="rd-work__original" lang={orig} dir={work.direction}>
+          {work.title_original}
+        </p>
+      )
+    }
+    <p class="measure lede">
+      {divisions.length} {work.division_label_plural}, {work.verses.length.toLocaleString('en')} verses.
+      {!hasEnglish(work) && ' This corpus has entered in its own language alone.'}
+    </p>
+    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+  </section>
+
+  <div class="shell rd-contents">
+    <p class="caption rd-contents__editions">
+      {
+        Object.entries(work.editions)
+          .map(([, id]) => titleOf.get(id) ?? id)
+          .join(' · ')
+      }
+    </p>
+
+    <ol class="rd-contents__list" role="list">
+      {
+        divisions.map((d) => (
+          <li>
+            <a class="rd-contents__item" href={`/read/${work.id}/${d.n}`}>
+              <span class="rd-contents__n mono">{d.n}</span>
+              <span class="rd-contents__name">
+                {d.name ?? `${work.division_label.charAt(0).toUpperCase()}${work.division_label.slice(1)} ${d.n}`}
+                {d.name_original !== undefined && (
+                  <span class="rd-contents__original" lang={orig} dir={work.direction}>
+                    {d.name_original}
+                  </span>
+                )}
+              </span>
+              <span class="caption rd-contents__count">{d.verses.length}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</BaseLayout>
+
+<style>
+  .rd-work__original {
+    font-family: var(--font-arabic);
+    font-size: var(--size-h2);
+    color: var(--ink-soft);
+    margin-bottom: var(--space-3);
+  }
+
+  .rd-contents {
+    padding-bottom: var(--space-16);
+  }
+
+  .rd-contents__editions {
+    color: var(--ink-soft);
+    margin-bottom: var(--space-6);
+  }
+
+  .rd-contents__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 42rem;
+    /* Two columns where there is room: a hundred and fourteen entries is a
+       long scroll on a laptop and a fine one on a phone. */
+    columns: 1;
+  }
+
+  @media (min-width: 40rem) {
+    .rd-contents__list {
+      columns: 2;
+      column-gap: var(--space-12);
+    }
+  }
+
+  .rd-contents__list li {
+    break-inside: avoid;
+  }
+
+  .rd-contents__item {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    min-height: var(--tap-min);
+    padding: var(--space-2) 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: var(--size-small);
+  }
+
+  .rd-contents__n {
+    flex: none;
+    width: 2.5em;
+    color: var(--ink-soft);
+    text-align: right;
+  }
+
+  .rd-contents__name {
+    flex: 1;
+  }
+
+  .rd-contents__original {
+    font-family: var(--font-arabic);
+    margin-left: var(--space-2);
+    color: var(--ink-soft);
+  }
+
+  .rd-contents__count {
+    flex: none;
+    color: var(--ink-soft);
+  }
+
+  .rd-contents__item:hover .rd-contents__name {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>

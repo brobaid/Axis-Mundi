@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getPublishable } from '../lib/content';
+import { divisionsOf, type WorkData } from '../lib/reader-model';
 
 /**
  * The sitemap, built from the collections rather than from a list.
@@ -31,6 +32,7 @@ const ROOMS: readonly (readonly [string, string])[] = [
   ['/compare', '0.8'],
   ['/tree', '0.8'],
   ['/wheel', '0.8'],
+  ['/read', '0.8'],
   ['/methodology', '0.5'],
   ['/colophon', '0.4'],
 ];
@@ -38,10 +40,22 @@ const ROOMS: readonly (readonly [string, string])[] = [
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.href.replace(/\/$/, '') ?? '';
   const dives = await getPublishable('deepDives');
+  const works = await getPublishable('works');
+
+  /* Reading Room pages are real content with their own titles, so they are
+     listed: a canon's contents page, then each of its divisions. */
+  const readerUrls = works.flatMap((entry) => {
+    const work = entry.data as unknown as WorkData;
+    return [
+      [`/read/${work.id}`, '0.6'] as const,
+      ...divisionsOf(work).map((d) => [`/read/${work.id}/${d.n}`, '0.5'] as const),
+    ];
+  });
 
   const urls = [
     ...ROOMS,
     ...dives.map((entry) => [`/traditions/${entry.data.tradition}`, '0.7'] as const),
+    ...readerUrls,
   ];
 
   const body =

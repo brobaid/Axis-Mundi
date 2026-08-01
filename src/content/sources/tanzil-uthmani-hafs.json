@@ -1,0 +1,8 @@
+{
+ "id": "tanzil-uthmani-hafs",
+ "tier": "T1",
+ "title": "The Quran, Uthmani text (Hafs reading)",
+ "publisher": "Tanzil Project",
+ "url": "https://tanzil.net/",
+ "note": "The standard digital Arabic text, via the CC0 quran-api packaging."
+}

@@ -17,6 +17,7 @@ import { getPublishable } from '../lib/content';
  */
 
 const dives = await getPublishable('deepDives');
+const works = await getPublishable('works');
 
 const rooms: { href: string; label: string }[] = [
   { href: '/timeline', label: 'Timeline' },
@@ -27,6 +28,8 @@ const rooms: { href: string; label: string }[] = [
   { href: '/compare', label: 'Compare' },
   { href: '/tree', label: 'Family tree' },
   { href: '/wheel', label: 'Year wheel' },
+  /* The Reading Room appears once a corpus is in the build. */
+  ...(works.length === 0 ? [] : [{ href: '/read', label: 'Reading Room' }]),
 ];
 
 const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';

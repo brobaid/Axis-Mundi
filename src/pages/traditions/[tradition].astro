@@ -31,7 +31,7 @@ export const getStaticPaths = (async () => {
 const { dive } = Astro.props;
 const meta = traditionMeta(dive.tradition);
 
-const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, siteRecords, figureRecords, sources, events, texts] = await Promise.all([
+const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, siteRecords, figureRecords, sources, events, texts, works] = await Promise.all([
   getPublishable('glossary'),
   /* The branch tree renders names and contested flags — spec §2.3 structure. */
   getStructural('taxonomy'),
@@ -44,6 +44,8 @@ const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, siteRecords
   getPublishable('sources'),
   getPublishable('events'),
   getPublishable('texts'),
+  /* A canon row links into the Reading Room when that text is in the build. */
+  getPublishable('works'),
 ]);
 
 /* §5.1 stat box: founding and principal text are extracted, never authored
@@ -169,6 +171,8 @@ const beliefs = publishable(dive.core_beliefs);
 const law = publishable(dive.law_and_ethics);
 const demographics = publishable(dive.demographics);
 const canon = dive.canon.filter((c) => includesUnsourced || c.sourcing !== 'todo');
+/* Canon rows whose text has entered the Reading Room, by shared id. */
+const readable = new Set(works.map((w) => w.data.id));
 const practices = dive.practices.filter((p) => includesUnsourced || p.sourcing !== 'todo');
 const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.sourcing !== 'todo');
 
@@ -320,7 +324,16 @@ const showAdherentYear =
                 {canon.map((c) => (
                   <tr>
                     <th scope="row">
-                      {c.title}
+                      {/* The row is the claim about the text; the link is the
+                          text itself, and only appears once it is in the build. */}
+                      {readable.has(c.id) ? (
+                        <a class="canon__read" href={`/read/${c.id}`}>
+                          {c.title}
+                          <span class="canon__read-mark caption"> · read</span>
+                        </a>
+                      ) : (
+                        c.title
+                      )}
                       {c.original && (
                         <span class="canon__script" lang={c.original.lang} dir="rtl">
                           {c.original.text}
@@ -726,6 +739,19 @@ const showAdherentYear =
     color: var(--ink-soft);
     font-weight: 600;
     white-space: nowrap;
+  }
+
+  .canon__read {
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--hairline-strong);
+  }
+
+  .canon__read-mark {
+    color: var(--ink-soft);
+    text-decoration: none;
+    display: inline-block;
   }
 
   .canon__script {

@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPublishable } from '../../lib/content';
+import { TRADITIONS } from '../../lib/traditions';
+import { divisionsOf, hasEnglish, originalLang, type WorkData } from '../../lib/reader-model';
+
+/**
+ * The Reading Room — Phase 5.
+ *
+ * Scripture at reading quality, in editions whose rights are clean. The memo
+ * states the licensing reality once and the whole room follows from it:
+ * original-language scripture is public domain, modern English translation
+ * mostly is not, so these are public-domain and CC0 editions, named on every
+ * page, accepting archaic register as the price.
+ *
+ * Nine more canons are acquired and will land in the same paired shape. Two of
+ * them have no public-domain English of any quality, and those will enter
+ * original-only with the English slot saying so.
+ */
+
+const entries = await getPublishable('works');
+const works = entries
+  .map((e) => e.data as unknown as WorkData)
+  .sort((a, b) => a.title.localeCompare(b.title));
+
+const nameOf = new Map<string, string>(TRADITIONS.map((t) => [t.id, t.name]));
+const shelf = works.map((w) => ({
+  work: w,
+  divisions: divisionsOf(w).length,
+  verses: w.verses.length,
+  tradition: nameOf.get(w.tradition) ?? w.tradition,
+}));
+---
+
+<BaseLayout
+  title="Reading Room"
+  description="Scripture at reading quality, in public-domain and CC0 editions named on every page, with the original beside the English."
+>
+  <section class="shell head">
+    <p class="eyebrow">Room VIII · The Reading Room</p>
+    <h1 class="display">The texts<br />themselves.</h1>
+    <p class="measure lede">
+      Every other room in this museum describes what traditions hold. This one hands you the text
+      and gets out of the way.
+    </p>
+    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+  </section>
+
+  <div class="shell rd-shelf">
+    {
+      shelf.length === 0 ? (
+        <p class="measure empty">
+          No corpus has entered the build yet. Each arrives as a paired original-and-translation
+          file and becomes sourced content like every other record.
+        </p>
+      ) : (
+        <ul class="rd-shelf__list" role="list">
+          {shelf.map((s) => (
+            <li>
+              <a class="rd-shelf__item" href={`/read/${s.work.id}`}>
+                <span class="rd-shelf__title">
+                  {s.work.title}
+                  {s.work.title_original !== undefined && (
+                    <span class="rd-shelf__original" lang={originalLang(s.work)}>
+                      {s.work.title_original}
+                    </span>
+                  )}
+                </span>
+                <span class="caption rd-shelf__meta">
+                  {s.tradition} · {s.divisions} {s.work.division_label_plural} ·{' '}
+                  {s.verses.toLocaleString('en')} verses
+                  {!hasEnglish(s.work) && ' · original only'}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+    <p class="measure caption rd-shelf__note">
+      Editions are public domain or CC0 and named on every page. Where no such English edition
+      exists, the original enters alone and the English slot says what it is waiting on rather
+      than standing empty.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .rd-shelf {
+    padding-bottom: var(--space-16);
+  }
+
+  .rd-shelf__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-1);
+    max-width: 42rem;
+  }
+
+  .rd-shelf__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-height: var(--tap-min);
+    padding: var(--space-4) 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .rd-shelf__title {
+    font-family: var(--font-display);
+    font-size: var(--size-h3);
+  }
+
+  .rd-shelf__original {
+    margin-left: var(--space-3);
+    color: var(--ink-soft);
+  }
+
+  .rd-shelf__meta {
+    color: var(--ink-soft);
+  }
+
+  .rd-shelf__item:hover .rd-shelf__title {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .rd-shelf__note {
+    margin-top: var(--space-8);
+    color: var(--ink-soft);
+  }
+</style>

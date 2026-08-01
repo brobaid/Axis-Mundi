@@ -13,6 +13,7 @@ import {
   figureSchema,
   siteSchema,
 } from './schemas/deep-dive.js';
+import { workSchema } from './schemas/work.js';
 import { snapshotSchema } from './schemas/snapshot.js';
 import { textSchema } from './schemas/text.js';
 
@@ -45,6 +46,10 @@ const figures = defineCollection({ loader: json('figures'), schema: figureSchema
 /* Era snapshots for the map (spec §6). One GeoJSON file per snapshot year. */
 const snapshots = defineCollection({ loader: json('snapshots'), schema: snapshotSchema });
 
+/* Reading Room corpora (Phase 5). One paired-text record per canon, in the
+   shape the owner's corpora arrive in. */
+const works = defineCollection({ loader: json('works'), schema: workSchema });
+
 export const collections = {
   events,
   taxonomy,
@@ -58,4 +63,5 @@ export const collections = {
   sites,
   figures,
   snapshots,
+  works,
 };

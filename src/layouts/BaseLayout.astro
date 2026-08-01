@@ -92,6 +92,26 @@ const socialCard = new URL('/social-card.png', Astro.site).href;
         document.documentElement.dataset.mode = mode;
       })();
     </script>
+
+    <!--
+      The Reading Room's English/Original/Both preference, before first paint
+      for the same reason. Reader pages switch on it in CSS, so the text is
+      always in the DOM and reading never depends on storage — the attribute
+      only chooses which column shows. A page declares which modes it offers,
+      so a preference a corpus cannot honour simply does not match.
+    -->
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('axis-mundi-reading-mode');
+          if (stored === 'english' || stored === 'original' || stored === 'both') {
+            document.documentElement.dataset.readingMode = stored;
+          }
+        } catch {
+          /* storage unavailable; each page keeps its own default */
+        }
+      })();
+    </script>
   </head>
 
   <body>

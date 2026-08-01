@@ -1,0 +1,107 @@
+---
+import type { EditionLine, Mode } from '../lib/reader-model';
+
+/**
+ * The reader's shared furniture: the mode toggle and the edition line.
+ *
+ * Both appear on every text page, because the memo's rule is that each edition
+ * is named on every page — the pairing is the claim, and a page that showed
+ * only English would still owe the reader the Arabic it was translated from.
+ */
+interface Props {
+  modes: readonly Mode[];
+  mode: Mode;
+  editions: readonly (EditionLine & { title: string; author?: string | undefined })[];
+  /** Named absence for a canon that arrives with no English column. */
+  englishPending?: string | undefined;
+  /** Anything the work must state, e.g. a survival fraction. */
+  note?: string | undefined;
+}
+const { modes, mode, editions, englishPending, note } = Astro.props;
+
+const LABEL: Record<Mode, string> = {
+  english: 'English',
+  original: 'Original',
+  both: 'Both',
+};
+---
+
+{
+  modes.length > 1 && (
+    <div class="rd-toggle" role="radiogroup" aria-label="Reading mode" data-reader-toggle>
+      {modes.map((m) => (
+        <button
+          type="button"
+          class="rd-toggle__btn"
+          data-mode={m}
+          role="radio"
+          aria-checked={m === mode}
+          tabindex={m === mode ? 0 : -1}
+        >
+          {LABEL[m]}
+        </button>
+      ))}
+    </div>
+  )
+}
+
+<p class="rd-edition caption">
+  {
+    editions.map((e, i) => (
+      <>
+        {i > 0 && <span aria-hidden="true"> · </span>}
+        <span>
+          {e.author === undefined ? e.title : `${e.title}, ${e.author}`}
+          {e.note !== undefined && <span class="rd-edition__note"> — {e.note}</span>}
+        </span>
+      </>
+    ))
+  }
+  {englishPending !== undefined && <span class="rd-edition__pending"> {englishPending}</span>}
+  {note !== undefined && <span class="rd-edition__work"> {note}</span>}
+</p>
+
+<style is:global>
+  .rd-toggle {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+  }
+
+  .rd-toggle__btn {
+    padding: 0 var(--space-4);
+    border: var(--hairline-width) solid var(--hairline);
+    background: transparent;
+    color: var(--ink-soft);
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    cursor: pointer;
+  }
+
+  .rd-toggle__btn[aria-checked='true'] {
+    border-color: var(--ink);
+    color: var(--ink);
+    background: var(--surface);
+  }
+
+  .rd-edition {
+    color: var(--ink-soft);
+    max-width: 42rem;
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-4);
+    border-bottom: var(--hairline-width) solid var(--hairline);
+  }
+
+  .rd-edition__pending,
+  .rd-edition__work {
+    display: block;
+    margin-top: var(--space-2);
+  }
+
+  /* The toggle is a control, not content: it has no meaning on paper. */
+  @media print {
+    .rd-toggle {
+      display: none;
+    }
+  }
+</style>
