@@ -1,0 +1,200 @@
+{
+ "id": "tanakh--nehemiah--3",
+ "work": "tanakh",
+ "n": 37,
+ "slug": "nehemiah",
+ "c": 3,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וַיָּ֡קָם אֶלְיָשִׁיב֩ הַכֹּהֵ֨ן הַגָּד֜וֹל וְאֶחָ֣יו הַכֹּהֲנִ֗ים וַיִּבְנוּ֙ אֶת־שַׁ֣עַר הַצֹּ֔אן הֵ֣מָּה קִדְּשׁ֔וּהוּ וַֽיַּעֲמִ֖ידוּ דַּלְתֹתָ֑יו וְעַד־מִגְדַּ֤ל הַמֵּאָה֙ קִדְּשׁ֔וּהוּ עַ֖ד מִגְדַּ֥ל חֲנַנְאֵֽל׃",
+   "en": "Then Eliashib the high priest rose up with his brethren the priests, and they builded the sheep gate; they sanctified it, and set up the doors of it; even unto the tower of Hammeah they sanctified it, unto the tower of Hananel."
+  },
+  {
+   "v": 2,
+   "he": "וְעַל־יָד֥וֹ בָנ֖וּ אַנְשֵׁ֣י יְרֵח֑וֹ וְעַל־יָד֣וֹ בָנָ֔ה זַכּ֖וּר בֶּן־אִמְרִֽי׃",
+   "en": "And next unto him builded the men of Jericho. And next to them builded Zaccur the son of Imri."
+  },
+  {
+   "v": 3,
+   "he": "וְאֵת֙ שַׁ֣עַר הַדָּגִ֔ים בָּנ֖וּ בְּנֵ֣י הַסְּנָאָ֑ה הֵ֣מָּה קֵר֔וּהוּ וַֽיַּעֲמִ֙ידוּ֙ דַּלְתֹתָ֔יו מַנְעוּלָ֖יו וּבְרִיחָֽיו׃",
+   "en": "And the fish gate did the sons of Hassenaah build; they laid the beams thereof, and set up the doors thereof, the bolts thereof, and the bars thereof."
+  },
+  {
+   "v": 4,
+   "he": "וְעַל־יָדָ֣ם הֶחֱזִ֗יק מְרֵמ֤וֹת בֶּן־אוּרִיָּה֙ בֶּן־הַקּ֔וֹץ וְעַל־יָדָ֣ם הֶחֱזִ֔יק מְשֻׁלָּ֥ם בֶּן־בֶּרֶכְיָ֖ה בֶּן־מְשֵׁיזַבְאֵ֑ל וְעַל־יָדָ֣ם הֶֽחֱזִ֔יק צָד֖וֹק בֶּֽן־בַּעֲנָֽא׃",
+   "en": "And next unto them repaired Meremoth the son of Uriah, the son of Hakkoz. And next unto them repaired Meshullam the son of Berechiah, the son of Meshezabel. And next unto them repaired Zadok the son of Baana."
+  },
+  {
+   "v": 5,
+   "he": "וְעַל־יָדָ֖ם הֶחֱזִ֣יקוּ הַתְּקוֹעִ֑ים וְאַדִּֽירֵיהֶם֙ לֹא־הֵבִ֣יאוּ צַוָּרָ֔ם בַּעֲבֹדַ֖ת אֲדֹנֵיהֶֽם׃",
+   "en": "And next unto them the Tekoites repaired; and their nobles put not their necks to the work of their lord."
+  },
+  {
+   "v": 6,
+   "he": "וְאֵת֩ שַׁ֨עַר הַיְשָׁנָ֜ה הֶחֱזִ֗יקוּ יֽוֹיָדָע֙ בֶּן־פָּסֵ֔חַ וּמְשֻׁלָּ֖ם בֶּן־בְּסֽוֹדְיָ֑ה הֵ֣מָּה קֵר֔וּהוּ וַֽיַּעֲמִ֙ידוּ֙ דַּלְתֹתָ֔יו וּמַנְעֻלָ֖יו וּבְרִיחָֽיו׃",
+   "en": "And the gate of the old city repaired Joiada the son of Paseah and Meshullam the son of Besodeiah; they laid the beams thereof, and set up the doors thereof, and the bolts thereof, and the bars thereof."
+  },
+  {
+   "v": 7,
+   "he": "וְעַל־יָדָ֨ם הֶחֱזִ֜יק מְלַטְיָ֣ה הַגִּבְעֹנִ֗י וְיָדוֹן֙ הַמֵּרֹ֣נֹתִ֔י אַנְשֵׁ֥י גִבְע֖וֹן וְהַמִּצְפָּ֑ה לְכִסֵּ֕א פַּחַ֖ת עֵ֥בֶר הַנָּהָֽר׃",
+   "en": "And next unto them repaired Melatiah the Gibeonite, and Jadon the Meronothite, the men of Gibeon, and of Mizpah, for them that appertained to the throne of the governor beyond the River."
+  },
+  {
+   "v": 8,
+   "he": "עַל־יָד֣וֹ הֶחֱזִ֗יק עֻזִּיאֵ֤ל בֶּֽן־חַרְהֲיָה֙ צֽוֹרְפִ֔ים וְעַל־יָד֣וֹ הֶחֱזִ֔יק חֲנַנְיָ֖ה בֶּן־הָרַקָּחִ֑ים וַיַּֽעַזְבוּ֙ יְר֣וּשָׁלַ‍ִ֔ם עַ֖ד הַחוֹמָ֥ה הָרְחָבָֽה׃",
+   "en": "Next unto him repaired Uzziel the son of Harhaiah, goldsmiths. And next unto him repaired Hananiah one of the perfumers, and they restored Jerusalem even unto the broad wall."
+  },
+  {
+   "v": 9,
+   "he": "וְעַל־יָדָ֤ם הֶחֱזִיק֙ רְפָיָ֣ה בֶן־ח֔וּר שַׂ֕ר חֲצִ֖י פֶּ֥לֶךְ יְרוּשָׁלָ‍ִֽם׃",
+   "en": "And next unto them repaired Rephaiah the son of Hur, the ruler of half the district of Jerusalem."
+  },
+  {
+   "v": 10,
+   "he": "וְעַל־יָדָ֧ם הֶחֱזִ֛יק יְדָיָ֥ה בֶן־חֲרוּמַ֖ף וְנֶ֣גֶד בֵּית֑וֹ וְעַל־יָד֣וֹ הֶחֱזִ֔יק חַטּ֖וּשׁ בֶּן־חֲשַׁבְנְיָֽה׃",
+   "en": "And next unto them repaired Jedaiah the son of Harumaph, even over against his house. And next unto him repaired Hattush the son of Hashabneiah."
+  },
+  {
+   "v": 11,
+   "he": "מִדָּ֣ה שֵׁנִ֗ית הֶחֱזִיק֙ מַלְכִּיָּ֣ה בֶן־חָרִ֔ם וְחַשּׁ֖וּב בֶּן־פַּחַ֣ת מוֹאָ֑ב וְאֵ֖ת מִגְדַּ֥ל הַתַּנּוּרִֽים׃",
+   "en": "Malchijah the son of Harim, and Hasshub the son of Pahath-moab, repaired another portion, and the tower of the furnaces."
+  },
+  {
+   "v": 12,
+   "he": "וְעַל־יָד֣וֹ הֶחֱזִ֗יק שַׁלּוּם֙ בֶּן־הַלּוֹחֵ֔שׁ שַׂ֕ר חֲצִ֖י פֶּ֣לֶךְ יְרוּשָׁלָ֑‍ִם ה֖וּא וּבְנוֹתָֽיו׃",
+   "en": "And next unto him repaired Shallum the son of Hallohesh, the ruler of half the district of Jerusalem, he and his daughters."
+  },
+  {
+   "v": 13,
+   "he": "אֵת֩ שַׁ֨עַר הַגַּ֜יְא הֶחֱזִ֣יק חָנוּן֮ וְיֹשְׁבֵ֣י זָנוֹחַ֒ הֵ֣מָּה בָנ֔וּהוּ וַֽיַּעֲמִ֙ידוּ֙ דַּלְתֹתָ֔יו מַנְעֻלָ֖יו וּבְרִיחָ֑יו וְאֶ֤לֶף אַמָּה֙ בַּחוֹמָ֔ה עַ֖ד שַׁ֥עַר הָשֲׁפֽוֹת׃",
+   "en": "The valley gate repaired Hanun, and the inhabitants of Zanoah; they built it, and set up the doors thereof, the bolts thereof, and the bars thereof, and a thousand cubits of the wall unto the dung gate."
+  },
+  {
+   "v": 14,
+   "he": "וְאֵ֣ת׀ שַׁ֣עַר הָאַשְׁפּ֗וֹת הֶחֱזִיק֙ מַלְכִּיָּ֣ה בֶן־רֵכָ֔ב שַׂ֖ר פֶּ֣לֶךְ בֵּית־הַכָּ֑רֶם ה֣וּא יִבְנֶ֔נּוּ וְיַעֲמִיד֙ דַּלְתֹתָ֔יו מַנְעֻלָ֖יו וּבְרִיחָֽיו׃",
+   "en": "And the dung gate repaired Malchijah the son of Rechab, the ruler of the district of Beth-cherem; he built it, and set up the doors thereof, the bolts thereof, and the bars thereof."
+  },
+  {
+   "v": 15,
+   "he": "וְאֵת֩ שַׁ֨עַר הָעַ֜יִן הֶ֠חֱזִיק שַׁלּ֣וּן בֶּן־כָּל־חֹזֶה֮ שַׂ֣ר פֶּ֣לֶךְ הַמִּצְפָּה֒ ה֤וּא יִבְנֶ֙נּוּ֙ וִיטַֽלְלֶ֔נּוּ ויעמידו [וְיַעֲמִיד֙] דַּלְתֹתָ֔יו מַנְעֻלָ֖יו וּבְרִיחָ֑יו וְ֠אֵת חוֹמַ֞ת בְּרֵכַ֤ת הַשֶּׁ֙לַח֙ לְגַן־הַמֶּ֔לֶךְ וְעַד־הַֽמַּעֲל֔וֹת הַיּוֹרְד֖וֹת מֵעִ֥יר דָּוִֽיד׃",
+   "en": "And the fountain gate repaired Shallun the son of Colhozeh, the ruler of the district of Mizpah; he built it, and covered it, and set up the doors thereof, the bolts thereof, and the bars thereof, and the wall of the pool of Shelah by the king’s garden, even unto the stairs that go down from the city of David."
+  },
+  {
+   "v": 16,
+   "he": "אַחֲרָ֤יו הֶחֱזִיק֙ נְחֶמְיָ֣ה בֶן־עַזְבּ֔וּק שַׂ֕ר חֲצִ֖י פֶּ֣לֶךְ בֵּֽית־צ֑וּר עַד־נֶ֙גֶד֙ קִבְרֵ֣י דָוִ֔יד וְעַד־הַבְּרֵכָה֙ הָעֲשׂוּיָ֔ה וְעַ֖ד בֵּ֥ית הַגִּבֹּרִֽים׃",
+   "en": "After him repaired Nehemiah the son of Azbuk, the ruler of half the district of Beth-zur, unto the place over against the sepulchres of David, and unto the pool that was made, and unto the house of the mighty men."
+  },
+  {
+   "v": 17,
+   "he": "אַחֲרָ֛יו הֶחֱזִ֥יקוּ הַלְוִיִּ֖ם רְח֣וּם בֶּן־בָּנִ֑י עַל־יָד֣וֹ הֶחֱזִ֗יק חֲשַׁבְיָ֛ה שַׂר־חֲצִי־פֶ֥לֶךְ קְעִילָ֖ה לְפִלְכּֽוֹ׃",
+   "en": "After him repaired the Levites, Rehum the son of Bani. Next unto him repaired Hashabiah, the ruler of half the district of Keilah, for his district."
+  },
+  {
+   "v": 18,
+   "he": "אַחֲרָיו֙ הֶחֱזִ֣יקוּ אֲחֵיהֶ֔ם בַּוַּ֖י בֶּן־חֵנָדָ֑ד שַׂ֕ר חֲצִ֖י פֶּ֥לֶךְ קְעִילָֽה׃",
+   "en": "After him repaired their brethren, Bavvai the son of Henadad, the ruler of half the district of Keilah."
+  },
+  {
+   "v": 19,
+   "he": "וַיְחַזֵּ֨ק עַל־יָד֜וֹ עֵ֧זֶר בֶּן־יֵשׁ֛וּעַ שַׂ֥ר הַמִּצְפָּ֖ה מִדָּ֣ה שֵׁנִ֑ית מִנֶּ֕גֶד עֲלֹ֥ת הַנֶּ֖שֶׁק הַמִּקְצֹֽעַ׃",
+   "en": "And next to him repaired Ezer the son of Jeshua, the ruler of Mizpah, another portion, over against the ascent to the armoury at the Turning."
+  },
+  {
+   "v": 20,
+   "he": "אַחֲרָ֨יו הֶחֱרָ֧ה הֶחֱזִ֛יק בָּר֥וּךְ בֶּן־זבי [זַכַּ֖י] מִדָּ֣ה שֵׁנִ֑ית מִן־הַ֨מִּקְצ֔וֹעַ עַד־פֶּ֙תַח֙ בֵּ֣ית אֶלְיָשִׁ֔יב הַכֹּהֵ֖ן הַגָּדֽוֹל׃",
+   "en": "After him Baruch the son of Zaccai earnestly repaired another portion, from the Turning unto the door of the house of Eliashib the high priest."
+  },
+  {
+   "v": 21,
+   "he": "אַחֲרָ֣יו הֶחֱזִ֗יק מְרֵמ֧וֹת בֶּן־אוּרִיָּ֛ה בֶּן־הַקּ֖וֹץ מִדָּ֣ה שֵׁנִ֑ית מִפֶּ֙תַח֙ בֵּ֣ית אֶלְיָשִׁ֔יב וְעַד־תַּכְלִ֖ית בֵּ֥ית אֶלְיָשִֽׁיב׃",
+   "en": "After him repaired Meremoth the son of Uriah the son of Hakkoz another portion, from the door of the house of Eliashib even to the end of the house of Eliashib."
+  },
+  {
+   "v": 22,
+   "he": "וְאַחֲרָ֛יו הֶחֱזִ֥יקוּ הַכֹּהֲנִ֖ים אַנְשֵׁ֥י הַכִּכָּֽר׃",
+   "en": "And after him repaired the priests, the men of the Plain."
+  },
+  {
+   "v": 23,
+   "he": "אַחֲרָ֨יו הֶחֱזִ֧יק בִּנְיָמִ֛ן וְחַשּׁ֖וּב נֶ֣גֶד בֵּיתָ֑ם אַחֲרָ֣יו הֶחֱזִ֗יק עֲזַרְיָ֧ה בֶן־מַעֲשֵׂיָ֛ה בֶּן־עֲנָֽנְיָ֖ה אֵ֥צֶל בֵּיתֽוֹ׃",
+   "en": "After them repaired Benjamin and Hasshub over against their house. After them repaired Azariah the son of Maaseiah the son of Ananiah beside his own house."
+  },
+  {
+   "v": 24,
+   "he": "אַחֲרָ֣יו הֶחֱזִ֗יק בִּנּ֛וּי בֶּן־חֵנָדָ֖ד מִדָּ֣ה שֵׁנִ֑ית מִבֵּ֣ית עֲזַרְיָ֔ה עַד־הַמִּקְצ֖וֹעַ וְעַד־הַפִּנָּֽה׃",
+   "en": "After him repaired Binnui the son of Henadad another portion, from the house of Azariah unto the Turning and unto the corner."
+  },
+  {
+   "v": 25,
+   "he": "פָּלָ֣ל בֶּן־אוּזַי֮ מִנֶּ֣גֶד הַמִּקְצוֹעַ֒ וְהַמִּגְדָּ֗ל הַיּוֹצֵא֙ מִבֵּ֤ית הַמֶּ֙לֶךְ֙ הָֽעֶלְי֔וֹן אֲשֶׁ֖ר לַחֲצַ֣ר הַמַּטָּרָ֑ה אַחֲרָ֖יו פְּדָיָ֥ה בֶן־פַּרְעֹֽשׁ׃",
+   "en": "Palal the son of Uzai repaired over against the Turning, and the tower that standeth out from the upper house of the king, which is by the court of the guard. After him Pedaiah the son of Parosh repaired.—"
+  },
+  {
+   "v": 26,
+   "he": "וְהַ֨נְּתִינִ֔ים הָי֥וּ יֹשְׁבִ֖ים בָּעֹ֑פֶל עַ֠ד נֶ֜גֶד שַׁ֤עַר הַמַּ֙יִם֙ לַמִּזְרָ֔ח וְהַמִּגְדָּ֖ל הַיּוֹצֵֽא׃",
+   "en": "Now the Nethinim dwelt in Ophel, unto the place over against the water gate toward the east, and the tower that standeth out.—"
+  },
+  {
+   "v": 27,
+   "he": "אַחֲרָ֛יו הֶחֱזִ֥יקוּ הַתְּקֹעִ֖ים מִדָּ֣ה שֵׁנִ֑ית מִנֶּ֜גֶד הַמִּגְדָּ֤ל הַגָּדוֹל֙ הַיּוֹצֵ֔א וְעַ֖ד חוֹמַ֥ת הָעֹֽפֶל׃",
+   "en": "After him the Tekoites repaired another portion, over against the great tower that standeth out, and unto the wall of Ophel."
+  },
+  {
+   "v": 28,
+   "he": "מֵעַ֣ל׀ שַׁ֣עַר הַסּוּסִ֗ים הֶחֱזִ֙יקוּ֙ הַכֹּ֣הֲנִ֔ים אִ֖ישׁ לְנֶ֥גֶד בֵּיתֽוֹ׃",
+   "en": "Above the horse gate repaired the priests, every one over against his own house."
+  },
+  {
+   "v": 29,
+   "he": "אַחֲרָ֧יו הֶחֱזִ֛יק צָד֥וֹק בֶּן־אִמֵּ֖ר נֶ֣גֶד בֵּית֑וֹ וְאַחֲרָ֤יו הֶחֱזִיק֙ שְׁמַֽעְיָ֣ה בֶן־שְׁכַנְיָ֔ה שֹׁמֵ֖ר שַׁ֥עַר הַמִּזְרָֽח׃",
+   "en": "After them repaired Zadok the son of Immer over against his own house. And after him repaired Shemaiah the son of Shecaniah, the keeper of the east gate."
+  },
+  {
+   "v": 30,
+   "he": "אחרי [אַחֲרָ֨יו] הֶחֱזִ֜יק חֲנַנְיָ֣ה בֶן־שֶׁלֶמְיָ֗ה וְחָנ֧וּן בֶּן־צָלָ֛ף הַשִּׁשִּׁ֖י מִדָּ֣ה שֵׁנִ֑י אַחֲרָ֣יו הֶחֱזִ֗יק מְשֻׁלָּם֙ בֶּן־בֶּ֣רֶכְיָ֔ה נֶ֖גֶד נִשְׁכָּתֽוֹ׃",
+   "en": "After him repaired Hananiah the son of Shelemiah, and Hanun the sixth son of Zalaph, another portion. After him repaired Meshullam the son of Berechiah over against his chamber."
+  },
+  {
+   "v": 31,
+   "he": "אחרי [אַחֲרָ֣יו] הֶחֱזִ֗יק מַלְכִּיָּה֙ בֶּן־הַצֹּ֣רְפִ֔י עַד־בֵּ֥ית הַנְּתִינִ֖ים וְהָרֹכְלִ֑ים נֶ֚גֶד שַׁ֣עַר הַמִּפְקָ֔ד וְעַ֖ד עֲלִיַּ֥ת הַפִּנָּֽה׃",
+   "en": "After him repaired Malchijah one of the goldsmiths unto the house of the Nethinim, and of the merchants, over against the gate of Hammiphkad, and to the upper chamber of the corner."
+  },
+  {
+   "v": 32,
+   "he": "וּבֵ֨ין עֲלִיַּ֤ת הַפִּנָּה֙ לְשַׁ֣עַר הַצֹּ֔אן הֶחֱזִ֥יקוּ הַצֹּרְפִ֖ים וְהָרֹכְלִֽים׃",
+   "en": "And between the upper chamber of the corner and the sheep gate repaired the goldsmiths and the merchants."
+  },
+  {
+   "v": 33,
+   "he": "וַיְהִ֞י כַּאֲשֶׁ֧ר שָׁמַ֣ע סַנְבַלַּ֗ט כִּֽי־אֲנַ֤חְנוּ בוֹנִים֙ אֶת־הַ֣חוֹמָ֔ה וַיִּ֣חַר ל֔וֹ וַיִּכְעַ֖ס הַרְבֵּ֑ה וַיַּלְעֵ֖ג עַל־הַיְּהוּדִֽים׃",
+   "en": "But it came to pass that, when Sanballat heard that we builded the wall, he was wroth, and took great indignation, and mocked the Jews."
+  },
+  {
+   "v": 34,
+   "he": "וַיֹּ֣אמֶר׀ לִפְנֵ֣י אֶחָ֗יו וְחֵיל֙ שֹֽׁמְר֔וֹן וַיֹּ֕אמֶר מָ֛ה הַיְּהוּדִ֥ים הָאֲמֵלָלִ֖ים עֹשִׂ֑ים הֲיַעַזְב֨וּ לָהֶ֤ם הֲיִזְבָּ֙חוּ֙ הַיְכַלּ֣וּ בַיּ֔וֹם הַיְחַיּ֧וּ אֶת־הָאֲבָנִ֛ים מֵעֲרֵמ֥וֹת הֶעָפָ֖ר וְהֵ֥מָּה שְׂרוּפֽוֹת׃",
+   "en": "And he spoke before his brethren and the army of Samaria, and said: ‘What do these feeble Jews? will they restore at will? will they sacrifice? will they make an end this day? will they revive the stones out of the heaps of rubbish, seeing they are burned?’"
+  },
+  {
+   "v": 35,
+   "he": "וְטוֹבִיָּ֥ה הָעַמֹּנִ֖י אֶצְל֑וֹ וַיֹּ֗אמֶר גַּ֚ם אֲשֶׁר־הֵ֣ם בּוֹנִ֔ים אִם־יַעֲלֶ֣ה שׁוּעָ֔ל וּפָרַ֖ץ חוֹמַ֥ת אַבְנֵיהֶֽם׃",
+   "en": "Now Tobiah the Ammonite was by him, and he said: ‘Even that which they build, if a fox go up, he shall break down their stone wall.’"
+  },
+  {
+   "v": 36,
+   "he": "שְׁמַ֤ע אֱלֹהֵ֙ינוּ֙ כִּֽי־הָיִ֣ינוּ בוּזָ֔ה וְהָשֵׁ֥ב חֶרְפָּתָ֖ם אֶל־רֹאשָׁ֑ם וּתְנֵ֥ם לְבִזָּ֖ה בְּאֶ֥רֶץ שִׁבְיָֽה׃",
+   "en": "Hear, O our God; for we are despised; and turn back their reproach upon their own head, and give them up to spoiling in a land of captivity;"
+  },
+  {
+   "v": 37,
+   "he": "וְאַל־תְּכַס֙ עַל־עֲו‍ֹנָ֔ם וְחַטָּאתָ֖ם מִלְּפָנֶ֣יךָ אַל־תִּמָּחֶ֑ה כִּ֥י הִכְעִ֖יסוּ לְנֶ֥גֶד הַבּוֹנִֽים׃",
+   "en": "and cover not their iniquity, and let not their sin be blotted out from before Thee; for they have vexed Thee before the builders."
+  },
+  {
+   "v": 38,
+   "he": "וַנִּבְנֶה֙ אֶת־הַ֣חוֹמָ֔ה וַתִּקָּשֵׁ֥ר כָּל־הַחוֹמָ֖ה עַד־חֶצְיָ֑הּ וַיְהִ֧י לֵ֦ב לָעָ֖ם לַעֲשֽׂוֹת׃",
+   "en": "So we built the wall; and all the wall was joined together unto half the height thereof; for the people had a mind to work."
+  }
+ ],
+ "sourcing": "sourced"
+}

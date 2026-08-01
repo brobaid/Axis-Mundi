@@ -1,15 +1,53 @@
 /**
  * Reading Room model — Phase 5.
  *
- * DOM-free and canon-free. Nine more corpora arrive in the paired shape the
- * Quran pilot defines, one of them with no English column at all, so nothing
- * here may know what a surah is or assume a translation exists.
+ * DOM-free and canon-free. Corpora arrive at the owner's cadence and no two
+ * have arrived in the same nesting yet, so nothing here may know what a surah
+ * is, assume a chapter level exists, or assume a translation does.
  */
 
 export interface VerseRow {
-  readonly s: number;
-  readonly a: number;
+  readonly v: number;
+  readonly c?: number | undefined;
   readonly [lang: string]: number | string | undefined;
+}
+
+export interface ChapterIndex {
+  readonly c: number;
+  readonly verses: number;
+  readonly preview?: string | undefined;
+  readonly preview_lang?: string | undefined;
+  readonly english_gaps: number;
+  readonly original_gaps: number;
+  readonly blank: number;
+}
+
+export interface DivisionIndex {
+  readonly n: number;
+  readonly slug: string;
+  readonly name?: string | undefined;
+  readonly name_original?: string | undefined;
+  readonly name_gloss?: string | undefined;
+  readonly verse_from?: number | undefined;
+  readonly verse_to?: number | undefined;
+  readonly transliteration?: string | undefined;
+  readonly verses: number;
+  /** Present means the division is a contents page and its text is a level down. */
+  readonly chapters?: readonly ChapterIndex[] | undefined;
+  readonly section?: string | undefined;
+  readonly english_gaps: number;
+  readonly original_gaps: number;
+  readonly blank: number;
+}
+
+export interface Section {
+  readonly id: string;
+  readonly name: string;
+  readonly name_original?: string | undefined;
+  /** A line every page inside this section carries. */
+  readonly note?: string | undefined;
+  readonly from: number;
+  readonly to: number;
 }
 
 export interface WorkData {
@@ -19,15 +57,93 @@ export interface WorkData {
   readonly title_original?: string | undefined;
   readonly division_label: string;
   readonly division_label_plural: string;
+  readonly chapter_label?: string | undefined;
   readonly script: string;
   readonly direction: 'ltr' | 'rtl';
   readonly editions: Readonly<Record<string, string>>;
+  readonly lang_tags?: Readonly<Record<string, string>> | undefined;
   readonly english_pending?: string | undefined;
   readonly note?: string | undefined;
-  readonly divisions: readonly { n: number; name?: string | undefined;
-                                 name_original?: string | undefined;
-                                 transliteration?: string | undefined }[];
-  readonly verses: readonly VerseRow[];
+  readonly preface?: {
+    readonly text: Readonly<Record<string, string>>;
+    readonly omitted: readonly number[];
+    readonly omitted_note?: string | undefined;
+    readonly inline: readonly number[];
+  } | undefined;
+  readonly sections: readonly Section[];
+  readonly divisions: readonly DivisionIndex[];
+  readonly total_verses: number;
+  readonly total_chapters?: number | undefined;
+  readonly english_gaps: number;
+  readonly original_gaps: number;
+  /** Verses no edition carries. Counted in both totals above; stated once. */
+  readonly blank: number;
+  readonly gap_notes?: {
+    readonly original?: string | undefined;
+    readonly english?: string | undefined;
+  } | undefined;
+}
+
+/* ── one-sided verses ───────────────────────────────────────────────────── */
+
+/** Which columns a verse actually carries. */
+export type VerseSides = 'both' | 'english-only' | 'original-only' | 'neither';
+
+export function sidesOf(verse: VerseRow, orig: string, english: boolean): VerseSides {
+  const hasOrig = typeof verse[orig] === 'string';
+  const hasEn = !english || typeof verse['en'] === 'string';
+  if (hasOrig && hasEn) return 'both';
+  if (hasEn) return 'english-only';
+  if (hasOrig) return 'original-only';
+  return 'neither';
+}
+
+/** Whether these verses carry a column at all, as opposed to having holes in it. */
+export const carries = (verses: readonly VerseRow[], lang: string): boolean =>
+  verses.some((v) => typeof v[lang] === 'string');
+
+/**
+ * What a page can actually show, which is not always what the work offers.
+ *
+ * The Bible carries a Greek edition and its Old Testament does not use it: the
+ * Hebrew of those books is in the Tanakh room, by ruling. So an Old Testament
+ * page offers English alone — a toggle promising a column this page has none
+ * of would open on nothing, and the reader would be right to think it broken.
+ */
+export function pageModes(work: Pick<WorkData, 'editions'>, verses: readonly VerseRow[]): Mode[] {
+  const orig = originalLang(work);
+  const hasOrig = orig !== '' && carries(verses, orig);
+  const hasEn = hasEnglish(work) && carries(verses, 'en');
+  if (hasOrig && hasEn) return [...MODES];
+  if (hasOrig) return ['original'];
+  return ['english'];
+}
+
+/**
+ * What to say where a verse stands on one side, or on none.
+ *
+ * The generic lines state the fact and nothing more, because for most canons
+ * that is all anyone can honestly say: two versifications disagree. A canon
+ * whose gaps mean something specific says so instead — a New Testament verse
+ * with no Greek is a verse the critical edition does not carry, which is
+ * text-critical history and worth showing rather than shrugging at.
+ *
+ * A verse with neither column is its own case: the number exists in the
+ * numbering this text is cited by, and no edition here carries words for it.
+ */
+export function gapNote(work: WorkData, sides: VerseSides): string | undefined {
+  switch (sides) {
+    case 'both':
+      return undefined;
+    case 'english-only':
+      return (
+        work.gap_notes?.original ?? 'No verse at this number in the original edition.'
+      );
+    case 'original-only':
+      return work.gap_notes?.english ?? 'No English at this verse number in this edition.';
+    case 'neither':
+      return 'Neither edition carries a verse at this number.';
+  }
 }
 
 /**
@@ -43,6 +159,16 @@ export function originalLang(work: Pick<WorkData, 'editions'>): string {
 export const hasEnglish = (work: Pick<WorkData, 'editions'>): boolean =>
   work.editions['en'] !== undefined;
 
+/**
+ * The BCP-47 tag for an edition's column.
+ *
+ * The key the delivery files a column under is not always a language tag —
+ * `gr` is not one at all, and `pli` is not the one BCP-47 asks for. This is
+ * the only place the two are allowed to differ.
+ */
+export const langTag = (work: Pick<WorkData, 'lang_tags'>, column: string): string =>
+  work.lang_tags?.[column] ?? column;
+
 /* ── the reading modes ──────────────────────────────────────────────────── */
 
 export const MODES = ['english', 'original', 'both'] as const;
@@ -51,15 +177,12 @@ export type Mode = (typeof MODES)[number];
 /**
  * English by default — except where there is no English.
  *
- * The Guru Granth Sahib arrives Gurmukhi-only, and defaulting it to a column
- * that does not exist would open the reader on a page of waiting-on notes.
- * A work without a translation opens in its own language and says why the
- * other column is empty.
+ * A canon that arrives original-only would otherwise open on a page of
+ * waiting-on notes, so it opens in its own language and says why.
  */
 export const defaultMode = (work: Pick<WorkData, 'editions'>): Mode =>
   hasEnglish(work) ? 'english' : 'original';
 
-/** Which modes a work can actually offer. */
 export function availableModes(work: Pick<WorkData, 'editions'>): Mode[] {
   return hasEnglish(work) ? [...MODES] : ['original'];
 }
@@ -68,7 +191,7 @@ export function availableModes(work: Pick<WorkData, 'editions'>): Mode[] {
  * Resolves a requested mode against what the work can do.
  *
  * A stored preference outlives the page it was set on: a reader who chose
- * English on the Quran and then opens the Guru Granth Sahib must not land on
+ * English on the Quran and then opens an original-only canon must not land on
  * an empty column.
  */
 export function resolveMode(requested: string | null, work: Pick<WorkData, 'editions'>): Mode {
@@ -77,60 +200,186 @@ export function resolveMode(requested: string | null, work: Pick<WorkData, 'edit
   return hit ?? defaultMode(work);
 }
 
-/* ── divisions ──────────────────────────────────────────────────────────── */
+/* ── divisions and sections ─────────────────────────────────────────────── */
 
-export interface Division {
-  readonly n: number;
-  readonly verses: readonly VerseRow[];
-  readonly name?: string | undefined;
-  readonly name_original?: string | undefined;
-  readonly transliteration?: string | undefined;
-}
-
-/** Groups the flat verse list into its divisions, in numeric order. */
-export function divisionsOf(work: WorkData): Division[] {
-  const byNumber = new Map<number, VerseRow[]>();
-  for (const verse of work.verses) {
-    const bucket = byNumber.get(verse.s);
-    if (bucket === undefined) byNumber.set(verse.s, [verse]);
-    else bucket.push(verse);
-  }
-  const meta = new Map(work.divisions.map((d) => [d.n, d]));
-  return [...byNumber.entries()]
-    .sort((a, b) => a[0] - b[0])
-    .map(([n, verses]) => {
-      const m = meta.get(n);
-      return {
-        n,
-        verses: [...verses].sort((x, y) => x.a - y.a),
-        name: m?.name,
-        name_original: m?.name_original,
-        transliteration: m?.transliteration,
-      };
-    });
+/** A division's heading, from what the record actually holds. */
+export function divisionHeading(
+  work: Pick<WorkData, 'division_label'>,
+  division: Pick<DivisionIndex, 'n' | 'name'>,
+): string {
+  if (division.name !== undefined) return division.name;
+  const label = work.division_label.charAt(0).toUpperCase() + work.division_label.slice(1);
+  return `${label} ${division.n}`;
 }
 
 /**
- * A division's heading, from what the record actually holds.
+ * The gloss beside a division's own name — "Yamakavagga / Pairs".
  *
- * The Quran corpus carries no surah names in either script, so the heading is
- * "Surah 2" until a names file lands. Numbering a division the reader can
- * count to is honest; naming one the record cannot name is not.
+ * The canon's name leads and the rendering follows it, because the name is
+ * what the tradition calls the thing and the gloss is what it means. Given by
+ * the delivery, never translated here.
  */
-export function divisionHeading(work: WorkData, division: Pick<Division, 'n' | 'name'>): string {
-  const label = work.division_label.charAt(0).toUpperCase() + work.division_label.slice(1);
-  return division.name === undefined ? `${label} ${division.n}` : `${label} ${division.n} · ${division.name}`;
+export const divisionGloss = (division: Pick<DivisionIndex, 'name_gloss'>): string | undefined =>
+  division.name_gloss;
+
+/**
+ * The verse numbers a division holds, where a canon numbers continuously
+ * across its divisions and a reader has to know which range they are in.
+ *
+ * The Dhammapada is cited as Dhp 1 to Dhp 423 whatever vagga a verse falls in,
+ * so a vagga that did not say "1–20" would be a page whose numbers start at
+ * twenty-one for no reason a reader can see.
+ */
+export function verseRange(division: Pick<DivisionIndex, 'verse_from' | 'verse_to'>): string | undefined {
+  const { verse_from: from, verse_to: to } = division;
+  if (from === undefined || to === undefined) return undefined;
+  return from === to ? String(from) : `${from}–${to}`;
 }
 
-export interface Neighbours {
-  readonly prev?: number | undefined;
-  readonly next?: number | undefined;
+export const sectionOf = (work: WorkData, n: number): Section | undefined =>
+  work.sections.find((s) => n >= s.from && n <= s.to);
+
+/** The work's divisions grouped under their sections, in the file's own order. */
+export function grouped(work: WorkData): { section?: Section | undefined; divisions: DivisionIndex[] }[] {
+  if (work.sections.length === 0) return [{ divisions: [...work.divisions] }];
+  return work.sections.map((section) => ({
+    section,
+    divisions: work.divisions.filter((d) => d.n >= section.from && d.n <= section.to),
+  }));
 }
 
-export function neighbours(numbers: readonly number[], current: number): Neighbours {
-  const i = numbers.indexOf(current);
-  return { prev: i > 0 ? numbers[i - 1] : undefined,
-           next: i >= 0 && i < numbers.length - 1 ? numbers[i + 1] : undefined };
+/* ── verses ─────────────────────────────────────────────────────────────── */
+
+/**
+ * A verse's anchor: its own number, because the page is one chapter.
+ *
+ * It was `20-3` while a page was a whole book. The chapter moved into the
+ * route, so the fragment no longer has to carry it, and `/read/tanakh/exodus/20#3`
+ * says the same thing as the old `/read/tanakh/exodus#20-3` with the part a
+ * reader would read aloud in the address rather than the fragment.
+ *
+ * It starts with a digit, which HTML allows for an id and CSS does not allow
+ * for an identifier: `#3` is a parse error as a selector, and any lookup must
+ * use `getElementById` or an `[id="…"]` attribute selector. That is the price
+ * of an anchor a person can type, and it is paid once, here.
+ */
+export const verseAnchor = (verse: Pick<VerseRow, 'v'>): string => String(verse.v);
+
+/**
+ * How a verse is cited in prose and in the copy-link: "Exodus 20:3".
+ *
+ * `cite` is the page's own name for itself down to the level above the verse —
+ * "Exodus 20" for a chapter, "Surah 2" for a canon with no chapter level — so
+ * this joins the last colon and knows nothing about either canon's shape.
+ */
+export const verseRef = (cite: string, verse: Pick<VerseRow, 'v'>): string =>
+  `${cite}:${verse.v}`;
+
+/* ── the opening line ───────────────────────────────────────────────────── */
+
+export interface Preface {
+  readonly text: Readonly<Record<string, string>>;
+}
+
+/**
+ * What, if anything, stands above this division's first verse.
+ *
+ * Three answers, all of them the canon's: the line, nothing-and-here-is-why,
+ * or nothing-because-it-is-already-verse-one. The last needs no note — the
+ * reader is looking straight at it.
+ */
+export function prefaceFor(
+  work: WorkData,
+  division: Pick<DivisionIndex, 'n'>,
+  chapter?: number,
+): { line?: Preface | undefined; omittedNote?: string | undefined } {
+  const p = work.preface;
+  /* Only above the first verse of the division, never on chapter two. */
+  if (p === undefined || (chapter !== undefined && chapter !== 1)) return {};
+  if (p.inline.includes(division.n)) return {};
+  if (p.omitted.includes(division.n)) return { omittedNote: p.omitted_note };
+  return { line: { text: p.text } };
+}
+
+/* ── walking the canon ─────────────────────────────────────────────────── */
+
+export interface Step {
+  /** Where the step lands. */
+  readonly href: string;
+  /** How it is named on the control: "Exodus 20", "Joshua". */
+  readonly label: string;
+}
+
+export interface Walk {
+  readonly prev?: Step | undefined;
+  readonly next?: Step | undefined;
+  /** Set when the step stops because the canon's own section stops. */
+  readonly endsSection?: Section | undefined;
+}
+
+const divisionsIn = (work: WorkData, section: Section | undefined): readonly DivisionIndex[] =>
+  section === undefined
+    ? work.divisions
+    : work.divisions.filter((d) => d.n >= section.from && d.n <= section.to);
+
+const stepTo = (work: WorkData, division: DivisionIndex, c?: number): Step => ({
+  href:
+    c === undefined
+      ? `/read/${work.id}/${division.slug}`
+      : `/read/${work.id}/${division.slug}/${c}`,
+  label:
+    c === undefined
+      ? divisionHeading(work, division)
+      : `${divisionHeading(work, division)} ${c}`,
+});
+
+/**
+ * The pages either side of this one, at whatever level it sits.
+ *
+ * Reading runs on: the last chapter of Genesis steps to the first of Exodus,
+ * because that is how the book is read. It stops at the section's edge —
+ * Deuteronomy 34 does not step to Joshua 1 — because a section is the canon's
+ * own unit and walking out of one silently would flatten a structure the canon
+ * insists on. Where a work has no sections there is nothing to stop at.
+ */
+export function walk(work: WorkData, division: DivisionIndex, c?: number): Walk {
+  const section = sectionOf(work, division.n);
+  const siblings = divisionsIn(work, section);
+  const at = siblings.findIndex((d) => d.n === division.n);
+  const before = at > 0 ? siblings[at - 1] : undefined;
+  const after = at >= 0 && at < siblings.length - 1 ? siblings[at + 1] : undefined;
+
+  /* No chapter level: the step is division to division. */
+  if (c === undefined) {
+    return {
+      prev: before === undefined ? undefined : stepTo(work, before),
+      next: after === undefined ? undefined : stepTo(work, after),
+      ...(after === undefined && section !== undefined ? { endsSection: section } : {}),
+    };
+  }
+
+  const chapters = division.chapters ?? [];
+  const last = chapters.length;
+
+  const prev =
+    c > 1
+      ? stepTo(work, division, c - 1)
+      : before === undefined
+        ? undefined
+        : stepTo(work, before, (before.chapters?.length ?? 1));
+
+  const next =
+    c < last
+      ? stepTo(work, division, c + 1)
+      : after === undefined
+        ? undefined
+        : stepTo(work, after, 1);
+
+  return {
+    prev,
+    next,
+    ...(next === undefined && section !== undefined ? { endsSection: section } : {}),
+  };
 }
 
 /* ── the edition line ───────────────────────────────────────────────────── */
@@ -138,29 +387,30 @@ export function neighbours(numbers: readonly number[], current: number): Neighbo
 export interface EditionLine {
   readonly lang: string;
   readonly sourceId: string;
-  /** The on-page note this edition must always carry, if it has one. */
   readonly note?: string | undefined;
+  readonly preface?: {
+    readonly text: Readonly<Record<string, string>>;
+    readonly omitted: readonly number[];
+    readonly omitted_note?: string | undefined;
+    readonly inline: readonly number[];
+  } | undefined;
 }
 
 /**
  * Every edition the page shows, in reading order.
  *
  * The memo's rule: each edition is a source record and is named on every page.
- * A page that renders only English still names the Arabic it was paired from,
- * because the pairing is the claim.
+ * A page that renders only English still names the original it was paired
+ * from, because the pairing is the claim.
  */
 export function editionLines(work: WorkData, notes: Readonly<Record<string, string>>): EditionLine[] {
-  const orig = originalLang(work);
   const out: EditionLine[] = [];
   const push = (lang: string): void => {
     const sourceId = work.editions[lang];
     if (sourceId === undefined) return;
     out.push({ lang, sourceId, note: notes[sourceId] });
   };
-  push(orig);
+  push(originalLang(work));
   push('en');
   return out;
 }
-
-/** A stable anchor id for a verse, so /read/quran/2#255 lands on the ayah. */
-export const verseAnchor = (verse: Pick<VerseRow, 'a'>): string => String(verse.a);

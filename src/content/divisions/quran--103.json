@@ -1,0 +1,24 @@
+{
+ "id": "quran--103",
+ "work": "quran",
+ "n": 103,
+ "slug": "103",
+ "verses": [
+  {
+   "v": 1,
+   "ar": "وَٱلۡعَصۡرِ",
+   "en": "By the declining day"
+  },
+  {
+   "v": 2,
+   "ar": "إِنَّ ٱلۡإِنسَٰنَ لَفِي خُسۡرٍ",
+   "en": "Lo! man is a state of loss"
+  },
+  {
+   "v": 3,
+   "ar": "إِلَّا ٱلَّذِينَ ءَامَنُواْ وَعَمِلُواْ ٱلصَّٰلِحَٰتِ وَتَوَاصَوۡاْ بِٱلۡحَقِّ وَتَوَاصَوۡاْ بِٱلصَّبۡرِ",
+   "en": "Save those who believe and do good works, and exhort one another to truth and exhort one another to endurance"
+  }
+ ],
+ "sourcing": "sourced"
+}

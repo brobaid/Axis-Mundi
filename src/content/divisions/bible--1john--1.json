@@ -1,0 +1,60 @@
+{
+ "id": "bible--1john--1",
+ "work": "bible",
+ "n": 62,
+ "slug": "1john",
+ "c": 1,
+ "verses": [
+  {
+   "v": 1,
+   "en": "That which was from the beginning, that which we have heard, that which we have seen with our eyes, that which we saw, and our hands touched, concerning the Word of life",
+   "gr": "Ὃ ἦν ἀπʼ ἀρχῆς, ὃ ἀκηκόαμεν, ὃ ἑωράκαμεν τοῖς ὀφθαλμοῖς ἡμῶν, ὃ ἐθεασάμεθα καὶ αἱ χεῖρες ἡμῶν ἐψηλάφησαν, περὶ τοῦ λόγου τῆς ζωῆς—"
+  },
+  {
+   "v": 2,
+   "en": "(and the life was revealed, and we have seen, and testify, and declare to you the life, the eternal life, which was with the Father, and was revealed to us);",
+   "gr": "καὶ ἡ ζωὴ ἐφανερώθη, καὶ ἑωράκαμεν καὶ μαρτυροῦμεν καὶ ἀπαγγέλλομεν ὑμῖν τὴν ζωὴν τὴν αἰώνιον ἥτις ἦν πρὸς τὸν πατέρα καὶ ἐφανερώθη ἡμῖν—"
+  },
+  {
+   "v": 3,
+   "en": "that which we have seen and heard we declare to you, that you also may have fellowship with us. Yes, and our fellowship is with the Father, and with his Son, Jesus Christ.",
+   "gr": "ὃ ἑωράκαμεν καὶ ἀκηκόαμεν ἀπαγγέλλομεν ⸀καὶ ὑμῖν, ἵνα καὶ ὑμεῖς κοινωνίαν ἔχητε μεθʼ ἡμῶν· καὶ ἡ κοινωνία δὲ ἡ ἡμετέρα μετὰ τοῦ πατρὸς καὶ μετὰ τοῦ υἱοῦ αὐτοῦ Ἰησοῦ Χριστοῦ·"
+  },
+  {
+   "v": 4,
+   "en": "And we write these things to you, that our joy may be fulfilled.",
+   "gr": "καὶ ταῦτα γράφομεν ⸀ἡμεῖς ἵνα ἡ χαρὰ ἡμῶν ᾖ πεπληρωμένη."
+  },
+  {
+   "v": 5,
+   "en": "This is the message which we have heard from him and announce to you, that God is light, and in him is no darkness at all.",
+   "gr": "Καὶ ἔστιν αὕτη ἡ ἀγγελία ἣν ἀκηκόαμεν ἀπʼ αὐτοῦ καὶ ἀναγγέλλομεν ὑμῖν, ὅτι ὁ θεὸς φῶς ἐστιν καὶ σκοτία ⸂ἐν αὐτῷ οὐκ ἔστιν⸃ οὐδεμία."
+  },
+  {
+   "v": 6,
+   "en": "If we say that we have fellowship with him and walk in the darkness, we lie, and don’t tell the truth.",
+   "gr": "ἐὰν εἴπωμεν ὅτι κοινωνίαν ἔχομεν μετʼ αὐτοῦ καὶ ἐν τῷ σκότει περιπατῶμεν, ψευδόμεθα καὶ οὐ ποιοῦμεν τὴν ἀλήθειαν·"
+  },
+  {
+   "v": 7,
+   "en": "But if we walk in the light, as he is in the light, we have fellowship with one another, and the blood of Jesus Christ, his Son, cleanses us from all sin.",
+   "gr": "ἐὰν ⸀δὲ ἐν τῷ φωτὶ περιπατῶμεν ὡς αὐτός ἐστιν ἐν τῷ φωτί, κοινωνίαν ἔχομεν μετʼ ἀλλήλων καὶ τὸ αἷμα ⸀Ἰησοῦ τοῦ υἱοῦ αὐτοῦ καθαρίζει ἡμᾶς ἀπὸ πάσης ἁμαρτίας."
+  },
+  {
+   "v": 8,
+   "en": "If we say that we have no sin, we deceive ourselves, and the truth is not in us.",
+   "gr": "ἐὰν εἴπωμεν ὅτι ἁμαρτίαν οὐκ ἔχομεν, ἑαυτοὺς πλανῶμεν καὶ ἡ ἀλήθεια ⸂οὐκ ἔστιν ἐν ἡμῖν⸃."
+  },
+  {
+   "v": 9,
+   "en": "If we confess our sins, he is faithful and righteous to forgive us the sins, and to cleanse us from all unrighteousness.",
+   "gr": "ἐὰν ὁμολογῶμεν τὰς ἁμαρτίας ἡμῶν, πιστός ἐστιν καὶ δίκαιος ἵνα ἀφῇ ἡμῖν τὰς ἁμαρτίας καὶ καθαρίσῃ ἡμᾶς ἀπὸ πάσης ἀδικίας."
+  },
+  {
+   "v": 10,
+   "en": "If we say that we haven’t sinned, we make him a liar, and his word is not in us.",
+   "gr": "ἐὰν εἴπωμεν ὅτι οὐχ ἡμαρτήκαμεν, ψεύστην ποιοῦμεν αὐτὸν καὶ ὁ λόγος αὐτοῦ οὐκ ἔστιν ἐν ἡμῖν."
+  }
+ ],
+ "sourcing": "sourced"
+}

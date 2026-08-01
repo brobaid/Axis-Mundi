@@ -1,0 +1,120 @@
+{
+ "id": "tanakh--proverbs--2",
+ "work": "tanakh",
+ "n": 28,
+ "slug": "proverbs",
+ "c": 2,
+ "verses": [
+  {
+   "v": 1,
+   "he": "בְּ֭נִי אִם־תִּקַּ֣ח אֲמָרָ֑י וּ֝מִצְו‍ֹתַ֗י תִּצְפֹּ֥ן אִתָּֽךְ׃",
+   "en": "My son, if thou wilt receive my words, And lay up my commandments with thee;"
+  },
+  {
+   "v": 2,
+   "he": "לְהַקְשִׁ֣יב לַֽחָכְמָ֣ה אָזְנֶ֑ךָ תַּטֶּ֥ה לִ֝בְּךָ֗ לַתְּבוּנָֽה׃",
+   "en": "So that thou make thine ear attend unto wisdom, And thy heart incline to discernment;"
+  },
+  {
+   "v": 3,
+   "he": "כִּ֤י אִ֣ם לַבִּינָ֣ה תִקְרָ֑א לַ֝תְּבוּנָ֗ה תִּתֵּ֥ן קוֹלֶֽךָ׃",
+   "en": "Yea, if thou call for understanding, And lift up thy voice for discernment;"
+  },
+  {
+   "v": 4,
+   "he": "אִם־תְּבַקְשֶׁ֥נָּה כַכָּ֑סֶף וְֽכַמַּטְמוֹנִ֥ים תַּחְפְּשֶֽׂנָּה׃",
+   "en": "If thou seek her as silver, And search for her as for hid treasures;"
+  },
+  {
+   "v": 5,
+   "he": "אָ֗ז תָּ֭בִין יִרְאַ֣ת יְהוָ֑ה וְדַ֖עַת אֱלֹהִ֣ים תִּמְצָֽא׃",
+   "en": "Then shalt thou understand the fear of the LORD, And find the knowledge of God."
+  },
+  {
+   "v": 6,
+   "he": "כִּֽי־יְ֭הוָה יִתֵּ֣ן חָכְמָ֑ה מִ֝פִּ֗יו דַּ֣עַת וּתְבוּנָֽה׃",
+   "en": "For the LORD giveth wisdom, Out of His mouth cometh knowledge and discernment;"
+  },
+  {
+   "v": 7,
+   "he": "וצפן [יִצְפֹּ֣ן] לַ֭יְשָׁרִים תּוּשִׁיָּ֑ה מָ֝גֵ֗ן לְהֹ֣לְכֵי תֹֽם׃",
+   "en": "He layeth up sound wisdom for the upright, He is a shield to them that walk in integrity;"
+  },
+  {
+   "v": 8,
+   "he": "לִ֭נְצֹר אָרְח֣וֹת מִשְׁפָּ֑ט וְדֶ֖רֶךְ חסידו [חֲסִידָ֣יו] יִשְׁמֹֽר׃",
+   "en": "That He may guard the paths of justice, And preserve the way of His godly ones. ."
+  },
+  {
+   "v": 9,
+   "he": "אָ֗ז תָּ֭בִין צֶ֣דֶק וּמִשְׁפָּ֑ט וּ֝מֵישָׁרִ֗ים כָּל־מַעְגַּל־טֽוֹב׃",
+   "en": "Then shalt thou understand righteousness and justice, And equity, yea, every good path."
+  },
+  {
+   "v": 10,
+   "he": "כִּֽי־תָב֣וֹא חָכְמָ֣ה בְלִבֶּ֑ךָ וְ֝דַ֗עַת לְֽנַפְשְׁךָ֥ יִנְעָֽם׃",
+   "en": "For wisdom shall enter into thy heart, And knowledge shall be pleasant unto thy soul;"
+  },
+  {
+   "v": 11,
+   "he": "מְ֭זִמָּה תִּשְׁמֹ֥ר עָלֶ֗יךָ תְּבוּנָ֥ה תִנְצְרֶֽכָּה׃",
+   "en": "Discretion shall watch over thee, Discernment shall guard thee;"
+  },
+  {
+   "v": 12,
+   "he": "לְ֭הַצִּ֣ילְךָ מִדֶּ֣רֶךְ רָ֑ע מֵ֝אִ֗ישׁ מְדַבֵּ֥ר תַּהְפֻּכֽוֹת׃",
+   "en": "To deliver thee from the way of evil, From the men that speak froward things;"
+  },
+  {
+   "v": 13,
+   "he": "הַ֭עֹ֣זְבִים אָרְח֣וֹת יֹ֑שֶׁר לָ֝לֶ֗כֶת בְּדַרְכֵי־חֹֽשֶׁךְ׃",
+   "en": "Who leave the paths of uprightness, To walk in the ways of darkness;"
+  },
+  {
+   "v": 14,
+   "he": "הַ֭שְּׂמֵחִים לַעֲשׂ֥וֹת רָ֑ע יָ֝גִ֗ילוּ בְּֽתַהְפֻּכ֥וֹת רָֽע׃",
+   "en": "Who rejoice to do evil, And delight in the frowardness of evil;"
+  },
+  {
+   "v": 15,
+   "he": "אֲשֶׁ֣ר אָרְחֹתֵיהֶ֣ם עִקְּשִׁ֑ים וּ֝נְלוֹזִ֗ים בְּמַעְגְּלוֹתָֽם׃",
+   "en": "Who are crooked in their ways, And perverse in their paths;"
+  },
+  {
+   "v": 16,
+   "he": "לְ֭הַצִּ֣ילְךָ מֵאִשָּׁ֣ה זָרָ֑ה מִ֝נָּכְרִיָּ֗ה אֲמָרֶ֥יהָ הֶחֱלִֽיקָה׃",
+   "en": "To deliver thee from the strange woman, Even from the alien woman that maketh smooth her words;"
+  },
+  {
+   "v": 17,
+   "he": "הַ֭עֹזֶבֶת אַלּ֣וּף נְעוּרֶ֑יהָ וְאֶת־בְּרִ֖ית אֱלֹהֶ֣יהָ שָׁכֵֽחָה׃",
+   "en": "That forsaketh the lord of her youth, And forgetteth the covenant of her God."
+  },
+  {
+   "v": 18,
+   "he": "כִּ֤י שָׁ֣חָה אֶל־מָ֣וֶת בֵּיתָ֑הּ וְאֶל־רְ֝פָאִ֗ים מַעְגְּלֹתֶֽיהָ׃",
+   "en": "For her house sinketh down unto death, And her paths unto the shades;"
+  },
+  {
+   "v": 19,
+   "he": "כָּל־בָּ֭אֶיהָ לֹ֣א יְשׁוּב֑וּן וְלֹֽא־יַ֝שִּׂ֗יגוּ אָרְח֥וֹת חַיִּֽים׃",
+   "en": "None that go unto her return, Neither do they attain unto the paths of life;"
+  },
+  {
+   "v": 20,
+   "he": "לְמַ֗עַן תֵּ֭לֵךְ בְּדֶ֣רֶךְ טוֹבִ֑ים וְאָרְח֖וֹת צַדִּיקִ֣ים תִּשְׁמֹֽר׃",
+   "en": "That thou mayest walk in the way of good men, And keep the paths of the righteous."
+  },
+  {
+   "v": 21,
+   "he": "כִּֽי־יְשָׁרִ֥ים יִשְׁכְּנוּ־אָ֑רֶץ וּ֝תְמִימִ֗ים יִוָּ֥תְרוּ בָֽהּ׃",
+   "en": "For the upright shall dwell in the land, And the whole-hearted shall remain in it."
+  },
+  {
+   "v": 22,
+   "he": "וּ֭רְשָׁעִים מֵאֶ֣רֶץ יִכָּרֵ֑תוּ וּ֝בוֹגְדִ֗ים יִסְּח֥וּ מִמֶּֽנָּה׃",
+   "en": "But the wicked shall be cut off from the land, And the faithless shall be plucked up out of it."
+  }
+ ],
+ "sourcing": "sourced"
+}

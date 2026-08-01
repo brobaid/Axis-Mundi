@@ -1,0 +1,85 @@
+{
+ "id": "tanakh--psalms--19",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 19,
+ "verses": [
+  {
+   "v": 1,
+   "he": "לַמְנַצֵּ֗חַ מִזְמ֥וֹר לְדָוִֽד׃",
+   "en": "For the Leader. A Psalm of David."
+  },
+  {
+   "v": 2,
+   "he": "הַשָּׁמַ֗יִם מְֽסַפְּרִ֥ים כְּבֽוֹד־אֵ֑ל וּֽמַעֲשֵׂ֥ה יָ֝דָ֗יו מַגִּ֥יד הָרָקִֽיעַ׃",
+   "en": "The heavens declare the glory of God, And the firmament showeth His handiwork;"
+  },
+  {
+   "v": 3,
+   "he": "י֣וֹם לְ֭יוֹם יַבִּ֣יעַֽ אֹ֑מֶר וְלַ֥יְלָה לְּ֝לַ֗יְלָה יְחַוֶּה־דָּֽעַת׃",
+   "en": "Day unto day uttereth speech, And night unto night revealeth knowledge;"
+  },
+  {
+   "v": 4,
+   "he": "אֵֽין־אֹ֭מֶר וְאֵ֣ין דְּבָרִ֑ים בְּ֝לִ֗י נִשְׁמָ֥ע קוֹלָֽם׃",
+   "en": "There is no speech, there are no words, Neither is their voice heard."
+  },
+  {
+   "v": 5,
+   "he": "בְּכָל־הָאָ֨רֶץ׀ יָ֘צָ֤א קַוָּ֗ם וּבִקְצֵ֣ה תֵ֭בֵל מִלֵּיהֶ֑ם לַ֝שֶּׁ֗מֶשׁ שָֽׂם־אֹ֥הֶל בָּהֶֽם׃",
+   "en": "Their line is gone out through all the earth, And their words to the end of the world. In them hath He set a tent for the sun,"
+  },
+  {
+   "v": 6,
+   "he": "וְה֗וּא כְּ֭חָתָן יֹצֵ֣א מֵחֻפָּת֑וֹ יָשִׂ֥ישׂ כְּ֝גִבּ֗וֹר לָר֥וּץ אֹֽרַח׃",
+   "en": "Which is as a bridegroom coming out of his chamber, And rejoiceth as a strong man to run his course."
+  },
+  {
+   "v": 7,
+   "he": "מִקְצֵ֤ה הַשָּׁמַ֨יִם׀ מֽוֹצָא֗וֹ וּתְקוּפָת֥וֹ עַל־קְצוֹתָ֑ם וְאֵ֥ין נִ֝סְתָּ֗ר מֵֽחַמָּתוֹ׃",
+   "en": "His going forth is from the end of the heaven, And his circuit unto the ends of it; And there is nothing hid from the heat thereof."
+  },
+  {
+   "v": 8,
+   "he": "תּ֘וֹרַ֤ת יְהוָ֣ה תְּ֭מִימָה מְשִׁ֣יבַת נָ֑פֶשׁ עֵד֥וּת יְהוָ֥ה נֶ֝אֱמָנָ֗ה מַחְכִּ֥ימַת פֶּֽתִי׃",
+   "en": "The law of the LORD is perfect, restoring the soul; The testimony of the LORD is sure, making wise the simple. ."
+  },
+  {
+   "v": 9,
+   "he": "פִּקּ֘וּדֵ֤י יְהוָ֣ה יְ֭שָׁרִים מְשַׂמְּחֵי־לֵ֑ב מִצְוַ֥ת יְהוָ֥ה בָּ֝רָ֗ה מְאִירַ֥ת עֵינָֽיִם׃",
+   "en": "The precepts of the LORD are right, rejoicing the heart; The commandment of the LORD is pure, enlightening the eyes."
+  },
+  {
+   "v": 10,
+   "he": "יִרְאַ֤ת יְהוָ֨ה׀ טְהוֹרָה֮ עוֹמֶ֪דֶת לָ֫עַ֥ד מִֽשְׁפְּטֵי־יְהוָ֥ה אֱמֶ֑ת צָֽדְק֥וּ יַחְדָּֽו׃",
+   "en": "The fear of the LORD is clean, enduring for ever; The ordinances of the LORD are true, they are righteous altogether;"
+  },
+  {
+   "v": 11,
+   "he": "הַֽנֶּחֱמָדִ֗ים מִ֭זָּהָב וּמִפַּ֣ז רָ֑ב וּמְתוּקִ֥ים מִ֝דְּבַ֗שׁ וְנֹ֣פֶת צוּפִֽים׃",
+   "en": "More to be desired are they than gold, yea, than much fine gold; Sweeter also than honey and the honeycomb."
+  },
+  {
+   "v": 12,
+   "he": "גַּֽם־עַ֭בְדְּךָ נִזְהָ֣ר בָּהֶ֑ם בְּ֝שָׁמְרָ֗ם עֵ֣קֶב רָֽב׃",
+   "en": "Moreover by them is Thy servant warned; In keeping of them there is great reward."
+  },
+  {
+   "v": 13,
+   "he": "שְׁגִיא֥וֹת מִֽי־יָבִ֑ין מִֽנִּסְתָּר֥וֹת נַקֵּֽנִי׃",
+   "en": "Who can discern his errors? Clear Thou me from hidden faults."
+  },
+  {
+   "v": 14,
+   "he": "גַּ֤ם מִזֵּדִ֨ים׀ חֲשֹׂ֬ךְ עַבְדֶּ֗ךָ אַֽל־יִמְשְׁלוּ־בִ֣י אָ֣ז אֵיתָ֑ם וְ֝נִקֵּ֗יתִי מִפֶּ֥שַֽׁע רָֽב׃",
+   "en": "Keep back Thy servant also from presumptuous sins, That they may not have dominion over me; then shall I be faultless, And I shall be clear from great transgression."
+  },
+  {
+   "v": 15,
+   "he": "יִֽהְי֥וּ לְרָצ֨וֹן׀ אִמְרֵי־פִ֡י וְהֶגְי֣וֹן לִבִּ֣י לְפָנֶ֑יךָ יְ֝הוָ֗ה צוּרִ֥י וְגֹאֲלִֽי׃",
+   "en": "Let the words of my mouth and the meditation of my heart be acceptable before Thee, O LORD, my Rock, and my Redeemer."
+  }
+ ],
+ "sourcing": "sourced"
+}

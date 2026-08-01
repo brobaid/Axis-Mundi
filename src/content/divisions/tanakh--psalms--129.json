@@ -1,0 +1,50 @@
+{
+ "id": "tanakh--psalms--129",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 129,
+ "verses": [
+  {
+   "v": 1,
+   "he": "שִׁ֗יר הַֽמַּ֫עֲל֥וֹת רַ֭בַּת צְרָר֣וּנִי מִנְּעוּרַ֑י יֹֽאמַר־נָ֝א יִשְׂרָאֵֽל׃",
+   "en": "A Song of Ascents. 'Much have they afflicted me from my youth up', Let Israel now say;"
+  },
+  {
+   "v": 2,
+   "he": "רַ֭בַּת צְרָר֣וּנִי מִנְּעוּרָ֑י גַּ֝ם לֹא־יָ֥כְלוּ לִֽי׃",
+   "en": "'Much have they afflicted me from my youth up; But they have not prevailed against me."
+  },
+  {
+   "v": 3,
+   "he": "עַל־גַּ֭בִּי חָרְשׁ֣וּ חֹרְשִׁ֑ים הֶ֝אֱרִ֗יכוּ למענותם [לְמַעֲנִיתָֽם]׃",
+   "en": "The plowers plowed upon my back; They made long their furrows."
+  },
+  {
+   "v": 4,
+   "he": "יְהוָ֥ה צַדִּ֑יק קִ֝צֵּ֗ץ עֲב֣וֹת רְשָׁעִֽים׃",
+   "en": "The LORD is righteous; He hath cut asunder the cords of the wicked.'"
+  },
+  {
+   "v": 5,
+   "he": "יֵ֭בֹשׁוּ וְיִסֹּ֣גוּ אָח֑וֹר כֹּ֝֗ל שֹׂנְאֵ֥י צִיּֽוֹן׃",
+   "en": "Let them be ashamed and turned backward, All they that hate Zion."
+  },
+  {
+   "v": 6,
+   "he": "יִ֭הְיוּ כַּחֲצִ֣יר גַּגּ֑וֹת שֶׁקַּדְמַ֖ת שָׁלַ֣ף יָבֵֽשׁ׃",
+   "en": "Let them be as the grass upon the housetops, Which withereth afore it springeth up;"
+  },
+  {
+   "v": 7,
+   "he": "שֶׁלֹּ֤א מִלֵּ֖א כַפּ֥וֹ קוֹצֵ֗ר וְחִצְנ֥וֹ מְעַמֵּֽר׃",
+   "en": "Wherewith the reaper filleth not his hand, Nor he that bindeth sheaves his bosom."
+  },
+  {
+   "v": 8,
+   "he": "וְלֹ֤א אָֽמְר֨וּ׀ הָעֹבְרִ֗ים בִּרְכַּֽת־יְהוָ֥ה אֲלֵיכֶ֑ם בֵּרַ֥כְנוּ אֶ֝תְכֶ֗ם בְּשֵׁ֣ם יְהוָֽה׃",
+   "en": "Neither do they that go by say: ‘The blessing of the LORD be upon you; We bless you in the name of the LORD.'"
+  }
+ ],
+ "sourcing": "sourced"
+}

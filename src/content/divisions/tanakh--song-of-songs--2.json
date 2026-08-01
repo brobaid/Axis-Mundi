@@ -1,0 +1,95 @@
+{
+ "id": "tanakh--song-of-songs--2",
+ "work": "tanakh",
+ "n": 30,
+ "slug": "song-of-songs",
+ "c": 2,
+ "verses": [
+  {
+   "v": 1,
+   "he": "אֲנִי֙ חֲבַצֶּ֣לֶת הַשָּׁר֔וֹן שֽׁוֹשַׁנַּ֖ת הָעֲמָקִֽים׃",
+   "en": "I am a rose of Sharon, A lily of the valleys."
+  },
+  {
+   "v": 2,
+   "he": "כְּשֽׁוֹשַׁנָּה֙ בֵּ֣ין הַחוֹחִ֔ים כֵּ֥ן רַעְיָתִ֖י בֵּ֥ין הַבָּנֽוֹת׃",
+   "en": "As a lily among thorns, So is my love among the daughters."
+  },
+  {
+   "v": 3,
+   "he": "כְּתַפּ֙וּחַ֙ בַּעֲצֵ֣י הַיַּ֔עַר כֵּ֥ן דּוֹדִ֖י בֵּ֣ין הַבָּנִ֑ים בְּצִלּוֹ֙ חִמַּ֣דְתִּי וְיָשַׁ֔בְתִּי וּפִרְי֖וֹ מָת֥וֹק לְחִכִּֽי׃",
+   "en": "As an apple-tree among the trees of the wood, So is my beloved among the sons. Under its shadow I delighted to sit, And its fruit was sweet to my taste."
+  },
+  {
+   "v": 4,
+   "he": "הֱבִיאַ֙נִי֙ אֶל־בֵּ֣ית הַיָּ֔יִן וְדִגְל֥וֹ עָלַ֖י אַהֲבָֽה׃",
+   "en": "He hath brought me to the banqueting-house, And his banner over me is love."
+  },
+  {
+   "v": 5,
+   "he": "סַמְּכ֙וּנִי֙ בָּֽאֲשִׁישׁ֔וֹת רַפְּד֖וּנִי בַּתַּפּוּחִ֑ים כִּי־חוֹלַ֥ת אַהֲבָ֖ה אָֽנִי׃",
+   "en": "’Stay ye me with dainties, refresh me with apples; For I am love-sick.’"
+  },
+  {
+   "v": 6,
+   "he": "שְׂמֹאלוֹ֙ תַּ֣חַת לְרֹאשִׁ֔י וִימִינ֖וֹ תְּחַבְּקֵֽנִי׃",
+   "en": "Let his left hand be under my head, And his right hand embrace me."
+  },
+  {
+   "v": 7,
+   "he": "הִשְׁבַּ֨עְתִּי אֶתְכֶ֜ם בְּנ֤וֹת יְרוּשָׁלַ‍ִ֙ם֙ בִּצְבָא֔וֹת א֖וֹ בְּאַיְל֣וֹת הַשָּׂדֶ֑ה אִם־תָּעִ֧ירוּ׀ וְֽאִם־תְּעֽוֹרְר֛וּ אֶת־הָאַהֲבָ֖ה עַ֥ד שֶׁתֶּחְפָּֽץ׃",
+   "en": "’I adjure you, O daughters of Jerusalem, By the gazelles, and by the hinds of the field, That ye awaken not, nor stir up love, until it please.’"
+  },
+  {
+   "v": 8,
+   "he": "ק֣וֹל דּוֹדִ֔י הִנֵּה־זֶ֖ה בָּ֑א מְדַלֵּג֙ עַל־הֶ֣הָרִ֔ים מְקַפֵּ֖ץ עַל־הַגְּבָעֽוֹת׃",
+   "en": "Hark! my beloved! behold, he cometh, Leaping upon the mountains, skipping upon the hills."
+  },
+  {
+   "v": 9,
+   "he": "דּוֹמֶ֤ה דוֹדִי֙ לִצְבִ֔י א֖וֹ לְעֹ֣פֶר הָֽאַיָּלִ֑ים הִנֵּה־זֶ֤ה עוֹמֵד֙ אַחַ֣ר כָּתְלֵ֔נוּ מַשְׁגִּ֙יחַ֙ מִן־הַֽחֲלֹּנ֔וֹת מֵצִ֖יץ מִן־הַֽחֲרַכִּֽים׃",
+   "en": "My beloved is like a gazelle or a young hart; Behold, he standeth behind our wall, He looketh in through the windows, He peereth through the lattice."
+  },
+  {
+   "v": 10,
+   "he": "עָנָ֥ה דוֹדִ֖י וְאָ֣מַר לִ֑י ק֥וּמִי לָ֛ךְ רַעְיָתִ֥י יָפָתִ֖י וּלְכִי־לָֽךְ׃",
+   "en": "My beloved spoke, and said unto me: ‘Rise up, my love, my fair one, and come away."
+  },
+  {
+   "v": 11,
+   "he": "כִּֽי־הִנֵּ֥ה הסתו [הַסְּתָ֖יו] עָבָ֑ר הַגֶּ֕שֶׁם חָלַ֖ף הָלַ֥ךְ לֽוֹ׃",
+   "en": "For, lo, the winter is past, The rain is over and gone;"
+  },
+  {
+   "v": 12,
+   "he": "הַנִּצָּנִים֙ נִרְא֣וּ בָאָ֔רֶץ עֵ֥ת הַזָּמִ֖יר הִגִּ֑יעַ וְק֥וֹל הַתּ֖וֹר נִשְׁמַ֥ע בְּאַרְצֵֽנוּ׃",
+   "en": "The flowers appear on the earth; The time of singing is come, And the voice of the turtle is heard in our land;"
+  },
+  {
+   "v": 13,
+   "he": "הַתְּאֵנָה֙ חָֽנְטָ֣ה פַגֶּ֔יהָ וְהַגְּפָנִ֥ים׀ סְמָדַ֖ר נָ֣תְנוּ רֵ֑יחַ ק֥וּמִי לכי [לָ֛ךְ] רַעְיָתִ֥י יָפָתִ֖י וּלְכִי־לָֽךְ׃",
+   "en": "The fig-tree putteth forth her green figs, And the vines in blossom give forth their fragrance. Arise, my love, my fair one, and come away."
+  },
+  {
+   "v": 14,
+   "he": "יוֹנָתִ֞י בְּחַגְוֵ֣י הַסֶּ֗לַע בְּסֵ֙תֶר֙ הַמַּדְרֵגָ֔ה הַרְאִ֙ינִי֙ אֶת־מַרְאַ֔יִךְ הַשְׁמִיעִ֖ינִי אֶת־קוֹלֵ֑ךְ כִּי־קוֹלֵ֥ךְ עָרֵ֖ב וּמַרְאֵ֥יךְ נָאוֶֽה׃",
+   "en": "O my dove, that art in the clefts of the rock, in the covert of the cliff, Let me see thy countenance, let me hear thy voice; For sweet is thy voice, and thy countenance is comely.’"
+  },
+  {
+   "v": 15,
+   "he": "אֶֽחֱזוּ־לָ֙נוּ֙ שֽׁוּעָלִ֔ים שֽׁוּעָלִ֥ים קְטַנִּ֖ים מְחַבְּלִ֣ים כְּרָמִ֑ים וּכְרָמֵ֖ינוּ סְמָדַֽר׃",
+   "en": "’Take us the foxes, the little foxes, that spoil the vineyards; For our vineyards are in blossom.’"
+  },
+  {
+   "v": 16,
+   "he": "דּוֹדִ֥י לִי֙ וַאֲנִ֣י ל֔וֹ הָרֹעֶ֖ה בַּשּׁוֹשַׁנִּֽים׃",
+   "en": "My beloved is mine, and I am his, That feedeth among the lilies."
+  },
+  {
+   "v": 17,
+   "he": "עַ֤ד שֶׁיָּפ֙וּחַ֙ הַיּ֔וֹם וְנָ֖סוּ הַצְּלָלִ֑ים סֹב֩ דְּמֵה־לְךָ֨ דוֹדִ֜י לִצְבִ֗י א֛וֹ לְעֹ֥פֶר הָאַיָּלִ֖ים עַל־הָ֥רֵי בָֽתֶר׃",
+   "en": "Until the day breathe, and the shadows flee away, Turn, my beloved, and be thou like a gazelle or a young hart Upon the mountains of spices."
+  }
+ ],
+ "sourcing": "sourced"
+}

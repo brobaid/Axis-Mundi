@@ -1,0 +1,11 @@
+{
+  "id": "vedas",
+  "tradition": "hinduism",
+  "title": "The Vedas",
+  "order": 6,
+  "original": "Sanskrit, in Devanagari",
+  "english": "Ralph Griffith's 1896 translation, public domain",
+  "status": "Acquiring, the Rigveda first, with the Upanishads to follow through the Sacred Books of the East. Griffith's English is dated, and the page will say so.",
+  "canon_ids": ["vedas"],
+  "sourcing": "editorial"
+}

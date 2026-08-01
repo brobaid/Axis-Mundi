@@ -1,0 +1,35 @@
+{
+ "id": "tanakh--psalms--127",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 127,
+ "verses": [
+  {
+   "v": 1,
+   "he": "שִׁ֥יר הַֽמַּֽעֲל֗וֹת לִשְׁלֹ֫מֹ֥ה אִם־יְהוָ֤ה׀ לֹא־יִבְנֶ֬ה בַ֗יִת שָׁ֤וְא׀ עָמְל֣וּ בוֹנָ֣יו בּ֑וֹ אִם־יְהוָ֥ה לֹֽא־יִשְׁמָר־עִ֝֗יר שָׁ֤וְא׀ שָׁקַ֬ד שׁוֹמֵֽר׃",
+   "en": "A Song of Ascents; of Solomon. Except the LORD build the house, They labour in vain that build it; Except the LORD keep the city, The watchman waketh but in vain."
+  },
+  {
+   "v": 2,
+   "he": "שָׁ֤וְא לָכֶ֨ם׀ מַשְׁכִּ֪ימֵי ק֡וּם מְאַֽחֲרֵי־שֶׁ֗בֶת אֹ֭כְלֵי לֶ֣חֶם הָעֲצָבִ֑ים כֵּ֤ן יִתֵּ֖ן לִֽידִיד֣וֹ שֵׁנָֽא׃",
+   "en": "It is vain for you that ye rise early, and sit up late, Ye that eat the bread of toil; So He giveth unto His beloved in sleep."
+  },
+  {
+   "v": 3,
+   "he": "הִנֵּ֤ה נַחֲלַ֣ת יְהוָ֣ה בָּנִ֑ים שָׂ֝כָ֗ר פְּרִ֣י הַבָּֽטֶן׃",
+   "en": "Lo, children are a heritage of the LORD; The fruit of the womb is a reward."
+  },
+  {
+   "v": 4,
+   "he": "כְּחִצִּ֥ים בְּיַד־גִּבּ֑וֹר כֵּ֝֗ן בְּנֵ֣י הַנְּעוּרִֽים׃",
+   "en": "As arrows in the hand of a mighty man, So are the children of one's youth."
+  },
+  {
+   "v": 5,
+   "he": "אַשְׁרֵ֤י הַגֶּ֗בֶר אֲשֶׁ֤ר מִלֵּ֥א אֶת־אַשְׁפָּת֗וֹ מֵ֫הֶ֥ם לֹֽא־יֵבֹ֑שׁוּ כִּֽי־יְדַבְּר֖וּ אֶת־אוֹיְבִ֣ים בַּשָּֽׁעַר׃",
+   "en": "Happy is the man that hath his quiver full of them; They shall not be put to shame, When they speak with their enemies in the gate."
+  }
+ ],
+ "sourcing": "sourced"
+}

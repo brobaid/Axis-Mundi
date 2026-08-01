@@ -11,10 +11,23 @@ import '@fontsource-variable/source-serif-4/wght-italic.css';
 import '@fontsource-variable/archivo/wght.css';
 import '@fontsource/ibm-plex-mono/latin-400.css';
 import '@fontsource/ibm-plex-mono/latin-500.css';
-/* Arabic subset only. The remaining Noto script faces are imported as the
-   traditions that need them land, so a reader never downloads a script the
-   page does not use. */
+/* Arabic and Hebrew subsets. The remaining Noto script faces are imported as
+   the traditions that need them land, so a reader never downloads a script the
+   page does not use: a face is only fetched when an element on the page
+   actually resolves to it, and only the reading rooms set these families.
+   Hebrew arrives with the Tanakh — the Masoretic text carries cantillation
+   above the line and vowel points below it, and the prose fallback draws
+   neither, so the face is not a refinement here but the difference between a
+   pointed text and a mangled one. */
 import '@fontsource/noto-naskh-arabic/arabic-400.css';
+import '@fontsource/noto-serif-hebrew/hebrew-400.css';
+/* Latin Extended Additional, for romanised Pali.
+
+   Source Serif 4 carries every Pali diacritic but one: ṁ, the niggahita, which
+   is the most common of them — measured, it fell through to whatever serif the
+   reader's machine happens to have, which is the thing self-hosting exists to
+   prevent. This subset is fetched only where a page actually sets it. */
+import '@fontsource/noto-serif/latin-ext-400.css';
 
 import '../styles/tokens.css';
 import '../styles/base.css';

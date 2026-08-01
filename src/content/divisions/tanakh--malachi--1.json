@@ -1,0 +1,80 @@
+{
+ "id": "tanakh--malachi--1",
+ "work": "tanakh",
+ "n": 26,
+ "slug": "malachi",
+ "c": 1,
+ "verses": [
+  {
+   "v": 1,
+   "he": "מַשָּׂ֥א דְבַר־יְהוָ֖ה אֶל־יִשְׂרָאֵ֑ל בְּיַ֖ד מַלְאָכִֽי׃",
+   "en": "The burden of the word of the LORD to Israel by Malachi."
+  },
+  {
+   "v": 2,
+   "he": "אָהַ֤בְתִּי אֶתְכֶם֙ אָמַ֣ר יְהוָ֔ה וַאֲמַרְתֶּ֖ם בַּמָּ֣ה אֲהַבְתָּ֑נוּ הֲלוֹא־אָ֨ח עֵשָׂ֤ו לְיַֽעֲקֹב֙ נְאֻם־יְהוָ֔ה וָאֹהַ֖ב אֶֽת־יַעֲקֹֽב׃",
+   "en": "I have loved you, saith the LORD. Yet ye say: ‘Wherein hast Thou loved us?’ Was not Esau Jacob’s brother? Saith the LORD; Yet I loved Jacob;"
+  },
+  {
+   "v": 3,
+   "he": "וְאֶת־עֵשָׂ֖ו שָׂנֵ֑אתִי וָאָשִׂ֤ים אֶת־הָרָיו֙ שְׁמָמָ֔ה וְאֶת־נַחֲלָת֖וֹ לְתַנּ֥וֹת מִדְבָּֽר׃",
+   "en": "But Esau I hated, And made his mountains a desolation, And gave his heritage to the jackals of the wilderness."
+  },
+  {
+   "v": 4,
+   "he": "כִּֽי־תֹאמַ֨ר אֱד֜וֹם רֻשַּׁ֗שְׁנוּ וְנָשׁוּב֙ וְנִבְנֶ֣ה חֳרָב֔וֹת כֹּ֤ה אָמַר֙ יְהוָ֣ה צְבָא֔וֹת הֵ֥מָּה יִבְנ֖וּ וַאֲנִ֣י אֶהֱר֑וֹס וְקָרְא֤וּ לָהֶם֙ גְּב֣וּל רִשְׁעָ֔ה וְהָעָ֛ם אֲשֶׁר־זָעַ֥ם יְהוָ֖ה עַד־עוֹלָֽם׃",
+   "en": "Whereas Edom saith: ‘We are beaten down, But we will return and build the waste places’; Thus saith the LORD of hosts: They shall build, but I will throw down; And they shall be called The border of wickedness, And The people whom the LORD execrateth for ever."
+  },
+  {
+   "v": 5,
+   "he": "וְעֵינֵיכֶ֖ם תִּרְאֶ֑ינָה וְאַתֶּ֤ם תֹּֽאמְרוּ֙ יִגְדַּ֣ל יְהוָ֔ה מֵעַ֖ל לִגְב֥וּל יִשְׂרָאֵֽל׃",
+   "en": "And your eyes shall see, And ye shall say: ‘The LORD is great beyond the border of Israel.’"
+  },
+  {
+   "v": 6,
+   "he": "בֵּ֛ן יְכַבֵּ֥ד אָ֖ב וְעֶ֣בֶד אֲדֹנָ֑יו וְאִם־אָ֣ב אָ֣נִי אַיֵּ֣ה כְבוֹדִ֡י וְאִם־אֲדוֹנִ֣ים אָנִי֩ אַיֵּ֨ה מוֹרָאִ֜י אָמַ֣ר׀ יְהוָ֣ה צְבָא֗וֹת לָכֶם֙ הַכֹּֽהֲנִים֙ בּוֹזֵ֣י שְׁמִ֔י וַאֲמַרְתֶּ֕ם בַּמֶּ֥ה בָזִ֖ינוּ אֶת־שְׁמֶֽךָ׃",
+   "en": "A son honoureth his father, And a servant his master; If then I be a father, Where is My honour? And if I be a master, Where is My fear? Saith the LORD of hosts Unto you, O priests, that despise My name. And ye say: ‘Wherein have we despised Thy name?’"
+  },
+  {
+   "v": 7,
+   "he": "מַגִּישִׁ֤ים עַֽל־מִזְבְּחִי֙ לֶ֣חֶם מְגֹאָ֔ל וַאֲמַרְתֶּ֖ם בַּמֶּ֣ה גֵֽאַלְנ֑וּךָ בֶּאֱמָרְכֶ֕ם שֻׁלְחַ֥ן יְהוָ֖ה נִבְזֶ֥ה הֽוּא׃",
+   "en": "Ye offer polluted bread upon Mine altar. And ye say: ‘Wherein have we polluted thee?’ In that ye say: ‘The table of the LORD is contemptible.’"
+  },
+  {
+   "v": 8,
+   "he": "וְכִֽי־תַגִּשׁ֨וּן עִוֵּ֤ר לִזְבֹּ֙חַ֙ אֵ֣ין רָ֔ע וְכִ֥י תַגִּ֛ישׁוּ פִּסֵּ֥חַ וְחֹלֶ֖ה אֵ֣ין רָ֑ע הַקְרִיבֵ֨הוּ נָ֜א לְפֶחָתֶ֗ךָ הֲיִרְצְךָ֙ א֚וֹ הֲיִשָּׂ֣א פָנֶ֔יךָ אָמַ֖ר יְהוָ֥ה צְבָאֽוֹת׃",
+   "en": "And when ye offer the blind for sacrifice, is it no evil! And when ye offer the lame and sick, is it no evil! Present it now unto thy governor; will he be pleased with thee? Or will he accept thy person? Saith the LORD of hosts."
+  },
+  {
+   "v": 9,
+   "he": "וְעַתָּ֛ה חַלּוּ־נָ֥א פְנֵי־אֵ֖ל וִֽיחָנֵ֑נוּ מִיֶּדְכֶם֙ הָ֣יְתָה זֹּ֔את הֲיִשָּׂ֤א מִכֶּם֙ פָּנִ֔ים אָמַ֖ר יְהוָ֥ה צְבָאֽוֹת׃",
+   "en": "And now, I pray you, entreat the favour of God That He may be gracious unto us!— This hath been of your doing.— Will He accept any of your persons? Saith the LORD of hosts."
+  },
+  {
+   "v": 10,
+   "he": "מִ֤י גַם־בָּכֶם֙ וְיִסְגֹּ֣ר דְּלָתַ֔יִם וְלֹֽא־תָאִ֥ירוּ מִזְבְּחִ֖י חִנָּ֑ם אֵֽין־לִ֨י חֵ֜פֶץ בָּכֶ֗ם אָמַר֙ יְהוָ֣ה צְבָא֔וֹת וּמִנְחָ֖ה לֹֽא־אֶרְצֶ֥ה מִיֶּדְכֶֽם׃",
+   "en": "Oh that there were even one among you that would shut the doors, That ye might not kindle fire on Mine altar in vain! I have no pleasure in you, Saith the LORD of hosts, Neither will I accept an offering at your hand."
+  },
+  {
+   "v": 11,
+   "he": "כִּ֣י מִמִּזְרַח־שֶׁ֜מֶשׁ וְעַד־מְבוֹא֗וֹ גָּד֤וֹל שְׁמִי֙ בַּגּוֹיִ֔ם וּבְכָל־מָק֗וֹם מֻקְטָ֥ר מֻגָּ֛שׁ לִשְׁמִ֖י וּמִנְחָ֣ה טְהוֹרָ֑ה כִּֽי־גָד֤וֹל שְׁמִי֙ בַּגּוֹיִ֔ם אָמַ֖ר יְהוָ֥ה צְבָאֽוֹת׃",
+   "en": "For from the rising of the sun even unto the going down of the same My name is great among the nations; And in every place offerings are presented unto My name, Even pure oblations; For My name is great among the nations, Saith the LORD of hosts."
+  },
+  {
+   "v": 12,
+   "he": "וְאַתֶּ֖ם מְחַלְּלִ֣ים אוֹת֑וֹ בֶּאֱמָרְכֶ֗ם שֻׁלְחַ֤ן אֲדֹנָי֙ מְגֹאָ֣ל ה֔וּא וְנִיב֖וֹ נִבְזֶ֥ה אָכְלֽוֹ׃",
+   "en": "But ye profane it, In that ye say: ‘The table of the LORD is polluted, And the fruit thereof, even the food thereof, is contemptible.’"
+  },
+  {
+   "v": 13,
+   "he": "וַאֲמַרְתֶּם֩ הִנֵּ֨ה מַתְּלָאָ֜ה וְהִפַּחְתֶּ֣ם אוֹת֗וֹ אָמַר֙ יְהוָ֣ה צְבָא֔וֹת וַהֲבֵאתֶ֣ם גָּז֗וּל וְאֶת־הַפִּסֵּ֙חַ֙ וְאֶת־הַ֣חוֹלֶ֔ה וַהֲבֵאתֶ֖ם אֶת־הַמִּנְחָ֑ה הַאֶרְצֶ֥ה אוֹתָ֛הּ מִיֶּדְכֶ֖ם אָמַ֥ר יְהוָֽה׃",
+   "en": "Ye say also: ‘Behold, what a weariness is it!’ And ye have snuffed at it, Saith the LORD of hosts; And ye have brought that which was taken by violence, And the lame, and the sick; Thus ye bring the offering; Should I accept this of your hand? Saith the LORD."
+  },
+  {
+   "v": 14,
+   "he": "וְאָר֣וּר נוֹכֵ֗ל וְיֵ֤שׁ בְּעֶדְרוֹ֙ זָכָ֔ר וְנֹדֵ֛ר וְזֹבֵ֥חַ מָשְׁחָ֖ת לַֽאדֹנָ֑י כִּי֩ מֶ֨לֶךְ גָּד֜וֹל אָ֗נִי אָמַר֙ יְהוָ֣ה צְבָא֔וֹת וּשְׁמִ֖י נוֹרָ֥א בַגּוֹיִֽם׃",
+   "en": "But cursed be he that dealeth craftily, Whereas he hath in his flock a male, And voweth, and sacrificeth unto the Lord a blemished thing; For I am a great King, Saith the LORD of hosts, And My name is feared among the nations."
+  }
+ ],
+ "sourcing": "sourced"
+}

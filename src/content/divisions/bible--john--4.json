@@ -1,0 +1,280 @@
+{
+ "id": "bible--john--4",
+ "work": "bible",
+ "n": 43,
+ "slug": "john",
+ "c": 4,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Therefore when the Lord knew that the Pharisees had heard that Jesus was making and baptizing more disciples than John",
+   "gr": "Ὡς οὖν ἔγνω ὁ ⸀Ἰησοῦς ὅτι ἤκουσαν οἱ Φαρισαῖοι ὅτι Ἰησοῦς πλείονας μαθητὰς ποιεῖ καὶ βαπτίζει ἢ Ἰωάννης—"
+  },
+  {
+   "v": 2,
+   "en": "(although Jesus himself didn’t baptize, but his disciples),",
+   "gr": "καίτοιγε Ἰησοῦς αὐτὸς οὐκ ἐβάπτιζεν ἀλλʼ οἱ μαθηταὶ αὐτοῦ—"
+  },
+  {
+   "v": 3,
+   "en": "he left Judea and departed into Galilee.",
+   "gr": "ἀφῆκεν τὴν Ἰουδαίαν καὶ ἀπῆλθεν ⸀πάλιν εἰς τὴν Γαλιλαίαν."
+  },
+  {
+   "v": 4,
+   "en": "He needed to pass through Samaria.",
+   "gr": "ἔδει δὲ αὐτὸν διέρχεσθαι διὰ τῆς Σαμαρείας."
+  },
+  {
+   "v": 5,
+   "en": "So he came to a city of Samaria, called Sychar, near the parcel of ground that Jacob gave to his son, Joseph.",
+   "gr": "ἔρχεται οὖν εἰς πόλιν τῆς Σαμαρείας λεγομένην Συχὰρ πλησίον τοῦ χωρίου ὃ ἔδωκεν Ἰακὼβ ⸀τῷ Ἰωσὴφ τῷ υἱῷ αὐτοῦ·"
+  },
+  {
+   "v": 6,
+   "en": "Jacob’s well was there. Jesus therefore, being tired from his journey, sat down by the well. It was about the sixth hour.",
+   "gr": "ἦν δὲ ἐκεῖ πηγὴ τοῦ Ἰακώβ. ὁ οὖν Ἰησοῦς κεκοπιακὼς ἐκ τῆς ὁδοιπορίας ἐκαθέζετο οὕτως ἐπὶ τῇ πηγῇ· ὥρα ἦν ⸀ὡς ἕκτη."
+  },
+  {
+   "v": 7,
+   "en": "A woman of Samaria came to draw water. Jesus said to her, “Give me a drink.”",
+   "gr": "Ἔρχεται γυνὴ ἐκ τῆς Σαμαρείας ἀντλῆσαι ὕδωρ. λέγει αὐτῇ ὁ Ἰησοῦς· Δός μοι πεῖν·"
+  },
+  {
+   "v": 8,
+   "en": "For his disciples had gone away into the city to buy food.",
+   "gr": "οἱ γὰρ μαθηταὶ αὐτοῦ ἀπεληλύθεισαν εἰς τὴν πόλιν, ἵνα τροφὰς ἀγοράσωσιν."
+  },
+  {
+   "v": 9,
+   "en": "The Samaritan woman therefore said to him, “How is it that you, being a Jew, ask for a drink from me, a Samaritan woman?” (For Jews have no dealings with Samaritans.)",
+   "gr": "λέγει οὖν αὐτῷ ἡ γυνὴ ἡ Σαμαρῖτις· Πῶς σὺ Ἰουδαῖος ὢν παρʼ ἐμοῦ πεῖν αἰτεῖς ⸂γυναικὸς Σαμαρίτιδος οὔσης⸃; οὐ γὰρ συγχρῶνται Ἰουδαῖοι Σαμαρίταις."
+  },
+  {
+   "v": 10,
+   "en": "Jesus answered her, “If you knew the gift of God, and who it is who says to you, ‘Give me a drink,’ you would have asked him, and he would have given you living water.”",
+   "gr": "ἀπεκρίθη Ἰησοῦς καὶ εἶπεν αὐτῇ· Εἰ ᾔδεις τὴν δωρεὰν τοῦ θεοῦ καὶ τίς ἐστιν ὁ λέγων σοι· Δός μοι πεῖν, σὺ ἂν ᾔτησας αὐτὸν καὶ ἔδωκεν ἄν σοι ὕδωρ ζῶν."
+  },
+  {
+   "v": 11,
+   "en": "The woman said to him, “Sir, you have nothing to draw with, and the well is deep. So where do you get that living water?",
+   "gr": "λέγει αὐτῷ ⸂ἡ γυνή⸃· Κύριε, οὔτε ἄντλημα ἔχεις καὶ τὸ φρέαρ ἐστὶν βαθύ· πόθεν οὖν ἔχεις τὸ ὕδωρ τὸ ζῶν;"
+  },
+  {
+   "v": 12,
+   "en": "Are you greater than our father, Jacob, who gave us the well and drank from it himself, as did his children and his livestock?”",
+   "gr": "μὴ σὺ μείζων εἶ τοῦ πατρὸς ἡμῶν Ἰακώβ, ὃς ἔδωκεν ἡμῖν τὸ φρέαρ καὶ αὐτὸς ἐξ αὐτοῦ ἔπιεν καὶ οἱ υἱοὶ αὐτοῦ καὶ τὰ θρέμματα αὐτοῦ;"
+  },
+  {
+   "v": 13,
+   "en": "Jesus answered her, “Everyone who drinks of this water will thirst again,",
+   "gr": "ἀπεκρίθη Ἰησοῦς καὶ εἶπεν αὐτῇ· Πᾶς ὁ πίνων ἐκ τοῦ ὕδατος τούτου διψήσει πάλιν·"
+  },
+  {
+   "v": 14,
+   "en": "but whoever drinks of the water that I will give him will never thirst again; but the water that I will give him will become in him a well of water springing up to eternal life.”",
+   "gr": "ὃς δʼ ἂν πίῃ ἐκ τοῦ ὕδατος οὗ ἐγὼ δώσω αὐτῷ, οὐ μὴ ⸀διψήσει εἰς τὸν αἰῶνα, ἀλλὰ τὸ ὕδωρ ὃ δώσω αὐτῷ γενήσεται ἐν αὐτῷ πηγὴ ὕδατος ἁλλομένου εἰς ζωὴν αἰώνιον."
+  },
+  {
+   "v": 15,
+   "en": "The woman said to him, “Sir, give me this water, so that I don’t get thirsty, neither come all the way here to draw.”",
+   "gr": "λέγει πρὸς αὐτὸν ἡ γυνή· Κύριε, δός μοι τοῦτο τὸ ὕδωρ, ἵνα μὴ διψῶ μηδὲ ⸀διέρχωμαι ἐνθάδε ἀντλεῖν."
+  },
+  {
+   "v": 16,
+   "en": "Jesus said to her, “Go, call your husband, and come here.”",
+   "gr": "Λέγει ⸀αὐτῇ· Ὕπαγε φώνησον ⸂τὸν ἄνδρα σου⸃ καὶ ἐλθὲ ἐνθάδε."
+  },
+  {
+   "v": 17,
+   "en": "The woman answered, “I have no husband.” Jesus said to her, “You said well, ‘I have no husband,’",
+   "gr": "ἀπεκρίθη ἡ γυνὴ καὶ εἶπεν ⸀αὐτῷ· Οὐκ ἔχω ἄνδρα. λέγει αὐτῇ ὁ Ἰησοῦς· Καλῶς εἶπας ὅτι Ἄνδρα οὐκ ἔχω·"
+  },
+  {
+   "v": 18,
+   "en": "for you have had five husbands; and he whom you now have is not your husband. This you have said truly.”",
+   "gr": "πέντε γὰρ ἄνδρας ἔσχες, καὶ νῦν ὃν ἔχεις οὐκ ἔστιν σου ἀνήρ· τοῦτο ἀληθὲς εἴρηκας."
+  },
+  {
+   "v": 19,
+   "en": "The woman said to him, “Sir, I perceive that you are a prophet.",
+   "gr": "λέγει αὐτῷ ἡ γυνή· Κύριε, θεωρῶ ὅτι προφήτης εἶ σύ."
+  },
+  {
+   "v": 20,
+   "en": "Our fathers worshiped in this mountain, and you Jews say that in Jerusalem is the place where people ought to worship.”",
+   "gr": "οἱ πατέρες ἡμῶν ἐν τῷ ὄρει τούτῳ προσεκύνησαν· καὶ ὑμεῖς λέγετε ὅτι ἐν Ἱεροσολύμοις ἐστὶν ὁ τόπος ὅπου ⸂προσκυνεῖν δεῖ⸃."
+  },
+  {
+   "v": 21,
+   "en": "Jesus said to her, “Woman, believe me, the hour comes, when neither in this mountain, nor in Jerusalem, will you worship the Father.",
+   "gr": "λέγει αὐτῇ ὁ Ἰησοῦς· ⸂Πίστευέ μοι, γύναι⸃, ὅτι ἔρχεται ὥρα ὅτε οὔτε ἐν τῷ ὄρει τούτῳ οὔτε ἐν Ἱεροσολύμοις προσκυνήσετε τῷ πατρί."
+  },
+  {
+   "v": 22,
+   "en": "You worship that which you don’t know. We worship that which we know; for salvation is from the Jews.",
+   "gr": "ὑμεῖς προσκυνεῖτε ὃ οὐκ οἴδατε, ἡμεῖς προσκυνοῦμεν ὃ οἴδαμεν, ὅτι ἡ σωτηρία ἐκ τῶν Ἰουδαίων ἐστίν·"
+  },
+  {
+   "v": 23,
+   "en": "But the hour comes, and now is, when the true worshipers will worship the Father in spirit and truth, for the Father seeks such to be his worshipers.",
+   "gr": "ἀλλὰ ἔρχεται ὥρα καὶ νῦν ἐστιν, ὅτε οἱ ἀληθινοὶ προσκυνηταὶ προσκυνήσουσιν τῷ πατρὶ ἐν πνεύματι καὶ ἀληθείᾳ, καὶ γὰρ ὁ πατὴρ τοιούτους ζητεῖ τοὺς προσκυνοῦντας αὐτόν·"
+  },
+  {
+   "v": 24,
+   "en": "God is spirit, and those who worship him must worship in spirit and truth.”",
+   "gr": "πνεῦμα ὁ θεός, καὶ τοὺς προσκυνοῦντας αὐτὸν ἐν πνεύματι καὶ ἀληθείᾳ δεῖ προσκυνεῖν."
+  },
+  {
+   "v": 25,
+   "en": "The woman said to him, “I know that Messiah comes, he who is called Christ. When he has come, he will declare to us all things.”",
+   "gr": "λέγει αὐτῷ ἡ γυνή· Οἶδα ὅτι Μεσσίας ἔρχεται, ὁ λεγόμενος χριστός· ὅταν ἔλθῃ ἐκεῖνος, ἀναγγελεῖ ἡμῖν ⸀ἅπαντα."
+  },
+  {
+   "v": 26,
+   "en": "Jesus said to her, “I am he, the one who speaks to you.”",
+   "gr": "λέγει αὐτῇ ὁ Ἰησοῦς· Ἐγώ εἰμι, ὁ λαλῶν σοι."
+  },
+  {
+   "v": 27,
+   "en": "At this, his disciples came. They marveled that he was speaking with a woman; yet no one said, “What are you looking for?” or, “Why do you speak with her?”",
+   "gr": "Καὶ ἐπὶ τούτῳ ἦλθαν οἱ μαθηταὶ αὐτοῦ, καὶ ⸀ἐθαύμαζον ὅτι μετὰ γυναικὸς ἐλάλει· οὐδεὶς μέντοι εἶπεν· Τί ζητεῖς; ἢ τί λαλεῖς μετʼ αὐτῆς;"
+  },
+  {
+   "v": 28,
+   "en": "So the woman left her water pot, went away into the city, and said to the people,",
+   "gr": "ἀφῆκεν οὖν τὴν ὑδρίαν αὐτῆς ἡ γυνὴ καὶ ἀπῆλθεν εἰς τὴν πόλιν καὶ λέγει τοῖς ἀνθρώποις·"
+  },
+  {
+   "v": 29,
+   "en": "“Come, see a man who told me everything that I did. Can this be the Christ?”",
+   "gr": "Δεῦτε ἴδετε ἄνθρωπον ὃς εἶπέ μοι πάντα ⸀ὅσα ἐποίησα· μήτι οὗτός ἐστιν ὁ χριστός;"
+  },
+  {
+   "v": 30,
+   "en": "They went out of the city, and were coming to him.",
+   "gr": "ἐξῆλθον ἐκ τῆς πόλεως καὶ ἤρχοντο πρὸς αὐτόν."
+  },
+  {
+   "v": 31,
+   "en": "In the meanwhile, the disciples urged him, saying, “Rabbi, eat.”",
+   "gr": "⸀Ἐν τῷ μεταξὺ ἠρώτων αὐτὸν οἱ μαθηταὶ λέγοντες· Ῥαββί, φάγε."
+  },
+  {
+   "v": 32,
+   "en": "But he said to them, “I have food to eat that you don’t know about.”",
+   "gr": "ὁ δὲ εἶπεν αὐτοῖς· Ἐγὼ βρῶσιν ἔχω φαγεῖν ἣν ὑμεῖς οὐκ οἴδατε."
+  },
+  {
+   "v": 33,
+   "en": "The disciples therefore said to one another, “Has anyone brought him something to eat?”",
+   "gr": "ἔλεγον οὖν οἱ μαθηταὶ πρὸς ἀλλήλους· Μή τις ἤνεγκεν αὐτῷ φαγεῖν;"
+  },
+  {
+   "v": 34,
+   "en": "Jesus said to them, “My food is to do the will of him who sent me and to accomplish his work.",
+   "gr": "λέγει αὐτοῖς ὁ Ἰησοῦς· Ἐμὸν βρῶμά ἐστιν ἵνα ⸀ποιήσω τὸ θέλημα τοῦ πέμψαντός με καὶ τελειώσω αὐτοῦ τὸ ἔργον."
+  },
+  {
+   "v": 35,
+   "en": "Don’t you say, ‘There are yet four months until the harvest?’ Behold, I tell you, lift up your eyes and look at the fields, that they are white for harvest already.",
+   "gr": "οὐχ ὑμεῖς λέγετε ὅτι Ἔτι τετράμηνός ἐστιν καὶ ὁ θερισμὸς ἔρχεται; ἰδοὺ λέγω ὑμῖν, ἐπάρατε τοὺς ὀφθαλμοὺς ὑμῶν καὶ θεάσασθε τὰς χώρας ὅτι λευκαί εἰσιν πρὸς θερισμόν· ἤδη"
+  },
+  {
+   "v": 36,
+   "en": "He who reaps receives wages and gathers fruit to eternal life; that both he who sows and he who reaps may rejoice together.",
+   "gr": "⸀ὁ θερίζων μισθὸν λαμβάνει καὶ συνάγει καρπὸν εἰς ζωὴν αἰώνιον, ⸀ἵνα ὁ σπείρων ὁμοῦ χαίρῃ καὶ ὁ θερίζων."
+  },
+  {
+   "v": 37,
+   "en": "For in this the saying is true, ‘One sows, and another reaps.’",
+   "gr": "ἐν γὰρ τούτῳ ὁ λόγος ⸀ἐστὶν ἀληθινὸς ὅτι Ἄλλος ἐστὶν ὁ σπείρων καὶ ἄλλος ὁ θερίζων·"
+  },
+  {
+   "v": 38,
+   "en": "I sent you to reap that for which you haven’t labored. Others have labored, and you have entered into their labor.”",
+   "gr": "ἐγὼ ἀπέστειλα ὑμᾶς θερίζειν ὃ οὐχ ὑμεῖς κεκοπιάκατε· ἄλλοι κεκοπιάκασιν, καὶ ὑμεῖς εἰς τὸν κόπον αὐτῶν εἰσεληλύθατε."
+  },
+  {
+   "v": 39,
+   "en": "From that city many of the Samaritans believed in him because of the word of the woman, who testified, “He told me everything that I did.”",
+   "gr": "Ἐκ δὲ τῆς πόλεως ἐκείνης πολλοὶ ἐπίστευσαν εἰς αὐτὸν τῶν Σαμαριτῶν διὰ τὸν λόγον τῆς γυναικὸς μαρτυρούσης ὅτι Εἶπέν μοι πάντα ⸀ἃ ἐποίησα."
+  },
+  {
+   "v": 40,
+   "en": "So when the Samaritans came to him, they begged him to stay with them. He stayed there two days.",
+   "gr": "ὡς οὖν ἦλθον πρὸς αὐτὸν οἱ Σαμαρῖται, ἠρώτων αὐτὸν μεῖναι παρʼ αὐτοῖς· καὶ ἔμεινεν ἐκεῖ δύο ἡμέρας."
+  },
+  {
+   "v": 41,
+   "en": "Many more believed because of his word.",
+   "gr": "καὶ πολλῷ πλείους ἐπίστευσαν διὰ τὸν λόγον αὐτοῦ,"
+  },
+  {
+   "v": 42,
+   "en": "They said to the woman, “Now we believe, not because of your speaking; for we have heard for ourselves, and know that this is indeed the Christ, the Savior of the world.”",
+   "gr": "τῇ τε γυναικὶ ἔλεγον ὅτι Οὐκέτι διὰ τὴν σὴν λαλιὰν πιστεύομεν· αὐτοὶ γὰρ ἀκηκόαμεν, καὶ οἴδαμεν ὅτι οὗτός ἐστιν ἀληθῶς ὁ σωτὴρ τοῦ ⸀κόσμου."
+  },
+  {
+   "v": 43,
+   "en": "After the two days he went out from there and went into Galilee.",
+   "gr": "Μετὰ δὲ τὰς δύο ἡμέρας ἐξῆλθεν ⸀ἐκεῖθεν εἰς τὴν Γαλιλαίαν·"
+  },
+  {
+   "v": 44,
+   "en": "For Jesus himself testified that a prophet has no honor in his own country.",
+   "gr": "αὐτὸς ⸀γὰρ Ἰησοῦς ἐμαρτύρησεν ὅτι προφήτης ἐν τῇ ἰδίᾳ πατρίδι τιμὴν οὐκ ἔχει."
+  },
+  {
+   "v": 45,
+   "en": "So when he came into Galilee, the Galileans received him, having seen all the things that he did in Jerusalem at the feast, for they also went to the feast.",
+   "gr": "ὅτε οὖν ἦλθεν εἰς τὴν Γαλιλαίαν, ἐδέξαντο αὐτὸν οἱ Γαλιλαῖοι, πάντα ἑωρακότες ⸀ὅσα ἐποίησεν ἐν Ἱεροσολύμοις ἐν τῇ ἑορτῇ, καὶ αὐτοὶ γὰρ ἦλθον εἰς τὴν ἑορτήν."
+  },
+  {
+   "v": 46,
+   "en": "Jesus came therefore again to Cana of Galilee, where he made the water into wine. There was a certain nobleman whose son was sick at Capernaum.",
+   "gr": "Ἦλθεν οὖν ⸀πάλιν εἰς τὴν Κανὰ τῆς Γαλιλαίας, ὅπου ἐποίησεν τὸ ὕδωρ οἶνον. καὶ ἦν τις βασιλικὸς οὗ ὁ υἱὸς ἠσθένει ἐν Καφαρναούμ."
+  },
+  {
+   "v": 47,
+   "en": "When he heard that Jesus had come out of Judea into Galilee, he went to him, and begged him that he would come down and heal his son, for he was at the point of death.",
+   "gr": "οὗτος ἀκούσας ὅτι Ἰησοῦς ἥκει ἐκ τῆς Ἰουδαίας εἰς τὴν Γαλιλαίαν ἀπῆλθεν πρὸς αὐτὸν καὶ ⸀ἠρώτα ἵνα καταβῇ καὶ ἰάσηται αὐτοῦ τὸν υἱόν, ἤμελλεν γὰρ ἀποθνῄσκειν."
+  },
+  {
+   "v": 48,
+   "en": "Jesus therefore said to him, “Unless you see signs and wonders, you will in no way believe.”",
+   "gr": "εἶπεν οὖν ὁ Ἰησοῦς πρὸς αὐτόν· Ἐὰν μὴ σημεῖα καὶ τέρατα ἴδητε, οὐ μὴ πιστεύσητε."
+  },
+  {
+   "v": 49,
+   "en": "The nobleman said to him, “Sir, come down before my child dies.”",
+   "gr": "λέγει πρὸς αὐτὸν ὁ βασιλικός· Κύριε, κατάβηθι πρὶν ἀποθανεῖν τὸ παιδίον μου."
+  },
+  {
+   "v": 50,
+   "en": "Jesus said to him, “Go your way. Your son lives.” The man believed the word that Jesus spoke to him, and he went his way.",
+   "gr": "λέγει αὐτῷ ὁ Ἰησοῦς· Πορεύου· ὁ υἱός σου ζῇ. ⸀ἐπίστευσεν ὁ ἄνθρωπος τῷ λόγῳ ⸀ὃν εἶπεν αὐτῷ ὁ Ἰησοῦς καὶ ἐπορεύετο."
+  },
+  {
+   "v": 51,
+   "en": "As he was now going down, his servants met him and reported, saying “Your child lives!”",
+   "gr": "ἤδη δὲ αὐτοῦ καταβαίνοντος οἱ δοῦλοι αὐτοῦ ⸀ὑπήντησαν ⸀αὐτῷ λέγοντες ὅτι ὁ παῖς ⸀αὐτοῦ ζῇ."
+  },
+  {
+   "v": 52,
+   "en": "So he inquired of them the hour when he began to get better. They said therefore to him, “Yesterday at the seventh hour, the fever left him.”",
+   "gr": "ἐπύθετο οὖν ⸂τὴν ὥραν παρʼ αὐτῶν⸃ ἐν ᾗ κομψότερον ἔσχεν· ⸂εἶπαν οὖν⸃ αὐτῷ ὅτι ⸀Ἐχθὲς ὥραν ἑβδόμην ἀφῆκεν αὐτὸν ὁ πυρετός."
+  },
+  {
+   "v": 53,
+   "en": "So the father knew that it was at that hour in which Jesus said to him, “Your son lives.” He believed, as did his whole house.",
+   "gr": "ἔγνω οὖν ὁ πατὴρ ⸀ὅτι ἐκείνῃ τῇ ὥρᾳ ἐν ᾗ εἶπεν αὐτῷ ὁ ⸀Ἰησοῦς· Ὁ υἱός σου ζῇ, καὶ ἐπίστευσεν αὐτὸς καὶ ἡ οἰκία αὐτοῦ ὅλη."
+  },
+  {
+   "v": 54,
+   "en": "This is again the second sign that Jesus did, having come out of Judea into Galilee.",
+   "gr": "τοῦτο ⸀δὲ πάλιν δεύτερον σημεῖον ἐποίησεν ὁ Ἰησοῦς ἐλθὼν ἐκ τῆς Ἰουδαίας εἰς τὴν Γαλιλαίαν."
+  }
+ ],
+ "sourcing": "sourced"
+}

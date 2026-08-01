@@ -1,0 +1,125 @@
+{
+ "id": "tanakh--psalms--94",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 94,
+ "verses": [
+  {
+   "v": 1,
+   "he": "אֵל־נְקָמ֥וֹת יְהוָ֑ה אֵ֖ל נְקָמ֣וֹת הוֹפִֽיַע׃",
+   "en": "O LORD, Thou God to whom vengeance belongeth, Thou God to whom vengeance belongeth, shine forth."
+  },
+  {
+   "v": 2,
+   "he": "הִ֭נָּשֵׂא שֹׁפֵ֣ט הָאָ֑רֶץ הָשֵׁ֥ב גְּ֝מ֗וּל עַל־גֵּאִֽים׃",
+   "en": "Lift up Thyself, Thou Judge of the earth; Render to the proud their recompense."
+  },
+  {
+   "v": 3,
+   "he": "עַד־מָתַ֖י רְשָׁעִ֥ים׀ יְהוָ֑ה עַד־מָ֝תַ֗י רְשָׁעִ֥ים יַעֲלֹֽזוּ׃",
+   "en": "LORD, how long shall the wicked, How long shall the wicked exult?"
+  },
+  {
+   "v": 4,
+   "he": "יַבִּ֣יעוּ יְדַבְּר֣וּ עָתָ֑ק יִֽ֝תְאַמְּר֗וּ כָּל־פֹּ֥עֲלֵי אָֽוֶן׃",
+   "en": "They gush out, they speak arrogancy; All the workers of iniquity bear themselves loftily."
+  },
+  {
+   "v": 5,
+   "he": "עַמְּךָ֣ יְהוָ֣ה יְדַכְּא֑וּ וְֽנַחֲלָתְךָ֥ יְעַנּֽוּ׃",
+   "en": "They crush Thy people, O LORD, And afflict Thy heritage."
+  },
+  {
+   "v": 6,
+   "he": "אַ֭לְמָנָה וְגֵ֣ר יַהֲרֹ֑גוּ וִֽיתוֹמִ֣ים יְרַצֵּֽחוּ׃",
+   "en": "They slay the widow and the stranger, And murder the fatherless."
+  },
+  {
+   "v": 7,
+   "he": "וַ֭יֹּ֣אמְרוּ לֹ֣א יִרְאֶה־יָּ֑הּ וְלֹא־יָ֝בִ֗ין אֱלֹהֵ֥י יַעֲקֹֽב׃",
+   "en": "And they say: 'The LORD will not see, Neither will the God of Jacob give heed.'"
+  },
+  {
+   "v": 8,
+   "he": "בִּ֭ינוּ בֹּעֲרִ֣ים בָּעָ֑ם וּ֝כְסִילִ֗ים מָתַ֥י תַּשְׂכִּֽילוּ׃",
+   "en": "Consider, ye brutish among the people; And ye fools, when will ye understand?"
+  },
+  {
+   "v": 9,
+   "he": "הֲנֹ֣טַֽע אֹ֖זֶן הֲלֹ֣א יִשְׁמָ֑ע אִֽם־יֹ֥צֵֽר עַ֝֗יִן הֲלֹ֣א יַבִּֽיט׃",
+   "en": "He that planted the ear, shall He not hear? He that formed the eye, shall He not see?"
+  },
+  {
+   "v": 10,
+   "he": "הֲיֹסֵ֣ר גּ֭וֹיִם הֲלֹ֣א יוֹכִ֑יחַ הַֽמְלַמֵּ֖ד אָדָ֣ם דָּֽעַת׃",
+   "en": "He that instructeth nations, shall not He correct? Even He that teacheth man knowledge?"
+  },
+  {
+   "v": 11,
+   "he": "יְֽהוָ֗ה יֹ֭דֵעַ מַחְשְׁב֣וֹת אָדָ֑ם כִּי־הֵ֥מָּה הָֽבֶל׃",
+   "en": "The LORD knoweth the thoughts of man, That they are vanity."
+  },
+  {
+   "v": 12,
+   "he": "אַשְׁרֵ֤י׀ הַגֶּ֣בֶר אֲשֶׁר־תְּיַסְּרֶ֣נּוּ יָּ֑הּ וּֽמִתּוֹרָתְךָ֥ תְלַמְּדֶֽנּוּ׃",
+   "en": "Happy is the man whom Thou instructest, O LORD, And teachest out of Thy law;"
+  },
+  {
+   "v": 13,
+   "he": "לְהַשְׁקִ֣יט ל֖וֹ מִ֣ימֵי רָ֑ע עַ֤ד יִכָּרֶ֖ה לָרָשָׁ֣ע שָֽׁחַת׃",
+   "en": "That Thou mayest give him rest from the days of evil, Until the pit be digged for the wicked."
+  },
+  {
+   "v": 14,
+   "he": "כִּ֤י׀ לֹא־יִטֹּ֣שׁ יְהוָ֣ה עַמּ֑וֹ וְ֝נַחֲלָת֗וֹ לֹ֣א יַעֲזֹֽב׃",
+   "en": "For the LORD will not cast off His people, Neither will He forsake His inheritance."
+  },
+  {
+   "v": 15,
+   "he": "כִּֽי־עַד־צֶ֭דֶק יָשׁ֣וּב מִשְׁפָּ֑ט וְ֝אַחֲרָ֗יו כָּל־יִשְׁרֵי־לֵֽב׃",
+   "en": "For right shall return unto justice, And all the upright in heart shall follow it."
+  },
+  {
+   "v": 16,
+   "he": "מִֽי־יָק֣וּם לִ֭י עִם־מְרֵעִ֑ים מִֽי־יִתְיַצֵּ֥ב לִ֝י עִם־פֹּ֥עֲלֵי אָֽוֶן׃",
+   "en": "Who will rise up for me against the evil-doers? Who will stand up for me against the workers of iniquity?"
+  },
+  {
+   "v": 17,
+   "he": "לוּלֵ֣י יְ֭הוָה עֶזְרָ֣תָה לִּ֑י כִּמְעַ֓ט׀ שָֽׁכְנָ֖ה דוּמָ֣ה נַפְשִֽׁי׃",
+   "en": "Unless the LORD had been my help, My soul had soon dwelt in silence."
+  },
+  {
+   "v": 18,
+   "he": "אִם־אָ֭מַרְתִּי מָ֣טָה רַגְלִ֑י חַסְדְּךָ֥ יְ֝הוָ֗ה יִסְעָדֵֽנִי׃",
+   "en": "If I say: 'My foot slippeth', Thy mercy, O LORD, holdeth me up."
+  },
+  {
+   "v": 19,
+   "he": "בְּרֹ֣ב שַׂרְעַפַּ֣י בְּקִרְבִּ֑י תַּ֝נְחוּמֶ֗יךָ יְֽשַׁעַשְׁע֥וּ נַפְשִֽׁי׃",
+   "en": "When my cares are many within me, Thy comforts delight my soul."
+  },
+  {
+   "v": 20,
+   "he": "הַֽ֭יְחָבְרְךָ כִּסֵּ֣א הַוּ֑וֹת יֹצֵ֖ר עָמָ֣ל עֲלֵי־חֹֽק׃",
+   "en": "Shall the seat of wickedness have fellowship with Thee, Which frameth mischief by statute?"
+  },
+  {
+   "v": 21,
+   "he": "יָ֭גוֹדּוּ עַל־נֶ֣פֶשׁ צַדִּ֑יק וְדָ֖ם נָקִ֣י יַרְשִֽׁיעוּ׃",
+   "en": "They gather themselves together against the soul of the righteous, And condemn innocent blood."
+  },
+  {
+   "v": 22,
+   "he": "וַיְהִ֬י יְהוָ֣ה לִ֣י לְמִשְׂגָּ֑ב וֵ֝אלֹהַ֗י לְצ֣וּר מַחְסִֽי׃",
+   "en": "But the LORD hath been my high tower, And my God the rock of my refuge."
+  },
+  {
+   "v": 23,
+   "he": "וַיָּ֤שֶׁב עֲלֵיהֶ֨ם׀ אֶת־אוֹנָ֗ם וּבְרָעָתָ֥ם יַצְמִיתֵ֑ם יַ֝צְמִיתֵ֗ם יְהוָ֥ה אֱלֹהֵֽינוּ׃",
+   "en": "And He hath brought upon them their own iniquity, And will cut them off in their own evil; The LORD our God will cut them off."
+  }
+ ],
+ "sourcing": "sourced"
+}

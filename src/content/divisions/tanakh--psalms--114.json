@@ -1,0 +1,50 @@
+{
+ "id": "tanakh--psalms--114",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 114,
+ "verses": [
+  {
+   "v": 1,
+   "he": "בְּצֵ֣את יִ֭שְׂרָאֵל מִמִּצְרָ֑יִם בֵּ֥ית יַ֝עֲקֹ֗ב מֵעַ֥ם לֹעֵֽז׃",
+   "en": "When Israel came forth out of Egypt, The house of Jacob from a people of strange language;"
+  },
+  {
+   "v": 2,
+   "he": "הָיְתָ֣ה יְהוּדָ֣ה לְקָדְשׁ֑וֹ יִ֝שְׂרָאֵ֗ל מַמְשְׁלוֹתָֽיו׃",
+   "en": "Judah became His sanctuary, Israel His dominion."
+  },
+  {
+   "v": 3,
+   "he": "הַיָּ֣ם רָ֭אָה וַיָּנֹ֑ס הַ֝יַּרְדֵּ֗ן יִסֹּ֥ב לְאָחֽוֹר׃",
+   "en": "The sea saw it, and fled; The Jordan turned backward."
+  },
+  {
+   "v": 4,
+   "he": "הֶֽ֭הָרִים רָקְד֣וּ כְאֵילִ֑ים גְּ֝בָע֗וֹת כִּבְנֵי־צֹֽאן׃",
+   "en": "The mountains skipped like rams, The hills like young sheep."
+  },
+  {
+   "v": 5,
+   "he": "מַה־לְּךָ֣ הַ֭יָּם כִּ֣י תָנ֑וּס הַ֝יַּרְדֵּ֗ן תִּסֹּ֥ב לְאָחֽוֹר׃",
+   "en": "What aileth thee, O thou sea, that thou fleest? Thou Jordan, that thou turnest backward?"
+  },
+  {
+   "v": 6,
+   "he": "הֶֽ֭הָרִים תִּרְקְד֣וּ כְאֵילִ֑ים גְּ֝בָע֗וֹת כִּבְנֵי־צֹֽאן׃",
+   "en": "Ye mountains, that ye skip like rams; Ye hills, like young sheep?"
+  },
+  {
+   "v": 7,
+   "he": "מִלִּפְנֵ֣י אָ֭דוֹן ח֣וּלִי אָ֑רֶץ מִ֝לִּפְנֵ֗י אֱל֣וֹהַּ יַעֲקֹֽב׃",
+   "en": "Tremble, thou earth, at the presence of the Lord, At the presence of the God of Jacob;"
+  },
+  {
+   "v": 8,
+   "he": "הַהֹפְכִ֣י הַצּ֣וּר אֲגַם־מָ֑יִם חַ֝לָּמִ֗ישׁ לְמַעְיְנוֹ־מָֽיִם׃",
+   "en": "Who turned the rock into a pool of water, The flint into a fountain of waters."
+  }
+ ],
+ "sourcing": "sourced"
+}

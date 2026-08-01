@@ -1,0 +1,45 @@
+{
+ "id": "tanakh--psalms--110",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 110,
+ "verses": [
+  {
+   "v": 1,
+   "he": "לְדָוִ֗ד מִ֫זְמ֥וֹר נְאֻ֤ם יְהוָ֨ה׀ לַֽאדֹנִ֗י שֵׁ֥ב לִֽימִינִ֑י עַד־אָשִׁ֥ית אֹ֝יְבֶ֗יךָ הֲדֹ֣ם לְרַגְלֶֽיךָ׃",
+   "en": "A Psalm of David. The LORD saith unto my lord: ‘Sit thou at My right hand, Until I make thine enemies thy footstool.'"
+  },
+  {
+   "v": 2,
+   "he": "מַטֵּֽה־עֻזְּךָ֗ יִשְׁלַ֣ח יְ֭הוָה מִצִּיּ֑וֹן רְ֝דֵ֗ה בְּקֶ֣רֶב אֹיְבֶֽיךָ׃",
+   "en": "The rod of Thy strength the LORD will send out of Zion: 'Rule thou in the midst of thine enemies.'"
+  },
+  {
+   "v": 3,
+   "he": "עַמְּךָ֣ נְדָבֹת֮ בְּי֪וֹם חֵ֫ילֶ֥ךָ בְּֽהַדְרֵי־קֹ֖דֶשׁ מֵרֶ֣חֶם מִשְׁחָ֑ר לְ֝ךָ֗ טַ֣ל יַלְדֻתֶֽיךָ׃",
+   "en": "Thy people offer themselves willingly in the day of thy warfare; In adornments of holiness, from the womb of the dawn, Thine is the dew of thy youth."
+  },
+  {
+   "v": 4,
+   "he": "נִשְׁבַּ֤ע יְהוָ֨ה׀ וְלֹ֥א יִנָּחֵ֗ם אַתָּֽה־כֹהֵ֥ן לְעוֹלָ֑ם עַל־דִּ֝בְרָתִ֗י מַלְכִּי־צֶֽדֶק׃",
+   "en": "The LORD hath sworn, and will not repent: 'Thou art a priest for ever After the manner of Melchizedek.'"
+  },
+  {
+   "v": 5,
+   "he": "אֲדֹנָ֥י עַל־יְמִֽינְךָ֑ מָחַ֖ץ בְּיוֹם־אַפּ֣וֹ מְלָכִֽים׃",
+   "en": "The Lord at thy right hand Doth crush kings in the day of His wrath."
+  },
+  {
+   "v": 6,
+   "he": "יָדִ֣ין בַּ֭גּוֹיִם מָלֵ֣א גְוִיּ֑וֹת מָ֥חַץ רֹ֝֗אשׁ עַל־אֶ֥רֶץ רַבָּֽה׃",
+   "en": "He will judge among the nations; He filleth it with the dead bodies, He crusheth the head over a wide land."
+  },
+  {
+   "v": 7,
+   "he": "מִ֭נַּחַל בַּדֶּ֣רֶךְ יִשְׁתֶּ֑ה עַל־כֵּ֝֗ן יָרִ֥ים רֹֽאשׁ׃",
+   "en": "He will drink of the brook in the way; Therefore will he lift up the head."
+  }
+ ],
+ "sourcing": "sourced"
+}

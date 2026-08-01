@@ -1,0 +1,55 @@
+{
+ "id": "tanakh--psalms--3",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 3,
+ "verses": [
+  {
+   "v": 1,
+   "he": "מִזְמ֥וֹר לְדָוִ֑ד בְּ֝בָרְח֗וֹ מִפְּנֵ֤י׀ אַבְשָׁל֬וֹם בְּנֽוֹ׃",
+   "en": "A Psalm of David, when he fled from Absalom his son."
+  },
+  {
+   "v": 2,
+   "he": "יְ֭הוָה מָֽה־רַבּ֣וּ צָרָ֑י רַ֝בִּ֗ים קָמִ֥ים עָלָֽי׃",
+   "en": "LORD, how many are mine adversaries become! Many are they that rise up against me."
+  },
+  {
+   "v": 3,
+   "he": "רַבִּים֮ אֹמְרִ֪ים לְנַ֫פְשִׁ֥י אֵ֤ין יְֽשׁוּעָ֓תָה לּ֬וֹ בֵֽאלֹהִ֬ים סֶֽלָה׃",
+   "en": "Many there are that say of my soul: 'There is no salvation for him in God.' Selah"
+  },
+  {
+   "v": 4,
+   "he": "וְאַתָּ֣ה יְ֭הוָה מָגֵ֣ן בַּעֲדִ֑י כְּ֝בוֹדִ֗י וּמֵרִ֥ים רֹאשִֽׁי׃",
+   "en": "But thou, O LORD, art a shield about me; My glory, and the lifter up of my head."
+  },
+  {
+   "v": 5,
+   "he": "ק֭וֹלִי אֶל־יְהוָ֣ה אֶקְרָ֑א וַיַּֽעֲנֵ֨נִי מֵהַ֖ר קָדְשׁ֣וֹ סֶֽלָה׃",
+   "en": "With my voice I call unto the LORD, And He answereth me out of His holy mountain. Selah"
+  },
+  {
+   "v": 6,
+   "he": "אֲנִ֥י שָׁכַ֗בְתִּי וָֽאִ֫ישָׁ֥נָה הֱקִיצ֑וֹתִי כִּ֖י יְהוָ֣ה יִסְמְכֵֽנִי׃",
+   "en": "I lay me down, and I sleep; I awake, for the LORD sustaineth me."
+  },
+  {
+   "v": 7,
+   "he": "לֹֽא־אִ֭ירָא מֵרִבְב֥וֹת עָ֑ם אֲשֶׁ֥ר סָ֝בִ֗יב שָׁ֣תוּ עָלָֽי׃",
+   "en": "I am not afraid of ten thousands of people, That have set themselves against me round about."
+  },
+  {
+   "v": 8,
+   "he": "ק֘וּמָ֤ה יְהוָ֨ה׀ הוֹשִׁ֘יעֵ֤נִי אֱלֹהַ֗י כִּֽי־הִכִּ֣יתָ אֶת־כָּל־אֹיְבַ֣י לֶ֑חִי שִׁנֵּ֖י רְשָׁעִ֣ים שִׁבַּֽרְתָּ׃",
+   "en": "Arise, O LORD; save me, O my God; For Thou hast smitten all mine enemies upon the cheek, Thou hast broken the teeth of the wicked."
+  },
+  {
+   "v": 9,
+   "he": "לַיהוָ֥ה הַיְשׁוּעָ֑ה עַֽל־עַמְּךָ֖ בִרְכָתֶ֣ךָ סֶּֽלָה׃",
+   "en": "Salvation belongeth unto the LORD; Thy blessing be upon Thy people. Selah"
+  }
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,834 @@
+{
+ "id": "quran--6",
+ "work": "quran",
+ "n": 6,
+ "slug": "6",
+ "verses": [
+  {
+   "v": 1,
+   "ar": "ٱلۡحَمۡدُ لِلَّهِ ٱلَّذِي خَلَقَ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَ وَجَعَلَ ٱلظُّلُمَٰتِ وَٱلنُّورَۖ ثُمَّ ٱلَّذِينَ كَفَرُواْ بِرَبِّهِمۡ يَعۡدِلُونَ",
+   "en": "Praise be to Allah, Who hath created the heavens and the earth, and hath appointed darkness and light. Yet those who disbelieve ascribe rivals unto their Lord"
+  },
+  {
+   "v": 2,
+   "ar": "هُوَ ٱلَّذِي خَلَقَكُم مِّن طِينࣲ ثُمَّ قَضَىٰٓ أَجَلࣰ اۖ وَأَجَلࣱ مُّسَمًّى عِندَهُۥۖ ثُمَّ أَنتُمۡ تَمۡتَرُونَ",
+   "en": "He it is Who hath created you from clay, and hath decreed a term for you. A term is fixed with Him. Yet still ye doubt"
+  },
+  {
+   "v": 3,
+   "ar": "وَهُوَ ٱللَّهُ فِي ٱلسَّمَٰوَٰتِ وَفِي ٱلۡأَرۡضِ يَعۡلَمُ سِرَّكُمۡ وَجَهۡرَكُمۡ وَيَعۡلَمُ مَا تَكۡسِبُونَ",
+   "en": "He is Allah in the heavens and in the earth. He knoweth both your secret and your utterance, and He knoweth what ye earn"
+  },
+  {
+   "v": 4,
+   "ar": "وَمَا تَأۡتِيهِم مِّنۡ ءَايَةࣲ مِّنۡ ءَايَٰتِ رَبِّهِمۡ إِلَّا كَانُواْ عَنۡهَا مُعۡرِضِينَ",
+   "en": "Never came there unto them a revelation of the revelations of Allah but they did turn away from it"
+  },
+  {
+   "v": 5,
+   "ar": "فَقَدۡ كَذَّبُواْ بِٱلۡحَقِّ لَمَّا جَآءَهُمۡ فَسَوۡفَ يَأۡتِيهِمۡ أَنۢبَٰٓؤُاْ مَا كَانُواْ بِهِۦ يَسۡتَهۡزِءُونَ",
+   "en": "And they denied the truth when it came unto them. But there will come unto them the tidings of that which they used to deride"
+  },
+  {
+   "v": 6,
+   "ar": "أَلَمۡ يَرَوۡاْ كَمۡ أَهۡلَكۡنَا مِن قَبۡلِهِم مِّن قَرۡنࣲ مَّكَّنَّٰهُمۡ فِي ٱلۡأَرۡضِ مَا لَمۡ نُمَكِّن لَّكُمۡ وَأَرۡسَلۡنَا ٱلسَّمَآءَ عَلَيۡهِم مِّدۡرَارࣰ ا وَجَعَلۡنَا ٱلۡأَنۡهَٰرَ تَجۡرِي مِن تَحۡتِهِمۡ فَأَهۡلَكۡنَٰهُم بِذُنُوبِهِمۡ وَأَنشَأۡنَا مِنۢ بَعۡدِهِمۡ قَرۡنًا ءَاخَرِينَ",
+   "en": "See they not how many a generation We destroyed before them, whom We had established in the earth more firmly than We have established you, and We shed on them abundant showers from the sky, and made the rivers flow beneath them. Yet we destroyed them for their sins, and created after them another generation"
+  },
+  {
+   "v": 7,
+   "ar": "وَلَوۡ نَزَّلۡنَا عَلَيۡكَ كِتَٰبࣰ ا فِي قِرۡطَاسࣲ فَلَمَسُوهُ بِأَيۡدِيهِمۡ لَقَالَ ٱلَّذِينَ كَفَرُوٓاْ إِنۡ هَٰذَآ إِلَّا سِحۡرࣱ مُّبِينࣱ‏",
+   "en": "Had we sent down unto thee (Muhammad) (actual) writing upon parchment, so that they could feel it with their hands, those who disbelieve would have said: This is naught else than mere magic"
+  },
+  {
+   "v": 8,
+   "ar": "وَقَالُواْ لَوۡلَآ أُنزِلَ عَلَيۡهِ مَلَكࣱۖ وَلَوۡ أَنزَلۡنَا مَلَكࣰ ا لَّقُضِيَ ٱلۡأَمۡرُ ثُمَّ لَا يُنظَرُونَ",
+   "en": "They say: Why hath not an angel been sent down unto him? If We sent down an angel, then the matter would be judged; no further time would be allowed them (for reflection)"
+  },
+  {
+   "v": 9,
+   "ar": "وَلَوۡ جَعَلۡنَٰهُ مَلَكࣰ ا لَّجَعَلۡنَٰهُ رَجُلࣰ ا وَلَلَبَسۡنَا عَلَيۡهِم مَّا يَلۡبِسُونَ",
+   "en": "Had we appointed him (Our messenger) an angel, We assuredly had made him (as) a man (that he might speak to men); and (thus) obscured for them (the truth) they (now) obscure"
+  },
+  {
+   "v": 10,
+   "ar": "وَلَقَدِ ٱسۡتُهۡزِئَ بِرُسُلࣲ مِّن قَبۡلِكَ فَحَاقَ بِٱلَّذِينَ سَخِرُواْ مِنۡهُم مَّا كَانُواْ بِهِۦ يَسۡتَهۡزِءُونَ",
+   "en": "Messengers (of Allah) have been derided before thee, but that whereat they scoffed surrounded such of them as did deride"
+  },
+  {
+   "v": 11,
+   "ar": "قُلۡ سِيرُواْ فِي ٱلۡأَرۡضِ ثُمَّ ٱنظُرُواْ كَيۡفَ كَانَ عَٰقِبَةُ ٱلۡمُكَذِّبِينَ",
+   "en": "Say (unto the disbelievers): Travel in the land, and see the nature of the consequence for the rejecters"
+  },
+  {
+   "v": 12,
+   "ar": "قُل لِّمَن مَّا فِي ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِۖ قُل لِّلَّهِۚ كَتَبَ عَلَىٰ نَفۡسِهِ ٱلرَّحۡمَةَۚ لَيَجۡمَعَنَّكُمۡ إِلَىٰ يَوۡمِ ٱلۡقِيَٰمَةِ لَا رَيۡبَ فِيهِۚ ٱلَّذِينَ خَسِرُوٓاْ أَنفُسَهُمۡ فَهُمۡ لَا يُؤۡمِنُونَ",
+   "en": "Say: Unto whom belongeth whatsoever is in the heavens and the earth? Say: Unto Allah. He hath prescribed for Himself mercy, that He may bring you all together to the Day of Resurrection whereof there is no doubt. Those who ruin their souls will not believe"
+  },
+  {
+   "v": 13,
+   "ar": "۞وَلَهُۥ مَا سَكَنَ فِي ٱلَّيۡلِ وَٱلنَّهَارِۚ وَهُوَ ٱلسَّمِيعُ ٱلۡعَلِيمُ",
+   "en": "Unto Him belongeth whatsoever resteth in the night and the day. He is the Hearer, the Knower"
+  },
+  {
+   "v": 14,
+   "ar": "قُلۡ أَغَيۡرَ ٱللَّهِ أَتَّخِذُ وَلِيࣰّ ا فَاطِرِ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِ وَهُوَ يُطۡعِمُ وَلَا يُطۡعَمُۗ قُلۡ إِنِّيٓ أُمِرۡتُ أَنۡ أَكُونَ أَوَّلَ مَنۡ أَسۡلَمَۖ وَلَا تَكُونَنَّ مِنَ ٱلۡمُشۡرِكِينَ",
+   "en": "Say: Shall I choose for a protecting friend other than Allah, the Originator of the heavens and the earth, Who feedeth and is never fed? Say: I am ordered to be the first to surrender (unto Him). And be not thou (O Muhammad) of the idolaters"
+  },
+  {
+   "v": 15,
+   "ar": "قُلۡ إِنِّيٓ أَخَافُ إِنۡ عَصَيۡتُ رَبِّي عَذَابَ يَوۡمٍ عَظِيمࣲ‏",
+   "en": "Say: I fear, if I rebel against my Lord, the retribution of an Awful Day"
+  },
+  {
+   "v": 16,
+   "ar": "مَّن يُصۡرَفۡ عَنۡهُ يَوۡمَئِذࣲ فَقَدۡ رَحِمَهُۥۚ وَذَٰلِكَ ٱلۡفَوۡزُ ٱلۡمُبِينُ",
+   "en": "He from whom (such retribution) is averted on that day, (Allah) hath in truth had mercy on him. That will be the signal triumph"
+  },
+  {
+   "v": 17,
+   "ar": "وَإِن يَمۡسَسۡكَ ٱللَّهُ بِضُرࣲّ فَلَا كَاشِفَ لَهُۥٓ إِلَّا هُوَۖ وَإِن يَمۡسَسۡكَ بِخَيۡرࣲ فَهُوَ عَلَىٰ كُلِّ شَيۡءࣲ قَدِيرࣱ‏",
+   "en": "If Allah touch thee with affliction, there is none that can relieve therefrom save Him, and if He touch thee with good fortune (there is none that can impair it); for He is Able to do all things"
+  },
+  {
+   "v": 18,
+   "ar": "وَهُوَ ٱلۡقَاهِرُ فَوۡقَ عِبَادِهِۦۚ وَهُوَ ٱلۡحَكِيمُ ٱلۡخَبِيرُ",
+   "en": "He is the Omnipotent over His slaves, and He is the Wise, the Knower"
+  },
+  {
+   "v": 19,
+   "ar": "قُلۡ أَيُّ شَيۡءٍ أَكۡبَرُ شَهَٰدَةࣰۖ قُلِ ٱللَّهُۖ شَهِيدُۢ بَيۡنِي وَبَيۡنَكُمۡۚ وَأُوحِيَ إِلَيَّ هَٰذَا ٱلۡقُرۡءَانُ لِأُنذِرَكُم بِهِۦ وَمَنۢ بَلَغَۚ أَئِنَّكُمۡ لَتَشۡهَدُونَ أَنَّ مَعَ ٱللَّهِ ءَالِهَةً أُخۡرَىٰۚ قُل لَّآ أَشۡهَدُۚ قُلۡ إِنَّمَا هُوَ إِلَٰهࣱ وَٰحِدࣱ وَإِنَّنِي بَرِيٓءࣱ مِّمَّا تُشۡرِكُونَ",
+   "en": "Say (O Muhammad): What thing is of most weight in testimony? Say: Allah is Witness between me and you. And this Qur'an hath been inspired in me, that I may warn therewith you and whomsoever it may reach. Do ye in sooth bear witness that there are gods beside Allah? Say: I bear no such witness. Say: He is only One Allah. Lo! I am innocent of that which ye associate (with Him)"
+  },
+  {
+   "v": 20,
+   "ar": "ٱلَّذِينَ ءَاتَيۡنَٰهُمُ ٱلۡكِتَٰبَ يَعۡرِفُونَهُۥ كَمَا يَعۡرِفُونَ أَبۡنَآءَهُمُۘ ٱلَّذِينَ خَسِرُوٓاْ أَنفُسَهُمۡ فَهُمۡ لَا يُؤۡمِنُونَ",
+   "en": "Those unto whom We gave the Scripture recognise (this revelation) as they recognise their sons. Those who ruin their own souls will not believe"
+  },
+  {
+   "v": 21,
+   "ar": "وَمَنۡ أَظۡلَمُ مِمَّنِ ٱفۡتَرَىٰ عَلَى ٱللَّهِ كَذِبًا أَوۡ كَذَّبَ بِـَٔايَٰتِهِۦٓۚ إِنَّهُۥ لَا يُفۡلِحُ ٱلظَّٰلِمُونَ",
+   "en": "Who doth greater wrong than he who inventeth a lie against Allah or denieth His revelations? Lo! the wrongdoers will not be successful"
+  },
+  {
+   "v": 22,
+   "ar": "وَيَوۡمَ نَحۡشُرُهُمۡ جَمِيعࣰ ا ثُمَّ نَقُولُ لِلَّذِينَ أَشۡرَكُوٓاْ أَيۡنَ شُرَكَآؤُكُمُ ٱلَّذِينَ كُنتُمۡ تَزۡعُمُونَ",
+   "en": "And on the day We gather them together We shall say unto those who ascribed partners (unto Allah): Where are (now) those partners of your make-believe"
+  },
+  {
+   "v": 23,
+   "ar": "ثُمَّ لَمۡ تَكُن فِتۡنَتُهُمۡ إِلَّآ أَن قَالُواْ وَٱللَّهِ رَبِّنَا مَا كُنَّا مُشۡرِكِينَ",
+   "en": "Then will they have no contention save that they will say: By Allah, our Lord, we never were idolaters"
+  },
+  {
+   "v": 24,
+   "ar": "ٱنظُرۡ كَيۡفَ كَذَبُواْ عَلَىٰٓ أَنفُسِهِمۡۚ وَضَلَّ عَنۡهُم مَّا كَانُواْ يَفۡتَرُونَ",
+   "en": "See how they lie against themselves, and (how) the thing which they devised hath failed them"
+  },
+  {
+   "v": 25,
+   "ar": "وَمِنۡهُم مَّن يَسۡتَمِعُ إِلَيۡكَۖ وَجَعَلۡنَا عَلَىٰ قُلُوبِهِمۡ أَكِنَّةً أَن يَفۡقَهُوهُ وَفِيٓ ءَاذَانِهِمۡ وَقۡرࣰ اۚ وَإِن يَرَوۡاْ كُلَّ ءَايَةࣲ لَّا يُؤۡمِنُواْ بِهَاۖ حَتَّىٰٓ إِذَا جَآءُوكَ يُجَٰدِلُونَكَ يَقُولُ ٱلَّذِينَ كَفَرُوٓاْ إِنۡ هَٰذَآ إِلَّآ أَسَٰطِيرُ ٱلۡأَوَّلِينَ",
+   "en": "Of them are some who listen unto thee, but We have placed upon their hearts veils, lest they should understand, and in their ears a deafness. If they saw every token they would not believe therein; to the point that, when they come unto thee to argue with thee, the disbelievers say: This is naught else than fables of the men of old"
+  },
+  {
+   "v": 26,
+   "ar": "وَهُمۡ يَنۡهَوۡنَ عَنۡهُ وَيَنۡـَٔوۡنَ عَنۡهُۖ وَإِن يُهۡلِكُونَ إِلَّآ أَنفُسَهُمۡ وَمَا يَشۡعُرُونَ",
+   "en": "And they forbid (men) from it and avoid it, and they ruin none save themselves, though they perceive not"
+  },
+  {
+   "v": 27,
+   "ar": "وَلَوۡ تَرَىٰٓ إِذۡ وُقِفُواْ عَلَى ٱلنَّارِ فَقَالُواْ يَٰلَيۡتَنَا نُرَدُّ وَلَا نُكَذِّبَ بِـَٔايَٰتِ رَبِّنَا وَنَكُونَ مِنَ ٱلۡمُؤۡمِنِينَ",
+   "en": "If thou couldst see when they are set before the Fire and say: Oh, would that we might return! Then would we not deny the revelations of our Lord but we would be of the believers"
+  },
+  {
+   "v": 28,
+   "ar": "بَلۡ بَدَا لَهُم مَّا كَانُواْ يُخۡفُونَ مِن قَبۡلُۖ وَلَوۡ رُدُّواْ لَعَادُواْ لِمَا نُهُواْ عَنۡهُ وَإِنَّهُمۡ لَكَٰذِبُونَ",
+   "en": "Nay, but that hath become clear unto them which before they used to hide. And if they were sent back they would return unto that which they are forbidden. Lo! they are liars"
+  },
+  {
+   "v": 29,
+   "ar": "وَقَالُوٓاْ إِنۡ هِيَ إِلَّا حَيَاتُنَا ٱلدُّنۡيَا وَمَا نَحۡنُ بِمَبۡعُوثِينَ",
+   "en": "And they say: There is naught save our life of the world, and we shall not be raised (again)"
+  },
+  {
+   "v": 30,
+   "ar": "وَلَوۡ تَرَىٰٓ إِذۡ وُقِفُواْ عَلَىٰ رَبِّهِمۡۚ قَالَ أَلَيۡسَ هَٰذَا بِٱلۡحَقِّۚ قَالُواْ بَلَىٰ وَرَبِّنَاۚ قَالَ فَذُوقُواْ ٱلۡعَذَابَ بِمَا كُنتُمۡ تَكۡفُرُونَ",
+   "en": "If thou couldst see when they are set before their Lord! He will say: Is not this real? They will say: Yea, verily, by our Lord! He will say: Taste now the retribution for that ye used to disbelieve"
+  },
+  {
+   "v": 31,
+   "ar": "قَدۡ خَسِرَ ٱلَّذِينَ كَذَّبُواْ بِلِقَآءِ ٱللَّهِۖ حَتَّىٰٓ إِذَا جَآءَتۡهُمُ ٱلسَّاعَةُ بَغۡتَةࣰ قَالُواْ يَٰحَسۡرَتَنَا عَلَىٰ مَا فَرَّطۡنَا فِيهَا وَهُمۡ يَحۡمِلُونَ أَوۡزَارَهُمۡ عَلَىٰ ظُهُورِهِمۡۚ أَلَا سَآءَ مَا يَزِرُونَ",
+   "en": "They indeed are losers who deny their meeting with Allah until, when the Hour cometh on them suddenly, they cry: Alas for us, that we neglected it! They bear upon their backs their burdens. Ah, evil is that which they bear"
+  },
+  {
+   "v": 32,
+   "ar": "وَمَا ٱلۡحَيَوٰةُ ٱلدُّنۡيَآ إِلَّا لَعِبࣱ وَلَهۡوࣱۖ وَلَلدَّارُ ٱلۡأٓخِرَةُ خَيۡرࣱ لِّلَّذِينَ يَتَّقُونَۚ أَفَلَا تَعۡقِلُونَ",
+   "en": "Naught is the life of the world save a pastime and a sport. Better far is the abode of the Hereafter for those who keep their duty (to Allah). Have ye then no sense"
+  },
+  {
+   "v": 33,
+   "ar": "قَدۡ نَعۡلَمُ إِنَّهُۥ لَيَحۡزُنُكَ ٱلَّذِي يَقُولُونَۖ فَإِنَّهُمۡ لَا يُكَذِّبُونَكَ وَلَٰكِنَّ ٱلظَّٰلِمِينَ بِـَٔايَٰتِ ٱللَّهِ يَجۡحَدُونَ",
+   "en": "We know well how their talk grieveth thee, though in truth they deny not thee (Muhammad) but evil-doers flout the revelations of Allah"
+  },
+  {
+   "v": 34,
+   "ar": "وَلَقَدۡ كُذِّبَتۡ رُسُلࣱ مِّن قَبۡلِكَ فَصَبَرُواْ عَلَىٰ مَا كُذِّبُواْ وَأُوذُواْ حَتَّىٰٓ أَتَىٰهُمۡ نَصۡرُنَاۚ وَلَا مُبَدِّلَ لِكَلِمَٰتِ ٱللَّهِۚ وَلَقَدۡ جَآءَكَ مِن نَّبَإِيْ ٱلۡمُرۡسَلِينَ",
+   "en": "Messengers indeed have been denied before thee, and they were patient under the denial and the persecution till Our succour reached them. There is none to alter the decisions of Allah. Already there hath reached thee (somewhat) of the tidings of the messengers (We sent before)"
+  },
+  {
+   "v": 35,
+   "ar": "وَإِن كَانَ كَبُرَ عَلَيۡكَ إِعۡرَاضُهُمۡ فَإِنِ ٱسۡتَطَعۡتَ أَن تَبۡتَغِيَ نَفَقࣰ ا فِي ٱلۡأَرۡضِ أَوۡ سُلَّمࣰ ا فِي ٱلسَّمَآءِ فَتَأۡتِيَهُم بِـَٔايَةࣲۚ وَلَوۡ شَآءَ ٱللَّهُ لَجَمَعَهُمۡ عَلَى ٱلۡهُدَىٰۚ فَلَا تَكُونَنَّ مِنَ ٱلۡجَٰهِلِينَ",
+   "en": "And if their aversion is grievous unto thee, then, if thou canst, seek a way down into the earth or a ladder unto the sky that thou mayst bring unto them a portent (to convince them all)! - If Allah willed, He could have brought them all together to the guidance - So be not thou among the foolish ones"
+  },
+  {
+   "v": 36,
+   "ar": "۞إِنَّمَا يَسۡتَجِيبُ ٱلَّذِينَ يَسۡمَعُونَۘ وَٱلۡمَوۡتَىٰ يَبۡعَثُهُمُ ٱللَّهُ ثُمَّ إِلَيۡهِ يُرۡجَعُونَ",
+   "en": "Only those can accept who hear. As for the dead, Allah will raise them up; then unto Him they will be returned"
+  },
+  {
+   "v": 37,
+   "ar": "وَقَالُواْ لَوۡلَا نُزِّلَ عَلَيۡهِ ءَايَةࣱ مِّن رَّبِّهِۦۚ قُلۡ إِنَّ ٱللَّهَ قَادِرٌ عَلَىٰٓ أَن يُنَزِّلَ ءَايَةࣰ وَلَٰكِنَّ أَكۡثَرَهُمۡ لَا يَعۡلَمُونَ",
+   "en": "They say: Why hath no portent been sent down upon him from his Lord? Say: Lo! Allah is Able to send down a portent. But most of them know not"
+  },
+  {
+   "v": 38,
+   "ar": "وَمَا مِن دَآبَّةࣲ فِي ٱلۡأَرۡضِ وَلَا طَٰٓئِرࣲ يَطِيرُ بِجَنَاحَيۡهِ إِلَّآ أُمَمٌ أَمۡثَالُكُمۚ مَّا فَرَّطۡنَا فِي ٱلۡكِتَٰبِ مِن شَيۡءࣲۚ ثُمَّ إِلَىٰ رَبِّهِمۡ يُحۡشَرُونَ",
+   "en": "There is not an animal in the earth, nor a flying creature flying on two wings, but they are peoples like unto you. We have neglected nothing in the Book (of Our decrees). Then unto their Lord they will be gathered"
+  },
+  {
+   "v": 39,
+   "ar": "وَٱلَّذِينَ كَذَّبُواْ بِـَٔايَٰتِنَا صُمࣱّ وَبُكۡمࣱ فِي ٱلظُّلُمَٰتِۗ مَن يَشَإِ ٱللَّهُ يُضۡلِلۡهُ وَمَن يَشَأۡ يَجۡعَلۡهُ عَلَىٰ صِرَٰطࣲ مُّسۡتَقِيمࣲ‏",
+   "en": "Those who deny Our revelations are deaf and dumb in darkness. Whom Allah will sendeth astray, and whom He will He placeth on a straight path"
+  },
+  {
+   "v": 40,
+   "ar": "قُلۡ أَرَءَيۡتَكُمۡ إِنۡ أَتَىٰكُمۡ عَذَابُ ٱللَّهِ أَوۡ أَتَتۡكُمُ ٱلسَّاعَةُ أَغَيۡرَ ٱللَّهِ تَدۡعُونَ إِن كُنتُمۡ صَٰدِقِينَ",
+   "en": "Say: Can ye see yourselves, if the punishment of Allah come upon you or the Hour come upon you, (calling upon other than Allah)? Do ye then call (for help) to any other than Allah? (Answer that) if ye are truthful"
+  },
+  {
+   "v": 41,
+   "ar": "بَلۡ إِيَّاهُ تَدۡعُونَ فَيَكۡشِفُ مَا تَدۡعُونَ إِلَيۡهِ إِن شَآءَ وَتَنسَوۡنَ مَا تُشۡرِكُونَ",
+   "en": "Nay, but unto Him ye call, and He removeth that because of which ye call unto Him, if He will, and ye forget whatever partners ye ascribed unto Him"
+  },
+  {
+   "v": 42,
+   "ar": "وَلَقَدۡ أَرۡسَلۡنَآ إِلَىٰٓ أُمَمࣲ مِّن قَبۡلِكَ فَأَخَذۡنَٰهُم بِٱلۡبَأۡسَآءِ وَٱلضَّرَّآءِ لَعَلَّهُمۡ يَتَضَرَّعُونَ",
+   "en": "We have sent already unto peoples that were before thee, and We visited them with tribulation and adversity, in order that they might grow humble"
+  },
+  {
+   "v": 43,
+   "ar": "فَلَوۡلَآ إِذۡ جَآءَهُم بَأۡسُنَا تَضَرَّعُواْ وَلَٰكِن قَسَتۡ قُلُوبُهُمۡ وَزَيَّنَ لَهُمُ ٱلشَّيۡطَٰنُ مَا كَانُواْ يَعۡمَلُونَ",
+   "en": "If only, when Our disaster came on them, they had been humble! But their hearts were hardened and the devil made all that they used to do seem fair unto them"
+  },
+  {
+   "v": 44,
+   "ar": "فَلَمَّا نَسُواْ مَا ذُكِّرُواْ بِهِۦ فَتَحۡنَا عَلَيۡهِمۡ أَبۡوَٰبَ كُلِّ شَيۡءٍ حَتَّىٰٓ إِذَا فَرِحُواْ بِمَآ أُوتُوٓاْ أَخَذۡنَٰهُم بَغۡتَةࣰ فَإِذَا هُم مُّبۡلِسُونَ",
+   "en": "Then, when they forgot that whereof they had been reminded, We opened unto them the gates of all things till, even as they were rejoicing in that which they were given, We seized them unawares, and lo! they were dumbfounded"
+  },
+  {
+   "v": 45,
+   "ar": "فَقُطِعَ دَابِرُ ٱلۡقَوۡمِ ٱلَّذِينَ ظَلَمُواْۚ وَٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَٰلَمِينَ",
+   "en": "So of the people who did wrong the last remnant was cut off. Praise be to Allah, Lord of the Worlds"
+  },
+  {
+   "v": 46,
+   "ar": "قُلۡ أَرَءَيۡتُمۡ إِنۡ أَخَذَ ٱللَّهُ سَمۡعَكُمۡ وَأَبۡصَٰرَكُمۡ وَخَتَمَ عَلَىٰ قُلُوبِكُم مَّنۡ إِلَٰهٌ غَيۡرُ ٱللَّهِ يَأۡتِيكُم بِهِۗ ٱنظُرۡ كَيۡفَ نُصَرِّفُ ٱلۡأٓيَٰتِ ثُمَّ هُمۡ يَصۡدِفُونَ",
+   "en": "Say: Have ye imagined, if Allah should take away your hearing and your sight and seal your hearts, Who is the Allah Who could restore it to you save Allah? See how We display the revelations unto them! Yet still they turn away"
+  },
+  {
+   "v": 47,
+   "ar": "قُلۡ أَرَءَيۡتَكُمۡ إِنۡ أَتَىٰكُمۡ عَذَابُ ٱللَّهِ بَغۡتَةً أَوۡ جَهۡرَةً هَلۡ يُهۡلَكُ إِلَّا ٱلۡقَوۡمُ ٱلظَّٰلِمُونَ",
+   "en": "Say: Can ye see yourselves, if the punishment of Allah come upon you unawares or openly? Would any perish save wrongdoing folk"
+  },
+  {
+   "v": 48,
+   "ar": "وَمَا نُرۡسِلُ ٱلۡمُرۡسَلِينَ إِلَّا مُبَشِّرِينَ وَمُنذِرِينَۖ فَمَنۡ ءَامَنَ وَأَصۡلَحَ فَلَا خَوۡفٌ عَلَيۡهِمۡ وَلَا هُمۡ يَحۡزَنُونَ",
+   "en": "We send not the messengers save as bearers of good news and warners. Whoso believeth and doeth right, there shall no fear come upon them neither shall they grieve"
+  },
+  {
+   "v": 49,
+   "ar": "وَٱلَّذِينَ كَذَّبُواْ بِـَٔايَٰتِنَا يَمَسُّهُمُ ٱلۡعَذَابُ بِمَا كَانُواْ يَفۡسُقُونَ",
+   "en": "But as for those who deny Our revelations, torment will afflict them for that they used to disobey"
+  },
+  {
+   "v": 50,
+   "ar": "قُل لَّآ أَقُولُ لَكُمۡ عِندِي خَزَآئِنُ ٱللَّهِ وَلَآ أَعۡلَمُ ٱلۡغَيۡبَ وَلَآ أَقُولُ لَكُمۡ إِنِّي مَلَكٌۖ إِنۡ أَتَّبِعُ إِلَّا مَا يُوحَىٰٓ إِلَيَّۚ قُلۡ هَلۡ يَسۡتَوِي ٱلۡأَعۡمَىٰ وَٱلۡبَصِيرُۚ أَفَلَا تَتَفَكَّرُونَ",
+   "en": "Say (O Muhammad, to the disbelievers): I say not unto you (that) I possess the treasures of Allah, nor that I have knowledge of the Unseen; and I say not unto you: Lo! I am an angel. I follow only that which is inspired in me. Say: Are the blind man and the seer equal? Will ye not then take thought"
+  },
+  {
+   "v": 51,
+   "ar": "وَأَنذِرۡ بِهِ ٱلَّذِينَ يَخَافُونَ أَن يُحۡشَرُوٓاْ إِلَىٰ رَبِّهِمۡ لَيۡسَ لَهُم مِّن دُونِهِۦ وَلِيࣱّ وَلَا شَفِيعࣱ لَّعَلَّهُمۡ يَتَّقُونَ",
+   "en": "Warn hereby those who fear (because they know) that they will be gathered unto their Lord, for whom there is no protecting ally nor intercessor beside Him, that they may ward off (evil)"
+  },
+  {
+   "v": 52,
+   "ar": "وَلَا تَطۡرُدِ ٱلَّذِينَ يَدۡعُونَ رَبَّهُم بِٱلۡغَدَوٰةِ وَٱلۡعَشِيِّ يُرِيدُونَ وَجۡهَهُۥۖ مَا عَلَيۡكَ مِنۡ حِسَابِهِم مِّن شَيۡءࣲ وَمَا مِنۡ حِسَابِكَ عَلَيۡهِم مِّن شَيۡءࣲ فَتَطۡرُدَهُمۡ فَتَكُونَ مِنَ ٱلظَّٰلِمِينَ",
+   "en": "Repel not those who call upon their Lord at morn and evening, seeking His Countenance. Thou art not accountable for them in aught, nor are they accountable for thee in aught, that thou shouldst repel them and be of the wrong-doers"
+  },
+  {
+   "v": 53,
+   "ar": "وَكَذَٰلِكَ فَتَنَّا بَعۡضَهُم بِبَعۡضࣲ لِّيَقُولُوٓاْ أَهَٰٓؤُلَآءِ مَنَّ ٱللَّهُ عَلَيۡهِم مِّنۢ بَيۡنِنَآۗ أَلَيۡسَ ٱللَّهُ بِأَعۡلَمَ بِٱلشَّٰكِرِينَ",
+   "en": "And even so do We try some of them by others, that they say: Are these they whom Allah favoureth among us? Is not Allah best Aware of the thanksgivers"
+  },
+  {
+   "v": 54,
+   "ar": "وَإِذَا جَآءَكَ ٱلَّذِينَ يُؤۡمِنُونَ بِـَٔايَٰتِنَا فَقُلۡ سَلَٰمٌ عَلَيۡكُمۡۖ كَتَبَ رَبُّكُمۡ عَلَىٰ نَفۡسِهِ ٱلرَّحۡمَةَ أَنَّهُۥ مَنۡ عَمِلَ مِنكُمۡ سُوٓءَۢا بِجَهَٰلَةࣲ ثُمَّ تَابَ مِنۢ بَعۡدِهِۦ وَأَصۡلَحَ فَأَنَّهُۥ غَفُورࣱ رَّحِيمࣱ‏",
+   "en": "And when those who believe in Our revelations come unto thee, say: Peace be unto you! Your Lord hath prescribed for Himself mercy, that whoso of you doeth evil through ignorance and repenteth afterward thereof and doeth right, (for him) lo! He is Forgiving, Merciful"
+  },
+  {
+   "v": 55,
+   "ar": "وَكَذَٰلِكَ نُفَصِّلُ ٱلۡأٓيَٰتِ وَلِتَسۡتَبِينَ سَبِيلُ ٱلۡمُجۡرِمِينَ",
+   "en": "Thus do We expound the revelations that the way of the unrighteous may be manifest"
+  },
+  {
+   "v": 56,
+   "ar": "قُلۡ إِنِّي نُهِيتُ أَنۡ أَعۡبُدَ ٱلَّذِينَ تَدۡعُونَ مِن دُونِ ٱللَّهِۚ قُل لَّآ أَتَّبِعُ أَهۡوَآءَكُمۡ قَدۡ ضَلَلۡتُ إِذࣰ ا وَمَآ أَنَا۠ مِنَ ٱلۡمُهۡتَدِينَ",
+   "en": "Say: I am forbidden to worship those on whom ye call instead of Allah. Say: I will not follow your desires, for then should I go astray and I should not be of the rightly guided"
+  },
+  {
+   "v": 57,
+   "ar": "قُلۡ إِنِّي عَلَىٰ بَيِّنَةࣲ مِّن رَّبِّي وَكَذَّبۡتُم بِهِۦۚ مَا عِندِي مَا تَسۡتَعۡجِلُونَ بِهِۦٓۚ إِنِ ٱلۡحُكۡمُ إِلَّا لِلَّهِۖ يَقُصُّ ٱلۡحَقَّۖ وَهُوَ خَيۡرُ ٱلۡفَٰصِلِينَ",
+   "en": "Say: I am (relying) on clear proof from my Lord, while ye deny Him. I have not that for which ye are impatient. The decision is for Allah only. He telleth the truth and He is the Best of Deciders"
+  },
+  {
+   "v": 58,
+   "ar": "قُل لَّوۡ أَنَّ عِندِي مَا تَسۡتَعۡجِلُونَ بِهِۦ لَقُضِيَ ٱلۡأَمۡرُ بَيۡنِي وَبَيۡنَكُمۡۗ وَٱللَّهُ أَعۡلَمُ بِٱلظَّٰلِمِينَ",
+   "en": "Say: If I had that for which ye are impatient, then would the case (ere this) have been decided between me and you. Allah is Best Aware of the wrong-doers"
+  },
+  {
+   "v": 59,
+   "ar": "۞وَعِندَهُۥ مَفَاتِحُ ٱلۡغَيۡبِ لَا يَعۡلَمُهَآ إِلَّا هُوَۚ وَيَعۡلَمُ مَا فِي ٱلۡبَرِّ وَٱلۡبَحۡرِۚ وَمَا تَسۡقُطُ مِن وَرَقَةٍ إِلَّا يَعۡلَمُهَا وَلَا حَبَّةࣲ فِي ظُلُمَٰتِ ٱلۡأَرۡضِ وَلَا رَطۡبࣲ وَلَا يَابِسٍ إِلَّا فِي كِتَٰبࣲ مُّبِينࣲ‏",
+   "en": "And with Him are the keys of the Invisible. None but He knoweth them. And He knoweth what is in the land and the sea. Not a leaf falleth but He knoweth it, not a grain amid the darkness of the earth, naught of wet or dry but (it is noted) in a clear record"
+  },
+  {
+   "v": 60,
+   "ar": "وَهُوَ ٱلَّذِي يَتَوَفَّىٰكُم بِٱلَّيۡلِ وَيَعۡلَمُ مَا جَرَحۡتُم بِٱلنَّهَارِ ثُمَّ يَبۡعَثُكُمۡ فِيهِ لِيُقۡضَىٰٓ أَجَلࣱ مُّسَمࣰّ ىۖ ثُمَّ إِلَيۡهِ مَرۡجِعُكُمۡ ثُمَّ يُنَبِّئُكُم بِمَا كُنتُمۡ تَعۡمَلُونَ",
+   "en": "He it is Who gathereth you at night and knoweth that which ye commit by day. Then He raiseth you again to life therein, that the term appointed (for you) may be accomplished. And afterward unto Him is your return. Then He will proclaim unto you what ye used to do"
+  },
+  {
+   "v": 61,
+   "ar": "وَهُوَ ٱلۡقَاهِرُ فَوۡقَ عِبَادِهِۦۖ وَيُرۡسِلُ عَلَيۡكُمۡ حَفَظَةً حَتَّىٰٓ إِذَا جَآءَ أَحَدَكُمُ ٱلۡمَوۡتُ تَوَفَّتۡهُ رُسُلُنَا وَهُمۡ لَا يُفَرِّطُونَ",
+   "en": "He is the Omnipotent over His slaves. He sendeth guardians over you until, when death cometh unto one of you, Our messengers receive him, and they neglect not"
+  },
+  {
+   "v": 62,
+   "ar": "ثُمَّ رُدُّوٓاْ إِلَى ٱللَّهِ مَوۡلَىٰهُمُ ٱلۡحَقِّۚ أَلَا لَهُ ٱلۡحُكۡمُ وَهُوَ أَسۡرَعُ ٱلۡحَٰسِبِينَ",
+   "en": "Then are they restored unto Allah, their Lord, the Just. Surely His is the judgment. And He is the most swift of reckoners"
+  },
+  {
+   "v": 63,
+   "ar": "قُلۡ مَن يُنَجِّيكُم مِّن ظُلُمَٰتِ ٱلۡبَرِّ وَٱلۡبَحۡرِ تَدۡعُونَهُۥ تَضَرُّعࣰ ا وَخُفۡيَةࣰ لَّئِنۡ أَنجَىٰنَا مِنۡ هَٰذِهِۦ لَنَكُونَنَّ مِنَ ٱلشَّٰكِرِينَ",
+   "en": "Say: Who delivereth you from the darkness of the land and the sea? Ye call upon Him humbly and in secret, (saying): If we are delivered from this (fear) we truly will be of the thankful"
+  },
+  {
+   "v": 64,
+   "ar": "قُلِ ٱللَّهُ يُنَجِّيكُم مِّنۡهَا وَمِن كُلِّ كَرۡبࣲ ثُمَّ أَنتُمۡ تُشۡرِكُونَ",
+   "en": "Say: Allah delivereth you from this and from all affliction. Yet ye attribute partners unto Him"
+  },
+  {
+   "v": 65,
+   "ar": "قُلۡ هُوَ ٱلۡقَادِرُ عَلَىٰٓ أَن يَبۡعَثَ عَلَيۡكُمۡ عَذَابࣰ ا مِّن فَوۡقِكُمۡ أَوۡ مِن تَحۡتِ أَرۡجُلِكُمۡ أَوۡ يَلۡبِسَكُمۡ شِيَعࣰ ا وَيُذِيقَ بَعۡضَكُم بَأۡسَ بَعۡضٍۗ ٱنظُرۡ كَيۡفَ نُصَرِّفُ ٱلۡأٓيَٰتِ لَعَلَّهُمۡ يَفۡقَهُونَ",
+   "en": "Say: He is able to send punishment upon you from above you or from beneath your feet, or to bewilder you with dissension and make you taste the tyranny one of another. See how We display the revelations so that they may understand"
+  },
+  {
+   "v": 66,
+   "ar": "وَكَذَّبَ بِهِۦ قَوۡمُكَ وَهُوَ ٱلۡحَقُّۚ قُل لَّسۡتُ عَلَيۡكُم بِوَكِيلࣲ‏",
+   "en": "Thy people (O Muhammad) have denied it, though it is the Truth. Say: I am not put in charge of you"
+  },
+  {
+   "v": 67,
+   "ar": "لِّكُلِّ نَبَإࣲ مُّسۡتَقَرࣱّۚ وَسَوۡفَ تَعۡلَمُونَ",
+   "en": "For every announcement there is a term, and ye will come to know"
+  },
+  {
+   "v": 68,
+   "ar": "وَإِذَا رَأَيۡتَ ٱلَّذِينَ يَخُوضُونَ فِيٓ ءَايَٰتِنَا فَأَعۡرِضۡ عَنۡهُمۡ حَتَّىٰ يَخُوضُواْ فِي حَدِيثٍ غَيۡرِهِۦۚ وَإِمَّا يُنسِيَنَّكَ ٱلشَّيۡطَٰنُ فَلَا تَقۡعُدۡ بَعۡدَ ٱلذِّكۡرَىٰ مَعَ ٱلۡقَوۡمِ ٱلظَّٰلِمِينَ",
+   "en": "And when thou seest those who meddle with Our revelations, withdraw from them until they meddle with another topic. And if the devil cause thee to forget, sit not, after the remembrance, with the congregation of wrong-doers"
+  },
+  {
+   "v": 69,
+   "ar": "وَمَا عَلَى ٱلَّذِينَ يَتَّقُونَ مِنۡ حِسَابِهِم مِّن شَيۡءࣲ وَلَٰكِن ذِكۡرَىٰ لَعَلَّهُمۡ يَتَّقُونَ",
+   "en": "Those who ward off (evil) are not accountable for them in aught, but the Reminder (must be given them) that haply they (too) may ward off (evil)"
+  },
+  {
+   "v": 70,
+   "ar": "وَذَرِ ٱلَّذِينَ ٱتَّخَذُواْ دِينَهُمۡ لَعِبࣰ ا وَلَهۡوࣰ ا وَغَرَّتۡهُمُ ٱلۡحَيَوٰةُ ٱلدُّنۡيَاۚ وَذَكِّرۡ بِهِۦٓ أَن تُبۡسَلَ نَفۡسُۢ بِمَا كَسَبَتۡ لَيۡسَ لَهَا مِن دُونِ ٱللَّهِ وَلِيࣱّ وَلَا شَفِيعࣱ وَإِن تَعۡدِلۡ كُلَّ عَدۡلࣲ لَّا يُؤۡخَذۡ مِنۡهَآۗ أُوْلَٰٓئِكَ ٱلَّذِينَ أُبۡسِلُواْ بِمَا كَسَبُواْۖ لَهُمۡ شَرَابࣱ مِّنۡ حَمِيمࣲ وَعَذَابٌ أَلِيمُۢ بِمَا كَانُواْ يَكۡفُرُونَ",
+   "en": "And forsake those who take their religion for a pastime and a jest, and whom the life of the world beguileth. Remind (mankind) hereby lest a soul be destroyed by what it earneth. It hath beside Allah no protecting ally nor intercessor, and though it offer every compensation it will not be accepted from it. Those are they who perish by their own deserts. For them is drink of boiling water and a painful doom, because they disbelieved"
+  },
+  {
+   "v": 71,
+   "ar": "قُلۡ أَنَدۡعُواْ مِن دُونِ ٱللَّهِ مَا لَا يَنفَعُنَا وَلَا يَضُرُّنَا وَنُرَدُّ عَلَىٰٓ أَعۡقَابِنَا بَعۡدَ إِذۡ هَدَىٰنَا ٱللَّهُ كَٱلَّذِي ٱسۡتَهۡوَتۡهُ ٱلشَّيَٰطِينُ فِي ٱلۡأَرۡضِ حَيۡرَانَ لَهُۥٓ أَصۡحَٰبࣱ يَدۡعُونَهُۥٓ إِلَى ٱلۡهُدَى ٱئۡتِنَاۗ قُلۡ إِنَّ هُدَى ٱللَّهِ هُوَ ٱلۡهُدَىٰۖ وَأُمِرۡنَا لِنُسۡلِمَ لِرَبِّ ٱلۡعَٰلَمِينَ",
+   "en": "Say: Shall we cry, instead of unto Allah, unto that which neither profiteth us nor hurteth us, and shall we turn back after Allah hath guided us, like one bewildered whom the devils have infatuated in the earth, who hath companions who invite him to the guidance (saying): Come unto us? Say: Lo! the guidance of Allah is Guidance, and we are ordered to surrender to the Lord of the Worlds"
+  },
+  {
+   "v": 72,
+   "ar": "وَأَنۡ أَقِيمُواْ ٱلصَّلَوٰةَ وَٱتَّقُوهُۚ وَهُوَ ٱلَّذِيٓ إِلَيۡهِ تُحۡشَرُونَ",
+   "en": "And to establish worship and be dutiful to Him, and He it is unto Whom ye will be gathered"
+  },
+  {
+   "v": 73,
+   "ar": "وَهُوَ ٱلَّذِي خَلَقَ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَ بِٱلۡحَقِّۖ وَيَوۡمَ يَقُولُ كُن فَيَكُونُۚ قَوۡلُهُ ٱلۡحَقُّۚ وَلَهُ ٱلۡمُلۡكُ يَوۡمَ يُنفَخُ فِي ٱلصُّورِۚ عَٰلِمُ ٱلۡغَيۡبِ وَٱلشَّهَٰدَةِۚ وَهُوَ ٱلۡحَكِيمُ ٱلۡخَبِيرُ",
+   "en": "He it is Who created the heavens and the earth in truth. In the day when He saith: Be! it is. His Word is the Truth, and His will be the Sovereignty on the day when the trumpet is blown. Knower of the Invisible and the Visible, He is the Wise, the Aware"
+  },
+  {
+   "v": 74,
+   "ar": "۞وَإِذۡ قَالَ إِبۡرَٰهِيمُ لِأَبِيهِ ءَازَرَ أَتَتَّخِذُ أَصۡنَامًا ءَالِهَةً إِنِّيٓ أَرَىٰكَ وَقَوۡمَكَ فِي ضَلَٰلࣲ مُّبِينࣲ‏",
+   "en": "(Remember) when Abraham said unto his father Azar: Takest thou idols for gods? Lo! I see thee and thy folk in error manifest"
+  },
+  {
+   "v": 75,
+   "ar": "وَكَذَٰلِكَ نُرِيٓ إِبۡرَٰهِيمَ مَلَكُوتَ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِ وَلِيَكُونَ مِنَ ٱلۡمُوقِنِينَ",
+   "en": "Thus did We show Abraham the kingdom of the heavens and the earth that he might be of those possessing certainty"
+  },
+  {
+   "v": 76,
+   "ar": "فَلَمَّا جَنَّ عَلَيۡهِ ٱلَّيۡلُ رَءَا كَوۡكَبࣰ اۖ قَالَ هَٰذَا رَبِّيۖ فَلَمَّآ أَفَلَ قَالَ لَآ أُحِبُّ ٱلۡأٓفِلِينَ",
+   "en": "When the night grew dark upon him he beheld a star. He said: This is my Lord. But when it set, he said: I love not things that set"
+  },
+  {
+   "v": 77,
+   "ar": "فَلَمَّا رَءَا ٱلۡقَمَرَ بَازِغࣰ ا قَالَ هَٰذَا رَبِّيۖ فَلَمَّآ أَفَلَ قَالَ لَئِن لَّمۡ يَهۡدِنِي رَبِّي لَأَكُونَنَّ مِنَ ٱلۡقَوۡمِ ٱلضَّآلِّينَ",
+   "en": "And when he saw the moon uprising, he exclaimed: This is my Lord. But when it set, he said: Unless my Lord guide me, I surely shall become one of the folk who are astray"
+  },
+  {
+   "v": 78,
+   "ar": "فَلَمَّا رَءَا ٱلشَّمۡسَ بَازِغَةࣰ قَالَ هَٰذَا رَبِّي هَٰذَآ أَكۡبَرُۖ فَلَمَّآ أَفَلَتۡ قَالَ يَٰقَوۡمِ إِنِّي بَرِيٓءࣱ مِّمَّا تُشۡرِكُونَ",
+   "en": "And when he saw the sun uprising, he cried: This is my Lord! This is greater! And when it set he exclaimed: O my people! Lo! I am free from all that ye associate (with Him)"
+  },
+  {
+   "v": 79,
+   "ar": "إِنِّي وَجَّهۡتُ وَجۡهِيَ لِلَّذِي فَطَرَ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَ حَنِيفࣰ اۖ وَمَآ أَنَا۠ مِنَ ٱلۡمُشۡرِكِينَ",
+   "en": "Lo! I have turned my face toward Him Who created the heavens and the earth, as one by nature upright, and I am not of the idolaters"
+  },
+  {
+   "v": 80,
+   "ar": "وَحَآجَّهُۥ قَوۡمُهُۥۚ قَالَ أَتُحَٰٓجُّوٓنِّي فِي ٱللَّهِ وَقَدۡ هَدَىٰنِۚ وَلَآ أَخَافُ مَا تُشۡرِكُونَ بِهِۦٓ إِلَّآ أَن يَشَآءَ رَبِّي شَيۡـࣰٔ اۚ وَسِعَ رَبِّي كُلَّ شَيۡءٍ عِلۡمًاۚ أَفَلَا تَتَذَكَّرُونَ",
+   "en": "His people argued with him. He said: Dispute ye with me concerning Allah when He hath guided me? I fear not at all that which ye set up beside Him unless my Lord willeth aught. My Lord includeth all things in His knowledge. Will ye not then remember"
+  },
+  {
+   "v": 81,
+   "ar": "وَكَيۡفَ أَخَافُ مَآ أَشۡرَكۡتُمۡ وَلَا تَخَافُونَ أَنَّكُمۡ أَشۡرَكۡتُم بِٱللَّهِ مَا لَمۡ يُنَزِّلۡ بِهِۦ عَلَيۡكُمۡ سُلۡطَٰنࣰ اۚ فَأَيُّ ٱلۡفَرِيقَيۡنِ أَحَقُّ بِٱلۡأَمۡنِۖ إِن كُنتُمۡ تَعۡلَمُونَ",
+   "en": "How should I fear that which ye set up beside Him, when ye fear not to set up beside Allah that for which He hath revealed unto you no warrant? Which of the two factions hath more right to safety? (Answer me that) if ye have knowledge"
+  },
+  {
+   "v": 82,
+   "ar": "ٱلَّذِينَ ءَامَنُواْ وَلَمۡ يَلۡبِسُوٓاْ إِيمَٰنَهُم بِظُلۡمٍ أُوْلَٰٓئِكَ لَهُمُ ٱلۡأَمۡنُ وَهُم مُّهۡتَدُونَ",
+   "en": "Those who believe and obscure not their belief by wrongdoing, theirs is safety; and they are rightly guided"
+  },
+  {
+   "v": 83,
+   "ar": "وَتِلۡكَ حُجَّتُنَآ ءَاتَيۡنَٰهَآ إِبۡرَٰهِيمَ عَلَىٰ قَوۡمِهِۦۚ نَرۡفَعُ دَرَجَٰتࣲ مَّن نَّشَآءُۗ إِنَّ رَبَّكَ حَكِيمٌ عَلِيمࣱ‏",
+   "en": "That is Our argument. We gave it unto Abraham against his folk. We raise unto degrees of wisdom whom We will. Lo! thy Lord is Wise, Aware"
+  },
+  {
+   "v": 84,
+   "ar": "وَوَهَبۡنَا لَهُۥٓ إِسۡحَٰقَ وَيَعۡقُوبَۚ كُلًّا هَدَيۡنَاۚ وَنُوحًا هَدَيۡنَا مِن قَبۡلُۖ وَمِن ذُرِّيَّتِهِۦ دَاوُۥدَ وَسُلَيۡمَٰنَ وَأَيُّوبَ وَيُوسُفَ وَمُوسَىٰ وَهَٰرُونَۚ وَكَذَٰلِكَ نَجۡزِي ٱلۡمُحۡسِنِينَ",
+   "en": "And We bestowed upon him Isaac and Jacob; each of them We guided; and Noah did We guide aforetime; and of his seed (We guided) David and Solomon and Job and Joseph and Moses and Aaron. Thus do We reward the good"
+  },
+  {
+   "v": 85,
+   "ar": "وَزَكَرِيَّا وَيَحۡيَىٰ وَعِيسَىٰ وَإِلۡيَاسَۖ كُلࣱّ مِّنَ ٱلصَّٰلِحِينَ",
+   "en": "And Zachariah and John and Jesus and Elias. Each one (of them) was of the righteous"
+  },
+  {
+   "v": 86,
+   "ar": "وَإِسۡمَٰعِيلَ وَٱلۡيَسَعَ وَيُونُسَ وَلُوطࣰ اۚ وَكُلࣰّ ا فَضَّلۡنَا عَلَى ٱلۡعَٰلَمِينَ",
+   "en": "And Ishmael and Elisha and Jonah and Lot. Each one (of them) did We prefer above (Our) creatures"
+  },
+  {
+   "v": 87,
+   "ar": "وَمِنۡ ءَابَآئِهِمۡ وَذُرِّيَّٰتِهِمۡ وَإِخۡوَٰنِهِمۡۖ وَٱجۡتَبَيۡنَٰهُمۡ وَهَدَيۡنَٰهُمۡ إِلَىٰ صِرَٰطࣲ مُّسۡتَقِيمࣲ‏",
+   "en": "With some of their forefathers and their offspring and their brethren; and We chose them and guided them unto a straight path"
+  },
+  {
+   "v": 88,
+   "ar": "ذَٰلِكَ هُدَى ٱللَّهِ يَهۡدِي بِهِۦ مَن يَشَآءُ مِنۡ عِبَادِهِۦۚ وَلَوۡ أَشۡرَكُواْ لَحَبِطَ عَنۡهُم مَّا كَانُواْ يَعۡمَلُونَ",
+   "en": "Such is the guidance of Allah wherewith He guideth whom He will of His bondmen. But if they had set up (for worship) aught beside Him, (all) that they did would have been vain"
+  },
+  {
+   "v": 89,
+   "ar": "أُوْلَٰٓئِكَ ٱلَّذِينَ ءَاتَيۡنَٰهُمُ ٱلۡكِتَٰبَ وَٱلۡحُكۡمَ وَٱلنُّبُوَّةَۚ فَإِن يَكۡفُرۡ بِهَا هَٰٓؤُلَآءِ فَقَدۡ وَكَّلۡنَا بِهَا قَوۡمࣰ ا لَّيۡسُواْ بِهَا بِكَٰفِرِينَ",
+   "en": "Those are they unto whom We gave the Scripture and command and prophethood. But if these disbelieve therein, then indeed We shall entrust it to a people who will not be disbelievers therein"
+  },
+  {
+   "v": 90,
+   "ar": "أُوْلَٰٓئِكَ ٱلَّذِينَ هَدَى ٱللَّهُۖ فَبِهُدَىٰهُمُ ٱقۡتَدِهۡۗ قُل لَّآ أَسۡـَٔلُكُمۡ عَلَيۡهِ أَجۡرًاۖ إِنۡ هُوَ إِلَّا ذِكۡرَىٰ لِلۡعَٰلَمِينَ",
+   "en": "Those are they whom Allah guideth, so follow their guidance. Say (O Muhammad, unto mankind): I ask of you no fee for it. Lo! it is naught but a Reminder to (His) creatures"
+  },
+  {
+   "v": 91,
+   "ar": "وَمَا قَدَرُواْ ٱللَّهَ حَقَّ قَدۡرِهِۦٓ إِذۡ قَالُواْ مَآ أَنزَلَ ٱللَّهُ عَلَىٰ بَشَرࣲ مِّن شَيۡءࣲۗ قُلۡ مَنۡ أَنزَلَ ٱلۡكِتَٰبَ ٱلَّذِي جَآءَ بِهِۦ مُوسَىٰ نُورࣰ ا وَهُدࣰ ى لِّلنَّاسِۖ تَجۡعَلُونَهُۥ قَرَاطِيسَ تُبۡدُونَهَا وَتُخۡفُونَ كَثِيرࣰ اۖ وَعُلِّمۡتُم مَّا لَمۡ تَعۡلَمُوٓاْ أَنتُمۡ وَلَآ ءَابَآؤُكُمۡۖ قُلِ ٱللَّهُۖ ثُمَّ ذَرۡهُمۡ فِي خَوۡضِهِمۡ يَلۡعَبُونَ",
+   "en": "And they measure not the power of Allah its true measure when they say: Allah hath naught revealed unto a human being. Say (unto the Jews who speak thus): Who revealed the Book which Moses brought, a light and guidance for mankind, which ye have put on parchments which ye show, but ye hide much (thereof), and (by which) ye were taught that which ye knew not yourselves nor (did) your fathers (know it)? Say: Allah. Then leave them to their play of cavilling"
+  },
+  {
+   "v": 92,
+   "ar": "وَهَٰذَا كِتَٰبٌ أَنزَلۡنَٰهُ مُبَارَكࣱ مُّصَدِّقُ ٱلَّذِي بَيۡنَ يَدَيۡهِ وَلِتُنذِرَ أُمَّ ٱلۡقُرَىٰ وَمَنۡ حَوۡلَهَاۚ وَٱلَّذِينَ يُؤۡمِنُونَ بِٱلۡأٓخِرَةِ يُؤۡمِنُونَ بِهِۦۖ وَهُمۡ عَلَىٰ صَلَاتِهِمۡ يُحَافِظُونَ",
+   "en": "And this is a blessed Scripture which We have revealed, confirming that which (was revealed) before it, that thou mayst warn the Mother of Villages and those around her. Those who believe in the Hereafter believe herein, and they are careful of their worship"
+  },
+  {
+   "v": 93,
+   "ar": "وَمَنۡ أَظۡلَمُ مِمَّنِ ٱفۡتَرَىٰ عَلَى ٱللَّهِ كَذِبًا أَوۡ قَالَ أُوحِيَ إِلَيَّ وَلَمۡ يُوحَ إِلَيۡهِ شَيۡءࣱ وَمَن قَالَ سَأُنزِلُ مِثۡلَ مَآ أَنزَلَ ٱللَّهُۗ وَلَوۡ تَرَىٰٓ إِذِ ٱلظَّٰلِمُونَ فِي غَمَرَٰتِ ٱلۡمَوۡتِ وَٱلۡمَلَٰٓئِكَةُ بَاسِطُوٓاْ أَيۡدِيهِمۡ أَخۡرِجُوٓاْ أَنفُسَكُمُۖ ٱلۡيَوۡمَ تُجۡزَوۡنَ عَذَابَ ٱلۡهُونِ بِمَا كُنتُمۡ تَقُولُونَ عَلَى ٱللَّهِ غَيۡرَ ٱلۡحَقِّ وَكُنتُمۡ عَنۡ ءَايَٰتِهِۦ تَسۡتَكۡبِرُونَ",
+   "en": "Who is guilty of more wrong than he who forgeth a lie against Allah, or saith: I am inspired, when he is not inspired in aught; and who saith: I will reveal the like of that which Allah hath revealed? If thou couldst see, when the wrong-doers reach the pangs of death and the angels stretch their hands out (saying): Deliver up your souls. This day ye are awarded doom of degradation for that ye spake concerning Allah other than the truth, and used to scorn His portents"
+  },
+  {
+   "v": 94,
+   "ar": "وَلَقَدۡ جِئۡتُمُونَا فُرَٰدَىٰ كَمَا خَلَقۡنَٰكُمۡ أَوَّلَ مَرَّةࣲ وَتَرَكۡتُم مَّا خَوَّلۡنَٰكُمۡ وَرَآءَ ظُهُورِكُمۡۖ وَمَا نَرَىٰ مَعَكُمۡ شُفَعَآءَكُمُ ٱلَّذِينَ زَعَمۡتُمۡ أَنَّهُمۡ فِيكُمۡ شُرَكَٰٓؤُاْۚ لَقَد تَّقَطَّعَ بَيۡنَكُمۡ وَضَلَّ عَنكُم مَّا كُنتُمۡ تَزۡعُمُونَ",
+   "en": "Now have ye come unto Us solitary as We did create you at the first, and ye have left behind you all that We bestowed upon you, and We behold not with you those your intercessors, of whom ye claimed that they possessed a share in you. Now is the bond between you severed, and that which ye presumed hath failed you"
+  },
+  {
+   "v": 95,
+   "ar": "۞إِنَّ ٱللَّهَ فَالِقُ ٱلۡحَبِّ وَٱلنَّوَىٰۖ يُخۡرِجُ ٱلۡحَيَّ مِنَ ٱلۡمَيِّتِ وَمُخۡرِجُ ٱلۡمَيِّتِ مِنَ ٱلۡحَيِّۚ ذَٰلِكُمُ ٱللَّهُۖ فَأَنَّىٰ تُؤۡفَكُونَ",
+   "en": "Lo! Allah (it is) Who splitteth the grain of corn and the date-stone (for sprouting). He bringeth forth the living from the dead, and is the bringer-forth of the dead from the living. Such is Allah. How then are ye perverted"
+  },
+  {
+   "v": 96,
+   "ar": "فَالِقُ ٱلۡإِصۡبَاحِ وَجَعَلَ ٱلَّيۡلَ سَكَنࣰ ا وَٱلشَّمۡسَ وَٱلۡقَمَرَ حُسۡبَانࣰ اۚ ذَٰلِكَ تَقۡدِيرُ ٱلۡعَزِيزِ ٱلۡعَلِيمِ",
+   "en": "He is the Cleaver of the Daybreak, and He hath appointed the night for stillness, and the sun and the moon for reckoning. That is the measuring of the Mighty, the Wise"
+  },
+  {
+   "v": 97,
+   "ar": "وَهُوَ ٱلَّذِي جَعَلَ لَكُمُ ٱلنُّجُومَ لِتَهۡتَدُواْ بِهَا فِي ظُلُمَٰتِ ٱلۡبَرِّ وَٱلۡبَحۡرِۗ قَدۡ فَصَّلۡنَا ٱلۡأٓيَٰتِ لِقَوۡمࣲ يَعۡلَمُونَ",
+   "en": "And He it is Who hath set for you the stars that ye may guide your course by them amid the darkness of the land and the sea. We have detailed Our revelations for a people who have knowledge"
+  },
+  {
+   "v": 98,
+   "ar": "وَهُوَ ٱلَّذِيٓ أَنشَأَكُم مِّن نَّفۡسࣲ وَٰحِدَةࣲ فَمُسۡتَقَرࣱّ وَمُسۡتَوۡدَعࣱۗ قَدۡ فَصَّلۡنَا ٱلۡأٓيَٰتِ لِقَوۡمࣲ يَفۡقَهُونَ",
+   "en": "And He it is Who hath produced you from a single being, and (hath given you) a habitation and a repository. We have detailed Our revelations for a people who have understanding"
+  },
+  {
+   "v": 99,
+   "ar": "وَهُوَ ٱلَّذِيٓ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءࣰ فَأَخۡرَجۡنَا بِهِۦ نَبَاتَ كُلِّ شَيۡءࣲ فَأَخۡرَجۡنَا مِنۡهُ خَضِرࣰ ا نُّخۡرِجُ مِنۡهُ حَبࣰّ ا مُّتَرَاكِبࣰ ا وَمِنَ ٱلنَّخۡلِ مِن طَلۡعِهَا قِنۡوَانࣱ دَانِيَةࣱ وَجَنَّٰتࣲ مِّنۡ أَعۡنَابࣲ وَٱلزَّيۡتُونَ وَٱلرُّمَّانَ مُشۡتَبِهࣰ ا وَغَيۡرَ مُتَشَٰبِهٍۗ ٱنظُرُوٓاْ إِلَىٰ ثَمَرِهِۦٓ إِذَآ أَثۡمَرَ وَيَنۡعِهِۦٓۚ إِنَّ فِي ذَٰلِكُمۡ لَأٓيَٰتࣲ لِّقَوۡمࣲ يُؤۡمِنُونَ",
+   "en": "He it is Who sendeth down water from the sky, and therewith We bring forth buds of every kind; We bring forth the green blade from which We bring forth the thick-clustered grain; and from the date-palm, from the pollen thereof, spring pendant bunches; and (We bring forth) gardens of grapes, and the olive and the pomegranate, alike and unlike. Look upon the fruit thereof, when they bear fruit, and upon its ripening. Lo! herein verily are portents for a people who believe"
+  },
+  {
+   "v": 100,
+   "ar": "وَجَعَلُواْ لِلَّهِ شُرَكَآءَ ٱلۡجِنَّ وَخَلَقَهُمۡۖ وَخَرَقُواْ لَهُۥ بَنِينَ وَبَنَٰتِۭ بِغَيۡرِ عِلۡمࣲۚ سُبۡحَٰنَهُۥ وَتَعَٰلَىٰ عَمَّا يَصِفُونَ",
+   "en": "Yet they ascribe as partners unto Him the jinn, although He did create them, and impute falsely, without knowledge, sons and daughters unto Him. Glorified be He and High Exalted above (all) that they ascribe (unto Him)"
+  },
+  {
+   "v": 101,
+   "ar": "بَدِيعُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِۖ أَنَّىٰ يَكُونُ لَهُۥ وَلَدࣱ وَلَمۡ تَكُن لَّهُۥ صَٰحِبَةࣱۖ وَخَلَقَ كُلَّ شَيۡءࣲۖ وَهُوَ بِكُلِّ شَيۡءٍ عَلِيمࣱ‏",
+   "en": "The Originator of the heavens and the earth! How can He have a child, when there is for Him no consort, when He created all things and is Aware of all things"
+  },
+  {
+   "v": 102,
+   "ar": "ذَٰلِكُمُ ٱللَّهُ رَبُّكُمۡۖ لَآ إِلَٰهَ إِلَّا هُوَۖ خَٰلِقُ كُلِّ شَيۡءࣲ فَٱعۡبُدُوهُۚ وَهُوَ عَلَىٰ كُلِّ شَيۡءࣲ وَكِيلࣱ‏",
+   "en": "Such is Allah, your Lord. There is no Allah save Him, the Creator of all things, so worship Him. And He taketh care of all things"
+  },
+  {
+   "v": 103,
+   "ar": "لَّا تُدۡرِكُهُ ٱلۡأَبۡصَٰرُ وَهُوَ يُدۡرِكُ ٱلۡأَبۡصَٰرَۖ وَهُوَ ٱللَّطِيفُ ٱلۡخَبِيرُ",
+   "en": "Vision comprehendeth Him not, but He comprehendeth (all) vision. He is the Subtile, the Aware"
+  },
+  {
+   "v": 104,
+   "ar": "قَدۡ جَآءَكُم بَصَآئِرُ مِن رَّبِّكُمۡۖ فَمَنۡ أَبۡصَرَ فَلِنَفۡسِهِۦۖ وَمَنۡ عَمِيَ فَعَلَيۡهَاۚ وَمَآ أَنَا۠ عَلَيۡكُم بِحَفِيظࣲ‏",
+   "en": "Proofs have come unto you from your Lord, so whoso seeth, it is for his own good, and whoso is blind is blind to his own hurt. And I am not a keeper over you"
+  },
+  {
+   "v": 105,
+   "ar": "وَكَذَٰلِكَ نُصَرِّفُ ٱلۡأٓيَٰتِ وَلِيَقُولُواْ دَرَسۡتَ وَلِنُبَيِّنَهُۥ لِقَوۡمࣲ يَعۡلَمُونَ",
+   "en": "Thus do We display Our revelations that they may say (unto thee, Muhammad): \"Thou hast studied,\" and that We may make (it) clear for people who have knowledge"
+  },
+  {
+   "v": 106,
+   "ar": "ٱتَّبِعۡ مَآ أُوحِيَ إِلَيۡكَ مِن رَّبِّكَۖ لَآ إِلَٰهَ إِلَّا هُوَۖ وَأَعۡرِضۡ عَنِ ٱلۡمُشۡرِكِينَ",
+   "en": "Follow that which is inspired in thee from thy Lord; there is no Allah save Him; and turn away from the idolaters"
+  },
+  {
+   "v": 107,
+   "ar": "وَلَوۡ شَآءَ ٱللَّهُ مَآ أَشۡرَكُواْۗ وَمَا جَعَلۡنَٰكَ عَلَيۡهِمۡ حَفِيظࣰ اۖ وَمَآ أَنتَ عَلَيۡهِم بِوَكِيلࣲ‏",
+   "en": "Had Allah willed, they had not been idolatrous. We have not set thee as a keeper over them, nor art thou responsible for them"
+  },
+  {
+   "v": 108,
+   "ar": "وَلَا تَسُبُّواْ ٱلَّذِينَ يَدۡعُونَ مِن دُونِ ٱللَّهِ فَيَسُبُّواْ ٱللَّهَ عَدۡوَۢا بِغَيۡرِ عِلۡمࣲۗ كَذَٰلِكَ زَيَّنَّا لِكُلِّ أُمَّةٍ عَمَلَهُمۡ ثُمَّ إِلَىٰ رَبِّهِم مَّرۡجِعُهُمۡ فَيُنَبِّئُهُم بِمَا كَانُواْ يَعۡمَلُونَ",
+   "en": "Revile not those unto whom they pray beside Allah lest they wrongfully revile Allah through ignorance. Thus unto every nation have We made their deed seem fair. Then unto their Lord is their return, and He will tell them what they used to do"
+  },
+  {
+   "v": 109,
+   "ar": "وَأَقۡسَمُواْ بِٱللَّهِ جَهۡدَ أَيۡمَٰنِهِمۡ لَئِن جَآءَتۡهُمۡ ءَايَةࣱ لَّيُؤۡمِنُنَّ بِهَاۚ قُلۡ إِنَّمَا ٱلۡأٓيَٰتُ عِندَ ٱللَّهِۖ وَمَا يُشۡعِرُكُمۡ أَنَّهَآ إِذَا جَآءَتۡ لَا يُؤۡمِنُونَ",
+   "en": "And they swear a solemn oath by Allah that if there come unto them a portent they will believe therein. Say; Portents are with Allah and (so is) that which telleth you that if such came unto them they would not believe"
+  },
+  {
+   "v": 110,
+   "ar": "وَنُقَلِّبُ أَفۡـِٔدَتَهُمۡ وَأَبۡصَٰرَهُمۡ كَمَا لَمۡ يُؤۡمِنُواْ بِهِۦٓ أَوَّلَ مَرَّةࣲ وَنَذَرُهُمۡ فِي طُغۡيَٰنِهِمۡ يَعۡمَهُونَ",
+   "en": "We confound their hearts and their eyes. As they believed not therein at the first, We let them wander blindly on in their contumacy"
+  },
+  {
+   "v": 111,
+   "ar": "۞وَلَوۡ أَنَّنَا نَزَّلۡنَآ إِلَيۡهِمُ ٱلۡمَلَٰٓئِكَةَ وَكَلَّمَهُمُ ٱلۡمَوۡتَىٰ وَحَشَرۡنَا عَلَيۡهِمۡ كُلَّ شَيۡءࣲ قُبُلࣰ ا مَّا كَانُواْ لِيُؤۡمِنُوٓاْ إِلَّآ أَن يَشَآءَ ٱللَّهُ وَلَٰكِنَّ أَكۡثَرَهُمۡ يَجۡهَلُونَ",
+   "en": "And though We should send down the angels unto them, and the dead should speak unto them, and We should gather against them all things in array, they would not believe unless Allah so willed. Howbeit, most of them are ignorant"
+  },
+  {
+   "v": 112,
+   "ar": "وَكَذَٰلِكَ جَعَلۡنَا لِكُلِّ نَبِيٍّ عَدُوࣰّ ا شَيَٰطِينَ ٱلۡإِنسِ وَٱلۡجِنِّ يُوحِي بَعۡضُهُمۡ إِلَىٰ بَعۡضࣲ زُخۡرُفَ ٱلۡقَوۡلِ غُرُورࣰ اۚ وَلَوۡ شَآءَ رَبُّكَ مَا فَعَلُوهُۖ فَذَرۡهُمۡ وَمَا يَفۡتَرُونَ",
+   "en": "Thus have We appointed unto every prophet an adversary - devils of humankind and jinn who inspire in one another plausible discourse through guile. If thy Lord willed, they would not do so; so leave them alone with their devising"
+  },
+  {
+   "v": 113,
+   "ar": "وَلِتَصۡغَىٰٓ إِلَيۡهِ أَفۡـِٔدَةُ ٱلَّذِينَ لَا يُؤۡمِنُونَ بِٱلۡأٓخِرَةِ وَلِيَرۡضَوۡهُ وَلِيَقۡتَرِفُواْ مَا هُم مُّقۡتَرِفُونَ",
+   "en": "That the hearts of those who believe not in the Hereafter may incline thereto, and that they may take pleasure therein, and that they may earn what they are earning"
+  },
+  {
+   "v": 114,
+   "ar": "أَفَغَيۡرَ ٱللَّهِ أَبۡتَغِي حَكَمࣰ ا وَهُوَ ٱلَّذِيٓ أَنزَلَ إِلَيۡكُمُ ٱلۡكِتَٰبَ مُفَصَّلࣰ اۚ وَٱلَّذِينَ ءَاتَيۡنَٰهُمُ ٱلۡكِتَٰبَ يَعۡلَمُونَ أَنَّهُۥ مُنَزَّلࣱ مِّن رَّبِّكَ بِٱلۡحَقِّۖ فَلَا تَكُونَنَّ مِنَ ٱلۡمُمۡتَرِينَ",
+   "en": "Shall I seek other than Allah for judge, when He it is Who hath revealed unto you (this) Scripture, fully explained? Those unto whom We gave the Scripture (aforetime) know that it is revealed from thy Lord in truth. So be not thou (O Muhammad) of the waverers"
+  },
+  {
+   "v": 115,
+   "ar": "وَتَمَّتۡ كَلِمَتُ رَبِّكَ صِدۡقࣰ ا وَعَدۡلࣰ اۚ لَّا مُبَدِّلَ لِكَلِمَٰتِهِۦۚ وَهُوَ ٱلسَّمِيعُ ٱلۡعَلِيمُ",
+   "en": "Perfected is the Word of thy Lord in truth and justice. There is naught that can change His words. He is the Hearer, the Knower"
+  },
+  {
+   "v": 116,
+   "ar": "وَإِن تُطِعۡ أَكۡثَرَ مَن فِي ٱلۡأَرۡضِ يُضِلُّوكَ عَن سَبِيلِ ٱللَّهِۚ إِن يَتَّبِعُونَ إِلَّا ٱلظَّنَّ وَإِنۡ هُمۡ إِلَّا يَخۡرُصُونَ",
+   "en": "If thou obeyedst most of those on earth they would mislead thee far from Allah's way. They follow naught but an opinion, and they do but guess"
+  },
+  {
+   "v": 117,
+   "ar": "إِنَّ رَبَّكَ هُوَ أَعۡلَمُ مَن يَضِلُّ عَن سَبِيلِهِۦۖ وَهُوَ أَعۡلَمُ بِٱلۡمُهۡتَدِينَ",
+   "en": "Lo! thy Lord, He knoweth best who erreth from His way; and He knoweth best (who are) the rightly guided"
+  },
+  {
+   "v": 118,
+   "ar": "فَكُلُواْ مِمَّا ذُكِرَ ٱسۡمُ ٱللَّهِ عَلَيۡهِ إِن كُنتُم بِـَٔايَٰتِهِۦ مُؤۡمِنِينَ",
+   "en": "Eat of that over which the name of Allah hath been mentioned, if ye are believers in His revelations"
+  },
+  {
+   "v": 119,
+   "ar": "وَمَا لَكُمۡ أَلَّا تَأۡكُلُواْ مِمَّا ذُكِرَ ٱسۡمُ ٱللَّهِ عَلَيۡهِ وَقَدۡ فَصَّلَ لَكُم مَّا حَرَّمَ عَلَيۡكُمۡ إِلَّا مَا ٱضۡطُرِرۡتُمۡ إِلَيۡهِۗ وَإِنَّ كَثِيرࣰ ا لَّيُضِلُّونَ بِأَهۡوَآئِهِم بِغَيۡرِ عِلۡمٍۚ إِنَّ رَبَّكَ هُوَ أَعۡلَمُ بِٱلۡمُعۡتَدِينَ",
+   "en": "How should ye not eat of that over which the name of Allah hath been mentioned, when He hath explained unto you that which is forbidden unto you unless ye are compelled thereto. But lo! many are led astray by their own lusts through ignorance. Lo! thy Lord, He is Best Aware of the transgressors"
+  },
+  {
+   "v": 120,
+   "ar": "وَذَرُواْ ظَٰهِرَ ٱلۡإِثۡمِ وَبَاطِنَهُۥٓۚ إِنَّ ٱلَّذِينَ يَكۡسِبُونَ ٱلۡإِثۡمَ سَيُجۡزَوۡنَ بِمَا كَانُواْ يَقۡتَرِفُونَ",
+   "en": "Forsake the outwardness of sin and the inwardness thereof. Lo! those who garner sin will be awarded that which they have earned"
+  },
+  {
+   "v": 121,
+   "ar": "وَلَا تَأۡكُلُواْ مِمَّا لَمۡ يُذۡكَرِ ٱسۡمُ ٱللَّهِ عَلَيۡهِ وَإِنَّهُۥ لَفِسۡقࣱۗ وَإِنَّ ٱلشَّيَٰطِينَ لَيُوحُونَ إِلَىٰٓ أَوۡلِيَآئِهِمۡ لِيُجَٰدِلُوكُمۡۖ وَإِنۡ أَطَعۡتُمُوهُمۡ إِنَّكُمۡ لَمُشۡرِكُونَ",
+   "en": "And eat not of that whereon Allah's name hath not been mentioned, for lo! it is abomination. Lo! the devils do inspire their minions to dispute with you. But if ye obey them, ye will be in truth idolaters"
+  },
+  {
+   "v": 122,
+   "ar": "أَوَمَن كَانَ مَيۡتࣰ ا فَأَحۡيَيۡنَٰهُ وَجَعَلۡنَا لَهُۥ نُورࣰ ا يَمۡشِي بِهِۦ فِي ٱلنَّاسِ كَمَن مَّثَلُهُۥ فِي ٱلظُّلُمَٰتِ لَيۡسَ بِخَارِجࣲ مِّنۡهَاۚ كَذَٰلِكَ زُيِّنَ لِلۡكَٰفِرِينَ مَا كَانُواْ يَعۡمَلُونَ",
+   "en": "Is he who was dead and We have raised him unto life, and set for him a light wherein he walketh among men, as him whose similitude is in utter darkness whence he cannot emerge? Thus is their conduct made fairseeming for the disbelievers"
+  },
+  {
+   "v": 123,
+   "ar": "وَكَذَٰلِكَ جَعَلۡنَا فِي كُلِّ قَرۡيَةٍ أَكَٰبِرَ مُجۡرِمِيهَا لِيَمۡكُرُواْ فِيهَاۖ وَمَا يَمۡكُرُونَ إِلَّا بِأَنفُسِهِمۡ وَمَا يَشۡعُرُونَ",
+   "en": "And thus have We made in every city great ones of its wicked ones, that they should plot therein. They do but plot against themselves, though they perceive not"
+  },
+  {
+   "v": 124,
+   "ar": "وَإِذَا جَآءَتۡهُمۡ ءَايَةࣱ قَالُواْ لَن نُّؤۡمِنَ حَتَّىٰ نُؤۡتَىٰ مِثۡلَ مَآ أُوتِيَ رُسُلُ ٱللَّهِۘ ٱللَّهُ أَعۡلَمُ حَيۡثُ يَجۡعَلُ رِسَالَتَهُۥۗ سَيُصِيبُ ٱلَّذِينَ أَجۡرَمُواْ صَغَارٌ عِندَ ٱللَّهِ وَعَذَابࣱ شَدِيدُۢ بِمَا كَانُواْ يَمۡكُرُونَ",
+   "en": "And when a token cometh unto them, they say: We will not believe till we are given that which Allah's messengers are given. Allah knoweth best with whom to place His message. Humiliation from Allah and heavy punishment will smite the guilty for their scheming"
+  },
+  {
+   "v": 125,
+   "ar": "فَمَن يُرِدِ ٱللَّهُ أَن يَهۡدِيَهُۥ يَشۡرَحۡ صَدۡرَهُۥ لِلۡإِسۡلَٰمِۖ وَمَن يُرِدۡ أَن يُضِلَّهُۥ يَجۡعَلۡ صَدۡرَهُۥ ضَيِّقًا حَرَجࣰ ا كَأَنَّمَا يَصَّعَّدُ فِي ٱلسَّمَآءِۚ كَذَٰلِكَ يَجۡعَلُ ٱللَّهُ ٱلرِّجۡسَ عَلَى ٱلَّذِينَ لَا يُؤۡمِنُونَ",
+   "en": "And whomsoever it is Allah's will to guide, He expandeth his bosom unto the Surrender, and whomsoever it is His Will to send astray, He maketh his bosom close and narrow as if he were engaged in sheer ascent. Thus Allah layeth ignominy upon those who believe not"
+  },
+  {
+   "v": 126,
+   "ar": "وَهَٰذَا صِرَٰطُ رَبِّكَ مُسۡتَقِيمࣰ اۗ قَدۡ فَصَّلۡنَا ٱلۡأٓيَٰتِ لِقَوۡمࣲ يَذَّكَّرُونَ",
+   "en": "This is the path of thy Lord, a straight path. We have detailed Our revelations for a people who take heed"
+  },
+  {
+   "v": 127,
+   "ar": "۞لَهُمۡ دَارُ ٱلسَّلَٰمِ عِندَ رَبِّهِمۡۖ وَهُوَ وَلِيُّهُم بِمَا كَانُواْ يَعۡمَلُونَ",
+   "en": "For them is the abode of peace with their Lord. He will be their Protecting Friend because of what they used to do"
+  },
+  {
+   "v": 128,
+   "ar": "وَيَوۡمَ يَحۡشُرُهُمۡ جَمِيعࣰ ا يَٰمَعۡشَرَ ٱلۡجِنِّ قَدِ ٱسۡتَكۡثَرۡتُم مِّنَ ٱلۡإِنسِۖ وَقَالَ أَوۡلِيَآؤُهُم مِّنَ ٱلۡإِنسِ رَبَّنَا ٱسۡتَمۡتَعَ بَعۡضُنَا بِبَعۡضࣲ وَبَلَغۡنَآ أَجَلَنَا ٱلَّذِيٓ أَجَّلۡتَ لَنَاۚ قَالَ ٱلنَّارُ مَثۡوَىٰكُمۡ خَٰلِدِينَ فِيهَآ إِلَّا مَا شَآءَ ٱللَّهُۚ إِنَّ رَبَّكَ حَكِيمٌ عَلِيمࣱ‏",
+   "en": "In the day when He will gather them together (He will say): O ye assembly of the jinn! Many of humankind did ye seduce. And their adherents among humankind will say: Our Lord! We enjoyed one another, but now we have arrived at the appointed term which Thou appointedst for us. He will say: Fire is your home. Abide therein for ever, save him whom Allah willeth (to deliver). Lo! thy Lord is Wise, Aware"
+  },
+  {
+   "v": 129,
+   "ar": "وَكَذَٰلِكَ نُوَلِّي بَعۡضَ ٱلظَّٰلِمِينَ بَعۡضَۢا بِمَا كَانُواْ يَكۡسِبُونَ",
+   "en": "Thus We let some of the wrong-doers have power over others because of what they are wont to earn"
+  },
+  {
+   "v": 130,
+   "ar": "يَٰمَعۡشَرَ ٱلۡجِنِّ وَٱلۡإِنسِ أَلَمۡ يَأۡتِكُمۡ رُسُلࣱ مِّنكُمۡ يَقُصُّونَ عَلَيۡكُمۡ ءَايَٰتِي وَيُنذِرُونَكُمۡ لِقَآءَ يَوۡمِكُمۡ هَٰذَاۚ قَالُواْ شَهِدۡنَا عَلَىٰٓ أَنفُسِنَاۖ وَغَرَّتۡهُمُ ٱلۡحَيَوٰةُ ٱلدُّنۡيَا وَشَهِدُواْ عَلَىٰٓ أَنفُسِهِمۡ أَنَّهُمۡ كَانُواْ كَٰفِرِينَ",
+   "en": "O ye assembly of the jinn and humankind! Came there not unto you messengers of your own who recounted unto you My tokens and warned you of the meeting of this your Day? They will say: We testify against ourselves. And the life of the world beguiled them. And they testify against themselves that they were disbelievers"
+  },
+  {
+   "v": 131,
+   "ar": "ذَٰلِكَ أَن لَّمۡ يَكُن رَّبُّكَ مُهۡلِكَ ٱلۡقُرَىٰ بِظُلۡمࣲ وَأَهۡلُهَا غَٰفِلُونَ",
+   "en": "This is because thy Lord destroyeth not the townships arbitrarily while their people are unconscious (of the wrong they do)"
+  },
+  {
+   "v": 132,
+   "ar": "وَلِكُلࣲّ دَرَجَٰتࣱ مِّمَّا عَمِلُواْۚ وَمَا رَبُّكَ بِغَٰفِلٍ عَمَّا يَعۡمَلُونَ",
+   "en": "For all there will be ranks from what they did. Thy Lord is not unaware of what they do"
+  },
+  {
+   "v": 133,
+   "ar": "وَرَبُّكَ ٱلۡغَنِيُّ ذُو ٱلرَّحۡمَةِۚ إِن يَشَأۡ يُذۡهِبۡكُمۡ وَيَسۡتَخۡلِفۡ مِنۢ بَعۡدِكُم مَّا يَشَآءُ كَمَآ أَنشَأَكُم مِّن ذُرِّيَّةِ قَوۡمٍ ءَاخَرِينَ",
+   "en": "Thy Lord is the Absolute, the Lord of Mercy. If He will, He can remove you and can cause what He will to follow after you, even as He raised you from the seed of other folk"
+  },
+  {
+   "v": 134,
+   "ar": "إِنَّ مَا تُوعَدُونَ لَأٓتࣲۖ وَمَآ أَنتُم بِمُعۡجِزِينَ",
+   "en": "Lo! that which ye are promised will surely come to pass, and ye cannot escape"
+  },
+  {
+   "v": 135,
+   "ar": "قُلۡ يَٰقَوۡمِ ٱعۡمَلُواْ عَلَىٰ مَكَانَتِكُمۡ إِنِّي عَامِلࣱۖ فَسَوۡفَ تَعۡلَمُونَ مَن تَكُونُ لَهُۥ عَٰقِبَةُ ٱلدَّارِۚ إِنَّهُۥ لَا يُفۡلِحُ ٱلظَّٰلِمُونَ",
+   "en": "Say (O Muhammad): O my people! Work according to your power. Lo! I too am working. Thus ye will come to know for which of us will be the happy sequel. Lo! the wrong-doers will not be successful"
+  },
+  {
+   "v": 136,
+   "ar": "وَجَعَلُواْ لِلَّهِ مِمَّا ذَرَأَ مِنَ ٱلۡحَرۡثِ وَٱلۡأَنۡعَٰمِ نَصِيبࣰ ا فَقَالُواْ هَٰذَا لِلَّهِ بِزَعۡمِهِمۡ وَهَٰذَا لِشُرَكَآئِنَاۖ فَمَا كَانَ لِشُرَكَآئِهِمۡ فَلَا يَصِلُ إِلَى ٱللَّهِۖ وَمَا كَانَ لِلَّهِ فَهُوَ يَصِلُ إِلَىٰ شُرَكَآئِهِمۡۗ سَآءَ مَا يَحۡكُمُونَ",
+   "en": "They assign unto Allah, of the crops and cattle which He created, a portion, and they say: \"This is Allah's\" - in their make-believe - \"and this is for (His) partners in regard to us.\" Thus that which (they assign) unto His partners in them reacheth not Allah and that which (they assign) unto Allah goeth to their (so-called) partners. Evil is their ordinance"
+  },
+  {
+   "v": 137,
+   "ar": "وَكَذَٰلِكَ زَيَّنَ لِكَثِيرࣲ مِّنَ ٱلۡمُشۡرِكِينَ قَتۡلَ أَوۡلَٰدِهِمۡ شُرَكَآؤُهُمۡ لِيُرۡدُوهُمۡ وَلِيَلۡبِسُواْ عَلَيۡهِمۡ دِينَهُمۡۖ وَلَوۡ شَآءَ ٱللَّهُ مَا فَعَلُوهُۖ فَذَرۡهُمۡ وَمَا يَفۡتَرُونَ",
+   "en": "Thus have their (so-called) partners (of Allah) made the killing of their children to seem fair unto many of the idolaters, that they may ruin them and make their faith obscure for them. Had Allah willed (it otherwise), they had not done so. So leave them alone with their devices"
+  },
+  {
+   "v": 138,
+   "ar": "وَقَالُواْ هَٰذِهِۦٓ أَنۡعَٰمࣱ وَحَرۡثٌ حِجۡرࣱ لَّا يَطۡعَمُهَآ إِلَّا مَن نَّشَآءُ بِزَعۡمِهِمۡ وَأَنۡعَٰمٌ حُرِّمَتۡ ظُهُورُهَا وَأَنۡعَٰمࣱ لَّا يَذۡكُرُونَ ٱسۡمَ ٱللَّهِ عَلَيۡهَا ٱفۡتِرَآءً عَلَيۡهِۚ سَيَجۡزِيهِم بِمَا كَانُواْ يَفۡتَرُونَ",
+   "en": "And they say: Such cattle and crops are forbidden. No-one is to eat of them save whom we will - in their make-believe - cattle whose backs are forbidden, cattle over which they mention not the name of Allah. (All that is) a lie against Him. He will repay them for that which they invent"
+  },
+  {
+   "v": 139,
+   "ar": "وَقَالُواْ مَا فِي بُطُونِ هَٰذِهِ ٱلۡأَنۡعَٰمِ خَالِصَةࣱ لِّذُكُورِنَا وَمُحَرَّمٌ عَلَىٰٓ أَزۡوَٰجِنَاۖ وَإِن يَكُن مَّيۡتَةࣰ فَهُمۡ فِيهِ شُرَكَآءُۚ سَيَجۡزِيهِمۡ وَصۡفَهُمۡۚ إِنَّهُۥ حَكِيمٌ عَلِيمࣱ‏",
+   "en": "And they say: That which is in the bellies of such cattle is reserved for our males and is forbidden to our wives; but if it be born dead, then they (all) may be partakers thereof. He will reward them for their attribution (of such ordinances unto Him). Lo, He is Wise, Aware"
+  },
+  {
+   "v": 140,
+   "ar": "قَدۡ خَسِرَ ٱلَّذِينَ قَتَلُوٓاْ أَوۡلَٰدَهُمۡ سَفَهَۢا بِغَيۡرِ عِلۡمࣲ وَحَرَّمُواْ مَا رَزَقَهُمُ ٱللَّهُ ٱفۡتِرَآءً عَلَى ٱللَّهِۚ قَدۡ ضَلُّواْ وَمَا كَانُواْ مُهۡتَدِينَ",
+   "en": "They are losers who besottedly have slain their children without knowledge, and have forbidden that which Allah bestowed upon them, inventing a lie against Allah. They indeed have gone astray and are not guided"
+  },
+  {
+   "v": 141,
+   "ar": "۞وَهُوَ ٱلَّذِيٓ أَنشَأَ جَنَّٰتࣲ مَّعۡرُوشَٰتࣲ وَغَيۡرَ مَعۡرُوشَٰتࣲ وَٱلنَّخۡلَ وَٱلزَّرۡعَ مُخۡتَلِفًا أُكُلُهُۥ وَٱلزَّيۡتُونَ وَٱلرُّمَّانَ مُتَشَٰبِهࣰ ا وَغَيۡرَ مُتَشَٰبِهࣲۚ كُلُواْ مِن ثَمَرِهِۦٓ إِذَآ أَثۡمَرَ وَءَاتُواْ حَقَّهُۥ يَوۡمَ حَصَادِهِۦۖ وَلَا تُسۡرِفُوٓاْۚ إِنَّهُۥ لَا يُحِبُّ ٱلۡمُسۡرِفِينَ",
+   "en": "He it is Who produceth gardens trellised and untrellised, and the date-palm, and crops of divers flavour, and the olive and the pomegranate, like and unlike. Eat ye of the fruit thereof when it fruiteth, and pay the due thereof upon the harvest day, and be not prodigal. Lo! Allah loveth not the prodigals"
+  },
+  {
+   "v": 142,
+   "ar": "وَمِنَ ٱلۡأَنۡعَٰمِ حَمُولَةࣰ وَفَرۡشࣰ اۚ كُلُواْ مِمَّا رَزَقَكُمُ ٱللَّهُ وَلَا تَتَّبِعُواْ خُطُوَٰتِ ٱلشَّيۡطَٰنِۚ إِنَّهُۥ لَكُمۡ عَدُوࣱّ مُّبِينࣱ‏",
+   "en": "And of the cattle (He produceth) some for burdens, some for food. Eat of that which Allah hath bestowed upon you, and follow not the footsteps of the devil, for lo! he is an open foe to you"
+  },
+  {
+   "v": 143,
+   "ar": "ثَمَٰنِيَةَ أَزۡوَٰجࣲۖ مِّنَ ٱلضَّأۡنِ ٱثۡنَيۡنِ وَمِنَ ٱلۡمَعۡزِ ٱثۡنَيۡنِۗ قُلۡ ءَآلذَّكَرَيۡنِ حَرَّمَ أَمِ ٱلۡأُنثَيَيۡنِ أَمَّا ٱشۡتَمَلَتۡ عَلَيۡهِ أَرۡحَامُ ٱلۡأُنثَيَيۡنِۖ نَبِّـُٔونِي بِعِلۡمٍ إِن كُنتُمۡ صَٰدِقِينَ",
+   "en": "Eight pairs: Of the sheep twain, and of the goats twain. Say: Hath He forbidden the two males or the two females, or that which the wombs of the two females contain? Expound to me (the case) with knowledge, if ye are truthful"
+  },
+  {
+   "v": 144,
+   "ar": "وَمِنَ ٱلۡإِبِلِ ٱثۡنَيۡنِ وَمِنَ ٱلۡبَقَرِ ٱثۡنَيۡنِۗ قُلۡ ءَآلذَّكَرَيۡنِ حَرَّمَ أَمِ ٱلۡأُنثَيَيۡنِ أَمَّا ٱشۡتَمَلَتۡ عَلَيۡهِ أَرۡحَامُ ٱلۡأُنثَيَيۡنِۖ أَمۡ كُنتُمۡ شُهَدَآءَ إِذۡ وَصَّىٰكُمُ ٱللَّهُ بِهَٰذَاۚ فَمَنۡ أَظۡلَمُ مِمَّنِ ٱفۡتَرَىٰ عَلَى ٱللَّهِ كَذِبࣰ ا لِّيُضِلَّ ٱلنَّاسَ بِغَيۡرِ عِلۡمٍۚ إِنَّ ٱللَّهَ لَا يَهۡدِي ٱلۡقَوۡمَ ٱلظَّٰلِمِينَ",
+   "en": "And of the camels twain and of the oxen twain. Say: Hath He forbidden the two males or the two females, or that which the wombs of the two females contain; or were ye by to witness when Allah commanded you (all) this? Then who doth greater wrong than he who deviseth a lie concerning Allah, that he may lead mankind astray without knowledge. Lo! Allah guideth not wrongdoing folk"
+  },
+  {
+   "v": 145,
+   "ar": "قُل لَّآ أَجِدُ فِي مَآ أُوحِيَ إِلَيَّ مُحَرَّمًا عَلَىٰ طَاعِمࣲ يَطۡعَمُهُۥٓ إِلَّآ أَن يَكُونَ مَيۡتَةً أَوۡ دَمࣰ ا مَّسۡفُوحًا أَوۡ لَحۡمَ خِنزِيرࣲ فَإِنَّهُۥ رِجۡسٌ أَوۡ فِسۡقًا أُهِلَّ لِغَيۡرِ ٱللَّهِ بِهِۦۚ فَمَنِ ٱضۡطُرَّ غَيۡرَ بَاغࣲ وَلَا عَادࣲ فَإِنَّ رَبَّكَ غَفُورࣱ رَّحِيمࣱ‏",
+   "en": "Say: I find not in that which is revealed unto me aught prohibited to an eater that he eat thereof, except it be carrion, or blood poured forth, or swineflesh - for that verily is foul - or the abomination which was immolated to the name of other than Allah. But whoso is compelled (thereto), neither craving nor transgressing, (for him) lo! thy Lord is Forgiving, Merciful"
+  },
+  {
+   "v": 146,
+   "ar": "وَعَلَى ٱلَّذِينَ هَادُواْ حَرَّمۡنَا كُلَّ ذِي ظُفُرࣲۖ وَمِنَ ٱلۡبَقَرِ وَٱلۡغَنَمِ حَرَّمۡنَا عَلَيۡهِمۡ شُحُومَهُمَآ إِلَّا مَا حَمَلَتۡ ظُهُورُهُمَآ أَوِ ٱلۡحَوَايَآ أَوۡ مَا ٱخۡتَلَطَ بِعَظۡمࣲۚ ذَٰلِكَ جَزَيۡنَٰهُم بِبَغۡيِهِمۡۖ وَإِنَّا لَصَٰدِقُونَ",
+   "en": "Unto those who are Jews We forbade every animal with claws. And of the oxen and the sheep forbade We unto them the fat thereof save that upon the backs or the entrails, or that which is mixed with the bone. That we awarded them for their rebellion. And lo! we verily are truthful"
+  },
+  {
+   "v": 147,
+   "ar": "فَإِن كَذَّبُوكَ فَقُل رَّبُّكُمۡ ذُو رَحۡمَةࣲ وَٰسِعَةࣲ وَلَا يُرَدُّ بَأۡسُهُۥ عَنِ ٱلۡقَوۡمِ ٱلۡمُجۡرِمِينَ",
+   "en": "So if they give the lie to thee (Muhammad), say: Your Lord is a Lord of All-Embracing Mercy, and His wrath will never be withdrawn from guilty folk"
+  },
+  {
+   "v": 148,
+   "ar": "سَيَقُولُ ٱلَّذِينَ أَشۡرَكُواْ لَوۡ شَآءَ ٱللَّهُ مَآ أَشۡرَكۡنَا وَلَآ ءَابَآؤُنَا وَلَا حَرَّمۡنَا مِن شَيۡءࣲۚ كَذَٰلِكَ كَذَّبَ ٱلَّذِينَ مِن قَبۡلِهِمۡ حَتَّىٰ ذَاقُواْ بَأۡسَنَاۗ قُلۡ هَلۡ عِندَكُم مِّنۡ عِلۡمࣲ فَتُخۡرِجُوهُ لَنَآۖ إِن تَتَّبِعُونَ إِلَّا ٱلظَّنَّ وَإِنۡ أَنتُمۡ إِلَّا تَخۡرُصُونَ",
+   "en": "They who are idolaters will say: Had Allah willed, we had not ascribed (unto Him) partners neither had our fathers, nor had we forbidden aught. Thus did those who were before them give the lie (to Allah's messengers) till they tasted of the fear of Us. Say: Have ye any knowledge that ye can adduce for Us? Lo! ye follow naught but an opinion, Lo! ye do but guess"
+  },
+  {
+   "v": 149,
+   "ar": "قُلۡ فَلِلَّهِ ٱلۡحُجَّةُ ٱلۡبَٰلِغَةُۖ فَلَوۡ شَآءَ لَهَدَىٰكُمۡ أَجۡمَعِينَ",
+   "en": "Say - For Allah's is the final argument - Had He willed He could indeed have guided all of you"
+  },
+  {
+   "v": 150,
+   "ar": "قُلۡ هَلُمَّ شُهَدَآءَكُمُ ٱلَّذِينَ يَشۡهَدُونَ أَنَّ ٱللَّهَ حَرَّمَ هَٰذَاۖ فَإِن شَهِدُواْ فَلَا تَشۡهَدۡ مَعَهُمۡۚ وَلَا تَتَّبِعۡ أَهۡوَآءَ ٱلَّذِينَ كَذَّبُواْ بِـَٔايَٰتِنَا وَٱلَّذِينَ لَا يُؤۡمِنُونَ بِٱلۡأٓخِرَةِ وَهُم بِرَبِّهِمۡ يَعۡدِلُونَ",
+   "en": "Say: Come, bring your witnesses who can bear witness that Allah forbade (all) this. And if they bear witness, do not thou bear witness with them. Follow thou not the whims of those who deny Our revelations, those who believe not in the Hereafter and deem (others) equal with their Lord"
+  },
+  {
+   "v": 151,
+   "ar": "۞قُلۡ تَعَالَوۡاْ أَتۡلُ مَا حَرَّمَ رَبُّكُمۡ عَلَيۡكُمۡۖ أَلَّا تُشۡرِكُواْ بِهِۦ شَيۡـࣰٔ اۖ وَبِٱلۡوَٰلِدَيۡنِ إِحۡسَٰنࣰ اۖ وَلَا تَقۡتُلُوٓاْ أَوۡلَٰدَكُم مِّنۡ إِمۡلَٰقࣲ نَّحۡنُ نَرۡزُقُكُمۡ وَإِيَّاهُمۡۖ وَلَا تَقۡرَبُواْ ٱلۡفَوَٰحِشَ مَا ظَهَرَ مِنۡهَا وَمَا بَطَنَۖ وَلَا تَقۡتُلُواْ ٱلنَّفۡسَ ٱلَّتِي حَرَّمَ ٱللَّهُ إِلَّا بِٱلۡحَقِّۚ ذَٰلِكُمۡ وَصَّىٰكُم بِهِۦ لَعَلَّكُمۡ تَعۡقِلُونَ",
+   "en": "Say: Come, I will recite unto you that which your Lord hath made a sacred duty for you: That ye ascribe no thing as partner unto Him and that ye do good to parents, and that ye slay not your children because of penury - We provide for you and for them - and that ye draw not nigh to lewd things whether open or concealed. And that ye slay not the life which Allah hath made sacred, save in the course of justice. This He hath command you, in order that ye may discern"
+  },
+  {
+   "v": 152,
+   "ar": "وَلَا تَقۡرَبُواْ مَالَ ٱلۡيَتِيمِ إِلَّا بِٱلَّتِي هِيَ أَحۡسَنُ حَتَّىٰ يَبۡلُغَ أَشُدَّهُۥۚ وَأَوۡفُواْ ٱلۡكَيۡلَ وَٱلۡمِيزَانَ بِٱلۡقِسۡطِۖ لَا نُكَلِّفُ نَفۡسًا إِلَّا وُسۡعَهَاۖ وَإِذَا قُلۡتُمۡ فَٱعۡدِلُواْ وَلَوۡ كَانَ ذَا قُرۡبَىٰۖ وَبِعَهۡدِ ٱللَّهِ أَوۡفُواْۚ ذَٰلِكُمۡ وَصَّىٰكُم بِهِۦ لَعَلَّكُمۡ تَذَكَّرُونَ",
+   "en": "And approach not the wealth of the orphan save with that which is better, till he reach maturity. Give full measure and full weight, in justice. We task not any soul beyond its scope. And if ye give your word, do justice thereunto, even though it be (against) a kinsman; and fulfil the covenant of Allah. This He commandeth you that haply ye may remember"
+  },
+  {
+   "v": 153,
+   "ar": "وَأَنَّ هَٰذَا صِرَٰطِي مُسۡتَقِيمࣰ ا فَٱتَّبِعُوهُۖ وَلَا تَتَّبِعُواْ ٱلسُّبُلَ فَتَفَرَّقَ بِكُمۡ عَن سَبِيلِهِۦۚ ذَٰلِكُمۡ وَصَّىٰكُم بِهِۦ لَعَلَّكُمۡ تَتَّقُونَ",
+   "en": "And (He commandeth you, saying): This is My straight path, so follow it. Follow not other ways, lest ye be parted from His way. This hath He ordained for you, that ye may ward off (evil)"
+  },
+  {
+   "v": 154,
+   "ar": "ثُمَّ ءَاتَيۡنَا مُوسَى ٱلۡكِتَٰبَ تَمَامًا عَلَى ٱلَّذِيٓ أَحۡسَنَ وَتَفۡصِيلࣰ ا لِّكُلِّ شَيۡءࣲ وَهُدࣰ ى وَرَحۡمَةࣰ لَّعَلَّهُم بِلِقَآءِ رَبِّهِمۡ يُؤۡمِنُونَ",
+   "en": "Again, We gave the Scripture unto Moses, complete for him who would do good, an explanation of all things, a guidance and a mercy, that they might believe in the meeting with their Lord"
+  },
+  {
+   "v": 155,
+   "ar": "وَهَٰذَا كِتَٰبٌ أَنزَلۡنَٰهُ مُبَارَكࣱ فَٱتَّبِعُوهُ وَٱتَّقُواْ لَعَلَّكُمۡ تُرۡحَمُونَ",
+   "en": "And this is a blessed Scripture which We have revealed. So follow it and ward off (evil), that ye may find mercy"
+  },
+  {
+   "v": 156,
+   "ar": "أَن تَقُولُوٓاْ إِنَّمَآ أُنزِلَ ٱلۡكِتَٰبُ عَلَىٰ طَآئِفَتَيۡنِ مِن قَبۡلِنَا وَإِن كُنَّا عَن دِرَاسَتِهِمۡ لَغَٰفِلِينَ",
+   "en": "Lest ye should say: The Scripture was revealed only to two sects before us, and we in sooth were unaware of what they read"
+  },
+  {
+   "v": 157,
+   "ar": "أَوۡ تَقُولُواْ لَوۡ أَنَّآ أُنزِلَ عَلَيۡنَا ٱلۡكِتَٰبُ لَكُنَّآ أَهۡدَىٰ مِنۡهُمۡۚ فَقَدۡ جَآءَكُم بَيِّنَةࣱ مِّن رَّبِّكُمۡ وَهُدࣰ ى وَرَحۡمَةࣱۚ فَمَنۡ أَظۡلَمُ مِمَّن كَذَّبَ بِـَٔايَٰتِ ٱللَّهِ وَصَدَفَ عَنۡهَاۗ سَنَجۡزِي ٱلَّذِينَ يَصۡدِفُونَ عَنۡ ءَايَٰتِنَا سُوٓءَ ٱلۡعَذَابِ بِمَا كَانُواْ يَصۡدِفُونَ",
+   "en": "Or lest ye should say: If the Scripture had been revealed unto us, we surely had been better guided than are they. Now hath there come unto you a clear proof from your Lord, a guidance and mercy; and who doeth greater wrong than he who denieth the revelations of Allah, and turneth away from them? We award unto those who turn away from Our revelations an evil doom because of their aversion"
+  },
+  {
+   "v": 158,
+   "ar": "هَلۡ يَنظُرُونَ إِلَّآ أَن تَأۡتِيَهُمُ ٱلۡمَلَٰٓئِكَةُ أَوۡ يَأۡتِيَ رَبُّكَ أَوۡ يَأۡتِيَ بَعۡضُ ءَايَٰتِ رَبِّكَۗ يَوۡمَ يَأۡتِي بَعۡضُ ءَايَٰتِ رَبِّكَ لَا يَنفَعُ نَفۡسًا إِيمَٰنُهَا لَمۡ تَكُنۡ ءَامَنَتۡ مِن قَبۡلُ أَوۡ كَسَبَتۡ فِيٓ إِيمَٰنِهَا خَيۡرࣰ اۗ قُلِ ٱنتَظِرُوٓاْ إِنَّا مُنتَظِرُونَ",
+   "en": "Wait they, indeed, for nothing less than that the angels should come unto them, or thy Lord should come, or there should come one of the portents from thy Lord? In the day when one of the portents from thy Lord cometh, its belief availeth naught a soul which theretofore believed not, nor in its belief earned good (by works). Say: Wait ye! Lo! We (too) are waiting"
+  },
+  {
+   "v": 159,
+   "ar": "إِنَّ ٱلَّذِينَ فَرَّقُواْ دِينَهُمۡ وَكَانُواْ شِيَعࣰ ا لَّسۡتَ مِنۡهُمۡ فِي شَيۡءٍۚ إِنَّمَآ أَمۡرُهُمۡ إِلَى ٱللَّهِ ثُمَّ يُنَبِّئُهُم بِمَا كَانُواْ يَفۡعَلُونَ",
+   "en": "Lo! As for those who sunder their religion and become schismatics, no concern at all hast thou with them. Their case will go to Allah, Who then will tell them what they used to do"
+  },
+  {
+   "v": 160,
+   "ar": "مَن جَآءَ بِٱلۡحَسَنَةِ فَلَهُۥ عَشۡرُ أَمۡثَالِهَاۖ وَمَن جَآءَ بِٱلسَّيِّئَةِ فَلَا يُجۡزَىٰٓ إِلَّا مِثۡلَهَا وَهُمۡ لَا يُظۡلَمُونَ",
+   "en": "Whoso bringeth a good deed will receive tenfold the like thereof, while whoso bringeth an ill-deed will be awarded but the like thereof; and they will not be wronged"
+  },
+  {
+   "v": 161,
+   "ar": "قُلۡ إِنَّنِي هَدَىٰنِي رَبِّيٓ إِلَىٰ صِرَٰطࣲ مُّسۡتَقِيمࣲ دِينࣰ ا قِيَمࣰ ا مِّلَّةَ إِبۡرَٰهِيمَ حَنِيفࣰ اۚ وَمَا كَانَ مِنَ ٱلۡمُشۡرِكِينَ",
+   "en": "Say: Lo! As for me, my Lord hath guided me unto a straight path, a right religion, the community of Abraham, the upright, who was no idolater"
+  },
+  {
+   "v": 162,
+   "ar": "قُلۡ إِنَّ صَلَاتِي وَنُسُكِي وَمَحۡيَايَ وَمَمَاتِي لِلَّهِ رَبِّ ٱلۡعَٰلَمِينَ",
+   "en": "Say: Lo! my worship and my sacrifice and my living and my dying are for Allah, Lord of the Worlds"
+  },
+  {
+   "v": 163,
+   "ar": "لَا شَرِيكَ لَهُۥۖ وَبِذَٰلِكَ أُمِرۡتُ وَأَنَا۠ أَوَّلُ ٱلۡمُسۡلِمِينَ",
+   "en": "He hath no partner. This am I commanded, and I am first of those who surrender (unto Him)"
+  },
+  {
+   "v": 164,
+   "ar": "قُلۡ أَغَيۡرَ ٱللَّهِ أَبۡغِي رَبࣰّ ا وَهُوَ رَبُّ كُلِّ شَيۡءࣲۚ وَلَا تَكۡسِبُ كُلُّ نَفۡسٍ إِلَّا عَلَيۡهَاۚ وَلَا تَزِرُ وَازِرَةࣱ وِزۡرَ أُخۡرَىٰۚ ثُمَّ إِلَىٰ رَبِّكُم مَّرۡجِعُكُمۡ فَيُنَبِّئُكُم بِمَا كُنتُمۡ فِيهِ تَخۡتَلِفُونَ",
+   "en": "Say: Shall I seek another than Allah for Lord, when He is Lord of all things? Each soul earneth only on its own account, nor doth any laden bear another's load. Then unto your Lord is your return and He will tell you that wherein ye differed"
+  },
+  {
+   "v": 165,
+   "ar": "وَهُوَ ٱلَّذِي جَعَلَكُمۡ خَلَٰٓئِفَ ٱلۡأَرۡضِ وَرَفَعَ بَعۡضَكُمۡ فَوۡقَ بَعۡضࣲ دَرَجَٰتࣲ لِّيَبۡلُوَكُمۡ فِي مَآ ءَاتَىٰكُمۡۗ إِنَّ رَبَّكَ سَرِيعُ ٱلۡعِقَابِ وَإِنَّهُۥ لَغَفُورࣱ رَّحِيمُۢ",
+   "en": "He it is Who hath placed you as viceroys of the earth and hath exalted some of you in rank above others, that He may try you by (the test of) that which He hath given you. Lo! Thy Lord is swift in prosecution, and Lo! He verily is Forgiving, Merciful"
+  }
+ ],
+ "sourcing": "sourced"
+}

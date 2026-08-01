@@ -1,0 +1,75 @@
+{
+ "id": "tanakh--psalms--5",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 5,
+ "verses": [
+  {
+   "v": 1,
+   "he": "לַמְנַצֵּ֥חַ אֶֽל־הַנְּחִיל֗וֹת מִזְמ֥וֹר לְדָוִֽד׃",
+   "en": "For the Leader; upon the Nehiloth. A Psalm of David."
+  },
+  {
+   "v": 2,
+   "he": "אֲמָרַ֖י הַאֲזִ֥ינָה׀ יְהוָ֗ה בִּ֣ינָה הֲגִֽיגִי׃",
+   "en": "Give ear to my words, O LORD, consider my meditation."
+  },
+  {
+   "v": 3,
+   "he": "הַקְשִׁ֤יבָה׀ לְק֬וֹל שַׁוְעִ֗י מַלְכִּ֥י וֵאלֹהָ֑י כִּֽי־אֵ֝לֶ֗יךָ אֶתְפַּלָּֽל׃",
+   "en": "Hearken unto the voice of my cry, my King, and my God; For unto Thee do I pray."
+  },
+  {
+   "v": 4,
+   "he": "יְֽהוָ֗ה בֹּ֭קֶר תִּשְׁמַ֣ע קוֹלִ֑י בֹּ֥קֶר אֶֽעֱרָךְ־לְ֝ךָ֗ וַאֲצַפֶּֽה׃",
+   "en": "O LORD, in the morning shalt Thou hear my voice; In the morning will I order my prayer unto Thee, and will look forward."
+  },
+  {
+   "v": 5,
+   "he": "כִּ֤י׀ לֹ֤א אֵֽל־חָפֵ֘ץ רֶ֥שַׁע׀ אָ֑תָּה לֹ֖א יְגֻרְךָ֣ רָֽע׃",
+   "en": "For Thou art not a God that hath pleasure in wickedness; Evil shall not sojourn with Thee."
+  },
+  {
+   "v": 6,
+   "he": "לֹֽא־יִתְיַצְּב֣וּ הֽ֭וֹלְלִים לְנֶ֣גֶד עֵינֶ֑יךָ שָׂ֝נֵ֗אתָ כָּל־פֹּ֥עֲלֵי אָֽוֶן׃",
+   "en": "The boasters shall not stand in Thy sight; Thou hatest all workers of iniquity."
+  },
+  {
+   "v": 7,
+   "he": "תְּאַבֵּד֮ דֹּבְרֵ֪י כָ֫זָ֥ב אִישׁ־דָּמִ֥ים וּמִרְמָ֗ה יְתָ֘עֵ֥ב׀ יְהוָֽה׃",
+   "en": "Thou destroyest them that speak falsehood; The LORD abhorreth the man of blood and of deceit."
+  },
+  {
+   "v": 8,
+   "he": "וַאֲנִ֗י בְּרֹ֣ב חַ֭סְדְּךָ אָב֣וֹא בֵיתֶ֑ךָ אֶשְׁתַּחֲוֶ֥ה אֶל־הֵֽיכַל־קָ֝דְשְׁךָ֗ בְּיִרְאָתֶֽךָ׃",
+   "en": "But as for me, in the abundance of Thy lovingkindness will I come into Thy house; I will bow down toward Thy holy temple in the fear of Thee."
+  },
+  {
+   "v": 9,
+   "he": "יְהוָ֤ה׀ נְחֵ֬נִי בְצִדְקָתֶ֗ךָ לְמַ֥עַן שׁוֹרְרָ֑י הושר [הַיְשַׁ֖ר] לְפָנַ֣י דַּרְכֶּֽךָ׃",
+   "en": "O LORD, lead me in Thy righteousness because of them that lie in wait for me; Make Thy way straight before my face."
+  },
+  {
+   "v": 10,
+   "he": "כִּ֤י אֵ֪ין בְּפִ֡יהוּ נְכוֹנָה֮ קִרְבָּ֪ם הַ֫וּ֥וֹת קֶֽבֶר־פָּת֥וּחַ גְּרוֹנָ֑ם לְ֝שׁוֹנָ֗ם יַחֲלִֽיקוּן׃",
+   "en": "For there is no sincerity in their mouth; Their inward part is a yawning gulf, Their throat is an open sepulchre; They make smooth their tongue."
+  },
+  {
+   "v": 11,
+   "he": "הַֽאֲשִׁימֵ֨ם׀ אֱ‍ֽלֹהִ֗ים יִפְּלוּ֮ מִֽמֹּעֲצ֪וֹתֵ֫יהֶ֥ם בְּרֹ֣ב פִּ֭שְׁעֵיהֶם הַדִּיחֵ֑מוֹ כִּי־מָ֥רוּ בָֽךְ׃",
+   "en": "Hold them guilty, O God, Let them fall by their own counsels; Cast them down in the multitude of their transgressions; For they have rebelled against Thee."
+  },
+  {
+   "v": 12,
+   "he": "וְיִשְׂמְח֨וּ כָל־ח֪וֹסֵי בָ֡ךְ לְעוֹלָ֣ם יְ֭רַנֵּנוּ וְתָסֵ֣ךְ עָלֵ֑ימוֹ וְֽיַעְלְצ֥וּ בְ֝ךָ֗ אֹהֲבֵ֥י שְׁמֶֽךָ׃",
+   "en": "So shall all those that take refuge in Thee rejoice, They shall ever shout for joy, And Thou shalt shelter them; Let them also that love Thy name exult in Thee."
+  },
+  {
+   "v": 13,
+   "he": "כִּֽי־אַתָּה֮ תְּבָרֵ֪ךְ צַ֫דִּ֥יק יְהוָ֑ה כַּ֝צִּנָּ֗ה רָצ֥וֹן תַּעְטְרֶֽנּוּ׃",
+   "en": "For Thou dost bless the righteous; O LORD, Thou dost encompass him with favour as with a shield."
+  }
+ ],
+ "sourcing": "sourced"
+}

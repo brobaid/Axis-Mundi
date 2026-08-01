@@ -1,0 +1,60 @@
+{
+ "id": "bible--1thessalonians--1",
+ "work": "bible",
+ "n": 52,
+ "slug": "1thessalonians",
+ "c": 1,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Paul, Silvanus, and Timothy, to the assembly of the Thessalonians in God the Father and the Lord Jesus Christ: Grace to you and peace from God our Father and the Lord Jesus Christ.",
+   "gr": "Παῦλος καὶ Σιλουανὸς καὶ Τιμόθεος τῇ ἐκκλησίᾳ Θεσσαλονικέων ἐν θεῷ πατρὶ καὶ κυρίῳ Ἰησοῦ Χριστῷ· χάρις ὑμῖν καὶ ⸀εἰρήνη."
+  },
+  {
+   "v": 2,
+   "en": "We always give thanks to God for all of you, mentioning you in our prayers,",
+   "gr": "Εὐχαριστοῦμεν τῷ θεῷ πάντοτε περὶ πάντων ὑμῶν ⸀μνείαν ποιούμενοι ἐπὶ τῶν προσευχῶν ἡμῶν, ἀδιαλείπτως"
+  },
+  {
+   "v": 3,
+   "en": "remembering without ceasing your work of faith and labor of love and perseverance of hope in our Lord Jesus Christ, before our God and Father.",
+   "gr": "μνημονεύοντες ὑμῶν τοῦ ἔργου τῆς πίστεως καὶ τοῦ κόπου τῆς ἀγάπης καὶ τῆς ὑπομονῆς τῆς ἐλπίδος τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ ἔμπροσθεν τοῦ θεοῦ καὶ πατρὸς ἡμῶν,"
+  },
+  {
+   "v": 4,
+   "en": "We know, brothers loved by God, that you are chosen,",
+   "gr": "εἰδότες, ἀδελφοὶ ἠγαπημένοι ὑπὸ ⸀θεοῦ, τὴν ἐκλογὴν ὑμῶν,"
+  },
+  {
+   "v": 5,
+   "en": "and that our Good News came to you not in word only, but also in power, and in the Holy Spirit, and with much assurance. You know what kind of men we showed ourselves to be among you for your sake.",
+   "gr": "ὅτι τὸ εὐαγγέλιον ἡμῶν οὐκ ἐγενήθη εἰς ὑμᾶς ἐν λόγῳ μόνον ἀλλὰ καὶ ἐν δυνάμει καὶ ἐν πνεύματι ἁγίῳ ⸀καὶ πληροφορίᾳ πολλῇ, καθὼς οἴδατε οἷοι ἐγενήθημεν ⸀ἐν ὑμῖν διʼ ὑμᾶς·"
+  },
+  {
+   "v": 6,
+   "en": "You became imitators of us and of the Lord, having received the word in much affliction, with joy of the Holy Spirit,",
+   "gr": "καὶ ὑμεῖς μιμηταὶ ἡμῶν ἐγενήθητε καὶ τοῦ κυρίου, δεξάμενοι τὸν λόγον ἐν θλίψει πολλῇ μετὰ χαρᾶς πνεύματος ἁγίου,"
+  },
+  {
+   "v": 7,
+   "en": "so that you became an example to all who believe in Macedonia and in Achaia.",
+   "gr": "ὥστε γενέσθαι ὑμᾶς ⸀τύπον πᾶσιν τοῖς πιστεύουσιν ἐν τῇ Μακεδονίᾳ καὶ ⸀ἐν τῇ Ἀχαΐᾳ."
+  },
+  {
+   "v": 8,
+   "en": "For from you the word of the Lord has been declared, not only in Macedonia and Achaia, but also in every place your faith toward God has gone out, so that we need not to say anything.",
+   "gr": "ἀφʼ ὑμῶν γὰρ ἐξήχηται ὁ λόγος τοῦ κυρίου οὐ μόνον ἐν τῇ Μακεδονίᾳ ⸀καὶ Ἀχαΐᾳ, ⸀ἀλλʼ ἐν παντὶ τόπῳ ἡ πίστις ὑμῶν ἡ πρὸς τὸν θεὸν ἐξελήλυθεν, ὥστε μὴ χρείαν ⸂ἔχειν ἡμᾶς⸃ λαλεῖν τι·"
+  },
+  {
+   "v": 9,
+   "en": "For they themselves report concerning us what kind of a reception we had from you, and how you turned to God from idols, to serve a living and true God,",
+   "gr": "αὐτοὶ γὰρ περὶ ἡμῶν ἀπαγγέλλουσιν ὁποίαν εἴσοδον ἔσχομεν πρὸς ὑμᾶς, καὶ πῶς ἐπεστρέψατε πρὸς τὸν θεὸν ἀπὸ τῶν εἰδώλων δουλεύειν θεῷ ζῶντι καὶ ἀληθινῷ,"
+  },
+  {
+   "v": 10,
+   "en": "and to wait for his Son from heaven, whom he raised from the dead: Jesus, who delivers us from the wrath to come.",
+   "gr": "καὶ ἀναμένειν τὸν υἱὸν αὐτοῦ ἐκ τῶν οὐρανῶν, ὃν ἤγειρεν ἐκ τῶν νεκρῶν, Ἰησοῦν τὸν ῥυόμενον ἡμᾶς ⸀ἐκ τῆς ὀργῆς τῆς ἐρχομένης."
+  }
+ ],
+ "sourcing": "sourced"
+}

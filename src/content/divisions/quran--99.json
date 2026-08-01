@@ -1,0 +1,49 @@
+{
+ "id": "quran--99",
+ "work": "quran",
+ "n": 99,
+ "slug": "99",
+ "verses": [
+  {
+   "v": 1,
+   "ar": "إِذَا زُلۡزِلَتِ ٱلۡأَرۡضُ زِلۡزَالَهَا",
+   "en": "When Earth is shaken with her (final) earthquake"
+  },
+  {
+   "v": 2,
+   "ar": "وَأَخۡرَجَتِ ٱلۡأَرۡضُ أَثۡقَالَهَا",
+   "en": "And Earth yieldeth up her burdens"
+  },
+  {
+   "v": 3,
+   "ar": "وَقَالَ ٱلۡإِنسَٰنُ مَا لَهَا",
+   "en": "And man saith: What aileth her"
+  },
+  {
+   "v": 4,
+   "ar": "يَوۡمَئِذࣲ تُحَدِّثُ أَخۡبَارَهَا",
+   "en": "That day she will relate her chronicles"
+  },
+  {
+   "v": 5,
+   "ar": "بِأَنَّ رَبَّكَ أَوۡحَىٰ لَهَا",
+   "en": "Because thy Lord inspireth her"
+  },
+  {
+   "v": 6,
+   "ar": "يَوۡمَئِذࣲ يَصۡدُرُ ٱلنَّاسُ أَشۡتَاتࣰ ا لِّيُرَوۡاْ أَعۡمَٰلَهُمۡ",
+   "en": "That day mankind will issue forth in scattered groups to be shown their deeds"
+  },
+  {
+   "v": 7,
+   "ar": "فَمَن يَعۡمَلۡ مِثۡقَالَ ذَرَّةٍ خَيۡرࣰ ا يَرَهُۥ",
+   "en": "And whoso doeth good an atom's weight will see it then"
+  },
+  {
+   "v": 8,
+   "ar": "وَمَن يَعۡمَلۡ مِثۡقَالَ ذَرَّةࣲ شَرࣰّ ا يَرَهُۥ",
+   "en": "And whoso doeth ill an atom's weight will see it then"
+  }
+ ],
+ "sourcing": "sourced"
+}

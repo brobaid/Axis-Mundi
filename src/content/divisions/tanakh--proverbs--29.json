@@ -1,0 +1,145 @@
+{
+ "id": "tanakh--proverbs--29",
+ "work": "tanakh",
+ "n": 28,
+ "slug": "proverbs",
+ "c": 29,
+ "verses": [
+  {
+   "v": 1,
+   "he": "אִ֣ישׁ תּ֭וֹכָחוֹת מַקְשֶׁה־עֹ֑רֶף פֶּ֥תַע יִ֝שָּׁבֵ֗ר וְאֵ֣ין מַרְפֵּֽא׃",
+   "en": "He that being often reproved hardeneth his neck Shall suddenly be broken, and that without remedy."
+  },
+  {
+   "v": 2,
+   "he": "בִּרְב֣וֹת צַ֭דִּיקִים יִשְׂמַ֣ח הָעָ֑ם וּבִמְשֹׁ֥ל רָ֝שָׁ֗ע יֵאָ֥נַֽח עָֽם׃",
+   "en": "When the righteous are increased, the people rejoice; But when the wicked beareth rule, the people sigh."
+  },
+  {
+   "v": 3,
+   "he": "אִֽישׁ־אֹהֵ֣ב חָ֭כְמָה יְשַׂמַּ֣ח אָבִ֑יו וְרֹעֶ֥ה ז֝וֹנ֗וֹת יְאַבֶּד־הֽוֹן׃",
+   "en": "Whoso loveth wisdom rejoiceth his father; But he that keepeth company with harlots wasteth his substance."
+  },
+  {
+   "v": 4,
+   "he": "מֶ֗לֶךְ בְּ֭מִשְׁפָּט יַעֲמִ֣יד אָ֑רֶץ וְאִ֖ישׁ תְּרוּמ֣וֹת יֶֽהֶרְסֶֽנָּה׃",
+   "en": "The king by justice establisheth the land; But he that exacteth gifts overthroweth it."
+  },
+  {
+   "v": 5,
+   "he": "גֶּ֭בֶר מַחֲלִ֣יק עַל־רֵעֵ֑הוּ רֶ֝֗שֶׁת פּוֹרֵ֥שׂ עַל־פְּעָמָֽיו׃",
+   "en": "A man that flattereth his neighbour Spreadeth a net for his steps."
+  },
+  {
+   "v": 6,
+   "he": "בְּפֶ֤שַֽׁע אִ֣ישׁ רָ֣ע מוֹקֵ֑שׁ וְ֝צַדִּ֗יק יָר֥וּן וְשָׂמֵֽחַ׃",
+   "en": "In the transgression of an evil man there is a snare; But the righteous doth sing and rejoice."
+  },
+  {
+   "v": 7,
+   "he": "יֹדֵ֣עַ צַ֭דִּיק דִּ֣ין דַּלִּ֑ים רָ֝שָׁ֗ע לֹא־יָבִ֥ין דָּֽעַת׃",
+   "en": "The righteous taketh knowledge of the cause of the poor; The wicked understandeth not knowledge."
+  },
+  {
+   "v": 8,
+   "he": "אַנְשֵׁ֣י לָ֭צוֹן יָפִ֣יחוּ קִרְיָ֑ה וַ֝חֲכָמִ֗ים יָשִׁ֥יבוּ אָֽף׃",
+   "en": "Scornful men set a city in a blaze; But wise men turn away wrath."
+  },
+  {
+   "v": 9,
+   "he": "אִֽישׁ־חָכָ֗ם נִ֭שְׁפָּט אֶת־אִ֣ישׁ אֱוִ֑יל וְרָגַ֥ז וְ֝שָׂחַ֗ק וְאֵ֣ין נָֽחַת׃",
+   "en": "If a wise man contendeth with a foolish man, Whether he be angry or laugh, there will be no rest."
+  },
+  {
+   "v": 10,
+   "he": "אַנְשֵׁ֣י דָ֭מִים יִשְׂנְאוּ־תָ֑ם וִֽ֝ישָׁרִ֗ים יְבַקְשׁ֥וּ נַפְשֽׁוֹ׃",
+   "en": "The men of blood hate him that is sincere; And as for the upright, they seek his life."
+  },
+  {
+   "v": 11,
+   "he": "כָּל־ר֭וּחוֹ יוֹצִ֣יא כְסִ֑יל וְ֝חָכָ֗ם בְּאָח֥וֹר יְשַׁבְּחֶֽנָּה׃",
+   "en": "A fool spendeth all his spirit; But a wise man stilleth it within him."
+  },
+  {
+   "v": 12,
+   "he": "מֹ֭שֵׁל מַקְשִׁ֣יב עַל־דְּבַר־שָׁ֑קֶר כָּֽל־מְשָׁרְתָ֥יו רְשָׁעִֽים׃",
+   "en": "If a ruler hearkeneth to falsehood, All his servants are wicked."
+  },
+  {
+   "v": 13,
+   "he": "רָ֤שׁ וְאִ֣ישׁ תְּכָכִ֣ים נִפְגָּ֑שׁוּ מֵ֤אִיר־עֵינֵ֖י שְׁנֵיהֶ֣ם יְהוָֽה׃",
+   "en": "The poor man and the oppressor meet together; The LORD giveth light to the eyes of them both."
+  },
+  {
+   "v": 14,
+   "he": "מֶ֤לֶךְ שׁוֹפֵ֣ט בֶּֽאֱמֶ֣ת דַּלִּ֑ים כִּ֝סְא֗וֹ לָעַ֥ד יִכּֽוֹן׃",
+   "en": "The king that faithfully judgeth the poor, His throne shall be established for ever."
+  },
+  {
+   "v": 15,
+   "he": "שֵׁ֣בֶט וְ֭תוֹכַחַת יִתֵּ֣ן חָכְמָ֑ה וְנַ֥עַר מְ֝שֻׁלָּ֗ח מֵבִ֥ישׁ אִמּֽוֹ׃",
+   "en": "The rod and reproof give wisdom; But a child left to himself causeth shame to his mother."
+  },
+  {
+   "v": 16,
+   "he": "בִּרְב֣וֹת רְ֭שָׁעִים יִרְבֶּה־פָּ֑שַׁע וְ֝צַדִּיקִ֗ים בְּֽמַפַּלְתָּ֥ם יִרְאֽוּ׃",
+   "en": "When the wicked are increased, transgression increaseth; But the righteous shall gaze upon their fall."
+  },
+  {
+   "v": 17,
+   "he": "יַסֵּ֣ר בִּ֭נְךָ וִֽינִיחֶ֑ךָ וְיִתֵּ֖ן מַעֲדַנִּ֣ים לְנַפְשֶֽׁךָ׃",
+   "en": "Correct thy son, and he will give thee rest; Yea, he will give delight unto thy soul."
+  },
+  {
+   "v": 18,
+   "he": "בְּאֵ֣ין חָ֭זוֹן יִפָּ֣רַֽע עָ֑ם וְשֹׁמֵ֖ר תּוֹרָ֣ה אַשְׁרֵֽהוּ׃",
+   "en": "Where there is no vision, the people cast off restraint; But he that keepeth the law, happy is he."
+  },
+  {
+   "v": 19,
+   "he": "בִּ֭דְבָרִים לֹא־יִוָּ֣סֶר עָ֑בֶד כִּֽי־יָ֝בִ֗ין וְאֵ֣ין מַעֲנֶֽה׃",
+   "en": "A servant will not be corrected by words; For though he understand, there will be no response."
+  },
+  {
+   "v": 20,
+   "he": "חָזִ֗יתָ אִ֭ישׁ אָ֣ץ בִּדְבָרָ֑יו תִּקְוָ֖ה לִכְסִ֣יל מִמֶּֽנּוּ׃",
+   "en": "Seest thou a man that is hasty in his words? There is more hope for a fool than for him."
+  },
+  {
+   "v": 21,
+   "he": "מְפַנֵּ֣ק מִנֹּ֣עַר עַבְדּ֑וֹ וְ֝אַחֲרִית֗וֹ יִהְיֶ֥ה מָנֽוֹן׃",
+   "en": "He that delicately bringeth up his servant from a child Shall have him become master at the last."
+  },
+  {
+   "v": 22,
+   "he": "אִֽישׁ־אַ֭ף יְגָרֶ֣ה מָד֑וֹן וּבַ֖עַל חֵמָ֣ה רַב־פָּֽשַׁע׃",
+   "en": "An angry man stirreth up strife, And a wrathful man aboundeth in transgression."
+  },
+  {
+   "v": 23,
+   "he": "גַּאֲוַ֣ת אָ֭דָם תַּשְׁפִּילֶ֑נּוּ וּשְׁפַל־ר֝֗וּחַ יִתְמֹ֥ךְ כָּבֽוֹד׃",
+   "en": "A man’s pride shall bring him low; But he that is of a lowly spirit shall attain to honour."
+  },
+  {
+   "v": 24,
+   "he": "חוֹלֵ֣ק עִם־גַּ֭נָּב שׂוֹנֵ֣א נַפְשׁ֑וֹ אָלָ֥ה יִ֝שְׁמַ֗ע וְלֹ֣א יַגִּֽיד׃",
+   "en": "Whoso is partner with a thief hateth his own soul: He heareth the adjuration and uttereth nothing."
+  },
+  {
+   "v": 25,
+   "he": "חֶרְדַּ֣ת אָ֭דָם יִתֵּ֣ן מוֹקֵ֑שׁ וּבוֹטֵ֖חַ בַּיהוָ֣ה יְשֻׂגָּֽב׃",
+   "en": "The fear of man bringeth a snare; But whoso putteth his trust in the LORD shall be set up on high."
+  },
+  {
+   "v": 26,
+   "he": "רַ֭בִּים מְבַקְשִׁ֣ים פְּנֵי־מוֹשֵׁ֑ל וּ֝מֵיְהוָ֗ה מִשְׁפַּט־אִֽישׁ׃",
+   "en": "Many seek the ruler’s favour; But a man’s judgment cometh from the LORD."
+  },
+  {
+   "v": 27,
+   "he": "תּוֹעֲבַ֣ת צַ֭דִּיקִים אִ֣ישׁ עָ֑וֶל וְתוֹעֲבַ֖ת רָשָׁ֣ע יְשַׁר־דָּֽרֶךְ׃",
+   "en": "An unjust man is an abomination to the righteous; And he that is upright in the way is an abomination to the wicked."
+  }
+ ],
+ "sourcing": "sourced"
+}

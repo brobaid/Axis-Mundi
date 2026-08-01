@@ -91,7 +91,10 @@ export function renderWheel(wheel: Wheel): string {
     ring() +
     `<text class="wh-year" x="${CX}" y="${CY + 8}" text-anchor="middle">${wheel.year}</text>` +
     `<text class="wh-sub mono" x="${CX}" y="${CY + 32}" text-anchor="middle">` +
-    `${wheel.placed.length} of ${wheel.placed.length + wheel.unplaced.length} placed</text>` +
+    /* "16 of 33 placed" named an internal state. What a reader wants to know
+       is how many festivals this year's records can actually date, and the
+       list below the wheel already names the ones they cannot. */
+    `${wheel.placed.length} of ${wheel.placed.length + wheel.unplaced.length} dated</text>` +
     marks +
     `</svg>`
   );

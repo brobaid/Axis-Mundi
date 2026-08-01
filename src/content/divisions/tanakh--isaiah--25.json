@@ -1,0 +1,70 @@
+{
+ "id": "tanakh--isaiah--25",
+ "work": "tanakh",
+ "n": 12,
+ "slug": "isaiah",
+ "c": 25,
+ "verses": [
+  {
+   "v": 1,
+   "he": "יְהוָ֤ה אֱלֹהַי֙ אַתָּ֔ה אֲרֽוֹמִמְךָ֙ אוֹדֶ֣ה שִׁמְךָ֔ כִּ֥י עָשִׂ֖יתָ פֶּ֑לֶא עֵצ֥וֹת מֵֽרָח֖וֹק אֱמ֥וּנָה אֹֽמֶן׃",
+   "en": "O LORD, Thou art my God, I will exalt Thee, I will praise Thy name, For Thou hast done wonderful things; Even counsels of old, in faithfulness and truth."
+  },
+  {
+   "v": 2,
+   "he": "כִּ֣י שַׂ֤מְתָּ מֵעִיר֙ לַגָּ֔ל קִרְיָ֥ה בְצוּרָ֖ה לְמַפֵּלָ֑ה אַרְמ֤וֹן זָרִים֙ מֵעִ֔יר לְעוֹלָ֖ם לֹ֥א יִבָּנֶֽה׃",
+   "en": "For Thou hast made of a city a heap, Of a fortified city a ruin; A castle of strangers to be no city, It shall never be built. ."
+  },
+  {
+   "v": 3,
+   "he": "עַל־כֵּ֖ן יְכַבְּד֣וּךָ עַם־עָ֑ז קִרְיַ֛ת גּוֹיִ֥ם עָרִיצִ֖ים יִירָאֽוּךָ׃",
+   "en": "Therefore shall the strong people glorify Thee, The city of the terrible nations shall fear Thee."
+  },
+  {
+   "v": 4,
+   "he": "כִּֽי־הָיִ֨יתָ מָע֥וֹז לַדָּ֛ל מָע֥וֹז לָאֶבְי֖וֹן בַּצַּר־ל֑וֹ מַחְסֶ֤ה מִזֶּ֙רֶם֙ צֵ֣ל מֵחֹ֔רֶב כִּ֛י ר֥וּחַ עָרִיצִ֖ים כְּזֶ֥רֶם קִֽיר׃",
+   "en": "For Thou hast been a stronghold to the poor, A stronghold to the needy in his distress, A refuge from the storm, a shadow from the heat; For the blast of the terrible ones was as a storm against the wall."
+  },
+  {
+   "v": 5,
+   "he": "כְּחֹ֣רֶב בְּצָי֔וֹן שְׁא֥וֹן זָרִ֖ים תַּכְנִ֑יעַ חֹ֚רֶב בְּצֵ֣ל עָ֔ב זְמִ֥יר עָֽרִיצִ֖ים יַעֲנֶֽה׃",
+   "en": "As the heat in a dry place, Thou didst subdue the noise of strangers; As the heat by the shadow of a cloud, the song of the terrible ones was brought low."
+  },
+  {
+   "v": 6,
+   "he": "וְעָשָׂה֩ יְהוָ֨ה צְבָא֜וֹת לְכָל־הָֽעַמִּים֙ בָּהָ֣ר הַזֶּ֔ה מִשְׁתֵּ֥ה שְׁמָנִ֖ים מִשְׁתֵּ֣ה שְׁמָרִ֑ים שְׁמָנִים֙ מְמֻ֣חָיִ֔ם שְׁמָרִ֖ים מְזֻקָּקִֽים׃",
+   "en": "And in this mountain will the LORD of hosts make unto all peoples A feast of fat things, a feast of wines on the lees, Of fat things full of marrow, of wines on the lees well refined."
+  },
+  {
+   "v": 7,
+   "he": "וּבִלַּע֙ בָּהָ֣ר הַזֶּ֔ה פְּנֵֽי־הַלּ֥וֹט׀ הַלּ֖וֹט עַל־כָּל־הָֽעַמִּ֑ים וְהַמַּסֵּכָ֥ה הַנְּסוּכָ֖ה עַל־כָּל־הַגּוֹיִֽם׃",
+   "en": "And He will destroy in this mountain The face of the covering that is cast over all peoples, And the veil that is spread over all nations."
+  },
+  {
+   "v": 8,
+   "he": "בִּלַּ֤ע הַמָּ֙וֶת֙ לָנֶ֔צַח וּמָחָ֨ה אֲדֹנָ֧י יְהוִ֛ה דִּמְעָ֖ה מֵעַ֣ל כָּל־פָּנִ֑ים וְחֶרְפַּ֣ת עַמּ֗וֹ יָסִיר֙ מֵעַ֣ל כָּל־הָאָ֔רֶץ כִּ֥י יְהוָ֖ה דִּבֵּֽר׃",
+   "en": "He will swallow up death for ever; And the Lord GOD will wipe away tears from off all faces; And the reproach of His people will He take away from off all the earth; For the LORD hath spoken it."
+  },
+  {
+   "v": 9,
+   "he": "וְאָמַר֙ בַּיּ֣וֹם הַה֔וּא הִנֵּ֨ה אֱלֹהֵ֥ינוּ זֶ֛ה קִוִּ֥ינוּ ל֖וֹ וְיֽוֹשִׁיעֵ֑נוּ זֶ֤ה יְהוָה֙ קִוִּ֣ינוּ ל֔וֹ נָגִ֥ילָה וְנִשְׂמְחָ֖ה בִּישׁוּעָתֽוֹ׃",
+   "en": "And it shall be said in that day: ‘Lo, this is our God, For whom we waited, that He might save us; This is the LORD, for whom we waited, We will be glad and rejoice in His salvation.’"
+  },
+  {
+   "v": 10,
+   "he": "כִּֽי־תָנ֥וּחַ יַד־יְהוָ֖ה בָּהָ֣ר הַזֶּ֑ה וְנָ֤דוֹשׁ מוֹאָב֙ תַּחְתָּ֔יו כְּהִדּ֥וּשׁ מַתְבֵּ֖ן במי [בְּמ֥וֹ] מַדְמֵנָֽה׃",
+   "en": "For in this mountain will the hand of the LORD rest, And Moab shall be trodden down in his place, Even as straw is trodden down in the dunghill."
+  },
+  {
+   "v": 11,
+   "he": "וּפֵרַ֤שׂ יָדָיו֙ בְּקִרְבּ֔וֹ כַּאֲשֶׁ֛ר יְפָרֵ֥שׂ הַשֹּׂחֶ֖ה לִשְׂח֑וֹת וְהִשְׁפִּיל֙ גַּֽאֲוָת֔וֹ עִ֖ם אָרְבּ֥וֹת יָדָֽיו׃",
+   "en": "And when he shall spread forth his hands in the midst thereof, As he that swimmeth spreadeth forth his hands to swim, His pride shall be brought down together with the cunning of his hands."
+  },
+  {
+   "v": 12,
+   "he": "וּמִבְצַ֞ר מִשְׂגַּ֣ב חוֹמֹתֶ֗יךָ הֵשַׁ֥ח הִשְׁפִּ֛יל הִגִּ֥יעַ לָאָ֖רֶץ עַד־עָפָֽר׃",
+   "en": "And the high fortress of thy walls will He bring down, lay low, And bring to the ground, even to the dust."
+  }
+ ],
+ "sourcing": "sourced"
+}

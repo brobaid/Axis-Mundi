@@ -1,0 +1,410 @@
+{
+ "id": "bible--luke--1",
+ "work": "bible",
+ "n": 42,
+ "slug": "luke",
+ "c": 1,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Since many have undertaken to set in order a narrative concerning those matters which have been fulfilled among us,",
+   "gr": "Ἐπειδήπερ πολλοὶ ἐπεχείρησαν ἀνατάξασθαι διήγησιν περὶ τῶν πεπληροφορημένων ἐν ἡμῖν πραγμάτων,"
+  },
+  {
+   "v": 2,
+   "en": "even as those who from the beginning were eyewitnesses and servants of the word delivered them to us,",
+   "gr": "καθὼς παρέδοσαν ἡμῖν οἱ ἀπʼ ἀρχῆς αὐτόπται καὶ ὑπηρέται γενόμενοι τοῦ λόγου,"
+  },
+  {
+   "v": 3,
+   "en": "it seemed good to me also, having traced the course of all things accurately from the first, to write to you in order, most excellent Theophilus;",
+   "gr": "ἔδοξε κἀμοὶ παρηκολουθηκότι ἄνωθεν πᾶσιν ἀκριβῶς καθεξῆς σοι γράψαι, κράτιστε Θεόφιλε,"
+  },
+  {
+   "v": 4,
+   "en": "that you might know the certainty concerning the things in which you were instructed.",
+   "gr": "ἵνα ἐπιγνῷς περὶ ὧν κατηχήθης λόγων τὴν ἀσφάλειαν."
+  },
+  {
+   "v": 5,
+   "en": "There was in the days of Herod, the king of Judea, a certain priest named Zacharias, of the priestly division of Abijah. He had a wife of the daughters of Aaron, and her name was Elizabeth.",
+   "gr": "Ἐγένετο ἐν ταῖς ἡμέραις ⸀Ἡρῴδου βασιλέως τῆς Ἰουδαίας ἱερεύς τις ὀνόματι Ζαχαρίας ἐξ ἐφημερίας Ἀβιά, ⸀καὶ γυνὴ ⸀αὐτῷ ἐκ τῶν θυγατέρων Ἀαρών, καὶ τὸ ὄνομα αὐτῆς Ἐλισάβετ."
+  },
+  {
+   "v": 6,
+   "en": "They were both righteous before God, walking blamelessly in all the commandments and ordinances of the Lord.",
+   "gr": "ἦσαν δὲ δίκαιοι ἀμφότεροι ⸀ἐναντίον τοῦ θεοῦ, πορευόμενοι ἐν πάσαις ταῖς ἐντολαῖς καὶ δικαιώμασιν τοῦ κυρίου ἄμεμπτοι."
+  },
+  {
+   "v": 7,
+   "en": "But they had no child, because Elizabeth was barren, and they both were well advanced in years.",
+   "gr": "καὶ οὐκ ἦν αὐτοῖς τέκνον, καθότι ⸂ἦν ἡ Ἐλισάβετ⸃ στεῖρα, καὶ ἀμφότεροι προβεβηκότες ἐν ταῖς ἡμέραις αὐτῶν ἦσαν."
+  },
+  {
+   "v": 8,
+   "en": "Now while he executed the priest’s office before God in the order of his division",
+   "gr": "Ἐγένετο δὲ ἐν τῷ ἱερατεύειν αὐτὸν ἐν τῇ τάξει τῆς ἐφημερίας αὐτοῦ ἔναντι τοῦ θεοῦ"
+  },
+  {
+   "v": 9,
+   "en": "according to the custom of the priest’s office, his lot was to enter into the temple of the Lord and burn incense.",
+   "gr": "κατὰ τὸ ἔθος τῆς ἱερατείας ἔλαχε τοῦ θυμιᾶσαι εἰσελθὼν εἰς τὸν ναὸν τοῦ κυρίου,"
+  },
+  {
+   "v": 10,
+   "en": "The whole multitude of the people were praying outside at the hour of incense.",
+   "gr": "καὶ πᾶν τὸ πλῆθος ἦν τοῦ λαοῦ προσευχόμενον ἔξω τῇ ὥρᾳ τοῦ θυμιάματος·"
+  },
+  {
+   "v": 11,
+   "en": "An angel of the Lord appeared to him, standing on the right side of the altar of incense.",
+   "gr": "ὤφθη δὲ αὐτῷ ἄγγελος κυρίου ἑστὼς ἐκ δεξιῶν τοῦ θυσιαστηρίου τοῦ θυμιάματος."
+  },
+  {
+   "v": 12,
+   "en": "Zacharias was troubled when he saw him, and fear fell upon him.",
+   "gr": "καὶ ἐταράχθη Ζαχαρίας ἰδών, καὶ φόβος ἐπέπεσεν ἐπʼ αὐτόν."
+  },
+  {
+   "v": 13,
+   "en": "But the angel said to him, “Don’t be afraid, Zacharias, because your request has been heard. Your wife, Elizabeth, will bear you a son, and you shall call his name John.",
+   "gr": "εἶπεν δὲ πρὸς αὐτὸν ὁ ἄγγελος· Μὴ φοβοῦ, Ζαχαρία, διότι εἰσηκούσθη ἡ δέησίς σου, καὶ ἡ γυνή σου Ἐλισάβετ γεννήσει υἱόν σοι, καὶ καλέσεις τὸ ὄνομα αὐτοῦ Ἰωάννην·"
+  },
+  {
+   "v": 14,
+   "en": "You will have joy and gladness, and many will rejoice at his birth.",
+   "gr": "καὶ ἔσται χαρά σοι καὶ ἀγαλλίασις, καὶ πολλοὶ ἐπὶ τῇ ⸀γενέσει αὐτοῦ χαρήσονται·"
+  },
+  {
+   "v": 15,
+   "en": "For he will be great in the sight of the Lord, and he will drink no wine nor strong drink. He will be filled with the Holy Spirit, even from his mother’s womb.",
+   "gr": "ἔσται γὰρ μέγας ἐνώπιον ⸀τοῦ κυρίου, καὶ οἶνον καὶ σίκερα οὐ μὴ πίῃ, καὶ πνεύματος ἁγίου πλησθήσεται ἔτι ἐκ κοιλίας μητρὸς αὐτοῦ,"
+  },
+  {
+   "v": 16,
+   "en": "He will turn many of the children of Israel to the Lord their God.",
+   "gr": "καὶ πολλοὺς τῶν υἱῶν Ἰσραὴλ ἐπιστρέψει ἐπὶ κύριον τὸν θεὸν αὐτῶν·"
+  },
+  {
+   "v": 17,
+   "en": "He will go before him in the spirit and power of Elijah, ‘to turn the hearts of the fathers to the children,’ and the disobedient to the wisdom of the just; to prepare a people prepared for the Lord.”",
+   "gr": "καὶ αὐτὸς προελεύσεται ἐνώπιον αὐτοῦ ἐν πνεύματι καὶ δυνάμει Ἠλίου, ἐπιστρέψαι καρδίας πατέρων ἐπὶ τέκνα καὶ ἀπειθεῖς ἐν φρονήσει δικαίων, ἑτοιμάσαι κυρίῳ λαὸν κατεσκευασμένον."
+  },
+  {
+   "v": 18,
+   "en": "Zacharias said to the angel, “How can I be sure of this? For I am an old man, and my wife is well advanced in years.”",
+   "gr": "καὶ εἶπεν Ζαχαρίας πρὸς τὸν ἄγγελον· Κατὰ τί γνώσομαι τοῦτο; ἐγὼ γάρ εἰμι πρεσβύτης καὶ ἡ γυνή μου προβεβηκυῖα ἐν ταῖς ἡμέραις αὐτῆς."
+  },
+  {
+   "v": 19,
+   "en": "The angel answered him, “I am Gabriel, who stands in the presence of God. I was sent to speak to you and to bring you this good news.",
+   "gr": "καὶ ἀποκριθεὶς ὁ ἄγγελος εἶπεν αὐτῷ· Ἐγώ εἰμι Γαβριὴλ ὁ παρεστηκὼς ἐνώπιον τοῦ θεοῦ, καὶ ἀπεστάλην λαλῆσαι πρὸς σὲ καὶ εὐαγγελίσασθαί σοι ταῦτα·"
+  },
+  {
+   "v": 20,
+   "en": "Behold, you will be silent and not able to speak until the day that these things will happen, because you didn’t believe my words, which will be fulfilled in their proper time.”",
+   "gr": "καὶ ἰδοὺ ἔσῃ σιωπῶν καὶ μὴ δυνάμενος λαλῆσαι ἄχρι ἧς ἡμέρας γένηται ταῦτα, ἀνθʼ ὧν οὐκ ἐπίστευσας τοῖς λόγοις μου, οἵτινες πληρωθήσονται εἰς τὸν καιρὸν αὐτῶν."
+  },
+  {
+   "v": 21,
+   "en": "The people were waiting for Zacharias, and they marveled that he delayed in the temple.",
+   "gr": "Καὶ ἦν ὁ λαὸς προσδοκῶν τὸν Ζαχαρίαν, καὶ ἐθαύμαζον ἐν τῷ χρονίζειν ⸂ἐν τῷ ναῷ αὐτόν⸃."
+  },
+  {
+   "v": 22,
+   "en": "When he came out, he could not speak to them. They perceived that he had seen a vision in the temple. He continued making signs to them, and remained mute.",
+   "gr": "ἐξελθὼν δὲ οὐκ ⸀ἐδύνατο λαλῆσαι αὐτοῖς, καὶ ἐπέγνωσαν ὅτι ὀπτασίαν ἑώρακεν ἐν τῷ ναῷ· καὶ αὐτὸς ἦν διανεύων αὐτοῖς, καὶ διέμενεν κωφός."
+  },
+  {
+   "v": 23,
+   "en": "When the days of his service were fulfilled, he departed to his house.",
+   "gr": "καὶ ἐγένετο ὡς ἐπλήσθησαν αἱ ἡμέραι τῆς λειτουργίας αὐτοῦ, ἀπῆλθεν εἰς τὸν οἶκον αὐτοῦ."
+  },
+  {
+   "v": 24,
+   "en": "After these days Elizabeth his wife conceived, and she hid herself five months, saying,",
+   "gr": "Μετὰ δὲ ταύτας τὰς ἡμέρας συνέλαβεν Ἐλισάβετ ἡ γυνὴ αὐτοῦ· καὶ περιέκρυβεν ἑαυτὴν μῆνας πέντε, λέγουσα"
+  },
+  {
+   "v": 25,
+   "en": "“Thus has the Lord done to me in the days in which he looked at me, to take away my reproach among men.”",
+   "gr": "ὅτι Οὕτως μοι ⸀πεποίηκεν κύριος ἐν ἡμέραις αἷς ἐπεῖδεν ⸀ἀφελεῖν ὄνειδός μου ἐν ἀνθρώποις."
+  },
+  {
+   "v": 26,
+   "en": "Now in the sixth month, the angel Gabriel was sent from God to a city of Galilee named Nazareth,",
+   "gr": "Ἐν δὲ τῷ μηνὶ τῷ ἕκτῳ ἀπεστάλη ὁ ἄγγελος Γαβριὴλ ⸀ἀπὸ τοῦ θεοῦ εἰς πόλιν τῆς Γαλιλαίας ᾗ ὄνομα Ναζαρὲθ"
+  },
+  {
+   "v": 27,
+   "en": "to a virgin pledged to be married to a man whose name was Joseph, of David’s house. The virgin’s name was Mary.",
+   "gr": "πρὸς παρθένον ⸀ἐμνηστευμένην ἀνδρὶ ᾧ ὄνομα Ἰωσὴφ ἐξ οἴκου Δαυίδ, καὶ τὸ ὄνομα τῆς παρθένου Μαριάμ."
+  },
+  {
+   "v": 28,
+   "en": "Having come in, the angel said to her, “Rejoice, you highly favored one! The Lord is with you. Blessed are you among women!”",
+   "gr": "καὶ ⸀εἰσελθὼν πρὸς αὐτὴν εἶπεν· Χαῖρε, κεχαριτωμένη, ὁ κύριος μετὰ ⸀σοῦ."
+  },
+  {
+   "v": 29,
+   "en": "But when she saw him, she was greatly troubled at the saying, and considered what kind of salutation this might be.",
+   "gr": "ἡ δὲ ⸂ἐπὶ τῷ λόγῳ διεταράχθη⸃ καὶ διελογίζετο ποταπὸς εἴη ὁ ἀσπασμὸς οὗτος."
+  },
+  {
+   "v": 30,
+   "en": "The angel said to her, “Don’t be afraid, Mary, for you have found favor with God.",
+   "gr": "καὶ εἶπεν ὁ ἄγγελος αὐτῇ· Μὴ φοβοῦ, Μαριάμ, εὗρες γὰρ χάριν παρὰ τῷ θεῷ·"
+  },
+  {
+   "v": 31,
+   "en": "Behold, you will conceive in your womb and give birth to a son, and shall name him ‘Jesus.’",
+   "gr": "καὶ ἰδοὺ συλλήμψῃ ἐν γαστρὶ καὶ τέξῃ υἱόν, καὶ καλέσεις τὸ ὄνομα αὐτοῦ Ἰησοῦν."
+  },
+  {
+   "v": 32,
+   "en": "He will be great and will be called the Son of the Most High. The Lord God will give him the throne of his father David,",
+   "gr": "οὗτος ἔσται μέγας καὶ υἱὸς Ὑψίστου κληθήσεται, καὶ δώσει αὐτῷ κύριος ὁ θεὸς τὸν θρόνον Δαυὶδ τοῦ πατρὸς αὐτοῦ,"
+  },
+  {
+   "v": 33,
+   "en": "and he will reign over the house of Jacob forever. There will be no end to his Kingdom.”",
+   "gr": "καὶ βασιλεύσει ἐπὶ τὸν οἶκον Ἰακὼβ εἰς τοὺς αἰῶνας, καὶ τῆς βασιλείας αὐτοῦ οὐκ ἔσται τέλος."
+  },
+  {
+   "v": 34,
+   "en": "Mary said to the angel, “How can this be, seeing I am a virgin?”",
+   "gr": "εἶπεν δὲ Μαριὰμ πρὸς τὸν ἄγγελον· Πῶς ἔσται τοῦτο, ἐπεὶ ἄνδρα οὐ γινώσκω;"
+  },
+  {
+   "v": 35,
+   "en": "The angel answered her, “The Holy Spirit will come on you, and the power of the Most High will overshadow you. Therefore also the holy one who is born from you will be called the Son of God.",
+   "gr": "καὶ ἀποκριθεὶς ὁ ἄγγελος εἶπεν αὐτῇ· Πνεῦμα ἅγιον ἐπελεύσεται ἐπὶ σέ, καὶ δύναμις Ὑψίστου ἐπισκιάσει σοι· διὸ καὶ τὸ γεννώμενον ἅγιον κληθήσεται, υἱὸς θεοῦ·"
+  },
+  {
+   "v": 36,
+   "en": "Behold, Elizabeth your relative also has conceived a son in her old age; and this is the sixth month with her who was called barren.",
+   "gr": "καὶ ἰδοὺ Ἐλισάβετ ἡ ⸀συγγενίς σου καὶ αὐτὴ ⸀συνείληφεν υἱὸν ἐν γήρει αὐτῆς, καὶ οὗτος μὴν ἕκτος ἐστὶν αὐτῇ τῇ καλουμένῃ στείρᾳ·"
+  },
+  {
+   "v": 37,
+   "en": "For nothing spoken by God is impossible.”",
+   "gr": "ὅτι οὐκ ἀδυνατήσει παρὰ ⸂τοῦ θεοῦ⸃ πᾶν ῥῆμα."
+  },
+  {
+   "v": 38,
+   "en": "Mary said, “Behold, the servant of the Lord; let it be done to me according to your word.” The angel departed from her.",
+   "gr": "εἶπεν δὲ Μαριάμ· Ἰδοὺ ἡ δούλη κυρίου· γένοιτό μοι κατὰ τὸ ῥῆμά σου. καὶ ἀπῆλθεν ἀπʼ αὐτῆς ὁ ἄγγελος."
+  },
+  {
+   "v": 39,
+   "en": "Mary arose in those days and went into the hill country with haste, into a city of Judah,",
+   "gr": "Ἀναστᾶσα δὲ Μαριὰμ ἐν ταῖς ἡμέραις ταύταις ἐπορεύθη εἰς τὴν ὀρεινὴν μετὰ σπουδῆς εἰς πόλιν Ἰούδα,"
+  },
+  {
+   "v": 40,
+   "en": "and entered into the house of Zacharias and greeted Elizabeth.",
+   "gr": "καὶ εἰσῆλθεν εἰς τὸν οἶκον Ζαχαρίου καὶ ἠσπάσατο τὴν Ἐλισάβετ."
+  },
+  {
+   "v": 41,
+   "en": "When Elizabeth heard Mary’s greeting, the baby leaped in her womb; and Elizabeth was filled with the Holy Spirit.",
+   "gr": "καὶ ἐγένετο ὡς ἤκουσεν ⸂τὸν ἀσπασμὸν τῆς Μαρίας ἡ Ἐλισάβετ⸃, ἐσκίρτησεν τὸ βρέφος ἐν τῇ κοιλίᾳ αὐτῆς, καὶ ἐπλήσθη πνεύματος ἁγίου ἡ Ἐλισάβετ,"
+  },
+  {
+   "v": 42,
+   "en": "She called out with a loud voice and said, “Blessed are you among women, and blessed is the fruit of your womb!",
+   "gr": "καὶ ἀνεφώνησεν ⸀κραυγῇ μεγάλῃ καὶ εἶπεν· Εὐλογημένη σὺ ἐν γυναιξίν, καὶ εὐλογημένος ὁ καρπὸς τῆς κοιλίας σου."
+  },
+  {
+   "v": 43,
+   "en": "Why am I so favored, that the mother of my Lord should come to me?",
+   "gr": "καὶ πόθεν μοι τοῦτο ἵνα ἔλθῃ ἡ μήτηρ τοῦ κυρίου μου πρὸς ⸀ἐμέ;"
+  },
+  {
+   "v": 44,
+   "en": "For behold, when the voice of your greeting came into my ears, the baby leaped in my womb for joy!",
+   "gr": "ἰδοὺ γὰρ ὡς ἐγένετο ἡ φωνὴ τοῦ ἀσπασμοῦ σου εἰς τὰ ὦτά μου, ἐσκίρτησεν ⸂ἐν ἀγαλλιάσει τὸ βρέφος⸃ ἐν τῇ κοιλίᾳ μου."
+  },
+  {
+   "v": 45,
+   "en": "Blessed is she who believed, for there will be a fulfillment of the things which have been spoken to her from the Lord!”",
+   "gr": "καὶ μακαρία ἡ πιστεύσασα ὅτι ἔσται τελείωσις τοῖς λελαλημένοις αὐτῇ παρὰ κυρίου."
+  },
+  {
+   "v": 46,
+   "en": "Mary said, “My soul magnifies the Lord.",
+   "gr": "Καὶ εἶπεν Μαριάμ· Μεγαλύνει ἡ ψυχή μου τὸν κύριον,"
+  },
+  {
+   "v": 47,
+   "en": "My spirit has rejoiced in God my Savior,",
+   "gr": "καὶ ἠγαλλίασεν τὸ πνεῦμά μου ἐπὶ τῷ θεῷ τῷ σωτῆρί μου·"
+  },
+  {
+   "v": 48,
+   "en": "for he has looked at the humble state of his servant. For behold, from now on, all generations will call me blessed.",
+   "gr": "ὅτι ἐπέβλεψεν ἐπὶ τὴν ταπείνωσιν τῆς δούλης αὐτοῦ, ἰδοὺ γὰρ ἀπὸ τοῦ νῦν μακαριοῦσίν με πᾶσαι αἱ γενεαί·"
+  },
+  {
+   "v": 49,
+   "en": "For he who is mighty has done great things for me. Holy is his name.",
+   "gr": "ὅτι ἐποίησέν μοι ⸀μεγάλα ὁ δυνατός, καὶ ἅγιον τὸ ὄνομα αὐτοῦ,"
+  },
+  {
+   "v": 50,
+   "en": "His mercy is for generations of generations on those who fear him.",
+   "gr": "καὶ τὸ ἔλεος αὐτοῦ εἰς γενεὰς ⸂καὶ γενεὰς⸃ τοῖς φοβουμένοις αὐτόν."
+  },
+  {
+   "v": 51,
+   "en": "He has shown strength with his arm. He has scattered the proud in the imagination of their hearts.",
+   "gr": "Ἐποίησεν κράτος ἐν βραχίονι αὐτοῦ, διεσκόρπισεν ὑπερηφάνους διανοίᾳ καρδίας αὐτῶν·"
+  },
+  {
+   "v": 52,
+   "en": "He has put down princes from their thrones, and has exalted the lowly.",
+   "gr": "καθεῖλεν δυνάστας ἀπὸ θρόνων καὶ ὕψωσεν ταπεινούς,"
+  },
+  {
+   "v": 53,
+   "en": "He has filled the hungry with good things. He has sent the rich away empty.",
+   "gr": "πεινῶντας ἐνέπλησεν ἀγαθῶν καὶ πλουτοῦντας ἐξαπέστειλεν κενούς."
+  },
+  {
+   "v": 54,
+   "en": "He has given help to Israel, his servant, that he might remember mercy,",
+   "gr": "ἀντελάβετο Ἰσραὴλ παιδὸς αὐτοῦ, μνησθῆναι ἐλέους,"
+  },
+  {
+   "v": 55,
+   "en": "as he spoke to our fathers, to Abraham and his offspring forever.”",
+   "gr": "καθὼς ἐλάλησεν πρὸς τοὺς πατέρας ἡμῶν, τῷ Ἀβραὰμ καὶ τῷ σπέρματι αὐτοῦ εἰς τὸν αἰῶνα."
+  },
+  {
+   "v": 56,
+   "en": "Mary stayed with her about three months, and then returned to her house.",
+   "gr": "Ἔμεινεν δὲ Μαριὰμ σὺν αὐτῇ ⸀ὡς μῆνας τρεῖς, καὶ ὑπέστρεψεν εἰς τὸν οἶκον αὐτῆς."
+  },
+  {
+   "v": 57,
+   "en": "Now the time that Elizabeth should give birth was fulfilled, and she gave birth to a son.",
+   "gr": "Τῇ δὲ Ἐλισάβετ ἐπλήσθη ὁ χρόνος τοῦ τεκεῖν αὐτήν, καὶ ἐγέννησεν υἱόν."
+  },
+  {
+   "v": 58,
+   "en": "Her neighbors and her relatives heard that the Lord had magnified his mercy toward her, and they rejoiced with her.",
+   "gr": "καὶ ἤκουσαν οἱ περίοικοι καὶ οἱ συγγενεῖς αὐτῆς ὅτι ἐμεγάλυνεν κύριος τὸ ἔλεος αὐτοῦ μετʼ αὐτῆς, καὶ συνέχαιρον αὐτῇ."
+  },
+  {
+   "v": 59,
+   "en": "On the eighth day, they came to circumcise the child; and they would have called him Zacharias, after the name of his father.",
+   "gr": "Καὶ ἐγένετο ἐν τῇ ⸂ἡμέρᾳ τῇ ὀγδόῃ⸃ ἦλθον περιτεμεῖν τὸ παιδίον, καὶ ἐκάλουν αὐτὸ ἐπὶ τῷ ὀνόματι τοῦ πατρὸς αὐτοῦ Ζαχαρίαν."
+  },
+  {
+   "v": 60,
+   "en": "His mother answered, “Not so; but he will be called John.”",
+   "gr": "καὶ ἀποκριθεῖσα ἡ μήτηρ αὐτοῦ εἶπεν· Οὐχί, ἀλλὰ κληθήσεται Ἰωάννης."
+  },
+  {
+   "v": 61,
+   "en": "They said to her, “There is no one among your relatives who is called by this name.”",
+   "gr": "καὶ εἶπαν πρὸς αὐτὴν ὅτι Οὐδείς ἐστιν ⸂ἐκ τῆς συγγενείας⸃ σου ὃς καλεῖται τῷ ὀνόματι τούτῳ."
+  },
+  {
+   "v": 62,
+   "en": "They made signs to his father, what he would have him called.",
+   "gr": "ἐνένευον δὲ τῷ πατρὶ αὐτοῦ τὸ τί ἂν θέλοι καλεῖσθαι ⸀αὐτό."
+  },
+  {
+   "v": 63,
+   "en": "He asked for a writing tablet, and wrote, “His name is John.” They all marveled.",
+   "gr": "καὶ αἰτήσας πινακίδιον ἔγραψεν λέγων· Ἰωάννης ⸀ἐστὶν ὄνομα αὐτοῦ. καὶ ἐθαύμασαν πάντες."
+  },
+  {
+   "v": 64,
+   "en": "His mouth was opened immediately and his tongue freed, and he spoke, blessing God.",
+   "gr": "ἀνεῴχθη δὲ τὸ στόμα αὐτοῦ παραχρῆμα καὶ ἡ γλῶσσα αὐτοῦ, καὶ ἐλάλει εὐλογῶν τὸν θεόν."
+  },
+  {
+   "v": 65,
+   "en": "Fear came on all who lived around them, and all these sayings were talked about throughout all the hill country of Judea.",
+   "gr": "καὶ ἐγένετο ἐπὶ πάντας φόβος τοὺς περιοικοῦντας αὐτούς, καὶ ἐν ὅλῃ τῇ ὀρεινῇ τῆς Ἰουδαίας διελαλεῖτο πάντα τὰ ῥήματα ταῦτα,"
+  },
+  {
+   "v": 66,
+   "en": "All who heard them laid them up in their heart, saying, “What then will this child be?” The hand of the Lord was with him.",
+   "gr": "καὶ ἔθεντο πάντες οἱ ἀκούσαντες ἐν τῇ καρδίᾳ αὐτῶν, λέγοντες· Τί ἄρα τὸ παιδίον τοῦτο ἔσται; καὶ ⸀γὰρ χεὶρ κυρίου ἦν μετʼ αὐτοῦ."
+  },
+  {
+   "v": 67,
+   "en": "His father Zacharias was filled with the Holy Spirit, and prophesied, saying,",
+   "gr": "Καὶ Ζαχαρίας ὁ πατὴρ αὐτοῦ ἐπλήσθη πνεύματος ἁγίου καὶ ⸀ἐπροφήτευσεν λέγων·"
+  },
+  {
+   "v": 68,
+   "en": "“Blessed be the Lord, the God of Israel, for he has visited and redeemed his people;",
+   "gr": "Εὐλογητὸς κύριος ὁ θεὸς τοῦ Ἰσραήλ, ὅτι ἐπεσκέψατο καὶ ἐποίησεν λύτρωσιν τῷ λαῷ αὐτοῦ,"
+  },
+  {
+   "v": 69,
+   "en": "and has raised up a horn of salvation for us in the house of his servant David",
+   "gr": "καὶ ἤγειρεν κέρας σωτηρίας ἡμῖν ⸀ἐν οἴκῳ ⸀Δαυὶδ παιδὸς αὐτοῦ,"
+  },
+  {
+   "v": 70,
+   "en": "(as he spoke by the mouth of his holy prophets who have been from of old),",
+   "gr": "καθὼς ἐλάλησεν διὰ στόματος τῶν ⸀ἁγίων ἀπʼ αἰῶνος προφητῶν αὐτοῦ,"
+  },
+  {
+   "v": 71,
+   "en": "salvation from our enemies and from the hand of all who hate us;",
+   "gr": "σωτηρίαν ἐξ ἐχθρῶν ἡμῶν καὶ ἐκ χειρὸς πάντων τῶν μισούντων ἡμᾶς,"
+  },
+  {
+   "v": 72,
+   "en": "to show mercy toward our fathers, to remember his holy covenant,",
+   "gr": "ποιῆσαι ἔλεος μετὰ τῶν πατέρων ἡμῶν καὶ μνησθῆναι διαθήκης ἁγίας αὐτοῦ,"
+  },
+  {
+   "v": 73,
+   "en": "the oath which he swore to Abraham our father,",
+   "gr": "ὅρκον ὃν ὤμοσεν πρὸς Ἀβραὰμ τὸν πατέρα ἡμῶν, τοῦ δοῦναι ἡμῖν"
+  },
+  {
+   "v": 74,
+   "en": "to grant to us that we, being delivered out of the hand of our enemies, should serve him without fear,",
+   "gr": "ἀφόβως ἐκ χειρὸς ⸀ἐχθρῶν ῥυσθέντας λατρεύειν αὐτῷ"
+  },
+  {
+   "v": 75,
+   "en": "in holiness and righteousness before him all the days of our life.",
+   "gr": "ἐν ὁσιότητι καὶ δικαιοσύνῃ ἐνώπιον αὐτοῦ ⸂πάσαις ταῖς ἡμέραις⸃ ἡμῶν."
+  },
+  {
+   "v": 76,
+   "en": "And you, child, will be called a prophet of the Most High; for you will go before the face of the Lord to prepare his ways,",
+   "gr": "καὶ σὺ ⸀δέ, παιδίον, προφήτης Ὑψίστου κληθήσῃ, προπορεύσῃ γὰρ ⸀ἐνώπιον κυρίου ἑτοιμάσαι ὁδοὺς αὐτοῦ,"
+  },
+  {
+   "v": 77,
+   "en": "to give knowledge of salvation to his people by the remission of their sins,",
+   "gr": "τοῦ δοῦναι γνῶσιν σωτηρίας τῷ λαῷ αὐτοῦ ἐν ἀφέσει ἁμαρτιῶν αὐτῶν,"
+  },
+  {
+   "v": 78,
+   "en": "because of the tender mercy of our God, by which the dawn from on high will visit us,",
+   "gr": "διὰ σπλάγχνα ἐλέους θεοῦ ἡμῶν, ἐν οἷς ⸀ἐπισκέψεται ἡμᾶς ἀνατολὴ ἐξ ὕψους,"
+  },
+  {
+   "v": 79,
+   "en": "to shine on those who sit in darkness and the shadow of death; to guide our feet into the way of peace.”",
+   "gr": "ἐπιφᾶναι τοῖς ἐν σκότει καὶ σκιᾷ θανάτου καθημένοις, τοῦ κατευθῦναι τοὺς πόδας ἡμῶν εἰς ὁδὸν εἰρήνης."
+  },
+  {
+   "v": 80,
+   "en": "The child was growing and becoming strong in spirit, and was in the desert until the day of his public appearance to Israel.",
+   "gr": "Τὸ δὲ παιδίον ηὔξανε καὶ ἐκραταιοῦτο πνεύματι, καὶ ἦν ἐν ταῖς ἐρήμοις ἕως ἡμέρας ἀναδείξεως αὐτοῦ πρὸς τὸν Ἰσραήλ."
+  }
+ ],
+ "sourcing": "sourced"
+}

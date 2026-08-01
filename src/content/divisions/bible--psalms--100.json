@@ -1,0 +1,30 @@
+{
+ "id": "bible--psalms--100",
+ "work": "bible",
+ "n": 19,
+ "slug": "psalms",
+ "c": 100,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Shout for joy to Yahweh, all you lands!"
+  },
+  {
+   "v": 2,
+   "en": "Serve Yahweh with gladness. Come before his presence with singing."
+  },
+  {
+   "v": 3,
+   "en": "Know that Yahweh, he is God. It is he who has made us, and we are his. We are his people, and the sheep of his pasture."
+  },
+  {
+   "v": 4,
+   "en": "Enter into his gates with thanksgiving, and into his courts with praise. Give thanks to him, and bless his name."
+  },
+  {
+   "v": 5,
+   "en": "For Yahweh is good. His loving kindness endures forever, his faithfulness to all generations."
+  }
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,39 @@
+{
+ "id": "tanakh--psalms--70",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 70,
+ "verses": [
+  {
+   "v": 1,
+   "he": "לַ֝מְנַצֵּ֗חַ לְדָוִ֥ד לְהַזְכִּֽיר׃",
+   "en": "For the Leader. [A Psalm] of David; to make memorial. O God, to deliver me, O LORD, to help me, make haste."
+  },
+  {
+   "v": 2,
+   "he": "אֱלֹהִ֥ים לְהַצִּילֵ֑נִי יְ֝הוָ֗ה לְעֶזְרָ֥תִי חֽוּשָֽׁה׃",
+   "en": "Let them be ashamed and abashed That seek after my soul; Let them be turned backward and brought to confusion That delight in my hurt."
+  },
+  {
+   "v": 3,
+   "he": "יֵבֹ֣שׁוּ וְיַחְפְּרוּ֮ מְבַקְשֵׁ֪י נַ֫פְשִׁ֥י יִסֹּ֣גוּ אָ֭חוֹר וְיִכָּלְמ֑וּ חֲ֝פֵצֵ֗י רָעָתִֽי׃",
+   "en": "Let them be turned back by reason of their shame That say: 'Aha, aha.'"
+  },
+  {
+   "v": 4,
+   "he": "יָ֭שׁוּבוּ עַל־עֵ֣קֶב בָּשְׁתָּ֑ם הָ֝אֹמְרִ֗ים הֶ֘אָ֥ח׀ הֶאָֽח׃",
+   "en": "Let all those that seek Thee rejoice and be glad in Thee; And let such as love Thy salvation say continually: 'Let God be magnified.'"
+  },
+  {
+   "v": 5,
+   "he": "יָ֘שִׂ֤ישׂוּ וְיִשְׂמְח֨וּ׀ בְּךָ֗ כָּֽל־מְבַ֫קְשֶׁ֥יךָ וְיֹאמְר֣וּ תָ֭מִיד יִגְדַּ֣ל אֱלֹהִ֑ים אֹ֝הֲבֵ֗י יְשׁוּעָתֶֽךָ׃",
+   "en": "But I am poor and needy; O God, make haste unto me; Thou art my help and my deliverer; O LORD, tarry not."
+  },
+  {
+   "v": 6,
+   "he": "וַאֲנִ֤י׀ עָנִ֣י וְאֶבְיוֹן֮ אֱלֹהִ֪ים חֽוּשָׁ֫ה־לִּ֥י עֶזְרִ֣י וּמְפַלְטִ֣י אַ֑תָּה יְ֝הוָ֗ה אַל־תְּאַחַֽר׃"
+  }
+ ],
+ "sourcing": "sourced"
+}

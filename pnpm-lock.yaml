@@ -45,6 +45,9 @@ importers:
       '@fontsource/noto-sans-gurmukhi':
         specifier: ^5.2.5
         version: 5.3.0
+      '@fontsource/noto-serif':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@fontsource/noto-serif-devanagari':
         specifier: ^5.2.5
         version: 5.3.0
@@ -726,6 +729,9 @@ packages:
 
   '@fontsource/noto-serif-sc@5.3.0':
     resolution: {integrity: sha512-0/zaEFkidiWldE62rTeD74x8ygUsQvejiSNtO0LQxQk3qpaHnlMZ3w4C7yH80B4KTIg8VKeFP4oSgwWMchY9+g==}
+
+  '@fontsource/noto-serif@5.3.0':
+    resolution: {integrity: sha512-ZrMzjuQlBIcw+qma1slZQdU3YDJvrjLG+9CWU1bxSf3YTkucwqd3EYa/Kfo4Ts19w8IMTGAmtOE3d6wWlgnBtA==}
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -3270,6 +3276,8 @@ snapshots:
   '@fontsource/noto-serif-jp@5.3.0': {}
 
   '@fontsource/noto-serif-sc@5.3.0': {}
+
+  '@fontsource/noto-serif@5.3.0': {}
 
   '@humanfs/core@0.19.2':
     dependencies:

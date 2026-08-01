@@ -1,0 +1,240 @@
+{
+ "id": "bible--matthew--22",
+ "work": "bible",
+ "n": 40,
+ "slug": "matthew",
+ "c": 22,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Jesus answered and spoke to them again in parables, saying,",
+   "gr": "Καὶ ἀποκριθεὶς ὁ Ἰησοῦς πάλιν εἶπεν ⸂ἐν παραβολαῖς αὐτοῖς⸃ λέγων·"
+  },
+  {
+   "v": 2,
+   "en": "“The Kingdom of Heaven is like a certain king, who made a wedding feast for his son,",
+   "gr": "Ὡμοιώθη ἡ βασιλεία τῶν οὐρανῶν ἀνθρώπῳ βασιλεῖ, ὅστις ἐποίησεν γάμους τῷ υἱῷ αὐτοῦ."
+  },
+  {
+   "v": 3,
+   "en": "and sent out his servants to call those who were invited to the wedding feast, but they would not come.",
+   "gr": "καὶ ἀπέστειλεν τοὺς δούλους αὐτοῦ καλέσαι τοὺς κεκλημένους εἰς τοὺς γάμους, καὶ οὐκ ἤθελον ἐλθεῖν."
+  },
+  {
+   "v": 4,
+   "en": "Again he sent out other servants, saying, ‘Tell those who are invited, “Behold, I have prepared my dinner. My cattle and my fatlings are killed, and all things are ready. Come to the wedding feast!” ’",
+   "gr": "πάλιν ἀπέστειλεν ἄλλους δούλους λέγων· Εἴπατε τοῖς κεκλημένοις· Ἰδοὺ τὸ ἄριστόν μου ⸀ἡτοίμακα, οἱ ταῦροί μου καὶ τὰ σιτιστὰ τεθυμένα, καὶ πάντα ἕτοιμα· δεῦτε εἰς τοὺς γάμους."
+  },
+  {
+   "v": 5,
+   "en": "But they made light of it, and went their ways, one to his own farm, another to his merchandise,",
+   "gr": "οἱ δὲ ἀμελήσαντες ἀπῆλθον, ⸀ὃς μὲν εἰς τὸν ἴδιον ἀγρόν, ⸁ὃς δὲ ⸀ἐπὶ τὴν ἐμπορίαν αὐτοῦ·"
+  },
+  {
+   "v": 6,
+   "en": "and the rest grabbed his servants, and treated them shamefully, and killed them.",
+   "gr": "οἱ δὲ λοιποὶ κρατήσαντες τοὺς δούλους αὐτοῦ ὕβρισαν καὶ ἀπέκτειναν."
+  },
+  {
+   "v": 7,
+   "en": "When the king heard that, he was angry, and sent his armies, destroyed those murderers, and burned their city.",
+   "gr": "⸂ὁ δὲ βασιλεὺς⸃ ὠργίσθη, καὶ πέμψας τὰ στρατεύματα αὐτοῦ ἀπώλεσεν τοὺς φονεῖς ἐκείνους καὶ τὴν πόλιν αὐτῶν ἐνέπρησεν."
+  },
+  {
+   "v": 8,
+   "en": "“Then he said to his servants, ‘The wedding is ready, but those who were invited weren’t worthy.",
+   "gr": "τότε λέγει τοῖς δούλοις αὐτοῦ· Ὁ μὲν γάμος ἕτοιμός ἐστιν, οἱ δὲ κεκλημένοι οὐκ ἦσαν ἄξιοι·"
+  },
+  {
+   "v": 9,
+   "en": "Go therefore to the intersections of the highways, and as many as you may find, invite to the wedding feast.’",
+   "gr": "πορεύεσθε οὖν ἐπὶ τὰς διεξόδους τῶν ὁδῶν, καὶ ὅσους ⸀ἐὰν εὕρητε καλέσατε εἰς τοὺς γάμους."
+  },
+  {
+   "v": 10,
+   "en": "Those servants went out into the highways, and gathered together as many as they found, both bad and good. The wedding was filled with guests.",
+   "gr": "καὶ ἐξελθόντες οἱ δοῦλοι ἐκεῖνοι εἰς τὰς ὁδοὺς συνήγαγον πάντας ⸀οὓς εὗρον, πονηρούς τε καὶ ἀγαθούς· καὶ ἐπλήσθη ὁ ⸀γάμος ἀνακειμένων."
+  },
+  {
+   "v": 11,
+   "en": "But when the king came in to see the guests, he saw there a man who didn’t have on wedding clothing,",
+   "gr": "εἰσελθὼν δὲ ὁ βασιλεὺς θεάσασθαι τοὺς ἀνακειμένους εἶδεν ἐκεῖ ἄνθρωπον οὐκ ἐνδεδυμένον ἔνδυμα γάμου·"
+  },
+  {
+   "v": 12,
+   "en": "and he said to him, ‘Friend, how did you come in here not wearing wedding clothing?’ He was speechless.",
+   "gr": "καὶ λέγει αὐτῷ· Ἑταῖρε, πῶς εἰσῆλθες ὧδε μὴ ἔχων ἔνδυμα γάμου; ὁ δὲ ἐφιμώθη."
+  },
+  {
+   "v": 13,
+   "en": "Then the king said to the servants, ‘Bind him hand and foot, take him away, and throw him into the outer darkness. That is where the weeping and grinding of teeth will be.’",
+   "gr": "τότε ⸂ὁ βασιλεὺς εἶπεν⸃ τοῖς διακόνοις· Δήσαντες αὐτοῦ πόδας καὶ χεῖρας ⸂ἐκβάλετε αὐτὸν⸃ εἰς τὸ σκότος τὸ ἐξώτερον· ἐκεῖ ἔσται ὁ κλαυθμὸς καὶ ὁ βρυγμὸς τῶν ὀδόντων."
+  },
+  {
+   "v": 14,
+   "en": "For many are called, but few chosen.”",
+   "gr": "πολλοὶ γάρ εἰσιν κλητοὶ ὀλίγοι δὲ ἐκλεκτοί."
+  },
+  {
+   "v": 15,
+   "en": "Then the Pharisees went and took counsel how they might entrap him in his talk.",
+   "gr": "Τότε πορευθέντες οἱ Φαρισαῖοι συμβούλιον ἔλαβον ὅπως αὐτὸν παγιδεύσωσιν ἐν λόγῳ."
+  },
+  {
+   "v": 16,
+   "en": "They sent their disciples to him, along with the Herodians, saying, “Teacher, we know that you are honest, and teach the way of God in truth, no matter whom you teach, for you aren’t partial to anyone.",
+   "gr": "καὶ ἀποστέλλουσιν αὐτῷ τοὺς μαθητὰς αὐτῶν μετὰ τῶν Ἡρῳδιανῶν ⸀λέγοντες· Διδάσκαλε, οἴδαμεν ὅτι ἀληθὴς εἶ καὶ τὴν ὁδὸν τοῦ θεοῦ ἐν ἀληθείᾳ διδάσκεις, καὶ οὐ μέλει σοι περὶ οὐδενός, οὐ γὰρ βλέπεις εἰς πρόσωπον ἀνθρώπων·"
+  },
+  {
+   "v": 17,
+   "en": "Tell us therefore, what do you think? Is it lawful to pay taxes to Caesar, or not?”",
+   "gr": "εἰπὸν οὖν ἡμῖν τί σοι δοκεῖ· ἔξεστιν δοῦναι κῆνσον Καίσαρι ἢ οὔ;"
+  },
+  {
+   "v": 18,
+   "en": "But Jesus perceived their wickedness, and said, “Why do you test me, you hypocrites?",
+   "gr": "γνοὺς δὲ ὁ Ἰησοῦς τὴν πονηρίαν αὐτῶν εἶπεν· Τί με πειράζετε, ὑποκριταί;"
+  },
+  {
+   "v": 19,
+   "en": "Show me the tax money.” They brought to him a denarius.",
+   "gr": "ἐπιδείξατέ μοι τὸ νόμισμα τοῦ κήνσου. οἱ δὲ προσήνεγκαν αὐτῷ δηνάριον."
+  },
+  {
+   "v": 20,
+   "en": "He asked them, “Whose is this image and inscription?”",
+   "gr": "καὶ λέγει αὐτοῖς· Τίνος ἡ εἰκὼν αὕτη καὶ ἡ ἐπιγραφή;"
+  },
+  {
+   "v": 21,
+   "en": "They said to him, “Caesar’s.” Then he said to them, “Give therefore to Caesar the things that are Caesar’s, and to God the things that are God’s.”",
+   "gr": "λέγουσιν ⸀αὐτῷ· Καίσαρος. τότε λέγει αὐτοῖς· Ἀπόδοτε οὖν τὰ Καίσαρος Καίσαρι καὶ τὰ τοῦ θεοῦ τῷ θεῷ."
+  },
+  {
+   "v": 22,
+   "en": "When they heard it, they marveled, and left him, and went away.",
+   "gr": "καὶ ἀκούσαντες ἐθαύμασαν, καὶ ἀφέντες αὐτὸν ἀπῆλθαν."
+  },
+  {
+   "v": 23,
+   "en": "On that day Sadducees (those who say that there is no resurrection) came to him. They asked him,",
+   "gr": "Ἐν ἐκείνῃ τῇ ἡμέρᾳ προσῆλθον αὐτῷ Σαδδουκαῖοι, ⸀λέγοντες μὴ εἶναι ἀνάστασιν, καὶ ἐπηρώτησαν αὐτὸν"
+  },
+  {
+   "v": 24,
+   "en": "saying, “Teacher, Moses said, ‘If a man dies, having no children, his brother shall marry his wife, and raise up offspring for his brother.’",
+   "gr": "λέγοντες· Διδάσκαλε, Μωϋσῆς εἶπεν· Ἐάν τις ἀποθάνῃ μὴ ἔχων τέκνα, ἐπιγαμβρεύσει ὁ ἀδελφὸς αὐτοῦ τὴν γυναῖκα αὐτοῦ καὶ ἀναστήσει σπέρμα τῷ ἀδελφῷ αὐτοῦ."
+  },
+  {
+   "v": 25,
+   "en": "Now there were with us seven brothers. The first married and died, and having no offspring left his wife to his brother.",
+   "gr": "ἦσαν δὲ παρʼ ἡμῖν ἑπτὰ ἀδελφοί· καὶ ὁ πρῶτος ⸀γήμας ἐτελεύτησεν, καὶ μὴ ἔχων σπέρμα ἀφῆκεν τὴν γυναῖκα αὐτοῦ τῷ ἀδελφῷ αὐτοῦ·"
+  },
+  {
+   "v": 26,
+   "en": "In the same way, the second also, and the third, to the seventh.",
+   "gr": "ὁμοίως καὶ ὁ δεύτερος καὶ ὁ τρίτος, ἕως τῶν ἑπτά·"
+  },
+  {
+   "v": 27,
+   "en": "After them all, the woman died.",
+   "gr": "ὕστερον δὲ πάντων ἀπέθανεν ⸀ἡ γυνή."
+  },
+  {
+   "v": 28,
+   "en": "In the resurrection therefore, whose wife will she be of the seven? For they all had her.”",
+   "gr": "ἐν τῇ ⸂ἀναστάσει οὖν⸃ τίνος τῶν ἑπτὰ ἔσται γυνή; πάντες γὰρ ἔσχον αὐτήν."
+  },
+  {
+   "v": 29,
+   "en": "But Jesus answered them, “You are mistaken, not knowing the Scriptures, nor the power of God.",
+   "gr": "Ἀποκριθεὶς δὲ ὁ Ἰησοῦς εἶπεν αὐτοῖς· Πλανᾶσθε μὴ εἰδότες τὰς γραφὰς μηδὲ τὴν δύναμιν τοῦ θεοῦ·"
+  },
+  {
+   "v": 30,
+   "en": "For in the resurrection they neither marry, nor are given in marriage, but are like God’s angels in heaven.",
+   "gr": "ἐν γὰρ τῇ ἀναστάσει οὔτε γαμοῦσιν οὔτε ⸀γαμίζονται, ἀλλʼ ὡς ἄγγελοι ⸀θεοῦ ἐν ⸀τῷ οὐρανῷ εἰσιν·"
+  },
+  {
+   "v": 31,
+   "en": "But concerning the resurrection of the dead, haven’t you read that which was spoken to you by God, saying,",
+   "gr": "περὶ δὲ τῆς ἀναστάσεως τῶν νεκρῶν οὐκ ἀνέγνωτε τὸ ῥηθὲν ὑμῖν ὑπὸ τοῦ θεοῦ λέγοντος·"
+  },
+  {
+   "v": 32,
+   "en": "‘I am the God of Abraham, and the God of Isaac, and the God of Jacob?’ God is not the God of the dead, but of the living.”",
+   "gr": "Ἐγώ εἰμι ὁ θεὸς Ἀβραὰμ καὶ ὁ θεὸς Ἰσαὰκ καὶ ὁ θεὸς Ἰακώβ; οὐκ ἔστιν ⸂ὁ θεὸς⸃ νεκρῶν ἀλλὰ ζώντων."
+  },
+  {
+   "v": 33,
+   "en": "When the multitudes heard it, they were astonished at his teaching.",
+   "gr": "καὶ ἀκούσαντες οἱ ὄχλοι ἐξεπλήσσοντο ἐπὶ τῇ διδαχῇ αὐτοῦ."
+  },
+  {
+   "v": 34,
+   "en": "But the Pharisees, when they heard that he had silenced the Sadducees, gathered themselves together.",
+   "gr": "Οἱ δὲ Φαρισαῖοι ἀκούσαντες ὅτι ἐφίμωσεν τοὺς Σαδδουκαίους συνήχθησαν ἐπὶ τὸ αὐτό."
+  },
+  {
+   "v": 35,
+   "en": "One of them, a lawyer, asked him a question, testing him.",
+   "gr": "καὶ ἐπηρώτησεν εἷς ἐξ αὐτῶν νομικὸς πειράζων ⸀αὐτόν·"
+  },
+  {
+   "v": 36,
+   "en": "“Teacher, which is the greatest commandment in the law?”",
+   "gr": "Διδάσκαλε, ποία ἐντολὴ μεγάλη ἐν τῷ νόμῳ;"
+  },
+  {
+   "v": 37,
+   "en": "Jesus said to him, “ ‘You shall love the Lord your God with all your heart, with all your soul, and with all your mind.’",
+   "gr": "ὁ ⸀δὲ ἔφη αὐτῷ· Ἀγαπήσεις κύριον τὸν θεόν σου ἐν ὅλῃ ⸀τῇ καρδίᾳ σου καὶ ἐν ὅλῃ ⸁τῇ ψυχῇ σου καὶ ἐν ὅλῃ τῇ διανοίᾳ σου·"
+  },
+  {
+   "v": 38,
+   "en": "This is the first and great commandment.",
+   "gr": "αὕτη ἐστὶν ⸂ἡ μεγάλη καὶ πρώτη⸃ ἐντολή."
+  },
+  {
+   "v": 39,
+   "en": "A second likewise is this, ‘You shall love your neighbor as yourself.’",
+   "gr": "Δευτέρα ⸀δὲ ὁμοία ⸀αὐτῇ· Ἀγαπήσεις τὸν πλησίον σου ὡς σεαυτόν."
+  },
+  {
+   "v": 40,
+   "en": "The whole law and the prophets depend on these two commandments.”",
+   "gr": "ἐν ταύταις ταῖς δυσὶν ἐντολαῖς ὅλος ὁ νόμος ⸂κρέμαται καὶ οἱ προφῆται⸃."
+  },
+  {
+   "v": 41,
+   "en": "Now while the Pharisees were gathered together, Jesus asked them a question,",
+   "gr": "Συνηγμένων δὲ τῶν Φαρισαίων ἐπηρώτησεν αὐτοὺς ὁ Ἰησοῦς"
+  },
+  {
+   "v": 42,
+   "en": "saying, “What do you think of the Christ? Whose son is he?” They said to him, “Of David.”",
+   "gr": "λέγων· Τί ὑμῖν δοκεῖ περὶ τοῦ χριστοῦ; τίνος υἱός ἐστιν; λέγουσιν αὐτῷ· Τοῦ Δαυίδ."
+  },
+  {
+   "v": 43,
+   "en": "He said to them, “How then does David in the Spirit call him Lord, saying,",
+   "gr": "λέγει αὐτοῖς· Πῶς οὖν Δαυὶδ ἐν πνεύματι ⸂καλεῖ αὐτὸν κύριον⸃ λέγων·"
+  },
+  {
+   "v": 44,
+   "en": "‘The Lord said to my Lord, sit on my right hand, until I make your enemies a footstool for your feet?’",
+   "gr": "⸀Εἶπεν κύριος τῷ κυρίῳ μου· Κάθου ἐκ δεξιῶν μου ἕως ἂν θῶ τοὺς ἐχθρούς σου ⸀ὑποκάτω τῶν ποδῶν σου;"
+  },
+  {
+   "v": 45,
+   "en": "“If then David calls him Lord, how is he his son?”",
+   "gr": "εἰ οὖν Δαυὶδ καλεῖ αὐτὸν κύριον, πῶς υἱὸς αὐτοῦ ἐστιν;"
+  },
+  {
+   "v": 46,
+   "en": "No one was able to answer him a word, neither did any man dare ask him any more questions from that day forward.",
+   "gr": "καὶ οὐδεὶς ἐδύνατο ⸂ἀποκριθῆναι αὐτῷ⸃ λόγον, οὐδὲ ἐτόλμησέν τις ἀπʼ ἐκείνης τῆς ἡμέρας ἐπερωτῆσαι αὐτὸν οὐκέτι."
+  }
+ ],
+ "sourcing": "sourced"
+}

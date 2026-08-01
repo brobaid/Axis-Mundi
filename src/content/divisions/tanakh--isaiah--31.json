@@ -1,0 +1,55 @@
+{
+ "id": "tanakh--isaiah--31",
+ "work": "tanakh",
+ "n": 12,
+ "slug": "isaiah",
+ "c": 31,
+ "verses": [
+  {
+   "v": 1,
+   "he": "ה֣וֹי הַיֹּרְדִ֤ים מִצְרַ֙יִם֙ לְעֶזְרָ֔ה עַל־סוּסִ֖ים יִשָּׁעֵ֑נוּ וַיִּבְטְח֨וּ עַל־רֶ֜כֶב כִּ֣י רָ֗ב וְעַ֤ל פָּֽרָשִׁים֙ כִּֽי־עָצְמ֣וּ מְאֹ֔ד וְלֹ֤א שָׁעוּ֙ עַל־קְד֣וֹשׁ יִשְׂרָאֵ֔ל וְאֶת־יְהוָ֖ה לֹ֥א דָרָֽשׁוּ׃",
+   "en": "Woe to them that go down to Egypt for help, And rely on horses, And trust in chariots, because they are many, And in horsemen, because they are exceeding mighty; But they look not unto the Holy One of Israel, Neither seek the LORD!"
+  },
+  {
+   "v": 2,
+   "he": "וְגַם־ה֤וּא חָכָם֙ וַיָּ֣בֵא רָ֔ע וְאֶת־דְּבָרָ֖יו לֹ֣א הֵסִ֑יר וְקָם֙ עַל־בֵּ֣ית מְרֵעִ֔ים וְעַל־עֶזְרַ֖ת פֹּ֥עֲלֵי אָֽוֶן׃",
+   "en": "Yet He also is wise, And bringeth evil, And doth not call back His words; But will arise against the house of the evil-doers, And against the help of them that work iniquity."
+  },
+  {
+   "v": 3,
+   "he": "וּמִצְרַ֤יִם אָדָם֙ וְֽלֹא־אֵ֔ל וְסוּסֵיהֶ֥ם בָּשָׂ֖ר וְלֹא־ר֑וּחַ וַֽיהוָ֞ה יַטֶּ֣ה יָד֗וֹ וְכָשַׁ֤ל עוֹזֵר֙ וְנָפַ֣ל עָזֻ֔ר וְיַחְדָּ֖ו כֻּלָּ֥ם יִכְלָיֽוּן׃",
+   "en": "Now the Egyptians are men, and not God, And their horses flesh, and not spirit; So when the LORD shall stretch out His hand, Both he that helpeth shall stumble, and he that is helped shall fall, And they all shall perish together."
+  },
+  {
+   "v": 4,
+   "he": "כִּ֣י כֹ֣ה אָֽמַר־יְהוָ֣ה׀ אֵלַ֡י כַּאֲשֶׁ֣ר יֶהְגֶּה֩ הָאַרְיֵ֨ה וְהַכְּפִ֜יר עַל־טַרְפּ֗וֹ אֲשֶׁ֨ר יִקָּרֵ֤א עָלָיו֙ מְלֹ֣א רֹעִ֔ים מִקּוֹלָם֙ לֹ֣א יֵחָ֔ת וּמֵֽהֲמוֹנָ֖ם לֹ֣א יַֽעֲנֶ֑ה כֵּ֗ן יֵרֵד֙ יְהוָ֣ה צְבָא֔וֹת לִצְבֹּ֥א עַל־הַר־צִיּ֖וֹן וְעַל־גִּבְעָתָֽהּ׃",
+   "en": "For thus saith the LORD unto me: Like as the lion, or the young lion, growling over his prey, Though a multitude of shepherds be called forth against him, Will not be dismayed at their voice, Nor abase himself for the noise of them; So will the LORD of hosts come down To fight upon mount Zion, and upon the hill thereof."
+  },
+  {
+   "v": 5,
+   "he": "כְּצִפֳּרִ֣ים עָפ֔וֹת כֵּ֗ן יָגֵ֛ן יְהוָ֥ה צְבָא֖וֹת עַל־יְרֽוּשָׁלָ֑‍ִם גָּנ֥וֹן וְהִצִּ֖יל פָּסֹ֥חַ וְהִמְלִֽיט׃",
+   "en": "As birds hovering, So will the LORD of hosts protect Jerusalem; He will deliver it as He protecteth it, He will rescue it as He passeth over."
+  },
+  {
+   "v": 6,
+   "he": "שׁ֗וּבוּ לַאֲשֶׁ֛ר הֶעְמִ֥יקוּ סָרָ֖ה בְּנֵ֥י יִשְׂרָאֵֽל׃",
+   "en": "Turn ye unto Him Against whom ye have deeply rebelled, O children of Israel."
+  },
+  {
+   "v": 7,
+   "he": "כִּ֚י בַּיּ֣וֹם הַה֔וּא יִמְאָס֗וּן אִ֚ישׁ אֱלִילֵ֣י כַסְפּ֔וֹ וֶאֱלִילֵ֖י זְהָב֑וֹ אֲשֶׁ֨ר עָשׂ֥וּ לָכֶ֛ם יְדֵיכֶ֖ם חֵֽטְא׃",
+   "en": "For in that day they shall cast away every man his idols of silver, and his idols of gold, Which your own hands have made unto you for a sin."
+  },
+  {
+   "v": 8,
+   "he": "וְנָפַ֤ל אַשּׁוּר֙ בְּחֶ֣רֶב לֹא־אִ֔ישׁ וְחֶ֥רֶב לֹֽא־אָדָ֖ם תֹּֽאכֲלֶ֑נּוּ וְנָ֥ס לוֹ֙ מִפְּנֵי־חֶ֔רֶב וּבַחוּרָ֖יו לָמַ֥ס יִהְיֽוּ׃",
+   "en": "Then shall Asshur fall with the sword, not of man, And the sword, not of men, shall devour him; And he shall flee from the sword, And his young men shall become tributary."
+  },
+  {
+   "v": 9,
+   "he": "וְסַלְעוֹ֙ מִמָּג֣וֹר יַֽעֲב֔וֹר וְחַתּ֥וּ מִנֵּ֖ס שָׂרָ֑יו נְאֻם־יְהוָ֗ה אֲשֶׁר־א֥וּר לוֹ֙ בְּצִיּ֔וֹן וְתַנּ֥וּר ל֖וֹ בִּירוּשָׁלָ‍ִֽם׃",
+   "en": "And his rock shall pass away by reason of terror, And his princes shall be dismayed at the ensign, Saith the LORD, whose fire is in Zion, And His furnace in Jerusalem."
+  }
+ ],
+ "sourcing": "sourced"
+}

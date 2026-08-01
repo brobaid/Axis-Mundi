@@ -1,0 +1,155 @@
+{
+ "id": "tanakh--job--20",
+ "work": "tanakh",
+ "n": 29,
+ "slug": "job",
+ "c": 20,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וַ֭יַּעַן צֹפַ֥ר הַנַּֽעֲמָתִ֗י וַיֹּאמַֽר׃",
+   "en": "Then answered Zophar the Naamathite, and said:"
+  },
+  {
+   "v": 2,
+   "he": "לָ֭כֵן שְׂעִפַּ֣י יְשִׁיב֑וּנִי וּ֝בַעֲב֗וּר ח֣וּשִׁי בִֽי׃",
+   "en": "Therefore do my thoughts give answer to me, Even by reason of mine agitation that is in me."
+  },
+  {
+   "v": 3,
+   "he": "מוּסַ֣ר כְּלִמָּתִ֣י אֶשְׁמָ֑ע וְ֝ר֗וּחַ מִֽבִּינָתִ֥י יַעֲנֵֽנִי׃",
+   "en": "I have heard the reproof which putteth me to shame, But out of my understanding my spirit answereth me."
+  },
+  {
+   "v": 4,
+   "he": "הֲזֹ֣את יָ֭דַעְתָּ מִנִּי־עַ֑ד מִנִּ֤י שִׂ֖ים אָדָ֣ם עֲלֵי־אָֽרֶץ׃",
+   "en": "Knowest thou not this of old time, Since man was placed upon earth,"
+  },
+  {
+   "v": 5,
+   "he": "כִּ֤י רִנְנַ֣ת רְ֭שָׁעִים מִקָּר֑וֹב וְשִׂמְחַ֖ת חָנֵ֣ף עֲדֵי־רָֽגַע׃",
+   "en": "That the triumphing of the wicked is short, And the joy of the godless but for a moment?"
+  },
+  {
+   "v": 6,
+   "he": "אִם־יַעֲלֶ֣ה לַשָּׁמַ֣יִם שִׂיא֑וֹ וְ֝רֹאשׁ֗וֹ לָעָ֥ב יַגִּֽיעַ׃",
+   "en": "Though his excellency mount up to the heavens, And his head reach unto the clouds;"
+  },
+  {
+   "v": 7,
+   "he": "כְּֽ֭גֶלֲלוֹ לָנֶ֣צַח יֹאבֵ֑ד רֹ֝אָ֗יו יֹאמְר֥וּ אַיּֽוֹ׃",
+   "en": "Yet he shall perish for ever like his own dung; They that have seen him shall say: ‘Where is he?’"
+  },
+  {
+   "v": 8,
+   "he": "כַּחֲל֣וֹם יָ֭עוּף וְלֹ֣א יִמְצָא֑וּהוּ וְ֝יֻדַּ֗ד כְּחֶזְי֥וֹן לָֽיְלָה׃",
+   "en": "He shall fly away as a dream, and shall not be found; Yea, he shall be chased away as a vision of the night."
+  },
+  {
+   "v": 9,
+   "he": "עַ֣יִן שְׁ֭זָפַתּוּ וְלֹ֣א תוֹסִ֑יף וְלֹא־ע֝֗וֹד תְּשׁוּרֶ֥נּוּ מְקוֹמֽוֹ׃",
+   "en": "The eye which saw him shall see him no more; Neither shall his place any more behold him."
+  },
+  {
+   "v": 10,
+   "he": "בָּ֭נָיו יְרַצּ֣וּ דַלִּ֑ים וְ֝יָדָ֗יו תָּשֵׁ֥בְנָה אוֹנֽוֹ׃",
+   "en": "His children shall appease the poor, And his hands shall restore his wealth."
+  },
+  {
+   "v": 11,
+   "he": "עַ֭צְמוֹתָיו מָלְא֣וּ עלומו [עֲלוּמָ֑יו] וְ֝עִמּ֗וֹ עַל־עָפָ֥ר תִּשְׁכָּֽב׃",
+   "en": "His bones are full of his youth, But it shall lie down with him in the dust."
+  },
+  {
+   "v": 12,
+   "he": "אִם־תַּמְתִּ֣יק בְּפִ֣יו רָעָ֑ה יַ֝כְחִידֶ֗נָּה תַּ֣חַת לְשׁוֹנֽוֹ׃",
+   "en": "Though wickedness be sweet in his mouth, Though he hide it under his tongue;"
+  },
+  {
+   "v": 13,
+   "he": "יַחְמֹ֣ל עָ֭לֶיהָ וְלֹ֣א יַֽעַזְבֶ֑נָּה וְ֝יִמְנָעֶ֗נָּה בְּת֣וֹךְ חִכּֽוֹ׃",
+   "en": "Though he spare it, and will not let it go, But keep it still within his mouth;"
+  },
+  {
+   "v": 14,
+   "he": "לַ֭חְמוֹ בְּמֵעָ֣יו נֶהְפָּ֑ךְ מְרוֹרַ֖ת פְּתָנִ֣ים בְּקִרְבּֽוֹ׃",
+   "en": "Yet his food in his bowels is turned, It is the gall of asps within him."
+  },
+  {
+   "v": 15,
+   "he": "חַ֣יִל בָּ֭לַע וַיְקִאֶ֑נּוּ מִ֝בִּטְנ֗וֹ יֽוֹרִשֶׁ֥נּוּ אֵֽל׃",
+   "en": "He hath swallowed down riches, and he shall vomit them up again; God shall cast them out of his belly."
+  },
+  {
+   "v": 16,
+   "he": "רֹאשׁ־פְּתָנִ֥ים יִינָ֑ק תַּֽ֝הַרְגֵ֗הוּ לְשׁ֣וֹן אֶפְעֶֽה׃",
+   "en": "He shall suck the poison of asps; The viper’s tongue shall slay him."
+  },
+  {
+   "v": 17,
+   "he": "אַל־יֵ֥רֶא בִפְלַגּ֑וֹת נַהֲרֵ֥י נַ֝חֲלֵ֗י דְּבַ֣שׁ וְחֶמְאָֽה׃",
+   "en": "He shall not look upon the rivers, The flowing streams of honey and curd."
+  },
+  {
+   "v": 18,
+   "he": "מֵשִׁ֣יב יָ֭גָע וְלֹ֣א יִבְלָ֑ע כְּחֵ֥יל תְּ֝מוּרָת֗וֹ וְלֹ֣א יַעֲלֹֽס׃",
+   "en": "That which he laboured for shall he give back, and shall not swallow it down; According to the substance that he hath gotten, he shall not rejoice."
+  },
+  {
+   "v": 19,
+   "he": "כִּֽי־רִ֭צַּץ עָזַ֣ב דַּלִּ֑ים בַּ֥יִת גָּ֝זַ֗ל וְלֹ֣א יִבֶנֵֽהוּ׃",
+   "en": "For he hath oppressed and forsaken the poor; He hath violently taken away a house, and he shall not build it up."
+  },
+  {
+   "v": 20,
+   "he": "כִּ֤י׀ לֹא־יָדַ֣ע שָׁלֵ֣ו בְּבִטְנ֑וֹ בַּ֝חֲמוּד֗וֹ לֹ֣א יְמַלֵּֽט׃",
+   "en": "Because he knew no quietness within him, In his greed he suffered nought to escape,"
+  },
+  {
+   "v": 21,
+   "he": "אֵין־שָׂרִ֥יד לְאָכְל֑וֹ עַל־כֵּ֝֗ן לֹא־יָחִ֥יל טוּבֽוֹ׃",
+   "en": "There was nothing left that he devoured not— Therefore his prosperity shall not endure. ."
+  },
+  {
+   "v": 22,
+   "he": "בִּמְלֹ֣אות שִׂ֭פְקוֹ יֵ֣צֶר ל֑וֹ כָּל־יַ֖ד עָמֵ֣ל תְּבוֹאֶֽנּוּ׃",
+   "en": "In the fulness of his sufficiency he shall be in straits; The hand of every one that is in misery shall come upon him."
+  },
+  {
+   "v": 23,
+   "he": "יְהִ֤י׀ לְמַלֵּ֬א בִטְנ֗וֹ יְֽשַׁלַּח־בּ֖וֹ חֲר֣וֹן אַפּ֑וֹ וְיַמְטֵ֥ר עָ֝לֵ֗ימוֹ בִּלְחוּמֽוֹ׃",
+   "en": "It shall be for the filling of his belly; He shall cast the fierceness of His wrath upon him, And shall cause it to rain upon him into his flesh."
+  },
+  {
+   "v": 24,
+   "he": "יִ֭בְרַח מִנֵּ֣שֶׁק בַּרְזֶ֑ל תַּ֝חְלְפֵ֗הוּ קֶ֣שֶׁת נְחוּשָֽׁה׃",
+   "en": "If he flee from the iron weapon, The bow of brass shall strike him through."
+  },
+  {
+   "v": 25,
+   "he": "שָׁלַף֮ וַיֵּצֵ֪א מִגֵּ֫וָ֥ה וּ֭בָרָק מִֽמְּרֹרָת֥וֹ יַהֲלֹ֗ךְ עָלָ֥יו אֵמִֽים׃",
+   "en": "He draweth it forth, and it cometh out of his body; Yea, the glittering point cometh out of his gall; Terrors are upon him."
+  },
+  {
+   "v": 26,
+   "he": "כָּל־חֹשֶׁךְ֮ טָמ֪וּן לִצְפּ֫וּנָ֥יו תְּ֭אָכְלֵהוּ אֵ֣שׁ לֹֽא־נֻפָּ֑ח יֵ֖רַע שָׂרִ֣יד בְּאָהֳלֽוֹ׃",
+   "en": "All darkness is laid up for his treasures; A fire not blown by man shall consume him; It shall go ill with him that is left in his tent."
+  },
+  {
+   "v": 27,
+   "he": "יְגַלּ֣וּ שָׁמַ֣יִם עֲו‍ֹנ֑וֹ וְ֝אֶ֗רֶץ מִתְקוֹמָ֘מָ֥ה לֽוֹ׃",
+   "en": "The heavens shall reveal his iniquity, And the earth shall rise up against him."
+  },
+  {
+   "v": 28,
+   "he": "יִ֭גֶל יְב֣וּל בֵּית֑וֹ נִ֝גָּר֗וֹת בְּי֣וֹם אַפּֽוֹ׃",
+   "en": "The increase of his house shall depart, His goods shall flow away in the day of his wrath."
+  },
+  {
+   "v": 29,
+   "he": "זֶ֤ה׀ חֵֽלֶק־אָדָ֣ם רָ֭שָׁע מֵאֱלֹהִ֑ים וְנַחֲלַ֖ת אִמְר֣וֹ מֵאֵֽל׃",
+   "en": "This is the portion of a wicked man from God, And the heritage appointed unto him by God."
+  }
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,190 @@
+{
+ "id": "bible--john--3",
+ "work": "bible",
+ "n": 43,
+ "slug": "john",
+ "c": 3,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Now there was a man of the Pharisees named Nicodemus, a ruler of the Jews.",
+   "gr": "Ἦν δὲ ἄνθρωπος ἐκ τῶν Φαρισαίων, Νικόδημος ὄνομα αὐτῷ, ἄρχων τῶν Ἰουδαίων·"
+  },
+  {
+   "v": 2,
+   "en": "The same came to him by night, and said to him, “Rabbi, we know that you are a teacher come from God, for no one can do these signs that you do, unless God is with him.”",
+   "gr": "οὗτος ἦλθεν πρὸς αὐτὸν νυκτὸς καὶ εἶπεν αὐτῷ· Ῥαββί, οἴδαμεν ὅτι ἀπὸ θεοῦ ἐλήλυθας διδάσκαλος· οὐδεὶς γὰρ ⸂δύναται ταῦτα τὰ σημεῖα⸃ ποιεῖν ἃ σὺ ποιεῖς, ἐὰν μὴ ᾖ ὁ θεὸς μετʼ αὐτοῦ."
+  },
+  {
+   "v": 3,
+   "en": "Jesus answered him, “Most certainly, I tell you, unless one is born anew,  he can’t see God’s Kingdom.”",
+   "gr": "⸀ἀπεκρίθη Ἰησοῦς καὶ εἶπεν αὐτῷ· Ἀμὴν ἀμὴν λέγω σοι, ἐὰν μή τις γεννηθῇ ἄνωθεν, οὐ δύναται ἰδεῖν τὴν βασιλείαν τοῦ θεοῦ."
+  },
+  {
+   "v": 4,
+   "en": "Nicodemus said to him, “How can a man be born when he is old? Can he enter a second time into his mother’s womb, and be born?”",
+   "gr": "λέγει πρὸς αὐτὸν ⸀ὁ Νικόδημος· Πῶς δύναται ἄνθρωπος γεννηθῆναι γέρων ὤν; μὴ δύναται εἰς τὴν κοιλίαν τῆς μητρὸς αὐτοῦ δεύτερον εἰσελθεῖν καὶ γεννηθῆναι;"
+  },
+  {
+   "v": 5,
+   "en": "Jesus answered, “Most certainly I tell you, unless one is born of water and spirit, he can’t enter into God’s Kingdom.",
+   "gr": "⸀ἀπεκρίθη Ἰησοῦς· Ἀμὴν ἀμὴν λέγω σοι, ἐὰν μή τις γεννηθῇ ἐξ ὕδατος καὶ πνεύματος, οὐ δύναται εἰσελθεῖν εἰς τὴν βασιλείαν τοῦ θεοῦ."
+  },
+  {
+   "v": 6,
+   "en": "That which is born of the flesh is flesh. That which is born of the Spirit is spirit.",
+   "gr": "τὸ γεγεννημένον ἐκ τῆς σαρκὸς σάρξ ἐστιν, καὶ τὸ γεγεννημένον ἐκ τοῦ πνεύματος πνεῦμά ἐστιν."
+  },
+  {
+   "v": 7,
+   "en": "Don’t marvel that I said to you, ‘You must be born anew.’",
+   "gr": "μὴ θαυμάσῃς ὅτι εἶπόν σοι Δεῖ ὑμᾶς γεννηθῆναι ἄνωθεν."
+  },
+  {
+   "v": 8,
+   "en": "The wind blows where it wants to, and you hear its sound, but don’t know where it comes from and where it is going. So is everyone who is born of the Spirit.”",
+   "gr": "τὸ πνεῦμα ὅπου θέλει πνεῖ, καὶ τὴν φωνὴν αὐτοῦ ἀκούεις, ἀλλʼ οὐκ οἶδας πόθεν ἔρχεται καὶ ποῦ ὑπάγει· οὕτως ἐστὶν πᾶς ὁ γεγεννημένος ἐκ τοῦ πνεύματος."
+  },
+  {
+   "v": 9,
+   "en": "Nicodemus answered him, “How can these things be?”",
+   "gr": "ἀπεκρίθη Νικόδημος καὶ εἶπεν αὐτῷ· Πῶς δύναται ταῦτα γενέσθαι;"
+  },
+  {
+   "v": 10,
+   "en": "Jesus answered him, “Are you the teacher of Israel, and don’t understand these things?",
+   "gr": "ἀπεκρίθη Ἰησοῦς καὶ εἶπεν αὐτῷ· Σὺ εἶ ὁ διδάσκαλος τοῦ Ἰσραὴλ καὶ ταῦτα οὐ γινώσκεις;"
+  },
+  {
+   "v": 11,
+   "en": "Most certainly I tell you, we speak that which we know, and testify of that which we have seen, and you don’t receive our witness.",
+   "gr": "ἀμὴν ἀμὴν λέγω σοι ὅτι ὃ οἴδαμεν λαλοῦμεν καὶ ὃ ἑωράκαμεν μαρτυροῦμεν, καὶ τὴν μαρτυρίαν ἡμῶν οὐ λαμβάνετε."
+  },
+  {
+   "v": 12,
+   "en": "If I told you earthly things and you don’t believe, how will you believe if I tell you heavenly things?",
+   "gr": "εἰ τὰ ἐπίγεια εἶπον ὑμῖν καὶ οὐ πιστεύετε, πῶς ἐὰν εἴπω ὑμῖν τὰ ἐπουράνια πιστεύσετε;"
+  },
+  {
+   "v": 13,
+   "en": "No one has ascended into heaven but he who descended out of heaven, the Son of Man, who is in heaven.",
+   "gr": "καὶ οὐδεὶς ἀναβέβηκεν εἰς τὸν οὐρανὸν εἰ μὴ ὁ ἐκ τοῦ οὐρανοῦ καταβάς, ὁ υἱὸς τοῦ ⸀ἀνθρώπου."
+  },
+  {
+   "v": 14,
+   "en": "As Moses lifted up the serpent in the wilderness, even so must the Son of Man be lifted up,",
+   "gr": "καὶ καθὼς Μωϋσῆς ὕψωσεν τὸν ὄφιν ἐν τῇ ἐρήμῳ, οὕτως ὑψωθῆναι δεῖ τὸν υἱὸν τοῦ ἀνθρώπου,"
+  },
+  {
+   "v": 15,
+   "en": "that whoever believes in him should not perish, but have eternal life.",
+   "gr": "ἵνα πᾶς ὁ πιστεύων ⸂ἐν αὐτῷ⸃ ἔχῃ ζωὴν αἰώνιον."
+  },
+  {
+   "v": 16,
+   "en": "For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life.",
+   "gr": "Οὕτως γὰρ ἠγάπησεν ὁ θεὸς τὸν κόσμον ὥστε τὸν ⸀υἱὸν τὸν μονογενῆ ἔδωκεν, ἵνα πᾶς ὁ πιστεύων εἰς αὐτὸν μὴ ἀπόληται ἀλλὰ ἔχῃ ζωὴν αἰώνιον."
+  },
+  {
+   "v": 17,
+   "en": "For God didn’t send his Son into the world to judge the world, but that the world should be saved through him.",
+   "gr": "οὐ γὰρ ἀπέστειλεν ὁ θεὸς τὸν ⸀υἱὸν εἰς τὸν κόσμον ἵνα κρίνῃ τὸν κόσμον, ἀλλʼ ἵνα σωθῇ ὁ κόσμος διʼ αὐτοῦ."
+  },
+  {
+   "v": 18,
+   "en": "He who believes in him is not judged. He who doesn’t believe has been judged already, because he has not believed in the name of the one and only Son of God.",
+   "gr": "ὁ πιστεύων εἰς αὐτὸν οὐ κρίνεται· ὁ ⸀δὲ μὴ πιστεύων ἤδη κέκριται, ὅτι μὴ πεπίστευκεν εἰς τὸ ὄνομα τοῦ μονογενοῦς υἱοῦ τοῦ θεοῦ."
+  },
+  {
+   "v": 19,
+   "en": "This is the judgment, that the light has come into the world, and men loved the darkness rather than the light; for their works were evil.",
+   "gr": "αὕτη δέ ἐστιν ἡ κρίσις ὅτι τὸ φῶς ἐλήλυθεν εἰς τὸν κόσμον καὶ ἠγάπησαν οἱ ἄνθρωποι μᾶλλον τὸ σκότος ἢ τὸ φῶς, ἦν γὰρ ⸂αὐτῶν πονηρὰ⸃ τὰ ἔργα."
+  },
+  {
+   "v": 20,
+   "en": "For everyone who does evil hates the light, and doesn’t come to the light, lest his works would be exposed.",
+   "gr": "πᾶς γὰρ ὁ φαῦλα πράσσων μισεῖ τὸ φῶς καὶ οὐκ ἔρχεται πρὸς τὸ φῶς, ἵνα μὴ ἐλεγχθῇ τὰ ἔργα αὐτοῦ·"
+  },
+  {
+   "v": 21,
+   "en": "But he who does the truth comes to the light, that his works may be revealed, that they have been done in God.”",
+   "gr": "ὁ δὲ ποιῶν τὴν ἀλήθειαν ἔρχεται πρὸς τὸ φῶς, ἵνα φανερωθῇ αὐτοῦ τὰ ἔργα ὅτι ἐν θεῷ ἐστιν εἰργασμένα."
+  },
+  {
+   "v": 22,
+   "en": "After these things, Jesus came with his disciples into the land of Judea. He stayed there with them and baptized.",
+   "gr": "Μετὰ ταῦτα ἦλθεν ὁ Ἰησοῦς καὶ οἱ μαθηταὶ αὐτοῦ εἰς τὴν Ἰουδαίαν γῆν, καὶ ἐκεῖ διέτριβεν μετʼ αὐτῶν καὶ ἐβάπτιζεν."
+  },
+  {
+   "v": 23,
+   "en": "John also was baptizing in Enon near Salim, because there was much water there. They came, and were baptized;",
+   "gr": "ἦν δὲ καὶ ⸀ὁ Ἰωάννης βαπτίζων ἐν Αἰνὼν ἐγγὺς τοῦ Σαλείμ, ὅτι ὕδατα πολλὰ ἦν ἐκεῖ, καὶ παρεγίνοντο καὶ ἐβαπτίζοντο·"
+  },
+  {
+   "v": 24,
+   "en": "for John was not yet thrown into prison.",
+   "gr": "οὔπω γὰρ ἦν βεβλημένος εἰς τὴν φυλακὴν ⸀ὁ Ἰωάννης."
+  },
+  {
+   "v": 25,
+   "en": "Therefore a dispute arose on the part of John’s disciples with some Jews about purification.",
+   "gr": "Ἐγένετο οὖν ζήτησις ἐκ τῶν μαθητῶν Ἰωάννου μετὰ Ἰουδαίου περὶ καθαρισμοῦ."
+  },
+  {
+   "v": 26,
+   "en": "They came to John and said to him, “Rabbi, he who was with you beyond the Jordan, to whom you have testified, behold, he baptizes, and everyone is coming to him.”",
+   "gr": "καὶ ἦλθον πρὸς τὸν Ἰωάννην καὶ εἶπαν αὐτῷ· Ῥαββί, ὃς ἦν μετὰ σοῦ πέραν τοῦ Ἰορδάνου, ᾧ σὺ μεμαρτύρηκας, ἴδε οὗτος βαπτίζει καὶ πάντες ἔρχονται πρὸς αὐτόν."
+  },
+  {
+   "v": 27,
+   "en": "John answered, “A man can receive nothing unless it has been given him from heaven.",
+   "gr": "ἀπεκρίθη Ἰωάννης καὶ εἶπεν· Οὐ δύναται ἄνθρωπος λαμβάνειν ⸂οὐδὲ ἓν⸃ ἐὰν μὴ ᾖ δεδομένον αὐτῷ ἐκ τοῦ οὐρανοῦ."
+  },
+  {
+   "v": 28,
+   "en": "You yourselves testify that I said, ‘I am not the Christ,’ but, ‘I have been sent before him.’",
+   "gr": "αὐτοὶ ὑμεῖς ⸀μοι μαρτυρεῖτε ὅτι ⸀εἶπον· Οὐκ εἰμὶ ἐγὼ ὁ χριστός, ἀλλʼ ὅτι Ἀπεσταλμένος εἰμὶ ἔμπροσθεν ἐκείνου."
+  },
+  {
+   "v": 29,
+   "en": "He who has the bride is the bridegroom; but the friend of the bridegroom, who stands and hears him, rejoices greatly because of the bridegroom’s voice. This, my joy, therefore is made full.",
+   "gr": "ὁ ἔχων τὴν νύμφην νυμφίος ἐστίν· ὁ δὲ φίλος τοῦ νυμφίου ὁ ἑστηκὼς καὶ ἀκούων αὐτοῦ, χαρᾷ χαίρει διὰ τὴν φωνὴν τοῦ νυμφίου. αὕτη οὖν ἡ χαρὰ ἡ ἐμὴ πεπλήρωται."
+  },
+  {
+   "v": 30,
+   "en": "He must increase, but I must decrease.",
+   "gr": "ἐκεῖνον δεῖ αὐξάνειν, ἐμὲ δὲ ἐλαττοῦσθαι."
+  },
+  {
+   "v": 31,
+   "en": "He who comes from above is above all. He who is from the earth belongs to the earth and speaks of the earth. He who comes from heaven is above all.",
+   "gr": "Ὁ ἄνωθεν ἐρχόμενος ἐπάνω πάντων ἐστίν. ὁ ὢν ἐκ τῆς γῆς ἐκ τῆς γῆς ἐστιν καὶ ἐκ τῆς γῆς λαλεῖ· ὁ ἐκ τοῦ οὐρανοῦ ἐρχόμενος ἐπάνω πάντων ἐστίν·"
+  },
+  {
+   "v": 32,
+   "en": "What he has seen and heard, of that he testifies; and no one receives his witness.",
+   "gr": "⸀ὃ ἑώρακεν καὶ ἤκουσεν τοῦτο μαρτυρεῖ, καὶ τὴν μαρτυρίαν αὐτοῦ οὐδεὶς λαμβάνει."
+  },
+  {
+   "v": 33,
+   "en": "He who has received his witness has set his seal to this, that God is true.",
+   "gr": "ὁ λαβὼν αὐτοῦ τὴν μαρτυρίαν ἐσφράγισεν ὅτι ὁ θεὸς ἀληθής ἐστιν."
+  },
+  {
+   "v": 34,
+   "en": "For he whom God has sent speaks the words of God; for God gives the Spirit without measure.",
+   "gr": "ὃν γὰρ ἀπέστειλεν ὁ θεὸς τὰ ῥήματα τοῦ θεοῦ λαλεῖ, οὐ γὰρ ἐκ μέτρου ⸀δίδωσιν τὸ πνεῦμα."
+  },
+  {
+   "v": 35,
+   "en": "The Father loves the Son, and has given all things into his hand.",
+   "gr": "ὁ πατὴρ ἀγαπᾷ τὸν υἱόν, καὶ πάντα δέδωκεν ἐν τῇ χειρὶ αὐτοῦ."
+  },
+  {
+   "v": 36,
+   "en": "One who believes in the Son has eternal life, but one who disobeys  the Son won’t see life, but the wrath of God remains on him.”",
+   "gr": "ὁ πιστεύων εἰς τὸν υἱὸν ἔχει ζωὴν αἰώνιον· ὁ δὲ ἀπειθῶν τῷ υἱῷ οὐκ ὄψεται ζωήν, ἀλλʼ ἡ ὀργὴ τοῦ θεοῦ μένει ἐπʼ αὐτόν."
+  }
+ ],
+ "sourcing": "sourced"
+}

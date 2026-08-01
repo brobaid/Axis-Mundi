@@ -1,0 +1,34 @@
+{
+ "id": "quran--113",
+ "work": "quran",
+ "n": 113,
+ "slug": "113",
+ "verses": [
+  {
+   "v": 1,
+   "ar": "قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ",
+   "en": "Say: I seek refuge in the Lord of the Daybreak"
+  },
+  {
+   "v": 2,
+   "ar": "مِن شَرِّ مَا خَلَقَ",
+   "en": "From the evil of that which He created"
+  },
+  {
+   "v": 3,
+   "ar": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+   "en": "From the evil of the darkness when it is intense"
+  },
+  {
+   "v": 4,
+   "ar": "وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ",
+   "en": "And from the evil of malignant witchcraft"
+  },
+  {
+   "v": 5,
+   "ar": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+   "en": "And from the evil of the envier when he envieth"
+  }
+ ],
+ "sourcing": "sourced"
+}

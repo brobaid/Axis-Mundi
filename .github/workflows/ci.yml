@@ -80,3 +80,10 @@ jobs:
       # Vercel does not, so this is checked against dist/ rather than a server.
       - name: Check internal links
         run: pnpm validate:links
+
+      # The pages must agree with the records they were built from. Content
+      # validation proves the records agree with each other; it cannot see a
+      # build that resolved every one of them to nothing, which is how thirty-
+      # nine books of scripture once shipped empty with the gate green.
+      - name: Check the Reading Room
+        run: pnpm validate:reader

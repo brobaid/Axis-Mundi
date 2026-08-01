@@ -46,19 +46,101 @@ export interface TreeEdge {
   readonly path: string;
 }
 
+export interface AxisTick {
+  readonly year: number;
+  readonly x: number;
+  readonly label: string;
+  /** Which row of the axis label block this one sits in. 0 is nearest the axis. */
+  readonly row: number;
+}
+
 export interface TreeLayout {
   readonly width: number;
   readonly height: number;
   readonly nodes: readonly TreeNode[];
   readonly edges: readonly TreeEdge[];
-  readonly ticks: readonly { readonly year: number; readonly x: number; readonly label: string }[];
+  readonly ticks: readonly AxisTick[];
   readonly axisY: number;
+  /** How many rows the axis labels needed. */
+  readonly axisRows: number;
 }
 
 export const ROW_HEIGHT = 22;
+
+/* ── the node row's own geometry ────────────────────────────────────────── */
+
+/*
+  Where a node's marks sit, relative to its dot.
+
+  Named here rather than written into the template, because the invariant
+  between them — the contested mark must end before the label begins — is the
+  thing that broke: the mark used to be placed at a character count past the
+  end of the label, which a proportional face does not have, and four of five
+  landed wrong. Both numbers in one place means the check can hold them to it.
+*/
+export const CONTESTED_AT = 12;
+export const CONTESTED_R = 3;
+export const LABEL_AT = 10;
+export const LABEL_AT_CONTESTED = 21;
 export const TRADITION_GAP = 14;
-const AXIS_H = 26;
 const PAD_TOP = 18;
+
+/* ── the axis labels ────────────────────────────────────────────────────── */
+
+/**
+ * The axis type, stated once and honoured in both places that depend on it.
+ *
+ * The tick labels are set in the mono face with tabular figures, which is what
+ * makes this whole layout knowable rather than guessed: every glyph in "1850
+ * CE" has the same advance, so a label's width is its character count times a
+ * constant and no measurement is needed at build time. A proportional face
+ * here would put us back to estimating, which is the bug this replaces.
+ */
+export const TICK_FONT_SIZE = 9;
+/*
+  0.62em, where IBM Plex Mono's own advance is 0.6. The extra hundredths are
+  slack for the fallback stack: every face in it is monospaced, but monospace
+  advances differ by face, and reserving slightly too much only ever widens the
+  clear air between two labels. Reserving too little would put them back on top
+  of each other, which is the failure this exists to prevent.
+*/
+export const TICK_ADVANCE = TICK_FONT_SIZE * 0.62;
+export const TICK_ROW_HEIGHT = 12;
+/** Clear air between two labels in the same row. */
+const TICK_GAP = 6;
+
+export const tickWidth = (label: string): number => label.length * TICK_ADVANCE;
+
+/**
+ * Give every axis label a row it does not collide in.
+ *
+ * The era detents are not evenly spaced in time and the axis is linear, so the
+ * last five of them fall inside the last eighth of the axis: measured, eight of
+ * eleven adjacent pairs overlapped, the worst by thirty-three units, which is
+ * most of a label. Dropping labels is not available — each one is a stop the
+ * slider offers, and a stop with no legend is a stop nobody can aim at.
+ *
+ * So they stack, on the timeline's discipline: a label takes the topmost row
+ * where it clears whatever was last placed there. Greedy over a sorted list,
+ * which makes "no two labels in a row overlap" true by construction rather
+ * than by a check afterwards — there is no ordering of inputs that can defeat
+ * it, and `axisRows` then says how much room the block actually needs.
+ */
+export function layoutTicks(
+  ticks: readonly { year: number; x: number; label: string }[],
+): AxisTick[] {
+  /* Each label is centred on its tick, so its box starts half a width left. */
+  const sorted = [...ticks].sort((a, b) => a.x - b.x);
+  const rowEnds: number[] = [];
+  return sorted.map((tick) => {
+    const half = tickWidth(tick.label) / 2;
+    const left = tick.x - half;
+    let row = rowEnds.findIndex((end) => left >= end + TICK_GAP);
+    if (row === -1) row = rowEnds.length;
+    rowEnds[row] = tick.x + half;
+    return { ...tick, row };
+  });
+}
 
 /** The dated span the axis covers, rounded out to whole millennia. */
 export const treeWindow = (
@@ -144,12 +226,20 @@ export function layoutTree(
     };
   });
 
-  const height = y + AXIS_H;
-  const ticks = ERA_SNAPSHOTS.filter((era) => era >= window.from && era <= window.to).map(
-    (era) => ({ year: era, x: xOfYear(era), label: yearLabel(era) }),
+  const ticks = layoutTicks(
+    ERA_SNAPSHOTS.filter((era) => era >= window.from && era <= window.to).map((era) => ({
+      year: era,
+      x: xOfYear(era),
+      label: yearLabel(era),
+    })),
   );
+  /* The axis block is as tall as the stacking actually needed, so a canvas
+     never reserves room for rows that are not there or clips rows that are. */
+  const axisRows = ticks.reduce((max, t) => Math.max(max, t.row + 1), 1);
+  const axisY = y + 6;
+  const height = axisY + 6 + axisRows * TICK_ROW_HEIGHT;
 
-  return { width, height, nodes, edges: routed, ticks, axisY: y + 6 };
+  return { width, height, nodes, edges: routed, ticks, axisY, axisRows };
 }
 
 /** The detents the era slider offers, and the window they sit in. */

@@ -1,0 +1,195 @@
+{
+ "id": "tanakh--leviticus--19",
+ "work": "tanakh",
+ "n": 3,
+ "slug": "leviticus",
+ "c": 19,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־מֹשֶׁ֥ה לֵּאמֹֽר׃",
+   "en": "And the LORD spoke unto Moses, saying:"
+  },
+  {
+   "v": 2,
+   "he": "דַּבֵּ֞ר אֶל־כָּל־עֲדַ֧ת בְּנֵי־יִשְׂרָאֵ֛ל וְאָמַרְתָּ֥ אֲלֵהֶ֖ם קְדֹשִׁ֣ים תִּהְי֑וּ כִּ֣י קָד֔וֹשׁ אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם׃",
+   "en": "Speak unto all the congregation of the children of Israel, and say unto them: Ye shall be holy; for I the LORD your God am holy."
+  },
+  {
+   "v": 3,
+   "he": "אִ֣ישׁ אִמּ֤וֹ וְאָבִיו֙ תִּירָ֔אוּ וְאֶת־שַׁבְּתֹתַ֖י תִּשְׁמֹ֑רוּ אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם׃",
+   "en": "Ye shall fear every man his mother, and his father, and ye shall keep My sabbaths: I am the LORD your God."
+  },
+  {
+   "v": 4,
+   "he": "אַל־תִּפְנוּ֙ אֶל־הָ֣אֱלִילִ֔ים וֵֽאלֹהֵי֙ מַסֵּכָ֔ה לֹ֥א תַעֲשׂ֖וּ לָכֶ֑ם אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם׃",
+   "en": "Turn ye not unto the idols, nor make to yourselves molten gods: I am the LORD your God."
+  },
+  {
+   "v": 5,
+   "he": "וְכִ֧י תִזְבְּח֛וּ זֶ֥בַח שְׁלָמִ֖ים לַיהוָ֑ה לִֽרְצֹנְכֶ֖ם תִּזְבָּחֻֽהוּ׃",
+   "en": "And when ye offer a sacrifice of peace-offerings unto the LORD, ye shall offer it that ye may be accepted."
+  },
+  {
+   "v": 6,
+   "he": "בְּי֧וֹם זִבְחֲכֶ֛ם יֵאָכֵ֖ל וּמִֽמָּחֳרָ֑ת וְהַנּוֹתָר֙ עַד־י֣וֹם הַשְּׁלִישִׁ֔י בָּאֵ֖שׁ יִשָּׂרֵֽף׃",
+   "en": "It shall be eaten the same day ye offer it, and on the morrow; and if aught remain until the third day, it shall be burnt with fire."
+  },
+  {
+   "v": 7,
+   "he": "וְאִ֛ם הֵאָכֹ֥ל יֵאָכֵ֖ל בַּיּ֣וֹם הַשְּׁלִישִׁ֑י פִּגּ֥וּל ה֖וּא לֹ֥א יֵרָצֶֽה׃",
+   "en": "And if it be eaten at all on the third day, it is a vile thing; it shall not be accepted."
+  },
+  {
+   "v": 8,
+   "he": "וְאֹֽכְלָיו֙ עֲו‍ֹנ֣וֹ יִשָּׂ֔א כִּֽי־אֶת־קֹ֥דֶשׁ יְהוָ֖ה חִלֵּ֑ל וְנִכְרְתָ֛ה הַנֶּ֥פֶשׁ הַהִ֖וא מֵעַמֶּֽיהָ׃",
+   "en": "But every one that eateth it shall bear his iniquity, because he hath profaned the holy thing of the LORD; and that soul shall be cut off from his people."
+  },
+  {
+   "v": 9,
+   "he": "וּֽבְקֻצְרְכֶם֙ אֶת־קְצִ֣יר אַרְצְכֶ֔ם לֹ֧א תְכַלֶּ֛ה פְּאַ֥ת שָׂדְךָ֖ לִקְצֹ֑ר וְלֶ֥קֶט קְצִֽירְךָ֖ לֹ֥א תְלַקֵּֽט׃",
+   "en": "And when ye reap the harvest of your land, thou shalt not wholly reap the corner of thy field, neither shalt thou gather the gleaning of thy harvest."
+  },
+  {
+   "v": 10,
+   "he": "וְכַרְמְךָ֙ לֹ֣א תְעוֹלֵ֔ל וּפֶ֥רֶט כַּרְמְךָ֖ לֹ֣א תְלַקֵּ֑ט לֶֽעָנִ֤י וְלַגֵּר֙ תַּעֲזֹ֣ב אֹתָ֔ם אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם׃",
+   "en": "And thou shalt not glean thy vineyard, neither shalt thou gather the fallen fruit of thy vineyard; thou shalt leave them for the poor and for the stranger: I am the LORD your God."
+  },
+  {
+   "v": 11,
+   "he": "לֹ֖א תִּגְנֹ֑בוּ וְלֹא־תְכַחֲשׁ֥וּ וְלֹֽא־תְשַׁקְּר֖וּ אִ֥ישׁ בַּעֲמִיתֽוֹ׃",
+   "en": "Ye shall not steal; neither shall ye deal falsely, nor lie one to another."
+  },
+  {
+   "v": 12,
+   "he": "וְלֹֽא־תִשָּׁבְע֥וּ בִשְׁמִ֖י לַשָּׁ֑קֶר וְחִלַּלְתָּ֛ אֶת־שֵׁ֥ם אֱלֹהֶ֖יךָ אֲנִ֥י יְהוָֽה׃",
+   "en": "And ye shall not swear by My name falsely, so that thou profane the name of thy God: I am the LORD."
+  },
+  {
+   "v": 13,
+   "he": "לֹֽא־תַעֲשֹׁ֥ק אֶת־רֵֽעֲךָ֖ וְלֹ֣א תִגְזֹ֑ל לֹֽא־תָלִ֞ין פְּעֻלַּ֥ת שָׂכִ֛יר אִתְּךָ֖ עַד־בֹּֽקֶר׃",
+   "en": "Thou shalt not oppress thy neighbour, nor rob him; the wages of a hired servant shall not abide with thee all night until the morning."
+  },
+  {
+   "v": 14,
+   "he": "לֹא־תְקַלֵּ֣ל חֵרֵ֔שׁ וְלִפְנֵ֣י עִוֵּ֔ר לֹ֥א תִתֵּ֖ן מִכְשֹׁ֑ל וְיָרֵ֥אתָ מֵּאֱלֹהֶ֖יךָ אֲנִ֥י יְהוָֽה׃",
+   "en": "Thou shalt not curse the deaf, nor put a stumbling-block before the blind, but thou shalt fear thy God: I am the LORD."
+  },
+  {
+   "v": 15,
+   "he": "לֹא־תַעֲשׂ֥וּ עָ֙וֶל֙ בַּמִּשְׁפָּ֔ט לֹא־תִשָּׂ֣א פְנֵי־דָ֔ל וְלֹ֥א תֶהְדַּ֖ר פְּנֵ֣י גָד֑וֹל בְּצֶ֖דֶק תִּשְׁפֹּ֥ט עֲמִיתֶֽךָ׃",
+   "en": "Ye shall do no unrighteousness in judgment; thou shalt not respect the person of the poor, nor favour the person of the mighty; but in righteousness shalt thou judge thy neighbour."
+  },
+  {
+   "v": 16,
+   "he": "לֹא־תֵלֵ֤ךְ רָכִיל֙ בְּעַמֶּ֔יךָ לֹ֥א תַעֲמֹ֖ד עַל־דַּ֣ם רֵעֶ֑ךָ אֲנִ֖י יְהוָֽה׃",
+   "en": "Thou shalt not go up and down as a talebearer among thy people; neither shalt thou stand idly by the blood of thy neighbour: I am the LORD."
+  },
+  {
+   "v": 17,
+   "he": "לֹֽא־תִשְׂנָ֥א אֶת־אָחִ֖יךָ בִּלְבָבֶ֑ךָ הוֹכֵ֤חַ תּוֹכִ֙יחַ֙ אֶת־עֲמִיתֶ֔ךָ וְלֹא־תִשָּׂ֥א עָלָ֖יו חֵֽטְא׃",
+   "en": "Thou shalt not hate thy brother in thy heart; thou shalt surely rebuke thy neighbour, and not bear sin because of him."
+  },
+  {
+   "v": 18,
+   "he": "לֹֽא־תִקֹּ֤ם וְלֹֽא־תִטֹּר֙ אֶת־בְּנֵ֣י עַמֶּ֔ךָ וְאָֽהַבְתָּ֥ לְרֵעֲךָ֖ כָּמ֑וֹךָ אֲנִ֖י יְהוָֽה׃",
+   "en": "Thou shalt not take vengeance, nor bear any grudge against the children of thy people, but thou shalt love thy neighbour as thyself: I am the LORD."
+  },
+  {
+   "v": 19,
+   "he": "אֶֽת־חֻקֹּתַי֮ תִּשְׁמֹרוּ֒ בְּהֶמְתְּךָ֙ לֹא־תַרְבִּ֣יעַ כִּלְאַ֔יִם שָׂדְךָ֖ לֹא־תִזְרַ֣ע כִּלְאָ֑יִם וּבֶ֤גֶד כִּלְאַ֙יִם֙ שַֽׁעַטְנֵ֔ז לֹ֥א יַעֲלֶ֖ה עָלֶֽיךָ׃",
+   "en": "Ye shall keep My statutes. Thou shalt not let thy cattle gender with a diverse kind; thou shalt not sow thy field with two kinds of seed; neither shall there come upon thee a garment of two kinds of stuff mingled together."
+  },
+  {
+   "v": 20,
+   "he": "וְ֠אִישׁ כִּֽי־יִשְׁכַּ֨ב אֶת־אִשָּׁ֜ה שִׁכְבַת־זֶ֗רַע וְהִ֤וא שִׁפְחָה֙ נֶחֱרֶ֣פֶת לְאִ֔ישׁ וְהָפְדֵּה֙ לֹ֣א נִפְדָּ֔תָה א֥וֹ חֻפְשָׁ֖ה לֹ֣א נִתַּן־לָ֑הּ בִּקֹּ֧רֶת תִּהְיֶ֛ה לֹ֥א יוּמְת֖וּ כִּי־לֹ֥א חֻפָּֽשָׁה׃",
+   "en": "And whosoever lieth carnally with a woman, that is a bondmaid, designated for a man, and not at all redeemed, nor was freedom given her; there shall be inquisition; they shall not be put to death, because she was not free."
+  },
+  {
+   "v": 21,
+   "he": "וְהֵבִ֤יא אֶת־אֲשָׁמוֹ֙ לַֽיהוָ֔ה אֶל־פֶּ֖תַח אֹ֣הֶל מוֹעֵ֑ד אֵ֖יל אָשָֽׁם׃",
+   "en": "And he shall bring his forfeit unto the LORD, unto the door of the tent of meeting, even a ram for a guilt-offering."
+  },
+  {
+   "v": 22,
+   "he": "וְכִפֶּר֩ עָלָ֨יו הַכֹּהֵ֜ן בְּאֵ֤יל הָֽאָשָׁם֙ לִפְנֵ֣י יְהוָ֔ה עַל־חַטָּאת֖וֹ אֲשֶׁ֣ר חָטָ֑א וְנִסְלַ֣ח ל֔וֹ מֵחַטָּאת֖וֹ אֲשֶׁ֥ר חָטָֽא׃",
+   "en": "And the priest shall make atonement for him with the ram of the guilt-offering before the LORD for his sin which he hath sinned; and he shall be forgiven for his sin which he hath sinned."
+  },
+  {
+   "v": 23,
+   "he": "וְכִי־תָבֹ֣אוּ אֶל־הָאָ֗רֶץ וּנְטַעְתֶּם֙ כָּל־עֵ֣ץ מַאֲכָ֔ל וַעֲרַלְתֶּ֥ם עָרְלָת֖וֹ אֶת־פִּרְי֑וֹ שָׁלֹ֣שׁ שָׁנִ֗ים יִהְיֶ֥ה לָכֶ֛ם עֲרֵלִ֖ים לֹ֥א יֵאָכֵֽל׃",
+   "en": "And when ye shall come into the land, and shall have planted all manner of trees for food, then ye shall count the fruit thereof as forbidden; three years shall it be as forbidden unto you; it shall not be eaten."
+  },
+  {
+   "v": 24,
+   "he": "וּבַשָּׁנָה֙ הָרְבִיעִ֔ת יִהְיֶ֖ה כָּל־פִּרְי֑וֹ קֹ֥דֶשׁ הִלּוּלִ֖ים לַיהוָֽה׃",
+   "en": "And in the fourth year all the fruit thereof shall be holy, for giving praise unto the LORD."
+  },
+  {
+   "v": 25,
+   "he": "וּבַשָּׁנָ֣ה הַחֲמִישִׁ֗ת תֹּֽאכְלוּ֙ אֶת־פִּרְי֔וֹ לְהוֹסִ֥יף לָכֶ֖ם תְּבוּאָת֑וֹ אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם׃",
+   "en": "But in the fifth year may ye eat of the fruit thereof, that it may yield unto you more richly the increase thereof: I am the LORD your God."
+  },
+  {
+   "v": 26,
+   "he": "לֹ֥א תֹאכְל֖וּ עַל־הַדָּ֑ם לֹ֥א תְנַחֲשׁ֖וּ וְלֹ֥א תְעוֹנֵֽנוּ׃",
+   "en": "Ye shall not eat with the blood; neither shall ye practise divination nor soothsaying."
+  },
+  {
+   "v": 27,
+   "he": "לֹ֣א תַקִּ֔פוּ פְּאַ֖ת רֹאשְׁכֶ֑ם וְלֹ֣א תַשְׁחִ֔ית אֵ֖ת פְּאַ֥ת זְקָנֶֽךָ׃",
+   "en": "Ye shall not round the corners of your heads, neither shalt thou mar the corners of thy beard."
+  },
+  {
+   "v": 28,
+   "he": "וְשֶׂ֣רֶט לָנֶ֗פֶשׁ לֹ֤א תִתְּנוּ֙ בִּבְשַׂרְכֶ֔ם וּכְתֹ֣בֶת קַֽעֲקַ֔ע לֹ֥א תִתְּנ֖וּ בָּכֶ֑ם אֲנִ֖י יְהוָֽה׃",
+   "en": "Ye shall not make any cuttings in your flesh for the dead, nor imprint any marks upon you: I am the LORD."
+  },
+  {
+   "v": 29,
+   "he": "אַל־תְּחַלֵּ֥ל אֶֽת־בִּתְּךָ֖ לְהַזְנוֹתָ֑הּ וְלֹא־תִזְנֶ֣ה הָאָ֔רֶץ וּמָלְאָ֥ה הָאָ֖רֶץ זִמָּֽה׃",
+   "en": "Profane not thy daughter, to make her a harlot, lest the land fall into harlotry, and the land become full of lewdness."
+  },
+  {
+   "v": 30,
+   "he": "אֶת־שַׁבְּתֹתַ֣י תִּשְׁמֹ֔רוּ וּמִקְדָּשִׁ֖י תִּירָ֑אוּ אֲנִ֖י יְהוָֽה׃",
+   "en": "Ye shall keep My sabbaths, and reverence My sanctuary: I am the LORD."
+  },
+  {
+   "v": 31,
+   "he": "אַל־תִּפְנ֤וּ אֶל־הָאֹבֹת֙ וְאֶל־הַיִּדְּעֹנִ֔ים אַל־תְּבַקְשׁ֖וּ לְטָמְאָ֣ה בָהֶ֑ם אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם׃",
+   "en": "Turn ye not unto the ghosts, nor unto familiar spirits; seek them not out, to be defiled by them: I am the LORD your God."
+  },
+  {
+   "v": 32,
+   "he": "מִפְּנֵ֤י שֵׂיבָה֙ תָּק֔וּם וְהָדַרְתָּ֖ פְּנֵ֣י זָקֵ֑ן וְיָרֵ֥אתָ מֵּאֱלֹהֶ֖יךָ אֲנִ֥י יְהוָֽה׃",
+   "en": "Thou shalt rise up before the hoary head, and honour the face of the old man, and thou shalt fear thy God: I am the LORD."
+  },
+  {
+   "v": 33,
+   "he": "וְכִֽי־יָג֧וּר אִתְּךָ֛ גֵּ֖ר בְּאַרְצְכֶ֑ם לֹ֥א תוֹנ֖וּ אֹתֽוֹ׃",
+   "en": "And if a stranger sojourn with thee in your land, ye shall not do him wrong."
+  },
+  {
+   "v": 34,
+   "he": "כְּאֶזְרָ֣ח מִכֶּם֩ יִהְיֶ֨ה לָכֶ֜ם הַגֵּ֣ר׀ הַגָּ֣ר אִתְּכֶ֗ם וְאָהַבְתָּ֥ לוֹ֙ כָּמ֔וֹךָ כִּֽי־גֵרִ֥ים הֱיִיתֶ֖ם בְּאֶ֣רֶץ מִצְרָ֑יִם אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם׃",
+   "en": "The stranger that sojourneth with you shall be unto you as the home-born among you, and thou shalt love him as thyself; for ye were strangers in the land of Egypt: I am the LORD your God."
+  },
+  {
+   "v": 35,
+   "he": "לֹא־תַעֲשׂ֥וּ עָ֖וֶל בַּמִּשְׁפָּ֑ט בַּמִּדָּ֕ה בַּמִּשְׁקָ֖ל וּבַמְּשׂוּרָֽה׃",
+   "en": "Ye shall do no unrighteousness in judgment, in meteyard, in weight, or in measure."
+  },
+  {
+   "v": 36,
+   "he": "מֹ֧אזְנֵי צֶ֣דֶק אַבְנֵי־צֶ֗דֶק אֵ֥יפַת צֶ֛דֶק וְהִ֥ין צֶ֖דֶק יִהְיֶ֣ה לָכֶ֑ם אֲנִי֙ יְהוָ֣ה אֱלֹֽהֵיכֶ֔ם אֲשֶׁר־הוֹצֵ֥אתִי אֶתְכֶ֖ם מֵאֶ֥רֶץ מִצְרָֽיִם׃",
+   "en": "Just balances, just weights, a just ephah, and a just hin, shall ye have: I am the LORD your God, who brought you out of the land of Egypt."
+  },
+  {
+   "v": 37,
+   "he": "וּשְׁמַרְתֶּ֤ם אֶת־כָּל־חֻקֹּתַי֙ וְאֶת־כָּל־מִשְׁפָּטַ֔י וַעֲשִׂיתֶ֖ם אֹתָ֑ם אֲנִ֖י יְהוָֽה׃",
+   "en": "And ye shall observe all My statutes, and all Mine ordinances, and do them: I am the LORD."
+  }
+ ],
+ "sourcing": "sourced"
+}

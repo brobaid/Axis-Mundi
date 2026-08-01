@@ -1,0 +1,85 @@
+{
+ "id": "tanakh--psalms--144",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 144,
+ "verses": [
+  {
+   "v": 1,
+   "he": "לְדָוִ֨ד׀ בָּ֘ר֤וּךְ יְהוָ֨ה׀ צוּרִ֗י הַֽמְלַמֵּ֣ד יָדַ֣י לַקְרָ֑ב אֶ֝צְבְּעוֹתַ֗י לַמִּלְחָמָֽה׃",
+   "en": "[A Psalm] of David. Blessed be the LORD my Rock, Who traineth my hands for war, And my fingers for battle;"
+  },
+  {
+   "v": 2,
+   "he": "חַסְדִּ֥י וּמְצוּדָתִי֮ מִשְׂגַּבִּ֪י וּֽמְפַלְטִ֫י לִ֥י מָ֭גִנִּי וּב֣וֹ חָסִ֑יתִי הָרוֹדֵ֖ד עַמִּ֣י תַחְתָּֽי׃",
+   "en": "My lovingkindness, and my fortress, My high tower, and my deliverer; My shield, and He in whom I take refuge; Who subdueth my people under me."
+  },
+  {
+   "v": 3,
+   "he": "יְֽהוָ֗ה מָה־אָ֭דָם וַתֵּדָעֵ֑הוּ בֶּן־אֱ֝נ֗וֹשׁ וַֽתְּחַשְּׁבֵֽהוּ׃",
+   "en": "LORD, what is man, that Thou takest knowledge of him? Or the son of man, that Thou makest account of him?"
+  },
+  {
+   "v": 4,
+   "he": "אָ֭דָם לַהֶ֣בֶל דָּמָ֑ה יָ֝מָ֗יו כְּצֵ֣ל עוֹבֵֽר׃",
+   "en": "Man is like unto a breath; His days are as a shadow that passeth away."
+  },
+  {
+   "v": 5,
+   "he": "יְ֭הוָה הַט־שָׁמֶ֣יךָ וְתֵרֵ֑ד גַּ֖ע בֶּהָרִ֣ים וְֽיֶעֱשָֽׁנוּ׃",
+   "en": "O LORD, bow Thy heavens, and come down; Touch the mountains, that they may smoke."
+  },
+  {
+   "v": 6,
+   "he": "בְּר֣וֹק בָּ֭רָק וּתְפִיצֵ֑ם שְׁלַ֥ח חִ֝צֶּ֗יךָ וּתְהֻמֵּֽם׃",
+   "en": "Cast forth lightning, and scatter them; Send out Thine arrows, and discomfit them."
+  },
+  {
+   "v": 7,
+   "he": "שְׁלַ֥ח יָדֶ֗יךָ מִמָּ֫ר֥וֹם פְּצֵ֣נִי וְ֭הַצִּילֵנִי מִמַּ֣יִם רַבִּ֑ים מִ֝יַּ֗ד בְּנֵ֣י נֵכָֽר׃",
+   "en": "Stretch forth Thy hands from on high; Rescue me, and deliver me out of many waters, Out of the hand of strangers;"
+  },
+  {
+   "v": 8,
+   "he": "אֲשֶׁ֣ר פִּ֭יהֶם דִּבֶּר־שָׁ֑וְא וִֽ֝ימִינָ֗ם יְמִ֣ין שָֽׁקֶר׃",
+   "en": "Whose mouth speaketh falsehood, And their right hand is a right hand of lying."
+  },
+  {
+   "v": 9,
+   "he": "אֱ‍ֽלֹהִ֗ים שִׁ֣יר חָ֭דָשׁ אָשִׁ֣ירָה לָּ֑ךְ בְּנֵ֥בֶל עָ֝שׂ֗וֹר אֲזַמְּרָה־לָּֽךְ׃",
+   "en": "O God, I will sing a new song unto Thee, Upon a psaltery of ten strings will I sing praises unto Thee;"
+  },
+  {
+   "v": 10,
+   "he": "הַנּוֹתֵ֥ן תְּשׁוּעָ֗ה לַמְּלָ֫כִ֥ים הַ֭פּוֹצֶה אֶת־דָּוִ֥ד עַבְדּ֗וֹ מֵחֶ֥רֶב רָעָֽה׃",
+   "en": "Who givest salvation unto kings, Who rescuest David Thy servant from the hurtful sword."
+  },
+  {
+   "v": 11,
+   "he": "פְּצֵ֥נִי וְהַצִּילֵנִי֮ מִיַּ֪ד בְּֽנֵי־נֵ֫כָ֥ר אֲשֶׁ֣ר פִּ֭יהֶם דִּבֶּר־שָׁ֑וְא וִֽ֝ימִינָ֗ם יְמִ֣ין שָֽׁקֶר׃",
+   "en": "Rescue me, and deliver me out of the hand of strangers, Whose mouth speaketh falsehood, And their right hand is a right hand of lying."
+  },
+  {
+   "v": 12,
+   "he": "אֲשֶׁ֤ר בָּנֵ֨ינוּ׀ כִּנְטִעִים֮ מְגֻדָּלִ֪ים בִּֽנְעוּרֵ֫יהֶ֥ם בְּנוֹתֵ֥ינוּ כְזָוִיֹּ֑ת מְ֝חֻטָּב֗וֹת תַּבְנִ֥ית הֵיכָֽל׃",
+   "en": "We whose sons are as plants grown up in their youth; Whose daughters are as corner-pillars carved after the fashion of a palace;"
+  },
+  {
+   "v": 13,
+   "he": "מְזָוֵ֣ינוּ מְלֵאִים֮ מְפִיקִ֥ים מִזַּ֗ן אֶ֫ל־זַ֥ן צֹאונֵ֣נוּ מַ֭אֲלִיפוֹת מְרֻבָּב֗וֹת בְּחוּצוֹתֵֽינוּ׃",
+   "en": "Whose garners are full, affording all manner of store; Whose sheep increase by thousands and ten thousands in our fields;"
+  },
+  {
+   "v": 14,
+   "he": "אַלּוּפֵ֗ינוּ מְֽסֻבָּ֫לִ֥ים אֵֽין־פֶּ֭רֶץ וְאֵ֣ין יוֹצֵ֑את וְאֵ֥ין צְ֝וָחָ֗ה בִּרְחֹבֹתֵֽינוּ׃",
+   "en": "Whose oxen are well laden; With no breach, and no going forth, And no outcry in our broad places;"
+  },
+  {
+   "v": 15,
+   "he": "אַשְׁרֵ֣י הָ֭עָם שֶׁכָּ֣כָה לּ֑וֹ אַֽשְׁרֵ֥י הָ֝עָ֗ם שֶׁיֲהוָ֥ה אֱלֹהָֽיו׃",
+   "en": "Happy is the people that is in such a case. Yea, happy is the people whose God is the LORD."
+  }
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,133 @@
+{
+ "id": "bible--romans--16",
+ "work": "bible",
+ "n": 45,
+ "slug": "romans",
+ "c": 16,
+ "verses": [
+  {
+   "v": 1,
+   "en": "I commend to you Phoebe, our sister, who is a servant of the assembly that is at Cenchreae,",
+   "gr": "Συνίστημι δὲ ὑμῖν Φοίβην τὴν ἀδελφὴν ἡμῶν, οὖσαν ⸀καὶ διάκονον τῆς ἐκκλησίας τῆς ἐν Κεγχρεαῖς,"
+  },
+  {
+   "v": 2,
+   "en": "that you receive her in the Lord, in a way worthy of the saints, and that you assist her in whatever matter she may need from you, for she herself also has been a helper of many, and of my own self.",
+   "gr": "ἵνα ⸂αὐτὴν προσδέξησθε⸃ ἐν κυρίῳ ἀξίως τῶν ἁγίων, καὶ παραστῆτε αὐτῇ ἐν ᾧ ἂν ὑμῶν χρῄζῃ πράγματι, καὶ γὰρ αὐτὴ προστάτις πολλῶν ἐγενήθη καὶ ⸂ἐμοῦ αὐτοῦ⸃."
+  },
+  {
+   "v": 3,
+   "en": "Greet Prisca and Aquila, my fellow workers in Christ Jesus,",
+   "gr": "Ἀσπάσασθε Πρίσκαν καὶ Ἀκύλαν τοὺς συνεργούς μου ἐν Χριστῷ Ἰησοῦ,"
+  },
+  {
+   "v": 4,
+   "en": "who risked their own necks for my life, to whom not only I give thanks, but also all the assemblies of the Gentiles.",
+   "gr": "οἵτινες ὑπὲρ τῆς ψυχῆς μου τὸν ἑαυτῶν τράχηλον ὑπέθηκαν, οἷς οὐκ ἐγὼ μόνος εὐχαριστῶ ἀλλὰ καὶ πᾶσαι αἱ ἐκκλησίαι τῶν ἐθνῶν,"
+  },
+  {
+   "v": 5,
+   "en": "Greet the assembly that is in their house. Greet Epaenetus, my beloved, who is the first fruits of Achaia to Christ.",
+   "gr": "καὶ τὴν κατʼ οἶκον αὐτῶν ἐκκλησίαν. ἀσπάσασθε Ἐπαίνετον τὸν ἀγαπητόν μου, ὅς ἐστιν ἀπαρχὴ τῆς ⸀Ἀσίας εἰς Χριστόν."
+  },
+  {
+   "v": 6,
+   "en": "Greet Mary, who labored much for us.",
+   "gr": "ἀσπάσασθε ⸀Μαριάμ, ἥτις πολλὰ ἐκοπίασεν εἰς ⸀ὑμᾶς."
+  },
+  {
+   "v": 7,
+   "en": "Greet Andronicus and Junia, my relatives and my fellow prisoners, who are notable among the apostles, who were also in Christ before me.",
+   "gr": "ἀσπάσασθε Ἀνδρόνικον καὶ ⸀Ἰουνίαν τοὺς συγγενεῖς μου καὶ συναιχμαλώτους μου, οἵτινές εἰσιν ἐπίσημοι ἐν τοῖς ἀποστόλοις, οἳ καὶ πρὸ ἐμοῦ ⸀γέγοναν ἐν Χριστῷ."
+  },
+  {
+   "v": 8,
+   "en": "Greet Amplias, my beloved in the Lord.",
+   "gr": "ἀσπάσασθε ⸀Ἀμπλιᾶτον τὸν ἀγαπητόν μου ἐν κυρίῳ."
+  },
+  {
+   "v": 9,
+   "en": "Greet Urbanus, our fellow worker in Christ, and Stachys, my beloved.",
+   "gr": "ἀσπάσασθε Οὐρβανὸν τὸν συνεργὸν ἡμῶν ἐν Χριστῷ καὶ Στάχυν τὸν ἀγαπητόν μου."
+  },
+  {
+   "v": 10,
+   "en": "Greet Apelles, the approved in Christ. Greet those who are of the household of Aristobulus.",
+   "gr": "ἀσπάσασθε Ἀπελλῆν τὸν δόκιμον ἐν Χριστῷ. ἀσπάσασθε τοὺς ἐκ τῶν Ἀριστοβούλου."
+  },
+  {
+   "v": 11,
+   "en": "Greet Herodion, my kinsman. Greet them of the household of Narcissus, who are in the Lord.",
+   "gr": "ἀσπάσασθε Ἡρῳδίωνα τὸν ⸀συγγενῆ μου. ἀσπάσασθε τοὺς ἐκ τῶν Ναρκίσσου τοὺς ὄντας ἐν κυρίῳ."
+  },
+  {
+   "v": 12,
+   "en": "Greet Tryphaena and Tryphosa, who labor in the Lord. Greet Persis, the beloved, who labored much in the Lord.",
+   "gr": "ἀσπάσασθε Τρύφαιναν καὶ Τρυφῶσαν τὰς κοπιώσας ἐν κυρίῳ. ἀσπάσασθε Περσίδα τὴν ἀγαπητήν, ἥτις πολλὰ ἐκοπίασεν ἐν κυρίῳ."
+  },
+  {
+   "v": 13,
+   "en": "Greet Rufus, the chosen in the Lord, and his mother and mine.",
+   "gr": "ἀσπάσασθε Ῥοῦφον τὸν ἐκλεκτὸν ἐν κυρίῳ καὶ τὴν μητέρα αὐτοῦ καὶ ἐμοῦ."
+  },
+  {
+   "v": 14,
+   "en": "Greet Asyncritus, Phlegon, Hermes, Patrobas, Hermas, and the brothers  who are with them.",
+   "gr": "ἀσπάσασθε Ἀσύγκριτον, Φλέγοντα, ⸂Ἑρμῆν, Πατροβᾶν, Ἑρμᾶν⸃ καὶ τοὺς σὺν αὐτοῖς ἀδελφούς."
+  },
+  {
+   "v": 15,
+   "en": "Greet Philologus and Julia, Nereus and his sister, and Olympas, and all the saints who are with them.",
+   "gr": "ἀσπάσασθε Φιλόλογον καὶ Ἰουλίαν, Νηρέα καὶ τὴν ἀδελφὴν αὐτοῦ, καὶ Ὀλυμπᾶν καὶ τοὺς σὺν αὐτοῖς πάντας ἁγίους."
+  },
+  {
+   "v": 16,
+   "en": "Greet one another with a holy kiss. The assemblies of Christ greet you.",
+   "gr": "Ἀσπάσασθε ἀλλήλους ἐν φιλήματι ἁγίῳ. Ἀσπάζονται ὑμᾶς αἱ ἐκκλησίαι ⸀πᾶσαι τοῦ Χριστοῦ."
+  },
+  {
+   "v": 17,
+   "en": "Now I beg you, brothers, look out for those who are causing the divisions and occasions of stumbling, contrary to the doctrine which you learned, and turn away from them.",
+   "gr": "Παρακαλῶ δὲ ὑμᾶς, ἀδελφοί, σκοπεῖν τοὺς τὰς διχοστασίας καὶ τὰ σκάνδαλα παρὰ τὴν διδαχὴν ἣν ὑμεῖς ἐμάθετε ποιοῦντας, καὶ ⸀ἐκκλίνετε ἀπʼ αὐτῶν·"
+  },
+  {
+   "v": 18,
+   "en": "For those who are such don’t serve our Lord, Jesus Christ, but their own belly; and by their smooth and flattering speech, they deceive the hearts of the innocent.",
+   "gr": "οἱ γὰρ τοιοῦτοι τῷ κυρίῳ ⸀ἡμῶν Χριστῷ οὐ δουλεύουσιν ἀλλὰ τῇ ἑαυτῶν κοιλίᾳ, καὶ διὰ τῆς χρηστολογίας καὶ εὐλογίας ἐξαπατῶσι τὰς καρδίας τῶν ἀκάκων."
+  },
+  {
+   "v": 19,
+   "en": "For your obedience has become known to all. I rejoice therefore over you. But I desire to have you wise in that which is good, but innocent in that which is evil.",
+   "gr": "ἡ γὰρ ὑμῶν ὑπακοὴ εἰς πάντας ἀφίκετο· ⸂ἐφʼ ὑμῖν οὖν χαίρω⸃, θέλω δὲ ὑμᾶς ⸀σοφοὺς εἶναι εἰς τὸ ἀγαθόν, ἀκεραίους δὲ εἰς τὸ κακόν."
+  },
+  {
+   "v": 20,
+   "en": "And the God of peace will quickly crush Satan under your feet. The grace of our Lord Jesus Christ be with you.",
+   "gr": "ὁ δὲ θεὸς τῆς εἰρήνης συντρίψει τὸν Σατανᾶν ὑπὸ τοὺς πόδας ὑμῶν ἐν τάχει. ἡ χάρις τοῦ κυρίου ἡμῶν Ἰησοῦ ⸀Χριστοῦ μεθʼ ὑμῶν."
+  },
+  {
+   "v": 21,
+   "en": "Timothy, my fellow worker, greets you, as do Lucius, Jason, and Sosipater, my relatives.",
+   "gr": "⸀Ἀσπάζεται ὑμᾶς Τιμόθεος ὁ συνεργός μου, καὶ Λούκιος καὶ Ἰάσων καὶ Σωσίπατρος οἱ συγγενεῖς μου."
+  },
+  {
+   "v": 22,
+   "en": "I, Tertius, who write the letter, greet you in the Lord.",
+   "gr": "ἀσπάζομαι ὑμᾶς ἐγὼ Τέρτιος ὁ γράψας τὴν ἐπιστολὴν ἐν κυρίῳ."
+  },
+  {
+   "v": 23,
+   "en": "Gaius, my host and host of the whole assembly, greets you. Erastus, the treasurer of the city, greets you, as does Quartus, the brother.",
+   "gr": "ἀσπάζεται ὑμᾶς Γάϊος ὁ ξένος μου καὶ ⸂ὅλης τῆς ἐκκλησίας⸃. ἀσπάζεται ὑμᾶς Ἔραστος ὁ οἰκονόμος τῆς πόλεως καὶ Κούαρτος ὁ ἀδελφός."
+  },
+  {
+   "v": 24,
+   "en": "The grace of our Lord Jesus Christ be with you all! Amen.",
+   "gr": "⸂Ἡ χάρις τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ μετὰ πάντων ὑμῶν.⸃ ⸀Ἀμήν."
+  },
+  {
+   "v": 25
+  }
+ ],
+ "sourcing": "sourced"
+}

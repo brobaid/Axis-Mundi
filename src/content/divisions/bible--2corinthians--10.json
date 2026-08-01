@@ -1,0 +1,100 @@
+{
+ "id": "bible--2corinthians--10",
+ "work": "bible",
+ "n": 47,
+ "slug": "2corinthians",
+ "c": 10,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Now I Paul, myself, entreat you by the humility and gentleness of Christ, I who in your presence am lowly among you, but being absent am bold toward you.",
+   "gr": "Αὐτὸς δὲ ἐγὼ Παῦλος παρακαλῶ ὑμᾶς διὰ τῆς πραΰτητος καὶ ἐπιεικείας τοῦ Χριστοῦ, ὃς κατὰ πρόσωπον μὲν ταπεινὸς ἐν ὑμῖν, ἀπὼν δὲ θαρρῶ εἰς ὑμᾶς·"
+  },
+  {
+   "v": 2,
+   "en": "Yes, I beg you that I may not, when present, show courage with the confidence with which I intend to be bold against some, who consider us to be walking according to the flesh.",
+   "gr": "δέομαι δὲ τὸ μὴ παρὼν θαρρῆσαι τῇ πεποιθήσει ᾗ λογίζομαι τολμῆσαι ἐπί τινας τοὺς λογιζομένους ἡμᾶς ὡς κατὰ σάρκα περιπατοῦντας."
+  },
+  {
+   "v": 3,
+   "en": "For though we walk in the flesh, we don’t wage war according to the flesh;",
+   "gr": "ἐν σαρκὶ γὰρ περιπατοῦντες οὐ κατὰ σάρκα στρατευόμεθα—"
+  },
+  {
+   "v": 4,
+   "en": "for the weapons of our warfare are not of the flesh, but mighty before God to the throwing down of strongholds,",
+   "gr": "τὰ γὰρ ὅπλα τῆς στρατείας ἡμῶν οὐ σαρκικὰ ἀλλὰ δυνατὰ τῷ θεῷ πρὸς καθαίρεσιν ὀχυρωμάτων— λογισμοὺς καθαιροῦντες"
+  },
+  {
+   "v": 5,
+   "en": "throwing down imaginations and every high thing that is exalted against the knowledge of God and bringing every thought into captivity to the obedience of Christ,",
+   "gr": "καὶ πᾶν ὕψωμα ἐπαιρόμενον κατὰ τῆς γνώσεως τοῦ θεοῦ, καὶ αἰχμαλωτίζοντες πᾶν νόημα εἰς τὴν ὑπακοὴν τοῦ Χριστοῦ,"
+  },
+  {
+   "v": 6,
+   "en": "and being in readiness to avenge all disobedience when your obedience is made full.",
+   "gr": "καὶ ἐν ἑτοίμῳ ἔχοντες ἐκδικῆσαι πᾶσαν παρακοήν, ὅταν πληρωθῇ ὑμῶν ἡ ὑπακοή."
+  },
+  {
+   "v": 7,
+   "en": "Do you look at things only as they appear in front of your face? If anyone trusts in himself that he is Christ’s, let him consider this again with himself, that even as he is Christ’s, so we also are Christ’s.",
+   "gr": "Τὰ κατὰ πρόσωπον βλέπετε. εἴ τις πέποιθεν ἑαυτῷ Χριστοῦ εἶναι, τοῦτο λογιζέσθω πάλιν ⸀ἐφʼ ἑαυτοῦ ὅτι καθὼς αὐτὸς Χριστοῦ οὕτως καὶ ⸀ἡμεῖς."
+  },
+  {
+   "v": 8,
+   "en": "For even if I boast somewhat abundantly concerning our authority, which the Lord gave for building you up, and not for casting you down, I will not be ashamed,",
+   "gr": "ἐάν ⸀τε ⸀γὰρ περισσότερόν τι καυχήσωμαι περὶ τῆς ἐξουσίας ἡμῶν, ἧς ἔδωκεν ὁ ⸀κύριος εἰς οἰκοδομὴν καὶ οὐκ εἰς καθαίρεσιν ὑμῶν, οὐκ αἰσχυνθήσομαι,"
+  },
+  {
+   "v": 9,
+   "en": "that I may not seem as if I desire to terrify you by my letters.",
+   "gr": "ἵνα μὴ δόξω ὡς ἂν ἐκφοβεῖν ὑμᾶς διὰ τῶν ἐπιστολῶν·"
+  },
+  {
+   "v": 10,
+   "en": "For, “His letters”, they say, “are weighty and strong, but his bodily presence is weak, and his speech is despised.”",
+   "gr": "ὅτι Αἱ ⸂ἐπιστολαὶ μέν⸃, φησίν, βαρεῖαι καὶ ἰσχυραί, ἡ δὲ παρουσία τοῦ σώματος ἀσθενὴς καὶ ὁ λόγος ἐξουθενημένος."
+  },
+  {
+   "v": 11,
+   "en": "Let such a person consider this, that what we are in word by letters when we are absent, such are we also in deed when we are present.",
+   "gr": "τοῦτο λογιζέσθω ὁ τοιοῦτος, ὅτι οἷοί ἐσμεν τῷ λόγῳ διʼ ἐπιστολῶν ἀπόντες, τοιοῦτοι καὶ παρόντες τῷ ἔργῳ."
+  },
+  {
+   "v": 12,
+   "en": "For we are not bold to number or compare ourselves with some of those who commend themselves. But they themselves, measuring themselves by themselves, and comparing themselves with themselves, are without understanding.",
+   "gr": "Οὐ γὰρ τολμῶμεν ἐγκρῖναι ἢ συγκρῖναι ἑαυτούς τισιν τῶν ἑαυτοὺς συνιστανόντων· ἀλλὰ αὐτοὶ ἐν ἑαυτοῖς ἑαυτοὺς μετροῦντες καὶ συγκρίνοντες ἑαυτοὺς ἑαυτοῖς οὐ συνιᾶσιν."
+  },
+  {
+   "v": 13,
+   "en": "But we will not boast beyond proper limits, but within the boundaries with which God appointed to us, which reach even to you.",
+   "gr": "ἡμεῖς δὲ ⸀οὐκ εἰς τὰ ἄμετρα καυχησόμεθα, ἀλλὰ κατὰ τὸ μέτρον τοῦ κανόνος οὗ ἐμέρισεν ἡμῖν ὁ θεὸς μέτρου, ἐφικέσθαι ἄχρι καὶ ὑμῶν—"
+  },
+  {
+   "v": 14,
+   "en": "For we don’t stretch ourselves too much, as though we didn’t reach to you. For we came even as far as to you with the Good News of Christ,",
+   "gr": "οὐ γὰρ ὡς μὴ ἐφικνούμενοι εἰς ὑμᾶς ὑπερεκτείνομεν ἑαυτούς, ἄχρι γὰρ καὶ ὑμῶν ἐφθάσαμεν ἐν τῷ εὐαγγελίῳ τοῦ Χριστοῦ—"
+  },
+  {
+   "v": 15,
+   "en": "not boasting beyond proper limits in other men’s labors, but having hope that as your faith grows, we will be abundantly enlarged by you in our sphere of influence,",
+   "gr": "οὐκ εἰς τὰ ἄμετρα καυχώμενοι ἐν ἀλλοτρίοις κόποις, ἐλπίδα δὲ ἔχοντες αὐξανομένης τῆς πίστεως ὑμῶν ἐν ὑμῖν μεγαλυνθῆναι κατὰ τὸν κανόνα ἡμῶν εἰς περισσείαν,"
+  },
+  {
+   "v": 16,
+   "en": "so as to preach the Good News even to the parts beyond you, not to boast in what someone else has already done.",
+   "gr": "εἰς τὰ ὑπερέκεινα ὑμῶν εὐαγγελίσασθαι, οὐκ ἐν ἀλλοτρίῳ κανόνι εἰς τὰ ἕτοιμα καυχήσασθαι."
+  },
+  {
+   "v": 17,
+   "en": "But “he who boasts, let him boast in the Lord.”",
+   "gr": "Ὁ δὲ καυχώμενος ἐν κυρίῳ καυχάσθω·"
+  },
+  {
+   "v": 18,
+   "en": "For it isn’t he who commends himself who is approved, but whom the Lord commends.",
+   "gr": "οὐ γὰρ ὁ ἑαυτὸν ⸀συνιστάνων, ἐκεῖνός ἐστιν δόκιμος, ἀλλὰ ὃν ὁ κύριος συνίστησιν."
+  }
+ ],
+ "sourcing": "sourced"
+}

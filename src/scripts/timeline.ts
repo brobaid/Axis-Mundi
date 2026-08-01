@@ -2,6 +2,7 @@ import { scaleLinear } from 'd3-scale';
 import { CURSOR_PARAM, centreOn, readCursor } from '../lib/cursor';
 import { FLICK_MIN_PX_PER_MS, glide, intentOf, velocityFrom, type Intent, type Sample } from '../lib/inertia';
 import { playMorph, snapshotPositions } from '../lib/morph';
+import { formatYear } from '../lib/display-date';
 import { select } from 'd3-selection';
 import { zoom, zoomIdentity, zoomTransform, type D3ZoomEvent, type ZoomBehavior, type ZoomTransform } from 'd3-zoom';
 
@@ -10,10 +11,13 @@ import {
   drillParent,
   drillSegments,
   pathContains,
+  zoomExplainer,
   zoomLevelFrom,
   type ZoomLevel,
   ghostEvents,
   layoutTimeline,
+  travelBar,
+  travelTo,
   type DrillPath,
   type Lane,
   type TaxonomyNode,
@@ -58,6 +62,28 @@ interface State {
 }
 
 const MIN_SPAN = 12; // years; the deepest useful zoom
+
+/**
+ * How far a press must travel before it is a drag rather than a click.
+ *
+ * Eight pixels: below it, aiming at a four-pixel dot with a mouse that moves a
+ * little on the way down still opens the event, which is what the reader
+ * meant.
+ */
+const DRAG_SLOP = 8;
+
+/**
+ * Wheel travel per pixel of scroll.
+ *
+ * Slightly over one, because a wheel notch is a coarser instrument than a
+ * finger and a reader spinning one is asking to cover ground. Under two,
+ * because past that the canvas outruns the eye and the labels stop being
+ * readable while it moves.
+ */
+const WHEEL_GAIN = 1.4;
+
+/** Quiet time before a wheel stream counts as ended and may glide. */
+const WHEEL_END_MS = 70;
 const root = document.querySelector<HTMLElement>('[data-timeline]');
 
 if (root !== null) {
@@ -252,6 +278,11 @@ if (root !== null) {
       if (scaleEl !== null) scaleEl.textContent = level;
       const scaleSpan = root!.querySelector<HTMLElement>('[data-scale-span]');
       if (scaleSpan !== null) scaleSpan.textContent = subtitle;
+      /* The explainer names the level, so it moves with it. */
+      const explain = zoomExplainer(state.to - state.from);
+      const scaleNote = root!.querySelector<HTMLElement>('[data-scale-explainer]');
+      if (scaleNote !== null) scaleNote.textContent = explain;
+      if (scaleEl !== null) scaleEl.title = explain;
       /* Back is not only for drilling: opening a cluster changes the view too,
          and a reader who has been moved deserves a way out of it either way. */
       if (upBtn) {
@@ -262,6 +293,7 @@ if (root !== null) {
       /* The map, matrix and tree all announce their state; the timeline did
          not, so a screen-reader user got no confirmation that a zoom, drill or
          filter had changed anything. Same strings the eye gets. */
+      syncTravelBar();
       const liveEl = root!.querySelector<HTMLElement>('[data-tl-readout]');
       if (liveEl !== null) {
         const drawn = layouts.reduce((n, l) => n + l.placed.length, 0);
@@ -658,6 +690,113 @@ if (root !== null) {
       else closePanel();
     });
 
+    /* ── the travel bar ───────────────────────────────────────────────── */
+
+    /*
+      The window, drawn against everything there is, and draggable.
+
+      It is a readout and a control at once, and the readout half is why it
+      earns its space: the canvas shows a window with no indication of how much
+      of the whole it is, so a reader three thousand years deep in a five and a
+      half thousand year span had nothing telling them so.
+
+      Geometry lives in the model (travelBar, travelTo) so the thumb and the
+      canvas cannot disagree about where the view is.
+    */
+    const rail = root?.querySelector<HTMLElement>('[data-tl-rail]');
+    const thumb = root?.querySelector<HTMLElement>('[data-tl-thumb]');
+
+    function syncTravelBar(): void {
+      if (rail === null || rail === undefined || thumb === null || thumb === undefined) return;
+      const bar = travelBar(state, data.bounds);
+      thumb.style.setProperty('--thumb-left', `${(bar.left * 100).toFixed(3)}%`);
+      thumb.style.setProperty('--thumb-width', `${(bar.width * 100).toFixed(3)}%`);
+      rail.setAttribute('aria-valuenow', String(Math.round((state.from + state.to) / 2)));
+      rail.setAttribute('aria-valuetext', `${formatYear(state.from)} to ${formatYear(state.to)}`);
+    }
+
+    if (rail !== null && rail !== undefined) {
+      /** Put the window's centre at fraction `f` of the rail. */
+      const travelToFraction = (f: number): void => {
+        const span = state.to - state.from;
+        const next = travelTo(Math.min(1, Math.max(0, f)), span, data.bounds);
+        state.from = next.from;
+        state.to = next.to;
+        render();
+        syncZoomTransform();
+        writeUrl(true);
+      };
+
+      const fractionAt = (clientX: number): number => {
+        const box = rail.getBoundingClientRect();
+        return box.width === 0 ? 0 : (clientX - box.left) / box.width;
+      };
+
+      let railPointer: number | null = null;
+      /* Grabbing the thumb must not also recentre on the grab point: the
+         reader is holding a window, not naming a year. The offset between
+         where they took hold and the thumb's centre is kept for the drag. */
+      let grabOffset = 0;
+
+      rail.addEventListener('pointerdown', (ev: PointerEvent) => {
+        stopGlide?.();
+        stopGlide = null;
+        railPointer = ev.pointerId;
+        rail.setPointerCapture(ev.pointerId);
+        rail.dataset['dragging'] = 'true';
+        const bar = travelBar(state, data.bounds);
+        const f = fractionAt(ev.clientX);
+        const centre = bar.left + bar.width / 2;
+        /* On the thumb: hold it. Off it: jump there, then hold it. */
+        grabOffset = Math.abs(f - centre) <= bar.width / 2 ? f - centre : 0;
+        travelToFraction(f - grabOffset);
+      });
+
+      rail.addEventListener('pointermove', (ev: PointerEvent) => {
+        if (ev.pointerId !== railPointer) return;
+        ev.preventDefault();
+        travelToFraction(fractionAt(ev.clientX) - grabOffset);
+      });
+
+      const releaseRail = (ev: PointerEvent): void => {
+        if (ev.pointerId !== railPointer) return;
+        if (rail.hasPointerCapture(ev.pointerId)) rail.releasePointerCapture(ev.pointerId);
+        railPointer = null;
+        delete rail.dataset['dragging'];
+      };
+      rail.addEventListener('pointerup', releaseRail);
+      rail.addEventListener('pointercancel', releaseRail);
+
+      /* A slider is a slider: arrows step, Home and End go to the ends. */
+      rail.addEventListener('keydown', (ev: KeyboardEvent) => {
+        const span = state.to - state.from;
+        const full = data.bounds.to - data.bounds.from;
+        const step = ev.shiftKey ? span : span / 4;
+        const bar = travelBar(state, data.bounds);
+        const centre = bar.left + bar.width / 2;
+        const by = (years: number): void => travelToFraction(centre + years / full);
+        switch (ev.key) {
+          case 'ArrowLeft':
+          case 'ArrowDown':
+            by(-step);
+            break;
+          case 'ArrowRight':
+          case 'ArrowUp':
+            by(step);
+            break;
+          case 'Home':
+            travelToFraction(0);
+            break;
+          case 'End':
+            travelToFraction(1);
+            break;
+          default:
+            return;
+        }
+        ev.preventDefault();
+      });
+    }
+
     /* ── wire up d3-zoom ──────────────────────────────────────────────── */
 
     zoomBehaviour = zoom<HTMLElement, unknown>()
@@ -671,9 +810,15 @@ if (root !== null) {
         [trackWidth(), 0],
       ])
       .filter((ev: Event) => {
-        /* Let the reader scroll the page vertically; only intercept horizontal
-           intent (wheel with a modifier, pinch, or drag on the canvas). */
-        if (ev.type === 'wheel') return (ev as WheelEvent).ctrlKey || (ev as WheelEvent).altKey;
+        /* d3 keeps only what it is better at than we are: zooming.
+
+           A modified wheel is a zoom, matching the map and every other canvas
+           on the web. A plain wheel is a pan and belongs to the handler below,
+           which carries momentum; d3's wheel path has none. */
+        if (ev.type === 'wheel') {
+          const w = ev as WheelEvent;
+          return w.ctrlKey || w.metaKey || w.altKey;
+        }
         if (ev.type === 'dblclick') return false;
         /* Two fingers are a pinch and stay d3's. One finger is a pan, and the
            pointer layer below owns it: d3-zoom's touch path stops the moment a
@@ -681,7 +826,10 @@ if (root !== null) {
            double-tap-to-zoom, which readers trigger constantly while aiming at
            a dot. Refusing every single-touch start settles both. */
         if (ev.type === 'touchstart') return (ev as TouchEvent).touches.length > 1;
-        return !(ev as MouseEvent).button;
+        /* Mouse drag goes the same way, for the same reason: d3's drag stops
+           dead on mouseup, and one pan implementation is easier to trust than
+           two that disagree about momentum, cursor and click suppression. */
+        return false;
       })
       .on('zoom', (ev: D3ZoomEvent<HTMLElement, unknown>) => {
         if (applyingProgrammatically) return;
@@ -715,9 +863,28 @@ if (root !== null) {
      */
     function panBy(dxScreen: number): boolean {
       const t = zoomTransform(scroller);
-      const next = zoomIdentity.translate(t.x + dxScreen, t.y).scale(t.k);
-      select(scroller as HTMLElement).call(zoomBehaviour.transform, next);
-      /* Clamped at an extent: the glide has arrived and should stop, not spin. */
+      /*
+        Clamped here, not by d3.
+
+        `zoomBehaviour.transform` sets a transform outright; the translateExtent
+        constraint only applies to d3's own interactive gestures, and every pan
+        in this room now goes through this function instead. Unclamped, a hard
+        flick sailed past the end of recorded time — measured, a six-notch wheel
+        flick settled the window on 4607–5807 CE, which are not years anything
+        here has an event in.
+
+        At scale k the canvas is k times the track, so its left edge may travel
+        from zero to -(k-1) track widths and no further.
+      */
+      const width = trackWidth();
+      const min = -(t.k - 1) * width;
+      const x = Math.min(0, Math.max(min, t.x + dxScreen));
+      if (x === t.x) return false;
+      select(scroller as HTMLElement).call(
+        zoomBehaviour.transform,
+        zoomIdentity.translate(x, t.y).scale(t.k),
+      );
+      /* Arrived at an edge: the glide should stop, not spin. */
       return zoomTransform(scroller).x !== t.x;
     }
 
@@ -725,6 +892,8 @@ if (root !== null) {
     const activeTouches = new Set<number>();
     let intent: Intent = 'undecided';
     let panPointer: number | null = null;
+    /** Set once a press has moved far enough to be a drag rather than a click. */
+    let dragged = false;
     let startX = 0;
     let startY = 0;
     let lastX = 0;
@@ -743,10 +912,30 @@ if (root !== null) {
     scroller.addEventListener(
       'pointerdown',
       (ev: PointerEvent) => {
-        /* A touch landing on a moving canvas stops it where it stands. */
+        /* A pointer landing on a moving canvas stops it where it stands. */
         stopGlide?.();
         stopGlide = null;
-        if (ev.pointerType !== 'touch') return;
+
+        /*
+          A mouse or pen drags too, and takes the same path a finger does.
+
+          Desktop travel used to be d3-zoom's mouse drag alone, which is why it
+          "barely worked": no momentum, so crossing a millennium was a dozen
+          short drags, and no cursor telling anyone it was draggable at all.
+          The intent test a finger needs is skipped — a held button that moves
+          is unambiguous — but the movement threshold is not, because a click
+          on a dot must stay a click.
+        */
+        if (ev.pointerType !== 'touch') {
+          if (ev.button !== 0) return;
+          panPointer = ev.pointerId;
+          intent = 'undecided';
+          dragged = false;
+          startX = lastX = ev.clientX;
+          startY = ev.clientY;
+          samples = [{ t: ev.timeStamp, x: ev.clientX }];
+          return;
+        }
         activeTouches.add(ev.pointerId);
         /* Two fingers are a pinch, and a pinch is d3's. Whatever this pan had
            started, it stops now rather than dragging the canvas sideways while
@@ -766,6 +955,22 @@ if (root !== null) {
 
     scroller.addEventListener('pointermove', (ev: PointerEvent) => {
       if (ev.pointerId !== panPointer || activeTouches.size > 1) return;
+
+      if (ev.pointerType !== 'touch') {
+        if (intent === 'undecided') {
+          if (Math.abs(ev.clientX - startX) < DRAG_SLOP) return;
+          intent = 'horizontal';
+          dragged = true;
+          scroller.setPointerCapture(ev.pointerId);
+          scroller.dataset['dragging'] = 'true';
+        }
+        panBy(ev.clientX - lastX);
+        lastX = ev.clientX;
+        samples.push({ t: ev.timeStamp, x: ev.clientX });
+        if (samples.length > 8) samples.shift();
+        return;
+      }
+
       if (intent === 'undecided') {
         intent = intentOf(ev.clientX - startX, ev.clientY - startY);
         if (intent === 'undecided') return;
@@ -791,11 +996,73 @@ if (root !== null) {
       const wasPanning = intent === 'horizontal';
       const v = velocityFrom(samples);
       endPan();
+      delete scroller.dataset['dragging'];
       if (!wasPanning || Math.abs(v) < FLICK_MIN_PX_PER_MS) return;
       stopGlide = glide({ velocity: v, step: panBy, reduced: reducedMotion.matches });
     };
     scroller.addEventListener('pointerup', release);
     scroller.addEventListener('pointercancel', release);
+
+    /* A drag that ends over a dot must not also open it. */
+    scroller.addEventListener(
+      'click',
+      (ev) => {
+        if (!dragged) return;
+        dragged = false;
+        ev.stopPropagation();
+        ev.preventDefault();
+      },
+      true,
+    );
+
+    /* ── wheel and trackpad ───────────────────────────────────────────── */
+
+    /*
+      A plain wheel travels; ctrl, cmd or alt zooms, which is what every map
+      does and what d3 keeps above.
+
+      Both axes pan, and the larger one wins: a trackpad's two-finger swipe
+      arrives as deltaX and a mouse wheel only ever produces deltaY, and a
+      reader doing either over a horizontal canvas means the same thing.
+
+      Momentum is added only where the input has none. A trackpad's own
+      inertia arrives as a decaying tail of events, so by the time the stream
+      stops the measured velocity is near zero and no glide starts. A mouse
+      wheel is discrete clicks with no tail, so a fast spin ends with real
+      velocity and glides — the same feel a flick gives under a thumb, from
+      the same function.
+    */
+    let wheelSamples: Sample[] = [];
+    let wheelEnd: number | undefined;
+    let wheelX = 0;
+
+    scroller.addEventListener(
+      'wheel',
+      (ev: WheelEvent) => {
+        if (ev.ctrlKey || ev.metaKey || ev.altKey) return; /* d3 has it: zoom */
+        const dx = Math.abs(ev.deltaX) > Math.abs(ev.deltaY) ? ev.deltaX : ev.deltaY;
+        if (dx === 0) return;
+        /* DOM_DELTA_LINE reports lines, not pixels; a line is about 16px. */
+        const px = ev.deltaMode === 1 ? dx * 16 : ev.deltaMode === 2 ? dx * trackWidth() : dx;
+        ev.preventDefault();
+        stopGlide?.();
+        stopGlide = null;
+        panBy(-px * WHEEL_GAIN);
+
+        wheelX -= px * WHEEL_GAIN;
+        wheelSamples.push({ t: ev.timeStamp, x: wheelX });
+        if (wheelSamples.length > 8) wheelSamples.shift();
+
+        window.clearTimeout(wheelEnd);
+        wheelEnd = window.setTimeout(() => {
+          const v = velocityFrom(wheelSamples);
+          wheelSamples = [];
+          if (Math.abs(v) < FLICK_MIN_PX_PER_MS) return;
+          stopGlide = glide({ velocity: v, step: panBy, reduced: reducedMotion.matches });
+        }, WHEEL_END_MS);
+      },
+      { passive: false },
+    );
 
     /* ── first-visit coach ────────────────────────────────────────────── */
 

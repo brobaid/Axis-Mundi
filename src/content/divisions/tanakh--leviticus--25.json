@@ -1,0 +1,285 @@
+{
+ "id": "tanakh--leviticus--25",
+ "work": "tanakh",
+ "n": 3,
+ "slug": "leviticus",
+ "c": 25,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וַיְדַבֵּ֤ר יְהוָה֙ אֶל־מֹשֶׁ֔ה בְּהַ֥ר סִינַ֖י לֵאמֹֽר׃",
+   "en": "And the LORD spoke unto Moses in mount Sinai, saying:"
+  },
+  {
+   "v": 2,
+   "he": "דַּבֵּ֞ר אֶל־בְּנֵ֤י יִשְׂרָאֵל֙ וְאָמַרְתָּ֣ אֲלֵהֶ֔ם כִּ֤י תָבֹ֙אוּ֙ אֶל־הָאָ֔רֶץ אֲשֶׁ֥ר אֲנִ֖י נֹתֵ֣ן לָכֶ֑ם וְשָׁבְתָ֣ה הָאָ֔רֶץ שַׁבָּ֖ת לַיהוָֽה׃",
+   "en": "Speak unto the children of Israel, and say unto them: When ye come into the land which I give you, then shall the land keep a sabbath unto the LORD."
+  },
+  {
+   "v": 3,
+   "he": "שֵׁ֤שׁ שָׁנִים֙ תִּזְרַ֣ע שָׂדֶ֔ךָ וְשֵׁ֥שׁ שָׁנִ֖ים תִּזְמֹ֣ר כַּרְמֶ֑ךָ וְאָסַפְתָּ֖ אֶת־תְּבוּאָתָֽהּ׃",
+   "en": "Six years thou shalt sow thy field, and six years thou shalt prune thy vineyard, and gather in the produce thereof."
+  },
+  {
+   "v": 4,
+   "he": "וּבַשָּׁנָ֣ה הַשְּׁבִיעִ֗ת שַׁבַּ֤ת שַׁבָּתוֹן֙ יִהְיֶ֣ה לָאָ֔רֶץ שַׁבָּ֖ת לַיהוָ֑ה שָֽׂדְךָ֙ לֹ֣א תִזְרָ֔ע וְכַרְמְךָ֖ לֹ֥א תִזְמֹֽר׃",
+   "en": "But in the seventh year shall be a sabbath of solemn rest for the land, a sabbath unto the LORD; thou shalt neither sow thy field, nor prune thy vineyard."
+  },
+  {
+   "v": 5,
+   "he": "אֵ֣ת סְפִ֤יחַ קְצִֽירְךָ֙ לֹ֣א תִקְצ֔וֹר וְאֶת־עִנְּבֵ֥י נְזִירֶ֖ךָ לֹ֣א תִבְצֹ֑ר שְׁנַ֥ת שַׁבָּת֖וֹן יִהְיֶ֥ה לָאָֽרֶץ׃",
+   "en": "That which groweth of itself of thy harvest thou shalt not reap, and the grapes of thy undressed vine thou shalt not gather; it shall be a year of solemn rest for the land."
+  },
+  {
+   "v": 6,
+   "he": "וְ֠הָיְתָה שַׁבַּ֨ת הָאָ֤רֶץ לָכֶם֙ לְאָכְלָ֔ה לְךָ֖ וּלְעַבְדְּךָ֣ וְלַאֲמָתֶ֑ךָ וְלִשְׂכִֽירְךָ֙ וּלְתוֹשָׁ֣בְךָ֔ הַגָּרִ֖ים עִמָּֽךְ׃",
+   "en": "And the sabbath-produce of the land shall be for food for you: for thee, and for thy servant and for thy maid, and for thy hired servant and for the settler by thy side that sojourn with thee;"
+  },
+  {
+   "v": 7,
+   "he": "וְלִ֨בְהֶמְתְּךָ֔ וְלַֽחַיָּ֖ה אֲשֶׁ֣ר בְּאַרְצֶ֑ךָ תִּהְיֶ֥ה כָל־תְּבוּאָתָ֖הּ לֶאֱכֹֽל׃",
+   "en": "and for thy cattle, and for the beasts that are in thy land, shall all the increase thereof be for food."
+  },
+  {
+   "v": 8,
+   "he": "וְסָפַרְתָּ֣ לְךָ֗ שֶׁ֚בַע שַׁבְּתֹ֣ת שָׁנִ֔ים שֶׁ֥בַע שָׁנִ֖ים שֶׁ֣בַע פְּעָמִ֑ים וְהָי֣וּ לְךָ֗ יְמֵי֙ שֶׁ֚בַע שַׁבְּתֹ֣ת הַשָּׁנִ֔ים תֵּ֥שַׁע וְאַרְבָּעִ֖ים שָׁנָֽה׃",
+   "en": "And thou shalt number seven sabbaths of years unto thee, seven times seven years; and there shall be unto thee the days of seven sabbaths of years, even forty and nine years."
+  },
+  {
+   "v": 9,
+   "he": "וְהַֽעֲבַרְתָּ֞ שׁוֹפַ֤ר תְּרוּעָה֙ בַּחֹ֣דֶשׁ הַשְּׁבִעִ֔י בֶּעָשׂ֖וֹר לַחֹ֑דֶשׁ בְּיוֹם֙ הַכִּפֻּרִ֔ים תַּעֲבִ֥ירוּ שׁוֹפָ֖ר בְּכָל־אַרְצְכֶֽם׃",
+   "en": "Then shalt thou make proclamation with the blast of the horn on the tenth day of the seventh month; in the day of atonement shall ye make proclamation with the horn throughout all your land."
+  },
+  {
+   "v": 10,
+   "he": "וְקִדַּשְׁתֶּ֗ם אֵ֣ת שְׁנַ֤ת הַחֲמִשִּׁים֙ שָׁנָ֔ה וּקְרָאתֶ֥ם דְּר֛וֹר בָּאָ֖רֶץ לְכָל־יֹשְׁבֶ֑יהָ יוֹבֵ֥ל הִוא֙ תִּהְיֶ֣ה לָכֶ֔ם וְשַׁבְתֶּ֗ם אִ֚ישׁ אֶל־אֲחֻזָּת֔וֹ וְאִ֥ישׁ אֶל־מִשְׁפַּחְתּ֖וֹ תָּשֻֽׁבוּ׃",
+   "en": "And ye shall hallow the fiftieth year, and proclaim liberty throughout the land unto all the inhabitants thereof; it shall be a jubilee unto you; and ye shall return every man unto his possession, and ye shall return every man unto his family."
+  },
+  {
+   "v": 11,
+   "he": "יוֹבֵ֣ל הִ֗וא שְׁנַ֛ת הַחֲמִשִּׁ֥ים שָׁנָ֖ה תִּהְיֶ֣ה לָכֶ֑ם לֹ֣א תִזְרָ֔עוּ וְלֹ֤א תִקְצְרוּ֙ אֶת־סְפִיחֶ֔יהָ וְלֹ֥א תִבְצְר֖וּ אֶת־נְזִרֶֽיהָ׃",
+   "en": "A jubilee shall that fiftieth year be unto you; ye shall not sow, neither reap that which groweth of itself in it, nor gather the grapes in it of the undressed vines."
+  },
+  {
+   "v": 12,
+   "he": "כִּ֚י יוֹבֵ֣ל הִ֔וא קֹ֖דֶשׁ תִּהְיֶ֣ה לָכֶ֑ם מִן־הַ֨שָּׂדֶ֔ה תֹּאכְל֖וּ אֶת־תְּבוּאָתָֽהּ׃",
+   "en": "For it is a jubilee; it shall be holy unto you; ye shall eat the increase thereof out of the field."
+  },
+  {
+   "v": 13,
+   "he": "בִּשְׁנַ֥ת הַיּוֹבֵ֖ל הַזֹּ֑את תָּשֻׁ֕בוּ אִ֖ישׁ אֶל־אֲחֻזָּתֽוֹ׃",
+   "en": "In this year of jubilee ye shall return every man unto his possession."
+  },
+  {
+   "v": 14,
+   "he": "וְכִֽי־תִמְכְּר֤וּ מִמְכָּר֙ לַעֲמִיתֶ֔ךָ א֥וֹ קָנֹ֖ה מִיַּ֣ד עֲמִיתֶ֑ךָ אַל־תּוֹנ֖וּ אִ֥ישׁ אֶת־אָחִֽיו׃",
+   "en": "And if thou sell aught unto thy neighbour, or buy of thy neighbour’s hand, ye shall not wrong one another."
+  },
+  {
+   "v": 15,
+   "he": "בְּמִסְפַּ֤ר שָׁנִים֙ אַחַ֣ר הַיּוֹבֵ֔ל תִּקְנֶ֖ה מֵאֵ֣ת עֲמִיתֶ֑ךָ בְּמִסְפַּ֥ר שְׁנֵֽי־תְבוּאֹ֖ת יִמְכָּר־לָֽךְ׃",
+   "en": "According to the number of years after the jubilee thou shalt buy of thy neighbour, and according unto the number of years of the crops he shall sell unto thee."
+  },
+  {
+   "v": 16,
+   "he": "לְפִ֣י׀ רֹ֣ב הַשָּׁנִ֗ים תַּרְבֶּה֙ מִקְנָת֔וֹ וּלְפִי֙ מְעֹ֣ט הַשָּׁנִ֔ים תַּמְעִ֖יט מִקְנָת֑וֹ כִּ֚י מִסְפַּ֣ר תְּבוּאֹ֔ת ה֥וּא מֹכֵ֖ר לָֽךְ׃",
+   "en": "According to the multitude of the years thou shalt increase the price thereof, and according to the fewness of the years thou shalt diminish the price of it; for the number of crops doth he sell unto thee."
+  },
+  {
+   "v": 17,
+   "he": "וְלֹ֤א תוֹנוּ֙ אִ֣ישׁ אֶת־עֲמִית֔וֹ וְיָרֵ֖אתָ מֵֽאֱלֹהֶ֑יךָ כִּ֛י אֲנִ֥י יְהֹוָ֖ה אֱלֹהֵיכֶֽם׃",
+   "en": "And ye shall not wrong one another; but thou shalt fear thy God; for I am the LORD your God."
+  },
+  {
+   "v": 18,
+   "he": "וַעֲשִׂיתֶם֙ אֶת־חֻקֹּתַ֔י וְאֶת־מִשְׁפָּטַ֥י תִּשְׁמְר֖וּ וַעֲשִׂיתֶ֣ם אֹתָ֑ם וִֽישַׁבְתֶּ֥ם עַל־הָאָ֖רֶץ לָבֶֽטַח׃",
+   "en": "Wherefore ye shall do My statutes, and keep Mine ordinances and do them; and ye shall dwell in the land in safety."
+  },
+  {
+   "v": 19,
+   "he": "וְנָתְנָ֤ה הָאָ֙רֶץ֙ פִּרְיָ֔הּ וַאֲכַלְתֶּ֖ם לָשֹׂ֑בַע וִֽישַׁבְתֶּ֥ם לָבֶ֖טַח עָלֶֽיהָ׃",
+   "en": "And the land shall yield her fruit, and ye shall eat until ye have enough, and dwell therein in safety."
+  },
+  {
+   "v": 20,
+   "he": "וְכִ֣י תֹאמְר֔וּ מַה־נֹּאכַ֖ל בַּשָּׁנָ֣ה הַשְּׁבִיעִ֑ת הֵ֚ן לֹ֣א נִזְרָ֔ע וְלֹ֥א נֶאֱסֹ֖ף אֶת־תְּבוּאָתֵֽנוּ׃",
+   "en": "And if ye shall say: ‘What shall we eat the seventh year? behold, we may not sow, nor gather in our increase’;"
+  },
+  {
+   "v": 21,
+   "he": "וְצִוִּ֤יתִי אֶת־בִּרְכָתִי֙ לָכֶ֔ם בַּשָּׁנָ֖ה הַשִּׁשִּׁ֑ית וְעָשָׂת֙ אֶת־הַתְּבוּאָ֔ה לִשְׁלֹ֖שׁ הַשָּׁנִֽים׃",
+   "en": "then I will command My blessing upon you in the sixth year, and it shall bring forth produce for the three years."
+  },
+  {
+   "v": 22,
+   "he": "וּזְרַעְתֶּ֗ם אֵ֚ת הַשָּׁנָ֣ה הַשְּׁמִינִ֔ת וַאֲכַלְתֶּ֖ם מִן־הַתְּבוּאָ֣ה יָשָׁ֑ן עַ֣ד׀ הַשָּׁנָ֣ה הַתְּשִׁיעִ֗ת עַד־בּוֹא֙ תְּב֣וּאָתָ֔הּ תֹּאכְל֖וּ יָשָֽׁן׃",
+   "en": "And ye shall sow the eighth year, and eat of the produce, the old store; until the ninth year, until her produce come in, ye shall eat the old store."
+  },
+  {
+   "v": 23,
+   "he": "וְהָאָ֗רֶץ לֹ֤א תִמָּכֵר֙ לִצְמִתֻ֔ת כִּי־לִ֖י הָאָ֑רֶץ כִּֽי־גֵרִ֧ים וְתוֹשָׁבִ֛ים אַתֶּ֖ם עִמָּדִֽי׃",
+   "en": "And the land shall not be sold in perpetuity; for the land is Mine; for ye are strangers and settlers with Me."
+  },
+  {
+   "v": 24,
+   "he": "וּבְכֹ֖ל אֶ֣רֶץ אֲחֻזַּתְכֶ֑ם גְּאֻלָּ֖ה תִּתְּנ֥וּ לָאָֽרֶץ׃",
+   "en": "And in all the land of your possession ye shall grant a redemption for the land."
+  },
+  {
+   "v": 25,
+   "he": "כִּֽי־יָמ֣וּךְ אָחִ֔יךָ וּמָכַ֖ר מֵאֲחֻזָּת֑וֹ וּבָ֤א גֹֽאֲלוֹ֙ הַקָּרֹ֣ב אֵלָ֔יו וְגָאַ֕ל אֵ֖ת מִמְכַּ֥ר אָחִֽיו׃",
+   "en": "If thy brother be waxen poor, and sell some of his possession, then shall his kinsman that is next unto him come, and shall redeem that which his brother hath sold."
+  },
+  {
+   "v": 26,
+   "he": "וְאִ֕ישׁ כִּ֛י לֹ֥א יִֽהְיֶה־לּ֖וֹ גֹּאֵ֑ל וְהִשִּׂ֣יגָה יָד֔וֹ וּמָצָ֖א כְּדֵ֥י גְאֻלָּתֽוֹ׃",
+   "en": "And if a man have no one to redeem it, and he be waxen rich and find sufficient means to redeem it;"
+  },
+  {
+   "v": 27,
+   "he": "וְחִשַּׁב֙ אֶת־שְׁנֵ֣י מִמְכָּר֔וֹ וְהֵשִׁיב֙ אֶת־הָ֣עֹדֵ֔ף לָאִ֖ישׁ אֲשֶׁ֣ר מָֽכַר־ל֑וֹ וְשָׁ֖ב לַאֲחֻזָּתֽוֹ׃",
+   "en": "then let him count the years of the sale thereof, and restore the overplus unto the man to whom he sold it; and he shall return unto his possession."
+  },
+  {
+   "v": 28,
+   "he": "וְאִ֨ם לֹֽא־מָֽצְאָ֜ה יָד֗וֹ דֵּי֮ הָשִׁ֣יב לוֹ֒ וְהָיָ֣ה מִמְכָּר֗וֹ בְּיַד֙ הַקֹּנֶ֣ה אֹת֔וֹ עַ֖ד שְׁנַ֣ת הַיּוֹבֵ֑ל וְיָצָא֙ בַּיֹּבֵ֔ל וְשָׁ֖ב לַאֲחֻזָּתֽוֹ׃",
+   "en": "But if he have not sufficient means to get it back for himself, then that which he hath sold shall remain in the hand of him that hath bought it until the year of jubilee; and in the jubilee it shall go out, and he shall return unto his possession."
+  },
+  {
+   "v": 29,
+   "he": "וְאִ֗ישׁ כִּֽי־יִמְכֹּ֤ר בֵּית־מוֹשַׁב֙ עִ֣יר חוֹמָ֔ה וְהָיְתָה֙ גְּאֻלָּת֔וֹ עַד־תֹּ֖ם שְׁנַ֣ת מִמְכָּר֑וֹ יָמִ֖ים תִּהְיֶ֥ה גְאֻלָּתֽוֹ׃",
+   "en": "And if a man sell a dwelling-house in a walled city, then he may redeem it within a whole year after it is sold; for a full year shall he have the right of redemption."
+  },
+  {
+   "v": 30,
+   "he": "וְאִ֣ם לֹֽא־יִגָּאֵ֗ל עַד־מְלֹ֣את לוֹ֮ שָׁנָ֣ה תְמִימָה֒ וְ֠קָם הַבַּ֨יִת אֲשֶׁר־בָּעִ֜יר אֲשֶׁר־לא [ל֣וֹ] חֹמָ֗ה לַצְּמִיתֻ֛ת לַקֹּנֶ֥ה אֹת֖וֹ לְדֹרֹתָ֑יו לֹ֥א יֵצֵ֖א בַּיֹּבֵֽל׃",
+   "en": "And if it be not redeemed within the space of a full year, then the house that is in the walled city shall be made sure in perpetuity to him that bought it, throughout his generations; it shall not go out in the jubilee."
+  },
+  {
+   "v": 31,
+   "he": "וּבָתֵּ֣י הַחֲצֵרִ֗ים אֲשֶׁ֨ר אֵין־לָהֶ֤ם חֹמָה֙ סָבִ֔יב עַל־שְׂדֵ֥ה הָאָ֖רֶץ יֵחָשֵׁ֑ב גְּאֻלָּה֙ תִּהְיֶה־לּ֔וֹ וּבַיֹּבֵ֖ל יֵצֵֽא׃",
+   "en": "But the houses of the villages which have no wall round about them shall be reckoned with the fields of the country; they may be redeemed, and they shall go out in the jubilee."
+  },
+  {
+   "v": 32,
+   "he": "וְעָרֵי֙ הַלְוִיִּ֔ם בָּתֵּ֖י עָרֵ֣י אֲחֻזָּתָ֑ם גְּאֻלַּ֥ת עוֹלָ֖ם תִּהְיֶ֥ה לַלְוִיִּֽם׃",
+   "en": "But as for the cities of the Levites, the houses of the cities of their possession, the Levites shall have a perpetual right of redemption."
+  },
+  {
+   "v": 33,
+   "he": "וַאֲשֶׁ֤ר יִגְאַל֙ מִן־הַלְוִיִּ֔ם וְיָצָ֧א מִמְכַּר־בַּ֛יִת וְעִ֥יר אֲחֻזָּת֖וֹ בַּיֹּבֵ֑ל כִּ֣י בָתֵּ֞י עָרֵ֣י הַלְוִיִּ֗ם הִ֚וא אֲחֻזָּתָ֔ם בְּת֖וֹךְ בְּנֵ֥י יִשְׂרָאֵֽל׃",
+   "en": "And if a man purchase of the Levites, then the house that was sold in the city of his possession, shall go out in the jubilee; for the houses of the cities of the Levites are their possession among the children of Israel."
+  },
+  {
+   "v": 34,
+   "he": "וּֽשְׂדֵ֛ה מִגְרַ֥שׁ עָרֵיהֶ֖ם לֹ֣א יִמָּכֵ֑ר כִּֽי־אֲחֻזַּ֥ת עוֹלָ֛ם ה֖וּא לָהֶֽם׃",
+   "en": "But the fields of the open land about their cities may not be sold; for that is their perpetual possession."
+  },
+  {
+   "v": 35,
+   "he": "וְכִֽי־יָמ֣וּךְ אָחִ֔יךָ וּמָ֥טָה יָד֖וֹ עִמָּ֑ךְ וְהֶֽחֱזַ֣קְתָּ בּ֔וֹ גֵּ֧ר וְתוֹשָׁ֛ב וָחַ֖י עִמָּֽךְ׃",
+   "en": "And if thy brother be waxen poor, and his means fail with thee; then thou shalt uphold him: as a stranger and a settler shall he live with thee."
+  },
+  {
+   "v": 36,
+   "he": "אַל־תִּקַּ֤ח מֵֽאִתּוֹ֙ נֶ֣שֶׁךְ וְתַרְבִּ֔ית וְיָרֵ֖אתָ מֵֽאֱלֹהֶ֑יךָ וְחֵ֥י אָחִ֖יךָ עִמָּֽךְ׃",
+   "en": "Take thou no interest of him or increase; but fear thy God; that thy brother may live with thee."
+  },
+  {
+   "v": 37,
+   "he": "אֶ֨ת־כַּסְפְּךָ֔ לֹֽא־תִתֵּ֥ן ל֖וֹ בְּנֶ֑שֶׁךְ וּבְמַרְבִּ֖ית לֹא־תִתֵּ֥ן אָכְלֶֽךָ׃",
+   "en": "Thou shalt not give him thy money upon interest, nor give him thy victuals for increase."
+  },
+  {
+   "v": 38,
+   "he": "אֲנִ֗י יְהוָה֙ אֱלֹ֣הֵיכֶ֔ם אֲשֶׁר־הוֹצֵ֥אתִי אֶתְכֶ֖ם מֵאֶ֣רֶץ מִצְרָ֑יִם לָתֵ֤ת לָכֶם֙ אֶת־אֶ֣רֶץ כְּנַ֔עַן לִהְי֥וֹת לָכֶ֖ם לֵאלֹהִֽים׃",
+   "en": "I am the LORD your God, who brought you forth out of the land of Egypt, to give you the land of Canaan, to be your God."
+  },
+  {
+   "v": 39,
+   "he": "וְכִֽי־יָמ֥וּךְ אָחִ֛יךָ עִמָּ֖ךְ וְנִמְכַּר־לָ֑ךְ לֹא־תַעֲבֹ֥ד בּ֖וֹ עֲבֹ֥דַת עָֽבֶד׃",
+   "en": "And if thy brother be waxen poor with thee, and sell himself unto thee, thou shalt not make him to serve as a bondservant."
+  },
+  {
+   "v": 40,
+   "he": "כְּשָׂכִ֥יר כְּתוֹשָׁ֖ב יִהְיֶ֣ה עִמָּ֑ךְ עַד־שְׁנַ֥ת הַיֹּבֵ֖ל יַעֲבֹ֥ד עִמָּֽךְ׃",
+   "en": "As a hired servant, and as a settler, he shall be with thee; he shall serve with thee unto the year of jubilee."
+  },
+  {
+   "v": 41,
+   "he": "וְיָצָא֙ מֵֽעִמָּ֔ךְ ה֖וּא וּבָנָ֣יו עִמּ֑וֹ וְשָׁב֙ אֶל־מִשְׁפַּחְתּ֔וֹ וְאֶל־אֲחֻזַּ֥ת אֲבֹתָ֖יו יָשֽׁוּב׃",
+   "en": "Then shall he go out from thee, he and his children with him, and shall return unto his own family, and unto the possession of his fathers shall he return."
+  },
+  {
+   "v": 42,
+   "he": "כִּֽי־עֲבָדַ֣י הֵ֔ם אֲשֶׁר־הוֹצֵ֥אתִי אֹתָ֖ם מֵאֶ֣רֶץ מִצְרָ֑יִם לֹ֥א יִמָּכְר֖וּ מִמְכֶּ֥רֶת עָֽבֶד׃",
+   "en": "For they are My servants, whom I brought forth out of the land of Egypt; they shall not be sold as bondmen."
+  },
+  {
+   "v": 43,
+   "he": "לֹא־תִרְדֶּ֥ה ב֖וֹ בְּפָ֑רֶךְ וְיָרֵ֖אתָ מֵאֱלֹהֶֽיךָ׃",
+   "en": "Thou shalt not rule over him with rigour; but shalt fear thy God."
+  },
+  {
+   "v": 44,
+   "he": "וְעַבְדְּךָ֥ וַאֲמָתְךָ֖ אֲשֶׁ֣ר יִהְיוּ־לָ֑ךְ מֵאֵ֣ת הַגּוֹיִ֗ם אֲשֶׁר֙ סְבִיבֹ֣תֵיכֶ֔ם מֵהֶ֥ם תִּקְנ֖וּ עֶ֥בֶד וְאָמָֽה׃",
+   "en": "And as for thy bondmen, and thy bondmaids, whom thou mayest have: of the nations that are round about you, of them shall ye buy bondmen and bondmaids."
+  },
+  {
+   "v": 45,
+   "he": "וְ֠גַם מִבְּנֵ֨י הַתּוֹשָׁבִ֜ים הַגָּרִ֤ים עִמָּכֶם֙ מֵהֶ֣ם תִּקְנ֔וּ וּמִמִּשְׁפַּחְתָּם֙ אֲשֶׁ֣ר עִמָּכֶ֔ם אֲשֶׁ֥ר הוֹלִ֖ידוּ בְּאַרְצְכֶ֑ם וְהָי֥וּ לָכֶ֖ם לַֽאֲחֻזָּֽה׃",
+   "en": "Moreover of the children of the strangers that do sojourn among you, of them may ye buy, and of their families that are with you, which they have begotten in your land; and they may be your possession."
+  },
+  {
+   "v": 46,
+   "he": "וְהִתְנַחֲלְתֶּ֨ם אֹתָ֜ם לִבְנֵיכֶ֤ם אַחֲרֵיכֶם֙ לָרֶ֣שֶׁת אֲחֻזָּ֔ה לְעֹלָ֖ם בָּהֶ֣ם תַּעֲבֹ֑דוּ וּבְאַ֨חֵיכֶ֤ם בְּנֵֽי־יִשְׂרָאֵל֙ אִ֣ישׁ בְּאָחִ֔יו לֹא־תִרְדֶּ֥ה ב֖וֹ בְּפָֽרֶךְ׃",
+   "en": "And ye may make them an inheritance for your children after you, to hold for a possession: of them may ye take your bondmen for ever; but over your brethren the children of Israel ye shall not rule, one over another, with rigour."
+  },
+  {
+   "v": 47,
+   "he": "וְכִ֣י תַשִּׂ֗יג יַ֣ד גֵּ֤ר וְתוֹשָׁב֙ עִמָּ֔ךְ וּמָ֥ךְ אָחִ֖יךָ עִמּ֑וֹ וְנִמְכַּ֗ר לְגֵ֤ר תּוֹשָׁב֙ עִמָּ֔ךְ א֥וֹ לְעֵ֖קֶר מִשְׁפַּ֥חַת גֵּֽר׃",
+   "en": "And if a stranger who is a settler with thee be waxen rich, and thy brother be waxen poor beside him, and sell himself unto the stranger who is a settler with thee, or to the offshoot of a stranger’s family,"
+  },
+  {
+   "v": 48,
+   "he": "אַחֲרֵ֣י נִמְכַּ֔ר גְּאֻלָּ֖ה תִּהְיֶה־לּ֑וֹ אֶחָ֥ד מֵאֶחָ֖יו יִגְאָלֶֽנּוּ׃",
+   "en": "after that he is sold he may be redeemed; one of his brethren may redeem him;"
+  },
+  {
+   "v": 49,
+   "he": "אוֹ־דֹד֞וֹ א֤וֹ בֶן־דֹּדוֹ֙ יִגְאָלֶ֔נּוּ אֽוֹ־מִשְּׁאֵ֧ר בְּשָׂר֛וֹ מִמִּשְׁפַּחְתּ֖וֹ יִגְאָלֶ֑נּוּ אֽוֹ־הִשִּׂ֥יגָה יָד֖וֹ וְנִגְאָֽל׃",
+   "en": "or his uncle, or his uncle’s son, may redeem him, or any that is nigh of kin unto him of his family may redeem him; or if he be waxen rich, he may redeem himself."
+  },
+  {
+   "v": 50,
+   "he": "וְחִשַּׁב֙ עִם־קֹנֵ֔הוּ מִשְּׁנַת֙ הִמָּ֣כְרוֹ ל֔וֹ עַ֖ד שְׁנַ֣ת הַיֹּבֵ֑ל וְהָיָ֞ה כֶּ֤סֶף מִמְכָּרוֹ֙ בְּמִסְפַּ֣ר שָׁנִ֔ים כִּימֵ֥י שָׂכִ֖יר יִהְיֶ֥ה עִמּֽוֹ׃",
+   "en": "And he shall reckon with him that bought him from the year that he sold himself to him unto the year of jubilee; and the price of his sale shall be according unto the number of years; according to the time of a hired servant shall he be with him."
+  },
+  {
+   "v": 51,
+   "he": "אִם־ע֥וֹד רַבּ֖וֹת בַּשָּׁנִ֑ים לְפִיהֶן֙ יָשִׁ֣יב גְּאֻלָּת֔וֹ מִכֶּ֖סֶף מִקְנָתֽוֹ׃",
+   "en": "If there be yet many years, according unto them he shall give back the price of his redemption out of the money that he was bought for."
+  },
+  {
+   "v": 52,
+   "he": "וְאִם־מְעַ֞ט נִשְׁאַ֧ר בַּשָּׁנִ֛ים עַד־שְׁנַ֥ת הַיֹּבֵ֖ל וְחִשַּׁב־ל֑וֹ כְּפִ֣י שָׁנָ֔יו יָשִׁ֖יב אֶת־גְּאֻלָּתֽוֹ׃",
+   "en": "And if there remain but few years unto the year of jubilee, then he shall reckon with him; according unto his years shall he give back the price of his redemption."
+  },
+  {
+   "v": 53,
+   "he": "כִּשְׂכִ֥יר שָׁנָ֛ה בְּשָׁנָ֖ה יִהְיֶ֣ה עִמּ֑וֹ לֹֽא־יִרְדֶּ֥נּֽוּ בְּפֶ֖רֶךְ לְעֵינֶֽיךָ׃",
+   "en": "As a servant hired year by year shall he be with him; he shall not rule with rigour over him in thy sight."
+  },
+  {
+   "v": 54,
+   "he": "וְאִם־לֹ֥א יִגָּאֵ֖ל בְּאֵ֑לֶּה וְיָצָא֙ בִּשְׁנַ֣ת הַיֹּבֵ֔ל ה֖וּא וּבָנָ֥יו עִמּֽוֹ׃",
+   "en": "And if he be not redeemed by any of these means, then he shall go out in the year of jubilee, he, and his children with him."
+  },
+  {
+   "v": 55,
+   "he": "כִּֽי־לִ֤י בְנֵֽי־יִשְׂרָאֵל֙ עֲבָדִ֔ים עֲבָדַ֣י הֵ֔ם אֲשֶׁר־הוֹצֵ֥אתִי אוֹתָ֖ם מֵאֶ֣רֶץ מִצְרָ֑יִם אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם׃",
+   "en": "For unto Me the children of Israel are servants; they are My servants whom I brought forth out of the land of Egypt: I am the LORD your God."
+  }
+ ],
+ "sourcing": "sourced"
+}

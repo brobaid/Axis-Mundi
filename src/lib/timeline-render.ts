@@ -263,7 +263,7 @@ export function renderCanvas(
            a transform of its own and the two must compose rather than fight. */
         `<span class="tl-tick" data-morph-key="tick:${year}"` +
         ` style="left:${left.toFixed(3)}%;--tick-align:${align}">` +
-        `${esc(formatTick(year, isEdge))}</span>`
+        `${esc(formatTick(year, isEdge, ticks[i - 1]))}</span>`
       );
     })
     .join('');
@@ -302,7 +302,8 @@ export function renderCanvas(
           ? ''
           : `<b class="tl-meridian__label">${esc(options.meridianLabel)}</b>`;
       meridian =
-        `<div class="tl-meridian" style="left:calc(${LANE_GUTTER}px + (100% - ${LANE_GUTTER}px) * ${f.toFixed(4)})"` +
+        `<div class="tl-meridian" title="One time cursor shared by every room"` +
+        ` style="left:calc(${LANE_GUTTER}px + (100% - ${LANE_GUTTER}px) * ${f.toFixed(4)})"` +
         ` role="img" aria-label="Time cursor at ${esc(options.meridianLabel ?? String(options.meridianYear))}">` +
         `${label}</div>`;
     }

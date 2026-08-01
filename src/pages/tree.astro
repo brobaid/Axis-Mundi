@@ -4,7 +4,18 @@ import DetailPanel from '../components/DetailPanel.astro';
 import TraditionSymbols from '../components/TraditionSymbols.astro';
 import { getPublishable, getStructural } from '../lib/content';
 import { TRADITIONS } from '../lib/traditions';
-import { ROW_HEIGHT, layoutTree, treeDetents, type TreeNodeInput } from '../lib/tree-model';
+import {
+  CONTESTED_AT,
+  CONTESTED_R,
+  LABEL_AT,
+  LABEL_AT_CONTESTED,
+  ROW_HEIGHT,
+  TICK_FONT_SIZE,
+  TICK_ROW_HEIGHT,
+  layoutTree,
+  treeDetents,
+  type TreeNodeInput,
+} from '../lib/tree-model';
 import { eraLabel } from '../lib/map-render';
 
 /**
@@ -90,8 +101,9 @@ const bootstrap = {
   <TraditionSymbols />
 
   <section class="shell head">
-    <p class="eyebrow">Room V · The Genealogy Room</p>
+    <p class="eyebrow">Room VII · The Genealogy Room</p>
     <h1>Descent, branch by branch.</h1>
+    <p class="room-says">Which tradition came from which, and where the branches parted.</p>
     <p class="crumb caption">
       <b>Family tree</b> · {input.length} nodes across {TRADITIONS.length} traditions · {dated} carry a
       founding date
@@ -104,7 +116,8 @@ const bootstrap = {
       <div class="scrub">
         <div class="scrub__rail" data-tree-scrubber role="radiogroup" aria-label="Era">
           <div class="scrub__line" aria-hidden="true"></div>
-          <div class="meridian scrub__meridian" data-tree-meridian aria-hidden="true"></div>
+          <div class="meridian scrub__meridian" data-tree-meridian aria-hidden="true"
+               title="One time cursor shared by every room"></div>
           {
             detents.map((era, i) => (
               <button
@@ -131,7 +144,7 @@ const bootstrap = {
         class="tree-svg"
         viewBox={`0 0 ${layout.width} ${layout.height}`}
         preserveAspectRatio="xMinYMin meet"
-        style={`--tree-ratio: ${layout.width} / ${layout.height}`}
+        style={`--tree-ratio: ${layout.width} / ${layout.height}; --tick-size: ${TICK_FONT_SIZE}px`}
         role="img"
         aria-label={`Family tree of ${TRADITIONS.length} traditions and their branches`}
       >
@@ -141,7 +154,22 @@ const bootstrap = {
             layout.ticks.map((t) => (
               <>
                 <line x1={t.x} y1={0} x2={t.x} y2={layout.axisY} class="tree-axis__rule" />
-                <text x={t.x} y={layout.axisY + 14}>{t.label}</text>
+                {/*
+                  A stacked label is no longer beside its own rule, so a leader
+                  carries the rule down to it. Without this the reader has to
+                  guess which tick a label in the third row belongs to, which is
+                  the overlap bug wearing a different hat.
+                */}
+                {t.row > 0 && (
+                  <line
+                    class="tree-axis__leader"
+                    x1={t.x}
+                    y1={layout.axisY}
+                    x2={t.x}
+                    y2={layout.axisY + t.row * TICK_ROW_HEIGHT + 3}
+                  />
+                )}
+                <text x={t.x} y={layout.axisY + 11 + t.row * TICK_ROW_HEIGHT}>{t.label}</text>
               </>
             ))
           }
@@ -172,21 +200,43 @@ const bootstrap = {
                 */}
                 <rect
                   class="tree-node__hit"
-                  x={n.x - ROW_HEIGHT / 2}
+                  x={0}
                   y={n.y - ROW_HEIGHT / 2}
-                  width={n.name.length * 6.1 + 40}
+                  width={layout.width}
                   height={ROW_HEIGHT}
                 />
                 <circle cx={n.x} cy={n.y} r={n.depth === 1 ? 5.5 : n.depth === 2 ? 4 : 3} />
-                <text x={n.x + 10} y={n.y + 4}>
-                  {n.name}
-                  {n.contested ? ' ·' : ''}
-                </text>
+                {/*
+                  The contested ring sits before the name, not after it.
+
+                  After it, its position had to be guessed from the character
+                  count — and a proportional face does not have a per-character
+                  width, so it drifted: measured, four of the five rings were
+                  out by up to nineteen units, two of them landing inside their
+                  own label. Before the name, it is a fixed offset from the node
+                  dot and there is nothing left to estimate. It reads as a
+                  margin mark, which is what it is.
+                */}
                 {n.contested && (
-                  <circle class="tree-node__contested" cx={n.x + 10 + n.name.length * 6.1} cy={n.y} r={3.2}>
+                  /*
+                    A lozenge, not a second ring. Placed beside the node dot it
+                    has to differ in shape as well as in colour, or a contested
+                    node reads as a node with two dots — and an undated node's
+                    own dot is already a hollow ring. The rotated square is the
+                    house's small mark, the one the ornament uses.
+                  */
+                  <rect
+                    class="tree-node__contested"
+                    x={n.x + CONTESTED_AT - CONTESTED_R}
+                    y={n.y - CONTESTED_R}
+                    width={CONTESTED_R * 2}
+                    height={CONTESTED_R * 2}
+                    transform={`rotate(45 ${n.x + CONTESTED_AT} ${n.y})`}
+                  >
                     <title>Contested classification</title>
-                  </circle>
+                  </rect>
                 )}
+                <text x={n.x + (n.contested ? LABEL_AT_CONTESTED : LABEL_AT)} y={n.y + 4}>{n.name}</text>
               </g>
             ))
           }
@@ -345,11 +395,25 @@ const bootstrap = {
     stroke-width: 1;
   }
 
+  /*
+    The mono face is load-bearing here, not a style choice: the stacking in
+    tree-model.ts computes each label's width from its character count, which
+    is only true of a face whose glyphs all have one advance. The size comes
+    from the same constant the model reserves room with, so the two cannot
+    drift apart.
+  */
   .tree-axis text {
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: var(--tick-size);
+    font-variant-numeric: tabular-nums;
     fill: var(--ink-soft);
     text-anchor: middle;
+  }
+
+  /* Carries a stacked label back to the tick it belongs to. */
+  .tree-axis__leader {
+    stroke: var(--hairline);
+    stroke-width: 1;
   }
 
   .tree-edges path {
@@ -403,9 +467,8 @@ const bootstrap = {
   }
 
   .tree-node__contested {
-    fill: none;
-    stroke: var(--contested-hatch);
-    stroke-width: 1.4;
+    fill: var(--contested-hatch);
+    stroke: none;
   }
 
   .tree-node:focus-within text {

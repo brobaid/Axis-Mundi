@@ -245,6 +245,56 @@ a {
   }
 }
 
+/*
+  What a room does, in one line, under its title.
+
+  Permanent, not a coach: a reader arriving in the Genealogy Room from a link
+  should not have to infer from a Roman numeral and a canvas of dots what the
+  room is for, and should not have to have been here before. The mastheads say
+  what the room is *about* — evocatively, which is right for a masthead — and
+  this says what it *answers*.
+*/
+.room-says {
+  font-family: var(--font-ui);
+  font-size: var(--size-small);
+  color: var(--ink-soft);
+  max-width: 42rem;
+  margin-bottom: var(--space-3);
+}
+
+/*
+  The ornament: a doubled hairline broken by a brass lozenge, under a room's
+  opening statement.
+
+  Global because it is a component of the house and eight pages set one. It had
+  been copied into four pages' scoped styles, which meant the other four —
+  including both Reading Room pages — rendered three empty elements and no
+  divider at all. Pages that want a different box still set their own margin;
+  the rule itself lives here once.
+*/
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 32.5rem;
+  margin: 0 0 var(--space-6);
+}
+
+.ornament i {
+  flex: 1;
+  height: 3px;
+  border-top: var(--hairline-width) solid var(--hairline);
+  border-bottom: var(--hairline-width) solid var(--hairline);
+}
+
+.ornament b {
+  width: 5px;
+  height: 5px;
+  rotate: 45deg;
+  background: var(--brass);
+  flex: 0 0 auto;
+}
+
 .rule {
   border: 0;
   border-top: var(--hairline-width) solid var(--hairline);

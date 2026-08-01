@@ -1,0 +1,30 @@
+{
+ "id": "bible--psalms--15",
+ "work": "bible",
+ "n": 19,
+ "slug": "psalms",
+ "c": 15,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Yahweh, who shall dwell in your sanctuary? Who shall live on your holy hill?"
+  },
+  {
+   "v": 2,
+   "en": "He who walks blamelessly and does what is right, and speaks truth in his heart;"
+  },
+  {
+   "v": 3,
+   "en": "he who doesn’t slander with his tongue, nor does evil to his friend, nor casts slurs against his fellow man;"
+  },
+  {
+   "v": 4,
+   "en": "in whose eyes a vile man is despised, but who honors those who fear Yahweh; he who keeps an oath even when it hurts, and doesn’t change;"
+  },
+  {
+   "v": 5,
+   "en": "he who doesn’t lend out his money for usury, nor take a bribe against the innocent. He who does these things shall never be shaken."
+  }
+ ],
+ "sourcing": "sourced"
+}

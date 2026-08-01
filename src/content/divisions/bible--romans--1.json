@@ -1,0 +1,170 @@
+{
+ "id": "bible--romans--1",
+ "work": "bible",
+ "n": 45,
+ "slug": "romans",
+ "c": 1,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Paul, a servant of Jesus Christ, called to be an apostle, set apart for the Good News of God,",
+   "gr": "Παῦλος δοῦλος ⸂Χριστοῦ Ἰησοῦ⸃, κλητὸς ἀπόστολος, ἀφωρισμένος εἰς εὐαγγέλιον θεοῦ"
+  },
+  {
+   "v": 2,
+   "en": "which he promised before through his prophets in the holy Scriptures,",
+   "gr": "ὃ προεπηγγείλατο διὰ τῶν προφητῶν αὐτοῦ ἐν γραφαῖς ἁγίαις"
+  },
+  {
+   "v": 3,
+   "en": "concerning his Son, who was born of the offspring of David according to the flesh,",
+   "gr": "περὶ τοῦ υἱοῦ αὐτοῦ, τοῦ γενομένου ἐκ σπέρματος Δαυὶδ κατὰ σάρκα,"
+  },
+  {
+   "v": 4,
+   "en": "who was declared to be the Son of God with power, according to the Spirit of holiness, by the resurrection from the dead, Jesus Christ our Lord,",
+   "gr": "τοῦ ὁρισθέντος υἱοῦ θεοῦ ἐν δυνάμει κατὰ πνεῦμα ἁγιωσύνης ἐξ ἀναστάσεως νεκρῶν, Ἰησοῦ Χριστοῦ τοῦ κυρίου ἡμῶν,"
+  },
+  {
+   "v": 5,
+   "en": "through whom we received grace and apostleship for obedience of faith among all the nations for his name’s sake;",
+   "gr": "διʼ οὗ ἐλάβομεν χάριν καὶ ἀποστολὴν εἰς ὑπακοὴν πίστεως ἐν πᾶσιν τοῖς ἔθνεσιν ὑπὲρ τοῦ ὀνόματος αὐτοῦ,"
+  },
+  {
+   "v": 6,
+   "en": "among whom you are also called to belong to Jesus Christ;",
+   "gr": "ἐν οἷς ἐστε καὶ ὑμεῖς κλητοὶ Ἰησοῦ Χριστοῦ,"
+  },
+  {
+   "v": 7,
+   "en": "to all who are in Rome, beloved of God, called to be saints: Grace to you and peace from God our Father and the Lord Jesus Christ.",
+   "gr": "πᾶσιν τοῖς οὖσιν ἐν Ῥώμῃ ἀγαπητοῖς θεοῦ, κλητοῖς ἁγίοις· χάρις ὑμῖν καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς ἡμῶν καὶ κυρίου Ἰησοῦ Χριστοῦ."
+  },
+  {
+   "v": 8,
+   "en": "First, I thank my God through Jesus Christ for all of you, that your faith is proclaimed throughout the whole world.",
+   "gr": "Πρῶτον μὲν εὐχαριστῶ τῷ θεῷ μου διὰ Ἰησοῦ Χριστοῦ ⸀περὶ πάντων ὑμῶν, ὅτι ἡ πίστις ὑμῶν καταγγέλλεται ἐν ὅλῳ τῷ κόσμῳ."
+  },
+  {
+   "v": 9,
+   "en": "For God is my witness, whom I serve in my spirit in the Good News of his Son, how unceasingly I make mention of you always in my prayers,",
+   "gr": "μάρτυς γάρ μού ἐστιν ὁ θεός, ᾧ λατρεύω ἐν τῷ πνεύματί μου ἐν τῷ εὐαγγελίῳ τοῦ υἱοῦ αὐτοῦ, ὡς ἀδιαλείπτως μνείαν ὑμῶν ποιοῦμαι"
+  },
+  {
+   "v": 10,
+   "en": "requesting, if by any means now at last I may be prospered by the will of God to come to you.",
+   "gr": "πάντοτε ἐπὶ τῶν προσευχῶν μου, δεόμενος εἴ πως ἤδη ποτὲ εὐοδωθήσομαι ἐν τῷ θελήματι τοῦ θεοῦ ἐλθεῖν πρὸς ὑμᾶς."
+  },
+  {
+   "v": 11,
+   "en": "For I long to see you, that I may impart to you some spiritual gift, to the end that you may be established;",
+   "gr": "ἐπιποθῶ γὰρ ἰδεῖν ὑμᾶς, ἵνα τι μεταδῶ χάρισμα ὑμῖν πνευματικὸν εἰς τὸ στηριχθῆναι ὑμᾶς,"
+  },
+  {
+   "v": 12,
+   "en": "that is, that I with you may be encouraged in you, each of us by the other’s faith, both yours and mine.",
+   "gr": "τοῦτο δέ ἐστιν συμπαρακληθῆναι ἐν ὑμῖν διὰ τῆς ἐν ἀλλήλοις πίστεως ὑμῶν τε καὶ ἐμοῦ."
+  },
+  {
+   "v": 13,
+   "en": "Now I don’t desire to have you unaware, brothers, that I often planned to come to you, and was hindered so far, that I might have some fruit among you also, even as among the rest of the Gentiles.",
+   "gr": "οὐ θέλω δὲ ὑμᾶς ἀγνοεῖν, ἀδελφοί, ὅτι πολλάκις προεθέμην ἐλθεῖν πρὸς ὑμᾶς, καὶ ἐκωλύθην ἄχρι τοῦ δεῦρο, ἵνα τινὰ καρπὸν σχῶ καὶ ἐν ὑμῖν καθὼς καὶ ἐν τοῖς λοιποῖς ἔθνεσιν."
+  },
+  {
+   "v": 14,
+   "en": "I am debtor both to Greeks and to foreigners, both to the wise and to the foolish.",
+   "gr": "Ἕλλησίν τε καὶ βαρβάροις, σοφοῖς τε καὶ ἀνοήτοις ὀφειλέτης εἰμί·"
+  },
+  {
+   "v": 15,
+   "en": "So as much as is in me, I am eager to preach the Good News to you also who are in Rome.",
+   "gr": "οὕτως τὸ κατʼ ἐμὲ πρόθυμον καὶ ὑμῖν τοῖς ἐν Ῥώμῃ εὐαγγελίσασθαι."
+  },
+  {
+   "v": 16,
+   "en": "For I am not ashamed of the Good News of Christ, because it is the power of God for salvation for everyone who believes, for the Jew first, and also for the Greek.",
+   "gr": "Οὐ γὰρ ἐπαισχύνομαι τὸ ⸀εὐαγγέλιον, δύναμις γὰρ θεοῦ ἐστιν εἰς σωτηρίαν παντὶ τῷ πιστεύοντι, Ἰουδαίῳ τε πρῶτον καὶ Ἕλληνι·"
+  },
+  {
+   "v": 17,
+   "en": "For in it is revealed God’s righteousness from faith to faith. As it is written, “But the righteous shall live by faith.”",
+   "gr": "δικαιοσύνη γὰρ θεοῦ ἐν αὐτῷ ἀποκαλύπτεται ἐκ πίστεως εἰς πίστιν, καθὼς γέγραπται· Ὁ δὲ δίκαιος ἐκ πίστεως ζήσεται."
+  },
+  {
+   "v": 18,
+   "en": "For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men who suppress the truth in unrighteousness,",
+   "gr": "Ἀποκαλύπτεται γὰρ ὀργὴ θεοῦ ἀπʼ οὐρανοῦ ἐπὶ πᾶσαν ἀσέβειαν καὶ ἀδικίαν ἀνθρώπων τῶν τὴν ἀλήθειαν ἐν ἀδικίᾳ κατεχόντων,"
+  },
+  {
+   "v": 19,
+   "en": "because that which is known of God is revealed in them, for God revealed it to them.",
+   "gr": "διότι τὸ γνωστὸν τοῦ θεοῦ φανερόν ἐστιν ἐν αὐτοῖς, ὁ ⸂θεὸς γὰρ⸃ αὐτοῖς ἐφανέρωσεν."
+  },
+  {
+   "v": 20,
+   "en": "For the invisible things of him since the creation of the world are clearly seen, being perceived through the things that are made, even his everlasting power and divinity, that they may be without excuse.",
+   "gr": "τὰ γὰρ ἀόρατα αὐτοῦ ἀπὸ κτίσεως κόσμου τοῖς ποιήμασιν νοούμενα καθορᾶται, ἥ τε ἀΐδιος αὐτοῦ δύναμις καὶ θειότης, εἰς τὸ εἶναι αὐτοὺς ἀναπολογήτους,"
+  },
+  {
+   "v": 21,
+   "en": "Because knowing God, they didn’t glorify him as God, and didn’t give thanks, but became vain in their reasoning, and their senseless heart was darkened.",
+   "gr": "διότι γνόντες τὸν θεὸν οὐχ ὡς θεὸν ἐδόξασαν ἢ ηὐχαρίστησαν, ἀλλὰ ἐματαιώθησαν ἐν τοῖς διαλογισμοῖς αὐτῶν καὶ ἐσκοτίσθη ἡ ἀσύνετος αὐτῶν καρδία·"
+  },
+  {
+   "v": 22,
+   "en": "Professing themselves to be wise, they became fools,",
+   "gr": "φάσκοντες εἶναι σοφοὶ ἐμωράνθησαν,"
+  },
+  {
+   "v": 23,
+   "en": "and traded the glory of the incorruptible God for the likeness of an image of corruptible man, and of birds, four-footed animals, and creeping things.",
+   "gr": "καὶ ἤλλαξαν τὴν δόξαν τοῦ ἀφθάρτου θεοῦ ἐν ὁμοιώματι εἰκόνος φθαρτοῦ ἀνθρώπου καὶ πετεινῶν καὶ τετραπόδων καὶ ἑρπετῶν."
+  },
+  {
+   "v": 24,
+   "en": "Therefore God also gave them up in the lusts of their hearts to uncleanness, that their bodies should be dishonored among themselves;",
+   "gr": "⸀Διὸ παρέδωκεν αὐτοὺς ὁ θεὸς ἐν ταῖς ἐπιθυμίαις τῶν καρδιῶν αὐτῶν εἰς ἀκαθαρσίαν τοῦ ἀτιμάζεσθαι τὰ σώματα αὐτῶν ἐν ⸀αὐτοῖς,"
+  },
+  {
+   "v": 25,
+   "en": "who exchanged the truth of God for a lie, and worshiped and served the creature rather than the Creator, who is blessed forever. Amen.",
+   "gr": "οἵτινες μετήλλαξαν τὴν ἀλήθειαν τοῦ θεοῦ ἐν τῷ ψεύδει, καὶ ἐσεβάσθησαν καὶ ἐλάτρευσαν τῇ κτίσει παρὰ τὸν κτίσαντα, ὅς ἐστιν εὐλογητὸς εἰς τοὺς αἰῶνας· ἀμήν."
+  },
+  {
+   "v": 26,
+   "en": "For this reason, God gave them up to vile passions. For their women changed the natural function into that which is against nature.",
+   "gr": "Διὰ τοῦτο παρέδωκεν αὐτοὺς ὁ θεὸς εἰς πάθη ἀτιμίας· αἵ τε γὰρ θήλειαι αὐτῶν μετήλλαξαν τὴν φυσικὴν χρῆσιν εἰς τὴν παρὰ φύσιν,"
+  },
+  {
+   "v": 27,
+   "en": "Likewise also the men, leaving the natural function of the woman, burned in their lust toward one another, men doing what is inappropriate with men, and receiving in themselves the due penalty of their error.",
+   "gr": "ὁμοίως τε καὶ οἱ ἄρσενες ἀφέντες τὴν φυσικὴν χρῆσιν τῆς θηλείας ἐξεκαύθησαν ἐν τῇ ὀρέξει αὐτῶν εἰς ἀλλήλους, ἄρσενες ἐν ἄρσεσιν τὴν ἀσχημοσύνην κατεργαζόμενοι καὶ τὴν ἀντιμισθίαν ἣν ἔδει τῆς πλάνης αὐτῶν ἐν ⸀ἑαυτοῖς ἀπολαμβάνοντες."
+  },
+  {
+   "v": 28,
+   "en": "Even as they refused to have God in their knowledge, God gave them up to a reprobate mind, to do those things which are not fitting;",
+   "gr": "Καὶ καθὼς οὐκ ἐδοκίμασαν τὸν θεὸν ἔχειν ἐν ἐπιγνώσει, παρέδωκεν αὐτοὺς ὁ θεὸς εἰς ἀδόκιμον νοῦν, ποιεῖν τὰ μὴ καθήκοντα,"
+  },
+  {
+   "v": 29,
+   "en": "being filled with all unrighteousness, sexual immorality, wickedness, covetousness, malice; full of envy, murder, strife, deceit, evil habits, secret slanderers,",
+   "gr": "πεπληρωμένους πάσῃ ⸀ἀδικίᾳ πονηρίᾳ πλεονεξίᾳ κακίᾳ, μεστοὺς φθόνου φόνου ἔριδος δόλου κακοηθείας, ψιθυριστάς,"
+  },
+  {
+   "v": 30,
+   "en": "backbiters, hateful to God, insolent, arrogant, boastful, inventors of evil things, disobedient to parents,",
+   "gr": "καταλάλους, θεοστυγεῖς, ὑβριστάς, ὑπερηφάνους, ἀλαζόνας, ἐφευρετὰς κακῶν, γονεῦσιν ἀπειθεῖς,"
+  },
+  {
+   "v": 31,
+   "en": "without understanding, covenant breakers, without natural affection, unforgiving, unmerciful;",
+   "gr": "ἀσυνέτους, ἀσυνθέτους, ⸀ἀστόργους, ἀνελεήμονας·"
+  },
+  {
+   "v": 32,
+   "en": "who, knowing the ordinance of God, that those who practice such things are worthy of death, not only do the same, but also approve of those who practice them.",
+   "gr": "οἵτινες τὸ δικαίωμα τοῦ θεοῦ ἐπιγνόντες, ὅτι οἱ τὰ τοιαῦτα πράσσοντες ἄξιοι θανάτου εἰσίν, οὐ μόνον αὐτὰ ποιοῦσιν ἀλλὰ καὶ συνευδοκοῦσιν τοῖς πράσσουσιν."
+  }
+ ],
+ "sourcing": "sourced"
+}

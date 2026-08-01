@@ -1,0 +1,370 @@
+{
+ "id": "tanakh--psalms--78",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 78,
+ "verses": [
+  {
+   "v": 1,
+   "he": "מַשְׂכִּ֗יל לְאָ֫סָ֥ף הַאֲזִ֣ינָה עַ֭מִּי תּוֹרָתִ֑י הַטּ֥וּ אָ֝זְנְכֶ֗ם לְאִמְרֵי־פִֽי׃",
+   "en": "Maschil of Asaph. Give ear, O my people, to my teaching; Incline your ears to the words of my mouth."
+  },
+  {
+   "v": 2,
+   "he": "אֶפְתְּחָ֣ה בְמָשָׁ֣ל פִּ֑י אַבִּ֥יעָה חִ֝יד֗וֹת מִנִּי־קֶֽדֶם׃",
+   "en": "I will open my mouth with a parable; I will utter dark sayings concerning days of old;"
+  },
+  {
+   "v": 3,
+   "he": "אֲשֶׁ֣ר שָׁ֭מַעְנוּ וַנֵּדָעֵ֑ם וַ֝אֲבוֹתֵ֗ינוּ סִפְּרוּ־לָֽנוּ׃",
+   "en": "That which we have heard and known, And our fathers have told us,"
+  },
+  {
+   "v": 4,
+   "he": "לֹ֤א נְכַחֵ֨ד׀ מִבְּנֵיהֶ֗ם לְד֥וֹר אַחֲר֗וֹן מְֽ֭סַפְּרִים תְּהִלּ֣וֹת יְהוָ֑ה וֶעֱזוּז֥וֹ וְ֝נִפְלְאוֹתָ֗יו אֲשֶׁ֣ר עָשָֽׂה׃",
+   "en": "We will not hide from their children, Telling to the generation to come the praises of the LORD, And His strength, and His wondrous works that He hath done. ."
+  },
+  {
+   "v": 5,
+   "he": "וַיָּ֤קֶם עֵד֨וּת׀ בְּֽיַעֲקֹ֗ב וְתוֹרָה֮ שָׂ֤ם בְּיִשְׂרָ֫אֵ֥ל אֲשֶׁ֣ר צִ֭וָּה אֶת־אֲבוֹתֵ֑ינוּ לְ֝הוֹדִיעָ֗ם לִבְנֵיהֶֽם׃",
+   "en": "For He established a testimony in Jacob, And appointed a law in Israel, Which He commanded our fathers, That they should make them known to their children;"
+  },
+  {
+   "v": 6,
+   "he": "לְמַ֤עַן יֵדְע֨וּ׀ דּ֣וֹר אַ֭חֲרוֹן בָּנִ֣ים יִוָּלֵ֑דוּ יָ֝קֻ֗מוּ וִֽיסַפְּר֥וּ לִבְנֵיהֶֽם׃",
+   "en": "That the generation to come might know them, even the children that should be born; Who should arise and tell them to their children,"
+  },
+  {
+   "v": 7,
+   "he": "וְיָשִׂ֥ימוּ בֵֽאלֹהִ֗ים כִּ֫סְלָ֥ם וְלֹ֣א יִ֭שְׁכְּחוּ מַֽעַלְלֵי־אֵ֑ל וּמִצְו‍ֹתָ֥יו יִנְצֹֽרוּ׃",
+   "en": "That they might put their confidence in God, And not forget the works of God, But keep His commandments;"
+  },
+  {
+   "v": 8,
+   "he": "וְלֹ֤א יִהְי֨וּ׀ כַּאֲבוֹתָ֗ם דּוֹר֮ סוֹרֵ֪ר וּמֹ֫רֶ֥ה דּ֭וֹר לֹא־הֵכִ֣ין לִבּ֑וֹ וְלֹא־נֶאֶמְנָ֖ה אֶת־אֵ֣ל רוּחֽוֹ׃",
+   "en": "And might not be as their fathers, A stubborn and rebellious generation; A generation that set not their heart aright, And whose spirit was not stedfast with God."
+  },
+  {
+   "v": 9,
+   "he": "בְּֽנֵי־אֶפְרַ֗יִם נוֹשְׁקֵ֥י רוֹמֵי־קָ֑שֶׁת הָ֝פְכ֗וּ בְּי֣וֹם קְרָֽב׃",
+   "en": "The children of Ephraim were as archers handling the bow, That turned back in the day of battle."
+  },
+  {
+   "v": 10,
+   "he": "לֹ֣א שָׁ֭מְרוּ בְּרִ֣ית אֱלֹהִ֑ים וּ֝בְתוֹרָת֗וֹ מֵאֲנ֥וּ לָלֶֽכֶת׃",
+   "en": "They kept not the covenant of God, And refused to walk in His law;"
+  },
+  {
+   "v": 11,
+   "he": "וַיִּשְׁכְּח֥וּ עֲלִילוֹתָ֑יו וְ֝נִפְלְאוֹתָ֗יו אֲשֶׁ֣ר הֶרְאָֽם׃",
+   "en": "And they forgot His doings, And His wondrous works that He had shown them."
+  },
+  {
+   "v": 12,
+   "he": "נֶ֣גֶד אֲ֭בוֹתָם עָ֣שָׂה פֶ֑לֶא בְּאֶ֖רֶץ מִצְרַ֣יִם שְׂדֵה־צֹֽעַן׃",
+   "en": "Marvellous things did He in the sight of their fathers, In the land of Egypt, in the field of Zoan."
+  },
+  {
+   "v": 13,
+   "he": "בָּ֣קַע יָ֭ם וַיַּֽעֲבִירֵ֑ם וַֽיַּצֶּב־מַ֥יִם כְּמוֹ־נֵֽד׃",
+   "en": "He cleaved the sea, and caused them to pass through; And He made the waters to stand as a heap."
+  },
+  {
+   "v": 14,
+   "he": "וַיַּנְחֵ֣ם בֶּעָנָ֣ן יוֹמָ֑ם וְכָל־הַ֝לַּ֗יְלָה בְּא֣וֹר אֵֽשׁ׃",
+   "en": "By day also He led them with a cloud, And all the night with a light of fire."
+  },
+  {
+   "v": 15,
+   "he": "יְבַקַּ֣ע צֻ֭רִים בַּמִּדְבָּ֑ר וַ֝יַּ֗שְׁקְ כִּתְהֹמ֥וֹת רַבָּֽה׃",
+   "en": "He cleaved rocks in the wilderness, And gave them drink abundantly as out of the great deep."
+  },
+  {
+   "v": 16,
+   "he": "וַיּוֹצִ֣א נוֹזְלִ֣ים מִסָּ֑לַע וַיּ֖וֹרֶד כַּנְּהָר֣וֹת מָֽיִם׃",
+   "en": "He brought streams also out of the rock, And caused waters to run down like rivers."
+  },
+  {
+   "v": 17,
+   "he": "וַיּוֹסִ֣יפוּ ע֖וֹד לַחֲטֹא־ל֑וֹ לַֽמְר֥וֹת עֶ֝לְי֗וֹן בַּצִּיָּֽה׃",
+   "en": "Yet went they on still to sin against Him, To rebel against the Most High in the desert."
+  },
+  {
+   "v": 18,
+   "he": "וַיְנַסּוּ־אֵ֥ל בִּלְבָבָ֑ם לִֽשְׁאָל־אֹ֥כֶל לְנַפְשָֽׁם׃",
+   "en": "And they tried God in their heart By asking food for their craving."
+  },
+  {
+   "v": 19,
+   "he": "וַֽיְדַבְּר֗וּ בֵּֽאלֹ֫הִ֥ים אָ֭מְרוּ הֲי֣וּכַל אֵ֑ל לַעֲרֹ֥ךְ שֻׁ֝לְחָ֗ן בַּמִּדְבָּֽר׃",
+   "en": "Yea, they spoke against God; They said 'Can God prepare a table in the wilderness?"
+  },
+  {
+   "v": 20,
+   "he": "הֵ֤ן הִכָּה־צ֨וּר׀ וַיָּז֣וּבוּ מַיִם֮ וּנְחָלִ֪ים יִ֫שְׁטֹ֥פוּ הֲגַם־לֶ֭חֶם י֣וּכַל תֵּ֑ת אִם־יָכִ֖ין שְׁאֵ֣ר לְעַמּֽוֹ׃",
+   "en": "Behold, He smote the rock, that waters gushed out, And streams overflowed; Can He give bread also? Or will He provide flesh for His people?'"
+  },
+  {
+   "v": 21,
+   "he": "לָכֵ֤ן׀ שָׁמַ֥ע יְהוָ֗ה וַֽיִּתְעַבָּ֥ר וְ֭אֵשׁ נִשְּׂקָ֣ה בְיַעֲקֹ֑ב וְגַם־אַ֝֗ף עָלָ֥ה בְיִשְׂרָאֵֽל׃",
+   "en": "Therefore the LORD heard, and was wroth; And a fire was kindled against Jacob, And anger also went up against Israel;"
+  },
+  {
+   "v": 22,
+   "he": "כִּ֤י לֹ֣א הֶ֭אֱמִינוּ בֵּאלֹהִ֑ים וְלֹ֥א בָ֝טְח֗וּ בִּֽישׁוּעָתֽוֹ׃",
+   "en": "Because they believed not in God, And trusted not in His salvation."
+  },
+  {
+   "v": 23,
+   "he": "וַיְצַ֣ו שְׁחָקִ֣ים מִמָּ֑עַל וְדַלְתֵ֖י שָׁמַ֣יִם פָּתָֽח׃",
+   "en": "And He commanded the skies above, And opened the doors of heaven;"
+  },
+  {
+   "v": 24,
+   "he": "וַיַּמְטֵ֬ר עֲלֵיהֶ֣ם מָ֣ן לֶאֱכֹ֑ל וּדְגַן־שָׁ֝מַ֗יִם נָ֣תַן לָֽמוֹ׃",
+   "en": "And He caused manna to rain upon them for food, And gave them of the corn of heaven."
+  },
+  {
+   "v": 25,
+   "he": "לֶ֣חֶם אַ֭בִּירִים אָ֣כַל אִ֑ישׁ צֵידָ֬ה שָׁלַ֖ח לָהֶ֣ם לָשֹֽׂבַע׃",
+   "en": "Man did eat the bread of the mighty; He sent them provisions to the full."
+  },
+  {
+   "v": 26,
+   "he": "יַסַּ֣ע קָ֭דִים בַּשָּׁמָ֑יִם וַיְנַהֵ֖ג בְּעֻזּ֣וֹ תֵימָֽן׃",
+   "en": "He caused the east wind to set forth in heaven; And by His power He brought on the south wind."
+  },
+  {
+   "v": 27,
+   "he": "וַיַּמְטֵ֬ר עֲלֵיהֶ֣ם כֶּעָפָ֣ר שְׁאֵ֑ר וּֽכְח֥וֹל יַ֝מִּ֗ים ע֣וֹף כָּנָֽף׃",
+   "en": "He caused flesh also to rain upon them as the dust, And winged fowl as the sand of the seas;"
+  },
+  {
+   "v": 28,
+   "he": "וַ֭יַּפֵּל בְּקֶ֣רֶב מַחֲנֵ֑הוּ סָ֝בִ֗יב לְמִשְׁכְּנֹתָֽיו׃",
+   "en": "And He let it fall in the midst of their camp, Round about their dwellings."
+  },
+  {
+   "v": 29,
+   "he": "וַיֹּאכְל֣וּ וַיִּשְׂבְּע֣וּ מְאֹ֑ד וְ֝תַֽאֲוָתָ֗ם יָבִ֥א לָהֶֽם׃",
+   "en": "So they did eat, and were well filled; And He gave them that which they craved."
+  },
+  {
+   "v": 30,
+   "he": "לֹא־זָר֥וּ מִתַּאֲוָתָ֑ם ע֝֗וֹד אָכְלָ֥ם בְּפִיהֶֽם׃",
+   "en": "They were not estranged from their craving, Their food was yet in their mouths,"
+  },
+  {
+   "v": 31,
+   "he": "וְאַ֤ף אֱלֹהִ֨ים׀ עָ֘לָ֤ה בָהֶ֗ם וַֽ֭יַּהֲרֹג בְּמִשְׁמַנֵּיהֶ֑ם וּבַחוּרֵ֖י יִשְׂרָאֵ֣ל הִכְרִֽיעַ׃",
+   "en": "When the anger of God went up against them, And slew of the lustieth among them, And smote down the young men of Israel."
+  },
+  {
+   "v": 32,
+   "he": "בְּכָל־זֹ֭את חָֽטְאוּ־ע֑וֹד וְלֹֽא־הֶ֝אֱמִ֗ינוּ בְּנִפְלְאוֹתָֽיו׃",
+   "en": "For all this they sinned still, And believed not in His wondrous works."
+  },
+  {
+   "v": 33,
+   "he": "וַיְכַל־בַּהֶ֥בֶל יְמֵיהֶ֑ם וּ֝שְׁנוֹתָ֗ם בַּבֶּהָלָֽה׃",
+   "en": "Therefore He ended their days as a breath, And their years in terror."
+  },
+  {
+   "v": 34,
+   "he": "אִם־הֲרָגָ֥ם וּדְרָשׁ֑וּהוּ וְ֝שָׁ֗בוּ וְשִֽׁחֲרוּ־אֵֽל׃",
+   "en": "When He slew them, then they would inquire after Him, And turn back and seek God earnestly."
+  },
+  {
+   "v": 35,
+   "he": "וַֽ֭יִּזְכְּרוּ כִּֽי־אֱלֹהִ֣ים צוּרָ֑ם וְאֵ֥ל עֶ֝לְיוֹן גֹּאֲלָֽם׃",
+   "en": "And they remembered that God was their Rock, And the Most High God their redeemer."
+  },
+  {
+   "v": 36,
+   "he": "וַיְפַתּ֥וּהוּ בְּפִיהֶ֑ם וּ֝בִלְשׁוֹנָ֗ם יְכַזְּבוּ־לֽוֹ׃",
+   "en": "But they beguiled Him with their mouth, And lied unto Him with their tongue."
+  },
+  {
+   "v": 37,
+   "he": "וְ֭לִבָּם לֹא־נָכ֣וֹן עִמּ֑וֹ וְלֹ֥א נֶ֝אֶמְנ֗וּ בִּבְרִיתֽוֹ׃",
+   "en": "For their heart was not stedfast with Him, Neither were they faithful in His covenant."
+  },
+  {
+   "v": 38,
+   "he": "וְה֤וּא רַח֨וּם׀ יְכַפֵּ֥ר עָו‍ֹן֮ וְֽלֹא־יַ֫שְׁחִ֥ית וְ֭הִרְבָּה לְהָשִׁ֣יב אַפּ֑וֹ וְלֹֽא־יָ֝עִיר כָּל־חֲמָתֽוֹ׃",
+   "en": "But He, being full of compassion, forgiveth iniquity, and destroyeth not; Yea, many a time doth He turn His anger away, And doth not stir up all His wrath."
+  },
+  {
+   "v": 39,
+   "he": "וַ֭יִּזְכֹּר כִּי־בָשָׂ֣ר הֵ֑מָּה ר֥וּחַ ה֝וֹלֵ֗ךְ וְלֹ֣א יָשֽׁוּב׃",
+   "en": "So He remembered that they were but flesh, A wind that passeth away, and cometh not again."
+  },
+  {
+   "v": 40,
+   "he": "כַּ֭מָּה יַמְר֣וּהוּ בַמִּדְבָּ֑ר יַ֝עֲצִיב֗וּהוּ בִּֽישִׁימֽוֹן׃",
+   "en": "How oft did they rebel against Him in the wilderness, And grieve Him in the desert!"
+  },
+  {
+   "v": 41,
+   "he": "וַיָּשׁ֣וּבוּ וַיְנַסּ֣וּ אֵ֑ל וּקְד֖וֹשׁ יִשְׂרָאֵ֣ל הִתְווּ׃",
+   "en": "And still again they tried God, And set bounds to the Holy One of Israel."
+  },
+  {
+   "v": 42,
+   "he": "לֹא־זָכְר֥וּ אֶת־יָד֑וֹ י֝֗וֹם אֲ‍ֽשֶׁר־פָּדָ֥ם מִנִּי־צָֽר׃",
+   "en": "They remembered not His hand, Nor the day when He redeemed them from the adversary."
+  },
+  {
+   "v": 43,
+   "he": "אֲשֶׁר־שָׂ֣ם בְּ֭מִצְרַיִם אֹֽתוֹתָ֑יו וּ֝מוֹפְתָ֗יו בִּשְׂדֵה־צֹֽעַן׃",
+   "en": "How He set His signs in Egypt, And His wonders in the field of Zoan; ."
+  },
+  {
+   "v": 44,
+   "he": "וַיַּהֲפֹ֣ךְ לְ֭דָם יְאֹרֵיהֶ֑ם וְ֝נֹזְלֵיהֶ֗ם בַּל־יִשְׁתָּיֽוּן׃",
+   "en": "And turned their rivers into blood, So that they could not drink their streams."
+  },
+  {
+   "v": 45,
+   "he": "יְשַׁלַּ֬ח בָּהֶ֣ם עָ֭רֹב וַיֹּאכְלֵ֑ם וּ֝צְפַרְדֵּ֗עַ וַתַּשְׁחִיתֵֽם׃",
+   "en": "He sent among them swarms of flies, which devoured them; And frogs, which destroyed them."
+  },
+  {
+   "v": 46,
+   "he": "וַיִּתֵּ֣ן לֶחָסִ֣יל יְבוּלָ֑ם וִֽ֝יגִיעָ֗ם לָאַרְבֶּֽה׃",
+   "en": "He gave also their increase unto the caterpillar, And their labour unto the locust."
+  },
+  {
+   "v": 47,
+   "he": "יַהֲרֹ֣ג בַּבָּרָ֣ד גַּפְנָ֑ם וְ֝שִׁקְמוֹתָ֗ם בַּֽחֲנָמַֽל׃",
+   "en": "He destroyed their vines with hail, And their sycamore-trees with frost."
+  },
+  {
+   "v": 48,
+   "he": "וַיַּסְגֵּ֣ר לַבָּרָ֣ד בְּעִירָ֑ם וּ֝מִקְנֵיהֶ֗ם לָרְשָׁפִֽים׃",
+   "en": "He gave over their cattle also to the hail, And their flocks to fiery bolts."
+  },
+  {
+   "v": 49,
+   "he": "יְשַׁלַּח־בָּ֨ם׀ חֲר֬וֹן אַפּ֗וֹ עֶבְרָ֣ה וָזַ֣עַם וְצָרָ֑ה מִ֝שְׁלַ֗חַת מַלְאֲכֵ֥י רָעִֽים׃",
+   "en": "He sent forth upon them the fierceness of His anger, Wrath, and indignation, and trouble, A sending of messengers of evil."
+  },
+  {
+   "v": 50,
+   "he": "יְפַלֵּ֥ס נָתִ֗יב לְאַ֫פּ֥וֹ לֹא־חָשַׂ֣ךְ מִמָּ֣וֶת נַפְשָׁ֑ם וְ֝חַיָּתָ֗ם לַדֶּ֥בֶר הִסְגִּֽיר׃",
+   "en": "He levelled a path for His anger; He spared not their soul from death, But gave their life over to the pestilence;"
+  },
+  {
+   "v": 51,
+   "he": "וַיַּ֣ךְ כָּל־בְּכ֣וֹר בְּמִצְרָ֑יִם רֵאשִׁ֥ית א֝וֹנִ֗ים בְּאָהֳלֵי־חָֽם׃",
+   "en": "And smote all the first-born in Egypt, The first-fruits of their strength in the tents of Ham;"
+  },
+  {
+   "v": 52,
+   "he": "וַיַּסַּ֣ע כַּצֹּ֣אן עַמּ֑וֹ וַֽיְנַהֲגֵ֥ם כַּ֝עֵ֗דֶר בַּמִּדְבָּֽר׃",
+   "en": "But He made His own people to go forth like sheep, And guided them in the wilderness like a flock."
+  },
+  {
+   "v": 53,
+   "he": "וַיַּנְחֵ֣ם לָ֭בֶטַח וְלֹ֣א פָחָ֑דוּ וְאֶת־א֝וֹיְבֵיהֶ֗ם כִּסָּ֥ה הַיָּֽם׃",
+   "en": "And He led them safely, and they feared not; But the sea overwhelmed their enemies."
+  },
+  {
+   "v": 54,
+   "he": "וַ֭יְבִיאֵם אֶל־גְּב֣וּל קָדְשׁ֑וֹ הַר־זֶ֝֗ה קָנְתָ֥ה יְמִינֽוֹ׃",
+   "en": "And He brought them to His holy border, To the mountain, which His right hand had gotten."
+  },
+  {
+   "v": 55,
+   "he": "וַיְגָ֤רֶשׁ מִפְּנֵיהֶ֨ם׀ גּוֹיִ֗ם וַֽ֭יַּפִּילֵם בְּחֶ֣בֶל נַחֲלָ֑ה וַיַּשְׁכֵּ֥ן בְּ֝אָהֳלֵיהֶ֗ם שִׁבְטֵ֥י יִשְׂרָאֵֽל׃",
+   "en": "He drove out the nations also before them, And allotted them for an inheritance by line, And made the tribes of Israel to dwell in their tents."
+  },
+  {
+   "v": 56,
+   "he": "וַיְנַסּ֣וּ וַ֭יַּמְרוּ אֶת־אֱלֹהִ֣ים עֶלְי֑וֹן וְ֝עֵדוֹתָ֗יו לֹ֣א שָׁמָֽרוּ׃",
+   "en": "Yet they tried and provoked God, the Most High, And kept not His testimonies;"
+  },
+  {
+   "v": 57,
+   "he": "וַיִּסֹּ֣גוּ וַֽ֭יִּבְגְּדוּ כַּאֲבוֹתָ֑ם נֶ֝הְפְּכ֗וּ כְּקֶ֣שֶׁת רְמִיָּֽה׃",
+   "en": "But turned back, and dealt treacherously like their fathers; They were turned aside like a deceitful bow."
+  },
+  {
+   "v": 58,
+   "he": "וַיַּכְעִיס֥וּהוּ בְּבָמוֹתָ֑ם וּ֝בִפְסִילֵיהֶ֗ם יַקְנִיאֽוּהוּ׃",
+   "en": "For they provoked Him with their high places, And moved Him to jealousy with their graven images."
+  },
+  {
+   "v": 59,
+   "he": "שָׁמַ֣ע אֱ֭לֹהִים וַֽיִּתְעַבָּ֑ר וַיִּמְאַ֥ס מְ֝אֹ֗ד בְּיִשְׂרָאֵֽל׃",
+   "en": "God heard, and was wroth, And He greatly abhorred Israel;"
+  },
+  {
+   "v": 60,
+   "he": "וַ֭יִּטֹּשׁ מִשְׁכַּ֣ן שִׁל֑וֹ אֹ֝֗הֶל שִׁכֵּ֥ן בָּאָדָֽם׃",
+   "en": "And He forsook the tabernacle of Shiloh, The tent which He had made to dwell among men;"
+  },
+  {
+   "v": 61,
+   "he": "וַיִּתֵּ֣ן לַשְּׁבִ֣י עֻזּ֑וֹ וְֽתִפְאַרְתּ֥וֹ בְיַד־צָֽר׃",
+   "en": "And delivered His strength into captivity, And His glory into the adversary's hand."
+  },
+  {
+   "v": 62,
+   "he": "וַיַּסְגֵּ֣ר לַחֶ֣רֶב עַמּ֑וֹ וּ֝בְנַחֲלָת֗וֹ הִתְעַבָּֽר׃",
+   "en": "He gave His people over also unto the sword; And was wroth with His inheritance."
+  },
+  {
+   "v": 63,
+   "he": "בַּחוּרָ֥יו אָֽכְלָה־אֵ֑שׁ וּ֝בְתוּלֹתָ֗יו לֹ֣א הוּלָּֽלוּ׃",
+   "en": "Fire devoured their young men; And their virgins had no marriage-song."
+  },
+  {
+   "v": 64,
+   "he": "כֹּ֭הֲנָיו בַּחֶ֣רֶב נָפָ֑לוּ וְ֝אַלְמְנֹתָ֗יו לֹ֣א תִבְכֶּֽינָה׃",
+   "en": "Their priests fell by the sword; And their widows made no lamentation. ."
+  },
+  {
+   "v": 65,
+   "he": "וַיִּקַ֖ץ כְּיָשֵׁ֥ן׀ אֲדֹנָ֑י כְּ֝גִבּ֗וֹר מִתְרוֹנֵ֥ן מִיָּֽיִן׃",
+   "en": "Then the Lord awaked as one asleep, Like a mighty man recovering from wine."
+  },
+  {
+   "v": 66,
+   "he": "וַיַּךְ־צָרָ֥יו אָח֑וֹר חֶרְפַּ֥ת ע֝וֹלָ֗ם נָ֣תַן לָֽמוֹ׃",
+   "en": "And He smote His adversaries backward; He put upon them a perpetual reproach."
+  },
+  {
+   "v": 67,
+   "he": "וַ֭יִּמְאַס בְּאֹ֣הֶל יוֹסֵ֑ף וּֽבְשֵׁ֥בֶט אֶ֝פְרַ֗יִם לֹ֣א בָחָֽר׃",
+   "en": "Moreover He abhorred the tent of Joseph, And chose not the tribe of Ephraim;"
+  },
+  {
+   "v": 68,
+   "he": "וַ֭יִּבְחַר אֶת־שֵׁ֣בֶט יְהוּדָ֑ה אֶֽת־הַ֥ר צִ֝יּ֗וֹן אֲשֶׁ֣ר אָהֵֽב׃",
+   "en": "But chose the tribe of Judah, The mount Zion which He loved."
+  },
+  {
+   "v": 69,
+   "he": "וַיִּ֣בֶן כְּמוֹ־רָ֭מִים מִקְדָּשׁ֑וֹ כְּ֝אֶ֗רֶץ יְסָדָ֥הּ לְעוֹלָֽם׃",
+   "en": "And He built His sanctuary like the heights, Like the earth which He hath founded for ever."
+  },
+  {
+   "v": 70,
+   "he": "וַ֭יִּבְחַר בְּדָוִ֣ד עַבְדּ֑וֹ וַ֝יִּקָּחֵ֗הוּ מִֽמִּכְלְאֹ֥ת צֹֽאן׃",
+   "en": "He chose David also His servant, And took him from the sheepfolds;"
+  },
+  {
+   "v": 71,
+   "he": "מֵאַחַ֥ר עָל֗וֹת הֱ֫בִיא֥וֹ לִ֭רְעוֹת בְּיַעֲקֹ֣ב עַמּ֑וֹ וּ֝בְיִשְׂרָאֵ֗ל נַחֲלָתֽוֹ׃",
+   "en": "From following the ewes that give suck He brought him, To be shepherd over Jacob His people, and Israel His inheritance."
+  },
+  {
+   "v": 72,
+   "he": "וַ֭יִּרְעֵם כְּתֹ֣ם לְבָב֑וֹ וּבִתְבוּנ֖וֹת כַּפָּ֣יו יַנְחֵֽם׃",
+   "en": "So he shepherded them according to the integrity of his heart; And lead them by the skilfulness of his hands."
+  }
+ ],
+ "sourcing": "sourced"
+}

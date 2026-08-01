@@ -1,0 +1,280 @@
+{
+ "id": "tanakh--1-chronicles--1",
+ "work": "tanakh",
+ "n": 38,
+ "slug": "1-chronicles",
+ "c": 1,
+ "verses": [
+  {
+   "v": 1,
+   "he": "אָדָ֥ם שֵׁ֖ת אֱנֽוֹשׁ׃",
+   "en": "ADAM, SETH, Enosh;"
+  },
+  {
+   "v": 2,
+   "he": "קֵינָ֥ן מַהֲלַלְאֵ֖ל יָֽרֶד׃",
+   "en": "Kenan, Mahalalel, Jared;"
+  },
+  {
+   "v": 3,
+   "he": "חֲנ֥וֹךְ מְתוּשֶׁ֖לַח לָֽמֶךְ׃",
+   "en": "Enoch, Methuselah, Lamech;"
+  },
+  {
+   "v": 4,
+   "he": "נֹ֥חַ שֵׁ֖ם חָ֥ם וָיָֽפֶת׃",
+   "en": "Noah, Shem, Ham, and Japheth."
+  },
+  {
+   "v": 5,
+   "he": "בְּנֵ֣י יֶ֔פֶת גֹּ֣מֶר וּמָג֔וֹג וּמָדַ֖י וְיָוָ֣ן וְתֻבָ֑ל וּמֶ֖שֶׁךְ וְתִירָֽס׃",
+   "en": "The sons of Japheth: Gomer, and Magog, and Madai, and Javan, and Tubal, and Meshech, and Tiras."
+  },
+  {
+   "v": 6,
+   "he": "וּבְנֵ֖י גֹּ֑מֶר אַשְׁכֲּנַ֥ז וְדִיפַ֖ת וְתוֹגַרְמָֽה׃",
+   "en": "And the sons of Gomer: Ashkenaz, and Diphath, and Togarmah."
+  },
+  {
+   "v": 7,
+   "he": "וּבְנֵ֥י יָוָ֖ן אֱלִישָׁ֣ה וְתַרְשִׁ֑ישָׁה כִּתִּ֖ים וְרוֹדָנִֽים׃",
+   "en": "And the sons of Javan: Elishah, and Tarshish, Kittim, and Rodanim."
+  },
+  {
+   "v": 8,
+   "he": "בְּנֵ֖י חָ֑ם כּ֥וּשׁ וּמִצְרַ֖יִם פּ֥וּט וּכְנָֽעַן׃",
+   "en": "The sons of Ham: Cush, and Mizraim, Put, and Canaan."
+  },
+  {
+   "v": 9,
+   "he": "וּבְנֵ֣י כ֔וּשׁ סְבָא֙ וַחֲוִילָ֔ה וְסַבְתָּ֥א וְרַעְמָ֖א וְסַבְתְּכָ֑א וּבְנֵ֥י רַעְמָ֖א שְׁבָ֥א וּדְדָֽן׃",
+   "en": "And the sons of Cush: Seba, and Havilah, and Sabta, and Raama, and Sabteca. And the sons of Raama: Sheba, and Dedan."
+  },
+  {
+   "v": 10,
+   "he": "וְכ֖וּשׁ יָלַ֣ד אֶת־נִמְר֑וֹד ה֣וּא הֵחֵ֔ל לִהְי֥וֹת גִּבּ֖וֹר בָּאָֽרֶץ׃",
+   "en": "And Cush begot Nimrod; he began to be a mighty one in the earth."
+  },
+  {
+   "v": 11,
+   "he": "וּמִצְרַ֡יִם יָלַ֞ד אֶת־לודיים [לוּדִ֧ים] וְאֶת־עֲנָמִ֛ים וְאֶת־לְהָבִ֖ים וְאֶת־נַפְתֻּחִֽים׃",
+   "en": "And Mizraim begot Ludim, and Anamim, and Lehabim, and Naphtuhim,"
+  },
+  {
+   "v": 12,
+   "he": "וְֽאֶת־פַּתְרֻסִ֞ים וְאֶת־כַּסְלֻחִ֗ים אֲשֶׁ֨ר יָצְא֥וּ מִשָּׁ֛ם פְּלִשְׁתִּ֖ים וְאֶת־כַּפְתֹּרִֽים׃",
+   "en": "and Pathrusim, and Casluhim—from whence came the Philistines—and Caphtorim."
+  },
+  {
+   "v": 13,
+   "he": "וּכְנַ֗עַן יָלַ֛ד אֶת־צִיד֥וֹן בְּכֹר֖וֹ וְאֶת־חֵֽת׃",
+   "en": "And Canaan begot Zidon his first-born, and Heth;"
+  },
+  {
+   "v": 14,
+   "he": "וְאֶת־הַיְבוּסִי֙ וְאֶת־הָ֣אֱמֹרִ֔י וְאֵ֖ת הַגִּרְגָּשִֽׁי׃",
+   "en": "and the Jebusite, and the Amorite, and the Girgashite;"
+  },
+  {
+   "v": 15,
+   "he": "וְאֶת־הַחִוִּ֥י וְאֶת־הַֽעַרְקִ֖י וְאֶת־הַסִּינִֽי׃",
+   "en": "and the Hivite, and the Arkite, and the Sinite;"
+  },
+  {
+   "v": 16,
+   "he": "וְאֶת־הָאַרְוָדִ֥י וְאֶת־הַצְּמָרִ֖י וְאֶת־הַֽחֲמָתִֽי׃",
+   "en": "and the Arvadite, and the Zemarite, and the Hamathite."
+  },
+  {
+   "v": 17,
+   "he": "בְּנֵ֣י שֵׁ֔ם עֵילָ֣ם וְאַשּׁ֔וּר וְאַרְפַּכְשַׁ֖ד וְל֣וּד וַאֲרָ֑ם וְע֥וּץ וְח֖וּל וְגֶ֥תֶר וָמֶֽשֶׁךְ׃",
+   "en": "The Sons of Shem: Elam, and Asshur, and Arpachshad, and Lud, and Aram, and Uz, and Hul, and Gether, and Meshech."
+  },
+  {
+   "v": 18,
+   "he": "וְאַרְפַּכְשַׁ֖ד יָלַ֣ד אֶת־שָׁ֑לַח וְשֶׁ֖לַח יָלַ֥ד אֶת־עֵֽבֶר׃",
+   "en": "And Arpachshad begot Shelah, and Shelah begot Eber."
+  },
+  {
+   "v": 19,
+   "he": "וּלְעֵ֥בֶר יֻלַּ֖ד שְׁנֵ֣י בָנִ֑ים שֵׁ֣ם הָאֶחָ֞ד פֶּ֗לֶג כִּ֤י בְיָמָיו֙ נִפְלְגָ֣ה הָאָ֔רֶץ וְשֵׁ֥ם אָחִ֖יו יָקְטָֽן׃",
+   "en": "And unto Eber were born two sons: the name of the one was Peleg; for in his days the earth was divided; and his brother’s name was Joktan."
+  },
+  {
+   "v": 20,
+   "he": "וְיָקְטָ֣ן יָלַ֔ד אֶת־אַלְמוֹדָ֖ד וְאֶת־שָׁ֑לֶף וְאֶת־חֲצַרְמָ֖וֶת וְאֶת־יָֽרַח׃",
+   "en": "And Joktan begot Almodad, and Sheleph, and Hazarmaveth, and Jerah;"
+  },
+  {
+   "v": 21,
+   "he": "וְאֶת־הֲדוֹרָ֥ם וְאֶת־אוּזָ֖ל וְאֶת־דִּקְלָֽה׃",
+   "en": "and Hadoram, and Uzal, and Diklah;"
+  },
+  {
+   "v": 22,
+   "he": "וְאֶת־עֵיבָ֥ל וְאֶת־אֲבִימָאֵ֖ל וְאֶת־שְׁבָֽא׃",
+   "en": "and Ebal, and Abimael, and Sheba;"
+  },
+  {
+   "v": 23,
+   "he": "וְאֶת־אוֹפִ֥יר וְאֶת־חֲוִילָ֖ה וְאֶת־יוֹבָ֑ב כָּל־אֵ֖לֶּה בְּנֵ֥י יָקְטָֽן׃",
+   "en": "and Ophir, and Havilah, and Jobab. All these were the sons of Joktan."
+  },
+  {
+   "v": 24,
+   "he": "שֵׁ֥ם׀ אַרְפַּכְשַׁ֖ד שָֽׁלַח׃",
+   "en": "Shem, Arpachshad, Shelah;"
+  },
+  {
+   "v": 25,
+   "he": "עֵ֥בֶר פֶּ֖לֶג רְעֽוּ׃",
+   "en": "Eber, Peleg, Reu;"
+  },
+  {
+   "v": 26,
+   "he": "שְׂר֥וּג נָח֖וֹר תָּֽרַח׃",
+   "en": "Serug, Nahor, Terah;"
+  },
+  {
+   "v": 27,
+   "he": "אַבְרָ֖ם ה֥וּא אַבְרָהָֽם׃",
+   "en": "Abram—the same is Abraham."
+  },
+  {
+   "v": 28,
+   "he": "בְּנֵי֙ אַבְרָהָ֔ם יִצְחָ֖ק וְיִשְׁמָעֵֽאל׃",
+   "en": "The sons of Abraham: Isaac, and Ishmael."
+  },
+  {
+   "v": 29,
+   "he": "אֵ֖לֶּה תֹּלְדוֹתָ֑ם בְּכ֤וֹר יִשְׁמָעֵאל֙ נְבָי֔וֹת וְקֵדָ֥ר וְאַדְבְּאֵ֖ל וּמִבְשָֽׂם׃",
+   "en": "These are their generations: the first-born of Ishmael, Nebaioth; then Kedar, and Adbeel, and Mibsam,"
+  },
+  {
+   "v": 30,
+   "he": "מִשְׁמָ֣ע וְדוּמָ֔ה מַשָּׂ֖א חֲדַ֥ד וְתֵימָֽא׃",
+   "en": "Mishma, and Dumah, Massa, Hadad, and Tema,"
+  },
+  {
+   "v": 31,
+   "he": "יְט֥וּר נָפִ֖ישׁ וָקֵ֑דְמָה אֵ֥לֶּה הֵ֖ם בְּנֵ֥י יִשְׁמָעֵֽאל׃",
+   "en": "Jetur, Naphish, and Kedem. These are the sons of Ishmael."
+  },
+  {
+   "v": 32,
+   "he": "וּבְנֵ֨י קְטוּרָ֜ה פִּילֶ֣גֶשׁ אַבְרָהָ֗ם יָלְדָ֞ה אֶת־זִמְרָ֧ן וְיָקְשָׁ֛ן וּמְדָ֥ן וּמִדְיָ֖ן וְיִשְׁבָּ֣ק וְשׁ֑וּחַ וּבְנֵ֥י יָקְשָׁ֖ן שְׁבָ֥א וּדְדָֽן׃",
+   "en": "And the sons of Keturah, Abraham’s concubine: she bore Zimran, and Jokshan, and Medan, and Midian, and Ishbak, and Shuah. And the sons of Jokshan: Sheba, and Dedan."
+  },
+  {
+   "v": 33,
+   "he": "וּבְנֵ֣י מִדְיָ֗ן עֵיפָ֤ה וָעֵ֙פֶר֙ וַחֲנ֔וֹךְ וַאֲבִידָ֖ע וְאֶלְדָּעָ֑ה כָּל־אֵ֖לֶּה בְּנֵ֥י קְטוּרָֽה׃",
+   "en": "And the sons of Midian: Ephah, and Epher, and Hanoch, and Abida, and Eldaah. All these were the sons of Keturah."
+  },
+  {
+   "v": 34,
+   "he": "וַיּ֥וֹלֶד אַבְרָהָ֖ם אֶת־יִצְחָ֑ק בְּנֵ֣י יִצְחָ֔ק עֵשָׂ֖ו וְיִשְׂרָאֵֽל׃",
+   "en": "And Abraham begot Isaac. The sons of Isaac: Esau, and Israel."
+  },
+  {
+   "v": 35,
+   "he": "בְּנֵ֖י עֵשָׂ֑ו אֱלִיפַ֛ז רְעוּאֵ֥ל וִיע֖וּשׁ וְיַעְלָ֥ם וְקֹֽרַח׃",
+   "en": "The sons of Esau: Eliphaz, Reuel, and Jeush, and Jalam and Korah."
+  },
+  {
+   "v": 36,
+   "he": "בְּנֵ֖י אֱלִיפָ֑ז תֵּימָ֤ן וְאוֹמָר֙ צְפִ֣י וְגַעְתָּ֔ם קְנַ֖ז וְתִמְנָ֥ע וַעֲמָלֵֽק׃",
+   "en": "The sons of Eliphaz: Teman, and Omar, Zephi, and Gatam, Kenaz, and Timna, and Amalek."
+  },
+  {
+   "v": 37,
+   "he": "בְּנֵ֖י רְעוּאֵ֑ל נַ֥חַת זֶ֖רַח שַׁמָּ֥ה וּמִזָּֽה׃",
+   "en": "The sons of Reuel: Nahath, Zerah, Shammah, and Mizzah."
+  },
+  {
+   "v": 38,
+   "he": "וּבְנֵ֣י שֵׂעִ֔יר לוֹטָ֥ן וְשׁוֹבָ֖ל וְצִבְע֣וֹן וַֽעֲנָ֑ה וְדִישֹׁ֥ן וְאֵ֖צֶר וְדִישָֽׁן׃",
+   "en": "And the sons of Seir: Lotan, and Shobal, and Zibeon, and Anah, and Dishon, and Ezer, and Dishan."
+  },
+  {
+   "v": 39,
+   "he": "וּבְנֵ֥י לוֹטָ֖ן חֹרִ֣י וְהוֹמָ֑ם וַאֲח֥וֹת לוֹטָ֖ן תִּמְנָֽע׃",
+   "en": "And the sons of Lotan: Hori, and Homam; and Timna was Lotan’s sister."
+  },
+  {
+   "v": 40,
+   "he": "בְּנֵ֣י שׁוֹבָ֔ל עַלְיָ֧ן וּמָנַ֛חַת וְעֵיבָ֖ל שְׁפִ֣י וְאוֹנָ֑ם וּבְנֵ֥י צִבְע֖וֹן אַיָּ֥ה וַעֲנָֽה׃",
+   "en": "The sons of Shobal: Alian, and Manahath, and Ebal, Shephi, and Onam. And the sons of Zibeon: Aiah, and Anah."
+  },
+  {
+   "v": 41,
+   "he": "בְּנֵ֥י עֲנָ֖ה דִּישׁ֑וֹן וּבְנֵ֣י דִישׁ֔וֹן חַמְרָ֥ן וְאֶשְׁבָּ֖ן וְיִתְרָ֥ן וּכְרָֽן׃",
+   "en": "The sons of Anah: Dishon. And the sons of Dishon: Hamran, and Eshban, and Ithran, and Cheran."
+  },
+  {
+   "v": 42,
+   "he": "בְּֽנֵי־אֵ֔צֶר בִּלְהָ֥ן וְזַעֲוָ֖ן יַעֲקָ֑ן בְּנֵ֥י דִישׁ֖וֹן ע֥וּץ וַאֲרָֽן׃",
+   "en": "The sons of Ezer: Bilhan, and Zaavan, Jaakan. The sons of Dishan: Uz, and Aran."
+  },
+  {
+   "v": 43,
+   "he": "וְאֵ֣לֶּה הַמְּלָכִ֗ים אֲשֶׁ֤ר מָלְכוּ֙ בְּאֶ֣רֶץ אֱד֔וֹם לִפְנֵ֥י מְלָךְ־מֶ֖לֶךְ לִבְנֵ֣י יִשְׂרָאֵ֑ל בֶּ֚לַע בֶּן־בְּע֔וֹר וְשֵׁ֥ם עִיר֖וֹ דִּנְהָֽבָה׃",
+   "en": "Now these are the kings that reigned in the land of Edom, before their reigned any king over the children of Israel: Bela the son of Beor; and the name of his city was Dinhabah."
+  },
+  {
+   "v": 44,
+   "he": "וַיָּ֖מָת בָּ֑לַע וַיִּמְלֹ֣ךְ תַּחְתָּ֔יו יוֹבָ֥ב בֶּן־זֶ֖רַח מִבָּצְרָֽה׃",
+   "en": "And Bela died, and Jobab the son of Zerah of Bozrah reigned in his stead."
+  },
+  {
+   "v": 45,
+   "he": "וַיָּ֖מָת יוֹבָ֑ב וַיִּמְלֹ֣ךְ תַּחְתָּ֔יו חוּשָׁ֖ם מֵאֶ֥רֶץ הַתֵּימָנִֽי׃",
+   "en": "And Jobab died, and Husham of the land of the Temanites reigned in his stead."
+  },
+  {
+   "v": 46,
+   "he": "וַיָּ֖מָת חוּשָׁ֑ם וַיִּמְלֹ֨ךְ תַּחְתָּ֜יו הֲדַ֣ד בֶּן־בְּדַ֗ד הַמַּכֶּ֤ה אֶת־מִדְיָן֙ בִּשְׂדֵ֣ה מוֹאָ֔ב וְשֵׁ֥ם עִיר֖וֹ עיות [עֲוִֽית]׃",
+   "en": "And Husham died, and Hadad the son of Bedad, who smote Midian in the field of Moab, reigned in his stead; and the name of his city was Avith."
+  },
+  {
+   "v": 47,
+   "he": "וַיָּ֖מָת הֲדָ֑ד וַיִּמְלֹ֣ךְ תַּחְתָּ֔יו שַׂמְלָ֖ה מִמַּשְׂרֵקָֽה׃",
+   "en": "And Hadad died, and Samlah of Masrekah reigned in his stead."
+  },
+  {
+   "v": 48,
+   "he": "וַיָּ֖מָת שַׂמְלָ֑ה וַיִּמְלֹ֣ךְ תַּחְתָּ֔יו שָׁא֖וּל מֵרְחֹב֥וֹת הַנָּהָֽר׃",
+   "en": "And Samlah died, and Shaul of Rehoboth by the River reigned in his stead."
+  },
+  {
+   "v": 49,
+   "he": "וַיָּ֖מָת שָׁא֑וּל וַיִּמְלֹ֣ךְ תַּחְתָּ֔יו בַּ֥עַל חָנָ֖ן בֶּן־עַכְבּֽוֹר׃",
+   "en": "And Shaul died, and Baal-hanan the son of Achbor reigned in his stead."
+  },
+  {
+   "v": 50,
+   "he": "וַיָּ֙מָת֙ בַּ֣עַל חָנָ֔ן וַיִּמְלֹ֤ךְ תַּחְתָּיו֙ הֲדַ֔ד וְשֵׁ֥ם עִיר֖וֹ פָּ֑עִי וְשֵׁ֨ם אִשְׁתּ֤וֹ מְהֵיטַבְאֵל֙ בַּת־מַטְרֵ֔ד בַּ֖ת מֵ֥י זָהָֽב׃",
+   "en": "And Baal-hanan died, and Hadad reigned in his stead; and the name of his city was Pai; and his wife’s name was Mehetabel, the daughter of Matred, the daughter of Mezahab."
+  },
+  {
+   "v": 51,
+   "he": "וַיָּ֖מָת הֲדָ֑ד וַיִּהְיוּ֙ אַלּוּפֵ֣י אֱד֔וֹם אַלּ֥וּף תִּמְנָ֛ע אַלּ֥וּף עליה [עַֽלְוָ֖ה] אַלּ֥וּף יְתֵֽת׃",
+   "en": "And Hadad died. And the chiefs of Edom were: the chief of Timna, the chief of Alvah, the chief of Jetheth;"
+  },
+  {
+   "v": 52,
+   "he": "אַלּ֧וּף אָהֳלִיבָמָ֛ה אַלּ֥וּף אֵלָ֖ה אַלּ֥וּף פִּינֹֽן׃",
+   "en": "the chief of Oholibamah, the chief of Elah, the chief of Pinon;"
+  },
+  {
+   "v": 53,
+   "he": "אַלּ֥וּף קְנַ֛ז אַלּ֥וּף תֵּימָ֖ן אַלּ֣וּף מִבְצָֽר׃",
+   "en": "the chief of Kenaz, the chief of Teman, the chief of Mibzar;"
+  },
+  {
+   "v": 54,
+   "he": "אַלּ֥וּף מַגְדִּיאֵ֖ל אַלּ֣וּף עִירָ֑ם אֵ֖לֶּה אַלּוּפֵ֥י אֱדֽוֹם׃",
+   "en": "the chief of Magdiel, the chief of Iram. These are the chiefs of Edom."
+  }
+ ],
+ "sourcing": "sourced"
+}

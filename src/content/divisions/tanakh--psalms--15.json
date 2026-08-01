@@ -1,0 +1,35 @@
+{
+ "id": "tanakh--psalms--15",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 15,
+ "verses": [
+  {
+   "v": 1,
+   "he": "מִזְמ֗וֹר לְדָ֫וִ֥ד יְ֭הֹוָה מִי־יָג֣וּר בְּאָהֳלֶ֑ךָ מִֽי־יִ֝שְׁכֹּ֗ן בְּהַ֣ר קָדְשֶֽׁךָ׃",
+   "en": "A Psalm of David. LORD, who shall sojourn in Thy tabernacle? Who shall dwell upon Thy holy mountain?"
+  },
+  {
+   "v": 2,
+   "he": "הוֹלֵ֣ךְ תָּ֭מִים וּפֹעֵ֥ל צֶ֑דֶק וְדֹבֵ֥ר אֱ֝מֶ֗ת בִּלְבָבֽוֹ׃",
+   "en": "He that walketh uprightly, and worketh righteousness, And speaketh truth in his heart;"
+  },
+  {
+   "v": 3,
+   "he": "לֹֽא־רָגַ֨ל׀ עַל־לְשֹׁנ֗וֹ לֹא־עָשָׂ֣ה לְרֵעֵ֣הוּ רָעָ֑ה וְ֝חֶרְפָּ֗ה לֹא־נָשָׂ֥א עַל־קְרֹֽבוֹ׃",
+   "en": "That hath no slander upon his tongue, Nor doeth evil to his fellow, Nor taketh up a reproach against his neighbour;"
+  },
+  {
+   "v": 4,
+   "he": "נִבְזֶ֤ה׀ בְּֽעֵ֘ינָ֤יו נִמְאָ֗ס וְאֶת־יִרְאֵ֣י יְהוָ֣ה יְכַבֵּ֑ד נִשְׁבַּ֥ע לְ֝הָרַ֗ע וְלֹ֣א יָמִֽר׃",
+   "en": "In whose eyes a vile person is despised, But he honoureth them that fear the LORD; He that sweareth to his own hurt, and changeth not;"
+  },
+  {
+   "v": 5,
+   "he": "כַּסְפּ֤וֹ׀ לֹא־נָתַ֣ן בְּנֶשֶׁךְ֮ וְשֹׁ֥חַד עַל־נָקִ֗י לֹ֥א לָ֫קָ֥ח עֹֽשֵׂה־אֵ֑לֶּה לֹ֖א יִמּ֣וֹט לְעוֹלָֽם׃",
+   "en": "He that putteth not out his money on interest, Nor taketh a bribe against the innocent. He that doeth these things shall never be moved."
+  }
+ ],
+ "sourcing": "sourced"
+}

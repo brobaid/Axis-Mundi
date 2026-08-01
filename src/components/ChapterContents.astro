@@ -1,0 +1,211 @@
+---
+import ReaderChrome from './ReaderChrome.astro';
+import {
+  availableModes,
+  defaultMode,
+  divisionHeading,
+  langTag,
+  originalLang,
+  walk,
+  type DivisionIndex,
+  type EditionLine,
+  type WorkData,
+} from '../lib/reader-model';
+import { fontFor } from '../lib/scripts';
+
+/**
+ * A book's chapters, with the words each one opens on.
+ *
+ * A hundred and fifty numbered links is a list nobody can find anything in.
+ * The preview is the chapter's own first verse, lifted at ingestion and never
+ * authored here, so a reader looking for the one about the lamp can see it
+ * rather than remember which number it was.
+ */
+interface Props {
+  work: WorkData;
+  division: DivisionIndex;
+  editions: readonly (EditionLine & { title: string; author?: string | undefined })[];
+}
+const { work, division, editions } = Astro.props;
+
+const heading = divisionHeading(work, division);
+const chapters = division.chapters ?? [];
+const orig = originalLang(work);
+const scriptFont = fontFor(work.script);
+const { prev, next, endsSection } = walk(work, division);
+const label = work.chapter_label ?? 'chapter';
+const gaps = division.english_gaps + division.original_gaps;
+---
+
+<article class="shell rd rd-chapters">
+  <header class="rd__head">
+    <p class="eyebrow">
+      <a class="tap" href="/read">Reading Room</a>
+      <span aria-hidden="true"> · </span>
+      <a class="tap" href={`/read/${work.id}`}>{work.title}</a>
+    </p>
+    <h1 class="rd__title">
+      {heading}
+      {
+        division.name_original !== undefined && (
+          <span
+            class="rd__title-original"
+            lang={langTag(work, orig)}
+            dir={work.direction}
+            style={`font-family: ${scriptFont}`}
+          >
+            {division.name_original}
+          </span>
+        )
+      }
+    </h1>
+    <p class="caption rd__count">
+      {chapters.length} {label}s · {division.verses.toLocaleString('en')} verses
+      {
+        gaps > 0 &&
+          ` · ${gaps} ${gaps === 1 ? 'verse stands' : 'verses stand'} on one side only`
+      }
+    </p>
+  </header>
+
+  <ReaderChrome
+    modes={availableModes(work)}
+    mode={defaultMode(work)}
+    editions={editions}
+    englishPending={work.english_pending}
+    note={work.note}
+  />
+
+  <ol class="rd-chapters__list" role="list">
+    {
+      chapters.map((chapter) => (
+        <li>
+          <a class="rd-chapters__item" href={`/read/${work.id}/${division.slug}/${chapter.c}`}>
+            <span class="rd-chapters__n mono">{chapter.c}</span>
+            <span class="rd-chapters__body">
+              {chapter.preview !== undefined && (
+                /* The preview is a quotation, so it is set in the language it
+                   was quoted from — a chapter whose English is missing at
+                   verse one previews in Hebrew, right to left, and says so by
+                   being Hebrew rather than by an apology. */
+                <span
+                  class="rd-chapters__preview"
+                  lang={chapter.preview_lang === undefined ? undefined : langTag(work, chapter.preview_lang)}
+                  dir={chapter.preview_lang === 'en' ? 'ltr' : work.direction}
+                  style={
+                    chapter.preview_lang === 'en' ? undefined : `font-family: ${scriptFont}`
+                  }
+                >
+                  {chapter.preview}
+                </span>
+              )}
+              <span class="caption rd-chapters__meta">
+                {chapter.verses} verses
+                {chapter.english_gaps + chapter.original_gaps > 0 && ' · one-sided verse'}
+              </span>
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+
+  <nav class="rd-nav" aria-label={work.division_label_plural}>
+    {
+      prev === undefined ? (
+        <span />
+      ) : (
+        <a class="rd-nav__link" href={prev.href} rel="prev">
+          <span aria-hidden="true">←</span> {prev.label}
+        </a>
+      )
+    }
+    <label class="rd-jump">
+      <span class="visually-hidden">Jump to a {work.division_label}</span>
+      <select class="rd-jump__select" data-reader-jump>
+        {work.divisions.map((d) => (
+          <option value={`/read/${work.id}/${d.slug}`} selected={d.slug === division.slug}>
+            {divisionHeading(work, d)}
+          </option>
+        ))}
+      </select>
+    </label>
+    {
+      next === undefined ? (
+        <span />
+      ) : (
+        <a class="rd-nav__link rd-nav__link--next" href={next.href} rel="next">
+          {next.label} <span aria-hidden="true">→</span>
+        </a>
+      )
+    }
+  </nav>
+
+  {
+    endsSection !== undefined && (
+      <p class="caption rd__section-end">
+        {heading} ends {endsSection.name}. The {work.division_label_plural} of the next section are
+        on the <a class="tap" href={`/read/${work.id}`}>contents page</a>.
+      </p>
+    )
+  }
+</article>
+
+<script>
+  import '../scripts/reader';
+</script>
+
+<style is:global>
+  .rd-chapters__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 42rem;
+  }
+
+  .rd-chapters__item {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-4);
+    min-height: var(--tap-min);
+    padding: var(--space-3) 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .rd-chapters__n {
+    flex: none;
+    width: 3ch;
+    text-align: right;
+    color: var(--ink-soft);
+    font-size: var(--size-caption);
+  }
+
+  .rd-chapters__body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /*
+    The preview carries the row, so it is set at reading size and the count
+    below it is not: a reader scanning a hundred and fifty psalms is reading
+    the words, and the verse count is what they check once they have stopped.
+  */
+  .rd-chapters__preview {
+    display: block;
+    font-family: var(--font-prose);
+    font-size: var(--size-small);
+  }
+
+  .rd-chapters__meta {
+    display: block;
+    color: var(--ink-soft);
+    margin-top: var(--space-1);
+  }
+
+  .rd-chapters__item:hover .rd-chapters__preview {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>

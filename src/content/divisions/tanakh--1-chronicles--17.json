@@ -1,0 +1,145 @@
+{
+ "id": "tanakh--1-chronicles--17",
+ "work": "tanakh",
+ "n": 38,
+ "slug": "1-chronicles",
+ "c": 17,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וַיְהִ֕י כַּאֲשֶׁ֛ר יָשַׁ֥ב דָּוִ֖יד בְּבֵית֑וֹ וַיֹּ֨אמֶר דָּוִ֜יד אֶל־נָתָ֣ן הַנָּבִ֗יא הִנֵּ֨ה אָנֹכִ֤י יוֹשֵׁב֙ בְּבֵ֣ית הָֽאֲרָזִ֔ים וַאֲר֥וֹן בְּרִית־יְהוָ֖ה תַּ֥חַת יְרִיעֽוֹת׃",
+   "en": "And it came to pass, when David dwelt in his house, that David said to Nathan the prophet: ‘Lo, I dwell in a house of cedar, but the ark of the covenant of the LORD dwelleth under curtains.’"
+  },
+  {
+   "v": 2,
+   "he": "וַיֹּ֤אמֶר נָתָן֙ אֶל־דָּוִ֔יד כֹּ֛ל אֲשֶׁ֥ר בִּֽלְבָבְךָ֖ עֲשֵׂ֑ה כִּ֥י הָאֱלֹהִ֖ים עִמָּֽךְ׃",
+   "en": "And Nathan said unto David: ‘Do all that is in thy heart; for God is with thee.’"
+  },
+  {
+   "v": 3,
+   "he": "וַֽיְהִ֖י בַּלַּ֣יְלָה הַה֑וּא וַיְהִי֙ דְּבַר־אֱלֹהִ֔ים אֶל־נָתָ֖ן לֵאמֹֽר׃",
+   "en": "And it came to pass the same night, that the word of God came to Nathan, saying:"
+  },
+  {
+   "v": 4,
+   "he": "לֵ֤ךְ וְאָמַרְתָּ֙ אֶל־דָּוִ֣יד עַבְדִּ֔י כֹּ֖ה אָמַ֣ר יְהוָ֑ה לֹ֥א אַתָּ֛ה תִּבְנֶה־לִּ֥י הַבַּ֖יִת לָשָֽׁבֶת׃",
+   "en": "’Go and tell David My servant: Thus saith the LORD: Thou shalt not build Me a house to dwell in;"
+  },
+  {
+   "v": 5,
+   "he": "כִּ֣י לֹ֤א יָשַׁ֙בְתִּי֙ בְּבַ֔יִת מִן־הַיּ֗וֹם אֲשֶׁ֤ר הֶעֱלֵ֙יתִי֙ אֶת־יִשְׂרָאֵ֔ל עַ֖ד הַיּ֣וֹם הַזֶּ֑ה וָֽאֶהְיֶ֛ה מֵאֹ֥הֶל אֶל־אֹ֖הֶל וּמִמִּשְׁכָּֽן׃",
+   "en": "for I have not dwelt in a house since the day that I brought up Israel, unto this day; but have [gone] from tent to tent, and from one tabernacle [to another[."
+  },
+  {
+   "v": 6,
+   "he": "בְּכֹ֥ל אֲשֶֽׁר־הִתְהַלַּכְתִּי֮ בְּכָל־יִשְׂרָאֵל֒ הֲדָבָ֣ר דִּבַּ֗רְתִּי אֶת־אַחַד֙ שֹׁפְטֵ֣י יִשְׂרָאֵ֔ל אֲשֶׁ֥ר צִוִּ֛יתִי לִרְע֥וֹת אֶת־עַמִּ֖י לֵאמֹ֑ר לָ֛מָּה לֹא־בְנִיתֶ֥ם לִ֖י בֵּ֥ית אֲרָזִֽים׃",
+   "en": "In all places wherein I have walked among all Israel, spoke I a word with any of the judges of Israel, whom I commanded to feed My people, saying: Why have ye not built Me a house of cedar?"
+  },
+  {
+   "v": 7,
+   "he": "וְ֠עַתָּה כֹּֽה־תֹאמַ֞ר לְעַבְדִּ֣י לְדָוִ֗יד כֹּ֤ה אָמַר֙ יְהוָ֣ה צְבָא֔וֹת אֲנִ֤י לְקַחְתִּ֙יךָ֙ מִן־הַנָּוֶ֔ה מִֽן־אַחֲרֵ֖י הַצֹּ֑אן לִהְי֣וֹת נָגִ֔יד עַ֖ל עַמִּ֥י יִשְׂרָאֵֽל׃",
+   "en": "Now therefore thus shalt thou say unto My servant David: Thus saith the LORD of hosts: I took thee from the sheepcote, from following the sheep, that thou shouldest be prince over My people Israel;"
+  },
+  {
+   "v": 8,
+   "he": "וָֽאֶהְיֶ֣ה עִמְּךָ֗ בְּכֹל֙ אֲשֶׁ֣ר הָלַ֔כְתָּ וָאַכְרִ֥ית אֶת־כָּל־אוֹיְבֶ֖יךָ מִפָּנֶ֑יךָ וְעָשִׂ֤יתִֽי לְךָ֙ שֵׁ֔ם כְּשֵׁ֥ם הַגְּדוֹלִ֖ים אֲשֶׁ֥ר בָּאָֽרֶץ׃",
+   "en": "and I have been with thee whithersoever thou wentest, and have cut off all thine enemies from before thee; and I will make thee a name, like unto the name of the great ones that are in the earth."
+  },
+  {
+   "v": 9,
+   "he": "וְשַׂמְתִּ֣י מָ֠קוֹם לְעַמִּ֨י יִשְׂרָאֵ֤ל וּנְטַעְתִּ֙יהוּ֙ וְשָׁכַ֣ן תַּחְתָּ֔יו וְלֹ֥א יִרְגַּ֖ז ע֑וֹד וְלֹא־יוֹסִ֤יפוּ בְנֵי־עַוְלָה֙ לְבַלֹּת֔וֹ כַּאֲשֶׁ֖ר בָּרִאשׁוֹנָֽה׃",
+   "en": "And I will appoint a place for My people Israel, and will plant them, that they may dwell in their own place, and be disquieted no more; neither shall the children of wickedness waste them any more, as at the first,"
+  },
+  {
+   "v": 10,
+   "he": "וּלְמִיָּמִ֗ים אֲשֶׁ֨ר צִוִּ֤יתִי שֹֽׁפְטִים֙ עַל־עַמִּ֣י יִשְׂרָאֵ֔ל וְהִכְנַ֖עְתִּי אֶת־כָּל־אוֹיְבֶ֑יךָ וָאַגִּ֣ד לָ֔ךְ וּבַ֖יִת יִֽבְנֶה־לְּךָ֥ יְהוָֽה׃",
+   "en": "even from the day that I commanded judges to be over My people Israel; and I will subdue all thine enemies. Moreover I tell thee that the LORD will build thee a house."
+  },
+  {
+   "v": 11,
+   "he": "וְהָיָ֗ה כִּֽי־מָלְא֤וּ יָמֶ֙יךָ֙ לָלֶ֣כֶת עִם־אֲבֹתֶ֔יךָ וַהֲקִֽימוֹתִ֤י אֶֽת־זַרְעֲךָ֙ אַחֲרֶ֔יךָ אֲשֶׁ֥ר יִהְיֶ֖ה מִבָּנֶ֑יךָ וַהֲכִינוֹתִ֖י אֶת־מַלְכוּתֽוֹ׃",
+   "en": "And it shall come to pass, when thy days are fulfilled that thou must go to be with thy fathers, that I will set up thy seed after thee, who shall be of thy sons; and I will establish his kingdom."
+  },
+  {
+   "v": 12,
+   "he": "ה֥וּא יִבְנֶה־לִּ֖י בָּ֑יִת וְכֹנַנְתִּ֥י אֶת־כִּסְא֖וֹ עַד־עוֹלָֽם׃",
+   "en": "He shall build Me a house, and I will establish his throne for ever."
+  },
+  {
+   "v": 13,
+   "he": "אֲנִי֙ אֶֽהְיֶה־לּ֣וֹ לְאָ֔ב וְה֖וּא יִֽהְיֶה־לִּ֣י לְבֵ֑ן וְחַסְדִּי֙ לֹא־אָסִ֣יר מֵֽעִמּ֔וֹ כַּאֲשֶׁ֣ר הֲסִיר֔וֹתִי מֵאֲשֶׁ֥ר הָיָ֖ה לְפָנֶֽיךָ׃",
+   "en": "I will be to him for a father, and he shall be to Me for a son; and I will not take My mercy away from him, as I took it from him that was before thee;"
+  },
+  {
+   "v": 14,
+   "he": "וְהַֽעֲמַדְתִּ֛יהוּ בְּבֵיתִ֥י וּבְמַלְכוּתִ֖י עַד־הָעוֹלָ֑ם וְכִסְא֕וֹ יִהְיֶ֥ה נָכ֖וֹן עַד־עוֹלָֽם׃",
+   "en": "but I will settle him in My house and in My kingdom for ever; and his throne shall be established for ever.’"
+  },
+  {
+   "v": 15,
+   "he": "כְּכֹל֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה וּכְכֹ֖ל הֶחָז֣וֹן הַזֶּ֑ה כֵּ֛ן דִּבֶּ֥ר נָתָ֖ן אֶל־דָּוִֽיד׃",
+   "en": "According to all these words, and according to all this vision, so did Nathan speak unto David."
+  },
+  {
+   "v": 16,
+   "he": "וַיָּבֹא֙ הַמֶּ֣לֶךְ דָּוִ֔יד וַיֵּ֖שֶׁב לִפְנֵ֣י יְהוָ֑ה וַיֹּ֗אמֶר מִֽי־אֲנִ֞י יְהוָ֤ה אֱלֹהִים֙ וּמִ֣י בֵיתִ֔י כִּ֥י הֲבִיאֹתַ֖נִי עַד־הֲלֹֽם׃",
+   "en": "Then David the king went in, and sat before the LORD; and he said: ‘Who am I, O LORD God, and what is my house, that Thou hast brought me thus far?"
+  },
+  {
+   "v": 17,
+   "he": "וַתִּקְטַ֨ן זֹ֤את בְּעֵינֶ֙יךָ֙ אֱלֹהִ֔ים וַתְּדַבֵּ֥ר עַל־בֵּֽית־עַבְדְּךָ֖ לְמֵרָח֑וֹק וּרְאִיתַ֗נִי כְּת֧וֹר הָאָדָ֛ם הַֽמַּעֲלָ֖ה יְהוָ֥ה אֱלֹהִֽים׃",
+   "en": "And this was a small thing in Thine eyes, O God; but Thou hast spoken of Thy servant’s house for a great while to come, and hast regarded me after the manner of a man of high degree, O LORD God."
+  },
+  {
+   "v": 18,
+   "he": "מַה־יּוֹסִ֨יף ע֥וֹד דָּוִ֛יד אֵלֶ֖יךָ לְכָב֣וֹד אֶת־עַבְדֶּ֑ךָ וְאַתָּ֖ה אֶֽת־עַבְדְּךָ֥ יָדָֽעְתָּ׃",
+   "en": "What can David say yet more unto Thee concerning the honour which is done to Thy servant? for Thou knowest Thy servant."
+  },
+  {
+   "v": 19,
+   "he": "יְהוָ֕ה בַּעֲב֤וּר עַבְדְּךָ֙ וּֽכְלִבְּךָ֔ עָשִׂ֕יתָ אֵ֥ת כָּל־הַגְּדוּלָּ֖ה הַזֹּ֑את לְהֹדִ֖יעַ אֶת־כָּל־הַגְּדֻלּֽוֹת׃",
+   "en": "O LORD, for Thy servant’s sake, and according to Thine own heart, hast Thou wrought all this greatness, to make known all these great things."
+  },
+  {
+   "v": 20,
+   "he": "יְהוָה֙ אֵ֣ין כָּמ֔וֹךָ וְאֵ֥ין אֱלֹהִ֖ים זוּלָתֶ֑ךָ בְּכֹ֥ל אֲשֶׁר־שָׁמַ֖עְנוּ בְּאָזְנֵֽינוּ׃",
+   "en": "O LORD, there is none like Thee, neither is there any God beside Thee, according to all that we have heard with our ears."
+  },
+  {
+   "v": 21,
+   "he": "וּמִי֙ כְּעַמְּךָ֣ יִשְׂרָאֵ֔ל גּ֥וֹי אֶחָ֖ד בָּאָ֑רֶץ אֲשֶׁר֩ הָלַ֨ךְ הָאֱלֹהִ֜ים לִפְדּ֧וֹת ל֣וֹ עָ֗ם לָשׂ֤וּם לְךָ֙ שֵׁ֚ם גְּדֻלּ֣וֹת וְנֹרָא֔וֹת לְגָרֵ֗שׁ מִפְּנֵ֧י עַמְּךָ֛ אֲשֶׁר־פָּדִ֥יתָ מִמִּצְרַ֖יִם גּוֹיִֽם׃",
+   "en": "And who is like Thy people Israel, a nation one in the earth, whom God went to redeem unto Himself for a people, to make Thee a name by great and tremendous things, in driving out nations from before Thy people, whom Thou didst redeem out of Egypt."
+  },
+  {
+   "v": 22,
+   "he": "וַ֠תִּתֵּן אֶת־עַמְּךָ֨ יִשְׂרָאֵ֧ל׀ לְךָ֛ לְעָ֖ם עַד־עוֹלָ֑ם וְאַתָּ֣ה יְהוָ֔ה הָיִ֥יתָ לָהֶ֖ם לֵאלֹהִֽים׃",
+   "en": "For Thy people Israel didst Thou make Thine own people for ever; and Thou, LORD, becamest their God."
+  },
+  {
+   "v": 23,
+   "he": "וְעַתָּ֣ה יְהוָ֔ה הַדָּבָ֗ר אֲשֶׁ֨ר דִּבַּ֤רְתָּ עַֽל־עַבְדְּךָ֙ וְעַל־בֵּית֔וֹ יֵאָמֵ֖ן עַד־עוֹלָ֑ם וַעֲשֵׂ֖ה כַּאֲשֶׁ֥ר דִּבַּֽרְתָּ׃",
+   "en": "And now, O LORD, let the word that Thou hast spoken concerning Thy servant, and concerning his house, be established for ever, and do as Thou hast spoken."
+  },
+  {
+   "v": 24,
+   "he": "וְ֠יֵֽאָמֵן וְיִגְדַּ֨ל שִׁמְךָ֤ עַד־עוֹלָם֙ לֵאמֹ֔ר יְהוָ֤ה צְבָאוֹת֙ אֱלֹהֵ֣י יִשְׂרָאֵ֔ל אֱלֹהִ֖ים לְיִשְׂרָאֵ֑ל וּבֵית־דָּוִ֥יד עַבְדְּךָ֖ נָכ֥וֹן לְפָנֶֽיךָ׃",
+   "en": "Yea, let it be established, and let Thy name be magnified for ever, that it may be said: The LORD of hosts is the God of Israel, even a God to Israel; and the house of David Thy servant shall be established before Thee."
+  },
+  {
+   "v": 25,
+   "he": "כִּ֣י׀ אַתָּ֣ה אֱלֹהַ֗י גָּלִ֙יתָ֙ אֶת־אֹ֣זֶן עַבְדְּךָ֔ לִבְנ֥וֹת ל֖וֹ בָּ֑יִת עַל־כֵּן֙ מָצָ֣א עַבְדְּךָ֔ לְהִתְפַּלֵּ֖ל לְפָנֶֽיךָ׃",
+   "en": "For Thou, O my God, hast revealed to Thy servant that Thou wilt build him a house; therefore hath Thy servant taken heart to pray before Thee."
+  },
+  {
+   "v": 26,
+   "he": "וְעַתָּ֣ה יְהוָ֔ה אַתָּה־ה֖וּא הָאֱלֹהִ֑ים וַתְּדַבֵּר֙ עַֽל־עַבְדְּךָ֔ הַטּוֹבָ֖ה הַזֹּֽאת׃",
+   "en": "And now, O LORD, Thou alone art God, and hast promised this good thing unto Thy servant;"
+  },
+  {
+   "v": 27,
+   "he": "וְעַתָּ֗ה הוֹאַ֙לְתָּ֙ לְבָרֵךְ֙ אֶת־בֵּ֣ית עַבְדְּךָ֔ לִהְי֥וֹת לְעוֹלָ֖ם לְפָנֶ֑יךָ כִּֽי־אַתָּ֤ה יְהוָה֙ בֵּרַ֔כְתָּ וּמְבֹרָ֖ךְ לְעוֹלָֽם׃",
+   "en": "and now it hath pleased Thee to bless the house of Thy servant, that it may continue for ever before Thee; for Thou, O LORD, hast blessed, and so let [Thy servant] be blessed for ever.’"
+  }
+ ],
+ "sourcing": "sourced"
+}

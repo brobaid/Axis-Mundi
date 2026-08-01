@@ -1,0 +1,35 @@
+{
+ "id": "tanakh--psalms--100",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 100,
+ "verses": [
+  {
+   "v": 1,
+   "he": "מִזְמ֥וֹר לְתוֹדָ֑ה הָרִ֥יעוּ לַ֝יהוָ֗ה כָּל־הָאָֽרֶץ׃",
+   "en": "A Psalm of thanksgiving. Shout unto the LORD, all the earth."
+  },
+  {
+   "v": 2,
+   "he": "עִבְד֣וּ אֶת־יְהוָ֣ה בְּשִׂמְחָ֑ה בֹּ֥אוּ לְ֝פָנָ֗יו בִּרְנָנָֽה׃",
+   "en": "Serve the LORD with gladness; Come before His presence with singing."
+  },
+  {
+   "v": 3,
+   "he": "דְּע֗וּ כִּֽי־יְהוָה֮ ה֤וּא אֱלֹ֫הִ֥ים הֽוּא־עָ֭שָׂנוּ ולא [וְל֣וֹ] אֲנַ֑חְנוּ עַ֝מּ֗וֹ וְצֹ֣אן מַרְעִיתֽוֹ׃",
+   "en": "Know ye that the LORD He is God; It is He that hath made us, and we are His, His people, and the flock of His pasture."
+  },
+  {
+   "v": 4,
+   "he": "בֹּ֤אוּ שְׁעָרָ֨יו׀ בְּתוֹדָ֗ה חֲצֵרֹתָ֥יו בִּתְהִלָּ֑ה הֽוֹדוּ־ל֝֗וֹ בָּרֲכ֥וּ שְׁמֽוֹ׃",
+   "en": "Enter into His gates with thanksgiving, And into His courts with praise; Give thanks unto Him, and bless His name."
+  },
+  {
+   "v": 5,
+   "he": "כִּי־ט֣וֹב יְ֭הֹוָה לְעוֹלָ֣ם חַסְדּ֑וֹ וְעַד־דֹּ֥ר וָ֝דֹ֗ר אֱמוּנָתֽוֹ׃",
+   "en": "For the LORD is good; His mercy endureth for ever; And His faithfulness unto all generations."
+  }
+ ],
+ "sourcing": "sourced"
+}

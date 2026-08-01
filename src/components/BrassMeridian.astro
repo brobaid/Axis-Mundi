@@ -12,6 +12,14 @@
  * Color, weight and easing come from --meridian-* in tokens.css.
  */
 
+/**
+ * Its name is the museum's; its job is not obvious from looking at it. A brass
+ * rule standing in a scrubber tells a first-time visitor nothing, so every
+ * instance carries the one sentence that says what it is — as a tooltip for a
+ * pointer and, where it is not already named by a neighbour, as its label.
+ */
+const EXPLAINER = 'One time cursor shared by every room';
+
 interface Props {
   /** Horizontal position within the positioned ancestor, 0–100. */
   at?: number;
@@ -31,5 +39,6 @@ const { at = 0, label, inset = '0', class: className } = Astro.props;
   role={label === undefined ? 'presentation' : 'img'}
   aria-label={label}
   aria-hidden={label === undefined ? 'true' : undefined}
+  title={EXPLAINER}
 >
 </div>

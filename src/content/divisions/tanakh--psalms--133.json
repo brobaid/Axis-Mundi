@@ -1,0 +1,25 @@
+{
+ "id": "tanakh--psalms--133",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 133,
+ "verses": [
+  {
+   "v": 1,
+   "he": "שִׁ֥יר הַֽמַּעֲל֗וֹת לְדָ֫וִ֥ד הִנֵּ֣ה מַה־טּ֭וֹב וּמַה־נָּעִ֑ים שֶׁ֖בֶת אַחִ֣ים גַּם־יָֽחַד׃",
+   "en": "A Song of Ascents; of David. Behold, how good and how pleasant it is For brethren to dwell together in unity!"
+  },
+  {
+   "v": 2,
+   "he": "כַּשֶּׁ֤מֶן הַטּ֨וֹב׀ עַל־הָרֹ֗אשׁ יֹרֵ֗ד עַֽל־הַזָּקָ֥ן זְקַֽן־אַהֲרֹ֑ן שֶׁ֝יֹּרֵ֗ד עַל־פִּ֥י מִדּוֹתָֽיו׃",
+   "en": "It is like the precious oil upon the head, Coming down upon the beard; Even Aaron's beard, That cometh down upon the collar of his garments;"
+  },
+  {
+   "v": 3,
+   "he": "כְּטַל־חֶרְמ֗וֹן שֶׁיֹּרֵד֮ עַל־הַרְרֵ֪י צִ֫יּ֥וֹן כִּ֤י שָׁ֨ם׀ צִוָּ֣ה יְ֭הוָה אֶת־הַבְּרָכָ֑ה חַ֝יִּ֗ים עַד־הָעוֹלָֽם׃",
+   "en": "Like the dew of Hermon, That cometh down upon the mountains of Zion; For there the LORD commanded the blessing, Even life for ever."
+  }
+ ],
+ "sourcing": "sourced"
+}

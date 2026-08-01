@@ -1,0 +1,100 @@
+{
+ "id": "bible--2corinthians--3",
+ "work": "bible",
+ "n": 47,
+ "slug": "2corinthians",
+ "c": 3,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Are we beginning again to commend ourselves? Or do we need, as do some, letters of commendation to you or from you?",
+   "gr": "Ἀρχόμεθα πάλιν ἑαυτοὺς ⸀συνιστάνειν; ⸀ἢ μὴ χρῄζομεν ὥς τινες συστατικῶν ἐπιστολῶν πρὸς ὑμᾶς ἢ ἐξ ⸀ὑμῶν;"
+  },
+  {
+   "v": 2,
+   "en": "You are our letter, written in our hearts, known and read by all men,",
+   "gr": "ἡ ἐπιστολὴ ἡμῶν ὑμεῖς ἐστε, ἐγγεγραμμένη ἐν ταῖς καρδίαις ἡμῶν, γινωσκομένη καὶ ἀναγινωσκομένη ὑπὸ πάντων ἀνθρώπων·"
+  },
+  {
+   "v": 3,
+   "en": "being revealed that you are a letter of Christ, served by us, written not with ink, but with the Spirit of the living God; not in tablets of stone, but in tablets that are hearts of flesh.",
+   "gr": "φανερούμενοι ὅτι ἐστὲ ἐπιστολὴ Χριστοῦ διακονηθεῖσα ὑφʼ ἡμῶν, ἐγγεγραμμένη οὐ μέλανι ἀλλὰ πνεύματι θεοῦ ζῶντος, οὐκ ἐν πλαξὶν λιθίναις ἀλλʼ ἐν πλαξὶν καρδίαις σαρκίναις."
+  },
+  {
+   "v": 4,
+   "en": "Such confidence we have through Christ toward God,",
+   "gr": "Πεποίθησιν δὲ τοιαύτην ἔχομεν διὰ τοῦ Χριστοῦ πρὸς τὸν θεόν."
+  },
+  {
+   "v": 5,
+   "en": "not that we are sufficient of ourselves, to account anything as from ourselves; but our sufficiency is from God,",
+   "gr": "οὐχ ὅτι ⸂ἀφʼ ἑαυτῶν ἱκανοί ἐσμεν⸃ λογίσασθαί τι ὡς ἐξ ⸀αὑτῶν, ἀλλʼ ἡ ἱκανότης ἡμῶν ἐκ τοῦ θεοῦ,"
+  },
+  {
+   "v": 6,
+   "en": "who also made us sufficient as servants of a new covenant, not of the letter, but of the Spirit. For the letter kills, but the Spirit gives life.",
+   "gr": "ὃς καὶ ἱκάνωσεν ἡμᾶς διακόνους καινῆς διαθήκης, οὐ γράμματος ἀλλὰ πνεύματος, τὸ γὰρ γράμμα ἀποκτέννει, τὸ δὲ πνεῦμα ζῳοποιεῖ."
+  },
+  {
+   "v": 7,
+   "en": "But if the service of death, written engraved on stones, came with glory, so that the children of Israel could not look steadfastly on the face of Moses for the glory of his face, which was passing away,",
+   "gr": "Εἰ δὲ ἡ διακονία τοῦ θανάτου ἐν ⸀γράμμασιν ⸀ἐντετυπωμένη λίθοις ἐγενήθη ἐν δόξῃ, ὥστε μὴ δύνασθαι ἀτενίσαι τοὺς υἱοὺς Ἰσραὴλ εἰς τὸ πρόσωπον Μωϋσέως διὰ τὴν δόξαν τοῦ προσώπου αὐτοῦ τὴν καταργουμένην,"
+  },
+  {
+   "v": 8,
+   "en": "won’t service of the Spirit be with much more glory?",
+   "gr": "πῶς οὐχὶ μᾶλλον ἡ διακονία τοῦ πνεύματος ἔσται ἐν δόξῃ;"
+  },
+  {
+   "v": 9,
+   "en": "For if the service of condemnation has glory, the service of righteousness exceeds much more in glory.",
+   "gr": "εἰ γὰρ ⸂τῇ διακονίᾳ⸃ τῆς κατακρίσεως δόξα, πολλῷ μᾶλλον περισσεύει ἡ διακονία τῆς ⸀δικαιοσύνης δόξῃ."
+  },
+  {
+   "v": 10,
+   "en": "For most certainly that which has been made glorious has not been made glorious in this respect, by reason of the glory that surpasses.",
+   "gr": "καὶ γὰρ οὐ δεδόξασται τὸ δεδοξασμένον ἐν τούτῳ τῷ μέρει ⸀εἵνεκεν τῆς ὑπερβαλλούσης δόξης·"
+  },
+  {
+   "v": 11,
+   "en": "For if that which passes away was with glory, much more that which remains is in glory.",
+   "gr": "εἰ γὰρ τὸ καταργούμενον διὰ δόξης, πολλῷ μᾶλλον τὸ μένον ἐν δόξῃ."
+  },
+  {
+   "v": 12,
+   "en": "Having therefore such a hope, we use great boldness of speech,",
+   "gr": "Ἔχοντες οὖν τοιαύτην ἐλπίδα πολλῇ παρρησίᾳ χρώμεθα,"
+  },
+  {
+   "v": 13,
+   "en": "and not as Moses, who put a veil on his face, that the children of Israel wouldn’t look steadfastly on the end of that which was passing away.",
+   "gr": "καὶ οὐ καθάπερ Μωϋσῆς ἐτίθει κάλυμμα ἐπὶ τὸ πρόσωπον ⸀αὐτοῦ, πρὸς τὸ μὴ ἀτενίσαι τοὺς υἱοὺς Ἰσραὴλ εἰς τὸ τέλος τοῦ καταργουμένου."
+  },
+  {
+   "v": 14,
+   "en": "But their minds were hardened, for until this very day at the reading of the old covenant the same veil remains, because in Christ it passes away.",
+   "gr": "ἀλλὰ ἐπωρώθη τὰ νοήματα αὐτῶν. ἄχρι γὰρ τῆς σήμερον ⸀ἡμέρας τὸ αὐτὸ κάλυμμα ἐπὶ τῇ ἀναγνώσει τῆς παλαιᾶς διαθήκης μένει μὴ ἀνακαλυπτόμενον, ⸀ὅτι ἐν Χριστῷ καταργεῖται,"
+  },
+  {
+   "v": 15,
+   "en": "But to this day, when Moses is read, a veil lies on their heart.",
+   "gr": "ἀλλʼ ἕως σήμερον ἡνίκα ⸂ἂν ἀναγινώσκηται⸃ Μωϋσῆς κάλυμμα ἐπὶ τὴν καρδίαν αὐτῶν κεῖται·"
+  },
+  {
+   "v": 16,
+   "en": "But whenever someone turns to the Lord, the veil is taken away.",
+   "gr": "ἡνίκα ⸂δὲ ἐὰν⸃ ἐπιστρέψῃ πρὸς κύριον, περιαιρεῖται τὸ κάλυμμα."
+  },
+  {
+   "v": 17,
+   "en": "Now the Lord is the Spirit and where the Spirit of the Lord is, there is liberty.",
+   "gr": "ὁ δὲ κύριος τὸ πνεῦμά ἐστιν· οὗ δὲ τὸ πνεῦμα ⸀κυρίου, ἐλευθερία."
+  },
+  {
+   "v": 18,
+   "en": "But we all, with unveiled face seeing the glory of the Lord as in a mirror, are transformed into the same image from glory to glory, even as from the Lord, the Spirit.",
+   "gr": "ἡμεῖς δὲ πάντες ἀνακεκαλυμμένῳ προσώπῳ τὴν δόξαν κυρίου κατοπτριζόμενοι τὴν αὐτὴν εἰκόνα μεταμορφούμεθα ἀπὸ δόξης εἰς δόξαν, καθάπερ ἀπὸ κυρίου πνεύματος."
+  }
+ ],
+ "sourcing": "sourced"
+}

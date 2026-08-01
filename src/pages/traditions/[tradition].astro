@@ -5,8 +5,10 @@ import TraditionSymbols from '../../components/TraditionSymbols.astro';
 import TraditionSymbol from '../../components/TraditionSymbol.astro';
 import GlossaryCard from '../../components/GlossaryCard.astro';
 import MatrixCells from '../../components/MatrixCells.astro';
+import DevotionalToggle from '../../components/DevotionalToggle.astro';
 import { getPublishable, getStructural, includesUnsourced } from '../../lib/content';
 import { renderProse, termsFor } from '../../lib/prose';
+import { applyHonorifics } from '../../lib/devotional';
 import { traditionMeta } from '../../lib/traditions';
 import type { MatrixDimension } from '../../schemas/matrix';
 import { displayDate } from '../../lib/display-date';
@@ -31,7 +33,7 @@ export const getStaticPaths = (async () => {
 const { dive } = Astro.props;
 const meta = traditionMeta(dive.tradition);
 
-const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, siteRecords, figureRecords, sources, events, texts, works] = await Promise.all([
+const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, siteRecords, figureRecords, sources, events, texts, works, shelfRows] = await Promise.all([
   getPublishable('glossary'),
   /* The branch tree renders names and contested flags — spec §2.3 structure. */
   getStructural('taxonomy'),
@@ -46,6 +48,8 @@ const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, siteRecords
   getPublishable('texts'),
   /* A canon row links into the Reading Room when that text is in the build. */
   getPublishable('works'),
+  /* And to its waiting-on row when it is only on the acquisition plan. */
+  getPublishable('shelf'),
 ]);
 
 /* §5.1 stat box: founding and principal text are extracted, never authored
@@ -76,7 +80,15 @@ const autoTerms = termsFor(
   [dive.tradition],
   glossary.map((g) => ({ id: g.data.id, term: g.data.term, traditions: g.data.traditions })),
 );
-const prose = (body: string): string => renderProse(body, { available, autoTerms });
+/*
+  Prose, then the devotional marks over it.
+
+  The honorific runs last and over already-escaped HTML, and it only ever wraps
+  — the sentence a scholar sourced is on the page byte for byte with the frame
+  off, because with the frame off the span it added renders nothing.
+*/
+const prose = (body: string): string =>
+  applyHonorifics(renderProse(body, { available, autoTerms }), dive.tradition);
 
 /** A prose block renders only when it has passed a source check. */
 const publishable = <T extends { sourcing: 'sourced' | 'todo' | 'editorial' } | undefined>(
@@ -173,6 +185,18 @@ const demographics = publishable(dive.demographics);
 const canon = dive.canon.filter((c) => includesUnsourced || c.sourcing !== 'todo');
 /* Canon rows whose text has entered the Reading Room, by shared id. */
 const readable = new Set(works.map((w) => w.data.id));
+/* And rows the Reading Room has a plan for but not yet a text: those link to
+   the row that says what it is waiting on, which is a more useful answer than
+   no link at all — "coming" is information, and so is "no clean English
+   exists". A canon nobody has a plan for stays unlinked, because inventing one
+   would be the museum promising something it has not undertaken. */
+const planned = new Map<string, { id: string; partly: boolean }>(
+  shelfRows.flatMap((r) =>
+    r.data.canon_ids.map(
+      (id) => [id, { id: r.data.id, partly: r.data.partly_live !== undefined }] as const,
+    ),
+  ),
+);
 const practices = dive.practices.filter((p) => includesUnsourced || p.sourcing !== 'todo');
 const misconceptions = dive.misconceptions.filter((m) => includesUnsourced || m.sourcing !== 'todo');
 
@@ -204,6 +228,8 @@ const showAdherentYear =
       <h1>{dive.name}</h1>
       <p class="dd-mast__sub">{dive.subtitle}</p>
     </header>
+
+    <DevotionalToggle tradition={dive.tradition} />
 
     <!-- §5.1 exhibit-label stat box ------------------------------------ -->
     <dl class="exhibit-label dd-stats">
@@ -325,11 +351,27 @@ const showAdherentYear =
                   <tr>
                     <th scope="row">
                       {/* The row is the claim about the text; the link is the
-                          text itself, and only appears once it is in the build. */}
+                          text itself once it is in the build, and until then
+                          the row in the Reading Room that says what the
+                          museum is waiting on. */}
                       {readable.has(c.id) ? (
                         <a class="canon__read" href={`/read/${c.id}`}>
                           {c.title}
                           <span class="canon__read-mark caption"> · read</span>
+                        </a>
+                      ) : planned.has(c.id) ? (
+                        <a
+                          class="canon__read canon__read--soon"
+                          href={`/read#${planned.get(c.id)!.id}`}
+                        >
+                          {c.title}
+                          {/* A shelf can be partly live: the Dhammapada is
+                              here and the rest of the Pali Canon is not, and
+                              "being acquired" would be false of the half a
+                              reader can already open. */}
+                          <span class="canon__read-mark caption">
+                            {planned.get(c.id)!.partly ? ' · partly here' : ' · being acquired'}
+                          </span>
                         </a>
                       ) : (
                         c.title
@@ -746,6 +788,12 @@ const showAdherentYear =
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-color: var(--hairline-strong);
+  }
+
+  /* A text that is coming is not a text you can read, so the link is set
+     dashed: the same affordance, visibly provisional. */
+  .canon__read--soon {
+    text-decoration-style: dashed;
   }
 
   .canon__read-mark {

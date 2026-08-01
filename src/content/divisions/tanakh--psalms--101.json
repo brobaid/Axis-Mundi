@@ -1,0 +1,50 @@
+{
+ "id": "tanakh--psalms--101",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 101,
+ "verses": [
+  {
+   "v": 1,
+   "he": "לְדָוִ֗ד מִ֫זְמ֥וֹר חֶֽסֶד־וּמִשְׁפָּ֥ט אָשִׁ֑ירָה לְךָ֖ יְהוָ֣ה אֲזַמֵּֽרָה׃",
+   "en": "A Psalm of David. I will sing of mercy and justice; Unto Thee, O LORD, will I sing praises."
+  },
+  {
+   "v": 2,
+   "he": "אַשְׂכִּ֤ילָה׀ בְּדֶ֬רֶךְ תָּמִ֗ים מָ֭תַי תָּב֣וֹא אֵלָ֑י אֶתְהַלֵּ֥ךְ בְּתָם־לְ֝בָבִ֗י בְּקֶ֣רֶב בֵּיתִֽי׃",
+   "en": "I will give heed unto the way of integrity; Oh when wilt Thou come unto me? I will walk within my house in the integrity of my heart."
+  },
+  {
+   "v": 3,
+   "he": "לֹֽא־אָשִׁ֨ית׀ לְנֶ֥גֶד עֵינַ֗י דְּֽבַר־בְּלִ֫יָּ֥עַל עֲשֹֽׂה־סֵטִ֥ים שָׂנֵ֑אתִי לֹ֖א יִדְבַּ֣ק בִּֽי׃",
+   "en": "I will set no base thing before mine eyes; I hate the doing of things crooked; it shall not cleave unto me."
+  },
+  {
+   "v": 4,
+   "he": "לֵבָ֣ב עִ֭קֵּשׁ יָס֣וּר מִמֶּ֑נִּי רָ֝֗ע לֹ֣א אֵדָֽע׃",
+   "en": "A perverse heart shall depart from me; I will know no evil thing."
+  },
+  {
+   "v": 5,
+   "he": "מלושני [מְלָשְׁנִ֬י] בַסֵּ֨תֶר׀ רֵעֵהוּ֮ אוֹת֪וֹ אַ֫צְמִ֥ית גְּֽבַהּ־עֵ֭ינַיִם וּרְחַ֣ב לֵבָ֑ב אֹ֝ת֗וֹ לֹ֣א אוּכָֽל׃",
+   "en": "Whoso slandereth his neighbour in secret, him will I destroy; Whoso is haughty of eye and proud of heart, him will I not suffer."
+  },
+  {
+   "v": 6,
+   "he": "עֵינַ֤י׀ בְּנֶֽאֶמְנֵי־אֶרֶץ֮ לָשֶׁ֪בֶת עִמָּ֫דִ֥י הֹ֭לֵךְ בְּדֶ֣רֶךְ תָּמִ֑ים ה֝֗וּא יְשָׁרְתֵֽנִי׃",
+   "en": "Mine eyes are upon the faithful of the land, that they may dwell with me; He that walketh in a way of integrity, he shall minister unto me."
+  },
+  {
+   "v": 7,
+   "he": "לֹֽא־יֵשֵׁ֨ב׀ בְּקֶ֥רֶב בֵּיתִי֮ עֹשֵׂ֪ה רְמִ֫יָּ֥ה דֹּבֵ֥ר שְׁקָרִ֑ים לֹֽא־יִ֝כּ֗וֹן לְנֶ֣גֶד עֵינָֽי׃",
+   "en": "He that worketh deceit shall not dwell within my house; He that speaketh falsehood shall not be established before mine eyes."
+  },
+  {
+   "v": 8,
+   "he": "לַבְּקָרִ֗ים אַצְמִ֥ית כָּל־רִשְׁעֵי־אָ֑רֶץ לְהַכְרִ֥ית מֵֽעִיר־יְ֝הוָ֗ה כָּל־פֹּ֥עֲלֵי אָֽוֶן׃",
+   "en": "Morning by morning will I destroy all the wicked of the land; To cut off all the workers of iniquity from the city of the LORD."
+  }
+ ],
+ "sourcing": "sourced"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "bible--psalms--127",
+ "work": "bible",
+ "n": 19,
+ "slug": "psalms",
+ "c": 127,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Unless Yahweh builds the house, they who build it labor in vain. Unless Yahweh watches over the city, the watchman guards it in vain."
+  },
+  {
+   "v": 2,
+   "en": "It is vain for you to rise up early, to stay up late, eating the bread of toil, for he gives sleep to his loved ones."
+  },
+  {
+   "v": 3,
+   "en": "Behold, children are a heritage of Yahweh. The fruit of the womb is his reward."
+  },
+  {
+   "v": 4,
+   "en": "As arrows in the hand of a mighty man, so are the children of youth."
+  },
+  {
+   "v": 5,
+   "en": "Happy is the man who has his quiver full of them. They won’t be disappointed when they speak with their enemies in the gate."
+  }
+ ],
+ "sourcing": "sourced"
+}

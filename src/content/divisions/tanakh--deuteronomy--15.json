@@ -1,0 +1,125 @@
+{
+ "id": "tanakh--deuteronomy--15",
+ "work": "tanakh",
+ "n": 5,
+ "slug": "deuteronomy",
+ "c": 15,
+ "verses": [
+  {
+   "v": 1,
+   "he": "מִקֵּ֥ץ שֶֽׁבַע־שָׁנִ֖ים תַּעֲשֶׂ֥ה שְׁמִטָּֽה׃",
+   "en": "At the end of every seven years thou shalt make a release."
+  },
+  {
+   "v": 2,
+   "he": "וְזֶה֮ דְּבַ֣ר הַשְּׁמִטָּה֒ שָׁמ֗וֹט כָּל־בַּ֙עַל֙ מַשֵּׁ֣ה יָד֔וֹ אֲשֶׁ֥ר יַשֶּׁ֖ה בְּרֵעֵ֑הוּ לֹֽא־יִגֹּ֤שׂ אֶת־רֵעֵ֙הוּ֙ וְאֶת־אָחִ֔יו כִּֽי־קָרָ֥א שְׁמִטָּ֖ה לַֽיהוָֽה׃",
+   "en": "And this is the manner of the release: every creditor shall release that which he hath lent unto his neighbour; he shall not exact it of his neighbour and his brother; because the LORD’S release hath been proclaimed."
+  },
+  {
+   "v": 3,
+   "he": "אֶת־הַנָּכְרִ֖י תִּגֹּ֑שׂ וַאֲשֶׁ֨ר יִהְיֶ֥ה לְךָ֛ אֶת־אָחִ֖יךָ תַּשְׁמֵ֥ט יָדֶֽךָ׃",
+   "en": "Of a foreigner thou mayest exact it; but whatsoever of thine is with thy brother thy hand shall release."
+  },
+  {
+   "v": 4,
+   "he": "אֶ֕פֶס כִּ֛י לֹ֥א יִֽהְיֶה־בְּךָ֖ אֶבְי֑וֹן כִּֽי־בָרֵ֤ךְ יְבָֽרֶכְךָ֙ יְהוָ֔ה בָּאָ֕רֶץ אֲשֶׁר֙ יְהוָ֣ה אֱלֹהֶ֔יךָ נֹֽתֵן־לְךָ֥ נַחֲלָ֖ה לְרִשְׁתָּֽהּ׃",
+   "en": "Howbeit there shall be no needy among you—for the LORD will surely bless thee in the land which the LORD thy God giveth thee for an inheritance to possess it—"
+  },
+  {
+   "v": 5,
+   "he": "רַ֚ק אִם־שָׁמ֣וֹעַ תִּשְׁמַ֔ע בְּק֖וֹל יְהוָ֣ה אֱלֹהֶ֑יךָ לִשְׁמֹ֤ר לַעֲשׂוֹת֙ אֶת־כָּל־הַמִּצְוָ֣ה הַזֹּ֔את אֲשֶׁ֛ר אָנֹכִ֥י מְצַוְּךָ֖ הַיּֽוֹם׃",
+   "en": "if only thou diligently hearken unto the voice of the LORD thy God, to observe to do all this commandment which I command thee this day."
+  },
+  {
+   "v": 6,
+   "he": "כִּֽי־יְהוָ֤ה אֱלֹהֶ֙יךָ֙ בֵּֽרַכְךָ֔ כַּאֲשֶׁ֖ר דִּבֶּר־לָ֑ךְ וְהַֽעֲבַטְתָּ֞ גּוֹיִ֣ם רַבִּ֗ים וְאַתָּה֙ לֹ֣א תַעֲבֹ֔ט וּמָֽשַׁלְתָּ֙ בְּגוֹיִ֣ם רַבִּ֔ים וּבְךָ֖ לֹ֥א יִמְשֹֽׁלוּ׃",
+   "en": "For the LORD thy God will bless thee, as He promised thee; and thou shalt lend unto many nations, but thou shalt not borrow; and thou shalt rule over many nations, but they shall not rule over thee."
+  },
+  {
+   "v": 7,
+   "he": "כִּֽי־יִהְיֶה֩ בְךָ֨ אֶבְי֜וֹן מֵאַחַ֤ד אַחֶ֙יךָ֙ בְּאַחַ֣ד שְׁעָרֶ֔יךָ בְּאַ֨רְצְךָ֔ אֲשֶׁר־יְהוָ֥ה אֱלֹהֶ֖יךָ נֹתֵ֣ן לָ֑ךְ לֹ֧א תְאַמֵּ֣ץ אֶת־לְבָבְךָ֗ וְלֹ֤א תִקְפֹּץ֙ אֶת־יָ֣דְךָ֔ מֵאָחִ֖יךָ הָאֶבְיֽוֹן׃",
+   "en": "If there be among you a needy man, one of thy brethren, within any of thy gates, in thy land which the LORD thy God giveth thee, thou shalt not harden thy heart, nor shut thy hand from thy needy brother;"
+  },
+  {
+   "v": 8,
+   "he": "כִּֽי־פָתֹ֧חַ תִּפְתַּ֛ח אֶת־יָדְךָ֖ ל֑וֹ וְהַעֲבֵט֙ תַּעֲבִיטֶ֔נּוּ דֵּ֚י מַחְסֹר֔וֹ אֲשֶׁ֥ר יֶחְסַ֖ר לֽוֹ׃",
+   "en": "but thou shalt surely open thy hand unto him, and shalt surely lend him sufficient for his need in that which he wanteth."
+  },
+  {
+   "v": 9,
+   "he": "הִשָּׁ֣מֶר לְךָ֡ פֶּן־יִהְיֶ֣ה דָבָר֩ עִם־לְבָבְךָ֨ בְלִיַּ֜עַל לֵאמֹ֗ר קָֽרְבָ֣ה שְׁנַֽת־הַשֶּׁבַע֮ שְׁנַ֣ת הַשְּׁמִטָּה֒ וְרָעָ֣ה עֵֽינְךָ֗ בְּאָחִ֙יךָ֙ הָֽאֶבְי֔וֹן וְלֹ֥א תִתֵּ֖ן ל֑וֹ וְקָרָ֤א עָלֶ֙יךָ֙ אֶל־יְהוָ֔ה וְהָיָ֥ה בְךָ֖ חֵֽטְא׃",
+   "en": "Beware that there be not a base thought in thy heart, saying: ‘The seventh year, the year of release, is at hand’; and thine eye be evil against thy needy brother, and thou give him nought; and he cry unto the LORD against thee, and it be sin in thee."
+  },
+  {
+   "v": 10,
+   "he": "נָת֤וֹן תִּתֵּן֙ ל֔וֹ וְלֹא־יֵרַ֥ע לְבָבְךָ֖ בְּתִתְּךָ֣ ל֑וֹ כִּ֞י בִּגְלַ֣ל׀ הַדָּבָ֣ר הַזֶּ֗ה יְבָרֶכְךָ֙ יְהוָ֣ה אֱלֹהֶ֔יךָ בְּכָֽל־מַעֲשֶׂ֔ךָ וּבְכֹ֖ל מִשְׁלַ֥ח יָדֶֽךָ׃",
+   "en": "Thou shalt surely give him, and thy heart shall not be grieved when thou givest unto him; because that for this thing the LORD thy God will bless thee in all thy work, and in all that thou puttest thy hand unto."
+  },
+  {
+   "v": 11,
+   "he": "כִּ֛י לֹא־יֶחְדַּ֥ל אֶבְי֖וֹן מִקֶּ֣רֶב הָאָ֑רֶץ עַל־כֵּ֞ן אָנֹכִ֤י מְצַוְּךָ֙ לֵאמֹ֔ר פָּ֠תֹחַ תִּפְתַּ֨ח אֶת־יָדְךָ֜ לְאָחִ֧יךָ לַעֲנִיֶּ֛ךָ וּלְאֶבְיֹנְךָ֖ בְּאַרְצֶֽךָ׃",
+   "en": "For the poor shall never cease out of the land; therefore I command thee, saying: ‘Thou shalt surely open thy hand unto thy poor and needy brother, in thy land.’"
+  },
+  {
+   "v": 12,
+   "he": "כִּֽי־יִמָּכֵ֨ר לְךָ֜ אָחִ֣יךָ הָֽעִבְרִ֗י א֚וֹ הָֽעִבְרִיָּ֔ה וַעֲבָֽדְךָ֖ שֵׁ֣שׁ שָׁנִ֑ים וּבַשָּׁנָה֙ הַשְּׁבִיעִ֔ת תְּשַׁלְּחֶ֥נּוּ חָפְשִׁ֖י מֵעִמָּֽךְ׃",
+   "en": "If thy brother, a Hebrew man, or a Hebrew woman, be sold unto thee, he shall serve thee six years; and in the seventh year thou shalt let him go free from thee."
+  },
+  {
+   "v": 13,
+   "he": "וְכִֽי־תְשַׁלְּחֶ֥נּוּ חָפְשִׁ֖י מֵֽעִמָּ֑ךְ לֹ֥א תְשַׁלְּחֶ֖נּוּ רֵיקָֽם׃",
+   "en": "And when thou lettest him go free from thee, thou shalt not let him go empty;"
+  },
+  {
+   "v": 14,
+   "he": "הַעֲנֵ֤יק תַּעֲנִיק֙ ל֔וֹ מִצֹּ֣אנְךָ֔ וּמִֽגָּרְנְךָ֖ וּמִיִּקְבֶ֑ךָ אֲשֶׁ֧ר בֵּרַכְךָ֛ יְהוָ֥ה אֱלֹהֶ֖יךָ תִּתֶּן־לֽוֹ׃",
+   "en": "thou shalt furnish him liberally out of thy flock, and out of thy threshing-floor, and out of thy winepress; of that wherewith the LORD thy God hath blessed thee thou shalt give unto him."
+  },
+  {
+   "v": 15,
+   "he": "וְזָכַרְתָּ֗ כִּ֣י עֶ֤בֶד הָיִ֙יתָ֙ בְּאֶ֣רֶץ מִצְרַ֔יִם וַֽיִּפְדְּךָ֖ יְהוָ֣ה אֱלֹהֶ֑יךָ עַל־כֵּ֞ן אָנֹכִ֧י מְצַוְּךָ֛ אֶת־הַדָּבָ֥ר הַזֶּ֖ה הַיּֽוֹם׃",
+   "en": "And thou shalt remember that thou wast a bondman in the land of Egypt, and the LORD thy God redeemed thee; therefore I command thee this thing to-day."
+  },
+  {
+   "v": 16,
+   "he": "וְהָיָה֙ כִּֽי־יֹאמַ֣ר אֵלֶ֔יךָ לֹ֥א אֵצֵ֖א מֵעִמָּ֑ךְ כִּ֤י אֲהֵֽבְךָ֙ וְאֶת־בֵּיתֶ֔ךָ כִּי־ט֥וֹב ל֖וֹ עִמָּֽךְ׃",
+   "en": "And it shall be, if he say unto thee: ‘I will not go out from thee’; because he loveth thee and thy house, because he fareth well with thee;"
+  },
+  {
+   "v": 17,
+   "he": "וְלָקַחְתָּ֣ אֶת־הַמַּרְצֵ֗עַ וְנָתַתָּ֤ה בְאָזְנוֹ֙ וּבַדֶּ֔לֶת וְהָיָ֥ה לְךָ֖ עֶ֣בֶד עוֹלָ֑ם וְאַ֥ף לַאֲמָתְךָ֖ תַּעֲשֶׂה־כֵּֽן׃",
+   "en": "then thou shalt take an awl, and thrust it through his ear and into the door, and he shall be thy bondman for ever. And also unto thy bondwoman thou shalt do likewise."
+  },
+  {
+   "v": 18,
+   "he": "לֹא־יִקְשֶׁ֣ה בְעֵינֶ֗ךָ בְּשַׁלֵּֽחֲךָ֙ אֹת֤וֹ חָפְשִׁי֙ מֵֽעִמָּ֔ךְ כִּ֗י מִשְׁנֶה֙ שְׂכַ֣ר שָׂכִ֔יר עֲבָֽדְךָ֖ שֵׁ֣שׁ שָׁנִ֑ים וּבֵֽרַכְךָ֙ יְהוָ֣ה אֱלֹהֶ֔יךָ בְּכֹ֖ל אֲשֶׁ֥ר תַּעֲשֶֽׂה׃",
+   "en": "It shall not seem hard unto thee, when thou lettest him go free from thee; for to the double of the hire of a hireling hath he served thee six years; and the LORD thy God will bless thee in all that thou doest."
+  },
+  {
+   "v": 19,
+   "he": "כָּֽל־הַבְּכ֡וֹר אֲשֶׁר֩ יִוָּלֵ֨ד בִּבְקָרְךָ֤ וּבְצֹֽאנְךָ֙ הַזָּכָ֔ר תַּקְדִּ֖ישׁ לַיהוָ֣ה אֱלֹהֶ֑יךָ לֹ֤א תַעֲבֹד֙ בִּבְכֹ֣ר שׁוֹרֶ֔ךָ וְלֹ֥א תָגֹ֖ז בְּכ֥וֹר צֹאנֶֽךָ׃",
+   "en": "All the firstling males that are born of thy herd and of thy flock thou shalt sanctify unto the LORD thy God; thou shalt do no work with the firstling of thine ox, nor shear the firstling of thy flock."
+  },
+  {
+   "v": 20,
+   "he": "לִפְנֵי֩ יְהוָ֨ה אֱלֹהֶ֤יךָ תֹאכֲלֶ֙נּוּ֙ שָׁנָ֣ה בְשָׁנָ֔ה בַּמָּק֖וֹם אֲשֶׁר־יִבְחַ֣ר יְהוָ֑ה אַתָּ֖ה וּבֵיתֶֽךָ׃",
+   "en": "Thou shalt eat it before the LORD thy God year by year in the place which the LORD shall choose, thou and thy household."
+  },
+  {
+   "v": 21,
+   "he": "וְכִֽי־יִהְיֶ֨ה ב֜וֹ מ֗וּם פִּסֵּ֙חַ֙ א֣וֹ עִוֵּ֔ר כֹּ֖ל מ֣וּם רָ֑ע לֹ֣א תִזְבָּחֶ֔נּוּ לַיהוָ֖ה אֱלֹהֶֽיךָ׃",
+   "en": "And if there be any blemish therein, lameness, or blindness, any ill blemish whatsoever, thou shalt not sacrifice it unto the LORD thy God."
+  },
+  {
+   "v": 22,
+   "he": "בִּשְׁעָרֶ֖יךָ תֹּאכֲלֶ֑נּוּ הַטָּמֵ֤א וְהַטָּהוֹר֙ יַחְדָּ֔ו כַּצְּבִ֖י וְכָאַיָּֽל׃",
+   "en": "Thou shalt eat it within thy gates; the unclean and the clean may eat it alike, as the gazelle, and as the hart."
+  },
+  {
+   "v": 23,
+   "he": "רַ֥ק אֶת־דָּמ֖וֹ לֹ֣א תֹאכֵ֑ל עַל־הָאָ֥רֶץ תִּשְׁפְּכֶ֖נּוּ כַּמָּֽיִם׃",
+   "en": "Only thou shalt not eat the blood thereof; thou shalt pour it out upon the ground as water."
+  }
+ ],
+ "sourcing": "sourced"
+}

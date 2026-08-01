@@ -1,0 +1,80 @@
+{
+ "id": "bible--hebrews--5",
+ "work": "bible",
+ "n": 58,
+ "slug": "hebrews",
+ "c": 5,
+ "verses": [
+  {
+   "v": 1,
+   "en": "For every high priest, being taken from among men, is appointed for men in things pertaining to God, that he may offer both gifts and sacrifices for sins.",
+   "gr": "Πᾶς γὰρ ἀρχιερεὺς ἐξ ἀνθρώπων λαμβανόμενος ὑπὲρ ἀνθρώπων καθίσταται τὰ πρὸς τὸν θεόν, ἵνα προσφέρῃ δῶρά τε καὶ θυσίας ὑπὲρ ἁμαρτιῶν,"
+  },
+  {
+   "v": 2,
+   "en": "The high priest can deal gently with those who are ignorant and going astray, because he himself is also surrounded with weakness.",
+   "gr": "μετριοπαθεῖν δυνάμενος τοῖς ἀγνοοῦσι καὶ πλανωμένοις ἐπεὶ καὶ αὐτὸς περίκειται ἀσθένειαν,"
+  },
+  {
+   "v": 3,
+   "en": "Because of this, he must offer sacrifices for sins for the people, as well as for himself.",
+   "gr": "καὶ ⸂διʼ αὐτὴν⸃ ὀφείλει, καθὼς περὶ τοῦ λαοῦ, οὕτως καὶ περὶ ⸀αὑτοῦ προσφέρειν ⸀περὶ ἁμαρτιῶν."
+  },
+  {
+   "v": 4,
+   "en": "Nobody takes this honor on himself, but he is called by God, just like Aaron was.",
+   "gr": "καὶ οὐχ ἑαυτῷ τις λαμβάνει τὴν τιμήν, ἀλλὰ καλούμενος ὑπὸ τοῦ θεοῦ, ⸀καθώσπερ καὶ Ἀαρών."
+  },
+  {
+   "v": 5,
+   "en": "So also Christ didn’t glorify himself to be made a high priest, but it was he who said to him, “You are my Son. Today I have become your father.”",
+   "gr": "Οὕτως καὶ ὁ Χριστὸς οὐχ ἑαυτὸν ἐδόξασεν γενηθῆναι ἀρχιερέα, ἀλλʼ ὁ λαλήσας πρὸς αὐτόν· Υἱός μου εἶ σύ, ἐγὼ σήμερον γεγέννηκά σε·"
+  },
+  {
+   "v": 6,
+   "en": "As he says also in another place, “You are a priest forever, after the order of Melchizedek.”",
+   "gr": "καθὼς καὶ ἐν ἑτέρῳ λέγει· Σὺ ἱερεὺς εἰς τὸν αἰῶνα κατὰ τὴν τάξιν Μελχισέδεκ,"
+  },
+  {
+   "v": 7,
+   "en": "He, in the days of his flesh, having offered up prayers and petitions with strong crying and tears to him who was able to save him from death, and having been heard for his godly fear,",
+   "gr": "ὃς ἐν ταῖς ἡμέραις τῆς σαρκὸς αὐτοῦ δεήσεις τε καὶ ἱκετηρίας πρὸς τὸν δυνάμενον σῴζειν αὐτὸν ἐκ θανάτου μετὰ κραυγῆς ἰσχυρᾶς καὶ δακρύων προσενέγκας καὶ εἰσακουσθεὶς ἀπὸ τῆς εὐλαβείας,"
+  },
+  {
+   "v": 8,
+   "en": "though he was a Son, yet learned obedience by the things which he suffered.",
+   "gr": "καίπερ ὢν υἱός, ἔμαθεν ἀφʼ ὧν ἔπαθεν τὴν ὑπακοήν,"
+  },
+  {
+   "v": 9,
+   "en": "Having been made perfect, he became to all of those who obey him the author of eternal salvation,",
+   "gr": "καὶ τελειωθεὶς ἐγένετο ⸂πᾶσιν τοῖς ὑπακούουσιν αὐτῷ⸃ αἴτιος σωτηρίας αἰωνίου,"
+  },
+  {
+   "v": 10,
+   "en": "named by God a high priest after the order of Melchizedek.",
+   "gr": "προσαγορευθεὶς ὑπὸ τοῦ θεοῦ ἀρχιερεὺς κατὰ τὴν τάξιν Μελχισέδεκ."
+  },
+  {
+   "v": 11,
+   "en": "About him we have many words to say, and hard to interpret, seeing you have become dull of hearing.",
+   "gr": "Περὶ οὗ πολὺς ἡμῖν ὁ λόγος καὶ δυσερμήνευτος λέγειν, ἐπεὶ νωθροὶ γεγόνατε ταῖς ἀκοαῖς·"
+  },
+  {
+   "v": 12,
+   "en": "For although by this time you should be teachers, you again need to have someone teach you the rudiments of the first principles of the revelations of God. You have come to need milk, and not solid food.",
+   "gr": "καὶ γὰρ ὀφείλοντες εἶναι διδάσκαλοι διὰ τὸν χρόνον, πάλιν χρείαν ἔχετε τοῦ διδάσκειν ὑμᾶς ⸀τινὰ τὰ στοιχεῖα τῆς ἀρχῆς τῶν λογίων τοῦ θεοῦ, καὶ γεγόνατε χρείαν ἔχοντες γάλακτος, ⸀οὐ στερεᾶς τροφῆς."
+  },
+  {
+   "v": 13,
+   "en": "For everyone who lives on milk is not experienced in the word of righteousness, for he is a baby.",
+   "gr": "πᾶς γὰρ ὁ μετέχων γάλακτος ἄπειρος λόγου δικαιοσύνης, νήπιος γάρ ἐστιν·"
+  },
+  {
+   "v": 14,
+   "en": "But solid food is for those who are full grown, who by reason of use have their senses exercised to discern good and evil.",
+   "gr": "τελείων δέ ἐστιν ἡ στερεὰ τροφή, τῶν διὰ τὴν ἕξιν τὰ αἰσθητήρια γεγυμνασμένα ἐχόντων πρὸς διάκρισιν καλοῦ τε καὶ κακοῦ."
+  }
+ ],
+ "sourcing": "sourced"
+}

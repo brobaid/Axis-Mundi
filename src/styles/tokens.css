@@ -30,6 +30,9 @@
   /* Per-script faces (design language §4.3). Applied via [lang] in base.css. */
   --font-arabic: 'Noto Naskh Arabic', var(--font-prose);
   --font-hebrew: 'Noto Serif Hebrew', var(--font-prose);
+  /* Romanised Pali: the prose face first, Noto Serif behind it for the Latin
+     Extended Additional codepoints the prose face does not carry. */
+  --font-pali: 'Source Serif 4 Variable', 'Noto Serif', var(--font-prose);
   --font-devanagari: 'Noto Serif Devanagari', var(--font-prose);
   --font-gurmukhi: 'Noto Sans Gurmukhi', var(--font-ui);
   --font-sc: 'Noto Serif SC', var(--font-prose);

@@ -1,0 +1,50 @@
+{
+ "id": "tanakh--psalms--124",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 124,
+ "verses": [
+  {
+   "v": 1,
+   "he": "שִׁ֥יר הַֽמַּעֲל֗וֹת לְדָ֫וִ֥ד לוּלֵ֣י יְ֭הוָה שֶׁהָ֣יָה לָ֑נוּ יֹֽאמַר־נָ֝א יִשְׂרָאֵֽל׃",
+   "en": "A Song of Ascents; of David. 'If it had not been the LORD who was for us', Let Israel now say;"
+  },
+  {
+   "v": 2,
+   "he": "לוּלֵ֣י יְ֭הוָה שֶׁהָ֣יָה לָ֑נוּ בְּק֖וּם עָלֵ֣ינוּ אָדָֽם׃",
+   "en": "'If it had not been the LORD who was for us, When men rose up against us,"
+  },
+  {
+   "v": 3,
+   "he": "אֲ֭זַי חַיִּ֣ים בְּלָע֑וּנוּ בַּחֲר֖וֹת אַפָּ֣ם בָּֽנוּ׃",
+   "en": "Then they had swallowed us up alive, When their wrath was kindled against us;"
+  },
+  {
+   "v": 4,
+   "he": "אֲ֭זַי הַמַּ֣יִם שְׁטָפ֑וּנוּ נַ֝֗חְלָה עָבַ֥ר עַל־נַפְשֵֽׁנוּ׃",
+   "en": "Then the waters had overwhelmed us, The stream had gone over our soul;"
+  },
+  {
+   "v": 5,
+   "he": "אֲ֭זַי עָבַ֣ר עַל־נַפְשֵׁ֑נוּ הַ֝מַּ֗יִם הַזֵּֽידוֹנִֽים׃",
+   "en": "Then the proud waters Had gone over our soul.'"
+  },
+  {
+   "v": 6,
+   "he": "בָּר֥וּךְ יְהוָ֑ה שֶׁלֹּ֥א נְתָנָ֥נוּ טֶ֝֗רֶף לְשִׁנֵּיהֶֽם׃",
+   "en": "Blessed be the LORD, Wo hath not given us as a prey to their teeth."
+  },
+  {
+   "v": 7,
+   "he": "נַפְשֵׁ֗נוּ כְּצִפּ֥וֹר נִמְלְטָה֮ מִפַּ֪ח י֫וֹקְשִׁ֥ים הַפַּ֥ח נִשְׁבָּ֗ר וַאֲנַ֥חְנוּ נִמְלָֽטְנוּ׃",
+   "en": "Our soul is escaped as a bird out of the snare of the fowlers; The snare is broken, and we are escaped."
+  },
+  {
+   "v": 8,
+   "he": "עֶ֭זְרֵנוּ בְּשֵׁ֣ם יְהוָ֑ה עֹ֝שֵׂ֗ה שָׁמַ֥יִם וָאָֽרֶץ׃",
+   "en": "Our help is in the name of the LORD, Who made heaven and earth."
+  }
+ ],
+ "sourcing": "sourced"
+}

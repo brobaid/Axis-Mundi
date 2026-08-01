@@ -1,0 +1,130 @@
+{
+ "id": "tanakh--psalms--139",
+ "work": "tanakh",
+ "n": 27,
+ "slug": "psalms",
+ "c": 139,
+ "verses": [
+  {
+   "v": 1,
+   "he": "לַ֭מְנַצֵּחַ לְדָוִ֣ד מִזְמ֑וֹר יְהוָ֥ה חֲ֝קַרְתַּ֗נִי וַתֵּדָֽע׃",
+   "en": "For the Leader. A Psalm of David. O LORD, Thou hast searched me, and known me. ."
+  },
+  {
+   "v": 2,
+   "he": "אַתָּ֣ה יָ֭דַעְתָּ שִׁבְתִּ֣י וְקוּמִ֑י בַּ֥נְתָּה לְ֝רֵעִ֗י מֵרָחֽוֹק׃",
+   "en": "Thou knowest my downsitting and mine uprising, Thou understandest my thought afar off."
+  },
+  {
+   "v": 3,
+   "he": "אָרְחִ֣י וְרִבְעִ֣י זֵרִ֑יתָ וְֽכָל־דְּרָכַ֥י הִסְכַּֽנְתָּה׃",
+   "en": "Thou measurest my going about and my lying down, And art acquainted with all my ways."
+  },
+  {
+   "v": 4,
+   "he": "כִּ֤י אֵ֣ין מִ֭לָּה בִּלְשׁוֹנִ֑י הֵ֥ן יְ֝הוָ֗ה יָדַ֥עְתָּ כֻלָּֽהּ׃",
+   "en": "For there is not a word in my tongue, But, lo, O LORD, Thou knowest it altogether."
+  },
+  {
+   "v": 5,
+   "he": "אָח֣וֹר וָקֶ֣דֶם צַרְתָּ֑נִי וַתָּ֖שֶׁת עָלַ֣י כַּפֶּֽכָה׃",
+   "en": "Thou hast hemmed me in behind and before, And laid Thy hand upon me."
+  },
+  {
+   "v": 6,
+   "he": "פלאיה [פְּלִ֣יאָֽה] דַ֣עַת מִמֶּ֑נִּי נִ֝שְׂגְּבָ֗ה לֹא־א֥וּכַֽל לָֽהּ׃",
+   "en": "Such knowledge is too wonderful for me; Too high, I cannot attain unto it."
+  },
+  {
+   "v": 7,
+   "he": "אָ֭נָ֥ה אֵלֵ֣ךְ מֵרוּחֶ֑ךָ וְ֝אָ֗נָה מִפָּנֶ֥יךָ אֶבְרָֽח׃",
+   "en": "Whither shall I go from Thy spirit? Or whither shall I flee from Thy presence?"
+  },
+  {
+   "v": 8,
+   "he": "אִם־אֶסַּ֣ק שָׁ֭מַיִם שָׁ֣ם אָ֑תָּה וְאַצִּ֖יעָה שְּׁא֣וֹל הִנֶּֽךָּ׃",
+   "en": "If I ascend up into heaven, Thou art there; If I make my bed in the nether-world, behold, Thou art there."
+  },
+  {
+   "v": 9,
+   "he": "אֶשָּׂ֥א כַנְפֵי־שָׁ֑חַר אֶ֝שְׁכְּנָ֗ה בְּאַחֲרִ֥ית יָֽם׃",
+   "en": "If I take the wings of the morning, And dwell in the uttermost parts of the sea;"
+  },
+  {
+   "v": 10,
+   "he": "גַּם־שָׁ֭ם יָדְךָ֣ תַנְחֵ֑נִי וְֽתֹאחֲזֵ֥נִי יְמִינֶֽךָ׃",
+   "en": "Even there would Thy hand lead me, And Thy right hand would hold me."
+  },
+  {
+   "v": 11,
+   "he": "וָ֭אֹמַר אַךְ־חֹ֣שֶׁךְ יְשׁוּפֵ֑נִי וְ֝לַ֗יְלָה א֣וֹר בַּעֲדֵֽנִי׃",
+   "en": "And if I say: ‘Surely the darkness shall envelop me, And the light about me shall be night';"
+  },
+  {
+   "v": 12,
+   "he": "גַּם־חֹשֶׁךְ֮ לֹֽא־יַחְשִׁ֪יךְ מִ֫מֶּ֥ךָ וְ֭לַיְלָה כַּיּ֣וֹם יָאִ֑יר כַּ֝חֲשֵׁיכָ֗ה כָּאוֹרָֽה׃",
+   "en": "Even the darkness is not too dark for Thee, But the night shineth as the day; The darkness is even as the light."
+  },
+  {
+   "v": 13,
+   "he": "כִּֽי־אַ֭תָּה קָנִ֣יתָ כִלְיֹתָ֑י תְּ֝סֻכֵּ֗נִי בְּבֶ֣טֶן אִמִּֽי׃",
+   "en": "For Thou hast made my reins; Thou hast knit me together in my mother's womb."
+  },
+  {
+   "v": 14,
+   "he": "אֽוֹדְךָ֗ עַ֤ל כִּ֥י נוֹרָא֗וֹת נִ֫פְלֵ֥יתִי נִפְלָאִ֥ים מַעֲשֶׂ֑יךָ וְ֝נַפְשִׁ֗י יֹדַ֥עַת מְאֹֽד׃",
+   "en": "I will give thanks unto Thee, for I am fearfully and wonderfully made; Wonderful are Thy works; and that my soul knoweth right well."
+  },
+  {
+   "v": 15,
+   "he": "לֹא־נִכְחַ֥ד עָצְמִ֗י מִ֫מֶּ֥ךָּ אֲשֶׁר־עֻשֵּׂ֥יתִי בַסֵּ֑תֶר רֻ֝קַּ֗מְתִּי בְּֽתַחְתִּיּ֥וֹת אָֽרֶץ׃",
+   "en": "My frame was not hidden from Thee, When I was made in secret, And curiously wrought in the lowest parts of the earth."
+  },
+  {
+   "v": 16,
+   "he": "גָּלְמִ֤י׀ רָ֘א֤וּ עֵינֶ֗יךָ וְעַֽל־סִפְרְךָ֮ כֻּלָּ֪ם יִכָּ֫תֵ֥בוּ יָמִ֥ים יֻצָּ֑רוּ ולא [וְל֖וֹ] אֶחָ֣ד בָּהֶֽם׃",
+   "en": "Thine eyes did see mine unformed substance, And in Thy book they were all written— Even the days that were fashioned, When as yet there was none of them."
+  },
+  {
+   "v": 17,
+   "he": "וְלִ֗י מַה־יָּקְר֣וּ רֵעֶ֣יךָ אֵ֑ל מֶ֥ה עָ֝צְמוּ רָאשֵׁיהֶֽם׃",
+   "en": "How weighty also are Thy thoughts unto me, O God! How great is the sum of them!"
+  },
+  {
+   "v": 18,
+   "he": "אֶ֭סְפְּרֵם מֵח֣וֹל יִרְבּ֑וּן הֱ֝קִיצֹ֗תִי וְעוֹדִ֥י עִמָּֽךְ׃",
+   "en": "If I would count them, they are more in number than the sand; Were I to come to the end of them, I would still be with Thee."
+  },
+  {
+   "v": 19,
+   "he": "אִם־תִּקְטֹ֖ל אֱל֥וֹהַּ׀ רָשָׁ֑ע וְאַנְשֵׁ֥י דָ֝מִ֗ים ס֣וּרוּ מֶֽנִּי׃",
+   "en": "If Thou but wouldest slay the wicked, O God— Depart from me therefore, ye men of blood;"
+  },
+  {
+   "v": 20,
+   "he": "אֲשֶׁ֣ר יֹ֭אמְרֻךָ לִמְזִמָּ֑ה נָשֻׂ֖א לַשָּׁ֣וְא עָרֶֽיךָ׃",
+   "en": "Who utter Thy name with wicked thought, They take it for falsehood, even Thine enemies— ."
+  },
+  {
+   "v": 21,
+   "he": "הֲלֽוֹא־מְשַׂנְאֶ֖יךָ יְהוָ֥ה׀ אֶשְׂנָ֑א וּ֝בִתְקוֹמְמֶ֗יךָ אֶתְקוֹטָֽט׃",
+   "en": "Do not I hate them, O LORD, that hate Thee? And do not I strive with those that rise up against Thee?"
+  },
+  {
+   "v": 22,
+   "he": "תַּכְלִ֣ית שִׂנְאָ֣ה שְׂנֵאתִ֑ים לְ֝אוֹיְבִ֗ים הָ֣יוּ לִֽי׃",
+   "en": "I hate them with utmost hatred; I count them mine enemies."
+  },
+  {
+   "v": 23,
+   "he": "חָקְרֵ֣נִי אֵ֭ל וְדַ֣ע לְבָבִ֑י בְּ֝חָנֵ֗נִי וְדַ֣ע שַׂרְעַפָּֽי׃",
+   "en": "Search me, O God, and know my heart, Try me, and know my thoughts;"
+  },
+  {
+   "v": 24,
+   "he": "וּרְאֵ֗ה אִם־דֶּֽרֶךְ־עֹ֥צֶב בִּ֑י וּ֝נְחֵ֗נִי בְּדֶ֣רֶךְ עוֹלָֽם׃",
+   "en": "And see if there be any way in me that is grievous, And lead me in the way everlasting."
+  }
+ ],
+ "sourcing": "sourced"
+}

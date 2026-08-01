@@ -1,0 +1,44 @@
+{
+ "id": "quran--1",
+ "work": "quran",
+ "n": 1,
+ "slug": "1",
+ "verses": [
+  {
+   "v": 1,
+   "ar": "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ",
+   "en": "In the name of Allah, the Beneficent, the Merciful"
+  },
+  {
+   "v": 2,
+   "ar": "ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَٰلَمِينَ",
+   "en": "Praise be to Allah, Lord of the Worlds"
+  },
+  {
+   "v": 3,
+   "ar": "ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ",
+   "en": "The Beneficent, the Merciful"
+  },
+  {
+   "v": 4,
+   "ar": "مَٰلِكِ يَوۡمِ ٱلدِّينِ",
+   "en": "Master of the Day of Judgment"
+  },
+  {
+   "v": 5,
+   "ar": "إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ",
+   "en": "Thee (alone) we worship; Thee (alone) we ask for help"
+  },
+  {
+   "v": 6,
+   "ar": "ٱهۡدِنَا ٱلصِّرَٰطَ ٱلۡمُسۡتَقِيمَ",
+   "en": "Show us the straight path"
+  },
+  {
+   "v": 7,
+   "ar": "صِرَٰطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ",
+   "en": "The path of those whom Thou hast favoured; Not the (path) of those who earn Thine anger nor of those who go astray"
+  }
+ ],
+ "sourcing": "sourced"
+}

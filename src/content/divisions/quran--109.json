@@ -1,0 +1,39 @@
+{
+ "id": "quran--109",
+ "work": "quran",
+ "n": 109,
+ "slug": "109",
+ "verses": [
+  {
+   "v": 1,
+   "ar": "قُلۡ يَٰٓأَيُّهَا ٱلۡكَٰفِرُونَ",
+   "en": "Say: O disbelievers"
+  },
+  {
+   "v": 2,
+   "ar": "لَآ أَعۡبُدُ مَا تَعۡبُدُونَ",
+   "en": "I worship not that which ye worship"
+  },
+  {
+   "v": 3,
+   "ar": "وَلَآ أَنتُمۡ عَٰبِدُونَ مَآ أَعۡبُدُ",
+   "en": "Nor worship ye that which I worship"
+  },
+  {
+   "v": 4,
+   "ar": "وَلَآ أَنَا۠ عَابِدࣱ مَّا عَبَدتُّمۡ",
+   "en": "And I shall not worship that which ye worship"
+  },
+  {
+   "v": 5,
+   "ar": "وَلَآ أَنتُمۡ عَٰبِدُونَ مَآ أَعۡبُدُ",
+   "en": "Nor will ye worship that which I worship"
+  },
+  {
+   "v": 6,
+   "ar": "لَكُمۡ دِينُكُمۡ وَلِيَ دِينِ",
+   "en": "Unto you your religion, and unto me my religion"
+  }
+ ],
+ "sourcing": "sourced"
+}

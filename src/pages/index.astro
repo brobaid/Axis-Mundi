@@ -111,6 +111,38 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
     </p>
   </section>
 
+  <!--
+    First visit only, then never.
+
+    The site was built in the open and reads as though you watched it happen:
+    the rooms have Roman numerals, the nav has eight names, and nothing on the
+    entrance says what any of them answers. Three lines and four doors, in the
+    house voice, on the first visit and no other.
+
+    Same storage rule as the timeline's coach, which the design language allows
+    because this is not a reading path: everything it says is true of the museum
+    whether or not it ever appeared, and with storage refused it simply greets
+    each visit rather than breaking anything.
+  -->
+  <div class="orient" data-orient hidden>
+    <div class="orient__card" role="dialog" aria-labelledby="orient-title" aria-modal="false">
+      <p class="eyebrow" id="orient-title">First time here</p>
+      <ol class="orient__lines" role="list">
+        <li>Ten traditions, described to the same depth and in the same words.</li>
+        <li>Every claim is sourced and says so; where scholars disagree, both positions stand.</li>
+        <li>Nothing is ranked, scored, or recommended.</li>
+      </ol>
+      <p class="eyebrow orient__doors-label">Four doors</p>
+      <ul class="orient__doors" role="list">
+        <li><a href="/timeline"><b>When did things happen</b><span>the Timeline</span></a></li>
+        <li><a href="/map"><b>Where</b><span>the Map</span></a></li>
+        <li><a href="/matrix"><b>What do they believe</b><span>the Matrix</span></a></li>
+        <li><a href="/traditions"><b>Each tradition whole</b><span>the Dives</span></a></li>
+      </ul>
+      <button type="button" class="orient__dismiss" data-orient-dismiss>Look around</button>
+    </div>
+  </div>
+
   <!-- The living timeline ------------------------------------------------- -->
   <div class="strip-wrap">
     <section class="strip" aria-labelledby="strip-heading" style={`--strip-cols:${columns}`}>
@@ -137,6 +169,7 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
           class="meridian strip__meridian"
           style={`left:${meridianAt.toFixed(2)}%`}
           aria-hidden="true"
+          title="One time cursor shared by every room"
         >
         </div>
         <b class="strip__year mono" style={`left:${meridianAt.toFixed(2)}%`} aria-hidden="true">
@@ -209,12 +242,131 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
   </section>
 </BaseLayout>
 
+<script>
+  import '../scripts/orientation';
+</script>
+
 <style>
   /* --- hero --------------------------------------------------------------- */
 
   .hero {
     max-width: 46rem;
     padding-block: var(--space-12) var(--space-2);
+  }
+
+  /* --- first-visit orientation ------------------------------------------- */
+
+  /*
+    The same furniture as the timeline's coach — a scrim, a card, a dismiss —
+    because it is the same kind of thing and the museum should only have one of
+    them. The doors are the four rooms a first-time visitor most needs named,
+    in the owner's own words, each paired with the question it answers.
+  */
+  .orient {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-overlay);
+    display: grid;
+    place-items: end center;
+    padding: var(--space-6) var(--space-4);
+    background: var(--scrim);
+  }
+
+  @media (min-width: 48rem) {
+    .orient {
+      place-items: center;
+    }
+  }
+
+  .orient__card {
+    width: min(32rem, 100%);
+    max-height: 100%;
+    overflow-y: auto;
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--ink);
+    box-shadow: var(--shadow-panel);
+    padding: var(--space-6);
+  }
+
+  .orient__lines {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-3) 0 var(--space-6);
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .orient__lines li {
+    font-size: var(--size-small);
+    padding-left: var(--space-4);
+    position: relative;
+  }
+
+  /* The house's small mark, doing the job a bullet would. */
+  .orient__lines li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 4px;
+    height: 4px;
+    rotate: 45deg;
+    background: var(--brass);
+  }
+
+  .orient__doors-label {
+    margin-bottom: var(--space-2);
+  }
+
+  .orient__doors {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-6);
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  .orient__doors a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
+    min-height: var(--tap-min);
+    padding: var(--space-2) 0;
+    border-bottom: var(--hairline-width) solid var(--hairline);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: var(--size-small);
+  }
+
+  .orient__doors b {
+    font-weight: 400;
+  }
+
+  .orient__doors span {
+    flex: none;
+    font-family: var(--font-ui);
+    color: var(--brass-ink);
+  }
+
+  .orient__doors a:hover b {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .orient__dismiss {
+    min-height: var(--tap-min);
+    padding: 0 var(--space-4);
+    border: var(--hairline-width) solid var(--ink);
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    cursor: pointer;
+  }
+
+  .orient__dismiss:hover {
+    background: var(--brass-wash);
   }
 
   .hero h1 {
@@ -400,29 +552,6 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
   .curator__more a {
     font-family: var(--font-ui);
     font-size: var(--size-small);
-  }
-
-  .ornament {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    max-width: 32.5rem;
-    margin: 0 0 var(--space-6);
-  }
-
-  .ornament i {
-    flex: 1;
-    height: 3px;
-    border-top: var(--hairline-width) solid var(--hairline);
-    border-bottom: var(--hairline-width) solid var(--hairline);
-  }
-
-  .ornament b {
-    width: 5px;
-    height: 5px;
-    rotate: 45deg;
-    background: var(--brass);
-    flex: 0 0 auto;
   }
 
   @media (prefers-reduced-motion: reduce) {

@@ -1,0 +1,195 @@
+{
+ "id": "tanakh--exodus--21",
+ "work": "tanakh",
+ "n": 2,
+ "slug": "exodus",
+ "c": 21,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וְאֵ֙לֶּה֙ הַמִּשְׁפָּטִ֔ים אֲשֶׁ֥ר תָּשִׂ֖ים לִפְנֵיהֶֽם׃",
+   "en": "Now these are the ordinances which thou shalt set before them."
+  },
+  {
+   "v": 2,
+   "he": "כִּ֤י תִקְנֶה֙ עֶ֣בֶד עִבְרִ֔י שֵׁ֥שׁ שָׁנִ֖ים יַעֲבֹ֑ד וּבַ֨שְּׁבִעִ֔ת יֵצֵ֥א לַֽחָפְשִׁ֖י חִנָּֽם׃",
+   "en": "If thou buy a Hebrew servant, six years he shall serve; and in the seventh he shall go out free for nothing."
+  },
+  {
+   "v": 3,
+   "he": "אִם־בְּגַפּ֥וֹ יָבֹ֖א בְּגַפּ֣וֹ יֵצֵ֑א אִם־בַּ֤עַל אִשָּׁה֙ ה֔וּא וְיָצְאָ֥ה אִשְׁתּ֖וֹ עִמּֽוֹ׃",
+   "en": "If he come in by himself, he shall go out by himself; if he be married, then his wife shall go out with him."
+  },
+  {
+   "v": 4,
+   "he": "אִם־אֲדֹנָיו֙ יִתֶּן־ל֣וֹ אִשָּׁ֔ה וְיָלְדָה־ל֥וֹ בָנִ֖ים א֣וֹ בָנ֑וֹת הָאִשָּׁ֣ה וִילָדֶ֗יהָ תִּהְיֶה֙ לַֽאדֹנֶ֔יהָ וְה֖וּא יֵצֵ֥א בְגַפּֽוֹ׃",
+   "en": "If his master give him a wife, and she bear him sons or daughters; the wife and her children shall be her master’s, and he shall go out by himself."
+  },
+  {
+   "v": 5,
+   "he": "וְאִם־אָמֹ֤ר יֹאמַר֙ הָעֶ֔בֶד אָהַ֙בְתִּי֙ אֶת־אֲדֹנִ֔י אֶת־אִשְׁתִּ֖י וְאֶת־בָּנָ֑י לֹ֥א אֵצֵ֖א חָפְשִֽׁי׃",
+   "en": "But if the servant shall plainly say: I love my master, my wife, and my children; I will not go out free;"
+  },
+  {
+   "v": 6,
+   "he": "וְהִגִּישׁ֤וֹ אֲדֹנָיו֙ אֶל־הָ֣אֱלֹהִ֔ים וְהִגִּישׁוֹ֙ אֶל־הַדֶּ֔לֶת א֖וֹ אֶל־הַמְּזוּזָ֑ה וְרָצַ֨ע אֲדֹנָ֤יו אֶת־אָזְנוֹ֙ בַּמַּרְצֵ֔עַ וַעֲבָד֖וֹ לְעֹלָֽם׃",
+   "en": "then his master shall bring him unto God, and shall bring him to the door, or unto the door-post; and his master shall bore his ear through with an awl; and he shall serve him for ever."
+  },
+  {
+   "v": 7,
+   "he": "וְכִֽי־יִמְכֹּ֥ר אִ֛ישׁ אֶת־בִּתּ֖וֹ לְאָמָ֑ה לֹ֥א תֵצֵ֖א כְּצֵ֥את הָעֲבָדִֽים׃",
+   "en": "And if a man sell his daughter to be a maid-servant, she shall not go out as the men-servants do."
+  },
+  {
+   "v": 8,
+   "he": "אִם־רָעָ֞ה בְּעֵינֵ֧י אֲדֹנֶ֛יהָ אֲשֶׁר־לא [ל֥וֹ] יְעָדָ֖הּ וְהֶפְדָּ֑הּ לְעַ֥ם נָכְרִ֛י לֹא־יִמְשֹׁ֥ל לְמָכְרָ֖הּ בְּבִגְדוֹ־בָֽהּ׃",
+   "en": "If she please not her master, who hath espoused her to himself, then shall he let her be redeemed; to sell her unto a foreign people he shall have no power, seeing he hath dealt deceitfully with her."
+  },
+  {
+   "v": 9,
+   "he": "וְאִם־לִבְנ֖וֹ יִֽיעָדֶ֑נָּה כְּמִשְׁפַּ֥ט הַבָּנ֖וֹת יַעֲשֶׂה־לָּֽהּ׃",
+   "en": "And if he espouse her unto his son, he shall deal with her after the manner of daughters."
+  },
+  {
+   "v": 10,
+   "he": "אִם־אַחֶ֖רֶת יִֽקַּֽח־ל֑וֹ שְׁאֵרָ֛הּ כְּסוּתָ֥הּ וְעֹנָתָ֖הּ לֹ֥א יִגְרָֽע׃",
+   "en": "If he take him another wife, her food, her raiment, and her conjugal rights, shall he not diminish."
+  },
+  {
+   "v": 11,
+   "he": "וְאִם־שְׁלָ֨שׁ־אֵ֔לֶּה לֹ֥א יַעֲשֶׂ֖ה לָ֑הּ וְיָצְאָ֥ה חִנָּ֖ם אֵ֥ין כָּֽסֶף׃",
+   "en": "And if he do not these three unto her, then shall she go out for nothing, without money."
+  },
+  {
+   "v": 12,
+   "he": "מַכֵּ֥ה אִ֛ישׁ וָמֵ֖ת מ֥וֹת יוּמָֽת׃",
+   "en": "He that smiteth a man, so that he dieth, shall surely be put to death."
+  },
+  {
+   "v": 13,
+   "he": "וַאֲשֶׁר֙ לֹ֣א צָדָ֔ה וְהָאֱלֹהִ֖ים אִנָּ֣ה לְיָד֑וֹ וְשַׂמְתִּ֤י לְךָ֙ מָק֔וֹם אֲשֶׁ֥ר יָנ֖וּס שָֽׁמָּה׃",
+   "en": "And if a man lie not in wait, but God cause it to come to hand; then I will appoint thee a place whither he may flee."
+  },
+  {
+   "v": 14,
+   "he": "וְכִי־יָזִ֥ד אִ֛ישׁ עַל־רֵעֵ֖הוּ לְהָרְג֣וֹ בְעָרְמָ֑ה מֵעִ֣ם מִזְבְּחִ֔י תִּקָּחֶ֖נּוּ לָמֽוּת׃",
+   "en": "And if a man come presumptuously upon his neighbour, to slay him with guile; thou shalt take him from Mine altar, that he may die."
+  },
+  {
+   "v": 15,
+   "he": "וּמַכֵּ֥ה אָבִ֛יו וְאִמּ֖וֹ מ֥וֹת יוּמָֽת׃",
+   "en": "And he that smiteth his father, or his mother, shall be surely put to death. ."
+  },
+  {
+   "v": 16,
+   "he": "וְגֹנֵ֨ב אִ֧ישׁ וּמְכָר֛וֹ וְנִמְצָ֥א בְיָד֖וֹ מ֥וֹת יוּמָֽת׃",
+   "en": "And he that stealeth a man, and selleth him, or if he be found in his hand, he shall surely be put to death."
+  },
+  {
+   "v": 17,
+   "he": "וּמְקַלֵּ֥ל אָבִ֛יו וְאִמּ֖וֹ מ֥וֹת יוּמָֽת׃",
+   "en": "And he that curseth his father or his mother, shall surely be put to death."
+  },
+  {
+   "v": 18,
+   "he": "וְכִֽי־יְרִיבֻ֣ן אֲנָשִׁ֔ים וְהִכָּה־אִישׁ֙ אֶת־רֵעֵ֔הוּ בְּאֶ֖בֶן א֣וֹ בְאֶגְרֹ֑ף וְלֹ֥א יָמ֖וּת וְנָפַ֥ל לְמִשְׁכָּֽב׃",
+   "en": "And if men contend, and one smite the other with a stone, or with his fist, and he die not, but keep his bed;"
+  },
+  {
+   "v": 19,
+   "he": "אִם־יָק֞וּם וְהִתְהַלֵּ֥ךְ בַּח֛וּץ עַל־מִשְׁעַנְתּ֖וֹ וְנִקָּ֣ה הַמַּכֶּ֑ה רַ֥ק שִׁבְתּ֛וֹ יִתֵּ֖ן וְרַפֹּ֥א יְרַפֵּֽא׃",
+   "en": "if he rise again, and walk abroad upon his staff, then shall he that smote him be quit; only he shall pay for the loss of his time, and shall cause him to be thoroughly healed."
+  },
+  {
+   "v": 20,
+   "he": "וְכִֽי־יַכֶּה֩ אִ֨ישׁ אֶת־עַבְדּ֜וֹ א֤וֹ אֶת־אֲמָתוֹ֙ בַּשֵּׁ֔בֶט וּמֵ֖ת תַּ֣חַת יָד֑וֹ נָקֹ֖ם יִנָּקֵֽם׃",
+   "en": "And if a man smite his bondman, or his bondwoman, with a rod, and he die under his hand, he shall surely be punished."
+  },
+  {
+   "v": 21,
+   "he": "אַ֥ךְ אִם־י֛וֹם א֥וֹ יוֹמַ֖יִם יַעֲמֹ֑ד לֹ֣א יֻקַּ֔ם כִּ֥י כַסְפּ֖וֹ הֽוּא׃",
+   "en": "Notwithstanding if he continue a day or two, he shall not be punished; for he is his money."
+  },
+  {
+   "v": 22,
+   "he": "וְכִֽי־יִנָּצ֣וּ אֲנָשִׁ֗ים וְנָ֨גְפ֜וּ אִשָּׁ֤ה הָרָה֙ וְיָצְא֣וּ יְלָדֶ֔יהָ וְלֹ֥א יִהְיֶ֖ה אָס֑וֹן עָנ֣וֹשׁ יֵעָנֵ֗שׁ כַּֽאֲשֶׁ֨ר יָשִׁ֤ית עָלָיו֙ בַּ֣עַל הָֽאִשָּׁ֔ה וְנָתַ֖ן בִּפְלִלִֽים׃",
+   "en": "And if men strive together, and hurt a woman with child, so that her fruit depart, and yet no harm follow, he shall be surely fined, according as the woman’s husband shall lay upon him; and he shall pay as the judges determine."
+  },
+  {
+   "v": 23,
+   "he": "וְאִם־אָס֖וֹן יִהְיֶ֑ה וְנָתַתָּ֥ה נֶ֖פֶשׁ תַּ֥חַת נָֽפֶשׁ׃",
+   "en": "But if any harm follow, then thou shalt give life for life,"
+  },
+  {
+   "v": 24,
+   "he": "עַ֚יִן תַּ֣חַת עַ֔יִן שֵׁ֖ן תַּ֣חַת שֵׁ֑ן יָ֚ד תַּ֣חַת יָ֔ד רֶ֖גֶל תַּ֥חַת רָֽגֶל׃",
+   "en": "eye for eye, tooth for tooth, hand for hand, foot for foot,"
+  },
+  {
+   "v": 25,
+   "he": "כְּוִיָּה֙ תַּ֣חַת כְּוִיָּ֔ה פֶּ֖צַע תַּ֣חַת פָּ֑צַע חַבּוּרָ֕ה תַּ֖חַת חַבּוּרָֽה׃",
+   "en": "burning for burning, wound for wound, stripe for stripe."
+  },
+  {
+   "v": 26,
+   "he": "וְכִֽי־יַכֶּ֨ה אִ֜ישׁ אֶת־עֵ֥ין עַבְדּ֛וֹ אֽוֹ־אֶת־עֵ֥ין אֲמָת֖וֹ וְשִֽׁחֲתָ֑הּ לַֽחָפְשִׁ֥י יְשַׁלְּחֶ֖נּוּ תַּ֥חַת עֵינֽוֹ׃",
+   "en": "And if a man smite the eye of his bondman, or the eye of his bondwoman, and destroy it, he shall let him go free for his eye’s sake."
+  },
+  {
+   "v": 27,
+   "he": "וְאִם־שֵׁ֥ן עַבְדּ֛וֹ אֽוֹ־שֵׁ֥ן אֲמָת֖וֹ יַפִּ֑יל לַֽחָפְשִׁ֥י יְשַׁלְּחֶ֖נּוּ תַּ֥חַת שִׁנּֽוֹ׃",
+   "en": "And if he smite out his bondman’s tooth, or his bondwoman’s tooth, he shall let him go free for his tooth’s sake."
+  },
+  {
+   "v": 28,
+   "he": "וְכִֽי־יִגַּ֨ח שׁ֥וֹר אֶת־אִ֛ישׁ א֥וֹ אֶת־אִשָּׁ֖ה וָמֵ֑ת סָק֨וֹל יִסָּקֵ֜ל הַשּׁ֗וֹר וְלֹ֤א יֵאָכֵל֙ אֶת־בְּשָׂר֔וֹ וּבַ֥עַל הַשּׁ֖וֹר נָקִֽי׃",
+   "en": "And if an ox gore a man or a woman, that they die, the ox shall be surely stoned, and its flesh shall not be eaten; but the owner of the ox shall be quit."
+  },
+  {
+   "v": 29,
+   "he": "וְאִ֡ם שׁוֹר֩ נַגָּ֨ח ה֜וּא מִתְּמֹ֣ל שִׁלְשֹׁ֗ם וְהוּעַ֤ד בִּבְעָלָיו֙ וְלֹ֣א יִשְׁמְרֶ֔נּוּ וְהֵמִ֥ית אִ֖ישׁ א֣וֹ אִשָּׁ֑ה הַשּׁוֹר֙ יִסָּקֵ֔ל וְגַם־בְּעָלָ֖יו יוּמָֽת׃",
+   "en": "But if the ox was wont to gore in time past, and warning hath been given to its owner, and he hath not kept it in, but it hath killed a man or a woman; the ox shall be stoned, and its owner also shall be put to death."
+  },
+  {
+   "v": 30,
+   "he": "אִם־כֹּ֖פֶר יוּשַׁ֣ת עָלָ֑יו וְנָתַן֙ פִּדְיֹ֣ן נַפְשׁ֔וֹ כְּכֹ֥ל אֲשֶׁר־יוּשַׁ֖ת עָלָֽיו׃",
+   "en": "If there be laid on him a ransom, then he shall give for the redemption of his life whatsoever is laid upon him."
+  },
+  {
+   "v": 31,
+   "he": "אוֹ־בֵ֥ן יִגָּ֖ח אוֹ־בַ֣ת יִגָּ֑ח כַּמִּשְׁפָּ֥ט הַזֶּ֖ה יֵעָ֥שֶׂה לּֽוֹ׃",
+   "en": "Whether it have gored a son, or have gored a daughter, according to this judgment shall it be done unto him."
+  },
+  {
+   "v": 32,
+   "he": "אִם־עֶ֛בֶד יִגַּ֥ח הַשּׁ֖וֹר א֣וֹ אָמָ֑ה כֶּ֣סֶף׀ שְׁלֹשִׁ֣ים שְׁקָלִ֗ים יִתֵּן֙ לַֽאדֹנָ֔יו וְהַשּׁ֖וֹר יִסָּקֵֽל׃",
+   "en": "If the ox gore a bondman or a bondwoman, he shall give unto their master thirty shekels of silver, and the ox shall be stoned."
+  },
+  {
+   "v": 33,
+   "he": "וְכִֽי־יִפְתַּ֨ח אִ֜ישׁ בּ֗וֹר א֠וֹ כִּֽי־יִכְרֶ֥ה אִ֛ישׁ בֹּ֖ר וְלֹ֣א יְכַסֶּ֑נּוּ וְנָֽפַל־שָׁ֥מָּה שּׁ֖וֹר א֥וֹ חֲמֽוֹר׃",
+   "en": "And if a man shall open a pit, or if a man shall dig a pit and not cover it, and an ox or an ass fall therein,"
+  },
+  {
+   "v": 34,
+   "he": "בַּ֤עַל הַבּוֹר֙ יְשַׁלֵּ֔ם כֶּ֖סֶף יָשִׁ֣יב לִבְעָלָ֑יו וְהַמֵּ֖ת יִֽהְיֶה־לּֽוֹ׃",
+   "en": "the owner of the pit shall make it good; he shall give money unto the owner of them, and the dead beast shall be his."
+  },
+  {
+   "v": 35,
+   "he": "וְכִֽי־יִגֹּ֧ף שֽׁוֹר־אִ֛ישׁ אֶת־שׁ֥וֹר רֵעֵ֖הוּ וָמֵ֑ת וּמָ֨כְר֜וּ אֶת־הַשּׁ֤וֹר הַחַי֙ וְחָצ֣וּ אֶת־כַּסְפּ֔וֹ וְגַ֥ם אֶת־הַמֵּ֖ת יֶֽחֱצֽוּן׃",
+   "en": "And if one man’s ox hurt another’s, so that it dieth; then they shall sell the live ox, and divide the price of it; and the dead also they shall divide."
+  },
+  {
+   "v": 36,
+   "he": "א֣וֹ נוֹדַ֗ע כִּ֠י שׁ֣וֹר נַגָּ֥ח הוּא֙ מִתְּמ֣וֹל שִׁלְשֹׁ֔ם וְלֹ֥א יִשְׁמְרֶ֖נּוּ בְּעָלָ֑יו שַׁלֵּ֨ם יְשַׁלֵּ֥ם שׁוֹר֙ תַּ֣חַת הַשּׁ֔וֹר וְהַמֵּ֖ת יִֽהְיֶה־לּֽוֹ׃",
+   "en": "Or if it be known that the ox was wont to gore in time past, and its owner hath not kept it in; he shall surely pay ox for ox, and the dead beast shall be his own."
+  },
+  {
+   "v": 37,
+   "he": "כִּ֤י יִגְנֹֽב־אִישׁ֙ שׁ֣וֹר אוֹ־שֶׂ֔ה וּטְבָח֖וֹ א֣וֹ מְכָר֑וֹ חֲמִשָּׁ֣ה בָקָ֗ר יְשַׁלֵּם֙ תַּ֣חַת הַשּׁ֔וֹר וְאַרְבַּע־צֹ֖אן תַּ֥חַת הַשֶּֽׂה׃",
+   "en": "If a man steal an ox, or a sheep, and kill it, or sell it, he shall pay five oxen for an ox, and four sheep for a sheep."
+  }
+ ],
+ "sourcing": "sourced"
+}

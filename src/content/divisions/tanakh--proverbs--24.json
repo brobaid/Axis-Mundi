@@ -1,0 +1,180 @@
+{
+ "id": "tanakh--proverbs--24",
+ "work": "tanakh",
+ "n": 28,
+ "slug": "proverbs",
+ "c": 24,
+ "verses": [
+  {
+   "v": 1,
+   "he": "אַל־תְּ֭קַנֵּא בְּאַנְשֵׁ֣י רָעָ֑ה וְאַל־תתאו [תִּ֝תְאָ֗יו] לִהְי֥וֹת אִתָּֽם׃",
+   "en": "Be not thou envious of evil men, Neither desire to be with them."
+  },
+  {
+   "v": 2,
+   "he": "כִּי־שֹׁ֖ד יֶהְגֶּ֣ה לִבָּ֑ם וְ֝עָמָ֗ל שִׂפְתֵיהֶ֥ם תְּדַבֵּֽרְנָה׃",
+   "en": "For their heart studieth destruction, And their lips talk of mischief."
+  },
+  {
+   "v": 3,
+   "he": "בְּ֭חָכְמָה יִבָּ֣נֶה בָּ֑יִת וּ֝בִתְבוּנָ֗ה יִתְכּוֹנָֽן׃",
+   "en": "Through wisdom is a house builded; And by understanding it is established;"
+  },
+  {
+   "v": 4,
+   "he": "וּ֭בְדַעַת חֲדָרִ֣ים יִמָּלְא֑וּ כָּל־ה֖וֹן יָקָ֣ר וְנָעִֽים׃",
+   "en": "And by knowledge are the chambers filled With all precious and pleasant riches."
+  },
+  {
+   "v": 5,
+   "he": "גֶּֽבֶר־חָכָ֥ם בַּע֑וֹז וְאִֽישׁ־דַּ֝֗עַת מְאַמֶּץ־כֹּֽחַ׃",
+   "en": "A wise man is strong; Yea, a man of knowledge increaseth strength."
+  },
+  {
+   "v": 6,
+   "he": "כִּ֣י בְ֭תַחְבֻּלוֹת תַּעֲשֶׂה־לְּךָ֣ מִלְחָמָ֑ה וּ֝תְשׁוּעָ֗ה בְּרֹ֣ב יוֹעֵֽץ׃",
+   "en": "For with wise advice thou shalt make thy war; And in the multitude of counsellors there is safety."
+  },
+  {
+   "v": 7,
+   "he": "רָאמ֣וֹת לֶֽאֱוִ֣יל חָכְמ֑וֹת בַּ֝שַּׁ֗עַר לֹ֣א יִפְתַּח־פִּֽיהוּ׃",
+   "en": "Wisdom is as unattainable to a fool as corals; He openeth not his mouth in the gate."
+  },
+  {
+   "v": 8,
+   "he": "מְחַשֵּׁ֥ב לְהָרֵ֑עַ ל֝֗וֹ בַּֽעַל־מְזִמּ֥וֹת יִקְרָֽאוּ׃",
+   "en": "He that deviseth to do evil, Men shall call him a mischievous person."
+  },
+  {
+   "v": 9,
+   "he": "זִמַּ֣ת אִוֶּ֣לֶת חַטָּ֑את וְתוֹעֲבַ֖ת לְאָדָ֣ם לֵֽץ׃",
+   "en": "The thought of foolishness is sin; And the scorner is an abomination to men."
+  },
+  {
+   "v": 10,
+   "he": "הִ֭תְרַפִּיתָ בְּי֥וֹם צָרָ֗ה צַ֣ר כֹּחֶֽכָה׃",
+   "en": "If thou faint in the day of adversity, Thy strength is small indeed."
+  },
+  {
+   "v": 11,
+   "he": "הַ֭צֵּל לְקֻחִ֣ים לַמָּ֑וֶת וּמָטִ֥ים לַ֝הֶ֗רֶג אִם־תַּחְשֽׂוֹךְ׃",
+   "en": "Deliver them that are drawn unto death; And those that are ready to be slain wilt thou forbear to rescue?"
+  },
+  {
+   "v": 12,
+   "he": "כִּֽי־תֹאמַ֗ר הֵן֮ לֹא־יָדַ֪עְנ֫וּ זֶ֥ה הֲ‍ֽלֹא־תֹ֘כֵ֤ן לִבּ֨וֹת׀ הֽוּא־יָבִ֗ין וְנֹצֵ֣ר נַ֭פְשְׁךָ ה֣וּא יֵדָ֑ע וְהֵשִׁ֖יב לְאָדָ֣ם כְּפָעֳלֽוֹ׃",
+   "en": "If thou sayest: ‘Behold, we knew not this’, Doth not He that weigheth the hearts consider it? And He that keepeth thy soul, doth not He know it? And shall not He render to every man according to his works?"
+  },
+  {
+   "v": 13,
+   "he": "אֱכָל־בְּנִ֣י דְבַ֣שׁ כִּי־ט֑וֹב וְנֹ֥פֶת מָ֝ת֗וֹק עַל־חִכֶּֽךָ׃",
+   "en": "My son, eat thou honey, for it is good, And the honeycomb is sweet to thy taste;"
+  },
+  {
+   "v": 14,
+   "he": "כֵּ֤ן׀ דְּעֶ֥ה חָכְמָ֗ה לְנַ֫פְשֶׁ֥ךָ אִם־מָ֭צָאתָ וְיֵ֣שׁ אַחֲרִ֑ית וְ֝תִקְוָתְךָ֗ לֹ֣א תִכָּרֵֽת׃",
+   "en": "So know thou wisdom to be unto thy soul; If thou hast found it, then shall there be a future, And thy hope shall not be cut off."
+  },
+  {
+   "v": 15,
+   "he": "אַל־תֶּאֱרֹ֣ב רָ֭שָׁע לִנְוֵ֣ה צַדִּ֑יק אַֽל־תְּשַׁדֵּ֥ד רִבְצֽוֹ׃",
+   "en": "Lie not in wait, O wicked man, against the dwelling of the righteous, Spoil not his resting-place;"
+  },
+  {
+   "v": 16,
+   "he": "כִּ֤י שֶׁ֨בַע׀ יִפּ֣וֹל צַדִּ֣יק וָקָ֑ם וּ֝רְשָׁעִ֗ים יִכָּשְׁל֥וּ בְרָעָֽה׃",
+   "en": "For a righteous man falleth seven times, and riseth up again, But the wicked stumble under adversity."
+  },
+  {
+   "v": 17,
+   "he": "בִּנְפֹ֣ל אויביך [אֽ֭וֹיִבְךָ] אַל־תִּשְׂמָ֑ח וּ֝בִכָּשְׁל֗וֹ אַל־יָגֵ֥ל לִבֶּֽךָ׃",
+   "en": "Rejoice not when thine enemy falleth, And let not thy heart be glad when he stumbleth;"
+  },
+  {
+   "v": 18,
+   "he": "פֶּן־יִרְאֶ֣ה יְ֭הוָה וְרַ֣ע בְּעֵינָ֑יו וְהֵשִׁ֖יב מֵעָלָ֣יו אַפּֽוֹ׃",
+   "en": "Lest the LORD see it, and it displease Him, And He turn away His wrath from him."
+  },
+  {
+   "v": 19,
+   "he": "אַל־תִּתְחַ֥ר בַּמְּרֵעִ֑ים אַל־תְּ֝קַנֵּ֗א בָּרְשָׁעִֽים׃",
+   "en": "Fret not thyself because of evildoers, Neither be thou envious at the wicked;"
+  },
+  {
+   "v": 20,
+   "he": "כִּ֤י׀ לֹֽא־תִהְיֶ֣ה אַחֲרִ֣ית לָרָ֑ע נֵ֖ר רְשָׁעִ֣ים יִדְעָֽךְ׃",
+   "en": "For there will be no future to the evil man, The lamp of the wicked shall be put out."
+  },
+  {
+   "v": 21,
+   "he": "יְרָֽא־אֶת־יְהוָ֣ה בְּנִ֣י וָמֶ֑לֶךְ עִם־שׁ֝וֹנִ֗ים אַל־תִּתְעָרָֽב׃",
+   "en": "My son, fear thou the LORD and the king, And meddle not with them that are given to change;"
+  },
+  {
+   "v": 22,
+   "he": "כִּֽי־פִ֭תְאֹם יָק֣וּם אֵידָ֑ם וּפִ֥יד שְׁ֝נֵיהֶ֗ם מִ֣י יוֹדֵֽעַ׃",
+   "en": "For their calamity shall rise suddenly; And who knoweth the ruin from them both?"
+  },
+  {
+   "v": 23,
+   "he": "גַּם־אֵ֥לֶּה לַֽחֲכָמִ֑ים הַֽכֵּר־פָּנִ֖ים בְּמִשְׁפָּ֣ט בַּל־טֽוֹב׃",
+   "en": "These also are sayings of the wise. To have respect of persons in judgment is not good."
+  },
+  {
+   "v": 24,
+   "he": "אֹ֤מֵ֨ר׀ לְרָשָׁע֮ צַדִּ֪יק אָ֥תָּה יִקְּבֻ֥הוּ עַמִּ֑ים יִזְעָמ֥וּהוּ לְאֻמִּֽים׃",
+   "en": "He that saith unto the wicked: ‘Thou art righteous’, Peoples shall curse him, nations shall execrate him;"
+  },
+  {
+   "v": 25,
+   "he": "וְלַמּוֹכִיחִ֥ים יִנְעָ֑ם וַֽ֝עֲלֵיהֶ֗ם תָּב֥וֹא בִרְכַּת־טֽוֹב׃",
+   "en": "But to them that decide justly shall be delight, And a good blessing shall come upon them."
+  },
+  {
+   "v": 26,
+   "he": "שְׂפָתַ֥יִם יִשָּׁ֑ק מֵ֝שִׁ֗יב דְּבָרִ֥ים נְכֹחִֽים׃",
+   "en": "He kisseth the lips That giveth a right answer."
+  },
+  {
+   "v": 27,
+   "he": "הָ֘כֵ֤ן בַּח֨וּץ׀ מְלַאכְתֶּ֗ךָ וְעַתְּדָ֣הּ בַּשָּׂדֶ֣ה לָ֑ךְ אַ֝חַ֗ר וּבָנִ֥יתָ בֵיתֶֽךָ׃",
+   "en": "Prepare thy work without, And make it fit for thyself in the field; And afterwards build thy house."
+  },
+  {
+   "v": 28,
+   "he": "אַל־תְּהִ֣י עֵד־חִנָּ֣ם בְּרֵעֶ֑ךָ וַ֝הֲפִתִּ֗יתָ בִּשְׂפָתֶֽיךָ׃",
+   "en": "Be not a witness against thy neighbour without cause; And deceive not with thy lips."
+  },
+  {
+   "v": 29,
+   "he": "אַל־תֹּאמַ֗ר כַּאֲשֶׁ֣ר עָֽשָׂה־לִ֭י כֵּ֤ן אֶֽעֱשֶׂה־לּ֑וֹ אָשִׁ֖יב לָאִ֣ישׁ כְּפָעֳלֽוֹ׃",
+   "en": "Say not: ‘I will do so to him as he hath done to me; I will render to the man according to his work.’"
+  },
+  {
+   "v": 30,
+   "he": "עַל־שְׂדֵ֣ה אִישׁ־עָצֵ֣ל עָבַ֑רְתִּי וְעַל־כֶּ֝֗רֶם אָדָ֥ם חֲסַר־לֵֽב׃",
+   "en": "I went by the field of the slothful, And by the vineyard of the man void of understanding;"
+  },
+  {
+   "v": 31,
+   "he": "וְהִנֵּ֨ה עָ֘לָ֤ה כֻלּ֨וֹ׀ קִמְּשֹׂנִ֗ים כָּסּ֣וּ פָנָ֣יו חֲרֻלִּ֑ים וְגֶ֖דֶר אֲבָנָ֣יו נֶהֱרָֽסָה׃",
+   "en": "And, lo, it was all grown over with thistles, The face thereof was covered with nettles, And the stone wall thereof was broken down."
+  },
+  {
+   "v": 32,
+   "he": "וָֽאֶחֱזֶ֣ה אָ֭נֹכִֽי אָשִׁ֣ית לִבִּ֑י רָ֝אִ֗יתִי לָקַ֥חְתִּי מוּסָֽר׃",
+   "en": "Then I beheld, and considered well; I saw, and received instruction."
+  },
+  {
+   "v": 33,
+   "he": "מְעַ֣ט שֵׁ֭נוֹת מְעַ֣ט תְּנוּמ֑וֹת מְעַ֓ט׀ חִבֻּ֖ק יָדַ֣יִם לִשְׁכָּֽב׃",
+   "en": "’Yet a little sleep, a little slumber, A little folding of the hands to sleep’—"
+  },
+  {
+   "v": 34,
+   "he": "וּבָֽא־מִתְהַלֵּ֥ךְ רֵישֶׁ֑ךָ וּ֝מַחְסֹרֶ֗יךָ כְּאִ֣ישׁ מָגֵֽן׃",
+   "en": "So shall thy poverty come as a runner, And thy want as an armed man."
+  }
+ ],
+ "sourcing": "sourced"
+}

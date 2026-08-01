@@ -1,0 +1,75 @@
+{
+ "id": "bible--hebrews--8",
+ "work": "bible",
+ "n": 58,
+ "slug": "hebrews",
+ "c": 8,
+ "verses": [
+  {
+   "v": 1,
+   "en": "Now in the things which we are saying, the main point is this. We have such a high priest, who sat down on the right hand of the throne of the Majesty in the heavens,",
+   "gr": "Κεφάλαιον δὲ ἐπὶ τοῖς λεγομένοις, τοιοῦτον ἔχομεν ἀρχιερέα, ὃς ἐκάθισεν ἐν δεξιᾷ τοῦ θρόνου τῆς μεγαλωσύνης ἐν τοῖς οὐρανοῖς,"
+  },
+  {
+   "v": 2,
+   "en": "a servant of the sanctuary and of the true tabernacle, which the Lord pitched, not man.",
+   "gr": "τῶν ἁγίων λειτουργὸς καὶ τῆς σκηνῆς τῆς ἀληθινῆς, ἣν ἔπηξεν ὁ κύριος, ⸀οὐκ ἄνθρωπος."
+  },
+  {
+   "v": 3,
+   "en": "For every high priest is appointed to offer both gifts and sacrifices. Therefore it is necessary that this high priest also have something to offer.",
+   "gr": "πᾶς γὰρ ἀρχιερεὺς εἰς τὸ προσφέρειν δῶρά τε καὶ θυσίας καθίσταται· ὅθεν ἀναγκαῖον ἔχειν τι καὶ τοῦτον ὃ προσενέγκῃ."
+  },
+  {
+   "v": 4,
+   "en": "For if he were on earth, he would not be a priest at all, seeing there are priests who offer the gifts according to the law,",
+   "gr": "εἰ μὲν ⸀οὖν ἦν ἐπὶ γῆς, οὐδʼ ἂν ἦν ἱερεύς, ⸀ὄντων τῶν προσφερόντων κατὰ ⸀νόμον τὰ δῶρα·"
+  },
+  {
+   "v": 5,
+   "en": "who serve a copy and shadow of the heavenly things, even as Moses was warned by God when he was about to make the tabernacle, for he said, “See, you shall make everything according to the pattern that was shown to you on the mountain.”",
+   "gr": "(οἵτινες ὑποδείγματι καὶ σκιᾷ λατρεύουσιν τῶν ἐπουρανίων, καθὼς κεχρημάτισται Μωϋσῆς μέλλων ἐπιτελεῖν τὴν σκηνήν, Ὅρα γάρ, φησίν, ποιήσεις πάντα κατὰ τὸν τύπον τὸν δειχθέντα σοι ἐν τῷ ὄρει)·"
+  },
+  {
+   "v": 6,
+   "en": "But now he has obtained a more excellent ministry, by so much as he is also the mediator of a better covenant, which on better promises has been given as law.",
+   "gr": "⸀νυνὶ δὲ διαφορωτέρας τέτυχεν λειτουργίας, ὅσῳ καὶ κρείττονός ἐστιν διαθήκης μεσίτης, ἥτις ἐπὶ κρείττοσιν ἐπαγγελίαις νενομοθέτηται."
+  },
+  {
+   "v": 7,
+   "en": "For if that first covenant had been faultless, then no place would have been sought for a second.",
+   "gr": "Εἰ γὰρ ἡ πρώτη ἐκείνη ἦν ἄμεμπτος, οὐκ ἂν δευτέρας ἐζητεῖτο τόπος·"
+  },
+  {
+   "v": 8,
+   "en": "For finding fault with them, he said, “Behold, the days come”, says the Lord, “that I will make a new covenant with the house of Israel and with the house of Judah;",
+   "gr": "μεμφόμενος γὰρ ⸀αὐτοὺς λέγει· Ἰδοὺ ἡμέραι ἔρχονται, λέγει κύριος, καὶ συντελέσω ἐπὶ τὸν οἶκον Ἰσραὴλ καὶ ἐπὶ τὸν οἶκον Ἰούδα διαθήκην καινήν,"
+  },
+  {
+   "v": 9,
+   "en": "not according to the covenant that I made with their fathers, in the day that I took them by the hand to lead them out of the land of Egypt; for they didn’t continue in my covenant, and I disregarded them,” says the Lord.",
+   "gr": "οὐ κατὰ τὴν διαθήκην ἣν ἐποίησα τοῖς πατράσιν αὐτῶν ἐν ἡμέρᾳ ἐπιλαβομένου μου τῆς χειρὸς αὐτῶν ἐξαγαγεῖν αὐτοὺς ἐκ γῆς Αἰγύπτου, ὅτι αὐτοὶ οὐκ ἐνέμειναν ἐν τῇ διαθήκῃ μου, κἀγὼ ἠμέλησα αὐτῶν, λέγει κύριος."
+  },
+  {
+   "v": 10,
+   "en": "“For this is the covenant that I will make with the house of Israel. After those days,” says the Lord; “I will put my laws into their mind, I will also write them on their heart. I will be their God, and they will be my people.",
+   "gr": "ὅτι αὕτη ἡ διαθήκη ἣν διαθήσομαι τῷ οἴκῳ Ἰσραὴλ μετὰ τὰς ἡμέρας ἐκείνας, λέγει κύριος, διδοὺς νόμους μου εἰς τὴν διάνοιαν αὐτῶν, καὶ ἐπὶ καρδίας αὐτῶν ἐπιγράψω αὐτούς, καὶ ἔσομαι αὐτοῖς εἰς θεόν καὶ αὐτοὶ ἔσονταί μοι εἰς λαόν."
+  },
+  {
+   "v": 11,
+   "en": "They will not teach every man his fellow citizen, and every man his brother, saying, ‘Know the Lord,’ for all will know me, from their least to their greatest.",
+   "gr": "καὶ οὐ μὴ διδάξωσιν ἕκαστος τὸν πολίτην αὐτοῦ καὶ ἕκαστος τὸν ἀδελφὸν αὐτοῦ, λέγων· Γνῶθι τὸν κύριον, ὅτι πάντες εἰδήσουσίν με ἀπὸ ⸀μικροῦ ἕως μεγάλου αὐτῶν."
+  },
+  {
+   "v": 12,
+   "en": "For I will be merciful to their unrighteousness. I will remember their sins and lawless deeds no more.”",
+   "gr": "ὅτι ἵλεως ἔσομαι ταῖς ἀδικίαις αὐτῶν, καὶ τῶν ἁμαρτιῶν ⸀αὐτῶν οὐ μὴ μνησθῶ ἔτι."
+  },
+  {
+   "v": 13,
+   "en": "In that he says, “A new covenant”, he has made the first old. But that which is becoming old and grows aged is near to vanishing away.",
+   "gr": "ἐν τῷ λέγειν Καινὴν πεπαλαίωκεν τὴν πρώτην, τὸ δὲ παλαιούμενον καὶ γηράσκον ἐγγὺς ἀφανισμοῦ."
+  }
+ ],
+ "sourcing": "sourced"
+}

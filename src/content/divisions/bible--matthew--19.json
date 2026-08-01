@@ -1,0 +1,160 @@
+{
+ "id": "bible--matthew--19",
+ "work": "bible",
+ "n": 40,
+ "slug": "matthew",
+ "c": 19,
+ "verses": [
+  {
+   "v": 1,
+   "en": "When Jesus had finished these words, he departed from Galilee, and came into the borders of Judea beyond the Jordan.",
+   "gr": "Καὶ ἐγένετο ὅτε ἐτέλεσεν ὁ Ἰησοῦς τοὺς λόγους τούτους, μετῆρεν ἀπὸ τῆς Γαλιλαίας καὶ ἦλθεν εἰς τὰ ὅρια τῆς Ἰουδαίας πέραν τοῦ Ἰορδάνου."
+  },
+  {
+   "v": 2,
+   "en": "Great multitudes followed him, and he healed them there.",
+   "gr": "καὶ ἠκολούθησαν αὐτῷ ὄχλοι πολλοί, καὶ ἐθεράπευσεν αὐτοὺς ἐκεῖ."
+  },
+  {
+   "v": 3,
+   "en": "Pharisees came to him, testing him, and saying, “Is it lawful for a man to divorce his wife for any reason?”",
+   "gr": "Καὶ προσῆλθον ⸀αὐτῷ Φαρισαῖοι πειράζοντες αὐτὸν καὶ ⸀λέγοντες· Εἰ ἔξεστιν ⸀ἀνθρώπῳ ἀπολῦσαι τὴν γυναῖκα αὐτοῦ κατὰ πᾶσαν αἰτίαν;"
+  },
+  {
+   "v": 4,
+   "en": "He answered, “Haven’t you read that he who made them from the beginning made them male and female,",
+   "gr": "ὁ δὲ ἀποκριθεὶς ⸀εἶπεν· Οὐκ ἀνέγνωτε ὅτι ὁ ⸀κτίσας ἀπʼ ἀρχῆς ἄρσεν καὶ θῆλυ ἐποίησεν αὐτοὺς"
+  },
+  {
+   "v": 5,
+   "en": "and said, ‘For this cause a man shall leave his father and mother, and shall be joined to his wife; and the two shall become one flesh?’",
+   "gr": "καὶ εἶπεν· ⸀Ἕνεκα τούτου καταλείψει ἄνθρωπος τὸν πατέρα καὶ τὴν μητέρα καὶ ⸀κολληθήσεται τῇ γυναικὶ αὐτοῦ, καὶ ἔσονται οἱ δύο εἰς σάρκα μίαν;"
+  },
+  {
+   "v": 6,
+   "en": "So that they are no more two, but one flesh. What therefore God has joined together, don’t let man tear apart.”",
+   "gr": "ὥστε οὐκέτι εἰσὶν δύο ἀλλὰ σὰρξ μία. ὃ οὖν ὁ θεὸς συνέζευξεν ἄνθρωπος μὴ χωριζέτω."
+  },
+  {
+   "v": 7,
+   "en": "They asked him, “Why then did Moses command us to give her a certificate of divorce, and divorce her?”",
+   "gr": "λέγουσιν αὐτῷ· Τί οὖν Μωϋσῆς ἐνετείλατο δοῦναι βιβλίον ἀποστασίου καὶ ἀπολῦσαι ⸀αὐτήν;"
+  },
+  {
+   "v": 8,
+   "en": "He said to them, “Moses, because of the hardness of your hearts, allowed you to divorce your wives, but from the beginning it has not been so.",
+   "gr": "λέγει αὐτοῖς ὅτι Μωϋσῆς πρὸς τὴν σκληροκαρδίαν ὑμῶν ἐπέτρεψεν ὑμῖν ἀπολῦσαι τὰς γυναῖκας ὑμῶν, ἀπʼ ἀρχῆς δὲ οὐ γέγονεν οὕτως."
+  },
+  {
+   "v": 9,
+   "en": "I tell you that whoever divorces his wife, except for sexual immorality, and marries another, commits adultery; and he who marries her when she is divorced commits adultery.”",
+   "gr": "λέγω δὲ ὑμῖν ⸀ὅτι ὃς ἂν ἀπολύσῃ τὴν γυναῖκα αὐτοῦ μὴ ἐπὶ πορνείᾳ καὶ γαμήσῃ ἄλλην μοιχᾶται ⸂καὶ ὁ ἀπολελυμένην γαμήσας μοιχᾶται⸃."
+  },
+  {
+   "v": 10,
+   "en": "His disciples said to him, “If this is the case of the man with his wife, it is not expedient to marry.”",
+   "gr": "Λέγουσιν αὐτῷ οἱ ⸀μαθηταί· Εἰ οὕτως ἐστὶν ἡ αἰτία τοῦ ἀνθρώπου μετὰ τῆς γυναικός, οὐ συμφέρει γαμῆσαι."
+  },
+  {
+   "v": 11,
+   "en": "But he said to them, “Not all men can receive this saying, but those to whom it is given.",
+   "gr": "ὁ δὲ εἶπεν αὐτοῖς· Οὐ πάντες χωροῦσι τὸν λόγον ⸀τοῦτον ἀλλʼ οἷς δέδοται."
+  },
+  {
+   "v": 12,
+   "en": "For there are eunuchs who were born that way from their mother’s womb, and there are eunuchs who were made eunuchs by men; and there are eunuchs who made themselves eunuchs for the Kingdom of Heaven’s sake. He who is able to receive it, let him receive it.”",
+   "gr": "εἰσὶν γὰρ εὐνοῦχοι οἵτινες ἐκ κοιλίας μητρὸς ἐγεννήθησαν οὕτως, καὶ εἰσὶν εὐνοῦχοι οἵτινες εὐνουχίσθησαν ὑπὸ τῶν ἀνθρώπων, καὶ εἰσὶν εὐνοῦχοι οἵτινες εὐνούχισαν ἑαυτοὺς διὰ τὴν βασιλείαν τῶν οὐρανῶν. ὁ δυνάμενος χωρεῖν χωρείτω."
+  },
+  {
+   "v": 13,
+   "en": "Then little children were brought to him, that he should lay his hands on them and pray; and the disciples rebuked them.",
+   "gr": "Τότε ⸀προσηνέχθησαν αὐτῷ παιδία ἵνα τὰς χεῖρας ἐπιθῇ αὐτοῖς καὶ προσεύξηται· οἱ δὲ μαθηταὶ ἐπετίμησαν αὐτοῖς."
+  },
+  {
+   "v": 14,
+   "en": "But Jesus said, “Allow the little children, and don’t forbid them to come to me; for the Kingdom of Heaven belongs to ones like these.”",
+   "gr": "ὁ δὲ Ἰησοῦς εἶπεν· Ἄφετε τὰ παιδία καὶ μὴ κωλύετε αὐτὰ ἐλθεῖν πρός με, τῶν γὰρ τοιούτων ἐστὶν ἡ βασιλεία τῶν οὐρανῶν."
+  },
+  {
+   "v": 15,
+   "en": "He laid his hands on them, and departed from there.",
+   "gr": "καὶ ἐπιθεὶς ⸂τὰς χεῖρας αὐτοῖς⸃ ἐπορεύθη ἐκεῖθεν."
+  },
+  {
+   "v": 16,
+   "en": "Behold, one came to him and said, “Good teacher, what good thing shall I do, that I may have eternal life?”",
+   "gr": "Καὶ ἰδοὺ εἷς προσελθὼν ⸂αὐτῷ εἶπεν⸃· ⸀Διδάσκαλε, τί ἀγαθὸν ποιήσω ἵνα ⸀σχῶ ζωὴν αἰώνιον;"
+  },
+  {
+   "v": 17,
+   "en": "He said to him, “Why do you call me good? No one is good but one, that is, God. But if you want to enter into life, keep the commandments.”",
+   "gr": "ὁ δὲ εἶπεν αὐτῷ· Τί με ⸂ἐρωτᾷς περὶ τοῦ ἀγαθοῦ; εἷς ἐστιν ὁ ἀγαθός⸃· εἰ δὲ θέλεις ⸂εἰς τὴν ζωὴν εἰσελθεῖν⸃, ⸀τήρησον τὰς ἐντολάς."
+  },
+  {
+   "v": 18,
+   "en": "He said to him, “Which ones?” Jesus said, “ ‘You shall not murder.’ ‘You shall not commit adultery.’ ‘You shall not steal.’ ‘You shall not offer false testimony.’",
+   "gr": "λέγει αὐτῷ· Ποίας; ὁ δὲ Ἰησοῦς ⸀εἶπεν· Τὸ Οὐ φονεύσεις, Οὐ μοιχεύσεις, Οὐ κλέψεις, Οὐ ψευδομαρτυρήσεις,"
+  },
+  {
+   "v": 19,
+   "en": "‘Honor your father and your mother.’ And, ‘You shall love your neighbor as yourself.’ ”",
+   "gr": "Τίμα τὸν πατέρα καὶ τὴν μητέρα, καὶ Ἀγαπήσεις τὸν πλησίον σου ὡς σεαυτόν."
+  },
+  {
+   "v": 20,
+   "en": "The young man said to him, “All these things I have observed from my youth. What do I still lack?”",
+   "gr": "λέγει αὐτῷ ὁ νεανίσκος· ⸂Πάντα ταῦτα⸃ ⸀ἐφύλαξα· τί ἔτι ὑστερῶ;"
+  },
+  {
+   "v": 21,
+   "en": "Jesus said to him, “If you want to be perfect, go, sell what you have, and give to the poor, and you will have treasure in heaven; and come, follow me.”",
+   "gr": "ἔφη αὐτῷ ὁ Ἰησοῦς· Εἰ θέλεις τέλειος εἶναι, ὕπαγε πώλησόν σου τὰ ὑπάρχοντα καὶ ⸀δὸς πτωχοῖς, καὶ ἕξεις θησαυρὸν ἐν ⸀οὐρανοῖς, καὶ δεῦρο ἀκολούθει μοι."
+  },
+  {
+   "v": 22,
+   "en": "But when the young man heard the saying, he went away sad, for he was one who had great possessions.",
+   "gr": "ἀκούσας δὲ ὁ νεανίσκος τὸν ⸀λόγον ἀπῆλθεν λυπούμενος, ἦν γὰρ ἔχων κτήματα πολλά."
+  },
+  {
+   "v": 23,
+   "en": "Jesus said to his disciples, “Most certainly I say to you, a rich man will enter into the Kingdom of Heaven with difficulty.",
+   "gr": "Ὁ δὲ Ἰησοῦς εἶπεν τοῖς μαθηταῖς αὐτοῦ· Ἀμὴν λέγω ὑμῖν ὅτι ⸂πλούσιος δυσκόλως⸃ εἰσελεύσεται εἰς τὴν βασιλείαν τῶν οὐρανῶν·"
+  },
+  {
+   "v": 24,
+   "en": "Again I tell you, it is easier for a camel to go through a needle’s eye, than for a rich man to enter into God’s Kingdom.”",
+   "gr": "πάλιν δὲ λέγω ὑμῖν, εὐκοπώτερόν ἐστιν κάμηλον διὰ ⸀τρυπήματος ῥαφίδος ⸀εἰσελθεῖν ἢ πλούσιον ⸂εἰς τὴν βασιλείαν τοῦ θεοῦ⸃."
+  },
+  {
+   "v": 25,
+   "en": "When the disciples heard it, they were exceedingly astonished, saying, “Who then can be saved?”",
+   "gr": "ἀκούσαντες δὲ οἱ ⸀μαθηταὶ ἐξεπλήσσοντο σφόδρα λέγοντες· Τίς ἄρα δύναται σωθῆναι;"
+  },
+  {
+   "v": 26,
+   "en": "Looking at them, Jesus said, “With men this is impossible, but with God all things are possible.”",
+   "gr": "ἐμβλέψας δὲ ὁ Ἰησοῦς εἶπεν αὐτοῖς· Παρὰ ἀνθρώποις τοῦτο ἀδύνατόν ἐστιν, παρὰ δὲ θεῷ πάντα δυνατά."
+  },
+  {
+   "v": 27,
+   "en": "Then Peter answered, “Behold, we have left everything, and followed you. What then will we have?”",
+   "gr": "Τότε ἀποκριθεὶς ὁ Πέτρος εἶπεν αὐτῷ· Ἰδοὺ ἡμεῖς ἀφήκαμεν πάντα καὶ ἠκολουθήσαμέν σοι· τί ἄρα ἔσται ἡμῖν;"
+  },
+  {
+   "v": 28,
+   "en": "Jesus said to them, “Most certainly I tell you that you who have followed me, in the regeneration when the Son of Man will sit on the throne of his glory, you also will sit on twelve thrones, judging the twelve tribes of Israel.",
+   "gr": "ὁ δὲ Ἰησοῦς εἶπεν αὐτοῖς· Ἀμὴν λέγω ὑμῖν ὅτι ὑμεῖς οἱ ἀκολουθήσαντές μοι ἐν τῇ παλιγγενεσίᾳ, ὅταν καθίσῃ ὁ υἱὸς τοῦ ἀνθρώπου ἐπὶ θρόνου δόξης αὐτοῦ, ⸀καθήσεσθε καὶ ⸀ὑμεῖς ἐπὶ δώδεκα θρόνους κρίνοντες τὰς δώδεκα φυλὰς τοῦ Ἰσραήλ."
+  },
+  {
+   "v": 29,
+   "en": "Everyone who has left houses, or brothers, or sisters, or father, or mother, or wife, or children, or lands, for my name’s sake, will receive one hundred times, and will inherit eternal life.",
+   "gr": "καὶ πᾶς ⸀ὅστις ἀφῆκεν ⸂οἰκίας ἢ⸃ ἀδελφοὺς ἢ ἀδελφὰς ἢ πατέρα ἢ μητέρα ἢ ⸂γυναῖκα ἢ⸃ τέκνα ἢ ⸀ἀγροὺς ἕνεκεν τοῦ ⸂ὀνόματός μου⸃, ⸀ἑκατονταπλασίονα λήμψεται καὶ ζωὴν αἰώνιον κληρονομήσει."
+  },
+  {
+   "v": 30,
+   "en": "But many will be last who are first; and first who are last.",
+   "gr": "πολλοὶ δὲ ἔσονται πρῶτοι ἔσχατοι καὶ ἔσχατοι πρῶτοι."
+  }
+ ],
+ "sourcing": "sourced"
+}

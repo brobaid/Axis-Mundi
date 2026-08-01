@@ -1,0 +1,84 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ReaderText from '../../../../components/ReaderText.astro';
+import { getPublishable } from '../../../../lib/content';
+import {
+  divisionHeading,
+  editionLines,
+  type DivisionIndex,
+  type VerseRow,
+  type WorkData,
+} from '../../../../lib/reader-model';
+
+/**
+ * One chapter of one division — the leaf, where a canon has this level.
+ *
+ * This is the page a shared link lands on and the page a reader reads, so it
+ * is the one that has to stay small: it loads its own chapter's record and
+ * nothing else, and the largest chapter in either corpus on the shelves is
+ * forty-one kilobytes of text.
+ */
+export const getStaticPaths = (async () => {
+  const works = await getPublishable('works');
+  return works.flatMap((entry) => {
+    const work = entry.data as unknown as WorkData;
+    return work.divisions.flatMap((division) =>
+      (division.chapters ?? []).map((chapter) => ({
+        params: { work: work.id, division: division.slug, chapter: String(chapter.c) },
+        props: { work, division, chapter: chapter.c },
+      })),
+    );
+  });
+}) satisfies GetStaticPaths;
+
+interface Props {
+  work: WorkData;
+  division: DivisionIndex;
+  chapter: number;
+}
+const { work, division, chapter } = Astro.props as Props;
+
+const record = await getEntry('divisions', `${work.id}--${division.slug}--${chapter}`);
+const verses = (record?.data.verses ?? []) as unknown as VerseRow[];
+if (verses.length === 0) {
+  throw new Error(`no chapter record for ${work.id}--${division.slug}--${chapter}`);
+}
+
+const sources = await getPublishable('sources');
+const sourceById = new Map(sources.map((s) => [s.data.id, s.data]));
+const notes = Object.fromEntries(
+  sources.flatMap((s) => (s.data.note === undefined ? [] : [[s.data.id, s.data.note]])),
+);
+const editions = editionLines(work, notes).map((e) => {
+  const record = sourceById.get(e.sourceId);
+  return {
+    ...e,
+    title: record?.title ?? e.sourceId,
+    ...(record?.author === undefined ? {} : { author: record.author }),
+  };
+});
+
+const book = divisionHeading(work, division);
+const heading = `${book} ${chapter}`;
+---
+
+<BaseLayout
+  title={`${heading} — ${work.title}`}
+  description={`${heading}, ${verses.length} verses of ${work.title}, in editions named on the page.`}
+>
+  <ReaderText
+    work={work}
+    division={division}
+    chapter={chapter}
+    verses={verses}
+    heading={heading}
+    crumbs={[
+      { href: '/read', label: 'Reading Room' },
+      { href: `/read/${work.id}`, label: work.title },
+      { href: `/read/${work.id}/${division.slug}`, label: book },
+    ]}
+    editions={editions}
+  />
+</BaseLayout>

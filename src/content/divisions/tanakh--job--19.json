@@ -1,0 +1,155 @@
+{
+ "id": "tanakh--job--19",
+ "work": "tanakh",
+ "n": 29,
+ "slug": "job",
+ "c": 19,
+ "verses": [
+  {
+   "v": 1,
+   "he": "וַיַּ֥עַן אִיּ֗וֹב וַיֹּאמַֽר׃",
+   "en": "Then Job answered and said:"
+  },
+  {
+   "v": 2,
+   "he": "עַד־אָ֭נָה תּוֹגְי֣וּן נַפְשִׁ֑י וּֽתְדַכְּאוּנַ֥נִי בְמִלִּֽים׃",
+   "en": "How long will ye vex my soul, And crush me with words?"
+  },
+  {
+   "v": 3,
+   "he": "זֶ֤ה עֶ֣שֶׂר פְּ֭עָמִים תַּכְלִימ֑וּנִי לֹֽא־תֵ֝בֹ֗שׁוּ תַּהְכְּרוּ־לִֽי׃",
+   "en": "These ten times have ye reproached me; Ye are not ashamed that ye deal harshly with me."
+  },
+  {
+   "v": 4,
+   "he": "וְאַף־אָמְנָ֥ם שָׁגִ֑יתִי אִ֝תִּ֗י תָּלִ֥ין מְשׁוּגָתִֽי׃",
+   "en": "And be it indeed that I have erred, Mine error remaineth with myself."
+  },
+  {
+   "v": 5,
+   "he": "אִם־אָ֭מְנָם עָלַ֣י תַּגְדִּ֑ילוּ וְתוֹכִ֥יחוּ עָ֝לַ֗י חֶרְפָּתִּֽי׃",
+   "en": "If indeed ye will magnify yourselves against me, And plead against me my reproach;"
+  },
+  {
+   "v": 6,
+   "he": "דְּֽעוּ־אֵ֭פוֹ כִּי־אֱל֣וֹהַּ עִוְּתָ֑נִי וּ֝מְצוּד֗וֹ עָלַ֥י הִקִּֽיף׃",
+   "en": "Know now that God hath subverted my cause, And hath compassed me with His net."
+  },
+  {
+   "v": 7,
+   "he": "הֵ֤ן אֶצְעַ֣ק חָ֭מָס וְלֹ֣א אֵעָנֶ֑ה אֲ֝שַׁוַּ֗ע וְאֵ֣ין מִשְׁפָּֽט׃",
+   "en": "Behold, I cry out: ‘Violence! ’ but I am not heard; I cry aloud, but there is no justice. ."
+  },
+  {
+   "v": 8,
+   "he": "אָרְחִ֣י גָ֭דַר וְלֹ֣א אֶעֱב֑וֹר וְעַ֥ל נְ֝תִיבוֹתַ֗י חֹ֣שֶׁךְ יָשִֽׂים׃",
+   "en": "He hath fenced up my way that I cannot pass, And hath set darkness in my paths."
+  },
+  {
+   "v": 9,
+   "he": "כְּ֭בוֹדִי מֵעָלַ֣י הִפְשִׁ֑יט וַ֝יָּ֗סַר עֲטֶ֣רֶת רֹאשִֽׁי׃",
+   "en": "He hath stripped me of my glory, And taken the crown from my head."
+  },
+  {
+   "v": 10,
+   "he": "יִתְּצֵ֣נִי סָ֭בִיב וָאֵלַ֑ךְ וַיַּסַּ֥ע כָּ֝עֵ֗ץ תִּקְוָתִֽי׃",
+   "en": "He hath broken me down on every side, and I am gone; And my hope hath He plucked up like a tree."
+  },
+  {
+   "v": 11,
+   "he": "וַיַּ֣חַר עָלַ֣י אַפּ֑וֹ וַיַּחְשְׁבֵ֖נִי ל֣וֹ כְצָרָֽיו׃",
+   "en": "He hath also kindled His wrath against me, And He counteth me unto Him as one of His adversaries."
+  },
+  {
+   "v": 12,
+   "he": "יַ֤חַד׀ יָ֘בֹ֤אוּ גְדוּדָ֗יו וַיָּסֹ֣לּוּ עָלַ֣י דַּרְכָּ֑ם וַיַּחֲנ֖וּ סָבִ֣יב לְאָהֳלִֽי׃",
+   "en": "His troops come on together, And cast up their way against me, And encamp round about my tent."
+  },
+  {
+   "v": 13,
+   "he": "אַ֭חַי מֵעָלַ֣י הִרְחִ֑יק וְ֝יֹדְעַ֗י אַךְ־זָ֥רוּ מִמֶּֽנִּי׃",
+   "en": "He hath put my brethren far from me, And mine acquaintance are wholly estranged from me."
+  },
+  {
+   "v": 14,
+   "he": "חָדְל֥וּ קְרוֹבָ֑י וּֽמְיֻדָּעַ֥י שְׁכֵחֽוּנִי׃",
+   "en": "My kinsfolk have failed, And my familiar friends have forgotten me."
+  },
+  {
+   "v": 15,
+   "he": "גָּ֘רֵ֤י בֵיתִ֣י וְ֭אַמְהֹתַי לְזָ֣ר תַּחְשְׁבֻ֑נִי נָ֝כְרִ֗י הָיִ֥יתִי בְעֵינֵיהֶֽם׃",
+   "en": "They that dwell in my house, and my maids, count me for a stranger; I am become an alien in their sight."
+  },
+  {
+   "v": 16,
+   "he": "לְעַבְדִּ֣י קָ֭רָאתִי וְלֹ֣א יַעֲנֶ֑ה בְּמוֹ־פִ֝֗י אֶתְחַנֶּן־לֽוֹ׃",
+   "en": "I call unto my servant, and he giveth me no answer, Though I entreat him with my mouth."
+  },
+  {
+   "v": 17,
+   "he": "ר֭וּחִֽי זָ֣רָה לְאִשְׁתִּ֑י וְ֝חַנֹּתִ֗י לִבְנֵ֥י בִטְנִֽי׃",
+   "en": "My breath is abhorred of my wife, And I am loathsome to the children of my tribe."
+  },
+  {
+   "v": 18,
+   "he": "גַּם־עֲ֭וִילִים מָ֣אֲסוּ בִ֑י אָ֝ק֗וּמָה וַיְדַבְּרוּ־בִֽי׃",
+   "en": "Even urchins despised me; If I arise, they speak against me."
+  },
+  {
+   "v": 19,
+   "he": "תִּֽ֭עֲבוּנִי כָּל־מְתֵ֣י סוֹדִ֑י וְזֶֽה־אָ֝הַ֗בְתִּי נֶהְפְּכוּ־בִֽי׃",
+   "en": "All my intimate friends abhor me; And they whom I loved are turned against me."
+  },
+  {
+   "v": 20,
+   "he": "בְּעוֹרִ֣י וּ֭בִבְשָׂרִי דָּבְקָ֣ה עַצְמִ֑י וָ֝אֶתְמַלְּטָ֗ה בְּע֣וֹר שִׁנָּֽי׃",
+   "en": "My bone cleaveth to my skin and to my flesh, And I am escaped with the skin of my teeth."
+  },
+  {
+   "v": 21,
+   "he": "חָנֻּ֬נִי חָנֻּ֣נִי אַתֶּ֣ם רֵעָ֑י כִּ֥י יַד־אֱ֝ל֗וֹהַּ נָ֣גְעָה בִּֽי׃",
+   "en": "Have pity upon me, have pity upon me, O ye my friends; For the hand of God hath touched me."
+  },
+  {
+   "v": 22,
+   "he": "לָ֭מָּה תִּרְדְּפֻ֣נִי כְמוֹ־אֵ֑ל וּ֝מִבְּשָׂרִ֗י לֹ֣א תִשְׂבָּֽעוּ׃",
+   "en": "Why do ye persecute me as God, And are not satisfied with my flesh?"
+  },
+  {
+   "v": 23,
+   "he": "מִֽי־יִתֵּ֣ן אֵ֭פוֹ וְיִכָּתְב֣וּן מִלָּ֑י מִֽי־יִתֵּ֖ן בַּסֵּ֣פֶר וְיֻחָֽקוּ׃",
+   "en": "Oh that my words were now written! Oh that they were inscribed in a book!"
+  },
+  {
+   "v": 24,
+   "he": "בְּעֵט־בַּרְזֶ֥ל וְעֹפָ֑רֶת לָ֝עַ֗ד בַּצּ֥וּר יֵחָצְבֽוּן׃",
+   "en": "That with an iron pen and lead They were graven in the rock for ever!"
+  },
+  {
+   "v": 25,
+   "he": "וַאֲנִ֣י יָ֭דַעְתִּי גֹּ֣אֲלִי חָ֑י וְ֝אַחֲר֗וֹן עַל־עָפָ֥ר יָקֽוּם׃",
+   "en": "But as for me, I know that my Redeemer liveth, And that He will witness at the last upon the dust;"
+  },
+  {
+   "v": 26,
+   "he": "וְאַחַ֣ר ע֭וֹרִֽי נִקְּפוּ־זֹ֑את וּ֝מִבְּשָׂרִ֗י אֶֽחֱזֶ֥ה אֱלֽוֹהַּ׃",
+   "en": "And when after my skin this is destroyed, Then without my flesh shall I see God;"
+  },
+  {
+   "v": 27,
+   "he": "אֲשֶׁ֤ר אֲנִ֨י׀ אֶֽחֱזֶה־לִּ֗י וְעֵינַ֣י רָא֣וּ וְלֹא־זָ֑ר כָּל֖וּ כִלְיֹתַ֣י בְּחֵקִֽי׃",
+   "en": "Whom I, even I, shall see for myself, And mine eyes shall behold, and not another’s. My reins are consumed within me."
+  },
+  {
+   "v": 28,
+   "he": "כִּ֣י תֹ֭אמְרוּ מַה־נִּרְדָּף־ל֑וֹ וְשֹׁ֥רֶשׁ דָּ֝בָ֗ר נִמְצָא־בִֽי׃",
+   "en": "If ye say: ‘How we will persecute him! ’ Seeing that the root of the matter is found in me;"
+  },
+  {
+   "v": 29,
+   "he": "גּ֤וּרוּ לָכֶ֨ם׀ מִפְּנֵי־חֶ֗רֶב כִּֽי־חֵ֭מָה עֲו‍ֹנ֣וֹת חָ֑רֶב לְמַ֖עַן תֵּדְע֣וּן שדין [שַׁדּֽוּן]׃",
+   "en": "Be ye afraid of the sword; For wrath bringeth the punishments of the sword, That ye may know there is a judgment."
+  }
+ ],
+ "sourcing": "sourced"
+}
