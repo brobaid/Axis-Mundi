@@ -104,6 +104,33 @@ for (const path of RUNTIME_FETCHES) {
   if (!resolves(path)) misses.push({ page: '(runtime fetch)', href: path });
 }
 
+/**
+ * Every built page must appear in the sitemap.
+ *
+ * The room list is written by hand, deliberately — the sitemap is the rooms
+ * plus the dives that passed their check, not "whatever Astro emitted". But a
+ * hand-kept list drifts, and it did: the colophon and the year wheel shipped
+ * for a build without ever entering the sitemap. So the list stays hand-kept
+ * and this asserts it stayed complete.
+ */
+const sitemapPath = join(DIST, 'sitemap.xml');
+if (existsSync(sitemapPath)) {
+  const sitemap = readFileSync(sitemapPath, 'utf8');
+  const listed = new Set(
+    [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1] ?? '').pathname),
+  );
+  const routes = pages
+    .filter((f) => f.endsWith('/index.html'))
+    .map((f) => f.slice(DIST.length).replace(/index\.html$/, ''));
+  const unlisted = routes.filter((r) => !listed.has(r));
+  if (unlisted.length > 0) {
+    console.error('\n  Sitemap check FAILED\n');
+    for (const r of unlisted) console.error(`      ${r}  →  built but not in sitemap.xml`);
+    console.error(`\n  ${unlisted.length} of ${routes.length} routes missing.\n`);
+    process.exit(1);
+  }
+}
+
 if (misses.length > 0) {
   console.error('\n  Internal link check FAILED\n');
   let last = '';

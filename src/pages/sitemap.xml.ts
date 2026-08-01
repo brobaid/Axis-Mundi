@@ -30,7 +30,9 @@ const ROOMS: readonly (readonly [string, string])[] = [
   ['/matrix', '0.8'],
   ['/compare', '0.8'],
   ['/tree', '0.8'],
+  ['/wheel', '0.8'],
   ['/methodology', '0.5'],
+  ['/colophon', '0.4'],
 ];
 
 export const GET: APIRoute = async ({ site }) => {
