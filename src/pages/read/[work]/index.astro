@@ -52,6 +52,11 @@ const count = `${work.divisions.length} ${work.division_label_plural}, ${verses}
       {work.total_chapters !== undefined && ` in ${work.total_chapters.toLocaleString('en')} chapters`}.
       {!hasEnglish(work) && ' This corpus has entered in its own language alone.'}
     </p>
+    {/* Filled in by the island when there is somewhere to resume, and empty
+        otherwise: an offer that goes nowhere is worse than no offer. */}
+    <p class="rd-resume" data-resume={work.id} hidden>
+      <a class="rd-resume__link" href={`/read/${work.id}`}></a>
+    </p>
     <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
   </section>
 
@@ -117,6 +122,10 @@ const count = `${work.divisions.length} ${work.division_label_plural}, ${verses}
       ))
     }
   </div>
+
+  <script>
+    import '../../../scripts/reader';
+  </script>
 </BaseLayout>
 
 <style>
@@ -128,6 +137,19 @@ const count = `${work.divisions.length} ${work.division_label_plural}, ${verses}
 
   .rd-contents {
     padding-bottom: var(--space-16);
+  }
+
+  .rd-resume {
+    margin-bottom: var(--space-4);
+  }
+
+  .rd-resume__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap-min);
+    color: var(--brass-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .rd-contents__editions {

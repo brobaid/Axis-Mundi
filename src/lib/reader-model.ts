@@ -151,9 +151,14 @@ export function neighbours(work: WorkData, n: number): Neighbours {
  * A verse's anchor: `255` where a canon runs straight to its verses,
  * `20-3` where it divides into chapters first.
  *
- * A colon would be cleaner to read and is legal in a fragment, but it has to
- * be escaped in a CSS selector and in `getElementById` lookups downstream,
- * and a hyphen costs the reader nothing.
+ * A colon would read better and is legal in a fragment, but a hyphen costs the
+ * reader nothing and keeps the anchor free of characters that have to be
+ * escaped everywhere they are used.
+ *
+ * Both forms start with a digit, which HTML allows for an id and CSS does not
+ * allow for an identifier: `#20-3` is a parse error, and any lookup for one of
+ * these must use `getElementById` or an `[id="…"]` attribute selector. That is
+ * the price of an anchor a person can type, and it is paid once, here.
  */
 export const verseAnchor = (verse: Pick<VerseRow, 'v' | 'c'>): string =>
   verse.c === undefined ? String(verse.v) : `${verse.c}-${verse.v}`;

@@ -90,7 +90,13 @@ const label = (d: DivisionIndex): string => divisionHeading(work, d);
   title={`${heading} — ${work.title}`}
   description={`${heading} of ${work.title}, ${division.verses} verses, in editions named on the page.`}
 >
-  <article class="shell rd" data-reader data-work={work.id} data-division={division.slug}>
+  <article
+    class="shell rd"
+    data-reader
+    data-work={work.id}
+    data-division={division.slug}
+    data-heading={heading}
+  >
     <header class="rd__head">
       <p class="eyebrow">
         <a class="tap" href="/read">Reading Room</a> ·{' '}
@@ -232,6 +238,15 @@ const label = (d: DivisionIndex): string => divisionHeading(work, d);
       </a>
     </p>
 
+    {/* Paper carries no edition line at the head of every sheet, and a printed
+        page of scripture with nothing naming its editions is an unsourced
+        page. Screen readers get it too — it is the same claim, not decoration. */}
+    <footer class="rd-print-footer">
+      {work.title} · {heading} ·{' '}
+      {editions
+        .map((e) => (e.author === undefined ? e.title : `${e.title}, ${e.author}`))
+        .join(' · ')}
+    </footer>
   </article>
 
   <script>
@@ -385,6 +400,63 @@ const label = (d: DivisionIndex): string => divisionHeading(work, d);
     margin-top: var(--space-2);
   }
 
+  /* --- the copy control -------------------------------------------------- */
+
+  /*
+    Present only in the verse the fragment names, which is the verse whose
+    numeral was just clicked. It sits under the text rather than beside it so
+    it never competes with the verse for the reading edge, and it never moves
+    the text when it appears.
+  */
+  .rd-copy {
+    justify-self: start;
+    margin-top: var(--space-3);
+    min-height: var(--tap-min);
+    padding: 0 var(--space-3);
+    border: var(--hairline-width) solid var(--hairline-strong);
+    background: transparent;
+    color: var(--ink-soft);
+    font-family: var(--font-ui);
+    font-size: var(--size-caption);
+    cursor: pointer;
+  }
+
+  .rd-copy:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+
+  .rd-copy[data-state='done'] {
+    color: var(--brass-ink);
+    border-color: var(--brass);
+  }
+
+  /* --- where the reader left off ----------------------------------------- */
+
+  /*
+    A previous visit's position, not a live one — the scrollbar is already the
+    live one.
+
+    Dotted where :target is solid, in the same brass and the same place: one is
+    where a link landed, the other is where a reader stopped, and a rule that
+    said neither would be decoration. Measured first in --brass-wash, which on
+    the gallery canvas differs by five values out of 255 — a marker nobody can
+    see is not quiet, it is absent.
+  */
+  .rd-verse--mark {
+    border-left: 3px dotted var(--brass);
+    padding-left: var(--space-3);
+    margin-left: calc(-1 * var(--space-3) - 3px);
+  }
+
+  .rd-verse__mark {
+    color: var(--brass-ink);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: var(--font-ui);
+    margin-bottom: var(--space-2);
+  }
+
   /* --- the three modes, resolved against what this work offers ----------- */
 
   .rd-verses[data-default='english'] .rd-verse__orig,
@@ -489,6 +561,21 @@ const label = (d: DivisionIndex): string => divisionHeading(work, d);
   /* --- print ------------------------------------------------------------- */
 
   /*
+    The edition footer is the printed page's version of the edition line. On
+    screen the line at the top of the page already names the editions, so this
+    would be saying it twice; it is not hidden, because a screen reader
+    reaching the end of a book should be told what it just read.
+  */
+  .rd-print-footer {
+    margin-top: var(--space-12);
+    padding-top: var(--space-4);
+    border-top: var(--hairline-width) solid var(--hairline);
+    color: var(--ink-soft);
+    font-size: var(--size-caption);
+    max-width: 42rem;
+  }
+
+  /*
     Scripture is the likeliest thing here to be printed, so the page is set for
     paper rather than merely surviving it: the site chrome goes, the measure
     widens to the sheet, and a verse never breaks across a page.
@@ -497,6 +584,36 @@ const label = (d: DivisionIndex): string => divisionHeading(work, d);
     .rd {
       max-width: none;
       padding: 0;
+    }
+
+    /* A control that copies a link is meaningless on paper, and so is the
+       mark saying where a reader stopped in the browser. */
+    .rd-copy,
+    .rd-verse__mark {
+      display: none;
+    }
+
+    .rd-verse--mark {
+      border-left: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    /*
+      Repeated at the foot of every sheet, not once at the end. A printout is
+      read as loose pages, and page four naming no edition is page four
+      claiming scripture from nowhere.
+    */
+    .rd-print-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: none;
+      margin: 0;
+      padding-top: var(--space-2);
+      border-top: var(--hairline-width) solid var(--ink);
+      background: var(--canvas);
     }
 
     .rd-verse {

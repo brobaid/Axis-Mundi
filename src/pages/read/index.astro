@@ -100,6 +100,11 @@ const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
                   {!hasEnglish(s.work) && ' · original only'}
                 </span>
               </a>
+              {/* Filled in by the island only where there is a position to
+                  resume from; an offer that goes nowhere is worse than none. */}
+              <p class="rd-resume caption" data-resume={s.work.id} hidden>
+                <a class="rd-resume__link" href={`/read/${s.work.id}`}></a>
+              </p>
             </li>
           ))}
         </ul>
@@ -154,6 +159,10 @@ const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
       than standing empty.
     </p>
   </div>
+
+  <script>
+    import '../../scripts/reader';
+  </script>
 </BaseLayout>
 
 <style>
@@ -226,6 +235,21 @@ const verses = shelf.reduce((n, s) => n + s.work.total_verses, 0);
   .rd-shelf__item:hover .rd-shelf__title {
     text-decoration: underline;
     text-underline-offset: 4px;
+  }
+
+  /* --- resume ------------------------------------------------------------ */
+
+  .rd-resume {
+    padding-bottom: var(--space-3);
+  }
+
+  .rd-resume__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap-min);
+    color: var(--brass-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   /* --- being acquired ---------------------------------------------------- */
