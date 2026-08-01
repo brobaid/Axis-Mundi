@@ -1,0 +1,673 @@
+{
+ "id": "daodejing",
+ "tradition": "chinese",
+ "title": "The Daodejing",
+ "title_original": "道德经",
+ "division_label": "chapter",
+ "division_label_plural": "chapters",
+ "script": "han",
+ "direction": "ltr",
+ "editions": {
+  "zh": "ddj-received-text",
+  "en": "legge-sbe-39"
+ },
+ "lang_tags": {
+  "zh": "zh-Hans"
+ },
+ "versified": false,
+ "divisions": [
+  {
+   "n": 1,
+   "slug": "1",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 2,
+   "slug": "2",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 3,
+   "slug": "3",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 4,
+   "slug": "4",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 5,
+   "slug": "5",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 6,
+   "slug": "6",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 7,
+   "slug": "7",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 8,
+   "slug": "8",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 9,
+   "slug": "9",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 10,
+   "slug": "10",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 11,
+   "slug": "11",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 12,
+   "slug": "12",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 13,
+   "slug": "13",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 14,
+   "slug": "14",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 15,
+   "slug": "15",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 16,
+   "slug": "16",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 17,
+   "slug": "17",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 18,
+   "slug": "18",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 19,
+   "slug": "19",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 20,
+   "slug": "20",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 21,
+   "slug": "21",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 22,
+   "slug": "22",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 23,
+   "slug": "23",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 24,
+   "slug": "24",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 25,
+   "slug": "25",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 26,
+   "slug": "26",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 27,
+   "slug": "27",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 28,
+   "slug": "28",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 29,
+   "slug": "29",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 30,
+   "slug": "30",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 31,
+   "slug": "31",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 32,
+   "slug": "32",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 33,
+   "slug": "33",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 34,
+   "slug": "34",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 35,
+   "slug": "35",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 36,
+   "slug": "36",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 37,
+   "slug": "37",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 38,
+   "slug": "38",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 39,
+   "slug": "39",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 40,
+   "slug": "40",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 41,
+   "slug": "41",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 42,
+   "slug": "42",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 43,
+   "slug": "43",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 44,
+   "slug": "44",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 45,
+   "slug": "45",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 46,
+   "slug": "46",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 47,
+   "slug": "47",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 48,
+   "slug": "48",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 49,
+   "slug": "49",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 50,
+   "slug": "50",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 51,
+   "slug": "51",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 52,
+   "slug": "52",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 53,
+   "slug": "53",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 54,
+   "slug": "54",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 55,
+   "slug": "55",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 56,
+   "slug": "56",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 57,
+   "slug": "57",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 58,
+   "slug": "58",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 59,
+   "slug": "59",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 60,
+   "slug": "60",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 61,
+   "slug": "61",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 62,
+   "slug": "62",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 63,
+   "slug": "63",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 64,
+   "slug": "64",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 65,
+   "slug": "65",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 66,
+   "slug": "66",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 67,
+   "slug": "67",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 68,
+   "slug": "68",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 69,
+   "slug": "69",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 70,
+   "slug": "70",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 71,
+   "slug": "71",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 72,
+   "slug": "72",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 73,
+   "slug": "73",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 74,
+   "slug": "74",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 75,
+   "slug": "75",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 76,
+   "slug": "76",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 77,
+   "slug": "77",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 78,
+   "slug": "78",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 79,
+   "slug": "79",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 80,
+   "slug": "80",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  },
+  {
+   "n": 81,
+   "slug": "81",
+   "verses": 1,
+   "english_gaps": 0,
+   "original_gaps": 0,
+   "blank": 0
+  }
+ ],
+ "total_verses": 81,
+ "english_gaps": 0,
+ "original_gaps": 0,
+ "blank": 0,
+ "sourcing": "sourced"
+}

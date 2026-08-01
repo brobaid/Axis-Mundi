@@ -21,6 +21,19 @@ import '@fontsource/ibm-plex-mono/latin-500.css';
    pointed text and a mangled one. */
 import '@fontsource/noto-naskh-arabic/arabic-400.css';
 import '@fontsource/noto-serif-hebrew/hebrew-400.css';
+/* Simplified Chinese, for the Daodejing and the Analects.
+
+   Fontsource ships this face two ways and the obvious one is wrong here.
+   Its split build cuts the face into 101 unicode-range subsets so a browser
+   fetches only what a page uses — the right shape for Latin, useless for a
+   classical Chinese text, which reaches across the frequency bands the split
+   is ordered by. Measured against these two corpora: the worst page, Analects
+   XIV, has 376 distinct characters landing in 49 of the 101 subsets, 1,733 KB;
+   reading the whole shelf touches 82 subsets, 2,850 KB. The single file is
+   1,472 KB and covers all 1,617 characters both works use, once, for every
+   Chinese route. So: one file, cheaper on the worst page and on the whole
+   shelf, and `font-display: swap` keeps it off the critical path. */
+import '@fontsource/noto-serif-sc/chinese-simplified-400.css';
 /* Latin Extended Additional, for romanised Pali.
 
    Source Serif 4 carries every Pali diacritic but one: ṁ, the niggahita, which
