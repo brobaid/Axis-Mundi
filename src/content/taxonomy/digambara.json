@@ -1,16 +1,18 @@
 {
-  "id": "digambara",
-  "name": "Digambara",
-  "parent": "jainism",
-  "tradition": "jainism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "jainism/digambara",
-  "depth": 2,
-  "summary": "The branch whose monastics renounce clothing, holding a distinct canon and monastic discipline.",
-  "contested": false,
-  "currents": [],
-  "order": 0,
-  "founded": {}
+ "id": "digambara",
+ "name": "Digambara",
+ "parent": "jainism",
+ "tradition": "jainism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "dundas-jains-2002"
+ ],
+ "path": "jainism/digambara",
+ "depth": 2,
+ "summary": "The branch whose monastics renounce clothing, holding a distinct canon and monastic discipline.",
+ "contested": false,
+ "currents": [],
+ "order": 0,
+ "founded": {}
 }

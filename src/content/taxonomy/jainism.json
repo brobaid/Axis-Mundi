@@ -1,34 +1,36 @@
 {
-  "id": "jainism",
-  "name": "Jainism",
-  "parent": null,
-  "tradition": "jainism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "jainism",
-  "depth": 1,
-  "symbol": "jain-hand-with-wheel",
-  "summary": "A tradition of the Indian subcontinent centred on ahimsa and the teaching of the tirthankaras, organised into the Digambara and Svetambara branches.",
-  "contested": false,
-  "currents": [],
-  "order": 7,
-  "founded": {
-    "year": -550,
-    "precision": "century",
-    "display": "Mahavira, 6th-5th c. BCE",
-    "note": "Tradition itself holds a lineage of earlier tirthankaras; that view is tradition-internal",
-    "sources": [
-      "dundas-jains-2002"
-    ],
-    "contested": false
-  },
-  "adherents": {
-    "display": "≈4.5 m (census + estimates)",
-    "estimate": 4500000,
-    "source": "india-census-2011",
-    "year": 2011,
-    "basis": "4.45 m in India per the 2011 census, plus a small diaspora. Not enumerated by Pew.",
-    "contested": false
-  }
+ "id": "jainism",
+ "name": "Jainism",
+ "parent": null,
+ "tradition": "jainism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "dundas-jains-2002"
+ ],
+ "path": "jainism",
+ "depth": 1,
+ "symbol": "jain-hand-with-wheel",
+ "summary": "A tradition of the Indian subcontinent centred on ahimsa and the teaching of the tirthankaras, organised into the Digambara and Svetambara branches.",
+ "contested": false,
+ "currents": [],
+ "order": 7,
+ "founded": {
+  "year": -550,
+  "precision": "century",
+  "display": "Mahavira, 6th-5th c. BCE",
+  "note": "Tradition itself holds a lineage of earlier tirthankaras; that view is tradition-internal",
+  "sources": [
+   "dundas-jains-2002"
+  ],
+  "contested": false
+ },
+ "adherents": {
+  "display": "≈4.5 m (census + estimates)",
+  "estimate": 4500000,
+  "source": "india-census-2011",
+  "year": 2011,
+  "basis": "4.45 m in India per the 2011 census, plus a small diaspora. Not enumerated by Pew.",
+  "contested": false
+ }
 }

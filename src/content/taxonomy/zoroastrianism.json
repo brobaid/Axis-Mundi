@@ -1,32 +1,34 @@
 {
-  "id": "zoroastrianism",
-  "name": "Zoroastrianism",
-  "parent": null,
-  "tradition": "zoroastrianism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "zoroastrianism",
-  "depth": 1,
-  "symbol": "faravahar",
-  "summary": "A tradition originating with Zarathustra and centred on the Avesta, organised at launch into the Parsi and Irani communities.",
-  "contested": false,
-  "currents": [],
-  "order": 9,
-  "founded": {
-    "year": -1000,
-    "precision": "era",
-    "display": "Contested: c. 1500-1000 BCE or 6th century BCE",
-    "sources": [
-      "boyce-zoroastrians"
-    ],
-    "contested": true,
-    "contested_note": "Position 1: linguistic dating of the Gathas places Zoroaster c. 1500-1000 BCE. Position 2: a later tradition dates him to the 6th century BCE. Scholarship is divided"
-  },
-  "adherents": {
-    "display": "≈110-120 k (community surveys)",
-    "source": "fezana-demographics",
-    "basis": "Community demographic surveys. The 2011 India census counts 57,264 Parsis. Not enumerated by Pew.",
-    "contested": false
-  }
+ "id": "zoroastrianism",
+ "name": "Zoroastrianism",
+ "parent": null,
+ "tradition": "zoroastrianism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "boyce-zoroastrians"
+ ],
+ "path": "zoroastrianism",
+ "depth": 1,
+ "symbol": "faravahar",
+ "summary": "A tradition originating with Zarathustra and centred on the Avesta, organised at launch into the Parsi and Irani communities.",
+ "contested": false,
+ "currents": [],
+ "order": 9,
+ "founded": {
+  "year": -1000,
+  "precision": "era",
+  "display": "Contested: c. 1500-1000 BCE or 6th century BCE",
+  "sources": [
+   "boyce-zoroastrians"
+  ],
+  "contested": true,
+  "contested_note": "Position 1: linguistic dating of the Gathas places Zoroaster c. 1500-1000 BCE. Position 2: a later tradition dates him to the 6th century BCE. Scholarship is divided"
+ },
+ "adherents": {
+  "display": "≈110-120 k (community surveys)",
+  "source": "fezana-demographics",
+  "basis": "Community demographic surveys. The 2011 India census counts 57,264 Parsis. Not enumerated by Pew.",
+  "contested": false
+ }
 }

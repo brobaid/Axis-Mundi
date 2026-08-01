@@ -1,16 +1,18 @@
 {
-  "id": "anabaptist",
-  "name": "Anabaptist",
-  "parent": "protestant",
-  "tradition": "christianity",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "christianity/protestant/anabaptist",
-  "depth": 3,
-  "summary": "Churches practising believers’ baptism and, characteristically, a separated and often pacifist community life.",
-  "contested": false,
-  "currents": [],
-  "order": 3,
-  "founded": {}
+ "id": "anabaptist",
+ "name": "Anabaptist",
+ "parent": "protestant",
+ "tradition": "christianity",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "path": "christianity/protestant/anabaptist",
+ "depth": 3,
+ "summary": "Churches practising believers’ baptism and, characteristically, a separated and often pacifist community life.",
+ "contested": false,
+ "currents": [],
+ "order": 3,
+ "founded": {}
 }

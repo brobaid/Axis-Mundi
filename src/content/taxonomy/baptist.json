@@ -1,16 +1,18 @@
 {
-  "id": "baptist",
-  "name": "Baptist",
-  "parent": "protestant",
-  "tradition": "christianity",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "christianity/protestant/baptist",
-  "depth": 3,
-  "summary": "Churches practising believers’ baptism by immersion and congregational governance.",
-  "contested": false,
-  "currents": [],
-  "order": 4,
-  "founded": {}
+ "id": "baptist",
+ "name": "Baptist",
+ "parent": "protestant",
+ "tradition": "christianity",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "path": "christianity/protestant/baptist",
+ "depth": 3,
+ "summary": "Churches practising believers’ baptism by immersion and congregational governance.",
+ "contested": false,
+ "currents": [],
+ "order": 4,
+ "founded": {}
 }

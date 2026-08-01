@@ -1,16 +1,19 @@
 {
-  "id": "ismaili",
-  "name": "Ismaili",
-  "parent": "shia",
-  "tradition": "islam",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "islam/shia/ismaili",
-  "depth": 3,
-  "summary": "A Shia community recognising a distinct imamate line following Isma’il ibn Ja’far.",
-  "contested": false,
-  "currents": [],
-  "order": 1,
-  "founded": {}
+ "id": "ismaili",
+ "name": "Ismaili",
+ "parent": "shia",
+ "tradition": "islam",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "path": "islam/shia/ismaili",
+ "depth": 3,
+ "summary": "A Shia community recognising a distinct imamate line following Isma’il ibn Ja’far.",
+ "contested": false,
+ "currents": [],
+ "order": 1,
+ "founded": {}
 }

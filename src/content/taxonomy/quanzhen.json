@@ -1,16 +1,19 @@
 {
-  "id": "quanzhen",
-  "name": "Quanzhen",
-  "parent": "taoism",
-  "tradition": "chinese",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "chinese/taoism/quanzhen",
-  "depth": 3,
-  "summary": "A monastic Taoist school emphasising internal alchemy.",
-  "contested": false,
-  "currents": [],
-  "order": 0,
-  "founded": {}
+ "id": "quanzhen",
+ "name": "Quanzhen",
+ "parent": "taoism",
+ "tradition": "chinese",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "path": "chinese/taoism/quanzhen",
+ "depth": 3,
+ "summary": "A monastic Taoist school emphasising internal alchemy.",
+ "contested": false,
+ "currents": [],
+ "order": 0,
+ "founded": {}
 }

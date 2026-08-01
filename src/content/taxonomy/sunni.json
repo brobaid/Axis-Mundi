@@ -1,16 +1,19 @@
 {
-  "id": "sunni",
-  "name": "Sunni",
-  "parent": "islam",
-  "tradition": "islam",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "islam/sunni",
-  "depth": 2,
-  "summary": "The largest branch; its Hanafi, Maliki, Shafi’i and Hanbali schools are jurisprudential sub-entries rather than lanes.",
-  "contested": false,
-  "currents": [],
-  "order": 0,
-  "founded": {}
+ "id": "sunni",
+ "name": "Sunni",
+ "parent": "islam",
+ "tradition": "islam",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "path": "islam/sunni",
+ "depth": 2,
+ "summary": "The largest branch; its Hanafi, Maliki, Shafi’i and Hanbali schools are jurisprudential sub-entries rather than lanes.",
+ "contested": false,
+ "currents": [],
+ "order": 0,
+ "founded": {}
 }

@@ -1,16 +1,19 @@
 {
-  "id": "chan-zen",
-  "name": "Chan and Zen",
-  "parent": "mahayana",
-  "tradition": "buddhism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "buddhism/mahayana/chan-zen",
-  "depth": 3,
-  "summary": "Schools emphasising meditative practice and direct transmission.",
-  "contested": false,
-  "currents": [],
-  "order": 0,
-  "founded": {}
+ "id": "chan-zen",
+ "name": "Chan and Zen",
+ "parent": "mahayana",
+ "tradition": "buddhism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "path": "buddhism/mahayana/chan-zen",
+ "depth": 3,
+ "summary": "Schools emphasising meditative practice and direct transmission.",
+ "contested": false,
+ "currents": [],
+ "order": 0,
+ "founded": {}
 }

@@ -1,51 +1,54 @@
 {
-  "id": "islam",
-  "name": "Islam",
-  "parent": null,
-  "tradition": "islam",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "islam",
-  "depth": 1,
-  "symbol": "crescent-and-star",
-  "summary": "A tradition centred on the Qur’an and the prophethood of Muhammad, organised at launch into the Sunni, Shia, Ibadi and Ahmadiyya branches.",
-  "contested": false,
-  "currents": [
-    {
-      "id": "sufism",
-      "name": "Sufism",
-      "summary": "A devotional and mystical current running across Sunni and Shia branches alike; per spec §2.2 it is never rendered as a lane.",
-      "spans": [],
-      "sources": [],
-      "contested": false
-    },
-    {
-      "id": "salafism",
-      "name": "Salafism",
-      "summary": "A reformist current appealing to the practice of the earliest generations, cutting across existing branches.",
-      "spans": [],
-      "sources": [],
-      "contested": false
-    }
-  ],
-  "order": 1,
-  "founded": {
-    "year": 610,
-    "precision": "year",
-    "display": "7th century CE (610 first revelation, 622 Hijra)",
-    "note": "First revelation 610; the community dates from the Hijra, 622",
-    "sources": [
-      "nchi-2010"
-    ],
-    "contested": false
+ "id": "islam",
+ "name": "Islam",
+ "parent": null,
+ "tradition": "islam",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "path": "islam",
+ "depth": 1,
+ "symbol": "crescent-and-star",
+ "summary": "A tradition centred on the Qur’an and the prophethood of Muhammad, organised at launch into the Sunni, Shia, Ibadi and Ahmadiyya branches.",
+ "contested": false,
+ "currents": [
+  {
+   "id": "sufism",
+   "name": "Sufism",
+   "summary": "A devotional and mystical current running across Sunni and Shia branches alike; per spec §2.2 it is never rendered as a lane.",
+   "spans": [],
+   "sources": [],
+   "contested": false
   },
-  "adherents": {
-    "display": "2.0 bn (Pew, 2020)",
-    "estimate": 2000000000,
-    "source": "pew-grl-2025",
-    "year": 2020,
-    "basis": "Enumerated by Pew. 25.6% of world population. Supersedes the v5 stat box figure of 1.9 bn.",
-    "contested": false
+  {
+   "id": "salafism",
+   "name": "Salafism",
+   "summary": "A reformist current appealing to the practice of the earliest generations, cutting across existing branches.",
+   "spans": [],
+   "sources": [],
+   "contested": false
   }
+ ],
+ "order": 1,
+ "founded": {
+  "year": 610,
+  "precision": "year",
+  "display": "7th century CE (610 first revelation, 622 Hijra)",
+  "note": "First revelation 610; the community dates from the Hijra, 622",
+  "sources": [
+   "nchi-2010"
+  ],
+  "contested": false
+ },
+ "adherents": {
+  "display": "2.0 bn (Pew, 2020)",
+  "estimate": 2000000000,
+  "source": "pew-grl-2025",
+  "year": 2020,
+  "basis": "Enumerated by Pew. 25.6% of world population. Supersedes the v5 stat box figure of 1.9 bn.",
+  "contested": false
+ }
 }

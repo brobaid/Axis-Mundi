@@ -1,17 +1,20 @@
 {
-  "id": "ahmadiyya",
-  "name": "Ahmadiyya",
-  "parent": "islam",
-  "tradition": "islam",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "islam/ahmadiyya",
-  "depth": 2,
-  "summary": "A movement originating in nineteenth-century Punjab.",
-  "contested": true,
-  "contested_note": "Placed within Islam per self-identification, which the community affirms. Many Sunni and Shia authorities, and the law of some states, classify it as outside Islam. Both positions require citation before this note ships.",
-  "currents": [],
-  "order": 3,
-  "founded": {}
+ "id": "ahmadiyya",
+ "name": "Ahmadiyya",
+ "parent": "islam",
+ "tradition": "islam",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "path": "islam/ahmadiyya",
+ "depth": 2,
+ "summary": "A movement originating in nineteenth-century Punjab.",
+ "contested": true,
+ "contested_note": "Placed within Islam per self-identification, which the community affirms. Many Sunni and Shia authorities, and the law of some states, classify it as outside Islam. Both positions require citation before this note ships.",
+ "currents": [],
+ "order": 3,
+ "founded": {}
 }

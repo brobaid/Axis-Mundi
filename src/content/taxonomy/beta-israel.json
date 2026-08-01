@@ -1,16 +1,18 @@
 {
-  "id": "beta-israel",
-  "name": "Beta Israel",
-  "parent": "judaism",
-  "tradition": "judaism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "judaism/beta-israel",
-  "depth": 2,
-  "summary": "The Jewish community originating in the Ethiopian highlands, with its own liturgical and textual tradition.",
-  "contested": false,
-  "currents": [],
-  "order": 2,
-  "founded": {}
+ "id": "beta-israel",
+ "name": "Beta Israel",
+ "parent": "judaism",
+ "tradition": "judaism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "ej2-2007"
+ ],
+ "path": "judaism/beta-israel",
+ "depth": 2,
+ "summary": "The Jewish community originating in the Ethiopian highlands, with its own liturgical and textual tradition.",
+ "contested": false,
+ "currents": [],
+ "order": 2,
+ "founded": {}
 }

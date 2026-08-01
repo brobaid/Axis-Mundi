@@ -1,16 +1,19 @@
 {
-  "id": "nyingma",
-  "name": "Nyingma",
-  "parent": "vajrayana",
-  "tradition": "buddhism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "buddhism/vajrayana/nyingma",
-  "depth": 3,
-  "summary": "The oldest of the Tibetan schools, tracing to the earliest transmission.",
-  "contested": false,
-  "currents": [],
-  "order": 0,
-  "founded": {}
+ "id": "nyingma",
+ "name": "Nyingma",
+ "parent": "vajrayana",
+ "tradition": "buddhism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "path": "buddhism/vajrayana/nyingma",
+ "depth": 3,
+ "summary": "The oldest of the Tibetan schools, tracing to the earliest transmission.",
+ "contested": false,
+ "currents": [],
+ "order": 0,
+ "founded": {}
 }

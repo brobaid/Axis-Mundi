@@ -1,16 +1,18 @@
 {
-  "id": "orthodox",
-  "name": "Orthodox",
-  "parent": "christianity",
-  "tradition": "christianity",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "christianity/orthodox",
-  "depth": 2,
-  "summary": "The Eastern and Oriental Orthodox communions, distinguished from one another by their reception of the Council of Chalcedon.",
-  "contested": false,
-  "currents": [],
-  "order": 1,
-  "founded": {}
+ "id": "orthodox",
+ "name": "Orthodox",
+ "parent": "christianity",
+ "tradition": "christianity",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "path": "christianity/orthodox",
+ "depth": 2,
+ "summary": "The Eastern and Oriental Orthodox communions, distinguished from one another by their reception of the Council of Chalcedon.",
+ "contested": false,
+ "currents": [],
+ "order": 1,
+ "founded": {}
 }

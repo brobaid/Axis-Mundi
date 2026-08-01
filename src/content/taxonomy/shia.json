@@ -1,16 +1,19 @@
 {
-  "id": "shia",
-  "name": "Shia",
-  "parent": "islam",
-  "tradition": "islam",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "islam/shia",
-  "depth": 2,
-  "summary": "The branch holding that leadership of the community passed through the family of Muhammad.",
-  "contested": false,
-  "currents": [],
-  "order": 1,
-  "founded": {}
+ "id": "shia",
+ "name": "Shia",
+ "parent": "islam",
+ "tradition": "islam",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "path": "islam/shia",
+ "depth": 2,
+ "summary": "The branch holding that leadership of the community passed through the family of Muhammad.",
+ "contested": false,
+ "currents": [],
+ "order": 1,
+ "founded": {}
 }

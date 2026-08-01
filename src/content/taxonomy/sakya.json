@@ -1,16 +1,19 @@
 {
-  "id": "sakya",
-  "name": "Sakya",
-  "parent": "vajrayana",
-  "tradition": "buddhism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "buddhism/vajrayana/sakya",
-  "depth": 3,
-  "summary": "A Tibetan school centred on Sakya monastery and its scholastic tradition.",
-  "contested": false,
-  "currents": [],
-  "order": 2,
-  "founded": {}
+ "id": "sakya",
+ "name": "Sakya",
+ "parent": "vajrayana",
+ "tradition": "buddhism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "path": "buddhism/vajrayana/sakya",
+ "depth": 3,
+ "summary": "A Tibetan school centred on Sakya monastery and its scholastic tradition.",
+ "contested": false,
+ "currents": [],
+ "order": 2,
+ "founded": {}
 }

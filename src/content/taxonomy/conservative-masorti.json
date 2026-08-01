@@ -1,16 +1,18 @@
 {
-  "id": "conservative-masorti",
-  "name": "Conservative and Masorti",
-  "parent": "rabbinic",
-  "tradition": "judaism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "judaism/rabbinic/conservative-masorti",
-  "depth": 3,
-  "summary": "A movement holding halakha as binding while allowing for historical development.",
-  "contested": false,
-  "currents": [],
-  "order": 1,
-  "founded": {}
+ "id": "conservative-masorti",
+ "name": "Conservative and Masorti",
+ "parent": "rabbinic",
+ "tradition": "judaism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "ej2-2007"
+ ],
+ "path": "judaism/rabbinic/conservative-masorti",
+ "depth": 3,
+ "summary": "A movement holding halakha as binding while allowing for historical development.",
+ "contested": false,
+ "currents": [],
+ "order": 1,
+ "founded": {}
 }

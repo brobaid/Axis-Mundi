@@ -1,17 +1,19 @@
 {
-  "id": "jehovahs-witnesses",
-  "name": "Jehovah's Witnesses",
-  "parent": "restorationist",
-  "tradition": "christianity",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "christianity/restorationist/jehovahs-witnesses",
-  "depth": 3,
-  "summary": "A Restorationist movement originating in the late nineteenth-century Bible Student movement.",
-  "contested": true,
-  "contested_note": "Placed within Christianity per self-identification, which the movement affirms. Many Christian bodies classify it as a separate tradition on trinitarian grounds. Both positions require citation before this note ships.",
-  "currents": [],
-  "order": 1,
-  "founded": {}
+ "id": "jehovahs-witnesses",
+ "name": "Jehovah's Witnesses",
+ "parent": "restorationist",
+ "tradition": "christianity",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "path": "christianity/restorationist/jehovahs-witnesses",
+ "depth": 3,
+ "summary": "A Restorationist movement originating in the late nineteenth-century Bible Student movement.",
+ "contested": true,
+ "contested_note": "Placed within Christianity per self-identification, which the movement affirms. Many Christian bodies classify it as a separate tradition on trinitarian grounds. Both positions require citation before this note ships.",
+ "currents": [],
+ "order": 1,
+ "founded": {}
 }

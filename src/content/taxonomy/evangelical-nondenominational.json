@@ -1,16 +1,18 @@
 {
-  "id": "evangelical-nondenominational",
-  "name": "Evangelical non-denominational",
-  "parent": "protestant",
-  "tradition": "christianity",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "christianity/protestant/evangelical-nondenominational",
-  "depth": 3,
-  "summary": "Congregations that hold evangelical commitments without affiliation to a historic denomination.",
-  "contested": false,
-  "currents": [],
-  "order": 7,
-  "founded": {}
+ "id": "evangelical-nondenominational",
+ "name": "Evangelical non-denominational",
+ "parent": "protestant",
+ "tradition": "christianity",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "path": "christianity/protestant/evangelical-nondenominational",
+ "depth": 3,
+ "summary": "Congregations that hold evangelical commitments without affiliation to a historic denomination.",
+ "contested": false,
+ "currents": [],
+ "order": 7,
+ "founded": {}
 }

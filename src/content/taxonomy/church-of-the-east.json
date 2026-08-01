@@ -1,16 +1,18 @@
 {
-  "id": "church-of-the-east",
-  "name": "Church of the East",
-  "parent": "christianity",
-  "tradition": "christianity",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "christianity/church-of-the-east",
-  "depth": 2,
-  "summary": "A distinct Syriac tradition, historically centred in Mesopotamia and Persia and spread along the trade routes of Asia.",
-  "contested": false,
-  "currents": [],
-  "order": 2,
-  "founded": {}
+ "id": "church-of-the-east",
+ "name": "Church of the East",
+ "parent": "christianity",
+ "tradition": "christianity",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "path": "christianity/church-of-the-east",
+ "depth": 2,
+ "summary": "A distinct Syriac tradition, historically centred in Mesopotamia and Persia and spread along the trade routes of Asia.",
+ "contested": false,
+ "currents": [],
+ "order": 2,
+ "founded": {}
 }

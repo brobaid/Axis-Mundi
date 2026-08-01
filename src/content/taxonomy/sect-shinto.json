@@ -1,16 +1,18 @@
 {
-  "id": "sect-shinto",
-  "name": "Sect Shinto",
-  "parent": "shinto",
-  "tradition": "shinto",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "shinto/sect-shinto",
-  "depth": 2,
-  "summary": "Organised bodies recognised as distinct denominations from the nineteenth century onward.",
-  "contested": false,
-  "currents": [],
-  "order": 1,
-  "founded": {}
+ "id": "sect-shinto",
+ "name": "Sect Shinto",
+ "parent": "shinto",
+ "tradition": "shinto",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "hardacre-shinto-2017"
+ ],
+ "path": "shinto/sect-shinto",
+ "depth": 2,
+ "summary": "Organised bodies recognised as distinct denominations from the nineteenth century onward.",
+ "contested": false,
+ "currents": [],
+ "order": 1,
+ "founded": {}
 }

@@ -1,16 +1,19 @@
 {
-  "id": "zaydi",
-  "name": "Zaydi",
-  "parent": "shia",
-  "tradition": "islam",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "islam/shia/zaydi",
-  "depth": 3,
-  "summary": "A Shia community historically centred in Yemen, recognising Zayd ibn Ali.",
-  "contested": false,
-  "currents": [],
-  "order": 2,
-  "founded": {}
+ "id": "zaydi",
+ "name": "Zaydi",
+ "parent": "shia",
+ "tradition": "islam",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "path": "islam/shia/zaydi",
+ "depth": 3,
+ "summary": "A Shia community historically centred in Yemen, recognising Zayd ibn Ali.",
+ "contested": false,
+ "currents": [],
+ "order": 2,
+ "founded": {}
 }

@@ -1,16 +1,18 @@
 {
-  "id": "eastern-catholic",
-  "name": "Eastern Catholic",
-  "parent": "catholic",
-  "tradition": "christianity",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "christianity/catholic/eastern-catholic",
-  "depth": 3,
-  "summary": "Eastern churches in communion with Rome while retaining their own rites and canon law.",
-  "contested": false,
-  "currents": [],
-  "order": 1,
-  "founded": {}
+ "id": "eastern-catholic",
+ "name": "Eastern Catholic",
+ "parent": "catholic",
+ "tradition": "christianity",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "path": "christianity/catholic/eastern-catholic",
+ "depth": 3,
+ "summary": "Eastern churches in communion with Rome while retaining their own rites and canon law.",
+ "contested": false,
+ "currents": [],
+ "order": 1,
+ "founded": {}
 }

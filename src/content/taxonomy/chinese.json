@@ -1,36 +1,39 @@
 {
-  "id": "chinese",
-  "name": "Chinese traditions",
-  "parent": null,
-  "tradition": "chinese",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "chinese",
-  "depth": 1,
-  "symbol": "taijitu",
-  "summary": "A cluster comprising Confucianism, Taoism and Chinese folk religion, whose boundaries in practice are porous.",
-  "contested": true,
-  "contested_note": "The spec flags the classification of this cluster, and of Confucianism in particular, as a religion rather than a philosophy or a civic tradition. Both positions require citation before this note ships.",
-  "currents": [],
-  "order": 6,
-  "founded": {
-    "year": -500,
-    "precision": "era",
-    "display": "Cluster: Confucius 6th-5th c. BCE; organized Taoism 142 CE; folk religion immemorial",
-    "note": "A cluster, not a single founding",
-    "sources": [
-      "yao-confucianism-2000",
-      "kohn-daoism-2000"
-    ],
-    "contested": false
-  },
-  "adherents": {
-    "display": "see note",
-    "source": "pew-grl-2025",
-    "year": 2020,
-    "basis": "No single authoritative figure.",
-    "note": "Formal zongjiao identification in the PRC runs at about 10% across all religions per Pew 2025, while scholarly estimates of folk religious practice run to hundreds of millions. The note stands in place of a point estimate. Taiwan is the one polity Pew records as majority \"other religions\".",
-    "contested": false
-  }
+ "id": "chinese",
+ "name": "Chinese traditions",
+ "parent": null,
+ "tradition": "chinese",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "path": "chinese",
+ "depth": 1,
+ "symbol": "taijitu",
+ "summary": "A cluster comprising Confucianism, Taoism and Chinese folk religion, whose boundaries in practice are porous.",
+ "contested": true,
+ "contested_note": "The spec flags the classification of this cluster, and of Confucianism in particular, as a religion rather than a philosophy or a civic tradition. Both positions require citation before this note ships.",
+ "currents": [],
+ "order": 6,
+ "founded": {
+  "year": -500,
+  "precision": "era",
+  "display": "Cluster: Confucius 6th-5th c. BCE; organized Taoism 142 CE; folk religion immemorial",
+  "note": "A cluster, not a single founding",
+  "sources": [
+   "yao-confucianism-2000",
+   "kohn-daoism-2000"
+  ],
+  "contested": false
+ },
+ "adherents": {
+  "display": "see note",
+  "source": "pew-grl-2025",
+  "year": 2020,
+  "basis": "No single authoritative figure.",
+  "note": "Formal zongjiao identification in the PRC runs at about 10% across all religions per Pew 2025, while scholarly estimates of folk religious practice run to hundreds of millions. The note stands in place of a point estimate. Taiwan is the one polity Pew records as majority \"other religions\".",
+  "contested": false
+ }
 }

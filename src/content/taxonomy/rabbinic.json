@@ -1,16 +1,18 @@
 {
-  "id": "rabbinic",
-  "name": "Rabbinic",
-  "parent": "judaism",
-  "tradition": "judaism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "judaism/rabbinic",
-  "depth": 2,
-  "summary": "The mainstream descending from the rabbinic academies, comprising the Orthodox, Conservative, Reform and Reconstructionist movements.",
-  "contested": false,
-  "currents": [],
-  "order": 0,
-  "founded": {}
+ "id": "rabbinic",
+ "name": "Rabbinic",
+ "parent": "judaism",
+ "tradition": "judaism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "ej2-2007"
+ ],
+ "path": "judaism/rabbinic",
+ "depth": 2,
+ "summary": "The mainstream descending from the rabbinic academies, comprising the Orthodox, Conservative, Reform and Reconstructionist movements.",
+ "contested": false,
+ "currents": [],
+ "order": 0,
+ "founded": {}
 }

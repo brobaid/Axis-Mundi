@@ -1,16 +1,19 @@
 {
-  "id": "nichiren",
-  "name": "Nichiren",
-  "parent": "mahayana",
-  "tradition": "buddhism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "buddhism/mahayana/nichiren",
-  "depth": 3,
-  "summary": "Schools centred on the Lotus Sutra as taught by Nichiren.",
-  "contested": false,
-  "currents": [],
-  "order": 2,
-  "founded": {}
+ "id": "nichiren",
+ "name": "Nichiren",
+ "parent": "mahayana",
+ "tradition": "buddhism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "path": "buddhism/mahayana/nichiren",
+ "depth": 3,
+ "summary": "Schools centred on the Lotus Sutra as taught by Nichiren.",
+ "contested": false,
+ "currents": [],
+ "order": 2,
+ "founded": {}
 }

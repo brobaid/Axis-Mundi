@@ -1,16 +1,18 @@
 {
-  "id": "folk-shinto",
-  "name": "Folk Shinto",
-  "parent": "shinto",
-  "tradition": "shinto",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "shinto/folk-shinto",
-  "depth": 2,
-  "summary": "Local and household kami practice outside formal shrine or sect structures.",
-  "contested": false,
-  "currents": [],
-  "order": 2,
-  "founded": {}
+ "id": "folk-shinto",
+ "name": "Folk Shinto",
+ "parent": "shinto",
+ "tradition": "shinto",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "hardacre-shinto-2017"
+ ],
+ "path": "shinto/folk-shinto",
+ "depth": 2,
+ "summary": "Local and household kami practice outside formal shrine or sect structures.",
+ "contested": false,
+ "currents": [],
+ "order": 2,
+ "founded": {}
 }

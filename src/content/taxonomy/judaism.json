@@ -1,51 +1,53 @@
 {
-  "id": "judaism",
-  "name": "Judaism",
-  "parent": null,
-  "tradition": "judaism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "judaism",
-  "depth": 1,
-  "symbol": "star-of-david",
-  "summary": "A tradition centred on the Torah and the covenant, organised at launch into the Rabbinic, Karaite and Beta Israel branches.",
-  "contested": false,
-  "currents": [
-    {
-      "id": "hasidism",
-      "name": "Hasidism",
-      "summary": "A devotional revival current within Orthodoxy, spanning communities rather than forming a branch.",
-      "spans": [],
-      "sources": [],
-      "contested": false
-    },
-    {
-      "id": "kabbalah",
-      "name": "Kabbalah",
-      "summary": "An esoteric interpretive current running across Jewish communities; per spec §2.2 it is never rendered as a lane.",
-      "spans": [],
-      "sources": [],
-      "contested": false
-    }
-  ],
-  "order": 2,
-  "founded": {
-    "year": -1000,
-    "precision": "era",
-    "display": "1st millennium BCE (emergence)",
-    "note": "No founding moment; Israelite religion developing into Second Temple Judaism",
-    "sources": [
-      "ej2-2007"
-    ],
-    "contested": false
+ "id": "judaism",
+ "name": "Judaism",
+ "parent": null,
+ "tradition": "judaism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "ej2-2007"
+ ],
+ "path": "judaism",
+ "depth": 1,
+ "symbol": "star-of-david",
+ "summary": "A tradition centred on the Torah and the covenant, organised at launch into the Rabbinic, Karaite and Beta Israel branches.",
+ "contested": false,
+ "currents": [
+  {
+   "id": "hasidism",
+   "name": "Hasidism",
+   "summary": "A devotional revival current within Orthodoxy, spanning communities rather than forming a branch.",
+   "spans": [],
+   "sources": [],
+   "contested": false
   },
-  "adherents": {
-    "display": "14.8 m (Pew, 2020)",
-    "estimate": 14800000,
-    "source": "pew-grl-2025",
-    "year": 2020,
-    "basis": "Enumerated by Pew. 0.2% of world population; the report carries definitional notes on Israel versus diaspora counting.",
-    "contested": false
+  {
+   "id": "kabbalah",
+   "name": "Kabbalah",
+   "summary": "An esoteric interpretive current running across Jewish communities; per spec §2.2 it is never rendered as a lane.",
+   "spans": [],
+   "sources": [],
+   "contested": false
   }
+ ],
+ "order": 2,
+ "founded": {
+  "year": -1000,
+  "precision": "era",
+  "display": "1st millennium BCE (emergence)",
+  "note": "No founding moment; Israelite religion developing into Second Temple Judaism",
+  "sources": [
+   "ej2-2007"
+  ],
+  "contested": false
+ },
+ "adherents": {
+  "display": "14.8 m (Pew, 2020)",
+  "estimate": 14800000,
+  "source": "pew-grl-2025",
+  "year": 2020,
+  "basis": "Enumerated by Pew. 0.2% of world population; the report carries definitional notes on Israel versus diaspora counting.",
+  "contested": false
+ }
 }

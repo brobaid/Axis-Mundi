@@ -1,16 +1,18 @@
 {
-  "id": "reformed",
-  "name": "Reformed and Presbyterian",
-  "parent": "protestant",
-  "tradition": "christianity",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "christianity/protestant/reformed",
-  "depth": 3,
-  "summary": "Churches in the Calvinist confessional tradition, generally governed by elders in presbyteries or synods.",
-  "contested": false,
-  "currents": [],
-  "order": 1,
-  "founded": {}
+ "id": "reformed",
+ "name": "Reformed and Presbyterian",
+ "parent": "protestant",
+ "tradition": "christianity",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "path": "christianity/protestant/reformed",
+ "depth": 3,
+ "summary": "Churches in the Calvinist confessional tradition, generally governed by elders in presbyteries or synods.",
+ "contested": false,
+ "currents": [],
+ "order": 1,
+ "founded": {}
 }

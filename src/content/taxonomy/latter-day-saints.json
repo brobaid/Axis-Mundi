@@ -1,17 +1,19 @@
 {
-  "id": "latter-day-saints",
-  "name": "Latter-day Saints",
-  "parent": "restorationist",
-  "tradition": "christianity",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "christianity/restorationist/latter-day-saints",
-  "depth": 3,
-  "summary": "A Restorationist movement originating in nineteenth-century North America.",
-  "contested": true,
-  "contested_note": "Placed within Christianity per self-identification, which the movement affirms. Many Catholic, Orthodox and Protestant bodies classify it as a separate tradition on trinitarian grounds. Both positions require citation before this note ships.",
-  "currents": [],
-  "order": 0,
-  "founded": {}
+ "id": "latter-day-saints",
+ "name": "Latter-day Saints",
+ "parent": "restorationist",
+ "tradition": "christianity",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "path": "christianity/restorationist/latter-day-saints",
+ "depth": 3,
+ "summary": "A Restorationist movement originating in nineteenth-century North America.",
+ "contested": true,
+ "contested_note": "Placed within Christianity per self-identification, which the movement affirms. Many Catholic, Orthodox and Protestant bodies classify it as a separate tradition on trinitarian grounds. Both positions require citation before this note ships.",
+ "currents": [],
+ "order": 0,
+ "founded": {}
 }

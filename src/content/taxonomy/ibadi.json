@@ -1,16 +1,19 @@
 {
-  "id": "ibadi",
-  "name": "Ibadi",
-  "parent": "islam",
-  "tradition": "islam",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "islam/ibadi",
-  "depth": 2,
-  "summary": "A branch distinct from both Sunni and Shia, today concentrated in Oman.",
-  "contested": false,
-  "currents": [],
-  "order": 2,
-  "founded": {}
+ "id": "ibadi",
+ "name": "Ibadi",
+ "parent": "islam",
+ "tradition": "islam",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "nchi-2010",
+  "esposito-straight-path"
+ ],
+ "path": "islam/ibadi",
+ "depth": 2,
+ "summary": "A branch distinct from both Sunni and Shia, today concentrated in Oman.",
+ "contested": false,
+ "currents": [],
+ "order": 2,
+ "founded": {}
 }

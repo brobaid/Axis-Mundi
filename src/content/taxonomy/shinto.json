@@ -1,33 +1,35 @@
 {
-  "id": "shinto",
-  "name": "Shinto",
-  "parent": null,
-  "tradition": "shinto",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "shinto",
-  "depth": 1,
-  "symbol": "torii",
-  "summary": "The kami traditions of the Japanese archipelago, organised at launch into Shrine, Sect and Folk Shinto.",
-  "contested": false,
-  "currents": [],
-  "order": 8,
-  "founded": {
-    "year": 700,
-    "precision": "era",
-    "display": "No founding; kami worship from prehistory",
-    "note": "Institutionalized in the 7th-8th centuries CE; practice long predates it",
-    "sources": [
-      "hardacre-shinto-2017"
-    ],
-    "contested": false
-  },
-  "adherents": {
-    "display": "see note",
-    "source": "japan-aca-yearbook",
-    "basis": "Not enumerated by Pew.",
-    "contested": true,
-    "contested_note": "Shinto adherence is contested by definition. Shrine-affiliation registers count roughly 80 to 90 million; self-identification surveys yield a few percent of Japan's population. Both positions stand; neither is \"the\" number."
-  }
+ "id": "shinto",
+ "name": "Shinto",
+ "parent": null,
+ "tradition": "shinto",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "hardacre-shinto-2017"
+ ],
+ "path": "shinto",
+ "depth": 1,
+ "symbol": "torii",
+ "summary": "The kami traditions of the Japanese archipelago, organised at launch into Shrine, Sect and Folk Shinto.",
+ "contested": false,
+ "currents": [],
+ "order": 8,
+ "founded": {
+  "year": 700,
+  "precision": "era",
+  "display": "No founding; kami worship from prehistory",
+  "note": "Institutionalized in the 7th-8th centuries CE; practice long predates it",
+  "sources": [
+   "hardacre-shinto-2017"
+  ],
+  "contested": false
+ },
+ "adherents": {
+  "display": "see note",
+  "source": "japan-aca-yearbook",
+  "basis": "Not enumerated by Pew.",
+  "contested": true,
+  "contested_note": "Shinto adherence is contested by definition. Shrine-affiliation registers count roughly 80 to 90 million; self-identification surveys yield a few percent of Japan's population. Both positions stand; neither is \"the\" number."
+ }
 }

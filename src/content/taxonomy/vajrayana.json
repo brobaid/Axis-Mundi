@@ -1,16 +1,19 @@
 {
-  "id": "vajrayana",
-  "name": "Vajrayana",
-  "parent": "buddhism",
-  "tradition": "buddhism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "buddhism/vajrayana",
-  "depth": 2,
-  "summary": "The tantric vehicle, comprising the Nyingma, Kagyu, Sakya and Gelug schools.",
-  "contested": false,
-  "currents": [],
-  "order": 2,
-  "founded": {}
+ "id": "vajrayana",
+ "name": "Vajrayana",
+ "parent": "buddhism",
+ "tradition": "buddhism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "path": "buddhism/vajrayana",
+ "depth": 2,
+ "summary": "The tantric vehicle, comprising the Nyingma, Kagyu, Sakya and Gelug schools.",
+ "contested": false,
+ "currents": [],
+ "order": 2,
+ "founded": {}
 }

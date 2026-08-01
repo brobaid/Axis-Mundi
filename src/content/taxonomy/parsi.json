@@ -1,16 +1,18 @@
 {
-  "id": "parsi",
-  "name": "Parsi",
-  "parent": "zoroastrianism",
-  "tradition": "zoroastrianism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "zoroastrianism/parsi",
-  "depth": 2,
-  "summary": "The community established in western India following migration from Iran.",
-  "contested": false,
-  "currents": [],
-  "order": 0,
-  "founded": {}
+ "id": "parsi",
+ "name": "Parsi",
+ "parent": "zoroastrianism",
+ "tradition": "zoroastrianism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "boyce-zoroastrians"
+ ],
+ "path": "zoroastrianism/parsi",
+ "depth": 2,
+ "summary": "The community established in western India following migration from Iran.",
+ "contested": false,
+ "currents": [],
+ "order": 0,
+ "founded": {}
 }

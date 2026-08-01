@@ -1,16 +1,18 @@
 {
-  "id": "irani",
-  "name": "Irani",
-  "parent": "zoroastrianism",
-  "tradition": "zoroastrianism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "zoroastrianism/irani",
-  "depth": 2,
-  "summary": "The community remaining in Iran, chiefly in Yazd and Kerman.",
-  "contested": false,
-  "currents": [],
-  "order": 1,
-  "founded": {}
+ "id": "irani",
+ "name": "Irani",
+ "parent": "zoroastrianism",
+ "tradition": "zoroastrianism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "boyce-zoroastrians"
+ ],
+ "path": "zoroastrianism/irani",
+ "depth": 2,
+ "summary": "The community remaining in Iran, chiefly in Yazd and Kerman.",
+ "contested": false,
+ "currents": [],
+ "order": 1,
+ "founded": {}
 }

@@ -1,33 +1,35 @@
 {
-  "id": "sikhism",
-  "name": "Sikhism",
-  "parent": null,
-  "tradition": "sikhism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "sikhism",
-  "depth": 1,
-  "symbol": "khanda",
-  "summary": "A tradition originating in fifteenth-century Punjab with Guru Nanak and centred on the Guru Granth Sahib.",
-  "contested": false,
-  "currents": [],
-  "order": 5,
-  "founded": {
-    "year": 1469,
-    "precision": "year",
-    "display": "1469 CE (birth of Guru Nanak)",
-    "sources": [
-      "mcleod-sikhism-1997"
-    ],
-    "contested": false
-  },
-  "adherents": {
-    "display": "≈26 m (census + estimates)",
-    "estimate": 26000000,
-    "source": "india-census-2011",
-    "year": 2011,
-    "basis": "20.8 m in India per the 2011 census, plus diaspora estimates. Not enumerated by Pew.",
-    "contested": false
-  }
+ "id": "sikhism",
+ "name": "Sikhism",
+ "parent": null,
+ "tradition": "sikhism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "mcleod-sikhism-1997"
+ ],
+ "path": "sikhism",
+ "depth": 1,
+ "symbol": "khanda",
+ "summary": "A tradition originating in fifteenth-century Punjab with Guru Nanak and centred on the Guru Granth Sahib.",
+ "contested": false,
+ "currents": [],
+ "order": 5,
+ "founded": {
+  "year": 1469,
+  "precision": "year",
+  "display": "1469 CE (birth of Guru Nanak)",
+  "sources": [
+   "mcleod-sikhism-1997"
+  ],
+  "contested": false
+ },
+ "adherents": {
+  "display": "≈26 m (census + estimates)",
+  "estimate": 26000000,
+  "source": "india-census-2011",
+  "year": 2011,
+  "basis": "20.8 m in India per the 2011 census, plus diaspora estimates. Not enumerated by Pew.",
+  "contested": false
+ }
 }

@@ -1,16 +1,18 @@
 {
-  "id": "reconstructionist",
-  "name": "Reconstructionist",
-  "parent": "rabbinic",
-  "tradition": "judaism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "judaism/rabbinic/reconstructionist",
-  "depth": 3,
-  "summary": "A movement understanding Judaism as an evolving religious civilisation.",
-  "contested": false,
-  "currents": [],
-  "order": 3,
-  "founded": {}
+ "id": "reconstructionist",
+ "name": "Reconstructionist",
+ "parent": "rabbinic",
+ "tradition": "judaism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "ej2-2007"
+ ],
+ "path": "judaism/rabbinic/reconstructionist",
+ "depth": 3,
+ "summary": "A movement understanding Judaism as an evolving religious civilisation.",
+ "contested": false,
+ "currents": [],
+ "order": 3,
+ "founded": {}
 }

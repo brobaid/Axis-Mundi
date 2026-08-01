@@ -1,59 +1,61 @@
 {
-  "id": "hinduism",
-  "name": "Hinduism",
-  "parent": null,
-  "tradition": "hinduism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "hinduism",
-  "depth": 1,
-  "symbol": "om",
-  "summary": "A tradition of the Indian subcontinent, organised at launch into the Vaishnava, Shaiva, Shakta and Smarta streams.",
-  "contested": false,
-  "currents": [
-    {
-      "id": "bhakti",
-      "name": "Bhakti",
-      "summary": "A devotional current cutting across the sampradayas rather than forming one.",
-      "spans": [],
-      "sources": [],
-      "contested": false
-    },
-    {
-      "id": "vedanta-schools",
-      "name": "Vedanta schools",
-      "summary": "Interpretive schools of the Upanishadic corpus, spanning multiple streams.",
-      "spans": [],
-      "sources": [],
-      "contested": false
-    },
-    {
-      "id": "tantra",
-      "name": "Tantra",
-      "summary": "A ritual and esoteric current present within several streams.",
-      "spans": [],
-      "sources": [],
-      "contested": false
-    }
-  ],
-  "order": 3,
-  "founded": {
-    "year": -1500,
-    "precision": "era",
-    "display": "No founding; coalesces from Vedic tradition",
-    "note": "Vedic roots c. 1500 BCE; no founder and no founding moment",
-    "sources": [
-      "flood-hinduism-1996"
-    ],
-    "contested": false
+ "id": "hinduism",
+ "name": "Hinduism",
+ "parent": null,
+ "tradition": "hinduism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "flood-hinduism-1996"
+ ],
+ "path": "hinduism",
+ "depth": 1,
+ "symbol": "om",
+ "summary": "A tradition of the Indian subcontinent, organised at launch into the Vaishnava, Shaiva, Shakta and Smarta streams.",
+ "contested": false,
+ "currents": [
+  {
+   "id": "bhakti",
+   "name": "Bhakti",
+   "summary": "A devotional current cutting across the sampradayas rather than forming one.",
+   "spans": [],
+   "sources": [],
+   "contested": false
   },
-  "adherents": {
-    "display": "1.2 bn (Pew, 2020)",
-    "estimate": 1200000000,
-    "source": "pew-grl-2025",
-    "year": 2020,
-    "basis": "Enumerated by Pew. 14.9% of world population.",
-    "contested": false
+  {
+   "id": "vedanta-schools",
+   "name": "Vedanta schools",
+   "summary": "Interpretive schools of the Upanishadic corpus, spanning multiple streams.",
+   "spans": [],
+   "sources": [],
+   "contested": false
+  },
+  {
+   "id": "tantra",
+   "name": "Tantra",
+   "summary": "A ritual and esoteric current present within several streams.",
+   "spans": [],
+   "sources": [],
+   "contested": false
   }
+ ],
+ "order": 3,
+ "founded": {
+  "year": -1500,
+  "precision": "era",
+  "display": "No founding; coalesces from Vedic tradition",
+  "note": "Vedic roots c. 1500 BCE; no founder and no founding moment",
+  "sources": [
+   "flood-hinduism-1996"
+  ],
+  "contested": false
+ },
+ "adherents": {
+  "display": "1.2 bn (Pew, 2020)",
+  "estimate": 1200000000,
+  "source": "pew-grl-2025",
+  "year": 2020,
+  "basis": "Enumerated by Pew. 14.9% of world population.",
+  "contested": false
+ }
 }

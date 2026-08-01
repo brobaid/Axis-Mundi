@@ -1,34 +1,37 @@
 {
-  "id": "buddhism",
-  "name": "Buddhism",
-  "parent": null,
-  "tradition": "buddhism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "buddhism",
-  "depth": 1,
-  "symbol": "dharmachakra",
-  "summary": "A tradition originating with Siddhartha Gautama, organised at launch into the Theravada, Mahayana and Vajrayana vehicles.",
-  "contested": false,
-  "currents": [],
-  "order": 4,
-  "founded": {
-    "year": -480,
-    "precision": "century",
-    "display": "5th century BCE",
-    "note": "Anchored to the Buddha's teaching career; scholarly dating of his death centers on the 480s BCE",
-    "sources": [
-      "princeton-dict-buddhism-2014"
-    ],
-    "contested": false
-  },
-  "adherents": {
-    "display": "324 m (Pew, 2020)",
-    "estimate": 324000000,
-    "source": "pew-grl-2025",
-    "year": 2020,
-    "basis": "Enumerated by Pew. 4.1% of world population; the only major group that shrank between 2010 and 2020.",
-    "contested": false
-  }
+ "id": "buddhism",
+ "name": "Buddhism",
+ "parent": null,
+ "tradition": "buddhism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "path": "buddhism",
+ "depth": 1,
+ "symbol": "dharmachakra",
+ "summary": "A tradition originating with Siddhartha Gautama, organised at launch into the Theravada, Mahayana and Vajrayana vehicles.",
+ "contested": false,
+ "currents": [],
+ "order": 4,
+ "founded": {
+  "year": -480,
+  "precision": "century",
+  "display": "5th century BCE",
+  "note": "Anchored to the Buddha's teaching career; scholarly dating of his death centers on the 480s BCE",
+  "sources": [
+   "princeton-dict-buddhism-2014"
+  ],
+  "contested": false
+ },
+ "adherents": {
+  "display": "324 m (Pew, 2020)",
+  "estimate": 324000000,
+  "source": "pew-grl-2025",
+  "year": 2020,
+  "basis": "Enumerated by Pew. 4.1% of world population; the only major group that shrank between 2010 and 2020.",
+  "contested": false
+ }
 }

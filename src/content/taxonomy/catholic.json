@@ -1,16 +1,18 @@
 {
-  "id": "catholic",
-  "name": "Catholic",
-  "parent": "christianity",
-  "tradition": "christianity",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "christianity/catholic",
-  "depth": 2,
-  "summary": "The family in communion with the Bishop of Rome, comprising the Latin Church and the Eastern Catholic churches.",
-  "contested": false,
-  "currents": [],
-  "order": 0,
-  "founded": {}
+ "id": "catholic",
+ "name": "Catholic",
+ "parent": "christianity",
+ "tradition": "christianity",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "path": "christianity/catholic",
+ "depth": 2,
+ "summary": "The family in communion with the Bishop of Rome, comprising the Latin Church and the Eastern Catholic churches.",
+ "contested": false,
+ "currents": [],
+ "order": 0,
+ "founded": {}
 }

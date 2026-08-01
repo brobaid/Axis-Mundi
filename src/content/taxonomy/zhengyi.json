@@ -1,16 +1,19 @@
 {
-  "id": "zhengyi",
-  "name": "Zhengyi",
-  "parent": "taoism",
-  "tradition": "chinese",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "chinese/taoism/zhengyi",
-  "depth": 3,
-  "summary": "A Taoist school of hereditary ritual masters.",
-  "contested": false,
-  "currents": [],
-  "order": 1,
-  "founded": {}
+ "id": "zhengyi",
+ "name": "Zhengyi",
+ "parent": "taoism",
+ "tradition": "chinese",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "yao-confucianism-2000",
+  "kohn-daoism-2000"
+ ],
+ "path": "chinese/taoism/zhengyi",
+ "depth": 3,
+ "summary": "A Taoist school of hereditary ritual masters.",
+ "contested": false,
+ "currents": [],
+ "order": 1,
+ "founded": {}
 }

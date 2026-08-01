@@ -1,16 +1,18 @@
 {
-  "id": "smartism",
-  "name": "Smartism",
-  "parent": "hinduism",
-  "tradition": "hinduism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "hinduism/smartism",
-  "depth": 2,
-  "summary": "The stream following the smriti literature and the pancayatana form of worship.",
-  "contested": false,
-  "currents": [],
-  "order": 3,
-  "founded": {}
+ "id": "smartism",
+ "name": "Smartism",
+ "parent": "hinduism",
+ "tradition": "hinduism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "flood-hinduism-1996"
+ ],
+ "path": "hinduism/smartism",
+ "depth": 2,
+ "summary": "The stream following the smriti literature and the pancayatana form of worship.",
+ "contested": false,
+ "currents": [],
+ "order": 3,
+ "founded": {}
 }

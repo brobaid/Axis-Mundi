@@ -1,16 +1,19 @@
 {
-  "id": "pure-land",
-  "name": "Pure Land",
-  "parent": "mahayana",
-  "tradition": "buddhism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "buddhism/mahayana/pure-land",
-  "depth": 3,
-  "summary": "Schools centred on devotion to Amitabha and rebirth in the Pure Land.",
-  "contested": false,
-  "currents": [],
-  "order": 1,
-  "founded": {}
+ "id": "pure-land",
+ "name": "Pure Land",
+ "parent": "mahayana",
+ "tradition": "buddhism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "princeton-dict-buddhism-2014",
+  "harvey-buddhism-2013"
+ ],
+ "path": "buddhism/mahayana/pure-land",
+ "depth": 3,
+ "summary": "Schools centred on devotion to Amitabha and rebirth in the Pure Land.",
+ "contested": false,
+ "currents": [],
+ "order": 1,
+ "founded": {}
 }

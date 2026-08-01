@@ -1,16 +1,18 @@
 {
-  "id": "latin",
-  "name": "Latin Church",
-  "parent": "catholic",
-  "tradition": "christianity",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "christianity/catholic/latin",
-  "depth": 3,
-  "summary": "The largest Catholic particular church, following the Latin liturgical rites.",
-  "contested": false,
-  "currents": [],
-  "order": 0,
-  "founded": {}
+ "id": "latin",
+ "name": "Latin Church",
+ "parent": "catholic",
+ "tradition": "christianity",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "macculloch-christianity-2009"
+ ],
+ "path": "christianity/catholic/latin",
+ "depth": 3,
+ "summary": "The largest Catholic particular church, following the Latin liturgical rites.",
+ "contested": false,
+ "currents": [],
+ "order": 0,
+ "founded": {}
 }

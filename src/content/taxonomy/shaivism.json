@@ -1,16 +1,18 @@
 {
-  "id": "shaivism",
-  "name": "Shaivism",
-  "parent": "hinduism",
-  "tradition": "hinduism",
-  "status": "living",
-  "sourcing": "todo",
-  "sources": [],
-  "path": "hinduism/shaivism",
-  "depth": 2,
-  "summary": "The stream centred on Shiva.",
-  "contested": false,
-  "currents": [],
-  "order": 1,
-  "founded": {}
+ "id": "shaivism",
+ "name": "Shaivism",
+ "parent": "hinduism",
+ "tradition": "hinduism",
+ "status": "living",
+ "sourcing": "sourced",
+ "sources": [
+  "flood-hinduism-1996"
+ ],
+ "path": "hinduism/shaivism",
+ "depth": 2,
+ "summary": "The stream centred on Shiva.",
+ "contested": false,
+ "currents": [],
+ "order": 1,
+ "founded": {}
 }
