@@ -2,7 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getPublishable } from '../../lib/content';
 import { TRADITIONS } from '../../lib/traditions';
-import { divisionsOf, hasEnglish, originalLang, type WorkData } from '../../lib/reader-model';
+import { hasEnglish, originalLang, type WorkData } from '../../lib/reader-model';
+import { fontFor } from '../../lib/scripts';
 
 /**
  * The Reading Room — Phase 5.
@@ -26,8 +27,8 @@ const works = entries
 const nameOf = new Map<string, string>(TRADITIONS.map((t) => [t.id, t.name]));
 const shelf = works.map((w) => ({
   work: w,
-  divisions: divisionsOf(w).length,
-  verses: w.verses.length,
+  divisions: w.divisions.length,
+  verses: w.total_verses,
   tradition: nameOf.get(w.tradition) ?? w.tradition,
 }));
 ---
@@ -61,7 +62,12 @@ const shelf = works.map((w) => ({
                 <span class="rd-shelf__title">
                   {s.work.title}
                   {s.work.title_original !== undefined && (
-                    <span class="rd-shelf__original" lang={originalLang(s.work)}>
+                    <span
+                      class="rd-shelf__original"
+                      lang={originalLang(s.work)}
+                      dir={s.work.direction}
+                      style={`font-family: ${fontFor(s.work.script)}`}
+                    >
                       {s.work.title_original}
                     </span>
                   )}

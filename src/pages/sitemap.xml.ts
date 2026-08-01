@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getPublishable } from '../lib/content';
-import { divisionsOf, type WorkData } from '../lib/reader-model';
+import type { WorkData } from '../lib/reader-model';
 
 /**
  * The sitemap, built from the collections rather than from a list.
@@ -48,7 +48,7 @@ export const GET: APIRoute = async ({ site }) => {
     const work = entry.data as unknown as WorkData;
     return [
       [`/read/${work.id}`, '0.6'] as const,
-      ...divisionsOf(work).map((d) => [`/read/${work.id}/${d.n}`, '0.5'] as const),
+      ...work.divisions.map((d) => [`/read/${work.id}/${d.slug}`, '0.5'] as const),
     ];
   });
 

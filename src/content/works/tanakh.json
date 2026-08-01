@@ -1,0 +1,391 @@
+{
+ "id": "tanakh",
+ "tradition": "judaism",
+ "title": "Tanakh",
+ "division_label": "book",
+ "division_label_plural": "books",
+ "script": "hebrew",
+ "direction": "rtl",
+ "editions": {
+  "he": "wlc-nikkud",
+  "en": "jps-1917"
+ },
+ "note": "In this English text as delivered the divine name is written HaShem, and God and Lord appear as G-d and L-rd.",
+ "sections": [
+  {
+   "id": "torah",
+   "name": "Torah",
+   "from": 1,
+   "to": 5
+  },
+  {
+   "id": "neviim",
+   "name": "Nevi'im",
+   "from": 6,
+   "to": 26
+  },
+  {
+   "id": "ketuvim",
+   "name": "Ketuvim",
+   "from": 27,
+   "to": 39
+  }
+ ],
+ "divisions": [
+  {
+   "n": 1,
+   "slug": "genesis",
+   "name": "Genesis",
+   "verses": 1533,
+   "chapters": 50,
+   "section": "torah",
+   "english_gaps": 0
+  },
+  {
+   "n": 2,
+   "slug": "exodus",
+   "name": "Exodus",
+   "verses": 1213,
+   "chapters": 40,
+   "section": "torah",
+   "english_gaps": 3
+  },
+  {
+   "n": 3,
+   "slug": "leviticus",
+   "name": "Leviticus",
+   "verses": 859,
+   "chapters": 27,
+   "section": "torah",
+   "english_gaps": 1
+  },
+  {
+   "n": 4,
+   "slug": "numbers",
+   "name": "Numbers",
+   "verses": 1289,
+   "chapters": 36,
+   "section": "torah",
+   "english_gaps": 0
+  },
+  {
+   "n": 5,
+   "slug": "deuteronomy",
+   "name": "Deuteronomy",
+   "verses": 959,
+   "chapters": 34,
+   "section": "torah",
+   "english_gaps": 3
+  },
+  {
+   "n": 6,
+   "slug": "joshua",
+   "name": "Joshua",
+   "verses": 658,
+   "chapters": 24,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 7,
+   "slug": "judges",
+   "name": "Judges",
+   "verses": 618,
+   "chapters": 21,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 8,
+   "slug": "1-samuel",
+   "name": "I Samuel",
+   "verses": 811,
+   "chapters": 31,
+   "section": "neviim",
+   "english_gaps": 1
+  },
+  {
+   "n": 9,
+   "slug": "2-samuel",
+   "name": "II Samuel",
+   "verses": 695,
+   "chapters": 24,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 10,
+   "slug": "1-kings",
+   "name": "I Kings",
+   "verses": 817,
+   "chapters": 22,
+   "section": "neviim",
+   "english_gaps": 1
+  },
+  {
+   "n": 11,
+   "slug": "2-kings",
+   "name": "II Kings",
+   "verses": 719,
+   "chapters": 25,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 12,
+   "slug": "isaiah",
+   "name": "Isaiah",
+   "verses": 1291,
+   "chapters": 66,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 13,
+   "slug": "jeremiah",
+   "name": "Jeremiah",
+   "verses": 1364,
+   "chapters": 52,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 14,
+   "slug": "ezekiel",
+   "name": "Ezekiel",
+   "verses": 1273,
+   "chapters": 48,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 15,
+   "slug": "hosea",
+   "name": "Hosea",
+   "verses": 197,
+   "chapters": 14,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 16,
+   "slug": "joel",
+   "name": "Joel",
+   "verses": 73,
+   "chapters": 4,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 17,
+   "slug": "amos",
+   "name": "Amos",
+   "verses": 146,
+   "chapters": 9,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 18,
+   "slug": "obadiah",
+   "name": "Obadiah",
+   "verses": 21,
+   "chapters": 1,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 19,
+   "slug": "jonah",
+   "name": "Jonah",
+   "verses": 48,
+   "chapters": 4,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 20,
+   "slug": "micah",
+   "name": "Micah",
+   "verses": 105,
+   "chapters": 7,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 21,
+   "slug": "nahum",
+   "name": "Nahum",
+   "verses": 47,
+   "chapters": 3,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 22,
+   "slug": "habakkuk",
+   "name": "Habakkuk",
+   "verses": 56,
+   "chapters": 3,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 23,
+   "slug": "zephaniah",
+   "name": "Zephaniah",
+   "verses": 53,
+   "chapters": 3,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 24,
+   "slug": "haggai",
+   "name": "Haggai",
+   "verses": 38,
+   "chapters": 2,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 25,
+   "slug": "zechariah",
+   "name": "Zechariah",
+   "verses": 211,
+   "chapters": 14,
+   "section": "neviim",
+   "english_gaps": 0
+  },
+  {
+   "n": 26,
+   "slug": "malachi",
+   "name": "Malachi",
+   "verses": 55,
+   "chapters": 3,
+   "section": "neviim",
+   "english_gaps": 6
+  },
+  {
+   "n": 27,
+   "slug": "psalms",
+   "name": "Psalms",
+   "verses": 2527,
+   "chapters": 150,
+   "section": "ketuvim",
+   "english_gaps": 3
+  },
+  {
+   "n": 28,
+   "slug": "proverbs",
+   "name": "Proverbs",
+   "verses": 915,
+   "chapters": 31,
+   "section": "ketuvim",
+   "english_gaps": 0
+  },
+  {
+   "n": 29,
+   "slug": "job",
+   "name": "Job",
+   "verses": 1070,
+   "chapters": 42,
+   "section": "ketuvim",
+   "english_gaps": 0
+  },
+  {
+   "n": 30,
+   "slug": "song-of-solomon",
+   "name": "Song of Solomon",
+   "verses": 117,
+   "chapters": 8,
+   "section": "ketuvim",
+   "english_gaps": 0
+  },
+  {
+   "n": 31,
+   "slug": "ruth",
+   "name": "Ruth",
+   "verses": 85,
+   "chapters": 4,
+   "section": "ketuvim",
+   "english_gaps": 0
+  },
+  {
+   "n": 32,
+   "slug": "lamentations",
+   "name": "Lamentations",
+   "verses": 154,
+   "chapters": 5,
+   "section": "ketuvim",
+   "english_gaps": 0
+  },
+  {
+   "n": 33,
+   "slug": "ecclesiastes",
+   "name": "Ecclesiastes",
+   "verses": 222,
+   "chapters": 12,
+   "section": "ketuvim",
+   "english_gaps": 0
+  },
+  {
+   "n": 34,
+   "slug": "esther",
+   "name": "Esther",
+   "verses": 167,
+   "chapters": 10,
+   "section": "ketuvim",
+   "english_gaps": 0
+  },
+  {
+   "n": 35,
+   "slug": "daniel",
+   "name": "Daniel",
+   "verses": 357,
+   "chapters": 12,
+   "section": "ketuvim",
+   "english_gaps": 0
+  },
+  {
+   "n": 36,
+   "slug": "ezra",
+   "name": "Ezra",
+   "verses": 280,
+   "chapters": 10,
+   "section": "ketuvim",
+   "english_gaps": 0
+  },
+  {
+   "n": 37,
+   "slug": "nehemiah",
+   "name": "Nehemiah",
+   "verses": 405,
+   "chapters": 13,
+   "section": "ketuvim",
+   "english_gaps": 0
+  },
+  {
+   "n": 38,
+   "slug": "1-chronicles",
+   "name": "I Chronicles",
+   "verses": 943,
+   "chapters": 29,
+   "section": "ketuvim",
+   "english_gaps": 1
+  },
+  {
+   "n": 39,
+   "slug": "2-chronicles",
+   "name": "II Chronicles",
+   "verses": 822,
+   "chapters": 36,
+   "section": "ketuvim",
+   "english_gaps": 0
+  }
+ ],
+ "total_verses": 23213,
+ "total_chapters": 929,
+ "english_gaps": 19,
+ "sourcing": "sourced"
+}

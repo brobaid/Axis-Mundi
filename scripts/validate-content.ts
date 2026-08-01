@@ -25,7 +25,7 @@ import {
   figureSchema,
   siteSchema,
 } from '../src/schemas/deep-dive.js';
-import { workSchema } from '../src/schemas/work.js';
+import { divisionSchema, workSchema } from '../src/schemas/work.js';
 import { snapshotSchema } from '../src/schemas/snapshot.js';
 import { textSchema } from '../src/schemas/text.js';
 import { glossaryRefs } from '../src/lib/prose.js';
@@ -81,6 +81,7 @@ const COLLECTIONS = {
   figures: { dir: 'figures', schema: figureSchema },
   snapshots: { dir: 'snapshots', schema: snapshotSchema },
   works: { dir: 'works', schema: workSchema },
+  divisions: { dir: 'divisions', schema: divisionSchema },
 } satisfies Record<string, Collection<z.ZodTypeAny>>;
 
 type CollectionName = keyof typeof COLLECTIONS;
@@ -100,6 +101,7 @@ const parsed: Record<CollectionName, Map<string, { file: string; data: any }>> =
   figures: new Map(),
   snapshots: new Map(),
   works: new Map(),
+  divisions: new Map(),
 };
 
 let fileCount = 0;

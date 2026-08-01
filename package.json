@@ -20,7 +20,8 @@
     "validate": "pnpm validate:content && pnpm validate:tokens && pnpm validate:timeline",
     "lint": "eslint . && astro check",
     "check": "pnpm validate && pnpm lint && pnpm build && pnpm validate:links",
-    "validate:links": "tsx scripts/check-links.ts"
+    "validate:links": "tsx scripts/check-links.ts",
+    "ingest:corpus": "tsx scripts/ingest-corpus.ts"
   },
   "dependencies": {
     "astro": "^5.14.1",

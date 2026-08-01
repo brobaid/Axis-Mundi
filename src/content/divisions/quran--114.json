@@ -1,0 +1,39 @@
+{
+ "id": "quran--114",
+ "work": "quran",
+ "n": 114,
+ "slug": "114",
+ "verses": [
+  {
+   "v": 1,
+   "ar": "قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+   "en": "Say: I seek refuge in the Lord of mankind"
+  },
+  {
+   "v": 2,
+   "ar": "مَلِكِ ٱلنَّاسِ",
+   "en": "The King of mankind"
+  },
+  {
+   "v": 3,
+   "ar": "إِلَٰهِ ٱلنَّاسِ",
+   "en": "The god of mankind"
+  },
+  {
+   "v": 4,
+   "ar": "مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ",
+   "en": "From the evil of the sneaking whisperer"
+  },
+  {
+   "v": 5,
+   "ar": "ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ",
+   "en": "Who whispereth in the hearts of mankind"
+  },
+  {
+   "v": 6,
+   "ar": "مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ",
+   "en": "Of the jinn and of mankind"
+  }
+ ],
+ "sourcing": "sourced"
+}

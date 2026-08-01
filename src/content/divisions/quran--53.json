@@ -1,0 +1,319 @@
+{
+ "id": "quran--53",
+ "work": "quran",
+ "n": 53,
+ "slug": "53",
+ "verses": [
+  {
+   "v": 1,
+   "ar": "وَٱلنَّجۡمِ إِذَا هَوَىٰ",
+   "en": "By the Star when it setteth"
+  },
+  {
+   "v": 2,
+   "ar": "مَا ضَلَّ صَاحِبُكُمۡ وَمَا غَوَىٰ",
+   "en": "Your comrade erreth not, nor is deceived"
+  },
+  {
+   "v": 3,
+   "ar": "وَمَا يَنطِقُ عَنِ ٱلۡهَوَىٰٓ",
+   "en": "Nor doth he speak of (his own) desire"
+  },
+  {
+   "v": 4,
+   "ar": "إِنۡ هُوَ إِلَّا وَحۡيࣱ يُوحَىٰ",
+   "en": "It is naught save an inspiration that is inspired"
+  },
+  {
+   "v": 5,
+   "ar": "عَلَّمَهُۥ شَدِيدُ ٱلۡقُوَىٰ",
+   "en": "Which one of mighty powers hath taught him"
+  },
+  {
+   "v": 6,
+   "ar": "ذُو مِرَّةࣲ فَٱسۡتَوَىٰ",
+   "en": "One vigorous; and he grew clear to view"
+  },
+  {
+   "v": 7,
+   "ar": "وَهُوَ بِٱلۡأُفُقِ ٱلۡأَعۡلَىٰ",
+   "en": "When he was on the uppermost horizon"
+  },
+  {
+   "v": 8,
+   "ar": "ثُمَّ دَنَا فَتَدَلَّىٰ",
+   "en": "Then he drew nigh and came down"
+  },
+  {
+   "v": 9,
+   "ar": "فَكَانَ قَابَ قَوۡسَيۡنِ أَوۡ أَدۡنَىٰ",
+   "en": "Till he was (distant) two bows' length or even nearer"
+  },
+  {
+   "v": 10,
+   "ar": "فَأَوۡحَىٰٓ إِلَىٰ عَبۡدِهِۦ مَآ أَوۡحَىٰ",
+   "en": "And He revealed unto His slave that which He revealed"
+  },
+  {
+   "v": 11,
+   "ar": "مَا كَذَبَ ٱلۡفُؤَادُ مَا رَأَىٰٓ",
+   "en": "The heart lied not (in seeing) what it saw"
+  },
+  {
+   "v": 12,
+   "ar": "أَفَتُمَٰرُونَهُۥ عَلَىٰ مَا يَرَىٰ",
+   "en": "Will ye then dispute with him concerning what he seeth"
+  },
+  {
+   "v": 13,
+   "ar": "وَلَقَدۡ رَءَاهُ نَزۡلَةً أُخۡرَىٰ",
+   "en": "And verily he saw him yet another time"
+  },
+  {
+   "v": 14,
+   "ar": "عِندَ سِدۡرَةِ ٱلۡمُنتَهَىٰ",
+   "en": "By the lote-tree of the utmost boundary"
+  },
+  {
+   "v": 15,
+   "ar": "عِندَهَا جَنَّةُ ٱلۡمَأۡوَىٰٓ",
+   "en": "Nigh unto which is the Garden of Abode"
+  },
+  {
+   "v": 16,
+   "ar": "إِذۡ يَغۡشَى ٱلسِّدۡرَةَ مَا يَغۡشَىٰ",
+   "en": "When that which shroudeth did enshroud the lote-tree"
+  },
+  {
+   "v": 17,
+   "ar": "مَا زَاغَ ٱلۡبَصَرُ وَمَا طَغَىٰ",
+   "en": "The eye turned not aside nor yet was overbold"
+  },
+  {
+   "v": 18,
+   "ar": "لَقَدۡ رَأَىٰ مِنۡ ءَايَٰتِ رَبِّهِ ٱلۡكُبۡرَىٰٓ",
+   "en": "Verily he saw one of the greater revelations of his Lord"
+  },
+  {
+   "v": 19,
+   "ar": "أَفَرَءَيۡتُمُ ٱللَّٰتَ وَٱلۡعُزَّىٰ",
+   "en": "Have ye thought upon Al-Lat and Al-'Uzza"
+  },
+  {
+   "v": 20,
+   "ar": "وَمَنَوٰةَ ٱلثَّالِثَةَ ٱلۡأُخۡرَىٰٓ",
+   "en": "And Manat, the third, the other"
+  },
+  {
+   "v": 21,
+   "ar": "أَلَكُمُ ٱلذَّكَرُ وَلَهُ ٱلۡأُنثَىٰ",
+   "en": "Are yours the males and His the females"
+  },
+  {
+   "v": 22,
+   "ar": "تِلۡكَ إِذࣰ ا قِسۡمَةࣱ ضِيزَىٰٓ",
+   "en": "That indeed were an unfair division"
+  },
+  {
+   "v": 23,
+   "ar": "إِنۡ هِيَ إِلَّآ أَسۡمَآءࣱ سَمَّيۡتُمُوهَآ أَنتُمۡ وَءَابَآؤُكُم مَّآ أَنزَلَ ٱللَّهُ بِهَا مِن سُلۡطَٰنٍۚ إِن يَتَّبِعُونَ إِلَّا ٱلظَّنَّ وَمَا تَهۡوَى ٱلۡأَنفُسُۖ وَلَقَدۡ جَآءَهُم مِّن رَّبِّهِمُ ٱلۡهُدَىٰٓ",
+   "en": "They are but names which ye have named, ye and your fathers, for which Allah hath revealed no warrant. They follow but a guess and that which (they) themselves desire. And now the guidance from their Lord hath come unto them"
+  },
+  {
+   "v": 24,
+   "ar": "أَمۡ لِلۡإِنسَٰنِ مَا تَمَنَّىٰ",
+   "en": "Or shall man have what he coveteth"
+  },
+  {
+   "v": 25,
+   "ar": "فَلِلَّهِ ٱلۡأٓخِرَةُ وَٱلۡأُولَىٰ",
+   "en": "But unto Allah belongeth the after (life), and the former"
+  },
+  {
+   "v": 26,
+   "ar": "۞وَكَم مِّن مَّلَكࣲ فِي ٱلسَّمَٰوَٰتِ لَا تُغۡنِي شَفَٰعَتُهُمۡ شَيۡـًٔا إِلَّا مِنۢ بَعۡدِ أَن يَأۡذَنَ ٱللَّهُ لِمَن يَشَآءُ وَيَرۡضَىٰٓ",
+   "en": "And how many angels are in the heavens whose intercession availeth naught save after Allah giveth leave to whom He chooseth and accepteth"
+  },
+  {
+   "v": 27,
+   "ar": "إِنَّ ٱلَّذِينَ لَا يُؤۡمِنُونَ بِٱلۡأٓخِرَةِ لَيُسَمُّونَ ٱلۡمَلَٰٓئِكَةَ تَسۡمِيَةَ ٱلۡأُنثَىٰ",
+   "en": "Lo! it is those who disbelieve in the Hereafter who name the angels with the names of females"
+  },
+  {
+   "v": 28,
+   "ar": "وَمَا لَهُم بِهِۦ مِنۡ عِلۡمٍۖ إِن يَتَّبِعُونَ إِلَّا ٱلظَّنَّۖ وَإِنَّ ٱلظَّنَّ لَا يُغۡنِي مِنَ ٱلۡحَقِّ شَيۡـࣰٔ ا",
+   "en": "And they have no knowledge thereof. They follow but a guess, and lo! a guess can never take the place of the truth"
+  },
+  {
+   "v": 29,
+   "ar": "فَأَعۡرِضۡ عَن مَّن تَوَلَّىٰ عَن ذِكۡرِنَا وَلَمۡ يُرِدۡ إِلَّا ٱلۡحَيَوٰةَ ٱلدُّنۡيَا",
+   "en": "Then withdraw (O Muhammad) from him who fleeth from Our remembrance and desireth but the life of the world"
+  },
+  {
+   "v": 30,
+   "ar": "ذَٰلِكَ مَبۡلَغُهُم مِّنَ ٱلۡعِلۡمِۚ إِنَّ رَبَّكَ هُوَ أَعۡلَمُ بِمَن ضَلَّ عَن سَبِيلِهِۦ وَهُوَ أَعۡلَمُ بِمَنِ ٱهۡتَدَىٰ",
+   "en": "Such is their sum of knowledge. Lo! thy Lord is Best Aware of him who strayeth, and He is Best Aware of him whom goeth right"
+  },
+  {
+   "v": 31,
+   "ar": "وَلِلَّهِ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِ لِيَجۡزِيَ ٱلَّذِينَ أَسَٰٓـُٔواْ بِمَا عَمِلُواْ وَيَجۡزِيَ ٱلَّذِينَ أَحۡسَنُواْ بِٱلۡحُسۡنَى",
+   "en": "And unto Allah belongeth whatsoever is in the heavens and whatsoever is in the earth, that He may reward those who do evil with that which they have done, and reward those who do good with goodness"
+  },
+  {
+   "v": 32,
+   "ar": "ٱلَّذِينَ يَجۡتَنِبُونَ كَبَٰٓئِرَ ٱلۡإِثۡمِ وَٱلۡفَوَٰحِشَ إِلَّا ٱللَّمَمَۚ إِنَّ رَبَّكَ وَٰسِعُ ٱلۡمَغۡفِرَةِۚ هُوَ أَعۡلَمُ بِكُمۡ إِذۡ أَنشَأَكُم مِّنَ ٱلۡأَرۡضِ وَإِذۡ أَنتُمۡ أَجِنَّةࣱ فِي بُطُونِ أُمَّهَٰتِكُمۡۖ فَلَا تُزَكُّوٓاْ أَنفُسَكُمۡۖ هُوَ أَعۡلَمُ بِمَنِ ٱتَّقَىٰٓ",
+   "en": "Those who avoid enormities of sin and abominations, save the unwilled offences - (for them) lo! thy Lord is of vast mercy. He is Best Aware of you (from the time) when He created you from the earth, and when ye were hidden in the bellies of your mothers. Therefor ascribe not purity unto yourselves. He is Best Aware of him who wardeth off (evil)"
+  },
+  {
+   "v": 33,
+   "ar": "أَفَرَءَيۡتَ ٱلَّذِي تَوَلَّىٰ",
+   "en": "Didst thou (O Muhammad) observe him who turned away"
+  },
+  {
+   "v": 34,
+   "ar": "وَأَعۡطَىٰ قَلِيلࣰ ا وَأَكۡدَىٰٓ",
+   "en": "And gave a little, then was grudging"
+  },
+  {
+   "v": 35,
+   "ar": "أَعِندَهُۥ عِلۡمُ ٱلۡغَيۡبِ فَهُوَ يَرَىٰٓ",
+   "en": "Hath he knowledge of the Unseen so that he seeth"
+  },
+  {
+   "v": 36,
+   "ar": "أَمۡ لَمۡ يُنَبَّأۡ بِمَا فِي صُحُفِ مُوسَىٰ",
+   "en": "Or hath he not had news of what is in the books of Moses"
+  },
+  {
+   "v": 37,
+   "ar": "وَإِبۡرَٰهِيمَ ٱلَّذِي وَفَّىٰٓ",
+   "en": "And Abraham who paid his debt"
+  },
+  {
+   "v": 38,
+   "ar": "أَلَّا تَزِرُ وَازِرَةࣱ وِزۡرَ أُخۡرَىٰ",
+   "en": "That no laden one shall bear another's load"
+  },
+  {
+   "v": 39,
+   "ar": "وَأَن لَّيۡسَ لِلۡإِنسَٰنِ إِلَّا مَا سَعَىٰ",
+   "en": "And that man hath only that for which he maketh effort"
+  },
+  {
+   "v": 40,
+   "ar": "وَأَنَّ سَعۡيَهُۥ سَوۡفَ يُرَىٰ",
+   "en": "And that his effort will be seen"
+  },
+  {
+   "v": 41,
+   "ar": "ثُمَّ يُجۡزَىٰهُ ٱلۡجَزَآءَ ٱلۡأَوۡفَىٰ",
+   "en": "And afterward he will be repaid for it with fullest payment"
+  },
+  {
+   "v": 42,
+   "ar": "وَأَنَّ إِلَىٰ رَبِّكَ ٱلۡمُنتَهَىٰ",
+   "en": "And that thy Lord, He is the goal"
+  },
+  {
+   "v": 43,
+   "ar": "وَأَنَّهُۥ هُوَ أَضۡحَكَ وَأَبۡكَىٰ",
+   "en": "And that He it is who maketh laugh, and maketh weep"
+  },
+  {
+   "v": 44,
+   "ar": "وَأَنَّهُۥ هُوَ أَمَاتَ وَأَحۡيَا",
+   "en": "And that He it is Who giveth death and giveth life"
+  },
+  {
+   "v": 45,
+   "ar": "وَأَنَّهُۥ خَلَقَ ٱلزَّوۡجَيۡنِ ٱلذَّكَرَ وَٱلۡأُنثَىٰ",
+   "en": "And that He createth the two spouses, the male and the female"
+  },
+  {
+   "v": 46,
+   "ar": "مِن نُّطۡفَةٍ إِذَا تُمۡنَىٰ",
+   "en": "From a drop (of seed) when it is poured forth"
+  },
+  {
+   "v": 47,
+   "ar": "وَأَنَّ عَلَيۡهِ ٱلنَّشۡأَةَ ٱلۡأُخۡرَىٰ",
+   "en": "And that He hath ordained the second bringing forth"
+  },
+  {
+   "v": 48,
+   "ar": "وَأَنَّهُۥ هُوَ أَغۡنَىٰ وَأَقۡنَىٰ",
+   "en": "And that He it is Who enricheth and contenteth"
+  },
+  {
+   "v": 49,
+   "ar": "وَأَنَّهُۥ هُوَ رَبُّ ٱلشِّعۡرَىٰ",
+   "en": "And that He it is Who is the Lord of Sirius"
+  },
+  {
+   "v": 50,
+   "ar": "وَأَنَّهُۥٓ أَهۡلَكَ عَادًا ٱلۡأُولَىٰ",
+   "en": "And that He destroyed the former (tribe of) A'ad"
+  },
+  {
+   "v": 51,
+   "ar": "وَثَمُودَاْ فَمَآ أَبۡقَىٰ",
+   "en": "And (the tribe of) Thamud He spared not"
+  },
+  {
+   "v": 52,
+   "ar": "وَقَوۡمَ نُوحࣲ مِّن قَبۡلُۖ إِنَّهُمۡ كَانُواْ هُمۡ أَظۡلَمَ وَأَطۡغَىٰ",
+   "en": "And the folk of Noah aforetime, Lo! they were more unjust and more rebellious"
+  },
+  {
+   "v": 53,
+   "ar": "وَٱلۡمُؤۡتَفِكَةَ أَهۡوَىٰ",
+   "en": "And Al-Mu'tafikah He destroyed"
+  },
+  {
+   "v": 54,
+   "ar": "فَغَشَّىٰهَا مَا غَشَّىٰ",
+   "en": "So that there covered them that which did cover"
+  },
+  {
+   "v": 55,
+   "ar": "فَبِأَيِّ ءَالَآءِ رَبِّكَ تَتَمَارَىٰ",
+   "en": "Concerning which then, of the bounties of thy Lord, canst thou dispute"
+  },
+  {
+   "v": 56,
+   "ar": "هَٰذَا نَذِيرࣱ مِّنَ ٱلنُّذُرِ ٱلۡأُولَىٰٓ",
+   "en": "This is a warner of the warners of old"
+  },
+  {
+   "v": 57,
+   "ar": "أَزِفَتِ ٱلۡأٓزِفَةُ",
+   "en": "The threatened Hour is nigh"
+  },
+  {
+   "v": 58,
+   "ar": "لَيۡسَ لَهَا مِن دُونِ ٱللَّهِ كَاشِفَةٌ",
+   "en": "None beside Allah can disclose it"
+  },
+  {
+   "v": 59,
+   "ar": "أَفَمِنۡ هَٰذَا ٱلۡحَدِيثِ تَعۡجَبُونَ",
+   "en": "Marvel ye then at this statement"
+  },
+  {
+   "v": 60,
+   "ar": "وَتَضۡحَكُونَ وَلَا تَبۡكُونَ",
+   "en": "And laugh and not weep"
+  },
+  {
+   "v": 61,
+   "ar": "وَأَنتُمۡ سَٰمِدُونَ",
+   "en": "While ye amuse yourselves"
+  },
+  {
+   "v": 62,
+   "ar": "فَٱسۡجُدُواْۤ لِلَّهِۤ وَٱعۡبُدُواْ۩",
+   "en": "Rather prostrate yourselves before Allah and serve Him"
+  }
+ ],
+ "sourcing": "sourced"
+}

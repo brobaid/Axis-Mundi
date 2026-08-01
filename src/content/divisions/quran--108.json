@@ -1,0 +1,24 @@
+{
+ "id": "quran--108",
+ "work": "quran",
+ "n": 108,
+ "slug": "108",
+ "verses": [
+  {
+   "v": 1,
+   "ar": "إِنَّآ أَعۡطَيۡنَٰكَ ٱلۡكَوۡثَرَ",
+   "en": "Lo! We have given thee Abundance"
+  },
+  {
+   "v": 2,
+   "ar": "فَصَلِّ لِرَبِّكَ وَٱنۡحَرۡ",
+   "en": "So pray unto thy Lord, and sacrifice"
+  },
+  {
+   "v": 3,
+   "ar": "إِنَّ شَانِئَكَ هُوَ ٱلۡأَبۡتَرُ",
+   "en": "Lo! it is thy insulter (and not thou) who is without posterity"
+  }
+ ],
+ "sourcing": "sourced"
+}

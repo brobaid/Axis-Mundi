@@ -13,7 +13,7 @@ import {
   figureSchema,
   siteSchema,
 } from './schemas/deep-dive.js';
-import { workSchema } from './schemas/work.js';
+import { divisionSchema, workSchema } from './schemas/work.js';
 import { snapshotSchema } from './schemas/snapshot.js';
 import { textSchema } from './schemas/text.js';
 
@@ -26,7 +26,21 @@ import { textSchema } from './schemas/text.js';
  * filename and the `id` field agree, so the two can never drift.
  */
 
-const json = (dir: string) => glob({ pattern: '**/*.json', base: `./src/content/${dir}` });
+/**
+ * The entry id is the filename, always and only.
+ *
+ * Left to itself the glob loader prefers a record's own `slug` field over its
+ * path, which silently gave every Reading Room division the id of its route
+ * segment instead of its filename — `genesis`, not `tanakh--genesis` — so
+ * `getEntry` found nothing and the pages built empty. Stating the rule here
+ * makes it the same rule validate-content.ts already enforces on disk.
+ */
+const json = (dir: string) =>
+  glob({
+    pattern: '**/*.json',
+    base: `./src/content/${dir}`,
+    generateId: ({ entry }) => entry.replace(/\.json$/, ''),
+  });
 
 const events = defineCollection({ loader: json('events'), schema: eventSchema });
 const taxonomy = defineCollection({ loader: json('taxonomy'), schema: taxonomyNodeSchema });
@@ -50,6 +64,11 @@ const snapshots = defineCollection({ loader: json('snapshots'), schema: snapshot
    shape the owner's corpora arrive in. */
 const works = defineCollection({ loader: json('works'), schema: workSchema });
 
+/* One record per surah, book or nikaya. A route loads its own and no more:
+   the delivered corpus file is the owner's format, never the build's working
+   set and never the client's payload. */
+const divisions = defineCollection({ loader: json('divisions'), schema: divisionSchema });
+
 export const collections = {
   events,
   taxonomy,
@@ -64,4 +83,5 @@ export const collections = {
   figures,
   snapshots,
   works,
+  divisions,
 };

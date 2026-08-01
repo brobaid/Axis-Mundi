@@ -1,0 +1,24 @@
+{
+ "id": "quran--110",
+ "work": "quran",
+ "n": 110,
+ "slug": "110",
+ "verses": [
+  {
+   "v": 1,
+   "ar": "إِذَا جَآءَ نَصۡرُ ٱللَّهِ وَٱلۡفَتۡحُ",
+   "en": "When Allah's succour and the triumph cometh"
+  },
+  {
+   "v": 2,
+   "ar": "وَرَأَيۡتَ ٱلنَّاسَ يَدۡخُلُونَ فِي دِينِ ٱللَّهِ أَفۡوَاجࣰ ا",
+   "en": "And thou seest mankind entering the religion of Allah in troops"
+  },
+  {
+   "v": 3,
+   "ar": "فَسَبِّحۡ بِحَمۡدِ رَبِّكَ وَٱسۡتَغۡفِرۡهُۚ إِنَّهُۥ كَانَ تَوَّابَۢا",
+   "en": "Then hymn the praises of thy Lord, and seek forgiveness of Him. Lo! He is ever ready to show mercy"
+  }
+ ],
+ "sourcing": "sourced"
+}

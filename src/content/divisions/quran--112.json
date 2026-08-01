@@ -1,0 +1,29 @@
+{
+ "id": "quran--112",
+ "work": "quran",
+ "n": 112,
+ "slug": "112",
+ "verses": [
+  {
+   "v": 1,
+   "ar": "قُلۡ هُوَ ٱللَّهُ أَحَدٌ",
+   "en": "Say: He is Allah, the One"
+  },
+  {
+   "v": 2,
+   "ar": "ٱللَّهُ ٱلصَّمَدُ",
+   "en": "Allah, the eternally Besought of all"
+  },
+  {
+   "v": 3,
+   "ar": "لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ",
+   "en": "He begetteth not nor was begotten"
+  },
+  {
+   "v": 4,
+   "ar": "وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ",
+   "en": "And there is none comparable unto Him"
+  }
+ ],
+ "sourcing": "sourced"
+}

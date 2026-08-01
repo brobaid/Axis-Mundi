@@ -2,9 +2,16 @@
 import type { GetStaticPaths } from 'astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getPublishable } from '../../../lib/content';
-import { divisionsOf, hasEnglish, originalLang, type WorkData } from '../../../lib/reader-model';
+import {
+  divisionHeading,
+  grouped,
+  hasEnglish,
+  originalLang,
+  type WorkData,
+} from '../../../lib/reader-model';
+import { fontFor } from '../../../lib/scripts';
 
-/** A canon's contents: every division, in order, with its verse count. */
+/** A canon's contents: every division, in its own order, under its own sections. */
 export const getStaticPaths = (async () => {
   const works = await getPublishable('works');
   return works.map((entry) => ({
@@ -14,15 +21,19 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { work } = Astro.props;
-const divisions = divisionsOf(work);
+const blocks = grouped(work);
 const sources = await getPublishable('sources');
 const titleOf = new Map(sources.map((s) => [s.data.id, s.data.title]));
 const orig = originalLang(work);
+const scriptFont = fontFor(work.script);
+
+const verses = work.total_verses.toLocaleString('en');
+const count = `${work.divisions.length} ${work.division_label_plural}, ${verses} verses`;
 ---
 
 <BaseLayout
   title={work.title}
-  description={`${work.title}: ${divisions.length} ${work.division_label_plural}, ${work.verses.length.toLocaleString('en')} verses, in editions named on every page.`}
+  description={`${work.title}: ${count}, in editions named on every page.`}
 >
   <section class="shell head">
     <p class="eyebrow">
@@ -31,13 +42,14 @@ const orig = originalLang(work);
     <h1 class="display">{work.title}</h1>
     {
       work.title_original !== undefined && (
-        <p class="rd-work__original" lang={orig} dir={work.direction}>
+        <p class="rd-work__original" lang={orig} dir={work.direction} style={`font-family: ${scriptFont}`}>
           {work.title_original}
         </p>
       )
     }
     <p class="measure lede">
-      {divisions.length} {work.division_label_plural}, {work.verses.length.toLocaleString('en')} verses.
+      {count}
+      {work.total_chapters !== undefined && ` in ${work.total_chapters.toLocaleString('en')} chapters`}.
       {!hasEnglish(work) && ' This corpus has entered in its own language alone.'}
     </p>
     <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
@@ -50,34 +62,62 @@ const orig = originalLang(work);
           .map(([, id]) => titleOf.get(id) ?? id)
           .join(' · ')
       }
+      {
+        /* The pairing is the claim, so where it is incomplete the page says so
+           here rather than leaving a reader to find the holes one book at a
+           time. The count is measured at ingestion, never asserted. */
+        work.english_gaps > 0 && (
+          <span class="rd-contents__gaps">
+            {work.english_gaps} {work.english_gaps === 1 ? 'verse carries' : 'verses carry'} the
+            original with no English at that verse number in this edition; each is marked where it
+            falls.
+          </span>
+        )
+      }
     </p>
 
-    <ol class="rd-contents__list" role="list">
-      {
-        divisions.map((d) => (
-          <li>
-            <a class="rd-contents__item" href={`/read/${work.id}/${d.n}`}>
-              <span class="rd-contents__n mono">{d.n}</span>
-              <span class="rd-contents__name">
-                {d.name ?? `${work.division_label.charAt(0).toUpperCase()}${work.division_label.slice(1)} ${d.n}`}
-                {d.name_original !== undefined && (
-                  <span class="rd-contents__original" lang={orig} dir={work.direction}>
-                    {d.name_original}
-                  </span>
-                )}
+    {
+      blocks.map(({ section, divisions }) => (
+        <section class="rd-contents__block">
+          {section !== undefined && (
+            <h2 class="rd-contents__section" id={section.id}>
+              {section.name}
+              <span class="caption rd-contents__section-count">
+                {divisions.length} {work.division_label_plural}
               </span>
-              <span class="caption rd-contents__count">{d.verses.length}</span>
-            </a>
-          </li>
-        ))
-      }
-    </ol>
+            </h2>
+          )}
+          <ol class="rd-contents__list" role="list">
+            {divisions.map((d) => (
+              <li>
+                <a class="rd-contents__item" href={`/read/${work.id}/${d.slug}`}>
+                  <span class="rd-contents__n mono">{d.n}</span>
+                  <span class="rd-contents__name">
+                    {divisionHeading(work, d)}
+                    {d.name_original !== undefined && (
+                      <span
+                        class="rd-contents__original"
+                        lang={orig}
+                        dir={work.direction}
+                        style={`font-family: ${scriptFont}`}
+                      >
+                        {d.name_original}
+                      </span>
+                    )}
+                  </span>
+                  <span class="caption rd-contents__count">{d.verses}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))
+    }
   </div>
 </BaseLayout>
 
 <style>
   .rd-work__original {
-    font-family: var(--font-arabic);
     font-size: var(--size-h2);
     color: var(--ink-soft);
     margin-bottom: var(--space-3);
@@ -90,6 +130,41 @@ const orig = originalLang(work);
   .rd-contents__editions {
     color: var(--ink-soft);
     margin-bottom: var(--space-6);
+    max-width: 42rem;
+  }
+
+  .rd-contents__gaps {
+    display: block;
+    margin-top: var(--space-2);
+  }
+
+  .rd-contents__block + .rd-contents__block {
+    margin-top: var(--space-12);
+  }
+
+  /*
+    Torah, Nevi'im, Ketuvim are the canon's own divisions, not a presentation
+    choice, so they get a heading in the display face over a full-ink rule —
+    heavier than the soft hairline between books, and no brass: brass is the
+    meridian's, and a contents page has no meridian on it.
+  */
+  .rd-contents__section {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+    font-family: var(--font-display);
+    font-size: var(--size-h3);
+    padding-bottom: var(--space-2);
+    margin-bottom: var(--space-4);
+    border-bottom: var(--hairline-width) solid var(--ink);
+    max-width: 42rem;
+  }
+
+  .rd-contents__section-count {
+    color: var(--ink-soft);
+    font-family: var(--font-ui);
+    flex: none;
   }
 
   .rd-contents__list {
@@ -137,7 +212,6 @@ const orig = originalLang(work);
   }
 
   .rd-contents__original {
-    font-family: var(--font-arabic);
     margin-left: var(--space-2);
     color: var(--ink-soft);
   }

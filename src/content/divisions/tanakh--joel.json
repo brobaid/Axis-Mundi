@@ -1,0 +1,447 @@
+{
+ "id": "tanakh--joel",
+ "work": "tanakh",
+ "n": 16,
+ "slug": "joel",
+ "verses": [
+  {
+   "c": 1,
+   "v": 1,
+   "he": "דְּבַר יְהוָה֙ אֲשֶׁ֣ר הָיָ֔ה אֶל יוֹאֵ֖ל בֶּן פְּתוּאֵֽל׃",
+   "en": "THE WORD of HaShem that came to Joel the son of Pethuel."
+  },
+  {
+   "c": 1,
+   "v": 2,
+   "he": "שִׁמְעוּ זֹאת֙ הַזְּקֵנִ֔ים וְהַֽאֲזִ֔ינוּ כֹּ֖ל יוֹשְׁבֵ֣י הָאָ֑רֶץ הֶהָ֤יְתָה זֹּאת֙ בִּֽימֵיכֶ֔ם וְאִ֖ם בִּימֵ֥י אֲבֹֽתֵיכֶֽם׃",
+   "en": "Hear this, ye old men, and give ear, all ye inhabitants of the land. Hath this been in your days, or in the days of your fathers?"
+  },
+  {
+   "c": 1,
+   "v": 3,
+   "he": "עָלֶ֖יהָ לִבְנֵיכֶ֣ם סַפֵּ֑רוּ וּבְנֵיכֶם֙ לִבְנֵיהֶ֔ם וּבְנֵיהֶ֖ם לְד֥וֹר אַחֵֽר׃",
+   "en": "Tell ye your children of it, and let your children tell their children, and their children another generation."
+  },
+  {
+   "c": 1,
+   "v": 4,
+   "he": "יֶ֤תֶר הַגָּזָם֙ אָכַ֣ל הָֽאַרְבֶּ֔ה וְיֶ֥תֶר הָאַרְבֶּ֖ה אָכַ֣ל הַיָּ֑לֶק וְיֶ֣תֶר הַיֶּ֔לֶק אָכַ֖ל הֶחָסִֽיל׃",
+   "en": "That which the palmer-worm hath left hath the locust eaten; and that which the locust hath left hath the canker-worm eaten; and that which the canker-worm hath left hath the caterpiller eaten."
+  },
+  {
+   "c": 1,
+   "v": 5,
+   "he": "הָקִ֤יצוּ שִׁכּוֹרִים֙ וּבְכ֔וּ וְהֵילִ֖לוּ כָּל שֹׁ֣תֵי יָ֑יִן עַל עָסִ֕יס כִּ֥י נִכְרַ֖ת מִפִּיכֶֽם׃",
+   "en": "Awake, ye drunkards, and weep, and wail, all ye drinkers of wine, because of the sweet wine, for it is cut off from your mouth."
+  },
+  {
+   "c": 1,
+   "v": 6,
+   "he": "כִּֽי גוֹי֙ עָלָ֣ה עַל אַרְצִ֔י עָצ֖וּם וְאֵ֣ין מִסְפָּ֑ר שִׁנָּיו֙ שִׁנֵּ֣י אַרְיֵ֔ה וּֽמְתַלְּע֥וֹת לָבִ֖יא לֽוֹ׃",
+   "en": "For a people is come up upon my land, mighty, and without number; his teeth are the teeth of a lion, and he hath the jaw-teeth of a lioness."
+  },
+  {
+   "c": 1,
+   "v": 7,
+   "he": "שָׂ֤ם גַּפְנִי֙ לְשַׁמָּ֔ה וּתְאֵנָתִ֖י לִקְצָפָ֑ה חָשֹׂ֤ף חֲשָׂפָהּ֙ וְהִשְׁלִ֔יךְ הִלְבִּ֖ינוּ שָׂרִיגֶֽיהָ׃",
+   "en": "He hath laid my vine waste, and blasted my fig-tree; he hath made it clean bare, and cast it down, the branches thereof are made white."
+  },
+  {
+   "c": 1,
+   "v": 8,
+   "he": "אֱלִ֕י כִּבְתוּלָ֥ה חֲגֻֽרַת שַׂ֖ק עַל בַּ֥עַל נְעוּרֶֽיהָ׃",
+   "en": "Lament like a virgin girded with sackcloth for the husband of her youth."
+  },
+  {
+   "c": 1,
+   "v": 9,
+   "he": "הָכְרַ֥ת מִנְחָ֛ה וָנֶ֖סֶךְ מִבֵּ֣ית יְהוָ֑ה אָֽבְלוּ֙ הַכֹּ֣הֲנִ֔ים מְשָׁרְתֵ֖י יְהוָֽה׃",
+   "en": "The meal-offering and the drink-offering is cut off from the house of HaShem; the priests mourn, even HaShem'S ministers."
+  },
+  {
+   "c": 1,
+   "v": 10,
+   "he": "שֻׁדַּ֣ד שָׂדֶ֔ה אָבְלָ֖ה אֲדָמָ֑ה כִּ֚י שֻׁדַּ֣ד דָּגָ֔ן הוֹבִ֥ישׁ תִּיר֖וֹשׁ אֻמְלַ֥ל יִצְהָֽר׃",
+   "en": "The field is wasted, the land mourneth; for the corn is wasted, the new wine is dried up, the oil languisheth."
+  },
+  {
+   "c": 1,
+   "v": 11,
+   "he": "הֹבִ֣ישׁוּ אִכָּרִ֗ים הֵילִ֨ילוּ֙ כֹּֽרְמִ֔ים עַל חִטָּ֖ה וְעַל שְׂעֹרָ֑ה כִּ֥י אָבַ֖ד קְצִ֥יר שָׂדֶֽה׃",
+   "en": "Be ashamed, O ye husbandmen, wail, O ye vinedressers, for the wheat and for the barley; because the harvest of the field is perished."
+  },
+  {
+   "c": 1,
+   "v": 12,
+   "he": "הַגֶּ֣פֶן הוֹבִ֔ישָׁה וְהַתְּאֵנָ֖ה אֻמְלָ֑לָה רִמּ֞וֹן גַּם תָּמָ֣ר וְתַפּ֗וּחַ כָּל עֲצֵ֤י הַשָּׂדֶה֙ יָבֵ֔שׁוּ כִּֽי הֹבִ֥ישׁ שָׂשׂ֖וֹן מִן בְּנֵ֥י אָדָֽם׃ ס",
+   "en": "The vine is withered, and the fig-tree languisheth; the pomegranate-tree, the palm-tree also, and the apple-tree, even all the trees of the field, are withered; for joy is withered away from the sons of men."
+  },
+  {
+   "c": 1,
+   "v": 13,
+   "he": "חִגְר֨וּ וְסִפְד֜וּ הַכֹּהֲנִ֗ים הֵילִ֨ילוּ֙ מְשָׁרְתֵ֣י מִזְבֵּ֔חַ בֹּ֚אוּ לִ֣ינוּ בַשַּׂקִּ֔ים מְשָׁרְתֵ֖י אֱלֹהָ֑י כִּ֥י נִמְנַ֛ע מִבֵּ֥ית אֱלֹהֵיכֶ֖ם מִנְחָ֥ה וָנָֽסֶךְ׃",
+   "en": "Gird yourselves, and lament, ye priests, wail, ye ministers of the altar; come, lie all night in sackcloth, ye ministers of my G-d; for the meal-offering and the drink-offering is withholden from the house of your G-d."
+  },
+  {
+   "c": 1,
+   "v": 14,
+   "he": "קַדְּשׁוּ צוֹם֙ קִרְא֣וּ עֲצָרָ֔ה אִסְפ֣וּ זְקֵנִ֗ים כֹּ֚ל יֹשְׁבֵ֣י הָאָ֔רֶץ בֵּ֖ית יְהוָ֣ה אֱלֹהֵיכֶ֑ם וְזַעֲק֖וּ אֶל יְהוָֽה׃",
+   "en": "Sanctify ye a fast, call a solemn assembly, gather the elders and all the inhabitants of the land unto the house of HaShem your G-d, and cry unto HaShem."
+  },
+  {
+   "c": 1,
+   "v": 15,
+   "he": "אֲהָ֖הּ לַיּ֑וֹם כִּ֤י קָרוֹב֙ י֣וֹם יְהוָ֔ה וּכְשֹׁ֖ד מִשַׁדַּ֥י יָבֽוֹא׃",
+   "en": "Alas for the day! for the day of HaShem is at hand, and as a destruction from the Almighty shall it come."
+  },
+  {
+   "c": 1,
+   "v": 16,
+   "he": "הֲל֛וֹא נֶ֥גֶד עֵינֵ֖ינוּ אֹ֣כֶל נִכְרָ֑ת מִבֵּ֥ית אֱלֹהֵ֖ינוּ שִׂמְחָ֥ה וָגִֽיל׃",
+   "en": "Is not the food cut off before our eyes, yea, joy and gladness from the house of our G-d?"
+  },
+  {
+   "c": 1,
+   "v": 17,
+   "he": "עָבְשׁ֣וּ פְרֻד֗וֹת תַּ֚חַת מֶגְרְפֹ֣תֵיהֶ֔ם נָשַׁ֨מּוּ֙ אֹֽצָר֔וֹת נֶהֶרְס֖וּ מַמְּגֻר֑וֹת כִּ֥י הֹבִ֖ישׁ דָּגָֽן׃",
+   "en": "The grains shrivel under their hoes; the garners are laid desolate, the barns are broken down; for the corn is withered."
+  },
+  {
+   "c": 1,
+   "v": 18,
+   "he": "מַה נֶּאֶנְחָ֣ה בְהֵמָ֗ה נָבֹ֨כוּ֙ עֶדְרֵ֣י בָקָ֔ר כִּ֛י אֵ֥ין מִרְעֶ֖ה לָהֶ֑ם גַּם עֶדְרֵ֥י הַצֹּ֖אן נֶאְשָֽׁמוּ׃",
+   "en": "How do the beasts groan! the herds of cattle are perplexed, because they have no pasture; yea, the flocks of sheep are made desolate."
+  },
+  {
+   "c": 1,
+   "v": 19,
+   "he": "אֵלֶ֥יךָ יְהוָ֖ה אֶקְרָ֑א כִּ֣י אֵ֗שׁ אָֽכְלָה֙ נְא֣וֹת מִדְבָּ֔ר וְלֶ֣הָבָ֔ה לִהֲטָ֖ה כָּל עֲצֵ֥י הַשָּׂדֶֽה׃",
+   "en": "Unto Thee, O HaShem, do I cry; for the fire hath devoured the pastures of the wilderness, and the flame hath set ablaze all the trees of the field."
+  },
+  {
+   "c": 1,
+   "v": 20,
+   "he": "גַּם בַּהֲמ֥וֹת שָׂדֶ֖ה תַּעֲר֣וֹג אֵלֶ֑יךָ כִּ֤י יָֽבְשׁוּ֙ אֲפִ֣יקֵי מָ֔יִם וְאֵ֕שׁ אָכְלָ֖ה נְא֥וֹת הַמִּדְבָּֽר׃ פ",
+   "en": "Yea, the beasts of the field pant unto Thee; for the water brooks are dried up, and the fire hath devoured the pastures of the wilderness."
+  },
+  {
+   "c": 2,
+   "v": 1,
+   "he": "תִּקְע֨וּ שׁוֹפָ֜ר בְּצִיּ֗וֹן וְהָרִ֨יעוּ֙ בְּהַ֣ר קָדְשִׁ֔י יִרְגְּז֕וּ כֹּ֖ל יֹשְׁבֵ֣י הָאָ֑רֶץ כִּֽי בָ֥א יוֹם יְהוָ֖ה כִּ֥י קָרֽוֹב׃",
+   "en": "Blow ye the horn in Zion, and sound an alarm in My holy mountain; let all the inhabitants of the land tremble; for the day of HaShem cometh, for it is at hand;"
+  },
+  {
+   "c": 2,
+   "v": 2,
+   "he": "י֧וֹם חֹ֣שֶׁךְ וַאֲפֵלָ֗ה י֤וֹם עָנָן֙ וַעֲרָפֶ֔ל כְּשַׁ֖חַר פָּרֻ֣שׂ עַל הֶֽהָרִ֑ים עַ֚ם רַ֣ב וְעָצ֔וּם כָּמֹ֗הוּ לֹ֤א נִֽהְיָה֙ מִן הָ֣עוֹלָ֔ם וְאַֽחֲרָיו֙ לֹ֣א יוֹסֵ֔ף עַד שְׁנֵ֖י דּ֥וֹר וָדֽוֹר׃",
+   "en": "A day of darkness and gloominess, a day of clouds and thick darkness, as blackness spread upon the mountains; a great people and a mighty, there hath not been ever the like, neither shall be any more after them, even to the years of many generations."
+  },
+  {
+   "c": 2,
+   "v": 3,
+   "he": "לְפָנָיו֙ אָ֣כְלָה אֵ֔שׁ וְאַחֲרָ֖יו תְּלַהֵ֣ט לֶֽהָבָ֑ה כְּגַן עֵ֨דֶן הָאָ֜רֶץ לְפָנָ֗יו וְאַֽחֲרָיו֙ מִדְבַּ֣ר שְׁמָמָ֔ה וְגַם פְּלֵיטָ֖ה לֹא הָ֥יְתָה לּֽוֹ׃",
+   "en": "A fire devoureth before them, and behind them a flame blazeth; the land is as the garden of Eden before them, and behind them a desolate wilderness; yea, and nothing escapeth them."
+  },
+  {
+   "c": 2,
+   "v": 4,
+   "he": "כְּמַרְאֵ֥ה סוּסִ֖ים מַרְאֵ֑הוּ וּכְפָרָשִׁ֖ים כֵּ֥ן יְרוּצֽוּן׃",
+   "en": "The appearance of them is as the appearance of horses; and as horsemen, so do they run."
+  },
+  {
+   "c": 2,
+   "v": 5,
+   "he": "כְּק֣וֹל מַרְכָּב֗וֹת עַל רָאשֵׁ֤י הֶֽהָרִים֙ יְרַקֵּד֔וּן כְּקוֹל֙ לַ֣הַב אֵ֔שׁ אֹכְלָ֖ה קָ֑שׁ כְּעַ֣ם עָצ֔וּם עֱר֖וּךְ מִלְחָמָֽה׃",
+   "en": "Like the noise of chariots, on the tops of the mountains do they leap, like the noise of a flame of fire that devoureth the stubble, as a mighty people set in battle array."
+  },
+  {
+   "c": 2,
+   "v": 6,
+   "he": "מִפָּנָ֖יו יָחִ֣ילוּ עַמִּ֑ים כָּל פָּנִ֖ים קִבְּצ֥וּ פָארֽוּר׃",
+   "en": "At their presence the peoples are in anguish; all faces have gathered blackness."
+  },
+  {
+   "c": 2,
+   "v": 7,
+   "he": "כְּגִבּוֹרִ֣ים יְרֻצ֔וּן כְּאַנְשֵׁ֥י מִלְחָמָ֖ה יַעֲל֣וּ חוֹמָ֑ה וְאִ֤ישׁ בִּדְרָכָיו֙ יֵֽלֵכ֔וּן וְלֹ֥א יְעַבְּט֖וּן אֹרְחוֹתָֽם׃",
+   "en": "They run like mighty men, they climb the wall like men of war; and they move on every one in his ways, and they entangle not their paths."
+  },
+  {
+   "c": 2,
+   "v": 8,
+   "he": "וְאִ֤ישׁ אָחִיו֙ לֹ֣א יִדְחָק֔וּן גֶּ֥בֶר בִּמְסִלָּת֖וֹ יֵֽלֵכ֑וּן וּבְעַ֥ד הַשֶּׁ֛לַח יִפֹּ֖לוּ לֹ֥א יִבְצָֽעוּ׃",
+   "en": "Neither doth one thrust another, they march every one in his highway; and they break through the weapons, and suffer no harm."
+  },
+  {
+   "c": 2,
+   "v": 9,
+   "he": "בָּעִ֣יר יָשֹׁ֗קּוּ בַּֽחוֹמָה֙ יְרֻצ֔וּן בַּבָּתִּ֖ים יַעֲל֑וּ בְּעַ֧ד הַחַלּוֹנִ֛ים יָבֹ֖אוּ כַּגַּנָּֽב׃",
+   "en": "They leap upon the city, they run upon the wall, they climb up into the houses; they enter in at the windows like a thief."
+  },
+  {
+   "c": 2,
+   "v": 10,
+   "he": "לְפָנָיו֙ רָ֣גְזָה אֶ֔רֶץ רָעֲשׁ֖וּ שָׁמָ֑יִם שֶׁ֤מֶשׁ וְיָרֵ֨חַ֙ קָדָ֔רוּ וְכוֹכָבִ֖ים אָסְפ֥וּ נָגְהָֽם׃",
+   "en": "Before them the earth quaketh, the heavens tremble; the sun and the moon are become black, and the stars withdraw their shining."
+  },
+  {
+   "c": 2,
+   "v": 11,
+   "he": "וַֽיהוָ֗ה נָתַ֤ן קוֹלוֹ֙ לִפְנֵ֣י חֵיל֔וֹ כִּ֣י רַ֤ב מְאֹד֙ מַחֲנֵ֔הוּ כִּ֥י עָצ֖וּם עֹשֵׂ֣ה דְבָר֑וֹ כִּֽי גָד֧וֹל יוֹם יְהוָ֛ה וְנוֹרָ֥א מְאֹ֖ד וּמִ֥י יְכִילֶֽנּוּ׃",
+   "en": "And HaShem uttereth His voice before His army; for His camp is very great, for he is mighty that executeth His word; for great is the day of HaShem and very terrible; and who can abide it?"
+  },
+  {
+   "c": 2,
+   "v": 12,
+   "he": "וְגַם עַתָּה֙ נְאֻם יְהוָ֔ה שֻׁ֥בוּ עָדַ֖י בְּכָל לְבַבְכֶ֑ם וּבְצ֥וֹם וּבְבְכִ֖י וּבְמִסְפֵּֽד׃",
+   "en": "Yet even now, saith HaShem, turn ye unto Me with all your heart, and with fasting, and with weeping, and with lamentation;"
+  },
+  {
+   "c": 2,
+   "v": 13,
+   "he": "וְקִרְע֤וּ לְבַבְכֶם֙ וְאַל בִּגְדֵיכֶ֔ם וְשׁ֖וּבוּ אֶל יְהוָ֣ה אֱלֹֽהֵיכֶ֑ם כִּֽי חַנּ֤וּן וְרַחוּם֙ ה֔וּא אֶ֤רֶךְ אַפַּ֨יִם֙ וְרַב חֶ֔סֶד וְנִחָ֖ם עַל הָרָעָֽה׃",
+   "en": "And rend your heart, and not your garments, and turn unto HaShem your G-d; for He is gracious and compassionate, long-suffering, and abundant in mercy, and repenteth Him of the evil."
+  },
+  {
+   "c": 2,
+   "v": 14,
+   "he": "מִ֥י יוֹדֵ֖עַ יָשׁ֣וּב וְנִחָ֑ם וְהִשְׁאִ֤יר אַֽחֲרָיו֙ בְּרָכָ֔ה מִנְחָ֣ה וָנֶ֔סֶךְ לַיהוָ֖ה אֱלֹהֵיכֶֽם׃ פ",
+   "en": "Who knoweth whether He will not turn and repent, and leave a blessing behind Him, even a meal-offering and a drink-offering unto HaShem your G-d?"
+  },
+  {
+   "c": 2,
+   "v": 15,
+   "he": "תִּקְע֥וּ שׁוֹפָ֖ר בְּצִיּ֑וֹן קַדְּשׁוּ צ֖וֹם קִרְא֥וּ עֲצָרָֽה׃",
+   "en": "Blow the horn in Zion, sanctify a fast, call a solemn assembly;"
+  },
+  {
+   "c": 2,
+   "v": 16,
+   "he": "אִסְפוּ עָ֞ם קַדְּשׁ֤וּ קָהָל֙ קִבְצ֣וּ זְקֵנִ֔ים אִסְפוּ֙ עֽוֹלָלִ֔ים וְיֹנְקֵ֖י שָׁדָ֑יִם יֵצֵ֤א חָתָן֙ מֵֽחֶדְר֔וֹ וְכַלָּ֖ה מֵחֻפָּתָֽהּ׃",
+   "en": "Gather the people, sanctify the congregation, assemble the elders, gather the children, and those that suck the breasts; let the bridegroom go forth from his chamber, and the bride out of her pavilion."
+  },
+  {
+   "c": 2,
+   "v": 17,
+   "he": "בֵּ֤ין הָאוּלָם֙ וְלַמִּזְבֵּ֔חַ יִבְכּוּ֙ הַכֹּ֣הֲנִ֔ים מְשָׁרְתֵ֖י יְהוָ֑ה וְֽיֹאמְר֞וּ ח֧וּסָה יְהוָ֣ה עַל עַמֶּ֗ךָ וְאַל תִּתֵּ֨ן נַחֲלָתְךָ֤ לְחֶרְפָּה֙ לִמְשָׁל בָּ֣ם גּוֹיִ֔ם לָ֚מָּה יֹאמְר֣וּ בָֽעַמִּ֔ים אַיֵּ֖ה אֱלֹהֵיהֶֽם׃",
+   "en": "Let the priests, the ministers of HaShem, weep between the porch and the altar, and let them say: 'Spare thy people, O HaShem, and give not Thy heritage to reproach, that the nations should make them a byword: wherefore should they say among the peoples: Where is their G-d?'"
+  },
+  {
+   "c": 2,
+   "v": 18,
+   "he": "וַיְקַנֵּ֥א יְהוָ֖ה לְאַרְצ֑וֹ וַיַּחְמֹ֖ל עַל עַמּֽוֹ׃",
+   "en": "Then was HaShem jealous for His land, and had pity on His people."
+  },
+  {
+   "c": 2,
+   "v": 19,
+   "he": "וַיַּ֨עַן יְהוָ֜ה וַיֹּ֣אמֶר לְעַמּ֗וֹ הִנְנִ֨י שֹׁלֵ֤חַ לָכֶם֙ אֶת הַדָּגָן֙ וְהַתִּיר֣וֹשׁ וְהַיִּצְהָ֔ר וּשְׂבַעְתֶּ֖ם אֹת֑וֹ וְלֹא אֶתֵּ֨ן אֶתְכֶ֥ם ע֛וֹד חֶרְפָּ֖ה בַּגּוֹיִֽם׃",
+   "en": "And HaShem answered and said unto His people: 'Behold, I will send you corn, and wine, and oil, and ye shall be satisfied therewith; and I will no more make you a reproach among the nations;"
+  },
+  {
+   "c": 2,
+   "v": 20,
+   "he": "וְֽאֶת הַצְּפוֹנִ֞י אַרְחִ֣יק מֵעֲלֵיכֶ֗ם וְהִדַּחְתִּיו֮ אֶל אֶ֣רֶץ צִיָּ֣ה וּשְׁמָמָה֒ אֶת פָּנָ֗יו אֶל הַיָּם֙ הַקַּדְמֹנִ֔י וְסֹפ֖וֹ אֶל הַיָּ֣ם הָאַֽחֲר֑וֹן וְעָלָ֣ה בָאְשׁ֗וֹ וְתַ֨עַל֙ צַחֲנָת֔וֹ כִּ֥י הִגְדִּ֖יל לַעֲשֽׂוֹת׃",
+   "en": "But I will remove far off from you the northern one, and will drive him into a land barren and desolate, with his face toward the eastern sea, and his hinder part toward the western sea; that his foulness may come up, and his ill savour may come up, because he hath done great things.'"
+  },
+  {
+   "c": 2,
+   "v": 21,
+   "he": "אַל תִּֽירְאִ֖י אֲדָמָ֑ה גִּ֣ילִי וּשְׂמָ֔חִי כִּֽי הִגְדִּ֥יל יְהוָ֖ה לַעֲשֽׂוֹת׃",
+   "en": "Fear not, O land, be glad and rejoice; for HaShem hath done great things."
+  },
+  {
+   "c": 2,
+   "v": 22,
+   "he": "אַל תִּֽירְאוּ֙ בַּהֲמ֣וֹת שָׂדַ֔י כִּ֥י דָשְׁא֖וּ נְא֣וֹת מִדְבָּ֑ר כִּֽי עֵץ֙ נָשָׂ֣א פִרְי֔וֹ תְּאֵנָ֥ה וָגֶ֖פֶן נָתְנ֥וּ חֵילָֽם׃",
+   "en": "Be not afraid, ye beasts of the field; for the pastures of the wilderness do spring, for the tree beareth its fruit, the fig-tree and the vine do yield their strength."
+  },
+  {
+   "c": 2,
+   "v": 23,
+   "he": "וּבְנֵ֣י צִיּ֗וֹן גִּ֤ילוּ וְשִׂמְחוּ֙ בַּיהוָ֣ה אֱלֹֽהֵיכֶ֔ם כִּֽי נָתַ֥ן לָכֶ֛ם אֶת הַמּוֹרֶ֖ה לִצְדָקָ֑ה וַיּ֣וֹרֶד לָכֶ֗ם גֶּ֛שֶׁם מוֹרֶ֥ה וּמַלְק֖וֹשׁ בָּרִאשֽׁוֹן׃",
+   "en": "Be glad then, ye children of Zion, and rejoice in HaShem your G-d; for He giveth you the former rain in just measure, and He causeth to come down for you the rain, the former rain and the latter rain, at the first."
+  },
+  {
+   "c": 2,
+   "v": 24,
+   "he": "וּמָלְא֥וּ הַגֳּרָנ֖וֹת בָּ֑ר וְהֵשִׁ֥יקוּ הַיְקָבִ֖ים תִּיר֥וֹשׁ וְיִצְהָֽר׃",
+   "en": "And the floors shall be full of corn, and the vats shall overflow with wine and oil."
+  },
+  {
+   "c": 2,
+   "v": 25,
+   "he": "וְשִׁלַּמְתִּ֤י לָכֶם֙ אֶת הַשָּׁנִ֔ים אֲשֶׁר֙ אָכַ֣ל הָֽאַרְבֶּ֔ה הַיֶּ֖לֶק וְהֶחָסִ֣יל וְהַגָּזָ֑ם חֵילִי֙ הַגָּד֔וֹל אֲשֶׁ֥ר שִׁלַּ֖חְתִּי בָּכֶֽם׃",
+   "en": "And I will restore to you the years that the locust hath eaten, the canker-worm, and the caterpiller, and the palmer-worm, My great army which I sent among you."
+  },
+  {
+   "c": 2,
+   "v": 26,
+   "he": "וַאֲכַלְתֶּ֤ם אָכוֹל֙ וְשָׂב֔וֹעַ וְהִלַּלְתֶּ֗ם אֶת שֵׁ֤ם יְהוָה֙ אֱלֹ֣הֵיכֶ֔ם אֲשֶׁר עָשָׂ֥ה עִמָּכֶ֖ם לְהַפְלִ֑יא וְלֹא יֵבֹ֥שׁוּ עַמִּ֖י לְעוֹלָֽם׃",
+   "en": "And ye shall eat in plenty and be satisfied, and shall praise the name of HaShem your G-d, that hath dealt wondrously with you; and My people shall never be ashamed."
+  },
+  {
+   "c": 2,
+   "v": 27,
+   "he": "וִידַעְתֶּ֗ם כִּ֣י בְקֶ֤רֶב יִשְׂרָאֵל֙ אָ֔נִי וַאֲנִ֛י יְהוָ֥ה אֱלֹהֵיכֶ֖ם וְאֵ֣ין ע֑וֹד וְלֹא יֵבֹ֥שׁוּ עַמִּ֖י לְעוֹלָֽם׃ ס",
+   "en": "And ye shall know that I am in the midst of Israel, and that I am HaShem your G-d, and there is none else; and My people shall never be ashamed."
+  },
+  {
+   "c": 3,
+   "v": 1,
+   "he": "וְהָיָ֣ה אַֽחֲרֵי כֵ֗ן אֶשְׁפּ֤וֹךְ אֶת רוּחִי֙ עַל כָּל בָּשָׂ֔ר וְנִבְּא֖וּ בְּנֵיכֶ֣ם וּבְנֽוֹתֵיכֶ֑ם זִקְנֵיכֶם֙ חֲלֹמ֣וֹת יַחֲלֹמ֔וּן בַּח֣וּרֵיכֶ֔ם חֶזְיֹנ֖וֹת יִרְאֽוּ׃",
+   "en": "And it shall come to pass afterward, that I will pour out My spirit upon all flesh; and your sons and your daughters shall prophesy, your old men shall dream dreams, your young men shall see visions;"
+  },
+  {
+   "c": 3,
+   "v": 2,
+   "he": "וְגַ֥ם עַל הָֽעֲבָדִ֖ים וְעַל הַשְּׁפָח֑וֹת בַּיָּמִ֣ים הָהֵ֔מָּה אֶשְׁפּ֖וֹךְ אֶת רוּחִֽי׃",
+   "en": "And also upon the servants and upon the handmaids in those days will I pour out My spirit."
+  },
+  {
+   "c": 3,
+   "v": 3,
+   "he": "וְנָֽתַתִּי֙ מֽוֹפְתִ֔ים בַּשָּׁמַ֖יִם וּבָאָ֑רֶץ דָּ֣ם וָאֵ֔שׁ וְתִֽימֲר֖וֹת עָשָֽׁן׃",
+   "en": "And I will shew wonders in the heavens and in the earth, blood, and fire, and pillars of smoke."
+  },
+  {
+   "c": 3,
+   "v": 4,
+   "he": "הַשֶּׁ֨מֶשׁ֙ יֵהָפֵ֣ךְ לְחֹ֔שֶׁךְ וְהַיָּרֵ֖חַ לְדָ֑ם לִפְנֵ֗י בּ֚וֹא י֣וֹם יְהוָ֔ה הַגָּד֖וֹל וְהַנּוֹרָֽא׃",
+   "en": "The sun shall be turned into darkness, and the moon into blood, before the great and terrible day of HaShem come."
+  },
+  {
+   "c": 3,
+   "v": 5,
+   "he": "וְהָיָ֗ה כֹּ֧ל אֲשֶׁר יִקְרָ֛א בְּשֵׁ֥ם יְהוָ֖ה יִמָּלֵ֑ט כִּ֠י בְּהַר צִיּ֨וֹן וּבִירוּשָׁלִַ֜ם תִּֽהְיֶ֣ה פְלֵיטָ֗ה כַּֽאֲשֶׁר֙ אָמַ֣ר יְהוָ֔ה וּבַ֨שְּׂרִידִ֔ים אֲשֶׁ֥ר יְהוָ֖ה קֹרֵֽא׃",
+   "en": "And it shall come to pass, that whosoever shall call on the name of HaShem shall be delivered; for in mount Zion and in Jerusalem there shall be those that escape, as HaShem hath said, and among the remnant those whom HaShem shall call."
+  },
+  {
+   "c": 4,
+   "v": 1,
+   "he": "כִּ֗י הִנֵּ֛ה בַּיָּמִ֥ים הָהֵ֖מָּה וּבָעֵ֣ת הַהִ֑יא אֲשֶׁ֥ר אשובאשובאָשִׁ֛יבאֶת שְׁב֥וּת יְהוּדָ֖ה וִירוּשָׁלִָֽם׃",
+   "en": "For, behold, in those days, and in that time, when I shall bring back the captivity of Judah and Jerusalem,"
+  },
+  {
+   "c": 4,
+   "v": 2,
+   "he": "וְקִבַּצְתִּי֙ אֶת כָּל הַגּוֹיִ֔ם וְה֣וֹרַדְתִּ֔ים אֶל עֵ֖מֶק יְהֽוֹשָׁפָ֑ט וְנִשְׁפַּטְתִּ֨י עִמָּ֜ם שָׁ֗ם עַל עַמִּ֨י וְנַחֲלָתִ֤י יִשְׂרָאֵל֙ אֲשֶׁ֣ר פִּזְּר֣וּ בַגּוֹיִ֔ם וְאֶת אַרְצִ֖י חִלֵּֽקוּ׃",
+   "en": "I will gather all nations, and will bring them down into the valley of Jehoshaphat; and I will enter into judgment with them there for My people and for My heritage Israel, whom they have scattered among the nations, and divided My land."
+  },
+  {
+   "c": 4,
+   "v": 3,
+   "he": "וְאֶל עַמִּ֖י יַדּ֣וּ גוֹרָ֑ל וַיִּתְּנ֤וּ הַיֶּ֨לֶד֙ בַּזּוֹנָ֔ה וְהַיַּלְדָּ֛ה מָכְר֥וּ בַיַּ֖יִן וַיִּשְׁתּֽוּ׃",
+   "en": "And they have cast lots for My people; and have given a boy for an harlot, and sold a girl for wine, and have drunk."
+  },
+  {
+   "c": 4,
+   "v": 4,
+   "he": "וְ֠גַם מָה אַתֶּ֥ם לִי֙ צֹ֣ר וְצִיד֔וֹן וְכֹ֖ל גְּלִיל֣וֹת פְּלָ֑שֶׁת הַגְּמ֗וּל אַתֶּם֙ מְשַׁלְּמִ֣ים עָלָ֔י וְאִם גֹּמְלִ֤ים אַתֶּם֙ עָלַ֔י קַ֣ל מְהֵרָ֔ה אָשִׁ֥יב גְּמֻלְכֶ֖ם בְּרֹאשְׁכֶֽם׃",
+   "en": "And also what are ye to Me, O Tyre, and Zidon, and all the regions of Philistia? will ye render retribution on My behalf? and if ye render retribution on My behalf, swiftly, speedily will I return your retribution upon your own head."
+  },
+  {
+   "c": 4,
+   "v": 5,
+   "he": "אֲשֶׁר כַּסְפִּ֥י וּזְהָבִ֖י לְקַחְתֶּ֑ם וּמַֽחֲמַדַּי֙ הַטֹּבִ֔ים הֲבֵאתֶ֖ם לְהֵיכְלֵיכֶֽם׃",
+   "en": "Forasmuch as ye have taken My silver and My gold, and have carried into your temples My goodly treasures;"
+  },
+  {
+   "c": 4,
+   "v": 6,
+   "he": "וּבְנֵ֤י יְהוּדָה֙ וּבְנֵ֣י יְרוּשָׁלִַ֔ם מְכַרְתֶּ֖ם לִבְנֵ֣י הַיְּוָנִ֑ים לְמַ֥עַן הַרְחִיקָ֖ם מֵעַ֥ל גְּבוּלָֽם׃",
+   "en": "the children also of Judah and the children of Jerusalem have ye sold unto the sons of Jevanim, that ye might remove them far from their border;"
+  },
+  {
+   "c": 4,
+   "v": 7,
+   "he": "הִנְנִ֣י מְעִירָ֔ם מִן הַ֨מָּק֔וֹם אֲשֶׁר מְכַרְתֶּ֥ם אֹתָ֖ם שָׁ֑מָּה וַהֲשִׁבֹתִ֥י גְמֻלְכֶ֖ם בְּרֹאשְׁכֶֽם׃",
+   "en": "behold, I will stir them up out of the place whither ye have sold them, and will return your retribution upon your own head;"
+  },
+  {
+   "c": 4,
+   "v": 8,
+   "he": "וּמָכַרְתִּ֞י אֶת בְּנֵיכֶ֣ם וְאֶת בְּנֽוֹתֵיכֶ֗ם בְּיַד֙ בְּנֵ֣י יְהוּדָ֔ה וּמְכָר֥וּם לִשְׁבָאיִ֖ם אֶל גּ֣וֹי רָח֑וֹק כִּ֥י יְהוָ֖ה דִּבֵּֽר׃ ס",
+   "en": "and I will sell your sons and your daughters into the hand of the children of Judah, and they shall sell them to the men of Sheba, to a nation far off; for HaShem hath spoken."
+  },
+  {
+   "c": 4,
+   "v": 9,
+   "he": "קִרְאוּ זֹאת֙ בַּגּוֹיִ֔ם קַדְּשׁ֖וּ מִלְחָמָ֑ה הָעִ֨ירוּ֙ הַגִּבּוֹרִ֔ים יִגְּשׁ֣וּ יַֽעֲל֔וּ כֹּ֖ל אַנְשֵׁ֥י הַמִּלְחָמָֽה׃",
+   "en": "Proclaim ye this among the nations, prepare war; stir up the mighty men; let all the men of war draw near, let them come up."
+  },
+  {
+   "c": 4,
+   "v": 10,
+   "he": "כֹּ֤תּוּ אִתֵּיכֶם֙ לַֽחֲרָב֔וֹת וּמַזְמְרֹֽתֵיכֶ֖ם לִרְמָחִ֑ים הַֽחַלָּ֔שׁ יֹאמַ֖ר גִּבּ֥וֹר אָֽנִי׃",
+   "en": "Beat your plowshares into swords, and your pruning-hooks into spears; let the weak say: 'I am strong.'"
+  },
+  {
+   "c": 4,
+   "v": 11,
+   "he": "ע֣וּשׁוּ וָבֹ֧אוּ כָֽל הַגּוֹיִ֛ם מִסָּבִ֖יב וְנִקְבָּ֑צוּ שָׁ֕מָּה הַֽנְחַ֥ת יְהוָ֖ה גִּבּוֹרֶֽיךָ׃",
+   "en": "Haste ye, and come, all ye nations round about, and gather yourselves together; thither cause Thy mighty ones to come down, O HaShem!"
+  },
+  {
+   "c": 4,
+   "v": 12,
+   "he": "יֵע֨וֹרוּ֙ וְיַעֲל֣וּ הַגּוֹיִ֔ם אֶל עֵ֖מֶק יְהֽוֹשָׁפָ֑ט כִּ֣י שָׁ֗ם אֵשֵׁ֛ב לִשְׁפֹּ֥ט אֶת כָּל הַגּוֹיִ֖ם מִסָּבִֽיב׃",
+   "en": "Let the nations be stirred up, and come up to the valley of Jehoshaphat; for there will I sit to judge all the nations round about."
+  },
+  {
+   "c": 4,
+   "v": 13,
+   "he": "שִׁלְח֣וּ מַגָּ֔ל כִּ֥י בָשַׁ֖ל קָצִ֑יר בֹּ֤אֽוּ רְדוּ֙ כִּֽי מָ֣לְאָה גַּ֔ת הֵשִׁ֨יקוּ֙ הַיְקָבִ֔ים כִּ֥י רַבָּ֖ה רָעָתָֽם׃",
+   "en": "Put ye in the sickle, for the harvest is ripe; come, tread ye, for the winepress is full, the vats overflow; for their wickedness is great."
+  },
+  {
+   "c": 4,
+   "v": 14,
+   "he": "הֲמוֹנִ֣ים הֲמוֹנִ֔ים בְּעֵ֖מֶק הֶֽחָר֑וּץ כִּ֤י קָרוֹב֙ י֣וֹם יְהוָ֔ה בְּעֵ֖מֶק הֶחָרֽוּץ׃",
+   "en": "Multitudes, multitudes in the valley of decision! For the day of HaShem is near in the valley of decision."
+  },
+  {
+   "c": 4,
+   "v": 15,
+   "he": "שֶׁ֥מֶשׁ וְיָרֵ֖חַ קָדָ֑רוּ וְכוֹכָבִ֖ים אָסְפ֥וּ נָגְהָֽם׃",
+   "en": "The sun and the moon are become black, and the stars withdraw their shining."
+  },
+  {
+   "c": 4,
+   "v": 16,
+   "he": "וַיהוָ֞ה מִצִּיּ֣וֹן יִשְׁאָ֗ג וּמִירוּשָׁלִַ֨ם֙ יִתֵּ֣ן קוֹל֔וֹ וְרָעֲשׁ֖וּ שָׁמַ֣יִם וָאָ֑רֶץ וַֽיהוָה֙ מַֽחֲסֶ֣ה לְעַמּ֔וֹ וּמָע֖וֹז לִבְנֵ֥י יִשְׂרָאֵֽל׃",
+   "en": "And HaShem shall roar from Zion, and utter His voice from Jerusalem, and the heavens and the earth shall shake; but HaShem will be a refuge unto His people, and a stronghold to the children of Israel."
+  },
+  {
+   "c": 4,
+   "v": 17,
+   "he": "וִֽידַעְתֶּ֗ם כִּ֣י אֲנִ֤י יְהוָה֙ אֱלֹ֣הֵיכֶ֔ם שֹׁכֵ֖ן בְּצִיּ֣וֹן הַר קָדְשִׁ֑י וְהָיְתָ֤ה יְרוּשָׁלִַ֨ם֙ קֹ֔דֶשׁ וְזָרִ֥ים לֹא יַֽעַבְרוּ בָ֖הּ עֽוֹד׃ ס",
+   "en": "So shall ye know that I am HaShem your G-d, dwelling in Zion My holy mountain; then shall Jerusalem be holy, and there shall no strangers pass through her any more."
+  },
+  {
+   "c": 4,
+   "v": 18,
+   "he": "וְהָיָה֩ בַיּ֨וֹם הַה֜וּא יִטְּפ֧וּ הֶהָרִ֣ים עָסִ֗יס וְהַגְּבָעוֹת֙ תֵּלַ֣כְנָה חָלָ֔ב וְכָל אֲפִיקֵ֥י יְהוּדָ֖ה יֵ֣לְכוּ מָ֑יִם וּמַעְיָ֗ן מִבֵּ֤ית יְהוָה֙ יֵצֵ֔א וְהִשְׁקָ֖ה אֶת נַ֥חַל הַשִּׁטִּֽים׃",
+   "en": "And it shall come to pass in that day, that the mountains shall drop down sweet wine, and the hills shall flow with milk, and all the brooks of Judah shall flow with waters; and a fountain shall come forth of the house of HaShem, and shall water the valley of Shittim."
+  },
+  {
+   "c": 4,
+   "v": 19,
+   "he": "מִצְרַ֨יִם֙ לִשְׁמָמָ֣ה תִֽהְיֶ֔ה וֶאֱד֕וֹם לְמִדְבַּ֥ר שְׁמָמָ֖ה תִּֽהְיֶ֑ה מֵֽחֲמַס֙ בְּנֵ֣י יְהוּדָ֔ה אֲשֶׁר שָׁפְכ֥וּ דָם נָקִ֖יא בְּאַרְצָֽם׃",
+   "en": "Egypt shall be a desolation, and Edom shall be a desolate wilderness, for the violence against the children of Judah, because they have shed innocent blood in their land."
+  },
+  {
+   "c": 4,
+   "v": 20,
+   "he": "וִיהוּדָ֖ה לְעוֹלָ֣ם תֵּשֵׁ֑ב וִירוּשָׁלִַ֖ם לְד֥וֹר וָדֽוֹר׃",
+   "en": "But Judah shall be inhabited for ever, and Jerusalem from generation to generation."
+  },
+  {
+   "c": 4,
+   "v": 21,
+   "he": "וְנִקֵּ֖יתִי דָּמָ֣ם לֹֽא נִקֵּ֑יתִי וַֽיהוָ֖ה שֹׁכֵ֥ן בְּצִיּֽוֹן׃",
+   "en": "And I will hold as innocent their blood that I have not held as innocent; and HaShem dwelleth in Zion."
+  }
+ ],
+ "sourcing": "sourced"
+}
