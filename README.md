@@ -1,105 +1,96 @@
 # Axis Mundi
 
-An interactive comparative reference for ten religious traditions: an event-driven
-timeline, an animated historical world map, structured deep dives, a belief matrix,
-and companion modules. Concept name "the Living Museum"; product name Axis Mundi.
+An interactive comparative reference for ten religious traditions. Seven rooms:
+an event-driven timeline of four hundred sourced events, an animated historical
+world map of twelve hand-drawn plates, structured deep dives on all ten
+traditions, a belief matrix, a side-by-side compare, a family tree of descent,
+and a year wheel of the festival calendar. Concept name "the Living Museum";
+product name Axis Mundi.
 
-Static content site. No backend, no database, no CMS.
+It describes what traditions hold and practise. It does not evaluate them.
 
-- **Production:** https://axis-mundi-mu.vercel.app
-- **Governing documents:** [`CLAUDE.md`](./CLAUDE.md) and [`/docs`](./docs)
+**Live:** <https://axis-mundi-mu.vercel.app>
 
-## Commands
+## Architecture
 
-| Command | What it does |
+A static content site — no backend, no database, no CMS, and none is coming.
+Astro 5 with TypeScript at `strictest` builds twenty-one pages from 732 JSON
+records, each validated against a Zod schema in `src/schemas/` that mirrors the
+Phase 0 spec field for field. The interactive rooms are vanilla TypeScript
+islands over D3, each split so that pure model code (`src/lib/*-model.ts`) and a
+DOM-free renderer (`src/lib/*-render.ts`) run at build time for the
+server-rendered first paint *and* in the browser for every interaction — the two
+cannot disagree because they are the same function. Islands carry no Zod, so no
+schema reaches a reader's device. Every colour in the codebase lives in
+`src/styles/tokens.css` and nowhere else, in both light and night modes; every
+font is self-hosted. Reading the site needs no JavaScript: the first paint is
+real content, and each canvas ships a full list alternative in the DOM beside
+it.
+
+## The owner-data pipeline
+
+Content does not originate here. Owner datasets arrive as direct commits under
+[`/docs/slates`](./docs/slates) — research memos, prose slates, GeoJSON plates —
+and ingestion is mechanical: prose bodies are lifted out of the slate
+programmatically and byte-compared back against it, never retyped, and the only
+values not transcribed are the ones a schema requires and a slate has no column
+for, each read off the owner's own clause and reported. Nothing is asserted that
+a record does not carry. Where a record cannot answer, the site shows the gap
+rather than filling it: a plate leaves a realm unshaded, a contested dating
+carries both positions, a festival whose rule names only a Hijri month is listed
+beneath the wheel instead of dotted somewhere plausible, and a row that cannot
+be sourced is held out of the build entirely. Absence is a claim this site is
+willing to make; a plausible guess is not.
+
+## The gate
+
+`pnpm check` runs all six, in the order CI does. It must pass before any push.
+
+| Check | What it enforces |
 | --- | --- |
-| `pnpm dev` | Dev server. Includes records awaiting a source check. |
-| `pnpm build` | Production build. Excludes them. |
-| `pnpm preview` | Serve the built output. |
-| `pnpm validate:content` | Zod-validates every content file, then checks cross-file rules. |
-| `pnpm validate:tokens` | Fails on raw colours outside `tokens.css`, and audits WCAG AA in both modes. |
-| `pnpm validate:timeline` | Timeline layout invariants: density budget, rank gating, nothing overlaps. |
-| `pnpm validate` | All three validators. |
-| `pnpm lint` | `eslint` + `astro check`. |
-| `pnpm check` | Everything, in the order CI runs it. |
+| `pnpm validate:content` | Zod-validates all 732 records, then the cross-file rules: importance 3+ events need a T1–T3 source, matrix cells need T1 or a labelled T4, contested items must cite both positions, glossary references must resolve. |
+| `pnpm validate:tokens` | Fails on a raw colour anywhere outside `tokens.css`, on an undefined custom property, and on any of 186 contrast pairs falling below WCAG AA across the light, night and print modes. |
+| `pnpm validate:timeline` | Timeline layout invariants across six viewports: the density budget, rank gating, and that nothing overlaps. |
+| `pnpm lint` | `eslint` and `astro check`, at zero errors, zero warnings, zero hints. |
+| `pnpm build` | Twenty-one pages. Records marked `sourcing: "todo"` are excluded. |
+| `pnpm validate:links` | Every internal link resolves against `dist/` under the rules a plain static host applies, and every built route appears in `sitemap.xml`. |
 
-`pnpm validate` must pass before any commit.
+`pnpm dev` sets `INCLUDE_TODO_SOURCING=true`, so work awaiting a source check is
+visible locally and in previews but never in production.
 
 ## Layout
 
 ```
-docs/                  Governing specs. Do not edit without being asked.
+docs/                  Governing specs and owner slates. Do not edit without being asked.
 src/schemas/           Zod schemas mirroring the Phase 0 spec, field for field.
 src/content/           One JSON file per record, named <id>.json.
 src/styles/tokens.css  THE single source of every colour in the codebase.
-src/lib/               Content access, tradition metadata, timeline model + renderer.
+src/lib/               Models, renderers, content access. Pure and DOM-free.
 src/scripts/           Island entry points (vanilla TS).
-scripts/               The three validators CI runs.
+scripts/               The four checks CI runs.
 ```
-
-## The timeline
-
-The canvas is split three ways so the same logic runs at build time and in the
-browser, and the two can never disagree:
-
-- `src/lib/timeline-model.ts` — pure layout maths. Lanes from the taxonomy, rank
-  gating, the density budget, dodge and cluster resolution, label placement.
-  No DOM, no framework.
-- `src/lib/timeline-render.ts` — that layout as HTML strings. Called by Astro for
-  the server-rendered first paint and by the island on every interaction.
-- `src/scripts/timeline.ts` — interaction only: zoom (d3-zoom), drill, filters,
-  the event panel, keyboard navigation, and URL state.
-
-Reading it needs no JavaScript: the first paint is real content, and the full
-chronological list alternative is always in the DOM.
-
-## Deep dives, glossary and search
-
-The deep-dive template renders the spec's fourteen sections in the same order for
-every tradition — a section with nothing published keeps its heading and says so,
-because comparability is the product feature. Sourcing is per block, not per
-page: a tradition's history can be source-checked while its practices are not,
-and the unchecked block is held out on its own.
-
-Glossary terms are wrapped in prose at authoring time with a small syntax —
-`[[tawhid]]`, or `[[quran|the Quran]]` to change the display text. A reference to
-a term that is not in the build degrades to plain text, so a gated term never
-becomes a control that opens an empty card. `validate:content` fails on a
-reference to a term that has no record at all.
-
-Search indexes the source records, not the rendered HTML, so a gated record
-cannot leak into results through a page it was excluded from. The index is a
-static JSON file matched in the browser; there is no server and no per-keystroke
-request. Press `/` or `Cmd`/`Ctrl`-`K`.
 
 ## Two rules worth knowing before you edit anything
 
-**Colour lives in exactly one file.** `src/styles/tokens.css` defines every colour,
-in both modes, via `[data-mode]`. A raw hex anywhere else in `src/` fails
-`pnpm validate:tokens`. That script also asserts ~116 contrast pairs across both
-modes, so a token edit that breaks WCAG AA fails CI rather than shipping.
+**Colour lives in exactly one file.** `src/styles/tokens.css` defines every
+colour, in every mode, via `[data-mode]`. A raw hex anywhere else in `src/`
+fails `pnpm validate:tokens` — as does a `var()` referencing a property nobody
+defined, which otherwise drops its whole declaration in silence.
 
 **Unsourced content does not ship.** Every record carries a `sourcing` field.
-Records marked `"todo"` are excluded from production builds — they are seeded,
-validated and version-controlled, but not published. Set
-`INCLUDE_TODO_SOURCING=true` to include them in a build; `pnpm dev` does this
-by default so work in progress is visible locally and in Vercel previews.
+`"todo"` records are seeded, validated and version-controlled, but held out of
+production. To promote one: add its citations to `src/content/sources/`,
+reference them from the record, and flip the field. A third value, `"editorial"`,
+exists for the handful of statements that describe this site's own conventions
+rather than any tradition — a scholar cannot source a rendering decision, and
+citing one for it would put a historian's name behind our own choice.
 
-To promote a record: add its citations to `src/content/sources/`, reference them
-from the record, and flip `sourcing` to `"sourced"`. `validate:content` then
-enforces the Phase 0 sourcing rules — importance 3+ events need a T1–T3 source,
-matrix cells need T1 or a labelled T4, and contested items need a note.
+## The fuller statement
 
-## Milestones
+The [colophon](https://axis-mundi-mu.vercel.app/colophon) is computed from these
+same records at build time: the full count by collection, the source registry
+with its tiers, and the twelve plates with the memos they were drawn from. The
+[methodology page](https://axis-mundi-mu.vercel.app/methodology) states the
+sourcing tiers, the neutrality framing, and what is still held.
 
-- **M0 — foundation.** Complete. Astro 5 + TypeScript strict, the token system in
-  both modes, self-hosted fonts, Zod schemas wired to content collections, seed
-  content, both validators, CI, and a green production deploy.
-- **M1 — the timeline engine.** Complete. Taxonomy-driven lanes, recursive drill
-  with breadcrumb, semantic zoom, the density budget, dodge and cluster, the
-  event panel, ghost mode, keyboard navigation, and full state in the URL.
-- **M2 — deep dives, glossary, universal search.** Complete. The fourteen-section
-  deep-dive template with Islam as the first instance, glossary tap-cards, and
-  client-side universal search.
-
-The map, matrix and remaining modules are sequenced separately.
+Governing documents: [`CLAUDE.md`](./CLAUDE.md) and [`/docs`](./docs).
