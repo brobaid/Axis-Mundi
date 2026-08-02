@@ -1,0 +1,338 @@
+---
+import { getPublishable } from '../lib/content';
+import {
+  AXIS_NODES,
+  BREATH_SECONDS,
+  HALO_R,
+  HERO_MIN_BOX,
+  NODE_R,
+  TURN_SECONDS,
+} from '../lib/hero-axis';
+
+/**
+ * The entrance hall's axis.
+ *
+ * The museum's radial identity, alive: ten engraved orbits around one centre,
+ * a hue on each, turning slowly enough that you notice it only if you stay.
+ * Every node is a door — the wheel is the tenth way into a tradition's dive.
+ *
+ * How it moves, and why it moves that way:
+ *
+ *   - The orbit rings are static SVG. Nothing about them animates, so they are
+ *     rasterised once.
+ *   - The nodes are HTML anchors inside one wrapper that rotates. A single
+ *     `transform: rotate()` on a promoted layer is composited off the main
+ *     thread; animating ten SVG groups would repaint the whole canvas each
+ *     frame. Same picture, a tenth of the work.
+ *   - The halos breathe on opacity alone, each on its own phase. Opacity is the
+ *     other property the compositor handles for free, and it is the only way to
+ *     make ten dots feel independently alive while the geometry stays rigid —
+ *     which it must, because rigidity is what keeps the tap targets apart.
+ *   - The sweep is one translated band. It is confined to the wheel rather than
+ *     crossing the whole hall, because a wash passing over body text is a
+ *     contrast guarantee you cannot make.
+ *
+ * Nothing here animates a property that triggers layout. The box is sized by
+ * `aspect-ratio` off its own width, so it reserves its height before the first
+ * paint and nothing shifts.
+ */
+
+const dives = await getPublishable('deepDives');
+const open = new Set(dives.map((d) => d.id));
+
+/* A node whose dive is not in this build is drawn but not a door — the same
+   rule the home page's four doors follow, rather than a link to a 404. */
+const nodes = AXIS_NODES.map((n) => ({ ...n, href: open.has(n.id) ? `/traditions/${n.id}` : null }));
+
+const R = HERO_MIN_BOX / 2;
+const orbits = AXIS_NODES.map((n) => n.orbit * R);
+---
+
+<div class="axis">
+  <!--
+    The engraving. One ring per tradition plus the centre mark, drawn once and
+    never animated. `non-scaling-stroke` keeps every ring a true hairline at any
+    box size, which is the difference between an engraved plate and a diagram.
+  -->
+  <svg
+    class="axis__plate"
+    viewBox={`${-R} ${-R} ${HERO_MIN_BOX} ${HERO_MIN_BOX}`}
+    aria-hidden="true"
+    focusable="false"
+  >
+    {
+      orbits.map((r) => (
+        <circle class="axis__orbit" cx="0" cy="0" r={r} vector-effect="non-scaling-stroke" />
+      ))
+    }
+    <circle class="axis__hub" cx="0" cy="0" r={NODE_R * 0.7} />
+  </svg>
+
+  <div class="axis__sweep" aria-hidden="true"><i></i></div>
+
+  <nav class="axis__ring" aria-label="The ten traditions">
+    {
+      nodes.map((n) => {
+        const style = `left:${n.left.toFixed(4)}%;top:${n.top.toFixed(4)}%;--hue:var(${n.hueToken});--breath-delay:${n.breathDelay}s`;
+        const inner = (
+          <>
+            <span class="axis__halo" aria-hidden="true" />
+            <span class="axis__dot" aria-hidden="true" />
+          </>
+        );
+        return n.href === null ? (
+          <span class="axis__node axis__node--shut" style={style} title={`${n.name} — dive not yet open`}>
+            {inner}
+            <span class="visually-hidden">{n.name}, dive not yet open</span>
+          </span>
+        ) : (
+          /* The same tooltip vocabulary the rooms rail uses. It is also the only
+             cue a pointer gets that the dot is a door, which is why it is here
+             and not left to the hue alone. */
+          <a class="axis__node" href={n.href} style={style} title={n.name}>
+            {inner}
+            <span class="visually-hidden">{n.name}</span>
+          </a>
+        );
+      })
+    }
+  </nav>
+</div>
+
+<script>
+  /**
+   * A hidden tab pays for nothing.
+   *
+   * The compositor keeps ticking a rotation on a background tab in some
+   * engines, which is a battery cost for a picture nobody is looking at.
+   * One class, no storage, no state to get out of sync.
+   */
+  const sync = (): void => {
+    document.documentElement.classList.toggle('is-tab-hidden', document.hidden);
+  };
+  document.addEventListener('visibilitychange', sync);
+  sync();
+</script>
+
+<style
+  define:vars={{
+    turn: `${TURN_SECONDS}s`,
+    breath: `${BREATH_SECONDS}s`,
+    dot: `${NODE_R * 2}px`,
+    halo: `${HALO_R * 2}px`,
+  }}
+>
+  .axis {
+    position: relative;
+    width: 100%;
+    /* The height is a function of the width alone, so the box is reserved
+       before the first paint and the hero never shifts. */
+    aspect-ratio: 1;
+    max-width: 26rem;
+    margin-inline: auto;
+  }
+
+  .axis__plate {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .axis__orbit {
+    fill: none;
+    stroke: var(--hairline);
+    stroke-width: 1;
+  }
+
+  .axis__hub {
+    fill: var(--brass);
+  }
+
+  /* --- the sweep ---------------------------------------------------------- */
+
+  /*
+    Light crossing the hall.
+
+    A single band translated across the wheel and clipped to it, dark for most
+    of its cycle so it reads as an occasional pass rather than a metronome. The
+    wash is the brass one, because brass is the only accent this museum has.
+  */
+  .axis__sweep {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .axis__sweep i {
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    width: 34%;
+    background: linear-gradient(90deg, transparent, var(--brass-wash), transparent);
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: axis-sweep 54s var(--ease-standard) infinite;
+  }
+
+  @keyframes axis-sweep {
+    0% {
+      transform: translate3d(-120%, 0, 0);
+      opacity: 0;
+    }
+    6% {
+      opacity: 0.85;
+    }
+    26% {
+      opacity: 0.85;
+    }
+    32% {
+      transform: translate3d(400%, 0, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate3d(400%, 0, 0);
+      opacity: 0;
+    }
+  }
+
+  /* --- the turning ring --------------------------------------------------- */
+
+  .axis__ring {
+    position: absolute;
+    inset: 0;
+    will-change: transform;
+    animation: axis-turn var(--turn) linear infinite;
+  }
+
+  @keyframes axis-turn {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*
+    A node: a 44px target with a small dot at its centre.
+    The target is a fixed 44px at every box size, which is why the geometry
+    module reasons about the 390px case and stops there — it is the tightest.
+  */
+  .axis__node {
+    position: absolute;
+    width: var(--tap-min);
+    height: var(--tap-min);
+    margin: calc(var(--tap-min) / -2) 0 0 calc(var(--tap-min) / -2);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+  }
+
+  .axis__dot {
+    grid-area: 1 / 1;
+    width: var(--dot);
+    height: var(--dot);
+    border-radius: 50%;
+    background: var(--hue);
+  }
+
+  /*
+    The lamp.
+
+    A flat disc at low opacity, never a blur or a shadow: the design language
+    bans dark-mode glow, and a filter on ten elements is the one thing that
+    would cost this hero its frame budget. Low-opacity ink reads as a lamp in
+    Gallery and stays a lamp rather than neon in Night Gallery.
+  */
+  .axis__halo {
+    grid-area: 1 / 1;
+    width: var(--halo);
+    height: var(--halo);
+    border-radius: 50%;
+    background: var(--hue);
+    opacity: 0.14;
+    /* No `will-change` here: an animated opacity is promoted automatically, and
+       ten permanent compositor layers is memory a mid phone should not spend. */
+    animation: axis-breath var(--breath) ease-in-out infinite;
+    animation-delay: var(--breath-delay);
+  }
+
+  @keyframes axis-breath {
+    0%,
+    100% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 0.24;
+    }
+  }
+
+  .axis__node--shut .axis__dot,
+  .axis__node--shut .axis__halo {
+    /* A door that does not open yet says so by being quieter, not by hiding. */
+    opacity: 0.35;
+  }
+
+  @media (hover: hover) {
+    .axis__node:hover .axis__halo {
+      opacity: 0.4;
+    }
+  }
+
+  .axis__node:focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 2px;
+  }
+
+  /*
+    Anyone about to use a node gets a still target.
+
+    Three pixels a second is slow enough that a tap lands, but a link that never
+    stops moving is one an automated tool calls unstable and a shaky hand calls
+    unfair — Playwright's own click refuses to fire on it. So the ring holds
+    while a node has focus or a pointer is over it, and resumes from where it
+    stopped rather than restarting. Hover is gated on a real pointer: on touch,
+    `:hover` sticks after a tap and would freeze the wheel for good.
+  */
+  .axis__ring:focus-within {
+    animation-play-state: paused;
+  }
+
+  @media (hover: hover) {
+    .axis__ring:has(.axis__node:hover) {
+      animation-play-state: paused;
+    }
+  }
+
+  /* Battery: a tab nobody is looking at animates nothing. */
+  :global(html.is-tab-hidden) .axis__ring,
+  :global(html.is-tab-hidden) .axis__halo,
+  :global(html.is-tab-hidden) .axis__sweep i {
+    animation-play-state: paused;
+  }
+
+  /*
+    Reduced motion: the composed frame, held.
+
+    Not "slower" and not "hidden" — the wheel simply stands at the angle it was
+    authored at, which is a complete picture because the arrangement is fixed by
+    construction. The sweep is motion with no still equivalent, so it goes.
+  */
+  @media (prefers-reduced-motion: reduce) {
+    .axis__ring,
+    .axis__halo,
+    .axis__sweep i {
+      animation: none;
+    }
+
+    .axis__halo {
+      opacity: 0.17;
+    }
+
+    .axis__sweep {
+      display: none;
+    }
+  }
+</style>

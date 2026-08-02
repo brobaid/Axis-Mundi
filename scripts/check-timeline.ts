@@ -33,6 +33,14 @@ import {
 } from '../src/lib/timeline-model.js';
 import { displayDate } from '../src/lib/display-date.js';
 import {
+  AXIS_NODES,
+  HERO_MIN_BOX,
+  ORBIT_INNER,
+  ORBIT_OUTER,
+  TAP_MIN,
+  nodeSeparations,
+} from '../src/lib/hero-axis.js';
+import {
   CONTESTED_AT,
   CONTESTED_R,
   LABEL_AT,
@@ -338,6 +346,58 @@ for (const { name, drill, view } of SCENARIOS) {
   ok();
 }
 
+/* ── the entrance hall's axis ───────────────────────────────────────────── */
+
+/*
+  Ten doors on ten orbits, none of them within a thumb of another.
+
+  The hero's nodes are links to the dives, so each carries a 44px target, and
+  ten of those inside a 358px square only works because the wheel turns rigidly
+  — the angle between any two nodes is fixed at authoring time. Break that (give
+  the orbits their own speeds, or nudge the angular step to something rounder)
+  and pairs of nodes drift into each other until a reader aiming at Buddhism
+  lands on Sikhism. That failure appears minutes after load, on a phone, and
+  never in a diff. So the arithmetic is asserted here instead.
+*/
+{
+  if (AXIS_NODES.length !== 10) {
+    fail(`hero axis carries ${AXIS_NODES.length} nodes, not the launch ten`);
+  }
+  ok();
+
+  /* Every node on its own ray and its own orbit: two on one ray would sit on
+     the same line through the centre and read as one tradition eclipsing
+     another. */
+  const rays = new Set(AXIS_NODES.map((n) => n.angle));
+  if (rays.size !== AXIS_NODES.length) fail('hero axis puts two traditions on one ray');
+  const orbits = new Set(AXIS_NODES.map((n) => n.orbit.toFixed(6)));
+  if (orbits.size !== AXIS_NODES.length) fail('hero axis puts two traditions on one orbit');
+  ok();
+
+  /* The binding case is the narrowest box, because the targets are a fixed
+     44px at every width while the geometry scales with it. */
+  const separations = nodeSeparations(HERO_MIN_BOX);
+  const tightest = separations.reduce((a, b) => (b.distance < a.distance ? b : a));
+  if (tightest.distance < TAP_MIN) {
+    fail(
+      `hero axis at ${HERO_MIN_BOX}px: ${tightest.a} and ${tightest.b} sit ` +
+        `${tightest.distance.toFixed(1)}px apart, inside the ${TAP_MIN}px touch minimum`,
+    );
+  }
+  ok();
+
+  /* And the whole target has to be inside the box, not just its centre. */
+  const reach = ORBIT_OUTER * (HERO_MIN_BOX / 2) + TAP_MIN / 2;
+  if (reach > HERO_MIN_BOX / 2) {
+    fail(
+      `hero axis: the outermost node's target reaches ${reach.toFixed(1)}px from centre, ` +
+        `past the ${(HERO_MIN_BOX / 2).toFixed(1)}px edge of the box`,
+    );
+  }
+  if (ORBIT_INNER >= ORBIT_OUTER) fail('hero axis: the innermost orbit is not inside the outermost');
+  ok();
+}
+
 if (failures.length > 0) {
   console.error('\n  Canvas layout invariants FAILED\n');
   for (const f of failures) console.error(`      ${f}`);
@@ -345,7 +405,13 @@ if (failures.length > 0) {
   process.exit(1);
 }
 
+const tightestNode = nodeSeparations(HERO_MIN_BOX).reduce((a, b) =>
+  b.distance < a.distance ? b : a,
+);
+
 console.log(
   `  Canvas layout invariants passed — ${checks} groups across ${SCENARIOS.length} viewports, ` +
-    'tree axis labels clear at five widths.',
+    'tree axis labels clear at five widths, ' +
+    `hero nodes ${tightestNode.distance.toFixed(1)}px apart at ${HERO_MIN_BOX}px ` +
+    `against a ${TAP_MIN}px floor.`,
 );

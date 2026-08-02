@@ -300,6 +300,17 @@ const VAR_REF = /var\(\s*(--[\w-]+)/g;
 const VAR_DECL = /(--[\w-]+)\s*:/g;
 /* A property an island sets through the CSSOM never appears as a declaration. */
 const VAR_SET = /setProperty\(\s*['"`](--[\w-]+)/g;
+/*
+  And one Astro spells without the dashes.
+
+  `define:vars={{ turn: '300s' }}` emits `--turn: 300s` onto the component's
+  scope at render time, so the property is as defined as any in tokens.css —
+  but the source never contains the string `--turn:`, so the scan above cannot
+  see it and reports three false failures on a component that works. Read the
+  keys out of the block instead.
+*/
+const DEFINE_VARS = /define:vars=\{\{([\s\S]*?)\}\}/g;
+const OBJECT_KEY = /(?:^|[,{])\s*['"`]?([A-Za-z_$][\w$-]*)['"`]?\s*:/g;
 
 const declared = new Set<string>();
 const referenced = new Map<string, string>();
@@ -308,6 +319,11 @@ for (const file of walkSrc(resolve(root, 'src'))) {
   const text = readFileSync(file, 'utf8');
   for (const m of text.matchAll(VAR_DECL)) declared.add(m[1] as string);
   for (const m of text.matchAll(VAR_SET)) declared.add(m[1] as string);
+  for (const block of text.matchAll(DEFINE_VARS)) {
+    for (const key of (block[1] as string).matchAll(OBJECT_KEY)) {
+      declared.add(`--${key[1] as string}`);
+    }
+  }
   for (const m of text.matchAll(VAR_REF)) {
     const name = m[1] as string;
     if (!referenced.has(name)) {

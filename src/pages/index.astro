@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroAxis from '../components/HeroAxis.astro';
 import RoomPlaque from '../components/RoomPlaque.astro';
 import TraditionSymbols from '../components/TraditionSymbols.astro';
 import { TRADITIONS } from '../lib/traditions';
@@ -104,9 +105,12 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
   <TraditionSymbols />
 
   <section class="shell hero">
-    <RoomPlaque
-      lede="Timelines, maps and deep dives across ten traditions, drawn from academic sources, presented without a thumb on the scale."
-    />
+    <div class="hero__plaque">
+      <RoomPlaque
+        lede="Timelines, maps and deep dives across ten traditions, drawn from academic sources, presented without a thumb on the scale."
+      />
+    </div>
+    <HeroAxis />
   </section>
 
   <!--
@@ -248,8 +252,70 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
   /* --- hero --------------------------------------------------------------- */
 
   .hero {
-    max-width: 46rem;
     padding-block: var(--space-12) var(--space-2);
+    display: grid;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  /*
+    Two columns once there is room for two, and the plaque keeps its own measure
+    inside its column so the name never stretches to meet the wheel.
+  */
+  @media (min-width: 60rem) {
+    .hero {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
+      gap: var(--space-16);
+      align-items: center;
+    }
+  }
+
+  .hero__plaque {
+    max-width: 46rem;
+  }
+
+  /* The grid's gap is the whole distance to the wheel; the plaque's own bottom
+     margin would stack on top of it and open a hole at 390px. */
+  .hero__plaque :global(.plaque) {
+    margin-bottom: 0;
+  }
+
+  /*
+    The title settles in once, on first paint, and never again.
+
+    A fade and a short rise — opacity and transform, nothing that could move the
+    layout — on the whole plaque rather than line by line, because a staggered
+    entrance is a performance and this is a wall label.
+  */
+  .hero__plaque {
+    animation: hero-settle 900ms var(--ease-out) both;
+  }
+
+  @keyframes hero-settle {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* The fade only: the rise is motion, the fade is a dissolve. */
+  @media (prefers-reduced-motion: reduce) {
+    .hero__plaque {
+      animation: hero-fade 600ms var(--ease-out) both;
+    }
+
+    @keyframes hero-fade {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   }
 
   /* --- first-visit orientation ------------------------------------------- */
