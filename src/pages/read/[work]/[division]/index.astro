@@ -7,6 +7,7 @@ import ChapterContents from '../../../../components/ChapterContents.astro';
 import { getPublishable } from '../../../../lib/content';
 import {
   divisionHeading,
+  divisionIdentity,
   editionLines,
   type DivisionIndex,
   type ParallelBlock,
@@ -40,6 +41,10 @@ interface Props {
 }
 const { work, division } = Astro.props as Props;
 const heading = divisionHeading(work, division);
+/* The document title and the sitemap name the surah, not only cite it. The
+   heading itself is unchanged — anchors, verse refs and the copy-link control
+   are all built from it. */
+const identity = divisionIdentity(work, division);
 
 const sources = await getPublishable('sources');
 const sourceById = new Map(sources.map((s) => [s.data.id, s.data]));
@@ -78,7 +83,7 @@ const description =
       : `${heading} of ${work.title}, ${division.verses} verses, in editions named on the page.`;
 ---
 
-<BaseLayout title={`${heading} — ${work.title}`} description={description}>
+<BaseLayout title={`${identity.title} — ${work.title}`} description={description}>
   {
     division.chapters === undefined ? (
       <ReaderText

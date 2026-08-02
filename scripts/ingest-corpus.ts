@@ -204,6 +204,20 @@ interface Config {
   absent?: { divisions: number[]; note: string };
   /** A line one division's contents page carries, keyed by its slug. */
   division_notes?: Record<string, string>;
+  /**
+   * An owner-delivered sidecar naming the work's divisions.
+   *
+   * Separate from the corpus because it arrives separately: the paired text was
+   * delivered without names, and the names came later as their own commit. The
+   * ingest merges them by division number so a correction is one edit to one
+   * owner file and a re-run, never a hunt through a page template.
+   *
+   * The delivery's own keys are read as delivered — `name_ar`, `translit`,
+   * `name_en`, `type` — because a corpus JSON in /docs is the owner's format,
+   * not this client's payload. A future canon that keys them differently adds
+   * its mapping here.
+   */
+  division_names?: { file: string; key: string };
 }
 
 /* ── the corpora ────────────────────────────────────────────────────────── */
@@ -250,6 +264,10 @@ const CONFIGS: Record<string, Config> = {
       from: [1, 1],
       omitted: [9],
       omitted_note: 'At-Tawba is the one surah the mushaf does not open with the basmala.',
+    },
+    division_names: {
+      file: 'docs/corpora/quran/quran-surah-names.json',
+      key: 'surah_names',
     },
   },
   bible: {
@@ -655,10 +673,26 @@ interface ParallelSide {
   entries: { n: number; text: string }[];
 }
 
+interface DeliveredName {
+  n: number;
+  name_ar?: string;
+  name_original?: string;
+  translit?: string;
+  transliteration?: string;
+  name_en?: string;
+  name_gloss?: string;
+  /** Where a canon classifies its divisions — the Quran's Meccan / Medinan. */
+  type?: string;
+  /** The delivery's own count, cross-checked against the corpus at ingest. */
+  verses?: number;
+}
+
 interface Division {
   n: number;
   slug: string;
   name?: string;
+  transliteration?: string;
+  revelation?: string;
   /** A line this division's contents page carries, from the delivery. */
   note?: string;
   name_original?: string;
@@ -985,6 +1019,62 @@ function ingest(name: string, config: Config): void {
 
   const divisions = normalise(src, config);
 
+  /*
+    The names sidecar, merged in and cross-checked.
+
+    The delivery carries a verse count per division as well as the names, and
+    that is the point of reading it: two owner files describing the same canon
+    that disagree about how long surah 2 is means one of them is stale, and
+    the ingest is the only place that can see both. It fails rather than
+    picking a winner.
+  */
+  if (config.division_names !== undefined) {
+    const namesPath = resolve(ROOT, config.division_names.file);
+    const raw = JSON.parse(readFileSync(namesPath, 'utf8')) as Record<string, unknown>;
+    const rows = raw[config.division_names.key];
+    if (!Array.isArray(rows)) {
+      throw new Error(
+        `${config.division_names.file} has no "${config.division_names.key}" array to read names from`,
+      );
+    }
+    const byN = new Map<number, DeliveredName>(
+      (rows as DeliveredName[]).map((r) => [r.n, r]),
+    );
+
+    const unnamed: number[] = [];
+    const disagreements: string[] = [];
+    for (const d of divisions) {
+      const row = byN.get(d.n);
+      if (row === undefined) {
+        unnamed.push(d.n);
+        continue;
+      }
+      const original = row.name_ar ?? row.name_original;
+      const translit = row.translit ?? row.transliteration;
+      const gloss = row.name_en ?? row.name_gloss;
+      if (original !== undefined) d.name_original = original;
+      if (translit !== undefined) d.transliteration = translit;
+      if (gloss !== undefined) d.name_gloss = gloss;
+      if (row.type !== undefined) d.revelation = row.type;
+
+      if (row.verses !== undefined && row.verses !== d.all.length) {
+        disagreements.push(
+          `  division ${d.n}: the names file says ${row.verses} verses, the corpus carries ${d.all.length}`,
+        );
+      }
+    }
+
+    const extra = [...byN.keys()].filter((n) => !divisions.some((d) => d.n === n));
+    if (unnamed.length > 0 || extra.length > 0 || disagreements.length > 0) {
+      const lines = [`\n  ${config.division_names.file} does not agree with the corpus\n`];
+      if (unnamed.length > 0) lines.push(`  divisions with no name row: ${unnamed.join(', ')}`);
+      if (extra.length > 0) lines.push(`  name rows with no division: ${extra.join(', ')}`);
+      lines.push(...disagreements);
+      throw new Error(lines.join('\n'));
+    }
+    console.log(`  names   ${byN.size} divisions named, verse counts agree`);
+  }
+
   const index = divisions.map((d) => {
     /*
       A gap is a hole in a column this division otherwise carries.
@@ -1081,6 +1171,8 @@ function ingest(name: string, config: Config): void {
       ...(d.name === undefined ? {} : { name: d.name }),
       ...(d.name_original === undefined ? {} : { name_original: d.name_original }),
       ...(d.name_gloss === undefined ? {} : { name_gloss: d.name_gloss }),
+      ...(d.transliteration === undefined ? {} : { transliteration: d.transliteration }),
+      ...(d.revelation === undefined ? {} : { revelation: d.revelation }),
       ...(d.verse_from === undefined ? {} : { verse_from: d.verse_from }),
       ...(d.verse_to === undefined ? {} : { verse_to: d.verse_to }),
       /* A parallel division has no single verse count, so the index carries

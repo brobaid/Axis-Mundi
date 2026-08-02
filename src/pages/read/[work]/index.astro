@@ -4,6 +4,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getPublishable } from '../../../lib/content';
 import {
   divisionHeading,
+  divisionIdentity,
   grouped,
   langTag,
   parallelCounts,
@@ -199,16 +200,23 @@ const listed =
             </h2>
           )}
           <ol class="rd-contents__list" role="list">
-            {divisions.map((d) => (
+            {divisions.map((d) => {
+              const it = divisionIdentity(work, d);
+              return (
               <li>
                 <a class="rd-contents__item" href={`/read/${work.id}/${d.slug}`}>
                   {/* The numeral — but a division with no name of its own is
                       headed by its number already, and "1 Chapter 1" is the
                       same number twice. The cell stays, so the names below it
                       keep their column. */}
-                  <span class="rd-contents__n mono">{d.name === undefined ? '' : d.n}</span>
+                  <span class="rd-contents__n mono">
+                    {d.name === undefined && it.named === undefined ? '' : d.n}
+                  </span>
                   <span class="rd-contents__name">
-                    {divisionHeading(work, d)}
+                    {/* Where the canon names its divisions, the name leads and
+                        the citation is the numeral in the column beside it.
+                        Where it does not, the citation is all there is. */}
+                    {it.named === undefined && divisionHeading(work, d)}
                     {d.name_original !== undefined && (
                       <span
                         class="rd-contents__original"
@@ -218,6 +226,9 @@ const listed =
                       >
                         {d.name_original}
                       </span>
+                    )}
+                    {it.translit !== undefined && (
+                      <span class="rd-contents__translit">{it.translit}</span>
                     )}
                     {/* What the division's own name means, where the delivery
                         gave us a rendering of it. */}
@@ -248,7 +259,8 @@ const listed =
                   </span>
                 </a>
               </li>
-            ))}
+              );
+            })}
           </ol>
         </section>
       ))
@@ -377,9 +389,24 @@ const listed =
     flex: 1;
   }
 
+  /*
+    Where the canon names its divisions the row reads name-first, so the
+    original leads at full ink and loses the indent it carried when it was an
+    aside beside a citation.
+  */
   .rd-contents__original {
     margin-left: var(--space-2);
     color: var(--ink-soft);
+  }
+
+  .rd-contents__name:first-child > .rd-contents__original,
+  .rd-contents__original:first-child {
+    margin-left: 0;
+    color: var(--ink);
+  }
+
+  .rd-contents__translit {
+    margin-left: var(--space-2);
   }
 
   .rd-contents__gloss {

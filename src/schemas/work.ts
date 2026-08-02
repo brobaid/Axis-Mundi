@@ -131,6 +131,14 @@ export const divisionIndexEntry = z.object({
   verse_from: z.number().int().positive().optional(),
   verse_to: z.number().int().positive().optional(),
   transliteration: z.string().min(1).optional(),
+  /**
+   * How a canon classifies the division, where it classifies them at all.
+   *
+   * The Quran's surahs are Meccan or Medinan by where they were revealed, and
+   * a reader meeting surah 96 wants to know it is early. Delivered by the
+   * owner's names file; never inferred here.
+   */
+  revelation: z.enum(['meccan', 'medinan']).optional(),
   verses: z.number().int().nonnegative(),
   chapters: z.array(chapterIndexEntry).optional(),
   /**

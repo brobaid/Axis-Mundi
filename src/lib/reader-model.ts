@@ -39,6 +39,8 @@ export interface DivisionIndex {
   readonly verse_from?: number | undefined;
   readonly verse_to?: number | undefined;
   readonly transliteration?: string | undefined;
+  /** How the canon classifies this division, where it does. */
+  readonly revelation?: string | undefined;
   readonly verses: number;
   /** Present means the division is a contents page and its text is a level down. */
   readonly chapters?: readonly ChapterIndex[] | undefined;
@@ -322,6 +324,75 @@ export function divisionHeading(
   if (division.name !== undefined) return division.name;
   const label = work.division_label.charAt(0).toUpperCase() + work.division_label.slice(1);
   return `${label} ${division.n}`;
+}
+
+/**
+ * A division's full identity, for every place that shows one.
+ *
+ * The header, the contents page, the jump control, the document title and the
+ * sitemap all name a surah, and before this they named it five slightly
+ * different ways. One function now, reading the record the ingest wrote from
+ * the owner's names file, so a correction is one data edit and a re-run.
+ *
+ * `label` is deliberately unchanged and unchanging: it is what a verse
+ * reference, an aria-label and the copy-link control are built from, so
+ * "Surah 1" it stays whatever the surah is called. Routes and anchors are
+ * built from the slug and never touch any of this.
+ */
+export interface DivisionIdentity {
+  /** "Surah 1" — the citation, and what anchors and refs are made of. */
+  readonly label: string;
+  /** "Surah 1 · Meccan · 7 verses" — the eyebrow above the name. */
+  readonly meta: string;
+  /** The name in the canon's own script, where the record carries one. */
+  readonly original?: string | undefined;
+  /** "Al-Fatihah" */
+  readonly translit?: string | undefined;
+  /** "The Opener" */
+  readonly gloss?: string | undefined;
+  /** "Al-Fatihah — The Opener", or undefined where neither is known. */
+  readonly named?: string | undefined;
+  /** "Surah 1: Al-Fatihah" — for a document title and a sitemap entry. */
+  readonly title: string;
+}
+
+/** Meccan, not meccan: a classification is a proper noun on the page. */
+const titleCase = (s: string): string => s.charAt(0).toUpperCase() + s.slice(1);
+
+export function divisionIdentity(
+  work: Pick<WorkData, 'division_label'>,
+  division: Pick<
+    DivisionIndex,
+    'n' | 'name' | 'name_original' | 'name_gloss' | 'transliteration' | 'revelation' | 'verses'
+  >,
+): DivisionIdentity {
+  const label = divisionHeading(work, division);
+  const translit = division.transliteration;
+  const gloss = division.name_gloss;
+  const named =
+    translit === undefined
+      ? gloss
+      : gloss === undefined
+        ? translit
+        : `${translit} — ${gloss}`;
+
+  const meta = [
+    label,
+    division.revelation === undefined ? '' : titleCase(division.revelation),
+    `${division.verses} verses`,
+  ]
+    .filter((part) => part !== '')
+    .join(' · ');
+
+  return {
+    label,
+    meta,
+    original: division.name_original,
+    translit,
+    gloss,
+    named,
+    title: translit === undefined ? label : `${label}: ${translit}`,
+  };
 }
 
 /**
