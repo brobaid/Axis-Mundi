@@ -3,55 +3,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroAxis from '../components/HeroAxis.astro';
 import RoomPlaque from '../components/RoomPlaque.astro';
 import TraditionSymbols from '../components/TraditionSymbols.astro';
-import { TRADITIONS } from '../lib/traditions';
 import { getPublishable } from '../lib/content';
-import { heroLanes, heroWindow, heroYear, position, type HeroEvent } from '../lib/hero-strip';
 import OnThisDay from '../components/OnThisDay.astro';
 
 /**
  * The entrance hall (reference build's home screen).
  *
- * Three things and no more: the living timeline, the four doors, and the
- * curator's account of what this is. The foundation exhibits that stood here
- * through M0 — the token specimen, the pipeline ledger, the launch-ten roll —
- * were scaffolding for a build with nothing else to show. The timeline, the
- * map and the matrix are real now, so the ledger moved to the methodology page
- * where a reader goes to ask how the thing is made.
+ * Three things and no more: the axis, the four doors, and the curator's
+ * account of what this is.
+ *
+ * There used to be a fourth — a static preview strip of the timeline, which
+ * was the entrance's hero before the axis was built and went on rendering
+ * beneath it afterwards, so the hall had two. One hero. The strip's model
+ * (`src/lib/hero-strip.ts`) went with it rather than sitting unused.
  */
-
-const events = await getPublishable('events');
-
-/* One dot per tradition per event: a multi-tradition record genuinely belongs
-   in both lanes, exactly as it does on the timeline itself. */
-const heroEvents: HeroEvent[] = events.flatMap((entry) =>
-  entry.data.traditions.map((tradition) => ({
-    year: entry.data.year_start,
-    tradition,
-    importance: entry.data.importance,
-  })),
-);
-
-const window = heroWindow(heroEvents);
-const lanes = heroLanes(heroEvents, TRADITIONS, window);
-
-/* The meridian marks the middle of the window. A time cursor points at a year,
-   not at a claim, so it carries no assertion about what happened there. */
-const meridianYear = Math.round((window.from + window.to) / 2);
-const meridianAt = position(meridianYear, window);
-
-/* The axis names its two extents and nothing between them. Intermediate marks
-   would have to be absolutely positioned and centred, and at 390px the last two
-   collide — while the faint century rules already carry the interval, and the
-   meridian names the one year in the middle. An axis with its ends labelled is
-   also simply the plate convention. */
-const columns = Math.max(1, Math.round((window.to - window.from) / 100));
-
-/* The real span of the records, which is not the axis: the window rounds out to
-   whole centuries so the strip reads as an axis rather than as the extremes of
-   whatever happens to be sourced this week. */
-const years = heroEvents.map((e) => e.year);
-const firstYear = years.length === 0 ? window.from : Math.min(...years);
-const lastYear = years.length === 0 ? window.to : Math.max(...years);
 
 /* A door only opens onto a page that exists in this build. Deep dives are gated
    behind their own sourcing, so in production that door stays shut and says
@@ -94,8 +59,6 @@ const doors: Door[] = [
   },
 ];
 
-const eventCount = events.length;
-const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
 ---
 
 <BaseLayout
@@ -145,60 +108,7 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
     </div>
   </div>
 
-  <!-- The living timeline ------------------------------------------------- -->
-  <div class="strip-wrap">
-    <section class="strip" aria-labelledby="strip-heading" style={`--strip-cols:${columns}`}>
-      <h2 id="strip-heading" class="visually-hidden">Timeline preview</h2>
-
-      <div class="strip__lanes">
-        {
-          lanes.map((lane, laneIndex) => (
-            <div class="strip__lane" style={`--tradition-hue: var(--t-${lane.tradition})`}>
-              <span class="visually-hidden">
-                {lane.name}: {lane.dots.length} events in this build
-              </span>
-              {lane.dots.map((dot, dotIndex) => (
-                <i
-                  class={`strip__dot strip__dot--r${dot.importance}`}
-                  style={`left:${dot.x.toFixed(2)}%; --enter-delay:${(6 - dot.importance) * 30 + laneIndex * 20 + (dotIndex % 5) * 12}ms`}
-                  aria-hidden="true"
-                />
-              ))}
-            </div>
-          ))
-        }
-        <div
-          class="meridian strip__meridian"
-          style={`left:${meridianAt.toFixed(2)}%`}
-          aria-hidden="true"
-          title="One time cursor shared by every room"
-        >
-        </div>
-        <b class="strip__year mono" style={`left:${meridianAt.toFixed(2)}%`} aria-hidden="true">
-          {heroYear(meridianYear)}
-        </b>
-      </div>
-
-      <div class="strip__axis" aria-hidden="true">
-        <span class="mono">{heroYear(window.from)}</span>
-        <span class="mono">{heroYear(window.to)}</span>
-      </div>
-    </section>
-
-    <p class="strip__caption shell caption">
-      {eventCount} source-checked events across {traditionsWithEvents} of {TRADITIONS.length}
-      traditions, {heroYear(firstYear)} to {heroYear(lastYear)}.
-      {
-        /* This sentence existed because Sikhism's lane was empty. Every lane
-           carries events now, so it earns its place only if one empties again. */
-        traditionsWithEvents < TRADITIONS.length &&
-          ' An empty lane is a tradition whose events are still awaiting a source check, not a tradition without a history.'
-      }
-    </p>
-
-    <!-- Only when a record can answer today's date. -->
-    <OnThisDay />
-  </div>
+  <OnThisDay />
 
   <!-- The four doors ------------------------------------------------------ -->
   <section class="shell doors" aria-label="Rooms">
@@ -446,109 +356,6 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
   }
 
 
-  /* --- the living timeline ------------------------------------------------ */
-
-  .strip-wrap {
-    margin-top: var(--space-8);
-  }
-
-  .strip {
-    position: relative;
-    max-width: 61.25rem;
-    margin-inline: auto;
-    background: var(--surface);
-    border-block: var(--hairline-width) solid var(--hairline);
-    overflow: hidden;
-  }
-
-  .strip__lanes {
-    position: relative;
-    padding-block: var(--space-4);
-    /* The lane rhythm from the reference build: a faint column grid behind the
-       dots so the strip reads as an axis rather than as scattered marks. One
-       rule per century of the window, so the grid means something — a column is
-       a hundred years — rather than dividing the plate into an arbitrary twelve. */
-    background-image: repeating-linear-gradient(
-      to right,
-      transparent 0 calc(100% / var(--strip-cols) - 1px),
-      var(--hairline) calc(100% / var(--strip-cols) - 1px) calc(100% / var(--strip-cols))
-    );
-  }
-
-  .strip__lane {
-    position: relative;
-    height: 22px;
-  }
-
-  .strip__dot {
-    position: absolute;
-    top: 50%;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--tradition-hue);
-    translate: -50% -50%;
-    /* Events enter by importance rank (design language §7). */
-    animation: dot-in var(--dur-panel) var(--ease-out) backwards;
-    animation-delay: var(--enter-delay, 0ms);
-  }
-
-  /* Rank drives size, as it does on the timeline canvas. */
-  .strip__dot--r5 {
-    width: 9px;
-    height: 9px;
-  }
-
-  .strip__dot--r3 {
-    width: 6px;
-    height: 6px;
-  }
-
-  @keyframes dot-in {
-    from {
-      opacity: 0;
-      scale: 0.4;
-    }
-    to {
-      opacity: 1;
-      scale: 1;
-    }
-  }
-
-  .strip__meridian {
-    top: 0;
-    bottom: 0;
-    height: auto;
-  }
-
-  .strip__year {
-    position: absolute;
-    top: var(--space-1);
-    translate: -50% 0;
-    background: var(--brass);
-    color: var(--ink-inverse);
-    font-size: 10px;
-    font-weight: 500;
-    padding: 2px var(--space-2);
-    border-radius: var(--radius-xs);
-    white-space: nowrap;
-  }
-
-  .strip__axis {
-    display: flex;
-    justify-content: space-between;
-    padding: var(--space-1) var(--space-2);
-    border-top: var(--hairline-width) solid var(--hairline);
-    font-size: 10px;
-    color: var(--ink-soft);
-  }
-
-  .strip__caption {
-    display: block;
-    margin-top: var(--space-3);
-    max-width: 52rem;
-  }
-
   /* --- doors -------------------------------------------------------------- */
 
   .doors {
@@ -618,9 +425,4 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
     font-size: var(--size-small);
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .strip__dot {
-      animation: none;
-    }
-  }
 </style>
