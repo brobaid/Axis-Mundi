@@ -3,9 +3,10 @@
   "tradition": "hinduism",
   "title": "The Vedas",
   "order": 6,
-  "original": "Sanskrit, in Devanagari",
+  "original": "Sanskrit, in Devanagari with the vedic accents",
   "english": "Ralph Griffith's 1896 translation, public domain",
-  "status": "Acquiring, the Rigveda first, with the Upanishads to follow through the Sacred Books of the East. Griffith's English is dated, and the page will say so.",
+  "status": "Partly here. The Rigveda is on the shelves, and it opens the Vedic corpus without closing it: the Yajur, Sama and Atharva samhitas and the Upanishads all stand behind it, and the Hinduism dive's canon row covers more than this room yet holds.",
+  "partly_live": ["rigveda"],
   "canon_ids": ["vedas"],
   "sourcing": "editorial"
 }
