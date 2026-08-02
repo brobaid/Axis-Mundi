@@ -213,13 +213,18 @@ const showAdherentYear =
 ---
 
 <BaseLayout
+  tradition={dive.tradition}
   title={dive.name}
   description={`${dive.name}: ${dive.subtitle}. Structured deep dive across beliefs, texts, branches, practice and demographics.`}
 >
   <TraditionSymbols />
 
-  <article class="shell dd" data-tradition={dive.tradition}>
+  <article class="shell dd">
     <OrnamentDefs tradition={dive.tradition} />
+    {/* The field, behind everything and fixed: a courtyard does not scroll. */}
+    <div class="dd-world" aria-hidden="true">
+      <Ornament tradition={dive.tradition} piece="pattern" />
+    </div>
     <!-- masthead ------------------------------------------------------- -->
     <!--
       The header band is where the room's theme lives: a tinted paper, the
@@ -228,10 +233,14 @@ const showAdherentYear =
       below this band is the museum's standing paper and ink.
     -->
     <header class="dd-mast" style={`--tradition-hue: var(${meta.hueToken})`}>
-      <Ornament tradition={dive.tradition} piece="pattern" />
+      {/* Layer one: the field, deepening upward like light falling into a
+          courtyard. Layer two: the tradition's pattern across it. Layer three:
+          the corner work. The name is set over all three. */}
+      <div class="dd-mast__field" aria-hidden="true"></div>
+      <Ornament tradition={dive.tradition} piece="pattern" class="dd-mast__weave" />
       <div class="dd-mast__corners" aria-hidden="true">
-        <Ornament tradition={dive.tradition} piece="corner" size={28} />
-        <Ornament tradition={dive.tradition} piece="corner" size={28} class="dd-mast__corner--end" />
+        <Ornament tradition={dive.tradition} piece="corner" size={64} />
+        <Ornament tradition={dive.tradition} piece="corner" size={64} class="dd-mast__corner--end" />
       </div>
       <div class="dd-mast__body">
         <div class="dd-mast__id">
@@ -704,144 +713,200 @@ const showAdherentYear =
     max-width: 60rem;
   }
 
-  /* --- masthead --------------------------------------------------------- */
+  /* --- the world --------------------------------------------------------- */
 
   /*
-    The header band: the one surface in a dive that wears the room's theme.
+    A dive is not a page with a themed header; it is a room.
 
-    Tinted paper, the tradition's pattern behind it at whisper opacity, a corner
-    motif at each end. It bleeds to the shell's gutters so it reads as a band
-    across the wall rather than a card floating on it, and it is the last thing
-    on the page that is not the museum's own paper and ink — everything below
-    the band is `--ink` on `--canvas`, exactly as it is in every other room.
+    The field runs edge to edge behind everything, fixed rather than scrolled,
+    because a courtyard does not slide away when you read. The tradition's own
+    pattern lies across it at atmosphere strength — present enough to be felt,
+    never enough to be hunted for — and every panel of text floats on top.
+
+    The tokens under all of this are the museum's own, re-cut per tradition in
+    tokens.css, which is what lets every one of the 186 contrast contracts hold
+    inside each of the ten. `--world` is the single token that never carries
+    text, and the token gate asserts that separately.
+  */
+  .dd-world {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: var(--world);
+    pointer-events: none;
+  }
+
+  /*
+    The pattern on the field needs the field's own ink, not the panel's.
+
+    `--th-pattern` is cut to sit on paper; laid on a deep field at 5% it is
+    invisible, which is not atmosphere, it is nothing. The field's weave is the
+    band's light ink instead, at an opacity chosen to be felt rather than read.
+  */
+  .dd-world :global(.orn--pattern) {
+    color: var(--band-ink);
+    opacity: 0.09;
+  }
+
+  /* --- the gate ----------------------------------------------------------- */
+
+  /*
+    The header band: full bleed, layered, the tradition's name set into it like
+    an inscription cut into a gate rather than a title typed above a page.
+
+    Three layers under the lettering — a gradient of the field deepening
+    upward, the pattern woven across it at a stronger opacity than the room's
+    atmosphere, and the corner work at each end. The lettering itself is the
+    one text this museum sets on a deep field, so it has its own ink token and
+    its own contrast checks at both ends of the gradient.
   */
   .dd-mast {
     position: relative;
     isolation: isolate;
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
+    justify-content: flex-end;
+    min-height: 15rem;
     margin-bottom: var(--space-8);
-    background: var(--th-band);
-    border-block: var(--hairline-width) solid var(--th-rule);
-    padding: var(--space-6) var(--space-4);
-    /* Out to the gutters and no further: the shell's padding is 16px, 32px at
-       48rem, and the band is the full measure of the wall at both. */
-    margin-inline: calc(var(--space-4) * -1);
+    padding: var(--space-12) var(--space-4) var(--space-8);
+    /* Out past the shell to the viewport's own edges. */
+    margin-inline: calc(50% - 50vw);
+    padding-inline: max(var(--space-4), calc(50vw - 30rem + var(--space-4)));
+    overflow: hidden;
   }
 
   @media (min-width: 48rem) {
     .dd-mast {
-      margin-inline: calc(var(--space-8) * -1);
-      padding: var(--space-8);
+      min-height: 20rem;
+      padding-block: var(--space-16) var(--space-12);
     }
   }
 
-  .dd-mast__body {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
+  .dd-mast__field {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(to bottom, var(--world-deep), var(--world) 68%, var(--world));
   }
 
-  /* The symbol, the once-only mark, and Ik Onkar where that is the mark. */
-  .dd-mast__id {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-  }
-
-  .dd-mast__mark {
-    color: var(--th-accent);
+  /* The gate is where the pattern is read as pattern rather than felt as air. */
+  .dd-mast .dd-mast__weave {
+    z-index: 0;
+    color: var(--band-ink);
+    opacity: 0.16;
   }
 
   /*
-    Ik Onkar, set once, in the face the reading room already carries.
-    Calligraphy rather than a drawn shape, because that is what it is.
-  */
-  .dd-mast__onkar {
-    font-family: var(--font-gurmukhi);
-    font-size: 30px;
-    line-height: 1;
-    color: var(--th-accent);
-  }
-
-  /*
-    The corner motifs: one at each end of the band, the second mirrored so the
-    pair reads as a frame rather than as the same stamp twice.
+    The corner work, at the scale a gate wants rather than a card's.
+    Cropped by the band's own overflow, so it reads as carved into the corner
+    rather than sitting in it.
   */
   .dd-mast__corners {
     position: absolute;
-    inset: var(--space-3) var(--space-4);
+    inset: var(--space-4) var(--space-4) auto;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.75;
+    color: var(--band-ink);
+    opacity: 0.42;
+  }
+
+  @media (min-width: 48rem) {
+    .dd-mast__corners {
+      inset: var(--space-6) var(--space-8) auto;
+    }
   }
 
   .dd-mast__corner--end {
     transform: scaleX(-1);
   }
 
-  /* At 390px the band is too narrow to carry both corners beside the title. */
-  @media (max-width: 34rem) {
-    .dd-mast__corners {
-      justify-content: flex-end;
-    }
-
-    .dd-mast__corners :global(.orn--corner:first-child) {
-      display: none;
-    }
-  }
-
-  /* The RTL box must shrink to its text, or it stretches the full column and
-     the name drifts to the far right of the page, away from its own masthead. */
-  .dd-mast__script {
-    font-family: var(--font-arabic);
-    font-size: 40px;
-    line-height: 1.3;
-    color: var(--tradition-hue);
-    align-self: start;
-    width: fit-content;
+  .dd-mast__body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    color: var(--band-ink);
   }
 
   .dd-mast h1 {
+    color: var(--band-ink);
+    font-size: clamp(2.5rem, 9vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: 0.01em;
     margin: 0;
   }
 
   .dd-mast__sub {
-    color: var(--ink-soft);
-    font-size: var(--size-small);
+    color: var(--band-ink-soft);
+    font-size: var(--size-h3);
+    max-width: 44ch;
   }
 
-  .dd-stats {
-    max-width: 26rem;
-    margin-bottom: var(--space-6);
+  /* The symbol, the once-only mark, and Ik Onkar where that is the mark.
+     Sacred emblems keep their scale: once, small, in the header. */
+  .dd-mast__id {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-2);
   }
 
-  .dd-pending {
-    color: var(--ink-soft);
-    font-size: var(--size-small);
-    font-style: italic;
+  .dd-mast__mark {
+    color: var(--band-ink);
+  }
+
+  .dd-mast__onkar {
+    font-family: var(--font-gurmukhi);
+    font-size: 30px;
+    line-height: 1;
+    color: var(--band-ink);
+  }
+
+  .dd-mast__script {
+    font-family: var(--font-arabic);
+    font-size: 40px;
+    line-height: 1.3;
+    color: var(--band-ink-soft);
+    align-self: start;
+    width: fit-content;
   }
 
   /* --- section nav ------------------------------------------------------ */
 
+  /*
+    The section rail is a panel too, and that is structural rather than
+    decorative: nothing focusable in a dive sits on the bare field. A focus ring
+    cannot clear 3:1 against both a near-white panel and a mid-tone field —
+    Jainism's marble on stone is exactly that pair — so the guarantee is that a
+    control is never on the field to begin with.
+  */
   .dd-nav {
     position: sticky;
     top: 60px;
+    margin-top: var(--space-6);
     z-index: 10;
     display: flex;
     gap: var(--space-1);
     overflow-x: auto;
     background: var(--canvas);
-    border-bottom: var(--hairline-width) solid var(--hairline);
-    padding: var(--space-2) 0;
+    border: var(--hairline-width) solid var(--hairline-strong);
+    border-radius: var(--radius-s);
+    padding: var(--space-2) var(--space-3);
     margin-bottom: var(--space-6);
     scrollbar-width: thin;
+  }
+
+  /* The stat box and the devotional toggle float on the world too. */
+  .dd-stats,
+  :global(.dd .dv-toggle) {
+    background: var(--canvas);
+    border: var(--hairline-width) solid var(--hairline-strong);
+    border-radius: var(--radius-s);
+    padding: var(--space-4);
   }
 
   .dd-nav a {
@@ -872,17 +937,52 @@ const showAdherentYear =
     the neutral hairline every other room uses. It is drawn rather than
     bordered because a border cannot carry a quatrefoil.
   */
+  /*
+    A panel floating on the world.
+
+    This is the non-negotiable half of the brief made structural: everything a
+    reader reads sits on `--canvas`, which is the museum's paper tinted toward
+    the tradition and no further than legibility allows, and every one of the
+    186 contrast contracts is re-run against it per theme. The world is behind
+    the panel and never under a word of prose.
+  */
   .dd-section {
-    padding-block: var(--space-6);
+    position: relative;
+    background: var(--canvas);
+    border: var(--hairline-width) solid var(--hairline-strong);
+    border-radius: var(--radius-s);
+    padding: var(--space-6) var(--space-4);
+    margin-bottom: var(--space-6);
     scroll-margin-top: 120px;
   }
 
-  .dd-section--first {
-    padding-top: 0;
+  @media (min-width: 48rem) {
+    .dd-section {
+      padding: var(--space-8);
+    }
   }
 
+  .dd-section--first {
+    padding-top: var(--space-6);
+  }
+
+  @media (min-width: 48rem) {
+    .dd-section--first {
+      padding-top: var(--space-8);
+    }
+  }
+
+  /* Section headings in the theme's vocabulary: the tradition's own metal. */
+  .dd-section h2 {
+    color: var(--brass-ink);
+    margin-bottom: var(--space-4);
+  }
+
+  /* The divider opens the panel rather than separating two of them, so it sits
+     under the heading it belongs to. */
   .dd-rule {
     margin-bottom: var(--space-6);
+    opacity: 0.9;
   }
 
   .dd-section h2 {
@@ -1047,8 +1147,8 @@ const showAdherentYear =
   */
   .miscon {
     position: relative;
-    border: var(--hairline-width) solid var(--th-rule);
-    border-left: 3px solid var(--th-accent);
+    border: var(--hairline-width) solid var(--hairline-strong);
+    border-left: 3px solid var(--brass);
     padding: var(--space-4);
     margin-bottom: var(--space-4);
     background: var(--surface);
@@ -1081,23 +1181,14 @@ const showAdherentYear =
   /* --- link accents ----------------------------------------------------- */
 
   /*
-    Links inside a dive take the room's hue instead of brass.
+    Nothing here.
 
-    The one deviation from "brass is the only interface accent", and it is the
-    brief's: link-hue accents are named in the theme kit. It is scoped to the
-    dive's prose and lists — the top bar, the rooms rail, the glossary card and
-    every control keep brass, because those are the museum's furniture standing
-    in the room, not the room.
+    Links used to be re-coloured on the dive with a parallel token. They are
+    not any more, and that is the point of the second pass: inside a dive
+    `--brass` IS the tradition's metal, re-cut in tokens.css, so every link,
+    focus ring, active chip and rule on the page is already traditional without
+    a single selector asking for it. The top bar and the rooms rail are
+    themed by the same stroke, which is what "the sticky chrome lives in the
+    theme's vocabulary" asks for.
   */
-  .dd-section :global(a),
-  .dd-mast :global(a) {
-    color: var(--th-link);
-  }
-
-  @media (hover: hover) {
-    .dd-section :global(a:hover),
-    .dd-mast :global(a:hover) {
-      color: var(--th-rule);
-    }
-  }
 </style>

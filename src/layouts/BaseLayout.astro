@@ -60,6 +60,7 @@ import '@fontsource/noto-serif/latin-ext-400.css';
 import '../styles/tokens.css';
 import '../styles/base.css';
 
+import type { TraditionId } from '../schemas/primitives';
 import TopBar from '../components/TopBar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 
@@ -74,9 +75,17 @@ interface Props {
    * addresses exist.
    */
   noindex?: boolean;
+  /**
+   * The tradition whose world this page is in.
+   *
+   * On the document, not on an element inside it: a dive's field runs edge to
+   * edge and its sticky chrome is part of the room, so the theme has to be
+   * resolvable by `body` and by the top bar. Only the ten dives set it.
+   */
+  tradition?: TraditionId | undefined;
 }
 
-const { title, description, noindex = false } = Astro.props;
+const { title, description, noindex = false, tradition } = Astro.props;
 const fullTitle = title === 'Axis Mundi' ? title : `${title} — Axis Mundi`;
 
 /* Canonical and social URLs are absolute against the configured site. The card
@@ -92,7 +101,7 @@ const socialCard = new URL('/social-card.png', Astro.site).href;
 ---
 
 <!doctype html>
-<html lang="en" data-mode="gallery">
+<html lang="en" data-mode="gallery" data-tradition={tradition}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

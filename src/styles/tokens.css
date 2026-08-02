@@ -261,14 +261,10 @@
      tuned until each cleared its threshold against the canvas, a surface and its
      own band. The values are computed, not picked:
 
-       --th-band      the header band's paper — the canvas tinted with the
-                      tradition's chromatic mid-tone at 15%, and at 6% for
-                      Jainism, which the table asked to read as marble
        --th-rule      dividers and frames, >= 3:1 everywhere it is drawn
        --th-accent    the corner motifs and the once-only marks, >= 3:1
        --th-accent-ink the same hue where the accent has to carry *text* — the
                       Quran's recitation frame — cut deeper for 4.5:1
-       --th-link      links inside the dive, >= 4.5:1 on canvas, surface and band
        --th-pattern   the tile behind the band, drawn at --th-pattern-alpha
 
      The band is a light tint in Gallery for all ten, including the traditions
@@ -289,93 +285,283 @@
 }
 
   [data-tradition='islam'] {
-    --th-band: #d5e0d4;
     --th-rule: #0f5132;
-    --th-accent: #8a6d1f;
-    --th-accent-ink: #775e1b;
-    --th-link: #0f5132;
+    --th-accent: #a1833b;
+    --th-accent-ink: #7e672e;
     --th-pattern: #0e492d;
   }
 
   [data-tradition='christianity'] {
-    --th-band: #d9dee4;
     --th-rule: #1b3a6b;
-    --th-accent: #8a6d1f;
-    --th-accent-ink: #775e1b;
-    --th-link: #8f2233;
+    --th-accent: #a1833b;
+    --th-accent-ink: #7e672e;
     --th-pattern: #183460;
   }
 
   [data-tradition='judaism'] {
-    --th-band: #dcd7e2;
     --th-rule: #26356b;
-    --th-accent: #8a7250;
-    --th-accent-ink: #705c41;
-    --th-link: #26356b;
-    --th-pattern: #7c6748;
+    --th-accent: #9b8259;
+    --th-accent-ink: #7a6646;
+    --th-pattern: #223060;
   }
 
   [data-tradition='hinduism'] {
-    --th-band: #f4e1cb;
     --th-rule: #a83218;
-    --th-accent: #8a6d1f;
-    --th-accent-ink: #7c621c;
-    --th-link: #a83218;
-    --th-pattern: #af5709;
+    --th-accent: #a9832d;
+    --th-accent-ink: #866724;
+    --th-pattern: #972d16;
   }
 
   [data-tradition='buddhism'] {
-    --th-band: #efe3cd;
     --th-rule: #6b2226;
-    --th-accent: #8a6d1f;
-    --th-accent-ink: #7d631c;
-    --th-link: #6b2226;
-    --th-pattern: #975f13;
+    --th-accent: #a98330;
+    --th-accent-ink: #856726;
+    --th-pattern: #601f22;
   }
 
   [data-tradition='sikhism'] {
-    --th-band: #f4e3cb;
     --th-rule: #1c2a5e;
-    --th-accent: #c26a08;
-    --th-accent-ink: #9b5506;
-    --th-link: #1c2a5e;
+    --th-accent: #b08129;
+    --th-accent-ink: #8b6620;
     --th-pattern: #192655;
   }
 
   [data-tradition='chinese'] {
-    --th-band: #f0d6cf;
     --th-rule: #a8241c;
-    --th-accent: #8a6d1f;
-    --th-accent-ink: #765d1b;
-    --th-link: #a8241c;
-    --th-pattern: #27221d;
+    --th-accent: #a3822d;
+    --th-accent-ink: #806624;
+    --th-pattern: #972019;
   }
 
   [data-tradition='shinto'] {
-    --th-band: #f2dad0;
     --th-rule: #b83a26;
-    --th-accent: #8a7250;
-    --th-accent-ink: #735f43;
-    --th-link: #b23825;
+    --th-accent: #988568;
+    --th-accent-ink: #786952;
     --th-pattern: #a63422;
   }
 
   [data-tradition='jainism'] {
-    --th-band: #f3efe7;
     --th-rule: #a5202a;
-    --th-accent: #a5202a;
-    --th-accent-ink: #a5202a;
-    --th-link: #a5202a;
-    --th-pattern: #7c786c;
+    --th-accent: #c04552;
+    --th-accent-ink: #be4451;
+    --th-pattern: #951d26;
   }
 
   [data-tradition='zoroastrianism'] {
-    --th-band: #d7d8df;
     --th-rule: #9c2b22;
-    --th-accent: #b06a10;
-    --th-accent-ink: #88520c;
-    --th-link: #9c2b22;
-    --th-pattern: #171d32;
+    --th-accent: #b97724;
+    --th-accent-ink: #925e1c;
+    --th-pattern: #8c271f;
+  }
+
+
+  /* ---------------------------------------------------------------------------
+     THE WORLDS (Phase 6C, second pass)
+
+     Frame-level ornament is overridden. Entering a dive is entering the
+     tradition, so a dive redefines the museum's own tokens rather than adding a
+     parallel set beside them — which is what makes the guarantee possible:
+     every one of the 186 contrast contracts above is re-run against each of
+     these ten, in all three contexts, and they mean exactly what they always
+     meant.
+
+     The shape that allows it:
+
+       --world       the deep field, edge to edge. NEVER carries text. This is
+                     the only token here the reader never reads on, and the
+                     gate asserts it never backs prose.
+       --canvas      the panel a reader reads on — paper-warm in gallery, lit
+                     at night — tinted toward the tradition and no further than
+                     legibility allows.
+       --surface     a card raised off that panel.
+       --brass*      brass is the tradition's own metal inside a dive. Links and
+                     accents are fully traditional; the museum's ochre is what
+                     the rest of the building uses.
+
+     Scoped to `html[data-tradition]`, not to `[data-tradition]`: the Reading
+     Room's Quran pages set the attribute on their article to reach the
+     ornament tokens for the recitation frame, and they are not worlds. Only a
+     dive puts it on the document.
+     --------------------------------------------------------------------------- */
+
+  html[data-tradition='islam'] {
+    --world: #0b3f28;
+    --world-deep: #062517;
+    --band-ink: #accec0;
+    --band-ink-soft: #81a797;
+    --canvas: #eaece3;
+    --surface: #f3f5f0;
+    --surface-sunken: #e3e3d7;
+    --hairline: #a4bda8;
+    --hairline-strong: #12734a;
+    --brass: #9a7d39;
+    --brass-ink: #76602c;
+    --brass-hover: #5e4d23;
+    --brass-wash: #e5e0cb;
+    --contested-hatch: #6b6357;
+    --focus-ring: #9a7d39;
+  }
+
+  html[data-tradition='christianity'] {
+    --world: #152c53;
+    --world-deep: #0c1a30;
+    --band-ink: #a2bbde;
+    --band-ink-soft: #7d95b9;
+    --canvas: #ecebe9;
+    --surface: #f5f5f4;
+    --surface-sunken: #e4e2dd;
+    --hairline: #adb9c8;
+    --hairline-strong: #2f66b5;
+    --brass: #9a7d39;
+    --brass-ink: #77612c;
+    --brass-hover: #5f4e23;
+    --brass-wash: #e6e0d0;
+    --contested-hatch: #6b6357;
+    --focus-ring: #9a7d39;
+  }
+
+  html[data-tradition='judaism'] {
+    --world: #1d1a4a;
+    --world-deep: #110f2b;
+    --band-ink: #aba5d8;
+    --band-ink-soft: #8782b4;
+    --canvas: #ede9e8;
+    --surface: #f5f3f4;
+    --surface-sunken: #e6dfdc;
+    --hairline: #b3abc4;
+    --hairline-strong: #4438a8;
+    --brass: #957c56;
+    --brass-ink: #725f42;
+    --brass-hover: #5b4c35;
+    --brass-wash: #e5dcd4;
+    --contested-hatch: #6b6357;
+    --focus-ring: #957c56;
+  }
+
+  html[data-tradition='hinduism'] {
+    --world: #5c2408;
+    --world-deep: #351505;
+    --band-ink: #efba83;
+    --band-ink-soft: #c89262;
+    --canvas: #f6ece0;
+    --surface: #fcf6ee;
+    --surface-sunken: #eee3d4;
+    --hairline: #e2bf97;
+    --hairline-strong: #c46c10;
+    --brass: #a17d2b;
+    --brass-ink: #7e6122;
+    --brass-hover: #654e1b;
+    --brass-wash: #f1e1c5;
+    --contested-hatch: #6b6357;
+    --focus-ring: #a17d2b;
+  }
+
+  html[data-tradition='buddhism'] {
+    --world: #4a1a1d;
+    --world-deep: #2b0f11;
+    --band-ink: #dbb67a;
+    --band-ink-soft: #b1895f;
+    --canvas: #f4ede1;
+    --surface: #fbf6ee;
+    --surface-sunken: #ede4d4;
+    --hairline: #d9c29b;
+    --hairline-strong: #af781c;
+    --brass: #a17d2e;
+    --brass-ink: #7d6124;
+    --brass-hover: #644e1d;
+    --brass-wash: #efe1c7;
+    --contested-hatch: #6b6357;
+    --focus-ring: #a17d2e;
+  }
+
+  html[data-tradition='sikhism'] {
+    --world: #16204a;
+    --world-deep: #0d132b;
+    --band-ink: #edb971;
+    --band-ink-soft: #a38464;
+    --canvas: #f6ede0;
+    --surface: #fcf6ed;
+    --surface-sunken: #eee4d4;
+    --hairline: #e2c396;
+    --hairline-strong: #ba730d;
+    --brass: #a87b27;
+    --brass-ink: #815f1e;
+    --brass-hover: #674c18;
+    --brass-wash: #f2e1c4;
+    --contested-hatch: #6b6357;
+    --focus-ring: #a87b27;
+  }
+
+  html[data-tradition='chinese'] {
+    --world: #4d1512;
+    --world-deep: #2d0c0a;
+    --band-ink: #e6a39e;
+    --band-ink-soft: #be7e7a;
+    --canvas: #f4e8e1;
+    --surface: #fbf3ef;
+    --surface-sunken: #eddfd5;
+    --hairline: #dbaa9e;
+    --hairline-strong: #c9342a;
+    --brass: #9c7c2b;
+    --brass-ink: #796022;
+    --brass-hover: #614d1b;
+    --brass-wash: #eeddc6;
+    --contested-hatch: #6b6357;
+    --focus-ring: #9c7c2b;
+  }
+
+  html[data-tradition='shinto'] {
+    --world: #5a1c12;
+    --world-deep: #34100a;
+    --band-ink: #edafa4;
+    --band-ink-soft: #c7897e;
+    --canvas: #f5eae2;
+    --surface: #fbf4ef;
+    --surface-sunken: #eee0d5;
+    --hairline: #dfb0a0;
+    --hairline-strong: #d64a30;
+    --brass: #907e63;
+    --brass-ink: #71634e;
+    --brass-hover: #5a4f3e;
+    --brass-wash: #eee1d4;
+    --contested-hatch: #6b6357;
+    --focus-ring: #907e63;
+  }
+
+  html[data-tradition='jainism'] {
+    --world: #4a4640;
+    --world-deep: #2b2925;
+    --band-ink: #e2dfd8;
+    --band-ink-soft: #b7b4ad;
+    --canvas: #f5f1ea;
+    --surface: #fcfaf5;
+    --surface-sunken: #eee8dd;
+    --hairline: #d6cfc2;
+    --hairline-strong: #8b8579;
+    --brass: #c04552;
+    --brass-ink: #a53b47;
+    --brass-hover: #842f39;
+    --brass-wash: #edd5d2;
+    --contested-hatch: #6b6357;
+    --focus-ring: #c04552;
+  }
+
+  html[data-tradition='zoroastrianism'] {
+    --world: #101733;
+    --world-deep: #090d1e;
+    --band-ink: #93a3cd;
+    --band-ink-soft: #7381a7;
+    --canvas: #ebe9e7;
+    --surface: #f4f3f3;
+    --surface-sunken: #e4e0db;
+    --hairline: #a8adbf;
+    --hairline-strong: #1f3f96;
+    --brass: #b17222;
+    --brass-ink: #86561a;
+    --brass-hover: #6b4515;
+    --brass-wash: #e8dac9;
+    --contested-hatch: #6b6357;
+    --focus-ring: #b17222;
   }
 
 /* =============================================================================
@@ -484,94 +670,266 @@
   }
 
     [data-mode='night-gallery'] [data-tradition='islam'] {
-      --th-band: #142519;
-      --th-rule: #41765d;
-      --th-accent: #8a6d1f;
-      --th-accent-ink: #9e8645;
-      --th-link: #68917e;
-      --th-pattern: #93b1a3;
+      --th-rule: #52826b;
+      --th-accent: #c9a44a;
+      --th-accent-ink: #c9a44a;
+      --th-pattern: #9fb9ad;
     }
 
     [data-mode='night-gallery'] [data-tradition='christianity'] {
-      --th-band: #19222f;
-      --th-rule: #566d91;
-      --th-accent: #8a6d1f;
-      --th-accent-ink: #9e8645;
-      --th-link: #ba7681;
-      --th-pattern: #98a6bc;
+      --th-rule: #657a9b;
+      --th-accent: #c9a44a;
+      --th-accent-ink: #c9a44a;
+      --th-pattern: #a4b0c4;
     }
 
     [data-mode='night-gallery'] [data-tradition='judaism'] {
-      --th-band: #1e192c;
-      --th-rule: #5a658f;
-      --th-accent: #8a7250;
-      --th-accent-ink: #968062;
-      --th-link: #7b84a5;
-      --th-pattern: #cac0b0;
+      --th-rule: #6b759a;
+      --th-accent: #b89a6a;
+      --th-accent-ink: #b89a6a;
+      --th-pattern: #a8aec4;
     }
 
     [data-mode='night-gallery'] [data-tradition='hinduism'] {
-      --th-band: #3d260e;
-      --th-rule: #b85742;
-      --th-accent: #8c7023;
-      --th-accent-ink: #a69055;
-      --th-link: #c98070;
-      --th-pattern: #e4b891;
+      --th-rule: #bd624f;
+      --th-accent: #d9a83a;
+      --th-accent-ink: #d9a83a;
+      --th-pattern: #dcada3;
     }
 
     [data-mode='night-gallery'] [data-tradition='buddhism'] {
-      --th-band: #372811;
-      --th-rule: #996769;
-      --th-accent: #8c7023;
-      --th-accent-ink: #a58f52;
-      --th-link: #af888a;
-      --th-pattern: #d8bc96;
+      --th-rule: #9f7072;
+      --th-accent: #d2a33c;
+      --th-accent-ink: #d2a33c;
+      --th-pattern: #c4a7a8;
     }
 
     [data-mode='night-gallery'] [data-tradition='sikhism'] {
-      --th-band: #3d290e;
-      --th-rule: #6b7596;
-      --th-accent: #c26a08;
-      --th-accent-ink: #cc8331;
-      --th-link: #8e95af;
-      --th-pattern: #999fb7;
+      --th-rule: #737c9c;
+      --th-accent: #e0a534;
+      --th-accent-ink: #e0a534;
+      --th-pattern: #a4aabf;
     }
 
     [data-mode='night-gallery'] [data-tradition='chinese'] {
-      --th-band: #381813;
-      --th-rule: #b64740;
-      --th-accent: #8a6d1f;
-      --th-accent-ink: #9e8645;
-      --th-link: #c6716b;
-      --th-pattern: #a09d9b;
+      --th-rule: #bd5952;
+      --th-accent: #d0a63a;
+      --th-accent-ink: #d0a63a;
+      --th-pattern: #dca7a4;
     }
 
     [data-mode='night-gallery'] [data-tradition='shinto'] {
-      --th-band: #3b1c14;
-      --th-rule: #bd4835;
-      --th-accent: #8a7250;
-      --th-accent-ink: #9c886b;
-      --th-link: #cd7365;
-      --th-pattern: #dfa69d;
+      --th-rule: #c35948;
+      --th-accent: #c9b08a;
+      --th-accent-ink: #c9b08a;
+      --th-pattern: #e3b0a8;
     }
 
     [data-mode='night-gallery'] [data-tradition='jainism'] {
-      --th-band: #24211c;
-      --th-rule: #b54850;
-      --th-accent: #b54850;
-      --th-accent-ink: #c56f76;
-      --th-link: #c57077;
-      --th-pattern: #cac8c2;
+      --th-rule: #be5e65;
+      --th-accent: #c65863;
+      --th-accent-ink: #d5838b;
+      --th-pattern: #dba6aa;
     }
 
     [data-mode='night-gallery'] [data-tradition='zoroastrianism'] {
-      --th-band: #161a28;
-      --th-rule: #a9473f;
-      --th-accent: #b06a10;
-      --th-accent-ink: #b67521;
-      --th-link: #bb6d67;
-      --th-pattern: #989ba5;
+      --th-rule: #b35c55;
+      --th-accent: #d98c2a;
+      --th-accent-ink: #d98c2a;
+      --th-pattern: #d7aaa7;
     }
+
+    /*
+      The worlds after dark: re-lit, not dimmed.
+
+      The field keeps its hue and the panels are lit above it. A pass that
+      solved for the field instead — darkening it until the panel cleared —
+      bottomed every one of them out near #010302, and ten worlds became one
+      black. `--ink-soft` is re-cut here because a lit panel is several times
+      brighter than the untinted site's and the museum's night secondary ink
+      fell to 3.7:1 on it.
+    */
+
+    html[data-mode='night-gallery'][data-tradition='islam'] {
+      --world: #030f0a;
+      --world-deep: #020806;
+      --band-ink: #72ac93;
+      --band-ink-soft: #55836f;
+      --canvas: #252822;
+      --surface: #2c312a;
+      --surface-sunken: #141610;
+      --hairline: #28392b;
+      --hairline-strong: #338763;
+      --brass: #c9a44a;
+      --brass-ink: #c9a44a;
+      --brass-hover: #d5b872;
+      --brass-wash: #3c3928;
+      --contested-hatch: #c9c2b6;
+      --focus-ring: #c9a44a;
+    }
+
+    html[data-mode='night-gallery'][data-tradition='christianity'] {
+      --world: #060d19;
+      --world-deep: #03070e;
+      --band-ink: #83a4d3;
+      --band-ink-soft: #627ca2;
+      --canvas: #272729;
+      --surface: #2f3033;
+      --surface-sunken: #151616;
+      --hairline: #2e3642;
+      --hairline-strong: #4a7abe;
+      --brass: #c9a44a;
+      --brass-ink: #c9a44a;
+      --brass-hover: #d5b872;
+      --brass-wash: #3e392e;
+      --contested-hatch: #c9c2b6;
+      --focus-ring: #c9a44a;
+    }
+
+    html[data-mode='night-gallery'][data-tradition='judaism'] {
+      --world: #080815;
+      --world-deep: #04040c;
+      --band-ink: #9993d0;
+      --band-ink-soft: #7873a5;
+      --canvas: #282428;
+      --surface: #302c31;
+      --surface-sunken: #171316;
+      --hairline: #332c3f;
+      --hairline-strong: #756cbf;
+      --brass: #b89a6a;
+      --brass-ink: #b89a6a;
+      --brass-hover: #c8b08b;
+      --brass-wash: #3c3531;
+      --contested-hatch: #c9c2b6;
+      --focus-ring: #b89a6a;
+    }
+
+    html[data-mode='night-gallery'][data-tradition='hinduism'] {
+      --world: #210d03;
+      --world-deep: #120702;
+      --band-ink: #edb072;
+      --band-ink-soft: #a27449;
+      --canvas: #33281e;
+      --surface: #3d3126;
+      --surface-sunken: #1f170d;
+      --hairline: #553a1e;
+      --hairline-strong: #e07b12;
+      --brass: #d9a83a;
+      --brass-ink: #d9a83a;
+      --brass-hover: #e1bb65;
+      --brass-wash: #4a3a22;
+      --contested-hatch: #c9c2b6;
+      --focus-ring: #d9a83a;
+    }
+
+    html[data-mode='night-gallery'][data-tradition='buddhism'] {
+      --world: #220c0d;
+      --world-deep: #130707;
+      --band-ink: #dbb67a;
+      --band-ink-soft: #977752;
+      --canvas: #31291f;
+      --surface: #3a3227;
+      --surface-sunken: #1e170e;
+      --hairline: #4f3c21;
+      --hairline-strong: #c2851f;
+      --brass: #d2a33c;
+      --brass-ink: #d2a33c;
+      --brass-hover: #dcb767;
+      --brass-wash: #483a23;
+      --contested-hatch: #c9c2b6;
+      --focus-ring: #d2a33c;
+    }
+
+    html[data-mode='night-gallery'][data-tradition='sikhism'] {
+      --world: #0c1229;
+      --world-deep: #070a17;
+      --band-ink: #edb971;
+      --band-ink-soft: #967955;
+      --canvas: #33291e;
+      --surface: #3d3226;
+      --surface-sunken: #1f180d;
+      --hairline: #553e1e;
+      --hairline-strong: #e08a10;
+      --brass: #e0a534;
+      --brass-ink: #e0a534;
+      --brass-hover: #e7b961;
+      --brass-wash: #4b3a21;
+      --contested-hatch: #c9c2b6;
+      --focus-ring: #e0a534;
+    }
+
+    html[data-mode='night-gallery'][data-tradition='chinese'] {
+      --world: #170605;
+      --world-deep: #0d0303;
+      --band-ink: #df8680;
+      --band-ink-soft: #ad6661;
+      --canvas: #31231f;
+      --surface: #3b2b27;
+      --surface-sunken: #1e130f;
+      --hairline: #502b24;
+      --hairline-strong: #cf4a41;
+      --brass: #d0a63a;
+      --brass-ink: #d0a63a;
+      --brass-hover: #daba65;
+      --brass-wash: #473523;
+      --contested-hatch: #c9c2b6;
+      --focus-ring: #d0a63a;
+    }
+
+    html[data-mode='night-gallery'][data-tradition='shinto'] {
+      --world: #1e0906;
+      --world-deep: #110503;
+      --band-ink: #e79384;
+      --band-ink-soft: #ab6a5e;
+      --canvas: #32261f;
+      --surface: #3c2e27;
+      --surface-sunken: #1f140f;
+      --hairline: #532f25;
+      --hairline-strong: #d64a30;
+      --brass: #c9b08a;
+      --brass-ink: #c9b08a;
+      --brass-hover: #d5c1a4;
+      --brass-wash: #47392e;
+      --contested-hatch: #c9c2b6;
+      --focus-ring: #c9b08a;
+    }
+
+    html[data-mode='night-gallery'][data-tradition='jainism'] {
+      --world: #100f0e;
+      --world-deep: #090808;
+      --band-ink: #d5d0c6;
+      --band-ink-soft: #7e7b75;
+      --canvas: #2c2823;
+      --surface: #36322d;
+      --surface-sunken: #181511;
+      --hairline: #4c463e;
+      --hairline-strong: #b8b0a0;
+      --brass: #c65863;
+      --brass-ink: #d5838b;
+      --brass-hover: #de9ea5;
+      --brass-wash: #412c2a;
+      --contested-hatch: #c9c2b6;
+      --focus-ring: #c65863;
+    }
+
+    html[data-mode='night-gallery'][data-tradition='zoroastrianism'] {
+      --world: #050710;
+      --world-deep: #030409;
+      --band-ink: #8798c7;
+      --band-ink-soft: #69779d;
+      --canvas: #262427;
+      --surface: #2e2c30;
+      --surface-sunken: #151415;
+      --hairline: #2b2d3c;
+      --hairline-strong: #5c73b3;
+      --brass: #d98c2a;
+      --brass-ink: #d98c2a;
+      --brass-hover: #e1a559;
+      --brass-wash: #3f3327;
+      --contested-hatch: #c9c2b6;
+      --focus-ring: #d98c2a;
+    }
+
 }
 
 /* =============================================================================
@@ -617,11 +975,9 @@
     ink because a section divider is structure, not decoration.
   */
   [data-tradition] {
-    --th-band: #ffffff;
     --th-rule: #6b6357;
     --th-accent: #6b6357;
     --th-accent-ink: #46403a;
-    --th-link: #211d18;
     --th-pattern: #ffffff;
     --th-pattern-alpha: 0;
   }

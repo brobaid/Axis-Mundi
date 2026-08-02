@@ -430,21 +430,67 @@ for (const mode of MODES) {
   something the design intends to be almost invisible.
 */
 const THEME_CHECKS: readonly Check[] = [
-  { fg: '--ink', bg: '--th-band', min: 4.5, why: 'the dive title on its header band' },
-  { fg: '--ink-soft', bg: '--th-band', min: 4.5, why: 'the dive subtitle on its header band' },
-  { fg: '--th-link', bg: '--canvas', min: 4.5, why: 'a themed link in the dive' },
-  { fg: '--th-link', bg: '--surface', min: 4.5, why: 'a themed link on a card' },
-  { fg: '--th-link', bg: '--th-band', min: 4.5, why: 'a themed link inside the band' },
-  { fg: '--th-rule', bg: '--canvas', min: 3, why: 'the section divider on the page' },
-  { fg: '--th-rule', bg: '--th-band', min: 3, why: "the band's own edge" },
-  { fg: '--th-accent', bg: '--canvas', min: 3, why: 'a corner motif over the page' },
-  { fg: '--th-accent', bg: '--th-band', min: 3, why: 'a corner motif on the band' },
-  /* The accent carries text in exactly one place — the Quran's recitation
-     frame — so it has a second, deeper cut held to the text threshold rather
-     than the graphical one. */
+  /*
+    What is left of the ornament vocabulary after the second pass.
+
+    `--th-band` and `--th-link` are gone: the header band is the world now, and
+    a dive's links are the theme's own re-cut `--brass-ink`, which the 186
+    already cover. These four are the ornament kit's ink, and they are checked
+    against the panels they are drawn on.
+  */
+  { fg: '--th-rule', bg: '--canvas', min: 3, why: 'the section divider on a panel' },
+  { fg: '--th-accent', bg: '--canvas', min: 3, why: 'a corner motif on a panel' },
   { fg: '--th-accent-ink', bg: '--canvas', min: 4.5, why: 'the recitation frame on the page' },
   { fg: '--th-accent-ink', bg: '--surface', min: 4.5, why: 'the accent as text on a card' },
-  { fg: '--th-accent-ink', bg: '--th-band', min: 4.5, why: 'the accent as text on the band' },
+];
+
+/*
+  The deep field's own contracts.
+
+  `--world` never carries text, so it is held to no text threshold — and that
+  absence is the point, which is why the containment check below asserts it
+  never backs prose rather than trusting this list to have caught it.
+
+  What it must do is bound the panel floating on it. Which thing carries that
+  boundary differs by mode: in gallery the panel is paper on a deep field and
+  its own fill separates at ten to one; at night the panel is a lift of about
+  1.7:1 and its border is the edge. Requiring the fill to clear 3:1 in both is
+  not merely strict, it is unsatisfiable at night — a panel light enough to
+  clear 3:1 above any achievable dark field is a panel too light to be night
+  mode. So the check is on whichever of the two is doing the work.
+*/
+const WORLD_CHECKS: readonly Check[] = [
+  /*
+    1.25, not 3 and not 1.5.
+
+    At the luminance a dark panel actually sits at, the 0.05 offset in the
+    contrast formula dominates and no achievable field is even 1.15:1 below it
+    — solved, not guessed. So the fill is asked only to read as lifted, and the
+    panel's border carries the boundary, which is what SC 1.4.11 asks of a
+    boundary anyway. In gallery the fill clears this ten times over.
+  */
+  { fg: '--canvas', bg: '--world', min: 1.25, why: 'a panel has to read as lifted off its field' },
+  /*
+    No focus-ring-on-world check, deliberately.
+
+    It cannot exist. One colour cannot clear 3:1 against both a near-white panel
+    and a mid-tone field, and Jainism has exactly that pair — marble panels on
+    stone, which is the palette the owner's table specifies. Proved rather than
+    assumed: a ring clearing 3:1 off Jainism's paper needs luminance at or below
+    0.283, and clearing 3:1 off its field needs 0.304 or above.
+
+    So the requirement moves to where it can be met: nothing focusable sits on
+    the bare field. Every control in a dive is inside a panel, and the panel's
+    own `--focus-ring on --canvas` and `on --surface` checks above are what
+    guarantee it. The containment check asserts the structural half.
+  */
+  /* The header band IS the world, so its lettering is the one text this museum
+     sets on a deep field, and it is held to the body threshold across the whole
+     gradient — both ends of it, because the inscription crosses both. */
+  { fg: '--band-ink', bg: '--world', min: 4.5, why: 'the inscription on the gate' },
+  { fg: '--band-ink', bg: '--world-deep', min: 4.5, why: 'the inscription, deep end' },
+  { fg: '--band-ink-soft', bg: '--world', min: 4.5, why: "the band's secondary line" },
+  { fg: '--band-ink-soft', bg: '--world-deep', min: 4.5, why: "the band's secondary line, deep end" },
 ];
 
 /**
@@ -469,6 +515,10 @@ function resolveTheme(
       /\[data-tradition\](?!=)/.test(block.selector);
     if (!forThis) continue;
 
+    /* A night world block is written `html[data-mode='night-gallery'][data-tradition=…]`
+       — the mode attribute and the tradition attribute are on the same element,
+       which is the document. */
+
     /* Same cascade rule as the base modes: gallery takes only the blocks that
        are not night-scoped; night and print take the light ones first and let
        anything later win. */
@@ -481,9 +531,21 @@ function resolveTheme(
   return out;
 }
 
+/*
+  Every contract, ten more times.
+
+  Not a theme-specific subset: a dive redefines the museum's own tokens, so the
+  186 the untinted site meets have to hold inside each of the ten worlds as
+  well, in all three contexts. That is what makes "entering a tradition
+  entirely" compatible with "body text sits on legible reading surfaces" —
+  the surfaces are re-tinted, and every promise made about them still holds.
+*/
 for (const mode of MODES) {
   for (const tradition of TRADITIONS) {
-    audit(resolveTheme(blocks, mode, tradition), mode, THEME_CHECKS, tradition);
+    const vars = resolveTheme(blocks, mode, tradition);
+    audit(vars, mode, CHECKS, tradition);
+    audit(vars, mode, THEME_CHECKS, tradition);
+    audit(vars, mode, WORLD_CHECKS, tradition);
   }
 }
 
@@ -506,61 +568,38 @@ if (failures.length > 0) {
 /* -------------------------------------------------------------------------- */
 
 /*
-  The standing constraint of this phase, made checkable.
+  The standing constraint, made checkable — and inverted by the second pass.
 
-  "Ornament lives in the frame; content surfaces keep the standing paper-and-ink
-  tokens and every contrast guarantee." A theme token on a paragraph would break
-  that in the one way the contrast audit above cannot see — the audit proves the
-  colours are safe *where they are declared*, and says nothing about a later
-  edit that paints prose with them.
+  The first pass asked "does any theme token touch body text?", because the
+  theme was a parallel vocabulary beside the museum's. It is not any more: a
+  dive redefines `--canvas`, `--surface`, `--ink` and the rest, so a theme token
+  touching body text is now the normal, correct case, and the 186 contracts
+  re-run per world are what make it safe.
 
-  So the containment is an allow-list rather than a heuristic. Every rule that
-  references a `--th-` token must have a selector on this list. Adding a new
-  surface to the theme is then a deliberate line in this file, reviewed once,
-  instead of a CSS edit nobody notices.
+  What survives is the half that still bites. `--world` is the one token that
+  never carries text — it is the deep field a panel floats on, and nothing this
+  museum asks a reader to read may sit on it. So the allow-list is on the field
+  alone: every rule that paints with it must be one of the places a field is
+  legitimately painted.
 */
 const THEME_SURFACES = [
   /* tokens.css itself: the declarations, not the uses. */
   ':root',
   "[data-tradition='",
   '[data-tradition]',
-  /* The header band and everything drawn inside it. */
-  '.dd-mast',
-  '.dd-mast__mark',
-  '.dd-mast__onkar',
-  /* The section dividers and the quoted claim's frame. */
-  '.dd-rule',
-  '.miscon',
-  /* Link accents, scoped to the dive. */
-  '.dd-section :global(a)',
-  '.dd-mast :global(a)',
-  '.dd-section :global(a:hover)',
-  '.dd-mast :global(a:hover)',
-  /*
-    The Reading Room's recitation frame — the owner's narrow exception to
-    "scripture pages borrow no theme". It reaches two lines on a surah page:
-    the basmala above verse 1 and the closing formula below the last, set in
-    the accent and ruled with the arabesque. Nothing else on the page is
-    themed, and the allow-list is what keeps that true.
-  */
-  '.rd-frame',
-  /* The ornament component's own drawing rules. */
-  '.orn--corner',
-  '.orn--mark',
-  '.orn--divider',
-  '.orn--frame',
-  '.orn--pattern',
+  /* The field, and the gate that is made of it. */
+  '.dd-world',
+  '.dd-mast__field',
 ];
 
 /*
-  And the other half of the same rule, stated positively: the selectors that
-  set a dive's prose must not set a colour or a background at all. They inherit
-  `--ink` on `--canvas`, which is what every other room in the museum uses and
-  what the 4.5:1 audit above is about.
+  And the other half, stated positively: the selectors that set a dive's prose
+  must not set a colour or a background at all. They inherit `--ink` on the
+  panel, which is what every one of the 186 checks is about.
 */
 const PROSE_SELECTORS = ['.dd-section :global(p)', '.dd-section p', '.dd :global(p)'];
 
-const THEME_VAR = /var\(\s*(--th-[\w-]+)/;
+const THEME_VAR = /var\(\s*(--world(?:-deep)?)\s*\)/;
 const containment: string[] = [];
 
 /*
@@ -582,13 +621,13 @@ function stylesheetsIn(file: string, text: string): string[] {
 
 for (const file of walkSrc(resolve(root, 'src'))) {
   const text = readFileSync(file, 'utf8');
-  if (!text.includes('--th-')) continue;
+  if (!text.includes('--world')) continue;
   const rel = relative(root, file);
 
   const sheets = stylesheetsIn(file, text);
   if (sheets.length === 0 && THEME_VAR.test(text)) {
     containment.push(
-      `  ${rel}\n      references a --th- token outside any stylesheet, where this check cannot see it`,
+      `  ${rel}\n      references the deep field outside any stylesheet, where this check cannot see it`,
     );
   }
 
@@ -629,5 +668,5 @@ if (containment.length > 0) {
 console.log(
   `  Design token audit passed — no stray colours, ${passed} contrast checks across ` +
     `${MODES.join(', ')}, including ${TRADITIONS.length} tradition themes; ` +
-    'no theme token on a body-text surface.',
+    'the deep field never backs prose.',
 );
