@@ -97,6 +97,27 @@ if (jump !== null) {
   });
 }
 
+/*
+  Go to a numbered division, by number.
+
+  A static host cannot turn a form submission into a path, so this is where the
+  typed number becomes one. The form's own action is the work's contents page,
+  which is where a submit lands if scripting never runs — the wrong page but not
+  a broken one, and every division is listed there.
+*/
+const goto = document.querySelector<HTMLFormElement>('[data-reader-goto]');
+if (goto !== null) {
+  goto.addEventListener('submit', (event) => {
+    const work = goto.dataset['readerGoto'];
+    const max = Number(goto.dataset['max'] ?? 0);
+    const field = goto.querySelector<HTMLInputElement>('input[type="number"]');
+    const n = Number(field?.value ?? '');
+    if (work === undefined || !Number.isInteger(n) || n < 1 || n > max) return;
+    event.preventDefault();
+    location.href = `/read/${work}/${n}`;
+  });
+}
+
 /* ── the reader itself ──────────────────────────────────────────────────── */
 
 const reader = document.querySelector<HTMLElement>('[data-reader]');

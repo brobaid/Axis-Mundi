@@ -13,6 +13,8 @@ import {
   type WorkData,
 } from '../../../lib/reader-model';
 import { fontFor } from '../../../lib/scripts';
+import DivisionJump from '../../../components/DivisionJump.astro';
+import NumberGrid from '../../../components/NumberGrid.astro';
 
 /** A canon's contents: every division, in its own order, under its own sections. */
 export const getStaticPaths = (async () => {
@@ -34,10 +36,11 @@ const verses = work.total_verses.toLocaleString('en');
 /* A canon with no verse level has only one number to give: the Daodejing is
    eighty-one chapters, and "81 chapters, 81 verses" claimed a division it does
    not make. */
+const divisions = work.divisions.length.toLocaleString('en');
 const count =
   work.versified === false
-    ? `${work.divisions.length} ${work.division_label_plural}`
-    : `${work.divisions.length} ${work.division_label_plural}, ${verses} verses`;
+    ? `${divisions} ${work.division_label_plural}`
+    : `${divisions} ${work.division_label_plural}, ${verses} verses`;
 
 /** "15, 18, 61 and 174" — the canon's own numbers, in a readable list. */
 const listNumbers = (ns: readonly number[]): string =>
@@ -66,6 +69,10 @@ const sidedWord =
    letting a reader meet it cold. */
 /* A verse missing from both editions is counted in both totals and is one
    verse, not two. */
+/* Where every division is a bare number, the contents page is a grid of them. */
+const numbersOnly =
+  work.divisions.length > 120 && work.divisions.every((d) => d.name === undefined);
+
 const oneSided = work.english_gaps + work.original_gaps - work.blank;
 const oneSidedIn = work.divisions
   .filter((d) => d.english_gaps + d.original_gaps > 0)
@@ -145,7 +152,27 @@ const listed =
       }
     </p>
 
+    {/* Fourteen hundred and thirty links is a list, not navigation. The list
+        stays below — it is the path that needs no scripting — but anyone who
+        wants an ang knows its number, so the number is what this asks for. */}
+    {work.divisions.length > 120 && <DivisionJump work={work} />}
+
     {
+      /*
+        A canon of numbered, unnamed divisions gets a grid of its numbers.
+
+        Fourteen hundred and thirty rows each reading "Ang 743" is not a
+        contents page — it is half a megabyte of markup, five times what any
+        page here is allowed, and nothing a reader can scan. The numbers are
+        the whole of what those rows carry, so the numbers are what this shows.
+      */
+      numbersOnly ? (
+        <NumberGrid
+          base={`/read/${work.id}`}
+          numbers={work.divisions.map((d) => d.n)}
+          label={`All ${work.division_label_plural}`}
+        />
+      ) : (
       blocks.map(({ section, divisions }) => (
         <section class="rd-contents__block">
           {section !== undefined && (
@@ -225,6 +252,7 @@ const listed =
           </ol>
         </section>
       ))
+      )
     }
   </div>
 

@@ -1,0 +1,112 @@
+---
+import type { WorkData } from '../lib/reader-model';
+
+/**
+ * Go to a numbered division, by typing its number.
+ *
+ * A canon of a hundred divisions can offer them all in a select. The Guru
+ * Granth Sahib has fourteen hundred and thirty, and a select of that length is
+ * sixty kilobytes of markup on every page that draws it and unusable when it
+ * gets there — while prev/next, at fourteen hundred and thirty steps, is not
+ * navigation either. Anyone who wants an ang already knows its number: the
+ * tradition cites by it. So the control asks for the number.
+ *
+ * Enhancement, not the only way. Without scripting this input does nothing, so
+ * the contents page still lists every ang as an ordinary link beneath it and
+ * the reader still carries prev, next and the contents link. Nothing about
+ * reading depends on it — the standing rule that no core path may rest on
+ * anything the browser might not do.
+ */
+interface Props {
+  work: WorkData;
+  /** The division a reader is on, where they are on one. */
+  current?: number | undefined;
+}
+const { work, current } = Astro.props;
+const last = work.divisions[work.divisions.length - 1]?.n ?? work.divisions.length;
+const label = work.division_label;
+const id = `jump-${work.id}`;
+---
+
+<form
+  class="rd-goto"
+  data-reader-goto={work.id}
+  data-max={last}
+  action={`/read/${work.id}`}
+  method="get"
+>
+  <label class="rd-goto__label" for={id}>
+    Go to {label}
+  </label>
+  <input
+    class="rd-goto__input mono"
+    id={id}
+    name={label}
+    type="number"
+    inputmode="numeric"
+    min="1"
+    max={last}
+    step="1"
+    value={current}
+    placeholder="1"
+    aria-describedby={`${id}-range`}
+  />
+  <span class="rd-goto__range caption" id={`${id}-range`}>of {last.toLocaleString('en')}</span>
+  <button class="rd-goto__go" type="submit">Go</button>
+</form>
+
+<style is:global>
+  .rd-goto {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+  }
+
+  .rd-goto__label {
+    color: var(--ink-soft);
+  }
+
+  .rd-goto__input {
+    width: 6rem;
+    min-height: var(--tap-min);
+    padding: 0 var(--space-3);
+    color: var(--ink);
+    background: var(--surface);
+    border: var(--hairline-width) solid var(--hairline);
+    font-size: var(--size-small);
+  }
+
+  .rd-goto__input:focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 2px;
+  }
+
+  .rd-goto__range {
+    color: var(--ink-soft);
+  }
+
+  .rd-goto__go {
+    min-height: var(--tap-min);
+    padding: 0 var(--space-4);
+    color: var(--ink);
+    background: transparent;
+    border: var(--hairline-width) solid var(--ink);
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    cursor: pointer;
+  }
+
+  .rd-goto__go:hover {
+    background: var(--surface);
+  }
+
+  /* A control has no meaning on paper. */
+  @media print {
+    .rd-goto {
+      display: none;
+    }
+  }
+</style>

@@ -91,6 +91,12 @@ interface DeliveredScanDivision {
   chapters: { n: number; en?: string }[];
 }
 
+/** An ang and its lines, kept as lines — the Guru Granth Sahib. */
+interface DeliveredAng {
+  ang: number;
+  lines: string[];
+}
+
 /** A mandala of hymns, each hymn one block per column — the Rigveda. */
 interface DeliveredMandala {
   mandala: number;
@@ -126,6 +132,10 @@ interface Delivered {
   sections?: DeliveredSection[];
   /** Mandalas of hymns, paired at hymn level — the Rigveda. */
   mandalas?: DeliveredMandala[];
+  /** Angs of lines, original-only — the Guru Granth Sahib. */
+  angs?: DeliveredAng[];
+  /** `"unresolved"` where no English edition of quality exists to pair with. */
+  english?: string;
 }
 
 interface SectionConfig {
@@ -184,6 +194,8 @@ interface Config {
   order?: string[];
   /** The original slot's honest waiting-on note, for an English-only canon. */
   original_pending?: string;
+  /** And the English slot's, for a canon that arrives original-only. */
+  english_pending?: string;
   /** Per-division chapter names, where the work's own is not it: fargard. */
   chapter_labels?: Record<string, string>;
   /** A stratum a reader meets inside a division, badged where they meet it. */
@@ -288,6 +300,26 @@ const CONFIGS: Record<string, Config> = {
     note:
       'One book of the Khuddaka Nikaya, numbered continuously: a verse is cited as ' +
       'Dhp 1 to Dhp 423 whatever vagga it falls in.',
+  },
+  'guru-granth-sahib': {
+    file: 'docs/corpora/ggs/ggs-corpus.json',
+    tradition: 'sikhism',
+    title: 'The Guru Granth Sahib',
+    title_original: 'ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ',
+    division_label: 'ang',
+    division_label_plural: 'angs',
+    script: 'gurmukhi',
+    direction: 'ltr',
+    /* The ang is the citation unit and the lines are what it is made of; the
+       tradition numbers angs, not lines within them, so nothing here does. */
+    versified: false,
+    english_pending:
+      'An open English translation is not yet available to this museum; the Gurmukhi ' +
+      'stands alone until one is.',
+    note:
+      'The only room in this library whose scripture is present whole in its original and ' +
+      'absent whole in translation — itself a fact about the state of open scholarship.',
+    lang_tags: { pa: 'pa' },
   },
   rigveda: {
     file: 'docs/corpora/rigveda/rigveda-paired.json',
@@ -741,6 +773,22 @@ function normalise(src: Delivered, config: Config): Division[] {
   }
 
   /*
+    Angs of lines — the Guru Granth Sahib.
+
+    One row per source line, and that is the whole point: lineation is part of
+    how this scripture is read and cited, so the lines are never re-flowed into
+    paragraphs and never given numbers of their own. The ang is the citation
+    unit; the line is what the ang is made of.
+  */
+  if (src.angs !== undefined) {
+    return src.angs.map((ang) => ({
+      n: ang.ang,
+      slug: String(ang.ang),
+      all: ang.lines.map((line, i) => ({ v: i + 1, [langs[0] ?? 'pa']: line })),
+    }));
+  }
+
+  /*
     Mandalas of hymns, paired at hymn level — the Rigveda.
 
     Not at verse level, and that is the corpus's own ruling: Griffith's stanzas
@@ -1156,6 +1204,7 @@ function ingest(name: string, config: Config): void {
     ...(config.original_pending === undefined
       ? {}
       : { original_pending: config.original_pending }),
+    ...(config.english_pending === undefined ? {} : { english_pending: config.english_pending }),
     ...(config.note === undefined ? {} : { note: config.note }),
     ...(preface === undefined ? {} : { preface }),
     ...(config.gap_notes === undefined ? {} : { gap_notes: config.gap_notes }),

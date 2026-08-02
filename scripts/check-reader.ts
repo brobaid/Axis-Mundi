@@ -104,6 +104,12 @@ for (const work of works) {
     continue;
   }
   const contents = read(contentsPath);
+  /* The contents page is a route like any other and was the one route nothing
+     weighed: the Guru Granth Sahib's shipped at half a megabyte, five times the
+     budget, because the check only ever looked at pages that carry text. A
+     contents page can always be made lighter — it holds no scripture — so it
+     is splittable by definition and fails rather than being reported. */
+  weigh(`/read/${work.id}`, contentsPath, true);
   for (const division of work.divisions) {
     if (!contents.includes(`/read/${work.id}/${division.slug}"`)) {
       fail(`/read/${work.id}`, `contents page does not link to "${division.slug}"`);

@@ -2,6 +2,7 @@
 import ReaderChrome from './ReaderChrome.astro';
 import ParallelColumns from './ParallelColumns.astro';
 import DevotionalToggle from './DevotionalToggle.astro';
+import DivisionJump from './DivisionJump.astro';
 import {
   carries,
   defaultMode,
@@ -111,6 +112,11 @@ const { prev, next, endsSection } = walk(work, division, chapter);
 const { line: preface, omittedNote } = prefaceFor(work, division, chapter);
 const section = sectionOf(work, division.n);
 const convention = conventionFor(work.tradition);
+/* A jump control rather than a list, where a list would be unusable. The
+   threshold is where a select stops fitting on a phone screen and starts being
+   a scroll of its own. */
+const manyDivisions = chapter === undefined && work.divisions.length > 120;
+
 const contentsHref =
   chapter === undefined ? `/read/${work.id}` : `/read/${work.id}/${division.slug}`;
 const contentsLabel =
@@ -297,7 +303,12 @@ const contentsLabel =
                     {note}
                   </p>
                 )}
-                {!english && <p class="rd-verse__pending caption">{work.english_pending}</p>}
+                {/* The waiting-on sentence is stated once, above the text, and
+                    on the disabled toggles. It used to repeat under every verse
+                    — twenty-three times on the Guru Granth Sahib's first ang and
+                    seventy-five on its longest — because no original-only canon
+                    had ever been built until this one. Once is the claim; the
+                    rest was noise. */}
               </>
             )}
           </div>
@@ -343,6 +354,12 @@ const contentsLabel =
       )
     }
 
+    {
+      /* Past a certain length a select stops being a control and becomes a
+         sixty-kilobyte list nobody can use. See DivisionJump. */
+      manyDivisions ? (
+        <DivisionJump work={work} current={division.n} />
+      ) : (
     <label class="rd-jump">
       <span class="visually-hidden">Jump to a {work.chapter_label ?? work.division_label}</span>
       <select class="rd-jump__select" data-reader-jump>
@@ -364,6 +381,8 @@ const contentsLabel =
         }
       </select>
     </label>
+      )
+    }
 
     {
       next === undefined ? (
@@ -604,6 +623,37 @@ const contentsLabel =
   }
 
   /*
+    Gurmukhi, set as lines rather than as prose.
+
+    Lineation is part of how this scripture is read and cited, so each source
+    line is its own row and nothing re-flows one into the next: the line breaks
+    a reader sees are the ones the text has, not the ones the column width
+    produced. A line too long for the measure wraps and is indented, so a wrap
+    is visibly a wrap and never mistaken for the next line of the text.
+
+    The size is for the signs. Vowels sit above and below — 40,850 EE, 29,136
+    AI, 25,886 OO and 21,782 tippi above; 96,643 U and 13,514 UU below — and
+    11,778 viramas subjoin a letter beneath its base, so the marks want both
+    the size and the leading. Measured for clipping at 390px, the way the
+    pointed Hebrew and the accented Devanagari were.
+  */
+  .rd-verses[data-script='gurmukhi'] .rd-verse__orig {
+    font-family: var(--script-font);
+    font-size: 1.45rem;
+    line-height: 2.1;
+    margin-top: 0;
+    /* A wrapped line hangs, so the eye can tell a wrap from a line break. */
+    padding-left: var(--space-6);
+    text-indent: calc(-1 * var(--space-6));
+  }
+
+  /* Lines of one ang belong to one another: no gap between them, and the ang's
+     own breath comes from the leading rather than from margins between lines. */
+  .rd-verses[data-script='gurmukhi'] .rd-verse {
+    padding-block: 0;
+  }
+
+  /*
     Devanagari carries the vedic tone accents, and they are the whole reason
     for the size.
 
@@ -804,6 +854,20 @@ const contentsLabel =
   :root[data-reading-mode='original'] .rd-verses[data-modes~='original'] .rd-verse__orig,
   .rd-verses[data-default='original'] .rd-verse__orig {
     margin-top: 0;
+  }
+
+  /*
+    An original standing alone sits against its own reading edge — which is the
+    right one only for a script read from it.
+
+    The auto margin used to be unconditional, and it was correct for as long as
+    every original-only page was Arabic or Hebrew. The Guru Granth Sahib is the
+    first that is not: Gurmukhi reads left to right, and the rule was pushing
+    every short line of it to the right margin, so a two-word line of the Jap
+    floated at the far edge of the page away from the line above it.
+  */
+  :root[data-reading-mode='original'] .rd-verses[data-direction='rtl'][data-modes~='original'] .rd-verse__orig,
+  .rd-verses[data-direction='rtl'][data-default='original'] .rd-verse__orig {
     margin-left: auto;
   }
 

@@ -1,0 +1,69 @@
+---
+/**
+ * Every division of a canon, as a grid of its numbers.
+ *
+ * For a canon whose divisions have no names: the Guru Granth Sahib's fourteen
+ * hundred and thirty angs. A row apiece reading "Ang 743" was half a megabyte
+ * of markup — five times what any page here may weigh — and nothing a reader
+ * could scan. The number is the whole of what such a row carries, so the number
+ * is what this shows.
+ *
+ * The markup is deliberately bare and this file exists to keep it that way.
+ * A scoped `<style>` block makes Astro stamp `data-astro-cid-…` onto every
+ * element it renders, which is twenty-three bytes times fourteen hundred and
+ * thirty — thirty-three kilobytes of scoping attribute on one page. So the
+ * styles here are global, the cells carry no class of their own, and the CSS
+ * reaches them through the container instead.
+ */
+interface Props {
+  /** Where a cell points, before the number. */
+  base: string;
+  numbers: readonly number[];
+  label: string;
+}
+const { base, numbers, label } = Astro.props;
+---
+
+<nav class="rd-grid" aria-label={label}>{numbers.map((n) => <a href={`${base}/${n}`}>{n}</a>)}</nav>
+
+<style is:global>
+  /* Dense enough to scan a thousand of, loose enough to hit with a thumb. */
+  .rd-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(3.25rem, 1fr));
+    gap: var(--hairline-width);
+    background: var(--hairline);
+    border: var(--hairline-width) solid var(--hairline);
+    margin-bottom: var(--space-12);
+  }
+
+  .rd-grid > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--tap-min);
+    background: var(--canvas);
+    color: var(--ink-soft);
+    font-family: var(--font-mono);
+    font-size: var(--size-small);
+    text-decoration: none;
+  }
+
+  .rd-grid > a:hover {
+    background: var(--surface);
+    color: var(--brass-ink);
+  }
+
+  .rd-grid > a:focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: -2px;
+    z-index: 1;
+  }
+
+  /* A grid of fourteen hundred links is navigation, not content. */
+  @media print {
+    .rd-grid {
+      display: none;
+    }
+  }
+</style>
