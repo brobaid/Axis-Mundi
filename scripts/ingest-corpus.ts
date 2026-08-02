@@ -263,9 +263,12 @@ const CONFIGS: Record<string, Config> = {
        here by ruling and its section says why on every page. */
     script: 'greek',
     direction: 'ltr',
+    /* A pointer, not the record of the absence itself: the deuterocanon has a
+       row of its own among the canons still being acquired, and a fact stated
+       in two places is a fact that can end up disagreeing with itself. */
     note:
-      'Sixty-six books in the Protestant canon and order. The deuterocanonical ' +
-      'books are a later delivery and are not here yet.',
+      'Sixty-six books in the Protestant canon and order. The deuterocanon has its own ' +
+      'row among the canons this room is still acquiring.',
     /* The memo names the record `web-bible`; the delivery keys it `web`. The
        file is the owner's and is not edited, so the mapping is stated here. */
     edition_sources: { en: 'web-bible' },
