@@ -19,6 +19,8 @@ export interface ChapterIndex {
   readonly verses: number;
   /** A stratum mark, where this chapter belongs to one. */
   readonly badge?: { readonly label: string; readonly title: string } | undefined;
+  /** Who or what the chapter is addressed to, where the canon names one. */
+  readonly dedication?: string | undefined;
   readonly preview?: string | undefined;
   readonly preview_lang?: string | undefined;
   readonly english_gaps: number;
@@ -38,6 +40,8 @@ export interface DivisionIndex {
   readonly verses: number;
   /** Present means the division is a contents page and its text is a level down. */
   readonly chapters?: readonly ChapterIndex[] | undefined;
+  /** A line this division's contents page carries, and only this one. */
+  readonly note?: string | undefined;
   /** What one of this division's chapters is called, where the work's is not it. */
   readonly chapter_label?: string | undefined;
   /** Present where the editions do not align: one entry per column. */
@@ -287,6 +291,25 @@ export function resolveMode(requested: string | null, work: Pick<WorkData, 'edit
 /* ── divisions and sections ─────────────────────────────────────────────── */
 
 /** A division's heading, from what the record actually holds. */
+/**
+ * What a chapter of a division is called.
+ *
+ * "Genesis 1" reads correctly because the book has a name. A division named by
+ * its own number does not: "Mandala 1" plus hymn 1 gave "Mandala 1 1", two
+ * numbers with nothing between them. Where the division's heading already ends
+ * in a numeral, the chapter's own label separates them — "Mandala 1, Hymn 1".
+ */
+export function chapterHeading(
+  work: Pick<WorkData, 'division_label' | 'chapter_label'>,
+  division: Pick<DivisionIndex, 'n' | 'name' | 'chapter_label'>,
+  c: number,
+): string {
+  const head = divisionHeading(work, division);
+  if (!/\d$/.test(head)) return `${head} ${c}`;
+  const label = division.chapter_label ?? work.chapter_label ?? 'chapter';
+  return `${head}, ${label.charAt(0).toUpperCase() + label.slice(1)} ${c}`;
+}
+
 export function divisionHeading(
   work: Pick<WorkData, 'division_label'>,
   division: Pick<DivisionIndex, 'n' | 'name'>,
@@ -414,7 +437,7 @@ const stepTo = (work: WorkData, division: DivisionIndex, c?: number): Step => ({
   label:
     c === undefined
       ? divisionHeading(work, division)
-      : `${divisionHeading(work, division)} ${c}`,
+      : chapterHeading(work, division, c),
 });
 
 /**

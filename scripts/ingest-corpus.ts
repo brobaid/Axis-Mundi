@@ -91,6 +91,14 @@ interface DeliveredScanDivision {
   chapters: { n: number; en?: string }[];
 }
 
+/** A mandala of hymns, each hymn one block per column — the Rigveda. */
+interface DeliveredMandala {
+  mandala: number;
+  hymns: { n: number; deity?: string | null; sa?: string | null; en?: string | null }[];
+  sa_count?: number;
+  en_count?: number;
+}
+
 /** A flat section of scanned prose, titled — Chamberlain's Kojiki. */
 interface DeliveredSection {
   n: number;
@@ -116,6 +124,8 @@ interface Delivered {
   divisions?: DeliveredScanDivision[];
   /** Flat numbered sections of scanned prose — the Kojiki. */
   sections?: DeliveredSection[];
+  /** Mandalas of hymns, paired at hymn level — the Rigveda. */
+  mandalas?: DeliveredMandala[];
 }
 
 interface SectionConfig {
@@ -180,6 +190,8 @@ interface Config {
   badges?: Record<string, { chapters: number[]; label: string; title: string }>;
   /** Divisions the canon numbers and this corpus does not carry. */
   absent?: { divisions: number[]; note: string };
+  /** A line one division's contents page carries, keyed by its slug. */
+  division_notes?: Record<string, string>;
 }
 
 /* ── the corpora ────────────────────────────────────────────────────────── */
@@ -276,6 +288,32 @@ const CONFIGS: Record<string, Config> = {
     note:
       'One book of the Khuddaka Nikaya, numbered continuously: a verse is cited as ' +
       'Dhp 1 to Dhp 423 whatever vagga it falls in.',
+  },
+  rigveda: {
+    file: 'docs/corpora/rigveda/rigveda-paired.json',
+    tradition: 'hinduism',
+    title: 'The Rigveda',
+    title_original: 'ऋग्वेद',
+    division_label: 'mandala',
+    division_label_plural: 'mandalas',
+    chapter_label: 'hymn',
+    script: 'devanagari',
+    direction: 'ltr',
+    /* The hymn is the citable unit and one block per column; Griffith's
+       stanzas and the samhita's rc divisions do not map, so nothing here
+       numbers a verse. */
+    versified: false,
+    /* The delivery keys its Sanskrit `dharmic-data-samhita`; the museum files
+       that edition under the id the memo names. */
+    edition_sources: { sa: 'rigveda-samhita-digital' },
+    note: 'Pairing is at hymn level: each side is a whole text, not a matched stanza.',
+    gap_notes: {
+      english: 'Griffith left this hymn untranslated; it stands in Sanskrit alone.',
+      original: 'The samhita text of this hymn is not in the digitisation used here.',
+    },
+    division_notes: {
+      '8': 'The Valakhilya hymns are absent from the English digitisation, so eleven hymns of this mandala stand in Sanskrit alone. A future English source may patch them.',
+    },
   },
   avesta: {
     file: 'docs/corpora/avesta/avesta-corpus.json',
@@ -451,7 +489,7 @@ interface ScanParagraph {
  * mid-sentence.
  */
 function scanned(raw: string, options: ScanOptions = {}): { paragraphs: ScanParagraph[]; dropped: Dropped } {
-  const dropped: Dropped = { rules: 0, pages: 0, brackets: 0, marks: 0 };
+  const dropped: Dropped = { rules: 0, pages: 0, brackets: 0, marks: 0, headers: 0, anchors: 0 };
   let src = raw.replace(/\r/g, '');
   /* The tail of a page marker whose head fell off the top of the scan. */
   if (/^\s*\]/.test(src)) {
@@ -501,9 +539,11 @@ interface Dropped {
   pages: number;
   brackets: number;
   marks: number;
+  headers: number;
+  anchors: number;
 }
 
-const furniture: Dropped = { rules: 0, pages: 0, brackets: 0, marks: 0 };
+const furniture: Dropped = { rules: 0, pages: 0, brackets: 0, marks: 0, headers: 0, anchors: 0 };
 const tallyDropped = (d: Dropped): void => {
   furniture.rules += d.rules;
   furniture.pages += d.pages;
@@ -565,6 +605,8 @@ function repairSegmentation(
 
 interface Chapter {
   c: number;
+  /** Who or what the chapter is addressed to, where the delivery names one. */
+  dedication?: string;
   verses: Verse[];
 }
 
@@ -582,6 +624,8 @@ interface Division {
   n: number;
   slug: string;
   name?: string;
+  /** A line this division's contents page carries, from the delivery. */
+  note?: string;
   name_original?: string;
   name_gloss?: string;
   verse_from?: number;
@@ -690,6 +734,57 @@ function normalise(src: Delivered, config: Config): Division[] {
         ...(division.note === undefined ? {} : { note: division.note }),
         /* A chaptered division's `all` is its chapters, flattened: the totals
            and the gap counts are taken from it, not from the chapter list. */
+        all: chapters.flatMap((c) => c.verses),
+        chapters,
+      };
+    });
+  }
+
+  /*
+    Mandalas of hymns, paired at hymn level — the Rigveda.
+
+    Not at verse level, and that is the corpus's own ruling: Griffith's stanzas
+    and the samhita's rc divisions do not map mechanically, so each hymn enters
+    as one block per column and the Both view stacks two whole texts. Numbering
+    them as a verse each would be the concordance nobody has made.
+  */
+  if (src.mandalas !== undefined) {
+    /*
+      Griffith's text arrives with the digitiser's markup on it: every hymn
+      opens with a `## HYMN I. Agni.` header and carries `{#1:1}` stanza
+      anchors, 10,400 of them. Both are machine furniture, not Griffith — the
+      header's hymn number and deity are already carried structurally — and the
+      same rule applies as to the scanned corpora: furniture goes, never a word.
+    */
+    const clean = (text: string): string => {
+      const before = text;
+      const out = text
+        .replace(/^\s*#{1,6}\s*HYMN[^\n]*\n+/i, () => { furniture.headers += 1; return ''; })
+        .replace(/\s*\{#\d+:\d+\}/g, () => { furniture.anchors += 1; return ''; })
+        .trim();
+      return out === '' ? before : out;
+    };
+    return src.mandalas.map((mandala) => {
+      const chapters = mandala.hymns.map((hymn) => ({
+        c: hymn.n,
+        /* Null where Griffith's header names no deity — fifteen of them. */
+        ...(typeof hymn.deity !== 'string' || hymn.deity.trim() === ''
+          ? {}
+          : { dedication: hymn.deity.trim() }),
+        verses: [
+          {
+            v: 1,
+            c: hymn.n,
+            ...columns({
+              ...hymn,
+              ...(typeof hymn.en === 'string' ? { en: clean(hymn.en) } : {}),
+            } as unknown as DeliveredVerse),
+          },
+        ],
+      }));
+      return {
+        n: mandala.mandala,
+        slug: String(mandala.mandala),
         all: chapters.flatMap((c) => c.verses),
         chapters,
       };
@@ -966,6 +1061,7 @@ function ingest(name: string, config: Config): void {
                 ...(badge !== undefined && badge.chapters.includes(chapter.c)
                   ? { badge: { label: badge.label, title: badge.title } }
                   : {}),
+                ...(chapter.dedication === undefined ? {} : { dedication: chapter.dedication }),
                 ...(typeof text === 'string' ? { preview: preview(text), preview_lang: lang } : {}),
                 english_gaps: missingEnglish(chapter.verses),
                 original_gaps: missingOriginal(chapter.verses),
@@ -976,6 +1072,11 @@ function ingest(name: string, config: Config): void {
       ...(config.chapter_labels?.[d.slug] === undefined
         ? {}
         : { chapter_label: config.chapter_labels[d.slug] }),
+      /* A line this division's contents page carries. Delivered by the corpus
+         where it states one, otherwise named in the config from the memo. */
+      ...((d.note ?? config.division_notes?.[d.slug]) === undefined
+        ? {}
+        : { note: d.note ?? config.division_notes?.[d.slug] }),
       ...(d.section === undefined || config.sections === undefined
         ? {}
         : { section: config.sections[d.section]?.id ?? slugify(d.section) }),

@@ -78,11 +78,22 @@ const count = [
   .filter((part) => part !== '')
   .join(' · ');
 
+/* This chapter's own index entry, for what the record alone cannot say. */
+const here = chapter === undefined ? undefined : division.chapters?.find((c) => c.c === chapter);
 /* The stratum this chapter belongs to, where it belongs to one. */
-const badge =
-  chapter === undefined
-    ? undefined
-    : division.chapters?.find((c) => c.c === chapter)?.badge;
+const badge = here?.badge;
+
+/*
+  Whether a missing column here is a gap or simply this page's shape.
+
+  Both happen. An Old Testament page carries no Greek by ruling and says so in
+  its section note, and flagging every chapter of it would be noise. A Rigveda
+  hymn Griffith declined to translate is a hole in the pairing and has to say
+  so where a reader meets it. The index already tells the two apart: gaps are
+  counted at ingestion against the columns a division actually carries, so the
+  Old Testament reports none and Rigveda 8.95 reports one.
+*/
+const gapped = (here?.english_gaps ?? 0) + (here?.original_gaps ?? 0) > 0;
 
 const orig = originalLang(work);
 /*
@@ -93,8 +104,8 @@ const orig = originalLang(work);
 const modes = pageModes(work, verses);
 const mode = modes.includes(defaultMode(work)) ? defaultMode(work) : (modes[0] ?? 'english');
 /* A missing original is a gap only where the page otherwise has one. */
-const english = hasEnglish(work) && carries(verses, 'en');
-const hasOriginal = orig !== '' && carries(verses, orig);
+const english = hasEnglish(work) && (carries(verses, 'en') || gapped);
+const hasOriginal = orig !== '' && (carries(verses, orig) || gapped);
 const scriptFont = fontFor(work.script);
 const { prev, next, endsSection } = walk(work, division, chapter);
 const { line: preface, omittedNote } = prefaceFor(work, division, chapter);
@@ -590,6 +601,24 @@ const contentsLabel =
   .rd-verses[data-script='hebrew'] .rd-verse__orig {
     font-size: 1.375rem;
     line-height: 2.35;
+  }
+
+  /*
+    Devanagari carries the vedic tone accents, and they are the whole reason
+    for the size.
+
+    Udatta is a vertical stroke above the syllable — above the matra zone,
+    which is already the tallest thing on the line — and anudatta a horizontal
+    stroke below the baseline. There are 174,000 of them in this corpus, they
+    are the difference between the samhita and a flattened text, and at the
+    prose size they close up into the strokes around them. So: larger than the
+    Latin column for legibility, and leading deep enough that neither mark
+    collides with the line above or below. Measured for clipping at 390px, the
+    way the pointed Hebrew was.
+  */
+  .rd-verses[data-script='devanagari'] .rd-verse__orig {
+    font-size: 1.5rem;
+    line-height: 2.4;
   }
 
   /*

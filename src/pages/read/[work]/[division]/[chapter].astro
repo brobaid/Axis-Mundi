@@ -6,6 +6,7 @@ import ReaderText from '../../../../components/ReaderText.astro';
 import { getPublishable } from '../../../../lib/content';
 import {
   divisionHeading,
+  chapterHeading,
   editionLines,
   type DivisionIndex,
   type VerseRow,
@@ -61,7 +62,7 @@ const editions = editionLines(work, notes).map((e) => {
 });
 
 const book = divisionHeading(work, division);
-const heading = `${book} ${chapter}`;
+const heading = chapterHeading(work, division, chapter);
 ---
 
 <BaseLayout

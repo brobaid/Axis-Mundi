@@ -81,6 +81,15 @@ export const chapterIndexEntry = z.object({
   c: z.number().int().positive(),
   verses: z.number().int().nonnegative(),
   badge: chapterBadge.optional(),
+  /**
+   * Who or what this chapter is addressed to, where the canon names one.
+   *
+   * The Rigveda's hymns are dedicatory and a reader scanning a mandala of a
+   * hundred and ninety-one of them is looking for Agni or Indra, not for a
+   * number. Carried from the delivery, which took it from Griffith's headers;
+   * never inferred from the text.
+   */
+  dedication: z.string().min(1).optional(),
   /** The opening words, truncated at ingestion. Never authored here. */
   preview: z.string().min(1).optional(),
   /** Which language the preview is in, since a chapter may open English-only. */
@@ -124,6 +133,15 @@ export const divisionIndexEntry = z.object({
   transliteration: z.string().min(1).optional(),
   verses: z.number().int().nonnegative(),
   chapters: z.array(chapterIndexEntry).optional(),
+  /**
+   * A line this division's contents page carries, and only this one.
+   *
+   * For what is true of one division and not of the work: Mandala 8 is missing
+   * the Valakhilya hymns from the English digitisation, and that belongs on
+   * Mandala 8 rather than on all ten. Delivered by the corpus where the corpus
+   * states it, otherwise named in the ingest config from the owner's memo.
+   */
+  note: z.string().min(1).optional(),
   /**
    * What one of this division's chapters is called, where the work's own
    * `chapter_label` is not it.

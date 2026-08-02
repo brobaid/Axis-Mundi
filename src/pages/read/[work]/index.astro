@@ -45,12 +45,20 @@ const listNumbers = (ns: readonly number[]): string =>
     ? ns.join('')
     : `${ns.slice(0, -1).join(', ')} and ${ns[ns.length - 1]}`;
 
+/* A canon's chapters are called what the canon calls them: the Rigveda is
+   1,028 hymns, not 1,028 chapters. */
+const chapterWord = `${work.chapter_label ?? 'chapter'}s`;
 const scale =
   count +
   (work.total_chapters === undefined
     ? ''
-    : ` in ${work.total_chapters.toLocaleString('en')} chapters`) +
+    : ` in ${work.total_chapters.toLocaleString('en')} ${chapterWord}`) +
   '.';
+
+/* And a one-sided unit is one of those, not a verse, where a canon has no
+   verse level to be one-sided in. */
+const sidedWord =
+  work.versified === false ? chapterWord.replace(/s$/, '') : 'verse';
 
 /* The single-sided verses, named where they live. Two versifications that
    disagree leave a verse on one side only; that is a fact about the editions,
@@ -118,8 +126,8 @@ const listed =
            where it falls. */
         oneSided > 0 && (
           <span class="rd-contents__gaps">
-            {oneSided} {oneSided === 1 ? 'verse stands' : 'verses stand'} on one side only, in{' '}
-            {listed}. Each says so where it falls.
+            {`${oneSided} ${sidedWord}${oneSided === 1 ? ' stands' : 's stand'} on one side only, in ${listed}.`}{' '}
+            Each says so where it falls.
           </span>
         )
       }

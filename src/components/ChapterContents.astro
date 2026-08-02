@@ -67,7 +67,7 @@ const gaps = division.english_gaps + division.original_gaps;
       {work.versified !== false && ` · ${division.verses.toLocaleString('en')} verses`}
       {
         gaps > 0 &&
-          ` · ${gaps} ${gaps === 1 ? 'verse stands' : 'verses stand'} on one side only`
+          ` · ${gaps} ${work.versified === false ? label : 'verse'}${gaps === 1 ? ' stands' : 's stand'} on one side only`
       }
     </p>
   </header>
@@ -82,6 +82,11 @@ const gaps = division.english_gaps + division.original_gaps;
     note={work.note}
   />
 
+  {/* What is true of this division and not of the work. Mandala 8 is short the
+      Valakhilya hymns in English and says so here, where a reader meets the
+      eleven Sanskrit-only rows, rather than on all ten mandalas. */}
+  {division.note !== undefined && <p class="measure caption rd-chapters__note">{division.note}</p>}
+
   <ol class="rd-chapters__list" role="list">
     {
       chapters.map((chapter) => (
@@ -89,6 +94,11 @@ const gaps = division.english_gaps + division.original_gaps;
           <a class="rd-chapters__item" href={`/read/${work.id}/${division.slug}/${chapter.c}`}>
             <span class="rd-chapters__n mono">{chapter.c}</span>
             <span class="rd-chapters__body">
+              {/* Who the hymn is to. A reader scanning 191 of them is looking
+                  for Agni or Indra, not for a number. */}
+              {chapter.dedication !== undefined && (
+                <span class="rd-chapters__dedication">{chapter.dedication}</span>
+              )}
               {chapter.preview !== undefined && (
                 /* The preview is a quotation, so it is set in the language it
                    was quoted from — a chapter whose English is missing at
@@ -224,6 +234,20 @@ const gaps = division.english_gaps + division.original_gaps;
     padding: 0 var(--space-2);
     margin-right: var(--space-3);
     cursor: help;
+  }
+
+  .rd-chapters__note {
+    color: var(--ink-soft);
+    margin-bottom: var(--space-6);
+  }
+
+  /* The dedicatee leads the row, in the UI face so it reads as a label rather
+     than as the opening of the text below it. */
+  .rd-chapters__dedication {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    color: var(--ink);
   }
 
   .rd-chapters__meta {
