@@ -6,6 +6,8 @@
  * is, assume a chapter level exists, or assume a translation does.
  */
 
+import type { TraditionId } from '../schemas/primitives.js';
+
 export interface VerseRow {
   readonly v: number;
   readonly c?: number | undefined;
@@ -64,7 +66,10 @@ export interface Section {
 
 export interface WorkData {
   readonly id: string;
-  readonly tradition: string;
+  /* The schema already types this as the enum; widening it to `string` here
+     meant every consumer had to re-narrow it, and the recitation frame is the
+     first that actually needed to. */
+  readonly tradition: TraditionId;
   readonly title: string;
   readonly title_original?: string | undefined;
   readonly division_label: string;

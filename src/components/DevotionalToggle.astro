@@ -28,7 +28,7 @@ const offered = hasConvention(tradition);
         <span>Devotional frame</span>
       </label>
       <span class="caption dv-toggle__note">
-        Renders each tradition's devotional conventions: honorifics and recitation formulas.
+        Renders the honorifics a tradition's own readers write after a name.
       </span>
     </p>
   )
@@ -87,26 +87,6 @@ const offered = hasConvention(tradition);
 
   :root[data-devotional-frame='on'] span.dv-honorific {
     display: inline;
-  }
-
-  /* --- the closing formula ------------------------------------------------ */
-
-  .dv-closing {
-    margin-top: var(--space-8);
-    padding-top: var(--space-4);
-    border-top: var(--hairline-width) solid var(--hairline);
-    text-align: center;
-  }
-
-  .dv-closing__text {
-    font-size: 1.375rem;
-    line-height: 2;
-    color: var(--brass-ink);
-  }
-
-  .dv-closing__gloss {
-    color: var(--ink-soft);
-    margin-top: var(--space-2);
   }
 
   /* Paper keeps the choice the reader made on screen. */

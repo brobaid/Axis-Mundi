@@ -1,0 +1,139 @@
+---
+import Ornament from './Ornament.astro';
+import type { TraditionId } from '../schemas/primitives';
+
+/**
+ * One line of the recitation frame: the opener above verse 1, or the closer
+ * below the last verse.
+ *
+ * One component for both, because they are one treatment. A surah that opened
+ * in one voice and closed in another would read as two different kinds of
+ * thing, and they are the same kind of thing — the words a reciter says around
+ * the text, which are not the text.
+ *
+ * How it is made unmistakably frame:
+ *
+ *   - Centred, in the room's accent rather than in body ink, at a size the
+ *     verses never use, with the arabesque divider between it and the verse
+ *     column. Nothing about it matches a verse.
+ *   - No numeral and no anchor, because it has neither: it is not addressable,
+ *     so there is no fragment that could ever point at it.
+ *   - `user-select: none` and `data-frame`, so a reader dragging across the
+ *     surah copies the ayat and not the formula, and so a future text index
+ *     has a marker to skip rather than a heuristic to guess with.
+ *   - Never translated into a column. The translation is a `title`, which is a
+ *     gloss for someone who does not read the script; set as a second line it
+ *     would read as the text having an English half, which it does not.
+ *   - `<header>` / `<footer>`, so the article announces them as its frame.
+ */
+
+interface Props {
+  kind: 'opener' | 'closer';
+  tradition: TraditionId;
+  text: string;
+  lang: string;
+  direction: 'ltr' | 'rtl';
+  translation: string;
+  /** The face this canon's script is set in. */
+  scriptFont: string;
+}
+
+const { kind, tradition, text, lang, direction, translation, scriptFont } = Astro.props;
+const Tag = kind === 'opener' ? 'header' : 'footer';
+const label = kind === 'opener' ? 'Opening formula' : 'Closing formula';
+---
+
+<Tag class="rd-frame" data-frame={kind} role="group" aria-label={label}>
+  {/* The rule sits between the formula and the verses in both cases, so the
+      pair is symmetrical about the text: opened in the name, closed in the
+      truth. */}
+  {kind === 'closer' && <Ornament tradition={tradition} piece="divider" class="rd-frame__rule" />}
+  <p
+    class="rd-frame__line"
+    lang={lang}
+    dir={direction}
+    title={translation}
+    style={`font-family: ${scriptFont}`}
+  >
+    {text}
+  </p>
+  {kind === 'opener' && <Ornament tradition={tradition} piece="divider" class="rd-frame__rule" />}
+</Tag>
+
+<style is:global>
+  .rd-frame {
+    text-align: center;
+    /* Clear space is half the claim: the formula has to sit visibly outside
+       the verse column, not merely above or below the first and last line. */
+    margin-block: var(--space-8);
+    /* Copied text is the ayat. The formula is furniture. */
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .rd-frame[data-frame='opener'] {
+    margin-top: var(--space-6);
+  }
+
+  /*
+    The line itself.
+
+    Set in the theme's text-safe accent — `--th-accent-ink`, which is the same
+    hue as the corner motifs cut deep enough to clear 4.5:1 on the canvas, a
+    surface and the band, in both modes — rather than in body ink, because ink
+    is what the verses are set in and this is not a verse.
+
+    It never wraps. The basmala is one line in the mushaf and one line here, at
+    390px as at 1440px: the size steps down with the viewport so the longest of
+    the two formulas fits the column whole.
+
+    The clamp is set from the measured ink rather than guessed. The basmala is
+    the longer of the two and draws 130px at 16px type, so at 390px — a 358px
+    column — it is at 59% of the width here, and at 320px it is still at 60%.
+    The first pass was tuned as though `nowrap` were about to overflow and set
+    the line at 16px, which fitted twice over and read as a caption.
+  */
+  .rd-frame__line {
+    display: block;
+    white-space: nowrap;
+    font-size: clamp(1.3rem, 6.7vw, 2.125rem);
+    line-height: 2.05;
+    color: var(--th-accent-ink);
+    margin: 0;
+    /*
+      Centred here rather than inherited from the wrapper.
+
+      base.css carries `:where([dir='rtl']) { text-align: right }` so an Arabic
+      paragraph sets from the right, which is correct for a verse and wrong for
+      a formula. `:where()` has no specificity, but it applies to this element
+      directly, and a directly-applied value beats an inherited one at any
+      specificity — so the wrapper's `center` never reached the line and the
+      basmala sat against the right margin.
+    */
+    text-align: center;
+  }
+
+  .rd-frame__rule {
+    max-width: 18rem;
+    margin-inline: auto;
+    opacity: 0.85;
+  }
+
+  .rd-frame[data-frame='opener'] .rd-frame__rule {
+    margin-top: var(--space-3);
+  }
+
+  .rd-frame[data-frame='closer'] .rd-frame__rule {
+    margin-bottom: var(--space-3);
+  }
+
+  /*
+    On paper the frame stays, because it is part of how the surah is set —
+    but the accent prints as ink. A gold line on white paper is a grey line.
+  */
+  @media print {
+    .rd-frame {
+      margin-block: var(--space-6);
+    }
+  }
+</style>

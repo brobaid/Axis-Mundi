@@ -3,12 +3,16 @@
  *
  * The museum's own voice is academic and evenhanded; that does not change and
  * is not a setting. This is a rendering preference, off by default, that adds
- * the conventions a tradition's own readers keep — an honorific after a name,
- * a recitation formula at the close of a reading. It adds; it never edits. No
- * sourced fact, date, figure or word of translated text differs between the
- * two modes, and the markup makes that structurally true: every devotional
- * mark is its own element, present in the DOM either way and shown by CSS, so
- * turning the frame on cannot rewrite a sentence.
+ * the conventions a tradition's own readers keep — an honorific after a name.
+ * It adds; it never edits. No sourced fact, date, figure or word of translated
+ * text differs between the two modes, and the markup makes that structurally
+ * true: every devotional mark is its own element, present in the DOM either
+ * way and shown by CSS, so turning the frame on cannot rewrite a sentence.
+ *
+ * The recitation formulas used to be here too. They are not preferences — the
+ * mushaf opens and closes that way — so making them optional made the default
+ * rendering less faithful rather than more neutral. They live in
+ * `src/lib/recitation.ts` now, always on. This governs the honorific alone.
  *
  * DOM-free, so the build and the island agree on what a convention is.
  *
@@ -32,19 +36,8 @@ export interface Honorific {
   readonly meaning: string;
 }
 
-/** A formula spoken at the close of a reading. Never part of the text. */
-export interface Closing {
-  readonly text: string;
-  readonly lang: string;
-  readonly direction: 'ltr' | 'rtl';
-  readonly translation: string;
-  /** Why it is set apart from the verses above it. */
-  readonly note: string;
-}
-
 export interface Convention {
   readonly honorifics: readonly Honorific[];
-  readonly closing?: Closing | undefined;
 }
 
 /**
@@ -64,13 +57,6 @@ export const CONVENTIONS: Readonly<Record<string, Convention>> = {
         meaning: 'May God bless him and grant him peace',
       },
     ],
-    closing: {
-      text: 'صَدَقَ اللهُ العَظِيم',
-      lang: 'ar',
-      direction: 'rtl',
-      translation: 'God the Almighty has spoken truly',
-      note: 'Said at the close of a recitation. It is not part of the surah.',
-    },
   },
   judaism: { honorifics: [] },
   christianity: { honorifics: [] },
@@ -87,10 +73,8 @@ export const conventionFor = (tradition: string): Convention =>
   CONVENTIONS[tradition] ?? { honorifics: [] };
 
 /** True when a tradition has anything to render under the frame. */
-export const hasConvention = (tradition: string): boolean => {
-  const c = conventionFor(tradition);
-  return c.honorifics.length > 0 || c.closing !== undefined;
-};
+export const hasConvention = (tradition: string): boolean =>
+  conventionFor(tradition).honorifics.length > 0;
 
 /**
  * Adds honorific marks to already-rendered, already-escaped prose.

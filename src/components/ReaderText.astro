@@ -3,6 +3,8 @@ import ReaderChrome from './ReaderChrome.astro';
 import ParallelColumns from './ParallelColumns.astro';
 import DevotionalToggle from './DevotionalToggle.astro';
 import DivisionJump from './DivisionJump.astro';
+import RecitationFrame from './RecitationFrame.astro';
+import OrnamentDefs from './OrnamentDefs.astro';
 import {
   carries,
   defaultMode,
@@ -28,7 +30,7 @@ import {
   type DivisionIndex,
 } from '../lib/reader-model';
 import { fontFor } from '../lib/scripts';
-import { conventionFor } from '../lib/devotional';
+import { frameFor, OPENER_TRANSLATIONS } from '../lib/recitation';
 
 /**
  * The reading page — Phase 5.
@@ -110,8 +112,18 @@ const hasOriginal = orig !== '' && (carries(verses, orig) || gapped);
 const scriptFont = fontFor(work.script);
 const { prev, next, endsSection } = walk(work, division, chapter);
 const { line: preface, omittedNote } = prefaceFor(work, division, chapter);
+
+/*
+  The recitation frame: the two lines that open and close a reading.
+
+  The opener varies by division and so lives in the work record; the closer is
+  the same line on all 114 and so lives with the tradition. A page renders the
+  ornament defs only when it is actually going to draw a rule with them.
+*/
+const { closer } = frameFor(work.tradition);
+const openerGloss = OPENER_TRANSLATIONS[work.id];
+const framed = preface !== undefined || closer !== undefined;
 const section = sectionOf(work, division.n);
-const convention = conventionFor(work.tradition);
 /* A jump control rather than a list, where a list would be unusable. The
    threshold is where a select stops fitting on a phone screen and starts being
    a scroll of its own. */
@@ -134,7 +146,16 @@ const contentsLabel =
   data-division={chapter === undefined ? division.slug : `${division.slug}/${chapter}`}
   data-heading={heading}
   data-parallel={parallel === undefined ? undefined : 'yes'}
+  data-tradition={framed ? work.tradition : undefined}
 >
+  {/*
+    The theme tokens and the arabesque tile, for the recitation frame's rule
+    and its accent — and for nothing else. The reader keeps the museum's
+    neutral dress: no band, no pattern, no themed links. This is the narrow
+    exception the owner ruled, and it reaches exactly two lines on the page.
+  */}
+  {framed && <OrnamentDefs tradition={work.tradition} />}
+
   <header class="rd__head">
     <p class="eyebrow">
       {
@@ -206,21 +227,25 @@ const contentsLabel =
 
     Fidelity, not a preference, so there is no toggle: the mushaf opens every
     surah but at-Tawba with the basmala, and in all but al-Fatiha it stands
-    above the numbering rather than inside it. Both scripts, lifted from the
-    corpus — surah 1 carries it as its own first verse — so the words and the
-    editions are the ones already named on this page.
+    above the numbering rather than inside it. The words are lifted from the
+    corpus — surah 1 carries it as its own first verse — so nothing here is
+    authored.
+
+    The script only. It used to render its English underneath; a formula with a
+    translation set beneath it reads as the text having two halves, which is
+    what the verses have and what this does not. The English is the `title`.
   */}
   {
     preface !== undefined && (
-      <p class="rd-preface" data-preface>
-        <span class="rd-preface__orig" lang={langTag(work, orig)} dir={work.direction}
-              style={`font-family: ${scriptFont}`}>
-          {preface.text[orig]}
-        </span>
-        {preface.text['en'] !== undefined && (
-          <span class="rd-preface__en">{preface.text['en']}</span>
-        )}
-      </p>
+      <RecitationFrame
+        kind="opener"
+        tradition={work.tradition}
+        text={preface.text[orig] ?? ''}
+        lang={langTag(work, orig)}
+        direction={work.direction}
+        translation={openerGloss ?? ''}
+        scriptFont={scriptFont}
+      />
     )
   }
   {omittedNote !== undefined && <p class="caption rd-preface__absent">{omittedNote}</p>}
@@ -320,26 +345,25 @@ const contentsLabel =
   }
 
   {/*
-    The closing formula. Set apart from the verses above it in every way a page
-    can manage — its own block, its own rule, its own label — because it is
-    said after a recitation and is not part of the surah, and a reader must
-    never be able to mistake one for the other.
+    The closing formula, said after the last verse of every surah — at-Tawba
+    included, which opens without the basmala but closes like the rest.
 
-    Shown only under the Devotional frame, and present in the DOM either way:
-    the frame is a CSS switch, so turning it on cannot alter a word of what is
-    above it.
+    Standing dress, not a preference. It sat under the Devotional frame's
+    toggle until the owner ruled otherwise, which had the effect of making the
+    page's default rendering less faithful than the mushaf rather than more
+    neutral than it.
   */}
   {
-    convention.closing !== undefined && (
-      <aside class="dv dv-closing" aria-label="Recitation formula">
-        <p class="dv-closing__text" lang={convention.closing.lang} dir={convention.closing.direction}
-           style={`font-family: ${scriptFont}`}>
-          {convention.closing.text}
-        </p>
-        <p class="caption dv-closing__gloss">
-          {convention.closing.translation}. {convention.closing.note}
-        </p>
-      </aside>
+    closer !== undefined && (
+      <RecitationFrame
+        kind="closer"
+        tradition={work.tradition}
+        text={closer.text}
+        lang={closer.lang}
+        direction={closer.direction}
+        translation={closer.translation}
+        scriptFont={scriptFont}
+      />
     )
   }
 
@@ -712,36 +736,11 @@ const contentsLabel =
   /* --- the opening line -------------------------------------------------- */
 
   /*
-    Set as the mushaf sets it: centred above the numbered text, in the same
-    face as the verses, with no verse number beside it — because it does not
-    have one. The rule beneath separates it from verse 1 without making it a
-    heading, which it is not either.
+    At-Tawba's one-line note, where the opener would otherwise stand.
+
+    The absence is stated, not silent — a surah rendered without the basmala
+    and without a word about it looks like a page that lost one.
   */
-  .rd-preface {
-    text-align: center;
-    padding-bottom: var(--space-4);
-    margin-bottom: var(--space-2);
-    border-bottom: var(--hairline-width) solid var(--hairline);
-  }
-
-  .rd-preface__orig {
-    display: block;
-    font-family: var(--script-font);
-    font-size: 1.5rem;
-    line-height: 2.15;
-  }
-
-  .rd-preface__en {
-    display: block;
-    font-family: var(--font-prose);
-    font-size: var(--size-small);
-    color: var(--ink-soft);
-    margin-top: var(--space-1);
-  }
-
-  /* Both columns show here whatever the reading mode: the line is one line of
-     two scripts, not a paired verse with an English and an original half. */
-
   .rd-preface__absent {
     text-align: center;
     color: var(--ink-soft);

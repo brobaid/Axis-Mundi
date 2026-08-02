@@ -439,6 +439,12 @@ const THEME_CHECKS: readonly Check[] = [
   { fg: '--th-rule', bg: '--th-band', min: 3, why: "the band's own edge" },
   { fg: '--th-accent', bg: '--canvas', min: 3, why: 'a corner motif over the page' },
   { fg: '--th-accent', bg: '--th-band', min: 3, why: 'a corner motif on the band' },
+  /* The accent carries text in exactly one place — the Quran's recitation
+     frame — so it has a second, deeper cut held to the text threshold rather
+     than the graphical one. */
+  { fg: '--th-accent-ink', bg: '--canvas', min: 4.5, why: 'the recitation frame on the page' },
+  { fg: '--th-accent-ink', bg: '--surface', min: 4.5, why: 'the accent as text on a card' },
+  { fg: '--th-accent-ink', bg: '--th-band', min: 4.5, why: 'the accent as text on the band' },
 ];
 
 /**
@@ -530,6 +536,14 @@ const THEME_SURFACES = [
   '.dd-mast :global(a)',
   '.dd-section :global(a:hover)',
   '.dd-mast :global(a:hover)',
+  /*
+    The Reading Room's recitation frame — the owner's narrow exception to
+    "scripture pages borrow no theme". It reaches two lines on a surah page:
+    the basmala above verse 1 and the closing formula below the last, set in
+    the accent and ruled with the arabesque. Nothing else on the page is
+    themed, and the allow-list is what keeps that true.
+  */
+  '.rd-frame',
   /* The ornament component's own drawing rules. */
   '.orn--corner',
   '.orn--mark',

@@ -266,6 +266,8 @@
                       Jainism, which the table asked to read as marble
        --th-rule      dividers and frames, >= 3:1 everywhere it is drawn
        --th-accent    the corner motifs and the once-only marks, >= 3:1
+       --th-accent-ink the same hue where the accent has to carry *text* — the
+                      Quran's recitation frame — cut deeper for 4.5:1
        --th-link      links inside the dive, >= 4.5:1 on canvas, surface and band
        --th-pattern   the tile behind the band, drawn at --th-pattern-alpha
 
@@ -290,6 +292,7 @@
     --th-band: #d5e0d4;
     --th-rule: #0f5132;
     --th-accent: #8a6d1f;
+    --th-accent-ink: #775e1b;
     --th-link: #0f5132;
     --th-pattern: #0e492d;
   }
@@ -298,6 +301,7 @@
     --th-band: #d9dee4;
     --th-rule: #1b3a6b;
     --th-accent: #8a6d1f;
+    --th-accent-ink: #775e1b;
     --th-link: #8f2233;
     --th-pattern: #183460;
   }
@@ -306,6 +310,7 @@
     --th-band: #dcd7e2;
     --th-rule: #26356b;
     --th-accent: #8a7250;
+    --th-accent-ink: #705c41;
     --th-link: #26356b;
     --th-pattern: #7c6748;
   }
@@ -314,6 +319,7 @@
     --th-band: #f4e1cb;
     --th-rule: #a83218;
     --th-accent: #8a6d1f;
+    --th-accent-ink: #7c621c;
     --th-link: #a83218;
     --th-pattern: #af5709;
   }
@@ -322,6 +328,7 @@
     --th-band: #efe3cd;
     --th-rule: #6b2226;
     --th-accent: #8a6d1f;
+    --th-accent-ink: #7d631c;
     --th-link: #6b2226;
     --th-pattern: #975f13;
   }
@@ -330,6 +337,7 @@
     --th-band: #f4e3cb;
     --th-rule: #1c2a5e;
     --th-accent: #c26a08;
+    --th-accent-ink: #9b5506;
     --th-link: #1c2a5e;
     --th-pattern: #192655;
   }
@@ -338,6 +346,7 @@
     --th-band: #f0d6cf;
     --th-rule: #a8241c;
     --th-accent: #8a6d1f;
+    --th-accent-ink: #765d1b;
     --th-link: #a8241c;
     --th-pattern: #27221d;
   }
@@ -346,6 +355,7 @@
     --th-band: #f2dad0;
     --th-rule: #b83a26;
     --th-accent: #8a7250;
+    --th-accent-ink: #735f43;
     --th-link: #b23825;
     --th-pattern: #a63422;
   }
@@ -354,6 +364,7 @@
     --th-band: #f3efe7;
     --th-rule: #a5202a;
     --th-accent: #a5202a;
+    --th-accent-ink: #a5202a;
     --th-link: #a5202a;
     --th-pattern: #7c786c;
   }
@@ -362,6 +373,7 @@
     --th-band: #d7d8df;
     --th-rule: #9c2b22;
     --th-accent: #b06a10;
+    --th-accent-ink: #88520c;
     --th-link: #9c2b22;
     --th-pattern: #171d32;
   }
@@ -475,6 +487,7 @@
       --th-band: #142519;
       --th-rule: #41765d;
       --th-accent: #8a6d1f;
+      --th-accent-ink: #9e8645;
       --th-link: #68917e;
       --th-pattern: #93b1a3;
     }
@@ -483,6 +496,7 @@
       --th-band: #19222f;
       --th-rule: #566d91;
       --th-accent: #8a6d1f;
+      --th-accent-ink: #9e8645;
       --th-link: #ba7681;
       --th-pattern: #98a6bc;
     }
@@ -491,6 +505,7 @@
       --th-band: #1e192c;
       --th-rule: #5a658f;
       --th-accent: #8a7250;
+      --th-accent-ink: #968062;
       --th-link: #7b84a5;
       --th-pattern: #cac0b0;
     }
@@ -499,6 +514,7 @@
       --th-band: #3d260e;
       --th-rule: #b85742;
       --th-accent: #8c7023;
+      --th-accent-ink: #a69055;
       --th-link: #c98070;
       --th-pattern: #e4b891;
     }
@@ -507,6 +523,7 @@
       --th-band: #372811;
       --th-rule: #996769;
       --th-accent: #8c7023;
+      --th-accent-ink: #a58f52;
       --th-link: #af888a;
       --th-pattern: #d8bc96;
     }
@@ -515,6 +532,7 @@
       --th-band: #3d290e;
       --th-rule: #6b7596;
       --th-accent: #c26a08;
+      --th-accent-ink: #cc8331;
       --th-link: #8e95af;
       --th-pattern: #999fb7;
     }
@@ -523,6 +541,7 @@
       --th-band: #381813;
       --th-rule: #b64740;
       --th-accent: #8a6d1f;
+      --th-accent-ink: #9e8645;
       --th-link: #c6716b;
       --th-pattern: #a09d9b;
     }
@@ -531,6 +550,7 @@
       --th-band: #3b1c14;
       --th-rule: #bd4835;
       --th-accent: #8a7250;
+      --th-accent-ink: #9c886b;
       --th-link: #cd7365;
       --th-pattern: #dfa69d;
     }
@@ -539,6 +559,7 @@
       --th-band: #24211c;
       --th-rule: #b54850;
       --th-accent: #b54850;
+      --th-accent-ink: #c56f76;
       --th-link: #c57077;
       --th-pattern: #cac8c2;
     }
@@ -547,6 +568,7 @@
       --th-band: #161a28;
       --th-rule: #a9473f;
       --th-accent: #b06a10;
+      --th-accent-ink: #b67521;
       --th-link: #bb6d67;
       --th-pattern: #989ba5;
     }
@@ -598,6 +620,7 @@
     --th-band: #ffffff;
     --th-rule: #6b6357;
     --th-accent: #6b6357;
+    --th-accent-ink: #46403a;
     --th-link: #211d18;
     --th-pattern: #ffffff;
     --th-pattern-alpha: 0;

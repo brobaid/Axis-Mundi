@@ -18,6 +18,8 @@ import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { FRAMES } from '../src/lib/recitation.js';
+
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = resolve(ROOT, 'dist');
 const CONTENT = resolve(ROOT, 'src/content');
@@ -44,7 +46,14 @@ const notesFor = (g: { english_gaps: number; original_gaps: number; blank: numbe
 interface WorkIndex {
   id: string;
   title: string;
+  tradition: string;
   editions: Record<string, string>;
+  /** The opening line and the divisions whose convention does not take it. */
+  preface?: {
+    omitted: number[];
+    omitted_note?: string;
+    inline: number[];
+  };
   divisions: {
     n: number;
     slug: string;
@@ -60,6 +69,14 @@ interface WorkIndex {
   english_gaps: number;
   original_gaps: number;
 }
+
+/* Read from the module that owns the frame, so the gate and the page can never
+   disagree about which traditions have one. */
+const FRAMED_TRADITIONS = new Set(
+  Object.entries(FRAMES)
+    .filter(([, frame]) => frame.closer !== undefined)
+    .map(([tradition]) => tradition),
+);
 
 const problems: string[] = [];
 const fail = (where: string, message: string): void => {
@@ -130,7 +147,13 @@ for (const work of works) {
   const chaptered = work.divisions.some((d) => d.chapters !== undefined);
 
   /** A text page: exactly the verses claimed, and every one-sided verse marked. */
-  const checkText = (where: string, path: string, verses: number, gaps: number): void => {
+  const checkText = (
+    where: string,
+    path: string,
+    verses: number,
+    gaps: number,
+    divisionN: number,
+  ): void => {
     if (!existsSync(path)) {
       fail(where, 'no page was built');
       return;
@@ -151,7 +174,51 @@ for (const work of works) {
     if (gapNotes !== gaps) {
       fail(where, `${gaps} verses stand on one side only, ${gapNotes} say so on the page`);
     }
+
+    checkFrame(where, html, divisionN);
   };
+
+  /*
+    The recitation frame, on every page that is owed one.
+
+    Standing dress, not a preference, so its absence is a defect rather than a
+    setting — and it is exactly the kind of defect that hides, because a surah
+    missing its closing line still renders 286 correct verses and looks fine.
+    Three rules, all of them things the mushaf itself asserts:
+
+      · the closer stands on every division of a work whose tradition has one
+      · the opener stands on every division except the ones the record names —
+        at-Tawba omits it, al-Fatiha numbers it as verse 1 — and never twice
+      · a division that omits the opener says so, in place of it
+  */
+  function checkFrame(where: string, html: string, divisionN: number | undefined): void {
+    const closers = count(html, 'data-frame="closer"');
+    const openers = count(html, 'data-frame="opener"');
+    const wantsCloser = FRAMED_TRADITIONS.has(work.tradition);
+
+    if (closers !== (wantsCloser ? 1 : 0)) {
+      fail(where, `expected ${wantsCloser ? 1 : 0} closing formula, found ${closers}`);
+    }
+
+    const p = work.preface;
+    if (p === undefined || divisionN === undefined) return;
+
+    const omitted = p.omitted.includes(divisionN);
+    const inline = p.inline.includes(divisionN);
+    const wantsOpener = !omitted && !inline;
+
+    if (openers !== (wantsOpener ? 1 : 0)) {
+      fail(
+        where,
+        `expected ${wantsOpener ? 1 : 0} opening formula, found ${openers}` +
+          (inline ? ' (the opener is this division\'s own first verse)' : '') +
+          (omitted ? ' (this division omits it)' : ''),
+      );
+    }
+    if (omitted && p.omitted_note !== undefined && !html.includes(p.omitted_note)) {
+      fail(where, 'omits the opening formula without saying so');
+    }
+  }
 
   /**
    * A division whose editions do not align: columns, not verses.
@@ -211,7 +278,7 @@ for (const work of works) {
 
     if (division.chapters === undefined) {
       checkText(at, join(DIST, 'read', work.id, division.slug, 'index.html'),
-        division.verses, notesFor(division));
+        division.verses, notesFor(division), division.n);
       continue;
     }
 
@@ -232,8 +299,11 @@ for (const work of works) {
       if (!html.includes(`${at}/${chapter.c}"`)) {
         fail(at, `contents page does not link to chapter ${chapter.c}`);
       }
+      /* A chapter past the first never takes the opener; `prefaceFor` already
+         holds that rule, so the gate passes the division number only where the
+         page could legitimately carry one. */
       checkText(`${at}/${chapter.c}`, join(DIST, 'read', work.id, division.slug, String(chapter.c), 'index.html'),
-        chapter.verses, notesFor(chapter));
+        chapter.verses, notesFor(chapter), chapter.c === 1 ? division.n : -1);
     }
   }
 }
