@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroAxis from '../components/HeroAxis.astro';
-import RoomPlaque from '../components/RoomPlaque.astro';
 import TraditionSymbols from '../components/TraditionSymbols.astro';
 import { getPublishable } from '../lib/content';
 import OnThisDay from '../components/OnThisDay.astro';
@@ -67,13 +66,23 @@ const doors: Door[] = [
 >
   <TraditionSymbols />
 
-  <section class="shell hero">
-    <div class="hero__plaque">
-      <RoomPlaque
-        lede="Timelines, maps and deep dives across ten traditions, drawn from academic sources, presented without a thumb on the scale."
-      />
-    </div>
-    <HeroAxis />
+  {/*
+    The hall: the instrument first, the title beneath it.
+
+    The plaque vocabulary every other room uses does not survive here — a wall
+    label is furniture, and this is the face. The name is cut from gold leaf and
+    the line under it is engraved small caps, which is the plaque's eyebrow
+    treatment given the room it deserves.
+  */}
+  <section class="hero" aria-labelledby="hall-title">
+    <HeroAxis>
+      <h1 class="hall__title" id="hall-title">Axis Mundi</h1>
+      <p class="hall__says">Five thousand years of belief, on one line</p>
+      <p class="hall__lede">
+        Timelines, maps and deep dives across ten traditions, drawn from academic sources,
+        presented without a thumb on the scale.
+      </p>
+    </HeroAxis>
   </section>
 
   <!--
@@ -159,52 +168,29 @@ const doors: Door[] = [
 </script>
 
 <style>
-  /* --- hero --------------------------------------------------------------- */
+  /* --- the hall ----------------------------------------------------------- */
 
   .hero {
-    padding-block: var(--space-12) var(--space-2);
-    display: grid;
-    gap: var(--space-12);
-    align-items: center;
+    margin-bottom: var(--space-16);
   }
 
   /*
-    Two columns once there is room for two, and the plaque keeps its own measure
-    inside its column so the name never stretches to meet the wheel.
+    The title plate sits inside the hall, under the instrument, on the dark.
+
+    Gold leaf: the name is a gradient clipped to the glyphs — three stops, so
+    the letters catch differently across their width the way struck metal does
+    — with a single sheen passing over it once and then never again. The sheen
+    is a translated band, not an animated background-position, because the
+    second is a paint every frame and the first is a composited layer.
   */
-  @media (min-width: 60rem) {
-    .hero {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
-      gap: var(--space-16);
-      align-items: center;
-    }
+  .hero :global(.hall__plate) {
+    animation: hall-rise 1400ms var(--ease-out) both;
   }
 
-  .hero__plaque {
-    max-width: 46rem;
-  }
-
-  /* The grid's gap is the whole distance to the wheel; the plaque's own bottom
-     margin would stack on top of it and open a hole at 390px. */
-  .hero__plaque :global(.plaque) {
-    margin-bottom: 0;
-  }
-
-  /*
-    The title settles in once, on first paint, and never again.
-
-    A fade and a short rise — opacity and transform, nothing that could move the
-    layout — on the whole plaque rather than line by line, because a staggered
-    entrance is a performance and this is a wall label.
-  */
-  .hero__plaque {
-    animation: hero-settle 900ms var(--ease-out) both;
-  }
-
-  @keyframes hero-settle {
+  @keyframes hall-rise {
     from {
       opacity: 0;
-      transform: translate3d(0, 12px, 0);
+      transform: translate3d(0, 18px, 0);
     }
     to {
       opacity: 1;
@@ -212,13 +198,98 @@ const doors: Door[] = [
     }
   }
 
-  /* The fade only: the rise is motion, the fade is a dissolve. */
+  .hall__title {
+    position: relative;
+    display: inline-block;
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-variation-settings: 'opsz' 72;
+    font-weight: 400;
+    font-size: clamp(2.75rem, 12vw, 5.5rem);
+    line-height: 1.06;
+    letter-spacing: 0.04em;
+    margin-right: -0.04em;
+    background: linear-gradient(
+      104deg,
+      var(--hall-gold-soft) 8%,
+      var(--hall-gold-ink) 38%,
+      var(--hall-gold-soft) 62%,
+      var(--hall-gold-ink) 88%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* A fallback for anything that cannot clip a background to text: the gold
+       ink itself, which is the same colour the gradient is mostly made of and
+       is the value the contrast audit holds at 4.5:1 on the hall. */
+    -webkit-text-fill-color: transparent;
+  }
+
+  @supports not ((background-clip: text) or (-webkit-background-clip: text)) {
+    .hall__title {
+      color: var(--hall-gold-ink);
+      -webkit-text-fill-color: var(--hall-gold-ink);
+    }
+  }
+
+  /* One pass, once. */
+  .hall__title::after {
+    content: '';
+    position: absolute;
+    inset: -10% -40%;
+    background: linear-gradient(100deg, transparent 42%, var(--hall-gold-ink) 50%, transparent 58%);
+    opacity: 0;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    animation: hall-sheen 2600ms var(--ease-standard) 1100ms both;
+  }
+
+  @keyframes hall-sheen {
+    from {
+      transform: translate3d(-60%, 0, 0);
+      opacity: 0;
+    }
+    35% {
+      opacity: 0.5;
+    }
+    to {
+      transform: translate3d(60%, 0, 0);
+      opacity: 0;
+    }
+  }
+
+  /* Engraved small caps, the plaque's eyebrow at the scale of a face. */
+  .hall__says {
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--hall-gold-soft);
+    margin-top: var(--space-4);
+  }
+
+  /* In the hall, so the lede takes the hall's own soft gold rather than the
+     page's ink — which on obsidian would be all but invisible. */
+  .hall__lede {
+    color: var(--hall-gold-soft);
+    max-width: 52ch;
+    margin: var(--space-8) auto 0;
+    opacity: 0.86;
+  }
+
+  /*
+    Reduced motion: the fade alone, and the sheen never runs.
+  */
   @media (prefers-reduced-motion: reduce) {
-    .hero__plaque {
-      animation: hero-fade 600ms var(--ease-out) both;
+    .hero :global(.hall__plate) {
+      animation: hall-fade 700ms var(--ease-out) both;
     }
 
-    @keyframes hero-fade {
+    .hall__title::after {
+      display: none;
+    }
+
+    @keyframes hall-fade {
       from {
         opacity: 0;
       }

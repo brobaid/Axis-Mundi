@@ -132,6 +132,37 @@
   --hatch-angle: 45deg;
   --hatch-width: 5px;
 
+
+  /* ---------------------------------------------------------------------------
+     THE ENTRANCE HALL
+
+     The hall is dark in BOTH modes — it is a vast unlit room with one lit
+     object in it, and a paper version of that is not the same room. So these
+     live in `:root` and never mode-swap, and the jewels take the light tradition
+     hues in Gallery as well as at night, because obsidian is obsidian.
+     --------------------------------------------------------------------------- */
+
+  --hall: #0a0908;
+  --hall-deep: #040404;
+  /* The warm end of the vignette: a lamp somewhere off the plate, not a glow. */
+  --hall-warm: #171008;
+  /* Antique gold: the instrument's linework, and the title cut from it. */
+  --hall-gold: #c9a24a;
+  --hall-gold-ink: #c9a24a;
+  --hall-gold-soft: #b0924e;
+
+  /* The ten as jewels. Light values in both modes; see above. */
+  --jewel-judaism: #7cb2e8;
+  --jewel-christianity: #b195dd;
+  --jewel-islam: #5cbb8b;
+  --jewel-hinduism: #eda049;
+  --jewel-buddhism: #cf7a7d;
+  --jewel-sikhism: #8b97c9;
+  --jewel-chinese: #e0c246;
+  --jewel-shinto: #e8836e;
+  --jewel-jainism: #4fc0b8;
+  --jewel-zoroastrianism: #e0705f;
+
   /* --- Z layers ------------------------------------------------------------ */
   --z-canvas: 0;
   --z-meridian: 20;

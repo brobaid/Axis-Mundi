@@ -81,6 +81,21 @@ const CHECKS: readonly Check[] = [
   { fg: '--contested-hatch', bg: '--surface', min: 3, why: 'contested hatching on a surface' },
   { fg: '--contested-badge-ink', bg: '--contested-badge-bg', min: 4.5, why: 'contested badge text' },
 
+  /*
+    The entrance hall. Dark in both modes, so these are checked in both and in
+    print — where the hall's own print rule turns it back into a page.
+  */
+  { fg: '--hall-gold-ink', bg: '--hall', min: 4.5, why: 'the title, cut from gold' },
+  { fg: '--hall-gold-ink', bg: '--hall-deep', min: 4.5, why: 'the title at the vignette\'s dark end' },
+  { fg: '--hall-gold-soft', bg: '--hall', min: 4.5, why: "the hall's subtitle" },
+  { fg: '--hall-gold-soft', bg: '--hall-warm', min: 4.5, why: 'the subtitle in the warm' },
+  { fg: '--hall-gold', bg: '--hall', min: 3, why: "the instrument's linework" },
+  { fg: '--hall-gold', bg: '--hall-warm', min: 3, why: 'the linework where the light catches' },
+  ...TRADITIONS.flatMap((t): Check[] => [
+    { fg: `--jewel-${t}`, bg: '--hall', min: 3, why: `${t}'s jewel on obsidian` },
+    { fg: `--jewel-${t}`, bg: '--hall-warm', min: 3, why: `${t}'s jewel in the warm` },
+  ]),
+
   // Tradition ramps: text-safe at 4.5:1, lines and fills at 3:1, in BOTH modes
   // and against BOTH backgrounds (design language §3.2).
   /* Unaffiliated is not a tradition but it is a map fill with a legend entry, so

@@ -35,10 +35,10 @@ import { displayDate } from '../src/lib/display-date.js';
 import {
   AXIS_NODES,
   HERO_MIN_BOX,
-  ORBIT_INNER,
-  ORBIT_OUTER,
+  RING_RADII,
   TAP_MIN,
-  nodeSeparations,
+  closestApproach,
+  outerReach,
 } from '../src/lib/hero-axis.js';
 import {
   CONTESTED_AT,
@@ -346,55 +346,82 @@ for (const { name, drill, view } of SCENARIOS) {
   ok();
 }
 
-/* ── the entrance hall's axis ───────────────────────────────────────────── */
+/* ── the entrance hall's instrument ─────────────────────────────────────── */
 
 /*
-  Ten doors on ten orbits, none of them within a thumb of another.
+  Ten doors on three turning rings, none of them ever within a thumb of another.
 
-  The hero's nodes are links to the dives, so each carries a 44px target, and
-  ten of those inside a 358px square only works because the wheel turns rigidly
-  — the angle between any two nodes is fixed at authoring time. Break that (give
-  the orbits their own speeds, or nudge the angular step to something rounder)
-  and pairs of nodes drift into each other until a reader aiming at Buddhism
-  lands on Sikhism. That failure appears minutes after load, on a phone, and
-  never in a diff. So the arithmetic is asserted here instead.
+  The invariant changed when the instrument did, and that is the point of this
+  block. The first hero was one rigid wheel: the angle between any two jewels
+  was fixed at authoring time, so a separation proved once was proved forever,
+  and the gate asserted that fixed minimum. Rings that turn at different speeds
+  and in different directions destroy that guarantee completely — every pair of
+  jewels on different rings passes through perfect alignment, over and over,
+  and no fact about their starting angles survives it.
+
+  So the guarantee moved from angle to radius, and this asserts the new one:
+
+    · jewels on ONE ring are rigid to each other, so their chord separation is
+      fixed and is checked directly
+    · jewels on DIFFERENT rings are checked at their worst case, which is
+      perfect alignment — and then the only thing between them is the gap
+      between their rings, so the rings must be at least TAP_MIN apart
+
+  Close the ring spacing to fit a fourth ring and this fails, which is exactly
+  what it is for: the failure it prevents appears minutes after load, on a
+  phone, and never in a diff.
 */
 {
   if (AXIS_NODES.length !== 10) {
-    fail(`hero axis carries ${AXIS_NODES.length} nodes, not the launch ten`);
+    fail(`hero instrument carries ${AXIS_NODES.length} jewels, not the launch ten`);
   }
   ok();
 
-  /* Every node on its own ray and its own orbit: two on one ray would sit on
-     the same line through the centre and read as one tradition eclipsing
-     another. */
-  const rays = new Set(AXIS_NODES.map((n) => n.angle));
-  if (rays.size !== AXIS_NODES.length) fail('hero axis puts two traditions on one ray');
-  const orbits = new Set(AXIS_NODES.map((n) => n.orbit.toFixed(6)));
-  if (orbits.size !== AXIS_NODES.length) fail('hero axis puts two traditions on one orbit');
+  /* Every jewel on exactly one ring, and every ring occupied. */
+  for (const ring of RING_RADII.keys()) {
+    if (!AXIS_NODES.some((n) => n.ring === ring)) fail(`hero ring ${ring} carries no jewel`);
+  }
+  const strayRing = AXIS_NODES.find((n) => n.ring < 0 || n.ring >= RING_RADII.length);
+  if (strayRing !== undefined) fail(`hero jewel ${strayRing.id} rides ring ${strayRing.ring}, which does not exist`);
   ok();
 
-  /* The binding case is the narrowest box, because the targets are a fixed
-     44px at every width while the geometry scales with it. */
-  const separations = nodeSeparations(HERO_MIN_BOX);
-  const tightest = separations.reduce((a, b) => (b.distance < a.distance ? b : a));
-  if (tightest.distance < TAP_MIN) {
+  /* Rings strictly outward, and spaced by at least a touch target. */
+  for (let i = 1; i < RING_RADII.length; i++) {
+    const gap = (RING_RADII[i] as number) - (RING_RADII[i - 1] as number);
+    if (gap < TAP_MIN) {
+      fail(
+        `hero rings ${i - 1} and ${i} are ${gap}px apart, inside the ${TAP_MIN}px touch ` +
+          'minimum — two jewels aligned across them would overlap',
+      );
+    }
+  }
+  ok();
+
+  /* The binding case is the narrowest box: targets are a fixed 44px at every
+     width while the geometry scales with it. */
+  const { withinRing, acrossRings, pair } = closestApproach(HERO_MIN_BOX);
+  if (withinRing + 1e-9 < TAP_MIN) {
     fail(
-      `hero axis at ${HERO_MIN_BOX}px: ${tightest.a} and ${tightest.b} sit ` +
-        `${tightest.distance.toFixed(1)}px apart, inside the ${TAP_MIN}px touch minimum`,
+      `hero instrument at ${HERO_MIN_BOX}px: ${pair} share a ring and sit ` +
+        `${withinRing.toFixed(1)}px apart, inside the ${TAP_MIN}px touch minimum`,
+    );
+  }
+  if (acrossRings + 1e-9 < TAP_MIN) {
+    fail(
+      `hero instrument at ${HERO_MIN_BOX}px: jewels on neighbouring rings can close to ` +
+        `${acrossRings.toFixed(1)}px, inside the ${TAP_MIN}px touch minimum`,
     );
   }
   ok();
 
   /* And the whole target has to be inside the box, not just its centre. */
-  const reach = ORBIT_OUTER * (HERO_MIN_BOX / 2) + TAP_MIN / 2;
+  const reach = outerReach(HERO_MIN_BOX);
   if (reach > HERO_MIN_BOX / 2) {
     fail(
-      `hero axis: the outermost node's target reaches ${reach.toFixed(1)}px from centre, ` +
+      `hero instrument: the outermost jewel's target reaches ${reach.toFixed(1)}px from centre, ` +
         `past the ${(HERO_MIN_BOX / 2).toFixed(1)}px edge of the box`,
     );
   }
-  if (ORBIT_INNER >= ORBIT_OUTER) fail('hero axis: the innermost orbit is not inside the outermost');
   ok();
 }
 
@@ -405,13 +432,12 @@ if (failures.length > 0) {
   process.exit(1);
 }
 
-const tightestNode = nodeSeparations(HERO_MIN_BOX).reduce((a, b) =>
-  b.distance < a.distance ? b : a,
-);
+const approach = closestApproach(HERO_MIN_BOX);
 
 console.log(
   `  Canvas layout invariants passed — ${checks} groups across ${SCENARIOS.length} viewports, ` +
     'tree axis labels clear at five widths, ' +
-    `hero nodes ${tightestNode.distance.toFixed(1)}px apart at ${HERO_MIN_BOX}px ` +
+    `hero jewels ${approach.withinRing.toFixed(1)}px apart within a ring and ` +
+    `${approach.acrossRings.toFixed(1)}px across rings at ${HERO_MIN_BOX}px, ` +
     `against a ${TAP_MIN}px floor.`,
 );
