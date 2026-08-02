@@ -99,7 +99,10 @@ interface Block {
   /** Space-joined preludes of every enclosing at-rule; '' at top level. */
   readonly media: string;
   readonly selector: string;
+  /** Custom-property declarations only — what the token resolver replays. */
   readonly decls: readonly (readonly [string, string])[];
+  /** Every declaration, custom or not. The containment check needs `color`. */
+  readonly all: readonly (readonly [string, string])[];
 }
 
 /**
@@ -137,12 +140,14 @@ function parseBlocks(css: string): Block[] {
       const close = stripped.indexOf('}', i);
       const end = close === -1 ? stripped.length : close;
       const body = stripped.slice(i + 1, end);
+      const all = [...body.matchAll(/([-\w]+)\s*:\s*([^;]+);/g)].map(
+        (d) => [d[1] as string, (d[2] as string).trim()] as const,
+      );
       blocks.push({
         media: atRules.join(' '),
         selector: prelude,
-        decls: [...body.matchAll(/(--[\w-]+)\s*:\s*([^;]+);/g)].map(
-          (d) => [d[1] as string, (d[2] as string).trim()] as const,
-        ),
+        decls: all.filter(([name]) => name.startsWith('--')),
+        all,
       });
       i = end + 1;
       preludeStart = i;
@@ -358,14 +363,15 @@ interface Failure {
   readonly check: Check;
   readonly ratio: number | null;
   readonly note?: string;
+  /** Set when the failure belongs to one tradition's theme. */
+  readonly theme?: string;
 }
 
 const failures: Failure[] = [];
 let passed = 0;
 
-for (const mode of MODES) {
-  const vars = resolveMode(blocks, mode);
-  for (const check of CHECKS) {
+function audit(vars: Map<string, string>, mode: Mode, checks: readonly Check[], theme?: string): void {
+  for (const check of checks) {
     if (check.mode !== undefined && check.mode !== mode) continue;
 
     const fgRaw = resolveVar(check.fg, vars);
@@ -375,6 +381,7 @@ for (const mode of MODES) {
         mode,
         check,
         ratio: null,
+        ...(theme === undefined ? {} : { theme }),
         note: `undefined token: ${fgRaw === null ? check.fg : check.bg}`,
       });
       continue;
@@ -383,16 +390,94 @@ for (const mode of MODES) {
     const fg = hexToRgb(fgRaw);
     const bg = hexToRgb(bgRaw);
     if (fg === null || bg === null) {
-      failures.push({ mode, check, ratio: null, note: 'value is not a plain hex color' });
+      failures.push({
+        mode,
+        check,
+        ratio: null,
+        ...(theme === undefined ? {} : { theme }),
+        note: 'value is not a plain hex color',
+      });
       continue;
     }
 
     const ratio = contrast(fg, bg);
     if (ratio + 1e-9 < check.min) {
-      failures.push({ mode, check, ratio });
+      failures.push({ mode, check, ratio, ...(theme === undefined ? {} : { theme }) });
     } else {
       passed += 1;
     }
+  }
+}
+
+for (const mode of MODES) {
+  audit(resolveMode(blocks, mode), mode, CHECKS);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2b. Tradition themes: the same guarantees, ten more times, in all three     */
+/*     contexts.                                                              */
+/* -------------------------------------------------------------------------- */
+
+/*
+  A dive's header band is a new background this museum did not have, and every
+  contrast contract that used to be checked against the canvas has to hold
+  against it too. Ten themes × three contexts is where a hand-tuned palette
+  quietly fails: a hue that clears 4.5:1 on cream fails on its own band, in
+  night mode only, on one tradition.
+
+  `--th-pattern` is deliberately absent from these checks. It is drawn at 5–6%
+  and is never asked to be legible; a contrast floor on it would be a floor on
+  something the design intends to be almost invisible.
+*/
+const THEME_CHECKS: readonly Check[] = [
+  { fg: '--ink', bg: '--th-band', min: 4.5, why: 'the dive title on its header band' },
+  { fg: '--ink-soft', bg: '--th-band', min: 4.5, why: 'the dive subtitle on its header band' },
+  { fg: '--th-link', bg: '--canvas', min: 4.5, why: 'a themed link in the dive' },
+  { fg: '--th-link', bg: '--surface', min: 4.5, why: 'a themed link on a card' },
+  { fg: '--th-link', bg: '--th-band', min: 4.5, why: 'a themed link inside the band' },
+  { fg: '--th-rule', bg: '--canvas', min: 3, why: 'the section divider on the page' },
+  { fg: '--th-rule', bg: '--th-band', min: 3, why: "the band's own edge" },
+  { fg: '--th-accent', bg: '--canvas', min: 3, why: 'a corner motif over the page' },
+  { fg: '--th-accent', bg: '--th-band', min: 3, why: 'a corner motif on the band' },
+];
+
+/**
+ * Resolve one tradition's theme in one context: the base mode, then every theme
+ * block that applies — the tradition's own, and the bare `[data-tradition]`
+ * print reset that covers all ten.
+ */
+function resolveTheme(
+  allBlocks: readonly Block[],
+  mode: Mode,
+  tradition: string,
+): Map<string, string> {
+  const medium = mode === 'print' ? 'print' : 'screen';
+  const out = resolveMode(allBlocks, mode);
+
+  for (const block of allBlocks) {
+    if (!mediaApplies(block.media, medium)) continue;
+    if (!block.selector.includes('[data-tradition')) continue;
+
+    const forThis =
+      block.selector.includes(`[data-tradition='${tradition}']`) ||
+      /\[data-tradition\](?!=)/.test(block.selector);
+    if (!forThis) continue;
+
+    /* Same cascade rule as the base modes: gallery takes only the blocks that
+       are not night-scoped; night and print take the light ones first and let
+       anything later win. */
+    const isNight = block.selector.includes('night-gallery');
+    if (mode === 'gallery' && isNight) continue;
+
+    for (const [name, value] of block.decls) out.set(name, value);
+  }
+
+  return out;
+}
+
+for (const mode of MODES) {
+  for (const tradition of TRADITIONS) {
+    audit(resolveTheme(blocks, mode, tradition), mode, THEME_CHECKS, tradition);
   }
 }
 
@@ -402,14 +487,133 @@ if (failures.length > 0) {
   console.error('\n  Token contrast audit FAILED\n');
   for (const f of failures) {
     const label = `${f.check.fg} on ${f.check.bg}`;
+    const where = f.theme === undefined ? f.mode : `${f.mode} · ${f.theme}`;
     const got = f.ratio === null ? (f.note ?? 'unresolved') : `${fmt(f.ratio)} < ${f.check.min}:1`;
-    console.error(`  [${f.mode}] ${label}\n      ${got}\n      needed for: ${f.check.why}\n`);
+    console.error(`  [${where}] ${label}\n      ${got}\n      needed for: ${f.check.why}\n`);
   }
   console.error(`  ${failures.length} failing, ${passed} passing.\n`);
   process.exit(1);
 }
 
+/* -------------------------------------------------------------------------- */
+/* 3. Theme containment: ornament lives in the frame, never on the text        */
+/* -------------------------------------------------------------------------- */
+
+/*
+  The standing constraint of this phase, made checkable.
+
+  "Ornament lives in the frame; content surfaces keep the standing paper-and-ink
+  tokens and every contrast guarantee." A theme token on a paragraph would break
+  that in the one way the contrast audit above cannot see — the audit proves the
+  colours are safe *where they are declared*, and says nothing about a later
+  edit that paints prose with them.
+
+  So the containment is an allow-list rather than a heuristic. Every rule that
+  references a `--th-` token must have a selector on this list. Adding a new
+  surface to the theme is then a deliberate line in this file, reviewed once,
+  instead of a CSS edit nobody notices.
+*/
+const THEME_SURFACES = [
+  /* tokens.css itself: the declarations, not the uses. */
+  ':root',
+  "[data-tradition='",
+  '[data-tradition]',
+  /* The header band and everything drawn inside it. */
+  '.dd-mast',
+  '.dd-mast__mark',
+  '.dd-mast__onkar',
+  /* The section dividers and the quoted claim's frame. */
+  '.dd-rule',
+  '.miscon',
+  /* Link accents, scoped to the dive. */
+  '.dd-section :global(a)',
+  '.dd-mast :global(a)',
+  '.dd-section :global(a:hover)',
+  '.dd-mast :global(a:hover)',
+  /* The ornament component's own drawing rules. */
+  '.orn--corner',
+  '.orn--mark',
+  '.orn--divider',
+  '.orn--frame',
+  '.orn--pattern',
+];
+
+/*
+  And the other half of the same rule, stated positively: the selectors that
+  set a dive's prose must not set a colour or a background at all. They inherit
+  `--ink` on `--canvas`, which is what every other room in the museum uses and
+  what the 4.5:1 audit above is about.
+*/
+const PROSE_SELECTORS = ['.dd-section :global(p)', '.dd-section p', '.dd :global(p)'];
+
+const THEME_VAR = /var\(\s*(--th-[\w-]+)/;
+const containment: string[] = [];
+
+/*
+  Only the CSS, and only the CSS.
+
+  A .astro file is frontmatter, then markup, then style blocks, and the first
+  two are full of braces that are not rules. Handing the whole file to the brace
+  matcher desynchronises it and it reports no blocks at all — which reads
+  exactly like "nothing to complain about". The first version of this check
+  passed both of its own negative controls that way.
+*/
+const STYLE_BLOCK = /<style[^>]*>([\s\S]*?)<\/style>/g;
+
+function stylesheetsIn(file: string, text: string): string[] {
+  if (file.endsWith('.css')) return [text];
+  if (!file.endsWith('.astro')) return [];
+  return [...text.matchAll(STYLE_BLOCK)].map((m) => m[1] as string);
+}
+
+for (const file of walkSrc(resolve(root, 'src'))) {
+  const text = readFileSync(file, 'utf8');
+  if (!text.includes('--th-')) continue;
+  const rel = relative(root, file);
+
+  const sheets = stylesheetsIn(file, text);
+  if (sheets.length === 0 && THEME_VAR.test(text)) {
+    containment.push(
+      `  ${rel}\n      references a --th- token outside any stylesheet, where this check cannot see it`,
+    );
+  }
+
+  for (const block of sheets.flatMap((sheet) => parseBlocks(sheet))) {
+    const usesTheme = block.all.some(([, value]) => THEME_VAR.test(value));
+    if (usesTheme) {
+      const allowed = THEME_SURFACES.some((s) => block.selector.includes(s));
+      if (!allowed) {
+        containment.push(
+          `  ${rel}\n      selector: ${block.selector}\n      uses a --th- token on a surface that is not on the allow-list`,
+        );
+      }
+    }
+
+    const isProse = PROSE_SELECTORS.some((s) => block.selector.includes(s));
+    if (isProse) {
+      for (const [prop, value] of block.all) {
+        if (prop === 'color' || prop === 'background' || prop === 'background-color') {
+          containment.push(
+            `  ${rel}\n      selector: ${block.selector}\n      sets ${prop}: ${value} on body prose, which must inherit --ink on --canvas`,
+          );
+        }
+      }
+    }
+  }
+}
+
+if (containment.length > 0) {
+  console.error('\n  Theme containment FAILED\n');
+  console.error(containment.join('\n\n'));
+  console.error(
+    '\n  Ornament lives in the frame. Content surfaces keep the standing' +
+      '\n  paper-and-ink tokens and every contrast guarantee.\n',
+  );
+  process.exit(1);
+}
+
 console.log(
   `  Design token audit passed — no stray colours, ${passed} contrast checks across ` +
-    `${MODES.join(', ')}.`,
+    `${MODES.join(', ')}, including ${TRADITIONS.length} tradition themes; ` +
+    'no theme token on a body-text surface.',
 );

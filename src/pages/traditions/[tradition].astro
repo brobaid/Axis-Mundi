@@ -6,6 +6,9 @@ import TraditionSymbol from '../../components/TraditionSymbol.astro';
 import GlossaryCard from '../../components/GlossaryCard.astro';
 import MatrixCells from '../../components/MatrixCells.astro';
 import DevotionalToggle from '../../components/DevotionalToggle.astro';
+import Ornament from '../../components/Ornament.astro';
+import OrnamentDefs from '../../components/OrnamentDefs.astro';
+import { ORNAMENTS } from '../../lib/ornaments';
 import { getPublishable, getStructural, includesUnsourced } from '../../lib/content';
 import { renderProse, termsFor } from '../../lib/prose';
 import { applyHonorifics } from '../../lib/devotional';
@@ -32,6 +35,7 @@ export const getStaticPaths = (async () => {
 
 const { dive } = Astro.props;
 const meta = traditionMeta(dive.tradition);
+const kit = ORNAMENTS[dive.tradition];
 
 const [glossary, taxonomy, publishedTaxonomy, matrixRows, festivals, siteRecords, figureRecords, sources, events, texts, works, shelfRows] = await Promise.all([
   getPublishable('glossary'),
@@ -214,19 +218,47 @@ const showAdherentYear =
 >
   <TraditionSymbols />
 
-  <article class="shell dd">
+  <article class="shell dd" data-tradition={dive.tradition}>
+    <OrnamentDefs tradition={dive.tradition} />
     <!-- masthead ------------------------------------------------------- -->
+    <!--
+      The header band is where the room's theme lives: a tinted paper, the
+      tradition's pattern tile behind it at whisper opacity, a corner motif at
+      each end, and the once-only mark where the kit carries one. Everything
+      below this band is the museum's standing paper and ink.
+    -->
     <header class="dd-mast" style={`--tradition-hue: var(${meta.hueToken})`}>
-      <TraditionSymbol tradition={dive.tradition} size={40} />
-      {
-        dive.original && (
-          <div class="dd-mast__script" lang={dive.original.lang} dir="rtl">
-            {dive.original.text}
-          </div>
-        )
-      }
-      <h1>{dive.name}</h1>
-      <p class="dd-mast__sub">{dive.subtitle}</p>
+      <Ornament tradition={dive.tradition} piece="pattern" />
+      <div class="dd-mast__corners" aria-hidden="true">
+        <Ornament tradition={dive.tradition} piece="corner" size={28} />
+        <Ornament tradition={dive.tradition} piece="corner" size={28} class="dd-mast__corner--end" />
+      </div>
+      <div class="dd-mast__body">
+        <div class="dd-mast__id">
+          <TraditionSymbol tradition={dive.tradition} size={40} />
+          {kit.mark && <Ornament tradition={dive.tradition} piece="mark" size={26} class="dd-mast__mark" />}
+          {
+            /* Sikhism's mark is calligraphy rather than geometry: Ik Onkar set
+               once in the Gurmukhi face the reading room already carries. */
+            dive.tradition === 'sikhism' && (
+              <span class="dd-mast__onkar" lang="pa" aria-hidden="true">
+                ੴ
+              </span>
+            )
+          }
+        </div>
+        {
+          dive.original && (
+            <div class="dd-mast__script" lang={dive.original.lang} dir="rtl">
+              {dive.original.text}
+            </div>
+          )
+        }
+        <h1>{dive.name}</h1>
+        {/* Jainism's record carries an empty subtitle; an empty <p> in a band
+            is a hole in the wall rather than a line of text. */}
+        {(dive.subtitle ?? '').trim() !== '' && <p class="dd-mast__sub">{dive.subtitle}</p>}
+      </div>
     </header>
 
     <DevotionalToggle tradition={dive.tradition} />
@@ -294,13 +326,14 @@ const showAdherentYear =
     </nav>
 
     <!-- 1 ------------------------------------------------------------- -->
-    <section id="overview" class="dd-section">
+    <section id="overview" class="dd-section dd-section--first">
       <h2>Overview</h2>
       {overview ? <Fragment set:html={prose(overview.body)} /> : <p class="dd-pending">Awaiting a source check.</p>}
     </section>
 
     <!-- 2 ------------------------------------------------------------- -->
     <section id="origins" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Origins and history</h2>
       {
         dive.origins_period && (
@@ -324,6 +357,7 @@ const showAdherentYear =
 
     <!-- 3 ------------------------------------------------------------- -->
     <section id="beliefs" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Core beliefs</h2>
       {beliefs ? <Fragment set:html={prose(beliefs.body)} /> : <p class="dd-pending">Awaiting a source check.</p>}
       {beliefCells.length > 0 && <MatrixCells cells={beliefCells} />}
@@ -331,6 +365,7 @@ const showAdherentYear =
 
     <!-- 4 ------------------------------------------------------------- -->
     <section id="texts" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Sacred texts</h2>
       {
         canon.length === 0 ? (
@@ -405,6 +440,7 @@ const showAdherentYear =
 
     <!-- 5 ------------------------------------------------------------- -->
     <section id="branches" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Branches</h2>
       {
         branches.length === 0 ? (
@@ -454,6 +490,7 @@ const showAdherentYear =
 
     <!-- 6 ------------------------------------------------------------- -->
     <section id="practices" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Practices and worship</h2>
       {
         practices.length === 0 ? (
@@ -474,6 +511,7 @@ const showAdherentYear =
 
     <!-- 7 ------------------------------------------------------------- -->
     <section id="law" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Law and ethics</h2>
       {law ? <Fragment set:html={prose(law.body)} /> : null}
       {
@@ -487,6 +525,7 @@ const showAdherentYear =
 
     <!-- 8 ------------------------------------------------------------- -->
     <section id="rites" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Rites of passage</h2>
       {
         rites.length === 0 ? (
@@ -506,6 +545,7 @@ const showAdherentYear =
 
     <!-- 9 ------------------------------------------------------------- -->
     <section id="holy-days" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Holy days</h2>
       {
         holyDays.length === 0 ? (
@@ -525,6 +565,7 @@ const showAdherentYear =
 
     <!-- 10 ------------------------------------------------------------ -->
     <section id="sites" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Sacred sites</h2>
       {
         sacredSites.length === 0 ? (
@@ -545,6 +586,7 @@ const showAdherentYear =
 
     <!-- 11 ------------------------------------------------------------ -->
     <section id="figures" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Key figures</h2>
       {
         keyFigures.length === 0 ? (
@@ -582,6 +624,7 @@ const showAdherentYear =
 
     <!-- 12 ------------------------------------------------------------ -->
     <section id="demographics" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Demographics</h2>
       {
         demographics ? (
@@ -596,6 +639,7 @@ const showAdherentYear =
 
     <!-- 13 ------------------------------------------------------------ -->
     <section id="misconceptions" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Common misconceptions</h2>
       <p class="caption measure">
         These correct factual errors only. Theological disagreements between traditions, or within
@@ -607,6 +651,9 @@ const showAdherentYear =
         ) : (
           misconceptions.map((m) => (
             <div class="miscon">
+              {kit.frame && (
+                <Ornament tradition={dive.tradition} piece="frame" class="miscon__arch" />
+              )}
               <p class="eyebrow">Misconception</p>
               <p class="miscon__claim">&ldquo;{m.claim}&rdquo;</p>
               <p>{m.correction}</p>
@@ -623,6 +670,7 @@ const showAdherentYear =
 
     <!-- 14 ------------------------------------------------------------ -->
     <section id="sources" class="dd-section">
+      <Ornament tradition={dive.tradition} piece="divider" class="dd-rule" />
       <h2>Sources and further reading</h2>
       {
         cited.length === 0 ? (
@@ -648,18 +696,105 @@ const showAdherentYear =
 </BaseLayout>
 
 <style>
+  /* The band opens the page, so the dive keeps a smaller top margin than the
+     other rooms: 48px of empty canvas above a full-width band leaves it
+     floating rather than hung. */
   .dd {
-    padding-block: var(--space-12) var(--space-8);
+    padding-block: var(--space-6) var(--space-8);
     max-width: 60rem;
   }
 
   /* --- masthead --------------------------------------------------------- */
 
+  /*
+    The header band: the one surface in a dive that wears the room's theme.
+
+    Tinted paper, the tradition's pattern behind it at whisper opacity, a corner
+    motif at each end. It bleeds to the shell's gutters so it reads as a band
+    across the wall rather than a card floating on it, and it is the last thing
+    on the page that is not the museum's own paper and ink — everything below
+    the band is `--ink` on `--canvas`, exactly as it is in every other room.
+  */
   .dd-mast {
+    position: relative;
+    isolation: isolate;
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-8);
+    background: var(--th-band);
+    border-block: var(--hairline-width) solid var(--th-rule);
+    padding: var(--space-6) var(--space-4);
+    /* Out to the gutters and no further: the shell's padding is 16px, 32px at
+       48rem, and the band is the full measure of the wall at both. */
+    margin-inline: calc(var(--space-4) * -1);
+  }
+
+  @media (min-width: 48rem) {
+    .dd-mast {
+      margin-inline: calc(var(--space-8) * -1);
+      padding: var(--space-8);
+    }
+  }
+
+  .dd-mast__body {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  /* The symbol, the once-only mark, and Ik Onkar where that is the mark. */
+  .dd-mast__id {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .dd-mast__mark {
+    color: var(--th-accent);
+  }
+
+  /*
+    Ik Onkar, set once, in the face the reading room already carries.
+    Calligraphy rather than a drawn shape, because that is what it is.
+  */
+  .dd-mast__onkar {
+    font-family: var(--font-gurmukhi);
+    font-size: 30px;
+    line-height: 1;
+    color: var(--th-accent);
+  }
+
+  /*
+    The corner motifs: one at each end of the band, the second mirrored so the
+    pair reads as a frame rather than as the same stamp twice.
+  */
+  .dd-mast__corners {
+    position: absolute;
+    inset: var(--space-3) var(--space-4);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.75;
+  }
+
+  .dd-mast__corner--end {
+    transform: scaleX(-1);
+  }
+
+  /* At 390px the band is too narrow to carry both corners beside the title. */
+  @media (max-width: 34rem) {
+    .dd-mast__corners {
+      justify-content: flex-end;
+    }
+
+    .dd-mast__corners :global(.orn--corner:first-child) {
+      display: none;
+    }
   }
 
   /* The RTL box must shrink to its text, or it stretches the full column and
@@ -732,10 +867,22 @@ const showAdherentYear =
 
   /* --- sections --------------------------------------------------------- */
 
+  /*
+    The section divider is the tradition's own figure on the rule, in place of
+    the neutral hairline every other room uses. It is drawn rather than
+    bordered because a border cannot carry a quatrefoil.
+  */
   .dd-section {
     padding-block: var(--space-6);
-    border-top: var(--hairline-width) solid var(--hairline);
     scroll-margin-top: 120px;
+  }
+
+  .dd-section--first {
+    padding-top: 0;
+  }
+
+  .dd-rule {
+    margin-bottom: var(--space-6);
   }
 
   .dd-section h2 {
@@ -889,9 +1036,19 @@ const showAdherentYear =
     color: var(--ink-soft);
   }
 
+  /*
+    The quoted claim, framed in the room's own hand.
+
+    This is the dive's blockquote — the one place a dive sets someone else's
+    words in quotation marks — so it is what the kit's frame treatment applies
+    to. The frame is the border and the rule, never the fill: the card keeps
+    `--surface` and `--ink` so the correction underneath reads at the same
+    contrast it does in every other room.
+  */
   .miscon {
-    border: var(--hairline-width) solid var(--hairline);
-    border-left: 3px solid var(--brass);
+    position: relative;
+    border: var(--hairline-width) solid var(--th-rule);
+    border-left: 3px solid var(--th-accent);
     padding: var(--space-4);
     margin-bottom: var(--space-4);
     background: var(--surface);
@@ -900,5 +1057,47 @@ const showAdherentYear =
   .miscon__claim {
     font-family: var(--font-display);
     font-size: var(--size-h3);
+  }
+
+  /*
+    Christianity's frame is a gothic arch — the one tradition whose table names
+    a shape for this. It is struck behind the card's top edge as line, not as a
+    clipping path, so no text is ever pushed out of the box by an ornament.
+  */
+  .miscon__arch {
+    position: absolute;
+    inset-inline: -1px;
+    top: -1px;
+    height: 46px;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  .miscon > :global(*) {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* --- link accents ----------------------------------------------------- */
+
+  /*
+    Links inside a dive take the room's hue instead of brass.
+
+    The one deviation from "brass is the only interface accent", and it is the
+    brief's: link-hue accents are named in the theme kit. It is scoped to the
+    dive's prose and lists — the top bar, the rooms rail, the glossary card and
+    every control keep brass, because those are the museum's furniture standing
+    in the room, not the room.
+  */
+  .dd-section :global(a),
+  .dd-mast :global(a) {
+    color: var(--th-link);
+  }
+
+  @media (hover: hover) {
+    .dd-section :global(a:hover),
+    .dd-mast :global(a:hover) {
+      color: var(--th-rule);
+    }
   }
 </style>

@@ -1,0 +1,64 @@
+---
+import type { TraditionId } from '../schemas/primitives';
+import { DIVIDER_H, ORNAMENTS } from '../lib/ornaments';
+
+/**
+ * A tradition's two repeating tiles, defined once for the page.
+ *
+ * A dive draws its divider thirteen times. Emitting the `<pattern>` alongside
+ * each one would put thirteen elements with the same id in one document —
+ * invalid, and the kind of invalid that works, because every reference resolves
+ * to the first. Same shape as `TraditionSymbols`, and for the same reason.
+ */
+
+interface Props {
+  tradition: TraditionId;
+}
+
+const { tradition } = Astro.props;
+const kit = ORNAMENTS[tradition];
+---
+
+<svg class="orn-defs" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <pattern
+      id={`orn-${tradition}-field`}
+      width={kit.pattern.size}
+      height={kit.pattern.size}
+      patternUnits="userSpaceOnUse"
+    >
+      {kit.pattern.paths.map((d) => <path d={d} fill="none" />)}
+      {(kit.pattern.fills ?? []).map((d) => <path d={d} stroke="none" class="orn__fill" />)}
+    </pattern>
+
+    <pattern
+      id={`orn-${tradition}-band`}
+      width={kit.divider.size}
+      height={DIVIDER_H}
+      patternUnits="userSpaceOnUse"
+    >
+      {kit.divider.paths.map((d) => <path d={d} fill="none" />)}
+      {(kit.divider.fills ?? []).map((d) => <path d={d} stroke="none" class="orn__fill" />)}
+    </pattern>
+  </defs>
+</svg>
+
+<style is:global>
+  .orn-defs {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  /* The defs carry no colour of their own; each use paints its own currentColor
+     through the pattern, which is why one tile can serve a divider in
+     `--th-rule` and a field in `--th-pattern`. */
+  .orn-defs path {
+    stroke: currentColor;
+    stroke-width: 1;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+  }
+</style>

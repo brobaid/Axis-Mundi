@@ -1,0 +1,133 @@
+---
+import type { TraditionId } from '../schemas/primitives';
+import { ORNAMENTS } from '../lib/ornaments';
+
+/**
+ * One piece of a tradition's ornament kit.
+ *
+ * Every piece is stroked in `--th-accent` (or `--th-rule` for dividers) and
+ * filled in the same, so a kit inherits its room's theme without knowing which
+ * tradition it belongs to. The pattern is a `<pattern>` laid behind the header
+ * band; it is the only piece that repeats, and it is the only one drawn at
+ * whisper opacity.
+ *
+ * Ornament is never announced. It carries no meaning a reader would lose — the
+ * tradition is named in text a line away in every case — so every piece is
+ * `aria-hidden`, including the once-only marks.
+ */
+
+interface Props {
+  tradition: TraditionId;
+  piece: 'corner' | 'divider' | 'pattern' | 'mark' | 'frame';
+  /** Rendered height in px; the width follows the viewBox. */
+  size?: number;
+  class?: string | undefined;
+}
+
+const { tradition, piece, size, class: className } = Astro.props;
+const kit = ORNAMENTS[tradition];
+
+/* The tiles themselves live in <OrnamentDefs>, rendered once per page. */
+---
+
+{
+  /* The two tiling pieces are a rect filled from the page's <defs>; the rest
+     are drawn inline, because they appear once each. */
+  piece === 'pattern' || piece === 'divider' ? (
+    <svg class:list={['orn', `orn--${piece}`, className]} aria-hidden="true" focusable="false">
+      <rect
+        width="100%"
+        height="100%"
+        fill={`url(#orn-${tradition}-${piece === 'pattern' ? 'field' : 'band'})`}
+      />
+    </svg>
+  ) : (
+    (() => {
+      const art = kit[piece];
+      if (art === undefined) return null;
+      const [, , w, h] = art.view.split(' ').map(Number) as [number, number, number, number];
+      const height = size ?? h;
+      return (
+        <svg
+          class:list={['orn', `orn--${piece}`, className]}
+          viewBox={art.view}
+          width={piece === 'frame' ? undefined : (height * w) / h}
+          height={piece === 'frame' ? undefined : height}
+          preserveAspectRatio={piece === 'frame' ? 'none' : 'xMidYMid meet'}
+          aria-hidden="true"
+          focusable="false"
+        >
+          {art.paths.map((d) => (
+            <path d={d} fill="none" />
+          ))}
+          {(art.fills ?? []).map((d) => (
+            <path d={d} stroke="none" class="orn__fill" />
+          ))}
+        </svg>
+      );
+    })()
+  )
+}
+
+<style is:global>
+  /*
+    One drawing convention for all thirty pieces: a hairline stroke, round
+    joins, no fill unless a path asks for one. The kits differ in geometry and
+    in nothing else, which is what makes ten rooms read as ten rooms in one
+    museum rather than ten websites.
+  */
+  .orn path {
+    stroke: currentColor;
+    stroke-width: 1;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .orn .orn__fill {
+    fill: currentColor;
+    stroke: none;
+  }
+
+  .orn--corner,
+  .orn--mark {
+    color: var(--th-accent);
+    display: block;
+  }
+
+  .orn--divider {
+    color: var(--th-rule);
+    display: block;
+    width: 100%;
+    height: 14px;
+  }
+
+  .orn--frame {
+    color: var(--th-rule);
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /*
+    The pattern tile.
+
+    Whisper opacity, and re-tuned rather than dimmed for night: `--th-pattern`
+    is a different colour in each mode, not the same colour at a lower alpha,
+    because a dark pattern faded on a dark band disappears while a light one at
+    the same alpha reads as engraving.
+  */
+  .orn--pattern {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--th-pattern);
+    opacity: var(--th-pattern-alpha);
+    pointer-events: none;
+  }
+
+  .orn--pattern path {
+    stroke-width: 1;
+  }
+</style>

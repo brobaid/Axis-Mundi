@@ -247,7 +247,124 @@
   --t-unaffiliated: #9a9086;
   --t-unaffiliated-line: #7a7166;
   --t-unaffiliated-ink: #5a5249;
+
+  /* ---------------------------------------------------------------------------
+     TRADITION THEMES (Phase 6C)
+
+     A second, additive vocabulary, scoped to a dive by `data-tradition` and used
+     nowhere else. It does not touch the ten identity hues above: those are what
+     the timeline dots, the map fills, the legends, the matrix and the entrance
+     hall's axis are drawn in, and changing them would change the museum's
+     shared colour language to decorate one room.
+
+     Four tokens per tradition, derived from the owner's palette table and then
+     tuned until each cleared its threshold against the canvas, a surface and its
+     own band. The values are computed, not picked:
+
+       --th-band      the header band's paper — the canvas tinted with the
+                      tradition's chromatic mid-tone at 15%, and at 6% for
+                      Jainism, which the table asked to read as marble
+       --th-rule      dividers and frames, >= 3:1 everywhere it is drawn
+       --th-accent    the corner motifs and the once-only marks, >= 3:1
+       --th-link      links inside the dive, >= 4.5:1 on canvas, surface and band
+       --th-pattern   the tile behind the band, drawn at --th-pattern-alpha
+
+     The band is a light tint in Gallery for all ten, including the traditions
+     whose table says "on midnight" — a dark band under this museum's paper-and-
+     ink constraint would mean light text on a content surface. Midnight,
+     indigo and Nihang navy arrive as the ink and in Night Gallery instead.
+
+     None of these may touch a body-text surface. `scripts/check-tokens.ts`
+     asserts it: every rule that references a --th- token must have a selector
+     on a named allow-list, and prose selectors must set neither colour nor
+     background.
+     --------------------------------------------------------------------------- */
+
+  /* Whisper, per the brief: 4-6%. Night gets its own value alongside its own
+     pattern colour, because dimming a dark tile on a dark band erases it. */
+  --th-pattern-alpha: 0.05;
+
 }
+
+  [data-tradition='islam'] {
+    --th-band: #d5e0d4;
+    --th-rule: #0f5132;
+    --th-accent: #8a6d1f;
+    --th-link: #0f5132;
+    --th-pattern: #0e492d;
+  }
+
+  [data-tradition='christianity'] {
+    --th-band: #d9dee4;
+    --th-rule: #1b3a6b;
+    --th-accent: #8a6d1f;
+    --th-link: #8f2233;
+    --th-pattern: #183460;
+  }
+
+  [data-tradition='judaism'] {
+    --th-band: #dcd7e2;
+    --th-rule: #26356b;
+    --th-accent: #8a7250;
+    --th-link: #26356b;
+    --th-pattern: #7c6748;
+  }
+
+  [data-tradition='hinduism'] {
+    --th-band: #f4e1cb;
+    --th-rule: #a83218;
+    --th-accent: #8a6d1f;
+    --th-link: #a83218;
+    --th-pattern: #af5709;
+  }
+
+  [data-tradition='buddhism'] {
+    --th-band: #efe3cd;
+    --th-rule: #6b2226;
+    --th-accent: #8a6d1f;
+    --th-link: #6b2226;
+    --th-pattern: #975f13;
+  }
+
+  [data-tradition='sikhism'] {
+    --th-band: #f4e3cb;
+    --th-rule: #1c2a5e;
+    --th-accent: #c26a08;
+    --th-link: #1c2a5e;
+    --th-pattern: #192655;
+  }
+
+  [data-tradition='chinese'] {
+    --th-band: #f0d6cf;
+    --th-rule: #a8241c;
+    --th-accent: #8a6d1f;
+    --th-link: #a8241c;
+    --th-pattern: #27221d;
+  }
+
+  [data-tradition='shinto'] {
+    --th-band: #f2dad0;
+    --th-rule: #b83a26;
+    --th-accent: #8a7250;
+    --th-link: #b23825;
+    --th-pattern: #a63422;
+  }
+
+  [data-tradition='jainism'] {
+    --th-band: #f3efe7;
+    --th-rule: #a5202a;
+    --th-accent: #a5202a;
+    --th-link: #a5202a;
+    --th-pattern: #7c786c;
+  }
+
+  [data-tradition='zoroastrianism'] {
+    --th-band: #d7d8df;
+    --th-rule: #9c2b22;
+    --th-accent: #b06a10;
+    --th-link: #9c2b22;
+    --th-pattern: #171d32;
+  }
 
 /* =============================================================================
    NIGHT GALLERY — dark mode. Full token swap (§9).
@@ -346,7 +463,93 @@
     --t-unaffiliated: #8b8276;
     --t-unaffiliated-line: #a49a8c;
     --t-unaffiliated-ink: #c3b9a9;
+
+    /* Tradition themes, re-tuned rather than dimmed. Every value here is
+       derived against the night canvas, and the pattern is a different colour
+       from its Gallery counterpart, not the same one at lower alpha. */
+    --th-pattern-alpha: 0.06;
+
   }
+
+    [data-mode='night-gallery'] [data-tradition='islam'] {
+      --th-band: #142519;
+      --th-rule: #41765d;
+      --th-accent: #8a6d1f;
+      --th-link: #68917e;
+      --th-pattern: #93b1a3;
+    }
+
+    [data-mode='night-gallery'] [data-tradition='christianity'] {
+      --th-band: #19222f;
+      --th-rule: #566d91;
+      --th-accent: #8a6d1f;
+      --th-link: #ba7681;
+      --th-pattern: #98a6bc;
+    }
+
+    [data-mode='night-gallery'] [data-tradition='judaism'] {
+      --th-band: #1e192c;
+      --th-rule: #5a658f;
+      --th-accent: #8a7250;
+      --th-link: #7b84a5;
+      --th-pattern: #cac0b0;
+    }
+
+    [data-mode='night-gallery'] [data-tradition='hinduism'] {
+      --th-band: #3d260e;
+      --th-rule: #b85742;
+      --th-accent: #8c7023;
+      --th-link: #c98070;
+      --th-pattern: #e4b891;
+    }
+
+    [data-mode='night-gallery'] [data-tradition='buddhism'] {
+      --th-band: #372811;
+      --th-rule: #996769;
+      --th-accent: #8c7023;
+      --th-link: #af888a;
+      --th-pattern: #d8bc96;
+    }
+
+    [data-mode='night-gallery'] [data-tradition='sikhism'] {
+      --th-band: #3d290e;
+      --th-rule: #6b7596;
+      --th-accent: #c26a08;
+      --th-link: #8e95af;
+      --th-pattern: #999fb7;
+    }
+
+    [data-mode='night-gallery'] [data-tradition='chinese'] {
+      --th-band: #381813;
+      --th-rule: #b64740;
+      --th-accent: #8a6d1f;
+      --th-link: #c6716b;
+      --th-pattern: #a09d9b;
+    }
+
+    [data-mode='night-gallery'] [data-tradition='shinto'] {
+      --th-band: #3b1c14;
+      --th-rule: #bd4835;
+      --th-accent: #8a7250;
+      --th-link: #cd7365;
+      --th-pattern: #dfa69d;
+    }
+
+    [data-mode='night-gallery'] [data-tradition='jainism'] {
+      --th-band: #24211c;
+      --th-rule: #b54850;
+      --th-accent: #b54850;
+      --th-link: #c57077;
+      --th-pattern: #cac8c2;
+    }
+
+    [data-mode='night-gallery'] [data-tradition='zoroastrianism'] {
+      --th-band: #161a28;
+      --th-rule: #a9473f;
+      --th-accent: #b06a10;
+      --th-link: #bb6d67;
+      --th-pattern: #989ba5;
+    }
 }
 
 /* =============================================================================
@@ -381,5 +584,22 @@
     --shadow-sheet: none;
     --scrim: transparent;
     --lane-hover: transparent;
+  }
+
+  /*
+    A dive prints in the museum's neutral dress.
+
+    One reset for all ten rather than ten print palettes: a tinted band prints
+    as a grey smear and a pattern tile at 5% prints as dirt, and a reader who
+    has reached for paper wants the text. The rule and the accent survive as
+    ink because a section divider is structure, not decoration.
+  */
+  [data-tradition] {
+    --th-band: #ffffff;
+    --th-rule: #6b6357;
+    --th-accent: #6b6357;
+    --th-link: #211d18;
+    --th-pattern: #ffffff;
+    --th-pattern-alpha: 0;
   }
 }
