@@ -71,9 +71,17 @@ const label = kind === 'opener' ? 'Opening formula' : 'Closing formula';
     -webkit-user-select: none;
   }
 
-  .rd-frame[data-frame='opener'] {
-    margin-top: var(--space-6);
-  }
+  /*
+    Mirrored, so the two read as one pair rather than two decisions.
+
+    Measured before changing anything: the accent, the size, the centring, the
+    rule and its width were already identical, and the ink-to-rule distance came
+    out 17px against 16px at 390 and 19 against 17 at 1440 — the same treatment
+    on both, within a pixel or two of leading. The one real asymmetry was the
+    outer margin, 24px above the opener against 32px around the closer, which
+    tucked the basmala up against the chrome above it instead of letting it
+    frame the verses. It is 32 on all four sides of the pair now.
+  */
 
   /*
     The line itself.
