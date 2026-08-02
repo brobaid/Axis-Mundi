@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RoomPlaque from '../../components/RoomPlaque.astro';
 import { getPublishable } from '../../lib/content';
 import { TRADITIONS } from '../../lib/traditions';
 import { hasEnglish, langTag, originalLang, type WorkData } from '../../lib/reader-model';
@@ -64,14 +65,9 @@ const verses = shelf.reduce(
   description="Scripture at reading quality, in public-domain and CC0 editions named on every page, with the original beside the English."
 >
   <section class="shell head">
-    <p class="eyebrow">Room IX · The Reading Room</p>
-    <h1 class="display">The texts<br />themselves.</h1>
-    <p class="room-says">The texts themselves, the original beside the English.</p>
-    <p class="measure lede">
-      Every other room in this museum describes what traditions hold. This one hands you the text
-      and gets out of the way.
-    </p>
-    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+    <RoomPlaque
+      lede="Every other room in this museum describes what traditions hold. This one hands you the text and gets out of the way."
+    />
   </section>
 
   <div class="shell rd-shelf">

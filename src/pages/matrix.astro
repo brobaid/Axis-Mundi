@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RoomPlaque from '../components/RoomPlaque.astro';
 import DetailPanel from '../components/DetailPanel.astro';
 import TraditionSymbols from '../components/TraditionSymbols.astro';
 import { getPublishable, getStructural, includesUnsourced } from '../lib/content';
@@ -72,9 +73,7 @@ const bootstrap = { rows: view, sourceTitles };
   <TraditionSymbols />
 
   <section class="shell head">
-    <p class="eyebrow">Room V · The Comparison Gallery</p>
-    <h1>What each tradition holds.</h1>
-    <p class="room-says">What ten traditions hold, side by side on one set of questions.</p>
+    <RoomPlaque />
     <p class="crumb caption">
       <b>Belief matrix</b> · {view.length} rows · {filled.length} of {MATRIX_DIMENSIONS.length} dimensions
       filled
@@ -208,13 +207,6 @@ const bootstrap = { rows: view, sourceTitles };
   .head {
     padding-block: var(--space-12) var(--space-4);
     max-width: 46rem;
-  }
-
-  .head h1 {
-    font-size: clamp(2.125rem, 6vw, 2.875rem);
-    line-height: 1.12;
-    letter-spacing: -0.01em;
-    margin-block: var(--space-3) var(--space-3);
   }
 
   .crumb {

@@ -1,5 +1,6 @@
 ---
 import { getPublishable } from '../lib/content';
+import { ROOMS, roomTitle, type Room } from '../lib/rooms';
 
 /**
  * The rooms rail (reference build's tab bar).
@@ -14,22 +15,33 @@ import { getPublishable } from '../lib/content';
  * behind their own sourcing, so in production the chip is absent rather than a
  * link to a 404 — the same rule the home page's door follows, where the door
  * stays visible and says what it is waiting on.
+ *
+ * The chips carry the numerals the way a museum rail does: in the tooltip and
+ * in the accessible name, never printed on the chip. Eight short words in a row
+ * is already the widest thing at 390px; "II Timeline" would cost the rail a
+ * chip's worth of scroll to say what the plaque says on arrival anyway.
  */
 
 const dives = await getPublishable('deepDives');
 const works = await getPublishable('works');
 
-const rooms: { href: string; label: string }[] = [
-  { href: '/timeline', label: 'Timeline' },
-  { href: '/map', label: 'Map' },
+const at = (href: string): Room => {
+  const room = ROOMS.find((r) => r.href === href);
+  if (room === undefined) throw new Error(`rail links ${href}, which is no room`);
+  return room;
+};
+
+const rooms: readonly Room[] = [
+  at('/timeline'),
+  at('/map'),
   /* The index lists every dive, so the chip opens as soon as one exists. */
-  ...(dives.length === 0 ? [] : [{ href: '/traditions', label: 'Deep dives' }]),
-  { href: '/matrix', label: 'Matrix' },
-  { href: '/compare', label: 'Compare' },
-  { href: '/tree', label: 'Family tree' },
-  { href: '/wheel', label: 'Year wheel' },
+  ...(dives.length === 0 ? [] : [at('/traditions')]),
+  at('/matrix'),
+  at('/compare'),
+  at('/tree'),
+  at('/wheel'),
   /* The Reading Room appears once a corpus is in the build. */
-  ...(works.length === 0 ? [] : [{ href: '/read', label: 'Reading Room' }]),
+  ...(works.length === 0 ? [] : [at('/read')]),
 ];
 
 const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
@@ -46,8 +58,13 @@ const isCurrent = (href: string): 'page' | undefined =>
     {
       rooms.map((room) => (
         <li>
-          <a class="room" href={room.href} aria-current={isCurrent(room.href)}>
-            {room.label}
+          <a
+            class="room"
+            href={room.href}
+            title={roomTitle(room)}
+            aria-current={isCurrent(room.href)}
+          >
+            {room.chip ?? room.name}
           </a>
         </li>
       ))

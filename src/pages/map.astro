@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RoomPlaque from '../components/RoomPlaque.astro';
 import TraditionSymbols from '../components/TraditionSymbols.astro';
 import LandscapeHint from '../components/LandscapeHint.astro';
 import DetailPanel from '../components/DetailPanel.astro';
@@ -141,14 +142,9 @@ const bootstrap = {
   <TraditionSymbols />
 
   <section class="shell head">
-    <p class="eyebrow">Room III · The Atlas Room</p>
-    <h1>The world, one era at a time.</h1>
-    <p class="room-says">Where each tradition was, era by era.</p>
-    <p class="lede">
-      Twelve snapshots, not an animation. Borders between them are never
-      interpolated — an intermediate line would be a claim no source supports.
-    </p>
-    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+    <RoomPlaque
+      lede="Twelve snapshots, not an animation. Borders between them are never interpolated — an intermediate line would be a claim no source supports."
+    />
   </section>
 
   <div class="shell">
@@ -308,28 +304,8 @@ const bootstrap = {
 
 <style>
   .head {
-    text-align: center;
     padding-block: var(--space-12) var(--space-2);
-  }
-
-  .head h1 {
-    font-size: clamp(2.125rem, 5vw, 3.125rem);
-    line-height: 1.12;
-    letter-spacing: -0.01em;
-    margin: var(--space-3) auto;
-    max-width: 20ch;
-  }
-
-  .lede {
-    color: var(--ink-soft);
-    max-width: 52ch;
-    margin: 0 auto;
-  }
-
-  /* This room centres its ornament; the rule itself is in base.css. */
-  .ornament {
-    max-width: 520px;
-    margin: 26px auto 30px;
+    max-width: 46rem;
   }
 
   .empty,

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RoomPlaque from '../components/RoomPlaque.astro';
 import { getPublishable, tally } from '../lib/content';
 
 /**
@@ -60,9 +61,7 @@ const TIER_LABEL: Record<string, string> = {
   description="How Axis Mundi was made: the record counts, the source registry with tiers, and the twelve map plates with the memos they were drawn from."
 >
   <section class="shell head">
-    <p class="eyebrow">Colophon</p>
-    <h1 class="display">How this<br />was made.</h1>
-    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+    <RoomPlaque />
   </section>
 
   <div class="shell col">

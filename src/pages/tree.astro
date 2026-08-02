@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RoomPlaque from '../components/RoomPlaque.astro';
 import DetailPanel from '../components/DetailPanel.astro';
 import TraditionSymbols from '../components/TraditionSymbols.astro';
 import { getPublishable, getStructural } from '../lib/content';
@@ -101,9 +102,7 @@ const bootstrap = {
   <TraditionSymbols />
 
   <section class="shell head">
-    <p class="eyebrow">Room VII · The Genealogy Room</p>
-    <h1>Descent, branch by branch.</h1>
-    <p class="room-says">Which tradition came from which, and where the branches parted.</p>
+    <RoomPlaque />
     <p class="crumb caption">
       <b>Family tree</b> · {input.length} nodes across {TRADITIONS.length} traditions · {dated} carry a
       founding date
@@ -272,13 +271,6 @@ const bootstrap = {
   .head {
     padding-block: var(--space-12) var(--space-4);
     max-width: 46rem;
-  }
-
-  .head h1 {
-    font-size: clamp(2.125rem, 6vw, 2.875rem);
-    line-height: 1.12;
-    letter-spacing: -0.01em;
-    margin-block: var(--space-3) var(--space-3);
   }
 
   .crumb {

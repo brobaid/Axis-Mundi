@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RoomPlaque from '../components/RoomPlaque.astro';
 import TraditionSymbols from '../components/TraditionSymbols.astro';
 import { TRADITIONS } from '../lib/traditions';
 import { getPublishable } from '../lib/content';
@@ -103,12 +104,9 @@ const traditionsWithEvents = new Set(heroEvents.map((e) => e.tradition)).size;
   <TraditionSymbols />
 
   <section class="shell hero">
-    <p class="eyebrow">A comparative reference for the world&rsquo;s religions</p>
-    <h1>Five thousand years of belief, on one line.</h1>
-    <p class="lede">
-      Timelines, maps and deep dives across ten traditions, drawn from academic sources,
-      presented without a thumb on the scale.
-    </p>
+    <RoomPlaque
+      lede="Timelines, maps and deep dives across ten traditions, drawn from academic sources, presented without a thumb on the scale."
+    />
   </section>
 
   <!--

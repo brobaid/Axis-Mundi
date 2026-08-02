@@ -1,0 +1,156 @@
+---
+import { roomFor, roomLabel, type Room } from '../lib/rooms';
+
+/**
+ * A gallery's wayfinding plaque.
+ *
+ * Three parts, in the order a visitor reads them: the numeral in the museum's
+ * voice, the gallery's name set large, and the one-line subtitle engraved
+ * between rules. It replaces the eyebrow-and-ornament pair each room grew
+ * separately, so eight rooms now say who they are the same way.
+ *
+ * The finials are house-drawn and there is one vocabulary of them: a brass
+ * lozenge on a stem, the same lozenge the old ornament used, turned into a
+ * terminal for a rule rather than a break in one. Nothing figurative, nothing
+ * borrowed from any tradition — this is the building's own furniture.
+ */
+interface Props {
+  /** Overrides the registry lookup, for a page whose path is not its room. */
+  room?: Room | undefined;
+  /** A statement the room makes under its plaque, where it has one. */
+  lede?: string | undefined;
+}
+const { room: given, lede } = Astro.props;
+const room = given ?? roomFor(Astro.url.pathname);
+if (room === undefined) {
+  /* A plaque with no room is a wall label for an exhibit nobody hung. */
+  throw new Error(`no room registered for ${Astro.url.pathname}`);
+}
+---
+
+<div class="plaque">
+  <p class="eyebrow plaque__numeral">{roomLabel(room)}</p>
+  <h1 class="plaque__name">{room.name}</h1>
+
+  <p class="plaque__says">
+    <svg class="plaque__rule" viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true">
+      <!-- A doubled hairline, terminated at each end by the house lozenge on a
+           short stem. Drawn rather than bordered so the terminals can sit on
+           the rule's own centreline at any width. -->
+      <path class="plaque__hair" d="M8 3.5H92M8 4.5H92" vector-effect="non-scaling-stroke" />
+      <path class="plaque__finial" d="M4 4 L6.5 1.6 L9 4 L6.5 6.4 Z" />
+      <path class="plaque__finial" d="M91 4 L93.5 1.6 L96 4 L93.5 6.4 Z" />
+    </svg>
+    <span class="plaque__text">{room.says}</span>
+  </p>
+
+  {lede !== undefined && <p class="plaque__lede">{lede}</p>}
+  <slot />
+</div>
+
+<style is:global>
+  .plaque {
+    margin-bottom: var(--space-8);
+  }
+
+  .plaque__numeral {
+    margin-bottom: var(--space-3);
+  }
+
+  /*
+    The gallery's name, set as the museum's largest voice.
+
+    Newsreader at its display optical size — the axis this face carries and the
+    reason it is here — and tracked open rather than closed. The display scale
+    elsewhere is set tight because it is setting sentences; a two-or-three word
+    room name is lettering, and lettering wants air.
+  */
+  .plaque__name {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-variation-settings: 'opsz' 72;
+    font-weight: 400;
+    font-size: var(--size-plaque-sm);
+    line-height: 1.04;
+    letter-spacing: 0.055em;
+    /* Tracking adds space after the last letter too; pull it back so the name
+       still sits on the same left margin as everything under it. */
+    margin-right: -0.055em;
+    text-wrap: balance;
+    margin-bottom: var(--space-4);
+  }
+
+  @media (min-width: 40rem) {
+    .plaque__name {
+      font-size: var(--size-plaque);
+      letter-spacing: 0.07em;
+      margin-right: -0.07em;
+    }
+  }
+
+  /*
+    The engraved caption: the rule, then the line, on one baseline.
+
+    Permanent, not a coach. A reader arriving in the Family Tree from a link
+    should not have to infer from a Roman numeral and a canvas of dots what the
+    room is for, and should not have to have been here before. The name says
+    what the room is *about* — evocatively, which is right for a name — and this
+    says what it *answers*.
+  */
+  .plaque__says {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    max-width: 46rem;
+    font-family: var(--font-ui);
+    font-size: var(--size-small);
+    line-height: var(--leading-small);
+    color: var(--ink-soft);
+  }
+
+  .plaque__rule {
+    flex: 0 0 5.5rem;
+    height: 8px;
+    overflow: visible;
+  }
+
+  .plaque__hair {
+    stroke: var(--hairline);
+    stroke-width: 1;
+    fill: none;
+  }
+
+  .plaque__finial {
+    fill: var(--brass);
+  }
+
+  .plaque__text {
+    flex: 1 1 auto;
+  }
+
+  /*
+    A statement the room makes under its plaque — but only where it says
+    something the engraved caption does not. Eight rooms carried an evocative
+    masthead above that caption ("Descent, branch by branch." over "Which
+    tradition came from which"); the gallery's name is that masthead now, so
+    those lines went rather than repeating themselves one line apart. What is
+    left is the four rooms with a real caveat to make.
+
+    The `.lede` treatment was defined separately in five pages' scoped styles
+    and nowhere globally, so it lives here now with the element it dresses.
+  */
+  .plaque__lede {
+    margin-top: var(--space-6);
+    max-width: 52ch;
+    color: var(--ink-soft);
+  }
+
+  /* On paper the plaque is a heading and nothing more; the rule survives
+     because it is the only thing separating the name from the caption. */
+  @media print {
+    .plaque__name {
+      font-size: var(--size-h1);
+      letter-spacing: 0.02em;
+    }
+  }
+</style>

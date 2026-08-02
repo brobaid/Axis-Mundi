@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RoomPlaque from '../components/RoomPlaque.astro';
 import Timeline from '../components/Timeline.astro';
 import LandscapeHint from '../components/LandscapeHint.astro';
 import { getPublishable, getStructural, includesUnsourced, tally } from '../lib/content';
@@ -75,14 +76,7 @@ const boundsTo = Math.max(DEFAULT_TO, ...years) + 50;
   description="Five thousand years of belief on one line: an event-driven timeline across ten religious traditions, drilled by branch and zoomed by significance."
 >
   <section class="shell head">
-    <p class="eyebrow">Room II · The Corridor of Time</p>
-    <h1>Five thousand years of belief, on one line.</h1>
-    <p class="room-says">What happened, and when — four hundred sourced events across ten traditions.</p>
-    <p class="lede">
-      Timelines, maps, and deep dives across ten traditions, drawn from academic sources,
-      presented without a thumb on the scale.
-    </p>
-    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+    <RoomPlaque />
   </section>
 
   <div class="shell">
@@ -122,28 +116,8 @@ const boundsTo = Math.max(DEFAULT_TO, ...years) + 50;
 
 <style>
   .head {
-    text-align: center;
     padding-block: var(--space-12) var(--space-2);
-  }
-
-  .head h1 {
-    font-size: clamp(2.125rem, 5vw, 3.125rem);
-    line-height: 1.12;
-    letter-spacing: -0.01em;
-    margin: var(--space-3) auto var(--space-3);
-    max-width: 20ch;
-  }
-
-  .lede {
-    color: var(--ink-soft);
-    max-width: 52ch;
-    margin: 0 auto;
-  }
-
-  /* This room centres its ornament; the rule itself is in base.css. */
-  .ornament {
-    max-width: 520px;
-    margin: 26px auto 30px;
+    max-width: 46rem;
   }
 
   .empty {

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RoomPlaque from '../components/RoomPlaque.astro';
 import { TRADITIONS } from '../lib/traditions';
 import { getStructural, includesUnsourced, tally } from '../lib/content';
 
@@ -77,8 +78,7 @@ const tiers = [
   description="How Axis Mundi classifies traditions, sources its claims, handles contested material, and chooses its colours."
 >
   <article class="shell page">
-    <p class="eyebrow">Methodology</p>
-    <h1>How this reference is built</h1>
+    <RoomPlaque />
 
     <section class="section measure">
       <h2>Voice</h2>
@@ -327,10 +327,6 @@ const tiers = [
 <style>
   .page {
     padding-block: var(--space-12) var(--space-8);
-  }
-
-  .page h1 {
-    margin-block: var(--space-2) var(--space-8);
   }
 
   .section {

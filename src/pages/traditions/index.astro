@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RoomPlaque from '../../components/RoomPlaque.astro';
 import TraditionSymbols from '../../components/TraditionSymbols.astro';
 import TraditionSymbol from '../../components/TraditionSymbol.astro';
 import { getPublishable, getStructural } from '../../lib/content';
@@ -60,14 +61,9 @@ const openCount = rooms.filter((r) => r.href !== undefined).length;
   <TraditionSymbols />
 
   <section class="shell head">
-    <p class="eyebrow">Room IV · The Reading Rooms</p>
-    <h1>Ten traditions, one structure.</h1>
-    <p class="room-says">Each tradition whole: history, belief, practice, law and demographics.</p>
-    <p class="lede">
-      Every dive carries the same fourteen sections in the same order, because comparability is
-      the point. A section with nothing published keeps its heading and says what it is waiting
-      for.
-    </p>
+    <RoomPlaque
+      lede="Every dive carries the same fourteen sections in the same order, because comparability is the point. A section with nothing published keeps its heading and says what it is waiting for."
+    />
     <p class="crumb caption">
       <b>Deep dives</b> · {openCount} of {TRADITIONS.length} open
     </p>
@@ -143,18 +139,6 @@ const openCount = rooms.filter((r) => r.href !== undefined).length;
   .head {
     padding-block: var(--space-12) var(--space-4);
     max-width: 46rem;
-  }
-
-  .head h1 {
-    font-size: clamp(2.125rem, 6vw, 2.875rem);
-    line-height: 1.12;
-    letter-spacing: -0.01em;
-    margin-block: var(--space-3) var(--space-3);
-  }
-
-  .lede {
-    color: var(--ink-soft);
-    max-width: 52ch;
   }
 
   .crumb {

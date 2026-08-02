@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RoomPlaque from '../components/RoomPlaque.astro';
 import DetailPanel from '../components/DetailPanel.astro';
 import LandscapeHint from '../components/LandscapeHint.astro';
 import { getPublishable } from '../lib/content';
@@ -74,14 +75,9 @@ const byYear = Object.fromEntries(
   description="Every sourced festival of ten traditions on one circle, with the lunar feasts drifting against the solar ones year by year."
 >
   <section class="shell head">
-    <p class="eyebrow">Room VIII · The Calendar Room</p>
-    <h1 class="display">Every calendar<br />on one circle.</h1>
-    <p class="room-says">When each tradition's festivals fall, and how they drift against each other.</p>
-    <p class="measure lede">
-      The solar feasts hold their place; the lunar ones walk backwards through the year. Step the
-      years and watch them move against each other.
-    </p>
-    <div class="ornament" aria-hidden="true"><i></i><b></b><i></i></div>
+    <RoomPlaque
+      lede="The solar feasts hold their place; the lunar ones walk backwards through the year. Step the years and watch them move against each other."
+    />
   </section>
 
   <div class="shell">
