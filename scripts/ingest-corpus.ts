@@ -761,6 +761,8 @@ function normalise(src: Delivered, config: Config): Division[] {
       const out = text
         .replace(/^\s*#{1,6}\s*HYMN[^\n]*\n+/i, () => { furniture.headers += 1; return ''; })
         .replace(/\s*\{#\d+:\d+\}/g, () => { furniture.anchors += 1; return ''; })
+        /* And the end-of-hymn rule the digitiser set below every one of them. */
+        .replace(/\n*\s*\*\s*\*\s*\*\s*$/, () => { furniture.rules += 1; return ''; })
         .trim();
       return out === '' ? before : out;
     };
